@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E185F961-7DA3-4774-9957-B2265906699F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Galactus</RootNamespace>
+    <AssemblyName>Galactus</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GalactusDB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\GalactusDB.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entidades\Admision\Configuracion\ManualServicio.cs" />
+    <Compile Include="Entidades\Admision\manualTarifarioServicio.cs" />
+    <Compile Include="Entidades\ConfiguracionGeneral\ConfiguracionGeneral.cs" />
+    <Compile Include="Entidades\General\Busqueda.cs" />
+    <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
+    <Compile Include="Entidades\HistoriaClinica\Resultado\JustificacionAntibiotico.cs" />
+    <Compile Include="Entidades\Inventario\Bodega.cs" />
+    <Compile Include="Entidades\Inventario\Producto.cs" />
+    <Compile Include="Modelo\Admision\Configuracion\ManualServicioDAL.cs" />
+    <Compile Include="Modelo\Admision\manualTarifarioServicioDAL.cs" />
+    <Compile Include="Modelo\Admision\PacienteDAL.cs" />
+    <Compile Include="Modelo\ConfiguracionGeneral\ConfiguracionGeneralDAL.cs" />
+    <Compile Include="Modelo\General\BusquedaDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
+    <Compile Include="Modelo\Inventario\BodegaDAL.cs" />
+    <Compile Include="Modelo\Inventario\ProductoDAL.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Consultas\Query.cs" />
+    <Compile Include="Util\Constantes\ConstanteGeneral.cs" />
+    <Compile Include="Util\Constantes\ConsultasHistoriaClinica.cs" />
+    <Compile Include="Util\Funciones.cs" />
+    <Compile Include="Util\GeneralC.cs" />
+    <Compile Include="Util\InformacionTag.cs" />
+    <Compile Include="Util\Mensajes\Mensajes.cs" />
+    <Compile Include="Util\MyRenderer.cs" />
+    <Compile Include="Util\Sesion.cs" />
+    <Compile Include="Util\Titulos.cs" />
+    <Compile Include="VistaControlador\Admision\AdmisionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\AdmisionUI.Designer.cs">
+      <DependentUpon>AdmisionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\Anexo1UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\Anexo1UI.Designer.cs">
+      <DependentUpon>Anexo1UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\Anexo2UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\Anexo2UI.Designer.cs">
+      <DependentUpon>Anexo2UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\Anexo3UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\Anexo3UI.Designer.cs">
+      <DependentUpon>Anexo3UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\Configuracion\ConfiguracionManualServicioUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\Configuracion\ConfiguracionManualServicioUI.Designer.cs">
+      <DependentUpon>ConfiguracionManualServicioUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\IngresoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\IngresoUI.Designer.cs">
+      <DependentUpon>IngresoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\ManualTarifarioServicioUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\ManualTarifarioServicioUI.Designer.cs">
+      <DependentUpon>ManualTarifarioServicioUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\ConfiguracionGeneralUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\ConfiguracionGeneralUI.Designer.cs">
+      <DependentUpon>ConfiguracionGeneralUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Gestion\ClienteUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Gestion\ClienteUI.Designer.cs">
+      <DependentUpon>ClienteUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Gestion\ContratoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Gestion\ContratoUI.Designer.cs">
+      <DependentUpon>ContratoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Gestion\ProveedorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Gestion\ProveedorUI.Designer.cs">
+      <DependentUpon>ProveedorUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Gestion\TerceroUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Gestion\TerceroUI.Designer.cs">
+      <DependentUpon>TerceroUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\FacturaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\FacturaUI.Designer.cs">
+      <DependentUpon>FacturaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\General\BusquedaGeneralUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\General\BusquedaGeneralUI.Designer.cs">
+      <DependentUpon>BusquedaGeneralUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.Designer.cs">
+      <DependentUpon>ConfiguracionProcedimientoMedicoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\TransfusionSanguineaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\TransfusionSanguineaUI.Designer.cs">
+      <DependentUpon>TransfusionSanguineaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\SolicitudMedicamentoNoPosUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\SolicitudMedicamentoNoPosUI.Designer.cs">
+      <DependentUpon>SolicitudMedicamentoNoPosUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\JustificacionAntibioticoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\JustificacionAntibioticoUI.Designer.cs">
+      <DependentUpon>JustificacionAntibioticoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\InicioUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\InicioUI.designer.cs">
+      <DependentUpon>InicioUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\PacienteUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\PacienteUI.Designer.cs">
+      <DependentUpon>PacienteUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Inventario\BodegaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Inventario\BodegaUI.designer.cs">
+      <DependentUpon>BodegaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Inventario\ProductoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Inventario\ProductoUI.designer.cs">
+      <DependentUpon>ProductoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\PrinicipaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\PrinicipaUI.designer.cs">
+      <DependentUpon>PrinicipaUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VistaControlador\Admision\AdmisionUI.resx">
+      <DependentUpon>AdmisionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Admision\Anexo1UI.resx">
+      <DependentUpon>Anexo1UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Admision\Anexo2UI.resx">
+      <DependentUpon>Anexo2UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Admision\Anexo3UI.resx">
+      <DependentUpon>Anexo3UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\ConfiguracionGeneralUI.resx">
+      <DependentUpon>ConfiguracionGeneralUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Gestion\ClienteUI.resx">
+      <DependentUpon>ClienteUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Gestion\ProveedorUI.resx">
+      <DependentUpon>ProveedorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Gestion\TerceroUI.resx">
+      <DependentUpon>TerceroUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Admision\Configuracion\ConfiguracionManualServicioUI.resx">
+      <DependentUpon>ConfiguracionManualServicioUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Admision\IngresoUI.resx">
+      <DependentUpon>IngresoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Admision\ManualTarifarioServicioUI.resx">
+      <DependentUpon>ManualTarifarioServicioUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Admision\PacienteUI.resx">
+      <DependentUpon>PacienteUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\General\BusquedaGeneralUI.resx">
+      <DependentUpon>BusquedaGeneralUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.resx">
+      <DependentUpon>ConfiguracionProcedimientoMedicoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\TransfusionSanguineaUI.resx">
+      <DependentUpon>TransfusionSanguineaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\SolicitudMedicamentoNoPosUI.resx">
+      <DependentUpon>SolicitudMedicamentoNoPosUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\JustificacionAntibioticoUI.resx">
+      <DependentUpon>JustificacionAntibioticoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\InicioUI.resx">
+      <DependentUpon>InicioUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Inventario\BodegaUI.resx">
+      <DependentUpon>BodegaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Inventario\ProductoUI.resx">
+      <DependentUpon>ProductoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\PrinicipaUI.resx">
+      <DependentUpon>PrinicipaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Util\Convertidores\" />
+    <Folder Include="Util\Validadores\" />
+    <Folder Include="VistaControlador\Facturacion\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-blue-arrow-undo-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anular24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital-reception.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\curriculum %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiar-241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiar-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database-Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database-Delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-undo-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-new-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-menu-editor-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy-Drive-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-project-development-close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-revert-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document-copy-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
