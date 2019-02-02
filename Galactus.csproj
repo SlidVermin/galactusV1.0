@@ -74,7 +74,7 @@
     <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\JustificacionAntibiotico.cs" />
     <Compile Include="Entidades\Inventario\Bodega.cs" />
-    <Compile Include="Entidades\Inventario\Producto.cs" />
+    <Compile Include="Entidades\ConfiguracionGeneral\Producto.cs" />
     <Compile Include="Modelo\Admision\Configuracion\ManualServicioDAL.cs" />
     <Compile Include="Modelo\Admision\manualTarifarioServicioDAL.cs" />
     <Compile Include="Modelo\Admision\PacienteDAL.cs" />
@@ -82,7 +82,7 @@
     <Compile Include="Modelo\General\BusquedaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
     <Compile Include="Modelo\Inventario\BodegaDAL.cs" />
-    <Compile Include="Modelo\Inventario\ProductoDAL.cs" />
+    <Compile Include="Modelo\ConfiguracionGeneral\ProductoDAL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Consultas\Query.cs" />
@@ -221,10 +221,10 @@
     <Compile Include="VistaControlador\Inventario\BodegaUI.designer.cs">
       <DependentUpon>BodegaUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\Inventario\ProductoUI.cs">
+    <Compile Include="VistaControlador\ConfiguracionGeneral\ProductoUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VistaControlador\Inventario\ProductoUI.designer.cs">
+    <Compile Include="VistaControlador\ConfiguracionGeneral\ProductoUI.designer.cs">
       <DependentUpon>ProductoUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\PrinicipaUI.cs">
@@ -300,7 +300,7 @@
     <EmbeddedResource Include="VistaControlador\Inventario\BodegaUI.resx">
       <DependentUpon>BodegaUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\Inventario\ProductoUI.resx">
+    <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\ProductoUI.resx">
       <DependentUpon>ProductoUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\PrinicipaUI.resx">
