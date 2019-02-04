@@ -87,7 +87,7 @@ namespace Galactus.VistaControlador.Inventario
             {
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                GeneralC.buscarDevuelveFila(Query.BODEGA_BUSCAR,
+                GeneralC.buscarDevuelveFila(Query.ALMACEN_BUSCAR,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarBodega),
                                             Mensajes.BUSQUEDA_BODEGA,

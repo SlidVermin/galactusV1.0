@@ -68,7 +68,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             {
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                GeneralC.buscarDevuelveFila("",
+                GeneralC.buscarDevuelveFila(Query.EQUIVALENCIA_BUSCAR,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarEquivalencia),
                                             Mensajes.BUSQUEDA_EQUIVALENCIA,
