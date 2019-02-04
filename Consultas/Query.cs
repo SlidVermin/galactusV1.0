@@ -15,10 +15,10 @@ namespace Galactus
         public const string SEG_LLENAR_PERMISOS = ConstanteGeneral.ESQUEMA_SEGURIDAD + "[uspMenuPermisosLlenar]";
         #endregion
         #region INVENTARIO 
-        public const string BODEGA_BUSCAR = ConstanteGeneral.ESQUEMA_INVENTARIO + "[uspBodegaBuscar]";
-        public const string PRODUCTO_LISTAR_EQUIVALENCIA = ConstanteGeneral.ESQUEMA_INVENTARIO + "[uspEquivalenciaListar]";
-        public const string PRODUCTO_BUSCAR = ConstanteGeneral.ESQUEMA_INVENTARIO + "[uspProductoBuscar]";
-        public const string PRODUCTO_CARGAR = ConstanteGeneral.ESQUEMA_INVENTARIO + "[uspProductoCargar]";
+        public const string BODEGA_BUSCAR = ConstanteGeneral.ESQUEMA_ALMACEN  + "[uspBodegaBuscar]";
+        public const string PRODUCTO_LISTAR_EQUIVALENCIA = ConstanteGeneral.ESQUEMA_ALMACEN + "[uspEquivalenciaListar]";
+        public const string PRODUCTO_BUSCAR = ConstanteGeneral.ESQUEMA_ALMACEN + "[uspProductoBuscar]";
+        public const string PRODUCTO_CARGAR = ConstanteGeneral.ESQUEMA_ALMACEN + "[uspProductoCargar]";
         #endregion
         #region ADMISIONES
         public const String MANUAL_SERVICIO_CREAR = "";

@@ -22,7 +22,7 @@ namespace Galactus.Util.Constantes
         public const int METODO_ISS = 3;
 
 
-        public const string ESQUEMA_INVENTARIO = "[Inventario].";
+        public const string ESQUEMA_ALMACEN = "[Almacen].";
         public const string ESQUEMA_SEGURIDAD = "[Seguridad].";
         public const string ESQUEMA_PARAMETRO = "[Parametro].";
 
@@ -31,6 +31,9 @@ namespace Galactus.Util.Constantes
         public const int PRESENTACION = 2;
         public const int SEXO = 3;
         public const int ESTADO_CIVIL = 4;
+        public const int LINEA = 5;
+        public const int VIAS_ADMINISTRACION = 6;
+        public const int UNIDADES_DE_MEDIDA = 7;
         #endregion
 
     }

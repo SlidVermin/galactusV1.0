@@ -19,10 +19,10 @@ namespace Galactus.Modelo.ConfiguracionGeneral
                     sentencia.Connection = PriincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametroGeneralCrear]";
-                    sentencia.Parameters.Add(new SqlParameter("@idParametro", System.Data.SqlDbType.Int)).Value = objConfiguracionGeneral.idParametro;
-                    sentencia.Parameters.Add(new SqlParameter("@idDocumento", System.Data.SqlDbType.Int)).Value = objConfiguracionGeneral.idDocumento;
-                    sentencia.Parameters.Add(new SqlParameter("@Descripcion", System.Data.SqlDbType.NVarChar)).Value = objConfiguracionGeneral.descripcionDocumento;
-                    objConfiguracionGeneral.idDocumento = (int)sentencia.ExecuteScalar();
+                    sentencia.Parameters.Add(new SqlParameter("@IdDescripcionValor", System.Data.SqlDbType.Int)).Value = objConfiguracionGeneral.idDocumento;
+                    sentencia.Parameters.Add(new SqlParameter("@IdDescripcion", System.Data.SqlDbType.Int)).Value = objConfiguracionGeneral.idParametro;
+                    sentencia.Parameters.Add(new SqlParameter("@Valor", System.Data.SqlDbType.NVarChar)).Value = objConfiguracionGeneral.descripcionDocumento;
+                    sentencia.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)

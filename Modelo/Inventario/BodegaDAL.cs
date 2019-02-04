@@ -18,7 +18,7 @@ namespace Galactus.Modelo.Inventario
                 {
                     sentencia.Connection = PriincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
-                    sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_INVENTARIO + "[uspBodegaCrear]";
+                    sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_ALMACEN + "[uspBodegaCrear]";
                     sentencia.Parameters.Add(new SqlParameter("@pIdBodega", System.Data.SqlDbType.Int)).Value = objBodega.idBodega;
                     sentencia.Parameters.Add(new SqlParameter("@pIdDescripcion", System.Data.SqlDbType.NVarChar)).Value = objBodega.descripcion;
                     sentencia.Parameters.Add(new SqlParameter("@pUsuario", System.Data.SqlDbType.Int)).Value = Sesion.IdUsuario;
@@ -39,7 +39,7 @@ namespace Galactus.Modelo.Inventario
                 {
                     sentencia.Connection = PriincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
-                    sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_INVENTARIO + "[uspBodegaAnular]";
+                    sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_ALMACEN + "[uspBodegaAnular]";
                     sentencia.Parameters.Add(new SqlParameter("@pIdBodega", System.Data.SqlDbType.Int)).Value = objBodega.idBodega; ;
                     sentencia.ExecuteNonQuery();
                 }

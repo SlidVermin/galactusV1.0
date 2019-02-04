@@ -78,6 +78,12 @@ namespace Galactus
             }
 
         }
+
+        internal static void buscarDevuelveFila(string bODEGA_BUSCAR, List<string> parametros, cargarInfoFila cargarInfoFila, object bUSQUEDA_BODEGA, bool v)
+        {
+            throw new NotImplementedException();
+        }
+
         public static string obtenerParametros(List<string> parametros)
         {
             string lisatdoParametros;

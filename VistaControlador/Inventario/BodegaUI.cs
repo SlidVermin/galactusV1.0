@@ -72,6 +72,7 @@ namespace Galactus.VistaControlador.Inventario
                         listaBotones.Add(tBtEditar);
                         listaBotones.Add(tBtAnular);
                         GeneralC.posGuardar(this, ref tstMenuPatron, ref listaBotones, Mensajes.CONFIRMACION_GUARDADO);
+                        txtBCodigo.Text = bodega.idBodega.ToString();
                     }
                     catch (Exception ex)
                     {
@@ -82,13 +83,20 @@ namespace Galactus.VistaControlador.Inventario
         }
         private void tBtBuscar_Click(object sender, EventArgs e)
         {
-            List<string> parametros = new List<string>();
-            parametros.Add("");
-            GeneralC.buscarDevuelveFila(Query.BODEGA_BUSCAR,
-                                        parametros,
-                                        new GeneralC.cargarInfoFila(cargarBodega),
-                                        Mensajes.BUSQUEDA_BODEGA,
-                                        true);
+            try
+            {
+                List<string> parametros = new List<string>();
+                parametros.Add("");
+                GeneralC.buscarDevuelveFila(Query.BODEGA_BUSCAR,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(cargarBodega),
+                                            Mensajes.BUSQUEDA_BODEGA,
+                                            true);
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+   
         }
         private void tBtNuevo_Click(object sender, EventArgs e)
         {

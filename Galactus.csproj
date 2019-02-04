@@ -70,6 +70,7 @@
     <Compile Include="Entidades\Admision\Configuracion\ManualServicio.cs" />
     <Compile Include="Entidades\Admision\manualTarifarioServicio.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\ConfiguracionGeneral.cs" />
+    <Compile Include="Entidades\ConfiguracionGeneral\Equivalencia.cs" />
     <Compile Include="Entidades\General\Busqueda.cs" />
     <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\JustificacionAntibiotico.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Modelo\Admision\manualTarifarioServicioDAL.cs" />
     <Compile Include="Modelo\Admision\PacienteDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\ConfiguracionGeneralDAL.cs" />
+    <Compile Include="Modelo\EquivalenciaDAL.cs" />
     <Compile Include="Modelo\General\BusquedaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
     <Compile Include="Modelo\Inventario\BodegaDAL.cs" />
@@ -142,6 +144,12 @@
     </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\ConfiguracionGeneralUI.Designer.cs">
       <DependentUpon>ConfiguracionGeneralUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\EquivalenciaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\EquivalenciaUI.Designer.cs">
+      <DependentUpon>EquivalenciaUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\Gestion\ClienteUI.cs">
       <SubType>Form</SubType>
@@ -257,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\ConfiguracionGeneralUI.resx">
       <DependentUpon>ConfiguracionGeneralUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\EquivalenciaUI.resx">
+      <DependentUpon>EquivalenciaUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Gestion\ClienteUI.resx">
       <DependentUpon>ClienteUI.cs</DependentUpon>

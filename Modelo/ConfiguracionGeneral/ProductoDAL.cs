@@ -19,7 +19,7 @@ namespace Galactus.Modelo.Inventario
                 {
                     sentencia.Connection = PriincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
-                    sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_INVENTARIO + "[uspProductoCrear]";
+                    sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_ALMACEN + "[uspProductoCrear]";
                     sentencia.Parameters.Add(new SqlParameter("@pIdProducto", SqlDbType.Int)).Value = objProducto.idProducto;
                     sentencia.Parameters.Add(new SqlParameter("@pDescripcion", SqlDbType.NVarChar)).Value = objProducto.descripcion;
                     sentencia.Parameters.Add(new SqlParameter("@pIdEquivalencia", SqlDbType.Int)).Value = objProducto.idEquivalencia;
@@ -46,7 +46,7 @@ namespace Galactus.Modelo.Inventario
                 {
                     sentencia.Connection = PriincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
-                    sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_INVENTARIO + "[uspProductoAnular]";
+                    sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_ALMACEN + "[uspProductoAnular]";
                     sentencia.Parameters.Add(new SqlParameter("@pIdProducto", SqlDbType.Int)).Value = objProducto.idProducto; ;
                     sentencia.ExecuteNonQuery();
                 }
