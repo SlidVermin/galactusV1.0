@@ -23,8 +23,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void ConfiguracionGeneralUI_Load(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotonesHab = new List<ToolStripButton>();
-            GeneralC.posCargadoForm(this, ref tstMenuPatron, ref listaBotonesHab);
+            GeneralC.posCargadoForm(this,  tstMenuPatron);
             DataGridViewColumnCollection columnas = dgvDetalle.Columns;
             columnas["Código"].DataPropertyName = "Código";
             columnas["Descripción"].DataPropertyName = "Descripción";

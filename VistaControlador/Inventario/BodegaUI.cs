@@ -22,10 +22,7 @@ namespace Galactus.VistaControlador.Inventario
         }
         private void BodegaUI_Load(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotonesHab = new List<ToolStripButton>();
-            listaBotonesHab.Add(tBtNuevo);
-            listaBotonesHab.Add(tBtBuscar);
-            GeneralC.posCargadoForm(this, ref tstMenuPatron, ref listaBotonesHab);
+            GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
         }
         #region Metodos y funciones
         bool validarForm()
@@ -45,12 +42,7 @@ namespace Galactus.VistaControlador.Inventario
         {
             txtBCodigo.Text = fila.Field<int>(0).ToString();
             txtDescripcion.Text = fila.Field<string>(1);
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(tBtNuevo);
-            listaBotones.Add(tBtBuscar);
-            listaBotones.Add(tBtEditar);
-            listaBotones.Add(tBtAnular);
-            GeneralC.posBuscar(this, ref tstMenuPatron, ref listaBotones);
+            GeneralC.posBuscar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular);
         }
         #endregion
         #region Eventos de botones
@@ -66,12 +58,7 @@ namespace Galactus.VistaControlador.Inventario
                     try
                     {
                         BodegaDAL.guardar(bodega);
-                        List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-                        listaBotones.Add(tBtNuevo);
-                        listaBotones.Add(tBtBuscar);
-                        listaBotones.Add(tBtEditar);
-                        listaBotones.Add(tBtAnular);
-                        GeneralC.posGuardar(this, ref tstMenuPatron, ref listaBotones, Mensajes.CONFIRMACION_GUARDADO);
+                        GeneralC.posGuardar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                         txtBCodigo.Text = bodega.idBodega.ToString();
                     }
                     catch (Exception ex)
@@ -93,35 +80,23 @@ namespace Galactus.VistaControlador.Inventario
                                             Mensajes.BUSQUEDA_BODEGA,
                                             true);
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
-   
+
         }
         private void tBtNuevo_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(tBtGuardar);
-            listaBotones.Add(tBtCancelar);
-            GeneralC.formNuevo(this,
-                               ref tstMenuPatron,
-                               ref listaBotones);
+            GeneralC.formNuevo(this, tstMenuPatron, tBtGuardar, tBtCancelar);
         }
         private void tBtEditar_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(tBtGuardar);
-            listaBotones.Add(tBtCancelar);
-            GeneralC.fnEditarForm(this,
-                                  ref tstMenuPatron,
-                                  ref listaBotones);
+            GeneralC.fnEditarForm(this, tstMenuPatron, tBtGuardar, tBtCancelar);
         }
         private void tBtCancelar_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(tBtNuevo);
-            listaBotones.Add(tBtBuscar);
-            GeneralC.fnCancelarForm(this, ref tstMenuPatron, ref listaBotones);
+            GeneralC.fnCancelarForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
         }
         private void tBtAnular_Click(object sender, EventArgs e)
         {
@@ -130,10 +105,7 @@ namespace Galactus.VistaControlador.Inventario
                 try
                 {
                     BodegaDAL.anular(bodega);
-                    List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-                    listaBotones.Add(tBtNuevo);
-                    listaBotones.Add(tBtBuscar);
-                    GeneralC.posAnular(this, ref tstMenuPatron, ref listaBotones, Mensajes.CONFIRMACION_ANULADO);
+                    GeneralC.posAnular(this,  tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
                 }
                 catch (Exception ex)
                 {

@@ -34,23 +34,17 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
             List<ToolStripButton> listaBotones = new List<ToolStripButton>();
             listaBotones.Add(btnGuardar);
             listaBotones.Add(btnCancelar);
-            GeneralC.formNuevo(this, ref tstMenuPatron, ref listaBotones);
+            GeneralC.formNuevo(this,tstMenuPatron, btnGuardar, btnCancelar);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(btnGuardar);
-            listaBotones.Add(btnCancelar);
-            GeneralC.fnEditarForm(this, ref tstMenuPatron, ref listaBotones);
+            GeneralC.fnEditarForm(this,  tstMenuPatron, btnGuardar, btnCancelar);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(btnNuevo);
-            listaBotones.Add(btnBuscar);
-            GeneralC.fnCancelarForm(this, ref tstMenuPatron, ref listaBotones);
+            GeneralC.fnCancelarForm(this,tstMenuPatron, btnNuevo, btnBuscar);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -93,12 +87,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
                 txtBCodigo.Text = configuracionProcedimientoMedico.idConfiguracion.ToString();
                 txtBNombreProcedimiento.Text = configuracionProcedimientoMedico.descripcionItem;
 
-                List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-                listaBotones.Add(btnNuevo);
-                listaBotones.Add(btnBuscar);
-                listaBotones.Add(btnEditar);
-                listaBotones.Add(btnAnular);
-                GeneralC.posBuscar(this, ref tstMenuPatron, ref listaBotones);
+                GeneralC.posBuscar(this, tstMenuPatron, btnNuevo, btnBuscar, btnEditar, btnAnular);
             }
 
 
@@ -111,10 +100,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
                 try
                 {
                   
-                    List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-                    listaBotones.Add(btnNuevo);
-                    listaBotones.Add(btnBuscar);
-                    GeneralC.posAnular(this, ref tstMenuPatron, ref listaBotones, Mensajes.CONFIRMACION_ANULADO);
+                    GeneralC.posAnular(this, tstMenuPatron, btnNuevo, btnBuscar, Mensajes.CONFIRMACION_ANULADO);
                 }
                 catch (Exception ex)
                 {

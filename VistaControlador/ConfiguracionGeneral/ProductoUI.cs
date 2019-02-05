@@ -23,10 +23,7 @@ namespace Galactus.VistaControlador.Inventario
         }
         private void ProductoUI_Load(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotonesHab = new List<ToolStripButton>();
-            listaBotonesHab.Add(tBtNuevo);
-            listaBotonesHab.Add(tBtBuscar);
-            GeneralC.posCargadoForm(this, ref tstMenuPatron, ref listaBotonesHab);
+            GeneralC.posCargadoForm(this,  tstMenuPatron, tBtNuevo, tBtBuscar);
         }
         #region Metodos y Funciones
         bool validarForm()
@@ -85,13 +82,7 @@ namespace Galactus.VistaControlador.Inventario
                 txtRegSanitario.Text = producto.registroSanitario;
                 txtCUM.Text = producto.codigoCUM;
                 ndIva.Value = (decimal)producto.iva;
-
-                List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-                listaBotones.Add(tBtNuevo);
-                listaBotones.Add(tBtBuscar);
-                listaBotones.Add(tBtEditar);
-                listaBotones.Add(tBtAnular);
-                GeneralC.posBuscar(this, ref tstMenuPatron, ref listaBotones);
+                GeneralC.posBuscar(this,  tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular);
             }
 
             
@@ -118,21 +109,15 @@ namespace Galactus.VistaControlador.Inventario
             List<ToolStripButton> listaBotones = new List<ToolStripButton>();
             listaBotones.Add(tBtGuardar);
             listaBotones.Add(tBtCancelar);
-            GeneralC.formNuevo(this, ref tstMenuPatron, ref listaBotones);
+            GeneralC.formNuevo(this,  tstMenuPatron, tBtGuardar, tBtCancelar);
         }
         private void tBtEditar_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(tBtGuardar);
-            listaBotones.Add(tBtCancelar);
-            GeneralC.fnEditarForm(this, ref tstMenuPatron, ref listaBotones);
+            GeneralC.fnEditarForm(this,  tstMenuPatron, tBtGuardar, tBtCancelar);
         }
         private void tBtCancelar_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(tBtNuevo);
-            listaBotones.Add(tBtBuscar);
-            GeneralC.fnCancelarForm(this, ref tstMenuPatron, ref listaBotones);
+            GeneralC.fnCancelarForm(this,tstMenuPatron, tBtNuevo, tBtBuscar);
         }
         private void tBtBuscar_Click(object sender, EventArgs e)
         {
@@ -216,12 +201,8 @@ namespace Galactus.VistaControlador.Inventario
                 try
                 {
                     ProductoDAL.guardar(producto);
-                    List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-                    listaBotones.Add(tBtNuevo);
-                    listaBotones.Add(tBtBuscar);
-                    listaBotones.Add(tBtEditar);
-                    listaBotones.Add(tBtAnular);
-                    GeneralC.posGuardar(this, ref tstMenuPatron, ref listaBotones, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this,tstMenuPatron,tBtNuevo,tBtBuscar,tBtEditar, tBtAnular,null, Mensajes.CONFIRMACION_GUARDADO);
+                    txtBCodigo.Text = producto.idProducto.ToString();
                 }
                 catch (Exception ex)
                 {
@@ -236,10 +217,7 @@ namespace Galactus.VistaControlador.Inventario
                 try
                 {
                     ProductoDAL.anular(producto);
-                    List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-                    listaBotones.Add(tBtNuevo);
-                    listaBotones.Add(tBtBuscar);
-                    GeneralC.posAnular(this, ref tstMenuPatron, ref listaBotones, Mensajes.CONFIRMACION_ANULADO);
+                    GeneralC.posAnular(this, tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
                 }
                 catch (Exception ex)
                 {

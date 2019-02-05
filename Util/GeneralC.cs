@@ -182,13 +182,6 @@ namespace Galactus
 
             }
         }
-        public static void habilitarListaBotones(ref List<ToolStripButton> listaBotones)
-        {
-            foreach (ToolStripButton item in listaBotones)
-            {
-                item.Enabled = true;
-            }
-        }
         public static string validarComillas(string text)
         {
             return text.Replace("'", "");
@@ -288,15 +281,17 @@ namespace Galactus
             dgv.DefaultCellStyle.Font = new Font(ConstanteGeneral.TIPO_LETRA_ELEMENTO, 9);
         }
         public static void formNuevo(object formulario,
-                                     ref ToolStrip menu,
-                                     ref List<ToolStripButton> listaBotones)
+                                     ToolStrip menu,
+                                     ToolStripButton btn1,
+                                     ToolStripButton btn2)
         {
             try
             {
                 limpiarControles(formulario);
                 habilitarControles((Control)formulario);
                 deshabilitarBotones(ref menu);
-                habilitarListaBotones(ref listaBotones);
+                habilitarBotones(btn1);
+                habilitarBotones(btn2);
             }
             catch (Exception ex)
             {
@@ -304,36 +299,52 @@ namespace Galactus
             }
         }
         public static void posCargadoForm(Form formulario,
-                                          ref ToolStrip menu,
-                                          ref List<ToolStripButton> listaBotones)
+                                          ToolStrip menu,
+                                          ToolStripButton btn1 = null,
+                                          ToolStripButton btn2 = null,
+                                          ToolStripButton btn3 = null,
+                                          ToolStripButton btn4 = null,
+                                          ToolStripButton btn5 = null,
+                                          string msm = "")
         {
-            accionesGenerales(formulario, ref menu, ref listaBotones);
+            accionesGenerales(formulario, menu, btn1, btn2, btn3, btn4, btn5, msm);
         }
         public static void posBuscar(Form formulario,
-                                     ref ToolStrip menu,
-                                     ref List<ToolStripButton> listaBotones,
-                                     string msm = "")
+                                      ToolStrip menu,
+                                      ToolStripButton btn1,
+                                      ToolStripButton btn2,
+                                      ToolStripButton btn3,
+                                      ToolStripButton btn4,
+                                      ToolStripButton btn5 = null,
+                                      string msm = "")
         {
-            accionesGenerales(formulario, ref menu, ref listaBotones);
+            accionesGenerales(formulario, menu, btn1, btn2, btn3, btn4, btn5, msm);
         }
         public static void posGuardar(Form formulario,
-                                      ref ToolStrip menu,
-                                      ref List<ToolStripButton> listaBotones,
-                                      string msm)
+                                      ToolStrip menu,
+                                      ToolStripButton btn1,
+                                      ToolStripButton btn2,
+                                      ToolStripButton btn3,
+                                      ToolStripButton btn4,
+                                      ToolStripButton btn5 = null,
+                                      string msm = "")
         {
-            accionesGenerales(formulario, ref menu, ref listaBotones, msm);
+            accionesGenerales(formulario, menu, btn1, btn2, btn3, btn4, btn5, msm);
         }
+  
         public static void posAnular(Form formulario,
-                                     ref ToolStrip menu,
-                                     ref List<ToolStripButton> listaBotones,
-                                     string msm)
+                                      ToolStrip menu,
+                                      ToolStripButton btn1,
+                                      ToolStripButton btn2,
+                                       string msm = "")
         {
             limpiarControles(formulario);
-            accionesGenerales(formulario, ref menu, ref listaBotones, msm);
+            accionesGenerales(formulario, menu, btn1, btn2, null, null, null, msm);
         }
         public static bool fnEditarForm(Form formulario,
-                                        ref ToolStrip menu,
-                                        ref List<ToolStripButton> listaBotones)
+                                        ToolStrip menu,
+                                        ToolStripButton btn1,
+                                        ToolStripButton btn2)
         {
             if (MessageBox.Show(Mensajes.EDITAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
@@ -341,35 +352,55 @@ namespace Galactus
             }
             habilitarControles((Control)formulario);
             deshabilitarBotones(ref menu);
-            habilitarListaBotones(ref listaBotones);
+            habilitarBotones(btn1);
+            habilitarBotones(btn2);
             return true;
         }
         public static bool fnCancelarForm(Form formulario,
-                                       ref ToolStrip menu,
-                                       ref List<ToolStripButton> listaBotones)
+                                              ToolStrip menu,
+                                              ToolStripButton btn1,
+                                              ToolStripButton btn2)
         {
             if (MessageBox.Show(Mensajes.CANCELAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return false;
             }
             limpiarControles(formulario);
-            accionesGenerales(formulario, ref menu, ref listaBotones);
+            deshabilitarBotones(ref menu);
+            deshabilitarControles(formulario);
+            habilitarBotones(btn1);
+            habilitarBotones(btn2);
             return true;
         }
         private static void accionesGenerales(Form formulario,
-                                               ref ToolStrip menu,
-                                               ref List<ToolStripButton> listaBotones,
-                                               string msm = "")
+                                              ToolStrip menu,
+                                              ToolStripButton btn1,
+                                              ToolStripButton btn2,
+                                              ToolStripButton btn3,
+                                              ToolStripButton btn4,
+                                              ToolStripButton btn5 = null,
+                                              string msm = "")
         {
 
             deshabilitarControles(formulario);
             deshabilitarBotones(ref menu);
-            habilitarListaBotones(ref listaBotones);
+            habilitarBotones(btn1);
+            habilitarBotones(btn2);
+            habilitarBotones(btn3);
+            habilitarBotones(btn4);
+            habilitarBotones(btn5);
             if (!msm.Equals(""))
             {
                 MessageBox.Show(msm, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+        static void habilitarBotones(ToolStripButton btn)
+        {
+            if (btn != null)
+            {
+                btn.Enabled = true;
+            }
         }
     }
 }

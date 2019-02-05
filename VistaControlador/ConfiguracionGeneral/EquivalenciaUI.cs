@@ -23,18 +23,13 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void EquivalenciaUI_Load(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotonesHab = new List<ToolStripButton>();
-            listaBotonesHab.Add(tBtNuevo);
-            listaBotonesHab.Add(tBtBuscar);
-            GeneralC.posCargadoForm(this, ref tstMenuPatron, ref listaBotonesHab);
+            GeneralC.posCargadoForm(this,  tstMenuPatron, tBtNuevo, tBtBuscar);
         }
         #region Botones
         private void tBtNuevo_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(tBtGuardar);
-            listaBotones.Add(tBtCancelar);
-            GeneralC.formNuevo(this,ref tstMenuPatron,ref listaBotones);
+          
+            GeneralC.formNuevo(this, tstMenuPatron, tBtGuardar, tBtCancelar);
             cargarLineas();
             cargarVias();
             dgvLineas.DataSource = equivalencia.tablaLineas;
@@ -46,17 +41,11 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
         private void tBtEditar_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(tBtGuardar);
-            listaBotones.Add(tBtCancelar);
-            GeneralC.fnEditarForm(this,ref tstMenuPatron,ref listaBotones);
+              GeneralC.fnEditarForm(this,tstMenuPatron, tBtGuardar, tBtCancelar);
         }
         private void tBtCancelar_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(tBtNuevo);
-            listaBotones.Add(tBtBuscar);
-            GeneralC.fnCancelarForm(this, ref tstMenuPatron, ref listaBotones);
+            GeneralC.fnCancelarForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
         }
         private void tBtGuardar_Click(object sender, EventArgs e)
         {
@@ -89,7 +78,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                     List<ToolStripButton> listaBotones = new List<ToolStripButton>();
                     listaBotones.Add(tBtNuevo);
                     listaBotones.Add(tBtBuscar);
-                    GeneralC.posAnular(this, ref tstMenuPatron, ref listaBotones, Mensajes.CONFIRMACION_ANULADO);
+                    GeneralC.posAnular(this,  tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
                 }
                 catch (Exception ex)
                 {
