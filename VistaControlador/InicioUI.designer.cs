@@ -36,13 +36,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btIngresar = new System.Windows.Forms.Button();
             this.btSalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(186, 127);
+            this.label1.Location = new System.Drawing.Point(186, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 0;
@@ -52,7 +54,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(165, 154);
+            this.label2.Location = new System.Drawing.Point(165, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 15);
             this.label2.TabIndex = 1;
@@ -61,7 +63,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(246, 124);
+            this.txtUsuario.Location = new System.Drawing.Point(246, 36);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(213, 21);
             this.txtUsuario.TabIndex = 2;
@@ -69,7 +71,7 @@
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(246, 151);
+            this.txtPass.Location = new System.Drawing.Point(246, 63);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(213, 21);
             this.txtPass.TabIndex = 3;
@@ -80,7 +82,7 @@
             this.cbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmpresa.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEmpresa.FormattingEnabled = true;
-            this.cbEmpresa.Location = new System.Drawing.Point(246, 178);
+            this.cbEmpresa.Location = new System.Drawing.Point(246, 90);
             this.cbEmpresa.Name = "cbEmpresa";
             this.cbEmpresa.Size = new System.Drawing.Size(213, 23);
             this.cbEmpresa.TabIndex = 4;
@@ -89,7 +91,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(179, 182);
+            this.label3.Location = new System.Drawing.Point(179, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 15);
             this.label3.TabIndex = 5;
@@ -97,7 +99,7 @@
             // 
             // btIngresar
             // 
-            this.btIngresar.Location = new System.Drawing.Point(303, 207);
+            this.btIngresar.Location = new System.Drawing.Point(303, 119);
             this.btIngresar.Name = "btIngresar";
             this.btIngresar.Size = new System.Drawing.Size(75, 23);
             this.btIngresar.TabIndex = 6;
@@ -107,18 +109,30 @@
             // 
             // btSalir
             // 
-            this.btSalir.Location = new System.Drawing.Point(384, 207);
+            this.btSalir.Location = new System.Drawing.Point(384, 119);
             this.btSalir.Name = "btSalir";
             this.btSalir.Size = new System.Drawing.Size(75, 23);
             this.btSalir.TabIndex = 7;
             this.btSalir.Text = "Salir";
             this.btSalir.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Galactus.Properties.Resources.candado_128;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(471, 247);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(471, 154);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btSalir);
             this.Controls.Add(this.btIngresar);
             this.Controls.Add(this.label3);
@@ -131,6 +145,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,6 +161,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btIngresar;
         private System.Windows.Forms.Button btSalir;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

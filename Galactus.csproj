@@ -477,6 +477,7 @@
     <None Include="Resources\Document-copy-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\candado-1281.png" />
     <Content Include="Resources\GalactusDB.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
