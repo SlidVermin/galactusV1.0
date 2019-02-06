@@ -31,13 +31,17 @@ namespace Galactus
         public const String MANUAL_SERVICIO_CONSULTAR_SOAT = "";
         public const String MANUAL_SERVICIO_CONSULTAR_ISS = "";
         public const String MANUAL_SERVICIO_CONSULTAR_CUPS = "";
+       
         #endregion
         #region CONFIGURACIÓN 
         public const String PARAMETROS_CARGAR = ConstanteGeneral.ESQUEMA_PARAMETRO +  "[uspParametrosCargar]";
         public const String PARAMETROS_CARGAR_DOCUMENTOS = ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametrosCargarDocumentos]";
         public const String PARAMETROS_LISTAR_DOCUMENTOS = ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametrosBuscarDocumentos]";
         #endregion
-
+        #region UBICACION
+        public const String CARGARPAIS = ConstanteGeneral.ESQUEMA_ADMISION + "uspPaisCargar";
+        public const String CARGAR_DEPARTAMENTO = ConstanteGeneral.ESQUEMA_ADMISION + "uspDepartamentoCargar";
+        #endregion
 
     }
 }

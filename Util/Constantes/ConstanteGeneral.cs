@@ -21,11 +21,16 @@ namespace Galactus.Util.Constantes
         public const int METODO_SOAT = 2;
         public const int METODO_ISS = 3;
 
+        public const String VALUEMEMBER_PAIS = "IdPais";
+        public const String DISPLAYMEMBER_PAIS = "Descripcion";
+
+        public const String VALUEMEMBER_DEPARTAMENTO = "IdDepartamento";
+        public const String DISPLAYMEMBER_DEPARTAMENTO = "Descripcion";
 
         public const string ESQUEMA_ALMACEN = "[Almacen].";
         public const string ESQUEMA_SEGURIDAD = "[Seguridad].";
         public const string ESQUEMA_PARAMETRO = "[Parametro].";
-
+        public const string ESQUEMA_ADMISION = "[Admision].";
         #region configuracion general
         public const int MARCA = 1;
         public const int PRESENTACION = 2;

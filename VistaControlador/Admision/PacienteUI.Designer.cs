@@ -66,8 +66,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.edadText = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.fechaNPicker = new System.Windows.Forms.DateTimePicker();
+            this.buscarEpsBtn = new System.Windows.Forms.Button();
             this.epsText = new System.Windows.Forms.TextBox();
             this.sexoBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -97,7 +97,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.pacientePB = new System.Windows.Forms.PictureBox();
-            this.buscarEpsBtn = new System.Windows.Forms.Button();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
             this.tBtEditar = new System.Windows.Forms.ToolStripButton();
@@ -455,7 +454,6 @@
             // 
             this.groupBox5.Controls.Add(this.edadText);
             this.groupBox5.Controls.Add(this.label14);
-            this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Controls.Add(this.fechaNPicker);
             this.groupBox5.Controls.Add(this.buscarEpsBtn);
             this.groupBox5.Controls.Add(this.epsText);
@@ -465,13 +463,13 @@
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Location = new System.Drawing.Point(465, 19);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(326, 129);
+            this.groupBox5.Size = new System.Drawing.Size(326, 115);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             // 
             // edadText
             // 
-            this.edadText.Location = new System.Drawing.Point(238, 103);
+            this.edadText.Location = new System.Drawing.Point(238, 84);
             this.edadText.Name = "edadText";
             this.edadText.Size = new System.Drawing.Size(69, 20);
             this.edadText.TabIndex = 9;
@@ -479,29 +477,29 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(197, 106);
+            this.label14.Location = new System.Drawing.Point(197, 87);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(35, 13);
             this.label14.TabIndex = 8;
             this.label14.Text = "Edad:";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(87, 87);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(57, 13);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "dd/mm/aa";
-            // 
             // fechaNPicker
             // 
             this.fechaNPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaNPicker.Location = new System.Drawing.Point(90, 103);
+            this.fechaNPicker.Location = new System.Drawing.Point(90, 84);
             this.fechaNPicker.Name = "fechaNPicker";
             this.fechaNPicker.Size = new System.Drawing.Size(101, 20);
             this.fechaNPicker.TabIndex = 6;
+            // 
+            // buscarEpsBtn
+            // 
+            this.buscarEpsBtn.Image = global::Galactus.Properties.Resources.search__1_;
+            this.buscarEpsBtn.Location = new System.Drawing.Point(242, 53);
+            this.buscarEpsBtn.Name = "buscarEpsBtn";
+            this.buscarEpsBtn.Size = new System.Drawing.Size(26, 24);
+            this.buscarEpsBtn.TabIndex = 5;
+            this.buscarEpsBtn.UseVisualStyleBackColor = true;
+            this.buscarEpsBtn.Click += new System.EventHandler(this.buscarEpsBtn_Click);
             // 
             // epsText
             // 
@@ -521,7 +519,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 106);
+            this.label12.Location = new System.Drawing.Point(10, 87);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(76, 13);
             this.label12.TabIndex = 2;
@@ -721,6 +719,7 @@
             this.paisBox.Name = "paisBox";
             this.paisBox.Size = new System.Drawing.Size(140, 21);
             this.paisBox.TabIndex = 3;
+            this.paisBox.SelectedValueChanged += new System.EventHandler(this.paisBox_SelectedValueChanged);
             // 
             // tipoDocBox
             // 
@@ -768,16 +767,6 @@
             this.pacientePB.Size = new System.Drawing.Size(35, 42);
             this.pacientePB.TabIndex = 2;
             this.pacientePB.TabStop = false;
-            // 
-            // buscarEpsBtn
-            // 
-            this.buscarEpsBtn.Image = global::Galactus.Properties.Resources.search__1_;
-            this.buscarEpsBtn.Location = new System.Drawing.Point(242, 53);
-            this.buscarEpsBtn.Name = "buscarEpsBtn";
-            this.buscarEpsBtn.Size = new System.Drawing.Size(26, 24);
-            this.buscarEpsBtn.TabIndex = 5;
-            this.buscarEpsBtn.UseVisualStyleBackColor = true;
-            this.buscarEpsBtn.Click += new System.EventHandler(this.buscarEpsBtn_Click);
             // 
             // tstMenuPatron
             // 
@@ -854,7 +843,9 @@
             this.Controls.Add(this.label30);
             this.Controls.Add(this.groupBox1);
             this.Name = "PacienteUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PacienteUI";
+            this.Load += new System.EventHandler(this.PacienteUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
@@ -920,7 +911,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox edadText;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker fechaNPicker;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox celResText;

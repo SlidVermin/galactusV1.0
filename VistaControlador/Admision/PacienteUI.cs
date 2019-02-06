@@ -51,5 +51,15 @@ namespace Galactus.VistaControlador
         {
 
         }
+
+        private void PacienteUI_Load(object sender, EventArgs e)
+        {
+            GeneralC.llenarCombo(Query.CARGARPAIS,Util.Constantes.ConstanteGeneral.VALUEMEMBER_PAIS, Util.Constantes.ConstanteGeneral.DISPLAYMEMBER_PAIS, paisBox);
+        }
+
+        private void paisBox_SelectedValueChanged(object sender, EventArgs e)
+        {         
+        GeneralC.llenarCombo(Query.CARGAR_DEPARTAMENTO + " " +  paisBox.SelectedValue?.ToString() + "", Util.Constantes.ConstanteGeneral.VALUEMEMBER_DEPARTAMENTO, Util.Constantes.ConstanteGeneral.DISPLAYMEMBER_DEPARTAMENTO, departBox);     
+        }
     }
 }
