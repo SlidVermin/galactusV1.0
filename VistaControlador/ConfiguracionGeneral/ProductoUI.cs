@@ -23,7 +23,7 @@ namespace Galactus.VistaControlador.Inventario
         }
         private void ProductoUI_Load(object sender, EventArgs e)
         {
-            GeneralC.posCargadoForm(this,  tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
         }
         #region Metodos y Funciones
         bool validarForm()
@@ -62,7 +62,17 @@ namespace Galactus.VistaControlador.Inventario
             producto.idProducto = fila.Field<int>("Código");
             List<string> listaParametros = new List<string>();
             listaParametros.Add(producto.idProducto.ToString());
-            DataRow filaResultado = GeneralC.obtenerRegistroCompleto(Query.PRODUCTO_CARGAR, listaParametros);
+            DataRow filaResultado = null;
+            try
+            {
+                filaResultado = GeneralC.obtenerRegistroCompleto(Query.PRODUCTO_CARGAR, listaParametros);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
             if (filaResultado != null)
             {
                 producto.descripcion = filaResultado.Field<string>("Descripcion");
@@ -71,7 +81,7 @@ namespace Galactus.VistaControlador.Inventario
                 producto.idPresentacion = filaResultado.Field<int>("idPresentacion");
                 producto.registroSanitario = filaResultado.Field<string>("RegistroSanitario");
                 producto.codigoCUM = filaResultado.Field<string>("CodigoCUM");
-                producto.iva =(double) filaResultado.Field<decimal>("Iva");
+                producto.iva = (double)filaResultado.Field<decimal>("Iva");
 
                 txtBMarca.Text = filaResultado.Field<string>("Marca");
                 txtBEquivalencia.Text = filaResultado.Field<string>("Equivalencia");
@@ -82,10 +92,10 @@ namespace Galactus.VistaControlador.Inventario
                 txtRegSanitario.Text = producto.registroSanitario;
                 txtCUM.Text = producto.codigoCUM;
                 ndIva.Value = (decimal)producto.iva;
-                GeneralC.posBuscar(this,  tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular);
+                GeneralC.posBuscar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular);
             }
 
-            
+
         }
         void cargarEquivalencia(DataRow fila)
         {
@@ -109,15 +119,15 @@ namespace Galactus.VistaControlador.Inventario
             List<ToolStripButton> listaBotones = new List<ToolStripButton>();
             listaBotones.Add(tBtGuardar);
             listaBotones.Add(tBtCancelar);
-            GeneralC.formNuevo(this,  tstMenuPatron, tBtGuardar, tBtCancelar);
+            GeneralC.formNuevo(this, tstMenuPatron, tBtGuardar, tBtCancelar);
         }
         private void tBtEditar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this,  tstMenuPatron, tBtGuardar, tBtCancelar);
+            GeneralC.fnEditarForm(this, tstMenuPatron, tBtGuardar, tBtCancelar);
         }
         private void tBtCancelar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnCancelarForm(this,tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.fnCancelarForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
         }
         private void tBtBuscar_Click(object sender, EventArgs e)
         {
@@ -201,7 +211,7 @@ namespace Galactus.VistaControlador.Inventario
                 try
                 {
                     ProductoDAL.guardar(producto);
-                    GeneralC.posGuardar(this,tstMenuPatron,tBtNuevo,tBtBuscar,tBtEditar, tBtAnular,null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     txtBCodigo.Text = producto.idProducto.ToString();
                 }
                 catch (Exception ex)

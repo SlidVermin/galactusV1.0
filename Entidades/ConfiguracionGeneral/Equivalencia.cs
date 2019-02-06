@@ -14,10 +14,27 @@ namespace Galactus.Entidades.ConfiguracionGeneral
         public string codigoATC { get; set; }
         public string descripcionATC { get; set; }
         public string grupoATC { get; set; }
-        public int idUnidadMedida { set; get; }
+        public Nullable <int> idUnidadMedida { set; get; }
         public double concentracion { get; set; }
+        public double osmolalidad { get; set; }
+        public bool pos { get; set; }
+        public bool medicamentoEspecial { get; set; }
+
         public DataTable tablaVias = new DataTable();
         public DataTable tablaLineas = new DataTable();
 
+        public Equivalencia()
+        {
+            tablaVias.Columns.Add("Código",Type.GetType("System.Int16"));
+            tablaVias.Columns.Add("Descripción", Type.GetType("System.String"));
+            tablaVias.Columns.Add("Verificar", Type.GetType("System.Boolean"));
+            tablaVias.Columns["Verificar"].DefaultValue = false;
+
+            tablaLineas.Columns.Add("Código", Type.GetType("System.Int16"));
+            tablaLineas.Columns.Add("Descripción", Type.GetType("System.String"));
+            tablaLineas.Columns.Add("Verificar", Type.GetType("System.Boolean"));
+            tablaLineas.Columns["Verificar"].DefaultValue = false;
+        }
     }
+    
 }

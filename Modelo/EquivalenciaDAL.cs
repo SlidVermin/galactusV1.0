@@ -1,6 +1,7 @@
 ﻿using Galactus.Entidades.ConfiguracionGeneral;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,24 +13,34 @@ namespace Galactus.Modelo
     {
         public static void guardar(Equivalencia equivalencia)
         {
+            DataTable tablaLineas = new DataTable();
+            DataTable tablaVias = new DataTable();
+            tablaLineas = equivalencia.tablaLineas.Copy();
+            tablaVias = equivalencia.tablaVias.Copy();
+            GeneralC.quitarColumnaDatatable("Descripción", tablaLineas);
+            GeneralC.quitarColumnaDatatable("Descripción", tablaVias);
             try
             {
-                //using (SqlCommand sentencia = new SqlCommand())
-                //{
-                //    sentencia.Connection = PriincipalUI.Cnxion;
-                //    sentencia.CommandType = System.Data.CommandType.StoredProcedure;
-                //    sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_ALMACEN + "[uspProductoCrear]";
-                //    sentencia.Parameters.Add(new SqlParameter("@pIdProducto", SqlDbType.Int)).Value = objProducto.idProducto;
-                //    sentencia.Parameters.Add(new SqlParameter("@pDescripcion", SqlDbType.NVarChar)).Value = objProducto.descripcion;
-                //    sentencia.Parameters.Add(new SqlParameter("@pIdEquivalencia", SqlDbType.Int)).Value = objProducto.idEquivalencia;
-                //    sentencia.Parameters.Add(new SqlParameter("@pIdMarca", SqlDbType.Int)).Value = objProducto.idMarca;
-                //    sentencia.Parameters.Add(new SqlParameter("@pIdPresentacion", SqlDbType.Int)).Value = objProducto.idPresentacion;
-                //    sentencia.Parameters.Add(new SqlParameter("@pRegistroSanitario", SqlDbType.NVarChar)).Value = objProducto.registroSanitario;
-                //    sentencia.Parameters.Add(new SqlParameter("@pCodigoCUM", SqlDbType.NVarChar)).Value = objProducto.codigoCUM;
-                //    sentencia.Parameters.Add(new SqlParameter("@pIva", SqlDbType.Float)).Value = objProducto.iva;
-                //    sentencia.Parameters.Add(new SqlParameter("@pUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
-                //    objProducto.idProducto = (int)sentencia.ExecuteScalar();
-                //}
+                using (SqlCommand sentencia = new SqlCommand())
+                {
+                    sentencia.Connection = PriincipalUI.Cnxion;
+                    sentencia.CommandType = System.Data.CommandType.StoredProcedure;
+                    sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_ALMACEN + "[uspEquivalenciaCrear]";
+                    sentencia.Parameters.Add(new SqlParameter("@pIdEquivalencia", SqlDbType.Int)).Value = equivalencia.idEquivalencia;
+                    sentencia.Parameters.Add(new SqlParameter("@Nombre", SqlDbType.NVarChar)).Value = equivalencia.descripcion;
+                    sentencia.Parameters.Add(new SqlParameter("@DescripcionATC", SqlDbType.NVarChar)).Value = equivalencia.descripcionATC;
+                    sentencia.Parameters.Add(new SqlParameter("@CodigoATC", SqlDbType.NVarChar)).Value = equivalencia.codigoATC;
+                    sentencia.Parameters.Add(new SqlParameter("@GrupoATC", SqlDbType.NVarChar)).Value = equivalencia.grupoATC;
+                    sentencia.Parameters.Add(new SqlParameter("@Concentracion", SqlDbType.Float)).Value = equivalencia.concentracion;
+                    sentencia.Parameters.Add(new SqlParameter("@Osmolalidad", SqlDbType.Float)).Value = equivalencia.osmolalidad;
+                    sentencia.Parameters.Add(new SqlParameter("@IdUnidad", SqlDbType.Int)).Value = equivalencia.idUnidadMedida;
+                    sentencia.Parameters.Add(new SqlParameter("@Pos", SqlDbType.Bit)).Value = equivalencia.pos;
+                    sentencia.Parameters.Add(new SqlParameter("@MedicamentoEspecial", SqlDbType.Bit)).Value = equivalencia.pos;
+                    sentencia.Parameters.Add(new SqlParameter("@IdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
+                    sentencia.Parameters.Add(new SqlParameter("@tablaLineas", SqlDbType.Structured)).Value = tablaLineas;
+                    sentencia.Parameters.Add(new SqlParameter("@tablaVias", SqlDbType.Structured)).Value = tablaVias;
+                    equivalencia.idEquivalencia = (int)sentencia.ExecuteScalar();
+                }
             }
             catch (Exception ex)
             {

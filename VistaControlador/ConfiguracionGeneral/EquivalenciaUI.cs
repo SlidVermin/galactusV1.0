@@ -23,25 +23,19 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void EquivalenciaUI_Load(object sender, EventArgs e)
         {
-            GeneralC.posCargadoForm(this,  tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
         }
         #region Botones
         private void tBtNuevo_Click(object sender, EventArgs e)
         {
-          
             GeneralC.formNuevo(this, tstMenuPatron, tBtGuardar, tBtCancelar);
             cargarLineas();
             cargarVias();
-            dgvLineas.DataSource = equivalencia.tablaLineas;
-            dgvVias.DataSource = equivalencia.tablaVias;
-            colocarColumnaChk(ref dgvLineas, "verificarLineas");
-            colocarColumnaChk(ref dgvVias, "verificarVias");
-        }
-
-
+            enlazarGrillas();
+         }
         private void tBtEditar_Click(object sender, EventArgs e)
         {
-              GeneralC.fnEditarForm(this,tstMenuPatron, tBtGuardar, tBtCancelar);
+            GeneralC.fnEditarForm(this, tstMenuPatron, tBtGuardar, tBtCancelar);
         }
         private void tBtCancelar_Click(object sender, EventArgs e)
         {
@@ -49,7 +43,20 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void tBtGuardar_Click(object sender, EventArgs e)
         {
-
+            if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                asignarDatosEquivalencia();
+                try
+                {
+                    EquivalenciaDAL.guardar(equivalencia);
+                    GeneralC.posGuardar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    txtBCodigo.Text = equivalencia.idEquivalencia.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
         private void tBtBuscar_Click(object sender, EventArgs e)
         {
@@ -75,10 +82,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 try
                 {
                     EquivalenciaDAL.anular(equivalencia);
-                    List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-                    listaBotones.Add(tBtNuevo);
-                    listaBotones.Add(tBtBuscar);
-                    GeneralC.posAnular(this,  tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    GeneralC.posAnular(this, tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
                 }
                 catch (Exception ex)
                 {
@@ -88,20 +92,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             }
         }
         #endregion
-        private void cargarEquivalencia(DataRow fila)
-        {
-
-        }
-        private void colocarColumnaChk(ref DataGridView dgv,string nombreColumna )
-        {
-            if (!dgv.Columns.Contains("Chk"))
-            {
-                DataGridViewCheckBoxColumn columna = new DataGridViewCheckBoxColumn();
-                columna.HeaderText = "";
-                columna.Name = nombreColumna;
-                dgv.Columns.Add(columna);
-            }
-        }
+        #region Metodos y funciones
         private void cargarLineas()
         {
             List<string> listaParametros = new List<string>();
@@ -119,7 +110,58 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         void cargarUnidad(DataRow fila)
         {
             equivalencia.idUnidadMedida = fila.Field<int>("Código");
-           txtUnidadMedida.Text = fila.Field<string>("Descripción");
+            txtBUnidadMedida.Text = fila.Field<string>("Descripción");
+        }
+        private void cargarEquivalencia(DataRow fila)
+        {
+            equivalencia.idEquivalencia = fila.Field<int>("Código");
+            List<string> listaParametros = new List<string>();
+            listaParametros.Add(equivalencia.idEquivalencia.ToString());
+
+            DataSet tablasResultado = new DataSet();
+            try
+            {
+                tablasResultado = GeneralC.llenarDataset(Query.EQUIVALENCIA_CARGAR, listaParametros);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+            if (tablasResultado != null)
+            {
+                DataRow filaResultado  = tablasResultado.Tables[0].Rows[0];
+                
+                equivalencia.descripcion = filaResultado.Field<string>("Nombre");
+                equivalencia.osmolalidad =  (double)filaResultado.Field<decimal>("Osmolalidad");
+                equivalencia.descripcionATC = filaResultado.Field<string>("DescripcionATC");
+                equivalencia.codigoATC = filaResultado.Field<string>("CodigoATC");
+                equivalencia.grupoATC = filaResultado.Field<string>("GrupoATC");
+                equivalencia.concentracion = (double)filaResultado.Field<decimal>("Concentracion");
+                equivalencia.idUnidadMedida = filaResultado.Field<Nullable<int>>("idUnidad");
+                equivalencia.pos  = filaResultado.Field<bool>("pos");
+                equivalencia.medicamentoEspecial = filaResultado.Field<bool>("MedicamentoEspecial");
+                txtBUnidadMedida.Text = filaResultado.Field<string>("Valor");
+
+                txtBCodigo.Text = equivalencia.idEquivalencia.ToString();
+                txtDescripcion.Text = equivalencia.descripcion;
+                txtCodigoATC.Text = equivalencia.codigoATC;
+                cbGrupoATC.SelectedItem = equivalencia.grupoATC;
+                txtDescripcionATC.Text = equivalencia.descripcionATC;
+                numConce.Value = (decimal) equivalencia.concentracion;
+                chkPos.Checked = equivalencia.pos;
+                chkMedicamentoControl.Checked = equivalencia.medicamentoEspecial;
+
+                equivalencia.tablaLineas.Clear();
+                equivalencia.tablaVias.Clear();
+
+                equivalencia.tablaLineas = tablasResultado.Tables[1].Copy();
+                equivalencia.tablaVias = tablasResultado.Tables[2].Copy();
+                enlazarGrillas();
+
+                GeneralC.posBuscar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular);
+            }
         }
         private void btnBuscarUnidades_Click(object sender, EventArgs e)
         {
@@ -138,5 +180,76 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        private bool validarForm()
+        {
+            dgvLineas.EndEdit();
+            dgvLineas.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            dgvVias.EndEdit();
+            dgvVias.CommitEdit(DataGridViewDataErrorContexts.Commit);
+
+            equivalencia.tablaLineas.AcceptChanges();
+            equivalencia.tablaVias.AcceptChanges();
+
+            if (txtDescripcion.Text.Equals(""))
+            {
+                MessageBox.Show("Debe ingresar la descripción !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtDescripcion.Focus();
+                return false;
+            }
+            else if (txtBUnidadMedida.Text.Equals(""))
+            {
+                MessageBox.Show("Debe escoger la unidad !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btBuscarUnidades.Focus();
+                return false;
+            }
+            else if (cbGrupoATC.SelectedIndex == 0)
+            {
+                MessageBox.Show("Debe escoger el grupo ATC !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cbGrupoATC.Focus();
+                return false;
+            }
+            else if (equivalencia.tablaLineas.Select("Verificar = True").Count() == 0) {
+                MessageBox.Show("Debe seleccionar por lo menos una linea !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvLineas.Focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        void enlazarGrillas()
+        {
+
+
+            dgvLineas.Columns["CódigoL"].DataPropertyName = "Código";
+            dgvLineas.Columns["DescripciónL"].DataPropertyName = "Descripción";
+            dgvLineas.Columns["VerificarL"].DataPropertyName = "Verificar";
+
+            dgvVias.Columns["Código"].DataPropertyName = "Código";
+            dgvVias.Columns["Descripción"].DataPropertyName = "Descripción";
+            dgvVias.Columns["Verificar"].DataPropertyName = "Verificar";
+
+            dgvLineas.AutoGenerateColumns = false;
+            dgvVias.AutoGenerateColumns = false;
+
+            dgvLineas.DataSource = equivalencia.tablaLineas;
+            dgvVias.DataSource = equivalencia.tablaVias;
+
+        }
+        void asignarDatosEquivalencia()
+        {
+            equivalencia.idEquivalencia = (txtBCodigo.Text.Equals(String.Empty) ? 0 : int.Parse(txtBCodigo.Text));
+            equivalencia.descripcion = txtDescripcion.Text;
+            equivalencia.concentracion = (double)numConce.Value;
+            equivalencia.osmolalidad = (double)numOsmolalidad.Value;
+            equivalencia.codigoATC = txtCodigoATC.Text;
+            equivalencia.descripcionATC = txtDescripcionATC.Text;
+            equivalencia.grupoATC = cbGrupoATC.SelectedItem.ToString();
+            equivalencia.pos = chkPos.Checked;
+            equivalencia.medicamentoEspecial = chkMedicamentoControl.Checked;
+        }
+        #endregion
+
     }
 }

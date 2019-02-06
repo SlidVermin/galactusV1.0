@@ -113,6 +113,35 @@ namespace Galactus
             }
 
         }
+        public static DataSet llenarDataset(string query,
+                                            List<string> parametros)
+        {
+            string listaParametros = obtenerParametros(parametros);
+            try
+            {
+                using (DataSet dataset = new DataSet())
+                {
+                    dataset.Clear();
+                    using (SqlDataAdapter adaptador = new SqlDataAdapter(query + listaParametros, PriincipalUI.Cnxion))
+                    {
+                        adaptador.Fill(dataset);
+                    }
+                    if (dataset.Tables.Count > 0)
+                    {
+                        return dataset;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
 
         internal static void buscarDevuelveFila(string bODEGA_BUSCAR, List<string> parametros, cargarInfoFila cargarInfoFila, object bUSQUEDA_BODEGA, bool v)
         {
@@ -435,6 +464,12 @@ namespace Galactus
             if (btn != null)
             {
                 btn.Enabled = true;
+            }
+        }
+       public static void quitarColumnaDatatable(string nombreColumna,DataTable tabla) {
+            if (tabla.Columns.Contains(nombreColumna))
+            {
+                tabla.Columns.Remove(nombreColumna);
             }
         }
     }
