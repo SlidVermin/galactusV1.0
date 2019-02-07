@@ -49,6 +49,7 @@
             this.dgvBusqueda.Location = new System.Drawing.Point(12, 40);
             this.dgvBusqueda.MultiSelect = false;
             this.dgvBusqueda.Name = "dgvBusqueda";
+            this.dgvBusqueda.ReadOnly = true;
             this.dgvBusqueda.RowHeadersVisible = false;
             this.dgvBusqueda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBusqueda.Size = new System.Drawing.Size(432, 404);
