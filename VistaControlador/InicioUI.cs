@@ -63,6 +63,7 @@ namespace Galactus
             {
                 Sesion.IdRol = (int)filaResultado.ItemArray[0];
                 Sesion.IdUsuario = (int)filaResultado.ItemArray[1];
+                Sesion.nombre = filaResultado.Field<string>("Nombre");
                 return true;
             }
             return false;

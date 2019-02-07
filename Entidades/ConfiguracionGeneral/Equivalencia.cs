@@ -22,6 +22,7 @@ namespace Galactus.Entidades.ConfiguracionGeneral
 
         public DataTable tablaVias = new DataTable();
         public DataTable tablaLineas = new DataTable();
+        public DataTable tablaProductos = new DataTable();
 
         public Equivalencia()
         {
@@ -34,6 +35,10 @@ namespace Galactus.Entidades.ConfiguracionGeneral
             tablaLineas.Columns.Add("Descripción", Type.GetType("System.String"));
             tablaLineas.Columns.Add("Verificar", Type.GetType("System.Boolean"));
             tablaLineas.Columns["Verificar"].DefaultValue = false;
+
+            tablaProductos.Columns.Add("codigo", Type.GetType("System.Int16"));
+            tablaProductos.Columns.Add("descripcion", Type.GetType("System.String"));
+            tablaProductos.Columns.Add("marca", Type.GetType("System.String"));
         }
     }
     

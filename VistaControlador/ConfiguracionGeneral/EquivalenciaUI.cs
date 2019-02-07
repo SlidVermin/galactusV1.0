@@ -77,7 +77,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void tBtAnular_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (verificarExistenciaProductosenlazados() && MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
@@ -93,6 +93,14 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         #endregion
         #region Metodos y funciones
+        private bool verificarExistenciaProductosenlazados() {
+            if (dgvProductos.RowCount == 0)
+            {
+                return true;
+            }
+            MessageBox.Show("La equivalencia no se puede anular por que tiene productos asociados !","",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            return false;
+        }
         private void cargarLineas()
         {
             List<string> listaParametros = new List<string>();
@@ -158,6 +166,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
                 equivalencia.tablaLineas = tablasResultado.Tables[1].Copy();
                 equivalencia.tablaVias = tablasResultado.Tables[2].Copy();
+                equivalencia.tablaProductos = tablasResultado.Tables[3].Copy();
                 enlazarGrillas();
 
                 GeneralC.posBuscar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular);
@@ -230,11 +239,13 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             dgvVias.Columns["Descripción"].DataPropertyName = "Descripción";
             dgvVias.Columns["Verificar"].DataPropertyName = "Verificar";
 
+
             dgvLineas.AutoGenerateColumns = false;
             dgvVias.AutoGenerateColumns = false;
 
             dgvLineas.DataSource = equivalencia.tablaLineas;
             dgvVias.DataSource = equivalencia.tablaVias;
+            dgvProductos.DataSource = equivalencia.tablaProductos;
 
         }
         void asignarDatosEquivalencia()

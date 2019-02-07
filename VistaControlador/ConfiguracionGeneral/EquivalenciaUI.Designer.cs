@@ -51,10 +51,16 @@
             this.tpCarcacteristicas = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvLineas = new System.Windows.Forms.DataGridView();
+            this.CódigoL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescripciónL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VerificarL = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvVias = new System.Windows.Forms.DataGridView();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Verificar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.btBuscarUnidades = new System.Windows.Forms.Button();
             this.txtBUnidadMedida = new System.Windows.Forms.TextBox();
@@ -65,12 +71,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.numConce = new System.Windows.Forms.NumericUpDown();
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripción = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Verificar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.CódigoL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescripciónL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VerificarL = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tstMenuPatron.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tbcEquivalencia.SuspendLayout();
@@ -80,7 +80,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVias)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOsmolalidad)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numConce)).BeginInit();
@@ -314,6 +314,25 @@
             this.dgvLineas.Size = new System.Drawing.Size(426, 231);
             this.dgvLineas.TabIndex = 0;
             // 
+            // CódigoL
+            // 
+            this.CódigoL.HeaderText = "Código";
+            this.CódigoL.Name = "CódigoL";
+            this.CódigoL.Visible = false;
+            this.CódigoL.Width = 46;
+            // 
+            // DescripciónL
+            // 
+            this.DescripciónL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DescripciónL.HeaderText = "Descripción";
+            this.DescripciónL.Name = "DescripciónL";
+            // 
+            // VerificarL
+            // 
+            this.VerificarL.HeaderText = "";
+            this.VerificarL.Name = "VerificarL";
+            this.VerificarL.Width = 5;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvVias);
@@ -344,9 +363,28 @@
             this.dgvVias.Size = new System.Drawing.Size(426, 231);
             this.dgvVias.TabIndex = 0;
             // 
+            // Código
+            // 
+            this.Código.HeaderText = "Código";
+            this.Código.Name = "Código";
+            this.Código.Visible = false;
+            this.Código.Width = 46;
+            // 
+            // Descripción
+            // 
+            this.Descripción.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descripción.HeaderText = "Descripción";
+            this.Descripción.Name = "Descripción";
+            // 
+            // Verificar
+            // 
+            this.Verificar.HeaderText = "";
+            this.Verificar.Name = "Verificar";
+            this.Verificar.Width = 5;
+            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.dgvProductos);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -355,14 +393,20 @@
             this.tabPage2.Text = "Prductos Dependientes";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvProductos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(878, 259);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvProductos.AllowUserToAddRows = false;
+            this.dgvProductos.AllowUserToDeleteRows = false;
+            this.dgvProductos.AllowUserToResizeColumns = false;
+            this.dgvProductos.AllowUserToResizeRows = false;
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProductos.Location = new System.Drawing.Point(3, 3);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersVisible = false;
+            this.dgvProductos.Size = new System.Drawing.Size(878, 259);
+            this.dgvProductos.TabIndex = 0;
             // 
             // label5
             // 
@@ -478,44 +522,6 @@
             this.numConce.Size = new System.Drawing.Size(90, 20);
             this.numConce.TabIndex = 6;
             // 
-            // Código
-            // 
-            this.Código.HeaderText = "Código";
-            this.Código.Name = "Código";
-            this.Código.Visible = false;
-            this.Código.Width = 46;
-            // 
-            // Descripción
-            // 
-            this.Descripción.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Descripción.HeaderText = "Descripción";
-            this.Descripción.Name = "Descripción";
-            // 
-            // Verificar
-            // 
-            this.Verificar.HeaderText = "";
-            this.Verificar.Name = "Verificar";
-            this.Verificar.Width = 5;
-            // 
-            // CódigoL
-            // 
-            this.CódigoL.HeaderText = "Código";
-            this.CódigoL.Name = "CódigoL";
-            this.CódigoL.Visible = false;
-            this.CódigoL.Width = 46;
-            // 
-            // DescripciónL
-            // 
-            this.DescripciónL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DescripciónL.HeaderText = "Descripción";
-            this.DescripciónL.Name = "DescripciónL";
-            // 
-            // VerificarL
-            // 
-            this.VerificarL.HeaderText = "";
-            this.VerificarL.Name = "VerificarL";
-            this.VerificarL.Width = 5;
-            // 
             // EquivalenciaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,7 +544,7 @@
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVias)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOsmolalidad)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -574,7 +580,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvVias;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btBuscarUnidades;
         private System.Windows.Forms.TextBox txtBUnidadMedida;

@@ -38,43 +38,12 @@ namespace Galactus
             //return conx;
             return Conexion.obtenerConexion(0);
         }
-        public static int IdUsuario
-        {
-            get
-            {
-                return idUsuario;
-            }
+        public static int IdUsuario { get; set; }
 
-            set
-            {
-                idUsuario = value;
-            }
-        }
 
-        public static int IdRol
-        {
-            get
-            {
-                return idRol;
-            }
+        public static int IdRol { get; set; }
 
-            set
-            {
-                idRol = value;
-            }
-        }
-
-        public static string NombreUsuario
-        {
-            get
-            {
-                return nombreUsuario;
-            }
-
-            set
-            {
-                nombreUsuario = value;
-            }
-        }
+        public static string NombreUsuario { get; set; }
+        public static string nombre { get; set; }
     }
 }

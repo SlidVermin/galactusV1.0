@@ -17,7 +17,7 @@ namespace Galactus
         public MenuStrip MenuOpciones = new MenuStrip();
         private static SqlConnection cnxion = Sesion.getConexion();
 
-        public static  SqlConnection Cnxion
+        public static SqlConnection Cnxion
         {
             get
             {
@@ -42,21 +42,22 @@ namespace Galactus
             childForm.Text = "Ventana " + childFormNumber++;
             childForm.Show();
         }
-           
+
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             crearMenu();
             this.WindowState = FormWindowState.Maximized;
+            toolStripStatusLabel.Text = Sesion.nombre;
         }
 
-        void crearMenu() {
+        void crearMenu()
+        {
             MenuOpciones = cargarMenu();
             this.Controls.Add(MenuOpciones);
             MenuOpciones.LayoutStyle = ToolStripLayoutStyle.Flow;
             MenuOpciones.AutoSize = true;
             MenuOpciones.BackColor = Color.White;
             MenuOpciones.GripStyle = ToolStripGripStyle.Visible;
-            //'MenuOpciones.Font = New Font(ConstantesGenerales.TipoLetra.TIPO_LETRA_ELEMENTO_ARIAL, 8)
             MenuOpciones.Renderer = new MyRenderer();
         }
         public MenuStrip cargarMenu()
@@ -72,7 +73,7 @@ namespace Galactus
         {
             DataRow[] filas = null;
             filas = Sesion.dtmenu.Select("IdMenuPadre is null");
-                        
+
             ToolStripMenuItem menuPadre = null;
             if (filas != null)
             {
@@ -86,7 +87,7 @@ namespace Galactus
             }
             menuPadre = new ToolStripMenuItem("Salir");
             menuPadre.Alignment = ToolStripItemAlignment.Right;
-            //agregarMenuItem("Salir", menuPadre);
+            agregarMenuItem("Salir", menuPadre);
             menu.Items.Add(menuPadre);
             return menu;
         }
@@ -102,8 +103,8 @@ namespace Galactus
                     info = new InformacionTag();
                     info.IdMenu = item.Field<int>("idMenu");
                     info.Nombre = item.Field<string>("Descripcion");
-                 
-                     info.NombreForm = item.Field<string>("Formulario");
+
+                    info.NombreForm = item.Field<string>("Formulario");
                     ToolStripMenuItem subItem = new ToolStripMenuItem(info.Nombre, global::Galactus.Properties.Resources.add);
                     if (info.NombreForm != null)
                     {
@@ -120,36 +121,27 @@ namespace Galactus
         {
             switch (form)
             {
-                case "CerrarS":
-                    mnuSubOpcion.Click += new EventHandler(CerrarS);
-                   break;
-                 case "Salir":
+                case "Salir":
                     mnuSubOpcion.Click += new EventHandler(salir);
-                   break;
-                 default:
-                     mnuSubOpcion.Click+= new EventHandler(cargarFormulario); 
-                   break;
-                    //         If form.Trim<> String.Empty Then
-                    //     AddHandler mnuSubOpcion.Click, AddressOf formPrincipal.click_Global
+                    break;
+                default:
+                    mnuSubOpcion.Click += new EventHandler(cargarFormulario);
+                    break;
 
             }
         }
-        public void CerrarS(Object sender,EventArgs e) {
-
-        }
         public void salir(Object sender, EventArgs e)
         {
-            if( MessageBox.Show("¿Realmente desea salir?","",MessageBoxButtons.YesNo) == DialogResult.Yes )
+            if (MessageBox.Show("¿Realmente desea salir?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                //formLogin.Show();
-                //formPrincipal.Close();
-            } 
-            
-        }
-        public void cargarFormulario(Object sender, EventArgs e) {
-            try {
-           
+                Application.Exit();
+            }
 
+        }
+        public void cargarFormulario(Object sender, EventArgs e)
+        {
+            try
+            {
                 var menuItem = (ToolStripMenuItem)sender;
                 var NombreNuevaInstancia = Assembly.GetExecutingAssembly().GetName().Name;
                 InformacionTag info = new InformacionTag();
@@ -165,7 +157,6 @@ namespace Galactus
                     }
                 }
 
-
                 if (vTipo != null)
                 {
                     var vFormulario = (Form)Activator.CreateInstance(vTipo);
@@ -173,10 +164,11 @@ namespace Galactus
                     GeneralC.cargarForm(vFormulario, this);
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
-                  
+
         }
     }
 }
