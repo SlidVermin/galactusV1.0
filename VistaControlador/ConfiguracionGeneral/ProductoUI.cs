@@ -116,9 +116,6 @@ namespace Galactus.VistaControlador.Inventario
         #region Eventos de botones
         private void tBtNuevo_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(tBtGuardar);
-            listaBotones.Add(tBtCancelar);
             GeneralC.formNuevo(this, tstMenuPatron, tBtGuardar, tBtCancelar);
         }
         private void tBtEditar_Click(object sender, EventArgs e)

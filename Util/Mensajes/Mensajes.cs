@@ -24,6 +24,7 @@ namespace Galactus.Util.Mensajes
         public const string BUSQUEDA_MARCA = "Busqueda de Marca";
         public const string BUSQUEDA_PRESENTACION = "Busqueda de Presentación";
         public const string BUSQUEDA_UNIDAD_MEDIDA = "Busqueda de Unidades de Medida";
+        public const string BUSQUEDA_ROL = "Busqueda de Roles";
         #endregion
     }
 }

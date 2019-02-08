@@ -72,6 +72,7 @@
     <Compile Include="Entidades\Admision\Paciente.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\ConfiguracionGeneral.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Equivalencia.cs" />
+    <Compile Include="Entidades\ConfiguracionGeneral\Usuario.cs" />
     <Compile Include="Entidades\General\Busqueda.cs" />
     <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\JustificacionAntibiotico.cs" />
@@ -151,6 +152,12 @@
     </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\EquivalenciaUI.Designer.cs">
       <DependentUpon>EquivalenciaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\UsuarioUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\UsuarioUI.Designer.cs">
+      <DependentUpon>UsuarioUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\Gestion\ClienteUI.cs">
       <SubType>Form</SubType>
@@ -269,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\EquivalenciaUI.resx">
       <DependentUpon>EquivalenciaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\UsuarioUI.resx">
+      <DependentUpon>UsuarioUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Gestion\ClienteUI.resx">
       <DependentUpon>ClienteUI.cs</DependentUpon>
