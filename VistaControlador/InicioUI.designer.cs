@@ -28,140 +28,163 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
-            this.cbEmpresa = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btIngresar = new System.Windows.Forms.Button();
+            this.pnlLogin = new System.Windows.Forms.Panel();
             this.btSalir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btIngresar = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblEmpresa = new System.Windows.Forms.Label();
+            this.lblContrasena = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // pnlLogin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(186, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuario:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(165, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Contraseña:";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(246, 36);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(213, 21);
-            this.txtUsuario.TabIndex = 2;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(246, 63);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(213, 21);
-            this.txtPass.TabIndex = 3;
-            this.txtPass.UseSystemPasswordChar = true;
-            // 
-            // cbEmpresa
-            // 
-            this.cbEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEmpresa.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEmpresa.FormattingEnabled = true;
-            this.cbEmpresa.Location = new System.Drawing.Point(246, 90);
-            this.cbEmpresa.Name = "cbEmpresa";
-            this.cbEmpresa.Size = new System.Drawing.Size(213, 23);
-            this.cbEmpresa.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(179, 94);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Empresa:";
-            // 
-            // btIngresar
-            // 
-            this.btIngresar.Location = new System.Drawing.Point(303, 119);
-            this.btIngresar.Name = "btIngresar";
-            this.btIngresar.Size = new System.Drawing.Size(75, 23);
-            this.btIngresar.TabIndex = 6;
-            this.btIngresar.Text = "Ingresar";
-            this.btIngresar.UseVisualStyleBackColor = true;
-            this.btIngresar.Click += new System.EventHandler(this.btIngresar_Click);
+            this.pnlLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.pnlLogin.Controls.Add(this.btSalir);
+            this.pnlLogin.Controls.Add(this.btIngresar);
+            this.pnlLogin.Controls.Add(this.textBox3);
+            this.pnlLogin.Controls.Add(this.txtContrasena);
+            this.pnlLogin.Controls.Add(this.txtUsuario);
+            this.pnlLogin.Controls.Add(this.lblEmpresa);
+            this.pnlLogin.Controls.Add(this.lblContrasena);
+            this.pnlLogin.Controls.Add(this.lblUsuario);
+            this.pnlLogin.Controls.Add(this.lblTitulo);
+            this.pnlLogin.Location = new System.Drawing.Point(179, 66);
+            this.pnlLogin.Name = "pnlLogin";
+            this.pnlLogin.Size = new System.Drawing.Size(432, 242);
+            this.pnlLogin.TabIndex = 0;
             // 
             // btSalir
             // 
-            this.btSalir.Location = new System.Drawing.Point(384, 119);
+            this.btSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(173)))), ((int)(((byte)(210)))));
+            this.btSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btSalir.FlatAppearance.BorderSize = 0;
+            this.btSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSalir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSalir.ForeColor = System.Drawing.Color.White;
+            this.btSalir.Location = new System.Drawing.Point(295, 187);
             this.btSalir.Name = "btSalir";
-            this.btSalir.Size = new System.Drawing.Size(75, 23);
-            this.btSalir.TabIndex = 7;
+            this.btSalir.Size = new System.Drawing.Size(103, 34);
+            this.btSalir.TabIndex = 9;
             this.btSalir.Text = "Salir";
-            this.btSalir.UseVisualStyleBackColor = true;
+            this.btSalir.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btIngresar
             // 
-            this.pictureBox1.Image = global::Galactus.Properties.Resources.candado_128;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 130);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.btIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(173)))), ((int)(((byte)(210)))));
+            this.btIngresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btIngresar.FlatAppearance.BorderSize = 0;
+            this.btIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btIngresar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btIngresar.ForeColor = System.Drawing.Color.White;
+            this.btIngresar.Location = new System.Drawing.Point(154, 187);
+            this.btIngresar.Name = "btIngresar";
+            this.btIngresar.Size = new System.Drawing.Size(103, 34);
+            this.btIngresar.TabIndex = 8;
+            this.btIngresar.Text = "Ingresar";
+            this.btIngresar.UseVisualStyleBackColor = false;
+            this.btIngresar.Click += new System.EventHandler(this.btIngresar_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(136, 148);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(262, 20);
+            this.textBox3.TabIndex = 7;
+            // 
+            // txtContrasena
+            // 
+            this.txtContrasena.Location = new System.Drawing.Point(136, 118);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.Size = new System.Drawing.Size(262, 20);
+            this.txtContrasena.TabIndex = 6;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(136, 85);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(262, 20);
+            this.txtUsuario.TabIndex = 4;
+            // 
+            // lblEmpresa
+            // 
+            this.lblEmpresa.AutoSize = true;
+            this.lblEmpresa.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblEmpresa.ForeColor = System.Drawing.Color.White;
+            this.lblEmpresa.Location = new System.Drawing.Point(32, 148);
+            this.lblEmpresa.Name = "lblEmpresa";
+            this.lblEmpresa.Size = new System.Drawing.Size(69, 16);
+            this.lblEmpresa.TabIndex = 3;
+            this.lblEmpresa.Text = "Empresa";
+            // 
+            // lblContrasena
+            // 
+            this.lblContrasena.AutoSize = true;
+            this.lblContrasena.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblContrasena.ForeColor = System.Drawing.Color.White;
+            this.lblContrasena.Location = new System.Drawing.Point(32, 117);
+            this.lblContrasena.Name = "lblContrasena";
+            this.lblContrasena.Size = new System.Drawing.Size(89, 16);
+            this.lblContrasena.TabIndex = 2;
+            this.lblContrasena.Text = "Contraseña";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(32, 85);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(62, 16);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.Text = "Usuario";
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(197, 25);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(157, 22);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Inicio de Sesion";
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(471, 154);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btSalir);
-            this.Controls.Add(this.btIngresar);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cbEmpresa);
-            this.Controls.Add(this.txtPass);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackgroundImage = global::Galactus.Properties.Resources.login_fondo;
+            this.ClientSize = new System.Drawing.Size(752, 386);
+            this.Controls.Add(this.pnlLogin);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlLogin.ResumeLayout(false);
+            this.pnlLogin.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlLogin;
+        private System.Windows.Forms.Label lblEmpresa;
+        private System.Windows.Forms.Label lblContrasena;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.ComboBox cbEmpresa;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btIngresar;
         private System.Windows.Forms.Button btSalir;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

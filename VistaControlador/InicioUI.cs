@@ -19,20 +19,13 @@ namespace Galactus
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
+            pnlLogin.BackColor = Color.FromArgb(200, 107, 107, 107);
+            lblTitulo.BackColor = Color.Transparent;
+            lblUsuario.BackColor = Color.Transparent;
+            lblContrasena.BackColor = Color.Transparent;
+            lblEmpresa.BackColor = Color.Transparent;
         }
 
-        private void btIngresar_Click(object sender, EventArgs e)
-        {
-            if (txtUsuario.Text == "" || txtPass.Text == "")
-            {
-                MessageBox.Show("los campos marcados son obligatorios", "", MessageBoxButtons.OK);
-            }
-            else
-            {
-                iniciarSesion(txtUsuario.Text, txtPass.Text);
-            }
-        }
         void iniciarSesion(string usuario, string pass)
         {
             try
@@ -45,7 +38,9 @@ namespace Galactus
                     PriincipalUI formPrincipal = new PriincipalUI();
                     formPrincipal.Show();
                     this.Hide();
-                } else {
+                }
+                else
+                {
                     MessageBox.Show("Error");
                 }
             }
@@ -55,7 +50,7 @@ namespace Galactus
             }
         }
 
-        public  bool iniciarSesion(List<string> listaParametros)
+        public bool iniciarSesion(List<string> listaParametros)
         {
             DataRow filaResultado = null;
             filaResultado = GeneralC.devuelveUnaFila(Query.SEG_AUTENTICACION, listaParametros);
@@ -69,5 +64,16 @@ namespace Galactus
             return false;
         }
 
+        private void btIngresar_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "" || txtContrasena.Text == "")
+            {
+                MessageBox.Show("los campos marcados son obligatorios", "", MessageBoxButtons.OK);
+            }
+            else
+            {
+                iniciarSesion(txtUsuario.Text, txtContrasena.Text);
+            }
+        }
     }
 }
