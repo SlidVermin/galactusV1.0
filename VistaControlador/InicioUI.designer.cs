@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btSalir = new System.Windows.Forms.Button();
             this.btIngresar = new System.Windows.Forms.Button();
             this.txtContrasena = new System.Windows.Forms.TextBox();
@@ -37,7 +38,6 @@
             this.lblContrasena = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,14 @@
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(432, 242);
             this.pnlLogin.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(136, 150);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(262, 21);
+            this.comboBox1.TabIndex = 10;
             // 
             // btSalir
             // 
@@ -148,14 +156,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(157, 22);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Inicio de Sesion";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(134, 150);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(262, 21);
-            this.comboBox1.TabIndex = 10;
             // 
             // FormLogin
             // 
