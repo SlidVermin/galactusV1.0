@@ -12,7 +12,7 @@ using System.Reflection;
 
 namespace Galactus
 {
-    public partial class PriincipalUI : Form
+    public partial class PrincipalUI : Form
     {
         public MenuStrip MenuOpciones = new MenuStrip();
         private static SqlConnection cnxion = Sesion.getConexion();
@@ -30,7 +30,7 @@ namespace Galactus
         }
 
         private int childFormNumber = 0;
-        public PriincipalUI()
+        public PrincipalUI()
         {
             InitializeComponent();
         }
@@ -56,7 +56,7 @@ namespace Galactus
             this.Controls.Add(MenuOpciones);
             MenuOpciones.LayoutStyle = ToolStripLayoutStyle.Flow;
             MenuOpciones.AutoSize = true;
-            MenuOpciones.BackColor = Color.White;
+            MenuOpciones.BackColor = Color.FromArgb(230, 230, 230);
             MenuOpciones.GripStyle = ToolStripGripStyle.Visible;
             MenuOpciones.Renderer = new MyRenderer();
         }

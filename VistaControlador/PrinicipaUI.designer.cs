@@ -1,6 +1,6 @@
 ﻿namespace Galactus
 {
-    partial class PriincipalUI
+    partial class PrincipalUI
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,21 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalUI));
+            this.stsInformacionGeneral = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.statusStrip.SuspendLayout();
+            this.stsInformacionGeneral.SuspendLayout();
             this.SuspendLayout();
             // 
-            // statusStrip
+            // stsInformacionGeneral
             // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stsInformacionGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
+            this.stsInformacionGeneral.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 431);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(890, 22);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
+            this.stsInformacionGeneral.Location = new System.Drawing.Point(0, 431);
+            this.stsInformacionGeneral.Name = "stsInformacionGeneral";
+            this.stsInformacionGeneral.Size = new System.Drawing.Size(890, 22);
+            this.stsInformacionGeneral.TabIndex = 2;
+            this.stsInformacionGeneral.Text = "StatusStrip";
             // 
             // toolStripStatusLabel
             // 
@@ -51,25 +53,28 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // FormPrincipal
+            // PrincipalUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Galactus.Properties.Resources.principal_fondo;
             this.ClientSize = new System.Drawing.Size(890, 453);
-            this.Controls.Add(this.statusStrip);
+            this.Controls.Add(this.stsInformacionGeneral);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Name = "FormPrincipal";
-            this.Text = "FormPrincipal";
+            this.Name = "PrincipalUI";
+            this.Text = "Galactus V1.0";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
-            this.statusStrip.ResumeLayout(false);
-            this.statusStrip.PerformLayout();
+            this.stsInformacionGeneral.ResumeLayout(false);
+            this.stsInformacionGeneral.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
         #endregion
 
-        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.StatusStrip stsInformacionGeneral;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolTip toolTip;
     }

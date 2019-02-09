@@ -34,7 +34,7 @@ namespace Galactus.Util
             string valor = String.Empty;
             try
             {
-                using (var consulta = new SqlCommand(consultaSQL, PriincipalUI.Cnxion))
+                using (var consulta = new SqlCommand(consultaSQL, PrincipalUI.Cnxion))
                 {
                     using (var resultado = consulta.ExecuteReader())
                     {

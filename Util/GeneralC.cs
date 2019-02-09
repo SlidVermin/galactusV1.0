@@ -38,7 +38,7 @@ namespace Galactus
             tablaResultado.Clear();
             try
             {
-                using (SqlDataAdapter adaptador = new SqlDataAdapter(query + listaParametros, PriincipalUI.Cnxion))
+                using (SqlDataAdapter adaptador = new SqlDataAdapter(query + listaParametros, PrincipalUI.Cnxion))
                 {
                     adaptador.Fill(tablaResultado);
                 }
@@ -64,7 +64,7 @@ namespace Galactus
                 drFila[0] = "-1";
                 drFila[1] = "----Seleccionar----";
                 dt.Rows.Add(drFila);
-                using (SqlDataAdapter adaptador = new SqlDataAdapter(query, PriincipalUI.Cnxion))
+                using (SqlDataAdapter adaptador = new SqlDataAdapter(query, PrincipalUI.Cnxion))
                 {
                     adaptador.Fill(dt);
                 }
@@ -93,7 +93,7 @@ namespace Galactus
                 using (DataTable tablaResultado = new DataTable())
                 {
                     tablaResultado.Clear();
-                    using (SqlDataAdapter adaptador = new SqlDataAdapter(query + listaParametros, PriincipalUI.Cnxion))
+                    using (SqlDataAdapter adaptador = new SqlDataAdapter(query + listaParametros, PrincipalUI.Cnxion))
                     {
                         adaptador.Fill(tablaResultado);
                     }
@@ -122,7 +122,7 @@ namespace Galactus
                 using (DataSet dataset = new DataSet())
                 {
                     dataset.Clear();
-                    using (SqlDataAdapter adaptador = new SqlDataAdapter(query + listaParametros, PriincipalUI.Cnxion))
+                    using (SqlDataAdapter adaptador = new SqlDataAdapter(query + listaParametros, PrincipalUI.Cnxion))
                     {
                         adaptador.Fill(dataset);
                     }

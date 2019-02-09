@@ -16,7 +16,7 @@ namespace Galactus.Modelo.ConfiguracionGeneral
             {
                 using (SqlCommand sentencia = new SqlCommand())
                 {
-                    sentencia.Connection = PriincipalUI.Cnxion;
+                    sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametroGeneralCrear]";
                     sentencia.Parameters.Add(new SqlParameter("@IdDescripcionValor", System.Data.SqlDbType.Int)).Value = objConfiguracionGeneral.idDocumento;
@@ -37,7 +37,7 @@ namespace Galactus.Modelo.ConfiguracionGeneral
             {
                 using (SqlCommand sentencia = new SqlCommand())
                 {
-                    sentencia.Connection = PriincipalUI.Cnxion;
+                    sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametroGeneralAnular]";
                     sentencia.Parameters.Add(new SqlParameter("@idParametro", System.Data.SqlDbType.Int)).Value = objConfiguracionGeneral.idParametro;

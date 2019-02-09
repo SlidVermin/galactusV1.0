@@ -17,7 +17,7 @@ namespace Galactus.Modelo.Inventario
             {
                 using (SqlCommand sentencia = new SqlCommand())
                 {
-                    sentencia.Connection = PriincipalUI.Cnxion;
+                    sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_ALMACEN + "[uspProductoCrear]";
                     sentencia.Parameters.Add(new SqlParameter("@pIdProducto", SqlDbType.Int)).Value = objProducto.idProducto;
@@ -44,7 +44,7 @@ namespace Galactus.Modelo.Inventario
             {
                 using (SqlCommand sentencia = new SqlCommand())
                 {
-                    sentencia.Connection = PriincipalUI.Cnxion;
+                    sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_ALMACEN + "[uspProductoAnular]";
                     sentencia.Parameters.Add(new SqlParameter("@pIdProducto", SqlDbType.Int)).Value = objProducto.idProducto; ;

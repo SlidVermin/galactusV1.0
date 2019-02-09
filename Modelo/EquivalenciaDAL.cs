@@ -23,7 +23,7 @@ namespace Galactus.Modelo
             {
                 using (SqlCommand sentencia = new SqlCommand())
                 {
-                    sentencia.Connection = PriincipalUI.Cnxion;
+                    sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_ALMACEN + "[uspEquivalenciaCrear]";
                     sentencia.Parameters.Add(new SqlParameter("@pIdEquivalencia", SqlDbType.Int)).Value = equivalencia.idEquivalencia;
@@ -54,7 +54,7 @@ namespace Galactus.Modelo
             {
                 using (SqlCommand sentencia = new SqlCommand())
                 {
-                    sentencia.Connection = PriincipalUI.Cnxion;
+                    sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_ALMACEN + "[uspEquivalenciaAnular]";
                     sentencia.Parameters.Add(new SqlParameter("@pIdEquivalencia", System.Data.SqlDbType.Int)).Value = equivalencia.idEquivalencia ;

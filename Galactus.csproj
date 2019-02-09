@@ -488,6 +488,7 @@
     <None Include="Resources\Document-copy-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\principal-fondo.jpg" />
     <None Include="Resources\login-btIngresar-fondo.jpg" />
     <None Include="Resources\login-fondo.jpg" />
     <None Include="Resources\candado-1281.png" />
