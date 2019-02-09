@@ -23,7 +23,9 @@ namespace Galactus
             lblTitulo.BackColor = Color.Transparent;
             lblUsuario.BackColor = Color.Transparent;
             lblContrasena.BackColor = Color.Transparent;
-            lblEmpresa.BackColor = Color.Transparent;
+            lbSede.BackColor = Color.Transparent;
+            btIngresar.BackColor = Color.FromArgb(180, 131, 173, 210);
+            btSalir.BackColor = Color.FromArgb(180, 131, 173, 210);
         }
 
         void iniciarSesion(string usuario, string pass)
@@ -74,6 +76,11 @@ namespace Galactus
             {
                 iniciarSesion(txtUsuario.Text, txtContrasena.Text);
             }
+        }
+
+        private void btSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
