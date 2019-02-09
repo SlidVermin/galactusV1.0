@@ -492,6 +492,11 @@
     <None Include="Resources\login-btIngresar-fondo.jpg" />
     <None Include="Resources\login-fondo.jpg" />
     <None Include="Resources\candado-1281.png" />
+    <None Include="Resources\btn-nuevo.jpg" />
+    <None Include="Resources\bt-editar.jpg" />
+    <None Include="Resources\btn-cancelar.jpg" />
+    <None Include="Resources\btn-guardar.jpg" />
+    <None Include="Resources\btn-lupa.jpg" />
     <Content Include="Resources\GalactusDB.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -61,6 +61,7 @@
             this.BackgroundImage = global::Galactus.Properties.Resources.principal_fondo;
             this.ClientSize = new System.Drawing.Size(890, 453);
             this.Controls.Add(this.stsInformacionGeneral);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "PrincipalUI";
