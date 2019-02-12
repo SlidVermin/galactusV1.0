@@ -39,6 +39,9 @@ namespace Galactus
         public const String PARAMETROS_CARGAR_DOCUMENTOS = ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametrosCargarDocumentos]";
         public const String PARAMETROS_LISTAR_DOCUMENTOS = ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametrosBuscarDocumentos]";
         #endregion
+        #region SEGURIDAD
+        public const String ROL_BUSCAR = ConstanteGeneral.ESQUEMA_SEGURIDAD + "[Seguridad].[uspEquivalenciaBuscar]";
+        #endregion
         #region UBICACION
         public const String CARGARPAIS = ConstanteGeneral.ESQUEMA_ADMISION + "uspPaisCargar";
         public const String CARGAR_DEPARTAMENTO = ConstanteGeneral.ESQUEMA_ADMISION + "uspDepartamentoCargar";

@@ -23,19 +23,16 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
         private void UsuarioUI_Load(object sender, EventArgs e)
         {
-
+            GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
         }
-
         private void tBtNuevo_Click(object sender, EventArgs e)
         {
             GeneralC.formNuevo(this, tstMenuPatron, tBtGuardar, tBtCancelar);
         }
-
         private void tBtEditar_Click(object sender, EventArgs e)
         {
             GeneralC.fnEditarForm(this, tstMenuPatron, tBtGuardar, tBtCancelar);
         }
-
         private void tBtCancelar_Click(object sender, EventArgs e)
         {
             GeneralC.fnCancelarForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
@@ -80,7 +77,6 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
         private void tBtAnular_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -98,16 +94,16 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             }
         }
         void cargarRol(DataRow fila) {
-
+            usuario.idRol = fila.Field<int>("Código");
+            txtBRol.Text = fila.Field<string>("Descripción");
         }
         private void btnBuscarMarca_Click(object sender, EventArgs e)
         {
             try
             {
                 List<string> parametros = new List<string>();
-                parametros.Add(ConstanteGeneral.MARCA.ToString());
-                parametros.Add("");
-                GeneralC.listarDocumentosGenerales(Query.PARAMETROS_LISTAR_DOCUMENTOS,
+               parametros.Add("");
+                GeneralC.listarDocumentosGenerales(Query.ROL_BUSCAR,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarRol),
                                                    Mensajes.BUSQUEDA_ROL);

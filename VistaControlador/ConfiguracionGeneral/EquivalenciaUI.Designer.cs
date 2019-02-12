@@ -45,6 +45,19 @@
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbDatosBasicos = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numConce = new System.Windows.Forms.NumericUpDown();
+            this.chkMedicamentoControl = new System.Windows.Forms.CheckBox();
+            this.chkPos = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numOsmolalidad = new System.Windows.Forms.NumericUpDown();
+            this.txtBUnidadMedida = new System.Windows.Forms.TextBox();
+            this.btBuscarUnidades = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtBCodigo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.gbCaracteristicas = new System.Windows.Forms.GroupBox();
             this.tbcEquivalencia = new System.Windows.Forms.TabControl();
             this.tpCarcacteristicas = new System.Windows.Forms.TabPage();
@@ -60,23 +73,12 @@
             this.Verificar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numConce = new System.Windows.Forms.NumericUpDown();
-            this.chkMedicamentoControl = new System.Windows.Forms.CheckBox();
-            this.chkPos = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numOsmolalidad = new System.Windows.Forms.NumericUpDown();
-            this.txtBUnidadMedida = new System.Windows.Forms.TextBox();
-            this.btBuscarUnidades = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtBCodigo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.tstMenuPatron.SuspendLayout();
             this.gbInformacionATC.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbDatosBasicos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numConce)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOsmolalidad)).BeginInit();
             this.gbCaracteristicas.SuspendLayout();
             this.tbcEquivalencia.SuspendLayout();
             this.tpCarcacteristicas.SuspendLayout();
@@ -86,8 +88,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVias)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numConce)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOsmolalidad)).BeginInit();
             this.SuspendLayout();
             // 
             // tstMenuPatron
@@ -283,6 +283,142 @@
             this.gbDatosBasicos.TabStop = false;
             this.gbDatosBasicos.Text = "Datos Basicos";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(8, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 13);
+            this.label3.TabIndex = 75;
+            this.label3.Text = "Concentración:";
+            // 
+            // numConce
+            // 
+            this.numConce.DecimalPlaces = 2;
+            this.numConce.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numConce.Location = new System.Drawing.Point(93, 110);
+            this.numConce.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numConce.Name = "numConce";
+            this.numConce.Size = new System.Drawing.Size(90, 20);
+            this.numConce.TabIndex = 69;
+            // 
+            // chkMedicamentoControl
+            // 
+            this.chkMedicamentoControl.AutoSize = true;
+            this.chkMedicamentoControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMedicamentoControl.Location = new System.Drawing.Point(335, 143);
+            this.chkMedicamentoControl.Name = "chkMedicamentoControl";
+            this.chkMedicamentoControl.Size = new System.Drawing.Size(140, 17);
+            this.chkMedicamentoControl.TabIndex = 65;
+            this.chkMedicamentoControl.Text = "Medicamento de control";
+            this.chkMedicamentoControl.UseVisualStyleBackColor = true;
+            // 
+            // chkPos
+            // 
+            this.chkPos.AutoSize = true;
+            this.chkPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPos.Location = new System.Drawing.Point(281, 143);
+            this.chkPos.Name = "chkPos";
+            this.chkPos.Size = new System.Drawing.Size(48, 17);
+            this.chkPos.TabIndex = 64;
+            this.chkPos.Text = "POS";
+            this.chkPos.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(9, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.TabIndex = 74;
+            this.label4.Text = "Osmolalidad:";
+            // 
+            // numOsmolalidad
+            // 
+            this.numOsmolalidad.DecimalPlaces = 2;
+            this.numOsmolalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numOsmolalidad.Location = new System.Drawing.Point(93, 141);
+            this.numOsmolalidad.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.numOsmolalidad.Name = "numOsmolalidad";
+            this.numOsmolalidad.Size = new System.Drawing.Size(166, 20);
+            this.numOsmolalidad.TabIndex = 70;
+            // 
+            // txtBUnidadMedida
+            // 
+            this.txtBUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBUnidadMedida.Location = new System.Drawing.Point(93, 84);
+            this.txtBUnidadMedida.Name = "txtBUnidadMedida";
+            this.txtBUnidadMedida.Size = new System.Drawing.Size(163, 20);
+            this.txtBUnidadMedida.TabIndex = 67;
+            // 
+            // btBuscarUnidades
+            // 
+            this.btBuscarUnidades.BackColor = System.Drawing.Color.White;
+            this.btBuscarUnidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscarUnidades.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarUnidades.Location = new System.Drawing.Point(262, 82);
+            this.btBuscarUnidades.Name = "btBuscarUnidades";
+            this.btBuscarUnidades.Size = new System.Drawing.Size(22, 22);
+            this.btBuscarUnidades.TabIndex = 68;
+            this.btBuscarUnidades.UseVisualStyleBackColor = false;
+            this.btBuscarUnidades.Click += new System.EventHandler(this.btnBuscarUnidades_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(8, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "Unidad:";
+            // 
+            // txtBCodigo
+            // 
+            this.txtBCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBCodigo.Location = new System.Drawing.Point(93, 32);
+            this.txtBCodigo.Name = "txtBCodigo";
+            this.txtBCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtBCodigo.TabIndex = 63;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 71;
+            this.label1.Text = "Código: ";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(93, 58);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(353, 20);
+            this.txtDescripcion.TabIndex = 66;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.TabIndex = 72;
+            this.label2.Text = "Descripción: ";
+            // 
             // gbCaracteristicas
             // 
             this.gbCaracteristicas.Controls.Add(this.tbcEquivalencia);
@@ -420,7 +556,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(887, 265);
+            this.tabPage2.Size = new System.Drawing.Size(910, 265);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Prductos Dependientes";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -437,143 +573,8 @@
             this.dgvProductos.Location = new System.Drawing.Point(3, 3);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersVisible = false;
-            this.dgvProductos.Size = new System.Drawing.Size(881, 259);
+            this.dgvProductos.Size = new System.Drawing.Size(904, 259);
             this.dgvProductos.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "Concentración:";
-            // 
-            // numConce
-            // 
-            this.numConce.DecimalPlaces = 2;
-            this.numConce.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numConce.Location = new System.Drawing.Point(93, 110);
-            this.numConce.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.numConce.Name = "numConce";
-            this.numConce.Size = new System.Drawing.Size(90, 20);
-            this.numConce.TabIndex = 69;
-            // 
-            // chkMedicamentoControl
-            // 
-            this.chkMedicamentoControl.AutoSize = true;
-            this.chkMedicamentoControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMedicamentoControl.Location = new System.Drawing.Point(335, 143);
-            this.chkMedicamentoControl.Name = "chkMedicamentoControl";
-            this.chkMedicamentoControl.Size = new System.Drawing.Size(140, 17);
-            this.chkMedicamentoControl.TabIndex = 65;
-            this.chkMedicamentoControl.Text = "Medicamento de control";
-            this.chkMedicamentoControl.UseVisualStyleBackColor = true;
-            // 
-            // chkPos
-            // 
-            this.chkPos.AutoSize = true;
-            this.chkPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPos.Location = new System.Drawing.Point(281, 143);
-            this.chkPos.Name = "chkPos";
-            this.chkPos.Size = new System.Drawing.Size(48, 17);
-            this.chkPos.TabIndex = 64;
-            this.chkPos.Text = "POS";
-            this.chkPos.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
-            this.label4.TabIndex = 74;
-            this.label4.Text = "Osmolalidad:";
-            // 
-            // numOsmolalidad
-            // 
-            this.numOsmolalidad.DecimalPlaces = 2;
-            this.numOsmolalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numOsmolalidad.Location = new System.Drawing.Point(93, 141);
-            this.numOsmolalidad.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.numOsmolalidad.Name = "numOsmolalidad";
-            this.numOsmolalidad.Size = new System.Drawing.Size(166, 20);
-            this.numOsmolalidad.TabIndex = 70;
-            // 
-            // txtBUnidadMedida
-            // 
-            this.txtBUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBUnidadMedida.Location = new System.Drawing.Point(93, 84);
-            this.txtBUnidadMedida.Name = "txtBUnidadMedida";
-            this.txtBUnidadMedida.Size = new System.Drawing.Size(163, 20);
-            this.txtBUnidadMedida.TabIndex = 67;
-            // 
-            // btBuscarUnidades
-            // 
-            this.btBuscarUnidades.BackColor = System.Drawing.Color.White;
-            this.btBuscarUnidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBuscarUnidades.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarUnidades.Location = new System.Drawing.Point(262, 82);
-            this.btBuscarUnidades.Name = "btBuscarUnidades";
-            this.btBuscarUnidades.Size = new System.Drawing.Size(22, 22);
-            this.btBuscarUnidades.TabIndex = 68;
-            this.btBuscarUnidades.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 73;
-            this.label5.Text = "Unidad:";
-            // 
-            // txtBCodigo
-            // 
-            this.txtBCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBCodigo.Location = new System.Drawing.Point(93, 32);
-            this.txtBCodigo.Name = "txtBCodigo";
-            this.txtBCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtBCodigo.TabIndex = 63;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 71;
-            this.label1.Text = "Código: ";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(93, 58);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(353, 20);
-            this.txtDescripcion.TabIndex = 66;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
-            this.label2.TabIndex = 72;
-            this.label2.Text = "Descripción: ";
             // 
             // EquivalenciaUI
             // 
@@ -581,7 +582,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(1025, 584);
+            this.ClientSize = new System.Drawing.Size(1009, 545);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tstMenuPatron);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -599,6 +600,8 @@
             this.groupBox1.ResumeLayout(false);
             this.gbDatosBasicos.ResumeLayout(false);
             this.gbDatosBasicos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numConce)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOsmolalidad)).EndInit();
             this.gbCaracteristicas.ResumeLayout(false);
             this.tbcEquivalencia.ResumeLayout(false);
             this.tpCarcacteristicas.ResumeLayout(false);
@@ -608,8 +611,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVias)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numConce)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numOsmolalidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

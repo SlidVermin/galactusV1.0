@@ -41,7 +41,7 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtBEquivalencia = new System.Windows.Forms.TextBox();
+            this.txtBRol = new System.Windows.Forms.TextBox();
             this.txtBMarca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -163,12 +163,12 @@
             this.label2.TabIndex = 47;
             this.label2.Text = "Nombre:";
             // 
-            // txtBEquivalencia
+            // txtBRol
             // 
-            this.txtBEquivalencia.Location = new System.Drawing.Point(94, 123);
-            this.txtBEquivalencia.Name = "txtBEquivalencia";
-            this.txtBEquivalencia.Size = new System.Drawing.Size(202, 20);
-            this.txtBEquivalencia.TabIndex = 50;
+            this.txtBRol.Location = new System.Drawing.Point(94, 123);
+            this.txtBRol.Name = "txtBRol";
+            this.txtBRol.Size = new System.Drawing.Size(202, 20);
+            this.txtBRol.TabIndex = 50;
             // 
             // txtBMarca
             // 
@@ -196,7 +196,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtBMarca);
             this.groupBox1.Controls.Add(this.txtDescripcion);
-            this.groupBox1.Controls.Add(this.txtBEquivalencia);
+            this.groupBox1.Controls.Add(this.txtBRol);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -266,7 +266,7 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBEquivalencia;
+        private System.Windows.Forms.TextBox txtBRol;
         private System.Windows.Forms.TextBox txtBMarca;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
