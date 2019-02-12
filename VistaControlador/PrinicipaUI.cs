@@ -79,8 +79,7 @@ namespace Galactus
             {
                 foreach (DataRow item in filas)
                 {
-                    menuPadre = new ToolStripMenuItem();
-                    menuPadre.Text = item.Field<string>("Descripcion");
+                    menuPadre = new ToolStripMenuItem(item.Field<string>("Descripcion"), global::Galactus.Properties.Resources.add);
                     colocarHijo(item.Field<int>("IdMenu"), menuPadre);
                     menu.Items.Add(menuPadre);
                 }
