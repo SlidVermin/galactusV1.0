@@ -488,6 +488,10 @@
     <None Include="Resources\Document-copy-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\general-ico.png" />
+    <Content Include="Resources\historia_clinica-ico.png" />
+    <Content Include="Resources\laboratorio-ico.png" />
+    <Content Include="Resources\seguridad-ico.png" />
     <None Include="Resources\principal-fondo.jpg" />
     <None Include="Resources\login-btIngresar-fondo.jpg" />
     <None Include="Resources\login-fondo.jpg" />
@@ -497,6 +501,10 @@
     <None Include="Resources\btn-cancelar.jpg" />
     <None Include="Resources\btn-guardar.jpg" />
     <None Include="Resources\btn-lupa.jpg" />
+    <Content Include="Resources\administrativo-ico.png" />
+    <Content Include="Resources\almacen-ico.png" />
+    <Content Include="Resources\contabilidad-ico.png" />
+    <Content Include="Resources\farmacia-ico.png" />
     <Content Include="Resources\GalactusDB.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
