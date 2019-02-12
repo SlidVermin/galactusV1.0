@@ -31,6 +31,7 @@ namespace Galactus.Util.Constantes
         public const string ESQUEMA_SEGURIDAD = "[Seguridad].";
         public const string ESQUEMA_PARAMETRO = "[Parametro].";
         public const string ESQUEMA_ADMISION = "[Admision].";
+        public const string ESQUEMA_GENERAL = "[General].";
         #region configuracion general
         public const int MARCA = 1;
         public const int PRESENTACION = 2;

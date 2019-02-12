@@ -18,7 +18,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
     public partial class ConfiguracionProcedimientoMedicoUI : Form
     {
         ConfiguracionProcedimientoMedico configuracionProcedimientoMedico = new ConfiguracionProcedimientoMedico();
-         public Boolean unicaVez { get; set; }
+
+        public object ApplicationView { get; private set; }
+
         public ConfiguracionProcedimientoMedicoUI()
         {
             InitializeComponent();
@@ -27,24 +29,62 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
         private void ConfiguracionProcedimientoMedicoUI_Load(object sender, EventArgs e)
         {
             GeneralC.deshabilitarControles(this);
+            GeneralC.diseñoDGV(ref dgvEntorno);
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            List<ToolStripButton> listaBotones = new List<ToolStripButton>();
-            listaBotones.Add(btnGuardar);
-            listaBotones.Add(btnCancelar);
-            GeneralC.formNuevo(this,tstMenuPatron, btnGuardar, btnCancelar);
-        }
+            GeneralC.formNuevo(this, tstMenuPatron, btnGuardar, btnCancelar);
+            configurarDatosDgv();
 
+            configuracionProcedimientoMedico.tablaAreaAtencion.Rows.Add();
+            configuracionProcedimientoMedico.tablaProcedimiento.Rows.Add();
+            configuracionProcedimientoMedico.tablaMedicamentoInsumo.Rows.Add();
+
+            dgvEntorno.Columns["dgBuscarArea"].DisplayIndex = (dgvEntorno.ColumnCount - 1);
+            dgvProcedimientos.Columns["dgBuscarProcedimiento"].DisplayIndex = (dgvProcedimientos.ColumnCount - 1);
+            dgvMedicamentos.Columns["dgBuscarMedicamento"].DisplayIndex = (dgvMedicamentos.ColumnCount - 1);
+
+            dgvEntorno.Columns["dgQuitarArea"].DisplayIndex = (dgvEntorno.ColumnCount - 1);
+            dgvProcedimientos.Columns["dgQuitarProcedimiento"].DisplayIndex = (dgvProcedimientos.ColumnCount - 1);
+            dgvMedicamentos.Columns["dgQuitarMedicamento"].DisplayIndex = (dgvMedicamentos.ColumnCount - 1);
+        }
+        private void configurarDatosDgv()
+        {
+            
+            enlazarDatosDgv(dgvEntorno, "dgCodigoArea", "Código");
+            enlazarDatosDgv(dgvEntorno, "dgDescripcionArea", "Descripción");
+
+            enlazarDatosDgv(dgvMedicamentos, "dgCodigoMedicamento", "Código");
+            enlazarDatosDgv(dgvMedicamentos, "dgDescripcionMedicamento", "Descripción");
+            enlazarDatosDgv(dgvMedicamentos, "dgCantidadMedicamento", "Cantidad");
+
+            enlazarDatosDgv(dgvProcedimientos, "dgCodigoProcedimiento", "Código");
+            enlazarDatosDgv(dgvProcedimientos, "dgDescripcionProcedimiento", "Descripción");
+            enlazarDatosDgv(dgvProcedimientos, "dgCantidadProcedimiento", "Cantidad");
+
+            dgvEntorno.AutoGenerateColumns = false;
+            dgvProcedimientos.AutoGenerateColumns = false;
+            dgvMedicamentos.AutoGenerateColumns = false;
+
+            dgvEntorno.DataSource = configuracionProcedimientoMedico.tablaAreaAtencion;
+            dgvProcedimientos.DataSource = configuracionProcedimientoMedico.tablaProcedimiento;
+            dgvMedicamentos.DataSource = configuracionProcedimientoMedico.tablaMedicamentoInsumo;
+
+        }
+        private void enlazarDatosDgv(DataGridView datagrid,string columnaDgv,string columnaDt)
+        {
+            datagrid.Columns[columnaDgv].DataPropertyName = columnaDt;
+        }
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this,  tstMenuPatron, btnGuardar, btnCancelar);
+            GeneralC.fnEditarForm(this, tstMenuPatron, btnGuardar, btnCancelar);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnCancelarForm(this,tstMenuPatron, btnNuevo, btnBuscar);
+            GeneralC.fnCancelarForm(this, tstMenuPatron, btnNuevo, btnBuscar);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -80,7 +120,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
                 configuracionProcedimientoMedico.moduloHc = filaResultado.Field<bool>("moduloHc");
                 configuracionProcedimientoMedico.moduloFc = filaResultado.Field<bool>("moduloFc");
                 configuracionProcedimientoMedico.noRepetible = filaResultado.Field<bool>("noRepetible");
-                configuracionProcedimientoMedico.paquete = filaResultado.Field<bool>("paquete");               
+                configuracionProcedimientoMedico.paquete = filaResultado.Field<bool>("paquete");
                 configuracionProcedimientoMedico.tipo = filaResultado.Field<string>("tipoItem");
 
                 txtBNombreCliente.Text = filaResultado.Field<string>("nombreCliente");
@@ -92,6 +132,15 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
 
 
         }
+        void cargarItemDatagrid(DataRow fila)
+        {
+            configuracionProcedimientoMedico.tablaAreaAtencion.Rows.Add();
+            configuracionProcedimientoMedico.tablaAreaAtencion.Rows[dgvEntorno.CurrentRow.Index].SetField<int>(0,fila.Field<int>("Código"));
+            configuracionProcedimientoMedico.tablaAreaAtencion.Rows[dgvEntorno.CurrentRow.Index].SetField<String>(1, fila.Field<String>("Descripción"));
+            dgvEntorno.DataSource = configuracionProcedimientoMedico.tablaAreaAtencion;
+            
+        }
+        
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
@@ -99,7 +148,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
             {
                 try
                 {
-                  
+
                     GeneralC.posAnular(this, tstMenuPatron, btnNuevo, btnBuscar, Mensajes.CONFIRMACION_ANULADO);
                 }
                 catch (Exception ex)
@@ -109,6 +158,72 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
 
             }
         }
-    }
+
+        private void dgvEntorno_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            buscarItemDatagrid(Query.PRODUCTO_BUSCAR, new GeneralC.cargarInfoFila(cargarItemDatagrid), Mensajes.BUSQUEDA_PRODUCTO);
+        }
+        private void buscarItemDatagrid(string consulta, GeneralC.cargarInfoFila metodo, string titulo) {
+            try
+            {
+                List<string> parametros = new List<string>();
+                parametros.Add("");
+                GeneralC.buscarDevuelveFila(consulta,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(metodo),
+                                           titulo,
+                                            true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dgvProcedimientos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                List<string> parametros = new List<string>();
+                parametros.Add("");
+                GeneralC.buscarDevuelveFila(Query.PRODUCTO_BUSCAR,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(cargarConfiguracionMedica),
+                                            Mensajes.BUSQUEDA_PRODUCTO,
+                                            true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dgvMedicamentos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                List<string> parametros = new List<string>();
+                parametros.Add("");
+                GeneralC.buscarDevuelveFila(Query.PRODUCTO_BUSCAR,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(cargarConfiguracionMedica),
+                                            Mensajes.BUSQUEDA_PRODUCTO,
+                                            true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void pnlCerrarForm_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(Mensajes.SALIR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+        
+}
          
 }

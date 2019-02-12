@@ -335,9 +335,9 @@ namespace Galactus
         {
             dgv.DefaultCellStyle.BackColor = Color.White;
             dgv.DefaultCellStyle.ForeColor = Color.Black;
-            dgv.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+            dgv.DefaultCellStyle.SelectionBackColor = Color.SteelBlue;
             dgv.DefaultCellStyle.SelectionForeColor = Color.White;
-            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(192, 255, 192);
+            dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.LightSteelBlue;
             dgv.AlternatingRowsDefaultCellStyle.ForeColor = Color.Empty;
             dgv.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.Empty;
             dgv.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Empty;

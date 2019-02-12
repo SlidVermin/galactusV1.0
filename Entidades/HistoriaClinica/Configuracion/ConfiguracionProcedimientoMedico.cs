@@ -21,10 +21,52 @@ namespace Galactus.Entidades.HistoriaClinica.Configuracion
         public Boolean noRepetible { get; set; }
         public Boolean paquete { get; set; }
         public string tipo { get; set; }
-        public DataTable tablaAreaAtencion { get; set; }
-        public DataTable tablaProcedimiento { get; set; }
-        public DataTable tablaMedicamentoInsumo { get; set; }
+        public  DataTable tablaAreaAtencion { get; set; }
+        public  DataTable tablaProcedimiento { get; set; }
+        public  DataTable tablaMedicamentoInsumo { get; set; }
         public BindingSource enlace;
+        public ConfiguracionProcedimientoMedico() {
+                tablaAreaAtencion = new DataTable();
+                tablaProcedimiento = new DataTable();
+                tablaMedicamentoInsumo = new DataTable();
+
+                tablaAreaAtencion.Columns.Add("Código", Type.GetType("System.String"))       ;
+                tablaAreaAtencion.Columns.Add("Descripción", Type.GetType("System.String")) ;
+                tablaAreaAtencion.Columns.Add("Cantidad", Type.GetType("System.String"));
+
+                tablaProcedimiento.Columns.Add("Código", Type.GetType("System.String"));
+                tablaProcedimiento.Columns.Add("Descripción", Type.GetType("System.String"));
+                tablaProcedimiento.Columns.Add("Cantidad", Type.GetType("System.Int32"));
+
+                tablaMedicamentoInsumo.Columns.Add("Código", Type.GetType("System.String"));
+                tablaMedicamentoInsumo.Columns.Add("Descripción", Type.GetType("System.String"));
+                tablaMedicamentoInsumo.Columns.Add("Cantidad", Type.GetType("System.Int32"));
+        }
+        public DataTable construirTabla()
+        {
+            string expresion;
+            expresion = "Codigo != ''";
+            DataTable tablaResultado = new DataTable();
+            DataRow[] filas;
+            filas = tablaProcedimiento.Select(expresion, "");
+
+            foreach (var fila in filas)
+            {
+                tablaResultado.ImportRow(fila);
+            }
+            filas = tablaAreaAtencion.Select(expresion, "");
+            foreach (var fila in filas)
+            {
+                tablaResultado.ImportRow(fila);
+            }
+            filas = tablaMedicamentoInsumo.Select(expresion, "");
+            foreach (var fila in filas)
+            {
+                tablaResultado.ImportRow(fila);
+            }
+
+            return tablaResultado;
+        }
     }
 }
 
