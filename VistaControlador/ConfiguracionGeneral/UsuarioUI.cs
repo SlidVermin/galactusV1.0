@@ -102,11 +102,13 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             try
             {
                 List<string> parametros = new List<string>();
-               parametros.Add("");
-                GeneralC.listarDocumentosGenerales(Query.ROL_BUSCAR,
-                                                   parametros,
-                                                   new GeneralC.cargarInfoFila(cargarRol),
-                                                   Mensajes.BUSQUEDA_ROL);
+                parametros.Add("");
+                GeneralC.buscarDevuelveFila(Query.ROL_BUSCAR, 
+                                            parametros, 
+                                            new GeneralC.cargarInfoFila(cargarRol), 
+                                            Mensajes.BUSQUEDA_ROL,
+                                            true);
+               
             }
             catch (Exception ex)
             {

@@ -42,11 +42,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBRol = new System.Windows.Forms.TextBox();
-            this.txtBMarca = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.btnBuscarMarca = new System.Windows.Forms.Button();
             this.tstMenuPatron.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -170,12 +170,12 @@
             this.txtBRol.Size = new System.Drawing.Size(202, 20);
             this.txtBRol.TabIndex = 50;
             // 
-            // txtBMarca
+            // txtUsuario
             // 
-            this.txtBMarca.Location = new System.Drawing.Point(94, 71);
-            this.txtBMarca.Name = "txtBMarca";
-            this.txtBMarca.Size = new System.Drawing.Size(202, 20);
-            this.txtBMarca.TabIndex = 48;
+            this.txtUsuario.Location = new System.Drawing.Point(94, 71);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(202, 20);
+            this.txtUsuario.TabIndex = 48;
             // 
             // label3
             // 
@@ -189,12 +189,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtClave);
             this.groupBox1.Controls.Add(this.btnBuscarMarca);
             this.groupBox1.Controls.Add(this.txtBCodigo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtBMarca);
+            this.groupBox1.Controls.Add(this.txtUsuario);
             this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.txtBRol);
             this.groupBox1.Controls.Add(this.label9);
@@ -215,12 +215,12 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "Contraseña:";
             // 
-            // textBox1
+            // txtClave
             // 
-            this.textBox1.Location = new System.Drawing.Point(94, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 20);
-            this.textBox1.TabIndex = 53;
+            this.txtClave.Location = new System.Drawing.Point(94, 97);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(202, 20);
+            this.txtClave.TabIndex = 53;
             // 
             // btnBuscarMarca
             // 
@@ -267,11 +267,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBRol;
-        private System.Windows.Forms.TextBox txtBMarca;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button btnBuscarMarca;
     }
 }
