@@ -177,9 +177,9 @@
             this.gbInformacionATC.Controls.Add(this.txtDescripcionATC);
             this.gbInformacionATC.Controls.Add(this.label10);
             this.gbInformacionATC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbInformacionATC.Location = new System.Drawing.Point(514, 13);
+            this.gbInformacionATC.Location = new System.Drawing.Point(514, 17);
             this.gbInformacionATC.Name = "gbInformacionATC";
-            this.gbInformacionATC.Size = new System.Drawing.Size(451, 178);
+            this.gbInformacionATC.Size = new System.Drawing.Size(451, 175);
             this.gbInformacionATC.TabIndex = 47;
             this.gbInformacionATC.TabStop = false;
             this.gbInformacionATC.Text = "Informacion ATC";
@@ -581,7 +581,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1009, 545);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tstMenuPatron);

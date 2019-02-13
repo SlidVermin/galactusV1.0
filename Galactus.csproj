@@ -141,6 +141,12 @@
     <Compile Include="VistaControlador\Admision\ManualTarifarioServicioUI.Designer.cs">
       <DependentUpon>ManualTarifarioServicioUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\Admision\PacienteUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\PacienteUI.Designer.cs">
+      <DependentUpon>PacienteUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\ConfiguracionGeneralUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,11 +231,9 @@
     <Compile Include="VistaControlador\InicioUI.designer.cs">
       <DependentUpon>InicioUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\Admision\PacienteUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VistaControlador\Admision\PacienteUI.Designer.cs">
-      <DependentUpon>PacienteUI.cs</DependentUpon>
+    <Compile Include="VistaControlador\Admision\Paciente2UI.cs" />
+    <Compile Include="VistaControlador\Admision\Paciente2UI.Designer.cs">
+      <DependentUpon>Paciente2UI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\Inventario\BodegaUI.cs">
       <SubType>Form</SubType>
@@ -271,6 +275,9 @@
     <EmbeddedResource Include="VistaControlador\Admision\Anexo3UI.resx">
       <DependentUpon>Anexo3UI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Admision\PacienteUI.resx">
+      <DependentUpon>PacienteUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\ConfiguracionGeneralUI.resx">
       <DependentUpon>ConfiguracionGeneralUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -298,8 +305,8 @@
     <EmbeddedResource Include="VistaControlador\Admision\ManualTarifarioServicioUI.resx">
       <DependentUpon>ManualTarifarioServicioUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\Admision\PacienteUI.resx">
-      <DependentUpon>PacienteUI.cs</DependentUpon>
+    <EmbeddedResource Include="VistaControlador\Admision\Paciente2UI.resx">
+      <DependentUpon>Paciente2UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\General\BusquedaGeneralUI.resx">
       <DependentUpon>BusquedaGeneralUI.cs</DependentUpon>

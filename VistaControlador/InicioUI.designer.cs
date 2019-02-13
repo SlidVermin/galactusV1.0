@@ -37,7 +37,6 @@
             this.lbSede = new System.Windows.Forms.Label();
             this.lblContrasena = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +52,6 @@
             this.pnlLogin.Controls.Add(this.lbSede);
             this.pnlLogin.Controls.Add(this.lblContrasena);
             this.pnlLogin.Controls.Add(this.lblUsuario);
-            this.pnlLogin.Controls.Add(this.lblTitulo);
             this.pnlLogin.Location = new System.Drawing.Point(170, 81);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(432, 242);
@@ -117,46 +115,35 @@
             // lbSede
             // 
             this.lbSede.AutoSize = true;
-            this.lbSede.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lbSede.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSede.ForeColor = System.Drawing.Color.White;
             this.lbSede.Location = new System.Drawing.Point(32, 150);
             this.lbSede.Name = "lbSede";
-            this.lbSede.Size = new System.Drawing.Size(44, 16);
+            this.lbSede.Size = new System.Drawing.Size(41, 16);
             this.lbSede.TabIndex = 3;
             this.lbSede.Text = "Sede";
             // 
             // lblContrasena
             // 
             this.lblContrasena.AutoSize = true;
-            this.lblContrasena.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblContrasena.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContrasena.ForeColor = System.Drawing.Color.White;
             this.lblContrasena.Location = new System.Drawing.Point(32, 117);
             this.lblContrasena.Name = "lblContrasena";
-            this.lblContrasena.Size = new System.Drawing.Size(89, 16);
+            this.lblContrasena.Size = new System.Drawing.Size(80, 16);
             this.lblContrasena.TabIndex = 2;
             this.lblContrasena.Text = "Contraseña";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblUsuario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.White;
             this.lblUsuario.Location = new System.Drawing.Point(32, 85);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(62, 16);
+            this.lblUsuario.Size = new System.Drawing.Size(56, 16);
             this.lblUsuario.TabIndex = 1;
             this.lblUsuario.Text = "Usuario";
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(197, 25);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(157, 22);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Inicio de Sesion";
             // 
             // FormLogin
             // 
@@ -183,7 +170,6 @@
         private System.Windows.Forms.Label lbSede;
         private System.Windows.Forms.Label lblContrasena;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Button btIngresar;

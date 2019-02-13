@@ -20,7 +20,6 @@ namespace Galactus
         private void FormLogin_Load(object sender, EventArgs e)
         {
             pnlLogin.BackColor = Color.FromArgb(200, 107, 107, 107);
-            lblTitulo.BackColor = Color.Transparent;
             lblUsuario.BackColor = Color.Transparent;
             lblContrasena.BackColor = Color.Transparent;
             lbSede.BackColor = Color.Transparent;
