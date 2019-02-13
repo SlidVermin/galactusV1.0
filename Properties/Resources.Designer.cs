@@ -133,6 +133,26 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap administrativo_ico {
+            get {
+                object obj = ResourceManager.GetObject("administrativo_ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap almacen_ico {
+            get {
+                object obj = ResourceManager.GetObject("almacen_ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap anular24 {
             get {
                 object obj = ResourceManager.GetObject("anular24", resourceCulture);
@@ -243,6 +263,16 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap contabilidad_ico {
+            get {
+                object obj = ResourceManager.GetObject("contabilidad_ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap curriculum__1_ {
             get {
                 object obj = ResourceManager.GetObject("curriculum (1)", resourceCulture);
@@ -333,6 +363,16 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap farmacia_ico {
+            get {
+                object obj = ResourceManager.GetObject("farmacia_ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap file__1_ {
             get {
                 object obj = ResourceManager.GetObject("file (1)", resourceCulture);
@@ -353,9 +393,29 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap general_ico {
+            get {
+                object obj = ResourceManager.GetObject("general_ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap guardar16 {
             get {
                 object obj = ResourceManager.GetObject("guardar16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap historia_clinica_ico {
+            get {
+                object obj = ResourceManager.GetObject("historia_clinica_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,6 +433,19 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< .mine
+        internal static System.Drawing.Bitmap laboratorio_ico {
+            get {
+                object obj = ResourceManager.GetObject("laboratorio_ico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+||||||| .r21
+=======
         internal static System.Drawing.Bitmap Industry_Trash_icon {
             get {
                 object obj = ResourceManager.GetObject("Industry-Trash-icon", resourceCulture);
@@ -383,6 +456,7 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+>>>>>>> .r22
         internal static System.Drawing.Bitmap limpiar_16 {
             get {
                 object obj = ResourceManager.GetObject("limpiar-16", resourceCulture);
@@ -516,6 +590,16 @@ namespace Galactus.Properties {
         internal static System.Drawing.Bitmap Search_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("Search-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seguridad_ico {
+            get {
+                object obj = ResourceManager.GetObject("seguridad_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

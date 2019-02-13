@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Reflection;
+using System.Collections;
+using System.Globalization;
 
 namespace Galactus
 {
@@ -77,10 +79,11 @@ namespace Galactus
             ToolStripMenuItem menuPadre = null;
             if (filas != null)
             {
-                foreach (DataRow item in filas)
+                foreach (DataRow fila in filas)
                 {
-                    menuPadre = new ToolStripMenuItem(item.Field<string>("Descripcion"), global::Galactus.Properties.Resources.add);
-                    colocarHijo(item.Field<int>("IdMenu"), menuPadre);
+                    DictionaryEntry itemEncontrado = obtenerImagen(fila.Field<string>("imagen"));
+                    menuPadre = new ToolStripMenuItem(fila.Field<string>("Descripcion"), (Image)itemEncontrado.Value);
+                    colocarHijo(fila.Field<int>("IdMenu"), menuPadre);
                     menu.Items.Add(menuPadre);
                 }
             }
@@ -89,6 +92,21 @@ namespace Galactus
             agregarMenuItem("Salir", menuPadre);
             menu.Items.Add(menuPadre);
             return menu;
+        }
+        public DictionaryEntry obtenerImagen(string nombre)
+        {
+            DictionaryEntry itemEncontrado;
+            var lista = Properties.Resources.ResourceManager.GetResourceSet(CultureInfo.CurrentCulture, false, true);
+          
+            foreach (DictionaryEntry imagen in Properties.Resources.ResourceManager.GetResourceSet(CultureInfo.CurrentCulture, false, true))
+            {             
+                if (imagen.Key.Equals(nombre))
+                {
+                    itemEncontrado = imagen;
+                    break;
+                }
+            }
+            return itemEncontrado;
         }
         public void colocarHijo(int codigo, ToolStripMenuItem menuPadre)
         {
