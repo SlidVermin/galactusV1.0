@@ -231,10 +231,6 @@
     <Compile Include="VistaControlador\InicioUI.designer.cs">
       <DependentUpon>InicioUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\Admision\Paciente2UI.cs" />
-    <Compile Include="VistaControlador\Admision\Paciente2UI.Designer.cs">
-      <DependentUpon>Paciente2UI.cs</DependentUpon>
-    </Compile>
     <Compile Include="VistaControlador\Inventario\BodegaUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,9 +300,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Admision\ManualTarifarioServicioUI.resx">
       <DependentUpon>ManualTarifarioServicioUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\Admision\Paciente2UI.resx">
-      <DependentUpon>Paciente2UI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\General\BusquedaGeneralUI.resx">
       <DependentUpon>BusquedaGeneralUI.cs</DependentUpon>
