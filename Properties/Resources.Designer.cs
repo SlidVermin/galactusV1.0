@@ -433,7 +433,7 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-<<<<<<< .mine
+
         internal static System.Drawing.Bitmap laboratorio_ico {
             get {
                 object obj = ResourceManager.GetObject("laboratorio_ico", resourceCulture);
@@ -444,8 +444,7 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-||||||| .r21
-=======
+
         internal static System.Drawing.Bitmap Industry_Trash_icon {
             get {
                 object obj = ResourceManager.GetObject("Industry-Trash-icon", resourceCulture);
@@ -456,7 +455,7 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
->>>>>>> .r22
+
         internal static System.Drawing.Bitmap limpiar_16 {
             get {
                 object obj = ResourceManager.GetObject("limpiar-16", resourceCulture);
