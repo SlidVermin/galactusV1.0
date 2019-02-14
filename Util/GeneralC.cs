@@ -143,11 +143,6 @@ namespace Galactus
 
         }
 
-        internal static void buscarDevuelveFila(string bODEGA_BUSCAR, List<string> parametros, cargarInfoFila cargarInfoFila, object bUSQUEDA_BODEGA, bool v)
-        {
-            throw new NotImplementedException();
-        }
-
         public static string obtenerParametros(List<string> parametros)
         {
             string lisatdoParametros;
@@ -255,7 +250,7 @@ namespace Galactus
                                               cargarInfoFila metodo,
                                               string Titulo,
                                               bool buscarConEnter,
-                                              List<string> listaColumnasOcultar)
+                                              List<string> listaColumnasOcultar = null)
         {
             BusquedaGeneralUI formBusqueda = new BusquedaGeneralUI();
             var objBusqueda = formBusqueda.objBusqueda;
