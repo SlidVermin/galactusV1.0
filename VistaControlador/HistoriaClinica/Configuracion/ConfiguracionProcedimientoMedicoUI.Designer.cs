@@ -256,7 +256,7 @@
             // 
             // btnBuscarProcedimiento
             // 
-            this.btnBuscarProcedimiento.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
+            //this.btnBuscarProcedimiento.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
             this.btnBuscarProcedimiento.Location = new System.Drawing.Point(893, 14);
             this.btnBuscarProcedimiento.Name = "btnBuscarProcedimiento";
             this.btnBuscarProcedimiento.Size = new System.Drawing.Size(27, 23);
@@ -575,26 +575,26 @@
             // dataGridViewImageColumn7
             // 
             this.dataGridViewImageColumn7.HeaderText = "";
-            this.dataGridViewImageColumn7.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
+            this.dataGridViewImageColumn7.Image = null;//global::Galactus.Properties.Resources.Very_Basic_Search_icon;
             this.dataGridViewImageColumn7.Name = "dataGridViewImageColumn7";
             this.dataGridViewImageColumn7.Width = 25;
             // 
             // dataGridViewImageColumn8
             // 
             this.dataGridViewImageColumn8.HeaderText = "Quitar";
-            this.dataGridViewImageColumn8.Image = global::Galactus.Properties.Resources.Industry_Trash_icon;
+            this.dataGridViewImageColumn8.Image = null;//global::Galactus.Properties.Resources.Industry_Trash_icon;
             this.dataGridViewImageColumn8.Name = "dataGridViewImageColumn8";
             this.dataGridViewImageColumn8.Width = 50;
             // 
             // dataGridViewImageColumn9
             // 
             this.dataGridViewImageColumn9.HeaderText = "";
-            this.dataGridViewImageColumn9.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
+            //this.dataGridViewImageColumn9.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
             this.dataGridViewImageColumn9.Name = "dataGridViewImageColumn9";
             // 
             // pnlCerrarForm
             // 
-            this.pnlCerrarForm.BackgroundImage = global::Galactus.Properties.Resources.Actions_file_close_icon;
+            //this.pnlCerrarForm.BackgroundImage = global::Galactus.Properties.Resources.Actions_file_close_icon;
             this.pnlCerrarForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlCerrarForm.Location = new System.Drawing.Point(937, -1);
             this.pnlCerrarForm.Name = "pnlCerrarForm";
@@ -604,7 +604,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Galactus.Properties.Resources.Very_Basic_Settings_Filled_icon;
+            //this.pictureBox1.Image = global::Galactus.Properties.Resources.Very_Basic_Settings_Filled_icon;
             this.pictureBox1.Location = new System.Drawing.Point(18, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 33);
@@ -688,28 +688,28 @@
             // dgBuscarmedicamento
             // 
             this.dgBuscarmedicamento.HeaderText = "";
-            this.dgBuscarmedicamento.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
+            //this.dgBuscarmedicamento.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
             this.dgBuscarmedicamento.Name = "dgBuscarmedicamento";
             this.dgBuscarmedicamento.Width = 25;
             // 
             // dgQuitarMedicamento
             // 
             this.dgQuitarMedicamento.HeaderText = "Quitar";
-            this.dgQuitarMedicamento.Image = global::Galactus.Properties.Resources.Industry_Trash_icon;
+            //this.dgQuitarMedicamento.Image = global::Galactus.Properties.Resources.Industry_Trash_icon;
             this.dgQuitarMedicamento.Name = "dgQuitarMedicamento";
             this.dgQuitarMedicamento.Width = 50;
             // 
             // dgBuscarProcedimiento
             // 
             this.dgBuscarProcedimiento.HeaderText = "";
-            this.dgBuscarProcedimiento.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
+            //this.dgBuscarProcedimiento.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
             this.dgBuscarProcedimiento.Name = "dgBuscarProcedimiento";
             this.dgBuscarProcedimiento.Width = 25;
             // 
             // dgQuitarProcedimiento
             // 
             this.dgQuitarProcedimiento.HeaderText = "Quitar";
-            this.dgQuitarProcedimiento.Image = global::Galactus.Properties.Resources.Industry_Trash_icon;
+            //this.dgQuitarProcedimiento.Image = global::Galactus.Properties.Resources.Industry_Trash_icon;
             this.dgQuitarProcedimiento.Name = "dgQuitarProcedimiento";
             this.dgQuitarProcedimiento.Width = 50;
             // 
@@ -733,14 +733,14 @@
             // dgBuscarArea
             // 
             this.dgBuscarArea.HeaderText = "";
-            this.dgBuscarArea.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
+            this.dgBuscarArea.Image = null;// global::Galactus.Properties.Resources.Very_Basic_Search_icon;
             this.dgBuscarArea.Name = "dgBuscarArea";
             this.dgBuscarArea.Width = 25;
             // 
             // dgQuitarArea
             // 
             this.dgQuitarArea.HeaderText = "Quitar";
-            this.dgQuitarArea.Image = global::Galactus.Properties.Resources.Industry_Trash_icon;
+            //this.dgQuitarArea.Image = global::Galactus.Properties.Resources.Industry_Trash_icon;
             this.dgQuitarArea.Name = "dgQuitarArea";
             this.dgQuitarArea.Width = 50;
             // 
