@@ -489,6 +489,8 @@
     <None Include="Resources\Document-copy-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\btn-buscar.jpg" />
+    <None Include="Resources\btn-anular.jpg" />
     <Content Include="Resources\general-ico.png" />
     <Content Include="Resources\historia_clinica-ico.png" />
     <Content Include="Resources\laboratorio-ico.png" />

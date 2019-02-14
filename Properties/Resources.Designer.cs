@@ -103,16 +103,6 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Actions_file_close_icon {
-            get {
-                object obj = ResourceManager.GetObject("Actions-file-close-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Actions_project_development_close_icon {
             get {
                 object obj = ResourceManager.GetObject("Actions-project-development-close-icon", resourceCulture);
@@ -196,6 +186,26 @@ namespace Galactus.Properties {
         internal static System.Drawing.Bitmap bt_editar {
             get {
                 object obj = ResourceManager.GetObject("bt-editar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_anular {
+            get {
+                object obj = ResourceManager.GetObject("btn-anular", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btn_buscar {
+            get {
+                object obj = ResourceManager.GetObject("btn-buscar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -433,7 +443,6 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-
         internal static System.Drawing.Bitmap laboratorio_ico {
             get {
                 object obj = ResourceManager.GetObject("laboratorio_ico", resourceCulture);
@@ -444,18 +453,6 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-
-        internal static System.Drawing.Bitmap Industry_Trash_icon {
-            get {
-                object obj = ResourceManager.GetObject("Industry-Trash-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-
         internal static System.Drawing.Bitmap limpiar_16 {
             get {
                 object obj = ResourceManager.GetObject("limpiar-16", resourceCulture);
@@ -649,26 +646,6 @@ namespace Galactus.Properties {
         internal static System.Drawing.Bitmap user__1_ {
             get {
                 object obj = ResourceManager.GetObject("user (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Very_Basic_Search_icon {
-            get {
-                object obj = ResourceManager.GetObject("Very-Basic-Search-icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Very_Basic_Settings_Filled_icon {
-            get {
-                object obj = ResourceManager.GetObject("Very-Basic-Settings-Filled-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
