@@ -109,16 +109,18 @@ namespace Galactus.VistaControlador.Gestion
         {
             GeneralC.buscarDevuelveFila(Query.BUSCAR_CLIENTE,
                                     null,
-                                    cargarPersona,
+                                    cargarCliente,
                                     Titulos.TITULO_BUSCAR_CLIENTE,
                                     true);
         } 
         private void btnBuscarNit_Click(object sender, EventArgs e)
         {
-            GeneralC.buscarDevuelveFila(Query.BUSCAR_PERSONA,
-                                      null,
-                                      cargarPersona,
-                                      Titulos.TITULO_BUSCAR_PERSONA,
+            List<string> parametro = new List<string>();
+            parametro.Add(string.Empty);
+            GeneralC.buscarDevuelveFila(Query.BUSCAR_TERCERO,
+                                      parametro,
+                                      new GeneralC.cargarInfoFila(cargarTercero),
+                                      Titulos.TITULO_BUSCAR_TERCERO,
                                       true);
         }
 
@@ -138,8 +140,13 @@ namespace Galactus.VistaControlador.Gestion
             btnSalir.BackColor = Control.DefaultBackColor;
         }
         #endregion
-        private void cargarPersona(DataRow dRows) {
-
+        private void cargarTercero(DataRow dRows) {
+            cliente.codigo = dRows.Field<Int32>("codigo");
+            txtNit.Text = dRows.Field<string>("Nit").ToString();
+            txtRazonSocial.Text = dRows.Field<string>("RazonSocial");
+            txtDireccion.Text = dRows.Field<string>("Direccion");
+            txtTelefono.Text = dRows.Field<string>("Telefono");
+            txtCelular.Text = dRows.Field<string>("Celular");
         }
         private void cargarCliente(DataRow dRows) {
 
