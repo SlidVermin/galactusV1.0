@@ -28,588 +28,683 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.nitCodeText = new System.Windows.Forms.TextBox();
-            this.nitText = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.direccionText = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.telefonoText = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.paisBox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.emailText = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClienteUI));
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.rsocialText = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.celularText = new System.Windows.Forms.TextBox();
-            this.departBox = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ciudadBox = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tipoClienteBox = new System.Windows.Forms.ComboBox();
-            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.label12 = new System.Windows.Forms.Label();
-            this.regimenBox = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.formaPagoBox = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.PlazoBox = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.diasEntregaBox = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.ubicacionBox = new System.Windows.Forms.ComboBox();
-            this.diasDevolucionBox = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.pnlCaracteristica = new System.Windows.Forms.Panel();
+            this.txtCuentaCIIU = new System.Windows.Forms.TextBox();
+            this.txtPUC = new System.Windows.Forms.TextBox();
+            this.btnBuscarCIIU = new System.Windows.Forms.Button();
+            this.btnBuscarPUC = new System.Windows.Forms.Button();
+            this.txtCIIU = new System.Windows.Forms.TextBox();
+            this.txtCuentaPUC = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.cuentaPucBox = new System.Windows.Forms.TextBox();
-            this.ciiuBox = new System.Windows.Forms.TextBox();
-            this.pucText = new System.Windows.Forms.TextBox();
-            this.ciiuText = new System.Windows.Forms.TextBox();
-            this.clientesPB = new System.Windows.Forms.PictureBox();
-            this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tBtEditar = new System.Windows.Forms.ToolStripButton();
-            this.tBtCancelar = new System.Windows.Forms.ToolStripButton();
-            this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tBtBuscar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.buscarHCPacienteBtn = new System.Windows.Forms.Button();
-            this.buscarCiiuBtn = new System.Windows.Forms.Button();
-            this.buscarPucBtn = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tstMenuPatron.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesPB)).BeginInit();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cbUbicacion = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cbFormaPago = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbRegimen = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnBuscarNit = new System.Windows.Forms.Button();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.nitCodeText = new System.Windows.Forms.TextBox();
+            this.txtNit = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TostMenu = new System.Windows.Forms.ToolStrip();
+            this.btNuevo = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.btEditar = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.btCancelar = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.btGuardar = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.btBuscar = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.btAnular = new System.Windows.Forms.ToolStripLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.numDevolucion = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numEntrega = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numPlazo = new System.Windows.Forms.NumericUpDown();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            this.pnlCaracteristica.SuspendLayout();
+            this.pnlInformacion.SuspendLayout();
+            this.TostMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDevolucion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEntrega)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPlazo)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Clientes";
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 59);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(714, 275);
-            this.tabControl1.TabIndex = 1;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.buscarHCPacienteBtn);
-            this.tabPage1.Controls.Add(this.tipoClienteBox);
-            this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.ciudadBox);
-            this.tabPage1.Controls.Add(this.label10);
-            this.tabPage1.Controls.Add(this.celularText);
-            this.tabPage1.Controls.Add(this.departBox);
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.rsocialText);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.emailText);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.direccionText);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.telefonoText);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.paisBox);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.nitCodeText);
-            this.tabPage1.Controls.Add(this.nitText);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(706, 249);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Información del Cliente";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.ciiuText);
-            this.tabPage2.Controls.Add(this.pucText);
-            this.tabPage2.Controls.Add(this.buscarCiiuBtn);
-            this.tabPage2.Controls.Add(this.buscarPucBtn);
-            this.tabPage2.Controls.Add(this.ciiuBox);
-            this.tabPage2.Controls.Add(this.cuentaPucBox);
-            this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.diasDevolucionBox);
-            this.tabPage2.Controls.Add(this.ubicacionBox);
-            this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.diasEntregaBox);
-            this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.PlazoBox);
-            this.tabPage2.Controls.Add(this.label14);
-            this.tabPage2.Controls.Add(this.formaPagoBox);
-            this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Controls.Add(this.regimenBox);
-            this.tabPage2.Controls.Add(this.label12);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(706, 249);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Características";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // nitCodeText
-            // 
-            this.nitCodeText.Location = new System.Drawing.Point(294, 29);
-            this.nitCodeText.Name = "nitCodeText";
-            this.nitCodeText.Size = new System.Drawing.Size(25, 20);
-            this.nitCodeText.TabIndex = 14;
-            // 
-            // nitText
-            // 
-            this.nitText.Location = new System.Drawing.Point(119, 29);
-            this.nitText.Name = "nitText";
-            this.nitText.Size = new System.Drawing.Size(169, 20);
-            this.nitText.TabIndex = 13;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "NIT:";
-            // 
-            // direccionText
-            // 
-            this.direccionText.Location = new System.Drawing.Point(119, 137);
-            this.direccionText.Name = "direccionText";
-            this.direccionText.Size = new System.Drawing.Size(169, 20);
-            this.direccionText.TabIndex = 23;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(38, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Dirección:";
-            // 
-            // telefonoText
-            // 
-            this.telefonoText.Location = new System.Drawing.Point(119, 101);
-            this.telefonoText.Name = "telefonoText";
-            this.telefonoText.Size = new System.Drawing.Size(169, 20);
-            this.telefonoText.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 104);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Telèfono:";
-            // 
-            // paisBox
-            // 
-            this.paisBox.FormattingEnabled = true;
-            this.paisBox.Location = new System.Drawing.Point(119, 65);
-            this.paisBox.Name = "paisBox";
-            this.paisBox.Size = new System.Drawing.Size(169, 21);
-            this.paisBox.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "País:";
-            // 
-            // emailText
-            // 
-            this.emailText.Location = new System.Drawing.Point(119, 172);
-            this.emailText.Name = "emailText";
-            this.emailText.Size = new System.Drawing.Size(169, 20);
-            this.emailText.TabIndex = 25;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.pnlCaracteristica);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.pnlInformacion);
+            this.panel1.Location = new System.Drawing.Point(23, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(925, 435);
+            this.panel1.TabIndex = 0;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 175);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(29, 125);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Email:";
+            this.label6.Size = new System.Drawing.Size(134, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Caracteristicas.";
             // 
-            // rsocialText
+            // pnlCaracteristica
             // 
-            this.rsocialText.Location = new System.Drawing.Point(462, 29);
-            this.rsocialText.Name = "rsocialText";
-            this.rsocialText.Size = new System.Drawing.Size(169, 20);
-            this.rsocialText.TabIndex = 27;
+            this.pnlCaracteristica.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlCaracteristica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCaracteristica.Controls.Add(this.label11);
+            this.pnlCaracteristica.Controls.Add(this.numPlazo);
+            this.pnlCaracteristica.Controls.Add(this.label10);
+            this.pnlCaracteristica.Controls.Add(this.numEntrega);
+            this.pnlCaracteristica.Controls.Add(this.label9);
+            this.pnlCaracteristica.Controls.Add(this.numDevolucion);
+            this.pnlCaracteristica.Controls.Add(this.txtCuentaCIIU);
+            this.pnlCaracteristica.Controls.Add(this.txtPUC);
+            this.pnlCaracteristica.Controls.Add(this.btnBuscarCIIU);
+            this.pnlCaracteristica.Controls.Add(this.btnBuscarPUC);
+            this.pnlCaracteristica.Controls.Add(this.txtCIIU);
+            this.pnlCaracteristica.Controls.Add(this.txtCuentaPUC);
+            this.pnlCaracteristica.Controls.Add(this.label19);
+            this.pnlCaracteristica.Controls.Add(this.label18);
+            this.pnlCaracteristica.Controls.Add(this.cbUbicacion);
+            this.pnlCaracteristica.Controls.Add(this.label17);
+            this.pnlCaracteristica.Controls.Add(this.label16);
+            this.pnlCaracteristica.Controls.Add(this.label15);
+            this.pnlCaracteristica.Controls.Add(this.label14);
+            this.pnlCaracteristica.Controls.Add(this.cbFormaPago);
+            this.pnlCaracteristica.Controls.Add(this.label13);
+            this.pnlCaracteristica.Controls.Add(this.cbRegimen);
+            this.pnlCaracteristica.Controls.Add(this.label12);
+            this.pnlCaracteristica.Location = new System.Drawing.Point(15, 155);
+            this.pnlCaracteristica.Name = "pnlCaracteristica";
+            this.pnlCaracteristica.Size = new System.Drawing.Size(897, 261);
+            this.pnlCaracteristica.TabIndex = 2;
             // 
-            // label7
+            // txtCuentaCIIU
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(381, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
-            this.label7.TabIndex = 26;
-            this.label7.Text = "Razón social:";
+            this.txtCuentaCIIU.Font = new System.Drawing.Font("Arial", 9F);
+            this.txtCuentaCIIU.Location = new System.Drawing.Point(386, 221);
+            this.txtCuentaCIIU.Name = "txtCuentaCIIU";
+            this.txtCuentaCIIU.Size = new System.Drawing.Size(494, 21);
+            this.txtCuentaCIIU.TabIndex = 59;
             // 
-            // celularText
+            // txtPUC
             // 
-            this.celularText.Location = new System.Drawing.Point(462, 102);
-            this.celularText.Name = "celularText";
-            this.celularText.Size = new System.Drawing.Size(169, 20);
-            this.celularText.TabIndex = 31;
+            this.txtPUC.Font = new System.Drawing.Font("Arial", 9F);
+            this.txtPUC.Location = new System.Drawing.Point(386, 182);
+            this.txtPUC.Name = "txtPUC";
+            this.txtPUC.Size = new System.Drawing.Size(494, 21);
+            this.txtPUC.TabIndex = 58;
             // 
-            // departBox
+            // btnBuscarCIIU
             // 
-            this.departBox.FormattingEnabled = true;
-            this.departBox.Location = new System.Drawing.Point(462, 65);
-            this.departBox.Name = "departBox";
-            this.departBox.Size = new System.Drawing.Size(169, 21);
-            this.departBox.TabIndex = 30;
+            this.btnBuscarCIIU.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCIIU.Image")));
+            this.btnBuscarCIIU.Location = new System.Drawing.Point(357, 219);
+            this.btnBuscarCIIU.Name = "btnBuscarCIIU";
+            this.btnBuscarCIIU.Size = new System.Drawing.Size(26, 24);
+            this.btnBuscarCIIU.TabIndex = 57;
+            this.btnBuscarCIIU.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // btnBuscarPUC
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(379, 105);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 13);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Celular:";
+            this.btnBuscarPUC.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarPUC.Image")));
+            this.btnBuscarPUC.Location = new System.Drawing.Point(356, 181);
+            this.btnBuscarPUC.Name = "btnBuscarPUC";
+            this.btnBuscarPUC.Size = new System.Drawing.Size(26, 24);
+            this.btnBuscarPUC.TabIndex = 56;
+            this.btnBuscarPUC.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // txtCIIU
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(379, 68);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 13);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Departamento:";
+            this.txtCIIU.Font = new System.Drawing.Font("Arial", 9F);
+            this.txtCIIU.Location = new System.Drawing.Point(125, 221);
+            this.txtCIIU.Name = "txtCIIU";
+            this.txtCIIU.Size = new System.Drawing.Size(229, 21);
+            this.txtCIIU.TabIndex = 55;
+            this.txtCIIU.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // ciudadBox
+            // txtCuentaPUC
             // 
-            this.ciudadBox.FormattingEnabled = true;
-            this.ciudadBox.Location = new System.Drawing.Point(462, 137);
-            this.ciudadBox.Name = "ciudadBox";
-            this.ciudadBox.Size = new System.Drawing.Size(169, 21);
-            this.ciudadBox.TabIndex = 33;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(379, 140);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 13);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Ciudad:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(379, 175);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 13);
-            this.label11.TabIndex = 34;
-            this.label11.Text = "Tipo cliente:";
-            // 
-            // tipoClienteBox
-            // 
-            this.tipoClienteBox.FormattingEnabled = true;
-            this.tipoClienteBox.Location = new System.Drawing.Point(462, 172);
-            this.tipoClienteBox.Name = "tipoClienteBox";
-            this.tipoClienteBox.Size = new System.Drawing.Size(169, 21);
-            this.tipoClienteBox.TabIndex = 35;
-            // 
-            // tstMenuPatron
-            // 
-            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tBtNuevo,
-            this.tBtEditar,
-            this.tBtCancelar,
-            this.tBtGuardar,
-            this.tBtBuscar,
-            this.toolStripButton1});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 337);
-            this.tstMenuPatron.Name = "tstMenuPatron";
-            this.tstMenuPatron.Size = new System.Drawing.Size(738, 25);
-            this.tstMenuPatron.TabIndex = 28;
-            this.tstMenuPatron.Text = "toolStrip1";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(17, 28);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Régimen:";
-            // 
-            // regimenBox
-            // 
-            this.regimenBox.FormattingEnabled = true;
-            this.regimenBox.Location = new System.Drawing.Point(114, 25);
-            this.regimenBox.Name = "regimenBox";
-            this.regimenBox.Size = new System.Drawing.Size(149, 21);
-            this.regimenBox.TabIndex = 1;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 69);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 13);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Forma de pago:";
-            // 
-            // formaPagoBox
-            // 
-            this.formaPagoBox.FormattingEnabled = true;
-            this.formaPagoBox.Location = new System.Drawing.Point(114, 66);
-            this.formaPagoBox.Name = "formaPagoBox";
-            this.formaPagoBox.Size = new System.Drawing.Size(149, 21);
-            this.formaPagoBox.TabIndex = 3;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(17, 115);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 13);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Plazo:";
-            // 
-            // PlazoBox
-            // 
-            this.PlazoBox.FormattingEnabled = true;
-            this.PlazoBox.Location = new System.Drawing.Point(114, 112);
-            this.PlazoBox.Name = "PlazoBox";
-            this.PlazoBox.Size = new System.Drawing.Size(149, 21);
-            this.PlazoBox.TabIndex = 5;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(357, 115);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 13);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Días de entrega:";
-            // 
-            // diasEntregaBox
-            // 
-            this.diasEntregaBox.FormattingEnabled = true;
-            this.diasEntregaBox.Location = new System.Drawing.Point(454, 112);
-            this.diasEntregaBox.Name = "diasEntregaBox";
-            this.diasEntregaBox.Size = new System.Drawing.Size(149, 21);
-            this.diasEntregaBox.TabIndex = 7;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(356, 28);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(58, 13);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "Ubicación:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(356, 69);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(88, 13);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "Días devolución:";
-            // 
-            // ubicacionBox
-            // 
-            this.ubicacionBox.FormattingEnabled = true;
-            this.ubicacionBox.Location = new System.Drawing.Point(453, 25);
-            this.ubicacionBox.Name = "ubicacionBox";
-            this.ubicacionBox.Size = new System.Drawing.Size(149, 21);
-            this.ubicacionBox.TabIndex = 10;
-            // 
-            // diasDevolucionBox
-            // 
-            this.diasDevolucionBox.FormattingEnabled = true;
-            this.diasDevolucionBox.Location = new System.Drawing.Point(453, 66);
-            this.diasDevolucionBox.Name = "diasDevolucionBox";
-            this.diasDevolucionBox.Size = new System.Drawing.Size(149, 21);
-            this.diasDevolucionBox.TabIndex = 11;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(17, 167);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(69, 13);
-            this.label18.TabIndex = 12;
-            this.label18.Text = "Cuenta PUC:";
+            this.txtCuentaPUC.Font = new System.Drawing.Font("Arial", 9F);
+            this.txtCuentaPUC.Location = new System.Drawing.Point(125, 182);
+            this.txtCuentaPUC.Name = "txtCuentaPUC";
+            this.txtCuentaPUC.Size = new System.Drawing.Size(229, 21);
+            this.txtCuentaPUC.TabIndex = 54;
+            this.txtCuentaPUC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(17, 206);
+            this.label19.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label19.Location = new System.Drawing.Point(10, 227);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(31, 13);
-            this.label19.TabIndex = 13;
+            this.label19.Size = new System.Drawing.Size(36, 16);
+            this.label19.TabIndex = 53;
             this.label19.Text = "CIIU:";
             // 
-            // cuentaPucBox
+            // label18
             // 
-            this.cuentaPucBox.Location = new System.Drawing.Point(114, 164);
-            this.cuentaPucBox.Name = "cuentaPucBox";
-            this.cuentaPucBox.Size = new System.Drawing.Size(117, 20);
-            this.cuentaPucBox.TabIndex = 14;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label18.Location = new System.Drawing.Point(10, 181);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(84, 16);
+            this.label18.TabIndex = 52;
+            this.label18.Text = "Cuenta PUC:";
             // 
-            // ciiuBox
+            // cbUbicacion
             // 
-            this.ciiuBox.Location = new System.Drawing.Point(114, 203);
-            this.ciiuBox.Name = "ciiuBox";
-            this.ciiuBox.Size = new System.Drawing.Size(117, 20);
-            this.ciiuBox.TabIndex = 15;
+            this.cbUbicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUbicacion.Font = new System.Drawing.Font("Arial", 9F);
+            this.cbUbicacion.FormattingEnabled = true;
+            this.cbUbicacion.Location = new System.Drawing.Point(497, 23);
+            this.cbUbicacion.Name = "cbUbicacion";
+            this.cbUbicacion.Size = new System.Drawing.Size(255, 23);
+            this.cbUbicacion.TabIndex = 50;
             // 
-            // pucText
+            // label17
             // 
-            this.pucText.Location = new System.Drawing.Point(282, 164);
-            this.pucText.Name = "pucText";
-            this.pucText.Size = new System.Drawing.Size(320, 20);
-            this.pucText.TabIndex = 38;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label17.Location = new System.Drawing.Point(389, 78);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(102, 16);
+            this.label17.TabIndex = 49;
+            this.label17.Text = "Días devolución:";
             // 
-            // ciiuText
+            // label16
             // 
-            this.ciiuText.Location = new System.Drawing.Point(282, 203);
-            this.ciiuText.Name = "ciiuText";
-            this.ciiuText.Size = new System.Drawing.Size(320, 20);
-            this.ciiuText.TabIndex = 39;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label16.Location = new System.Drawing.Point(389, 26);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 16);
+            this.label16.TabIndex = 48;
+            this.label16.Text = "Ubicación:";
             // 
-            // clientesPB
+            // label15
             // 
-            this.clientesPB.Image = global::Galactus.Properties.Resources.target;
-            this.clientesPB.Location = new System.Drawing.Point(12, 15);
-            this.clientesPB.Name = "clientesPB";
-            this.clientesPB.Size = new System.Drawing.Size(37, 38);
-            this.clientesPB.TabIndex = 29;
-            this.clientesPB.TabStop = false;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label15.Location = new System.Drawing.Point(389, 127);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(103, 16);
+            this.label15.TabIndex = 46;
+            this.label15.Text = "Días de entrega:";
             // 
-            // tBtNuevo
+            // label14
             // 
-            this.tBtNuevo.Image = global::Galactus.Properties.Resources.add;
-            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtNuevo.Name = "tBtNuevo";
-            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tBtNuevo.Text = "Nuevo";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label14.Location = new System.Drawing.Point(10, 130);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(45, 16);
+            this.label14.TabIndex = 44;
+            this.label14.Text = "Plazo:";
             // 
-            // tBtEditar
+            // cbFormaPago
             // 
-            this.tBtEditar.Image = global::Galactus.Properties.Resources.edit;
-            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtEditar.Name = "tBtEditar";
-            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
-            this.tBtEditar.Text = "Editar";
+            this.cbFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFormaPago.Font = new System.Drawing.Font("Arial", 9F);
+            this.cbFormaPago.FormattingEnabled = true;
+            this.cbFormaPago.Location = new System.Drawing.Point(125, 74);
+            this.cbFormaPago.Name = "cbFormaPago";
+            this.cbFormaPago.Size = new System.Drawing.Size(229, 23);
+            this.cbFormaPago.TabIndex = 43;
             // 
-            // tBtCancelar
+            // label13
             // 
-            this.tBtCancelar.Image = global::Galactus.Properties.Resources.back_arrow;
-            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtCancelar.Name = "tBtCancelar";
-            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tBtCancelar.Text = "Cancelar";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label13.Location = new System.Drawing.Point(10, 79);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(99, 16);
+            this.label13.TabIndex = 42;
+            this.label13.Text = "Forma de pago:";
             // 
-            // tBtGuardar
+            // cbRegimen
             // 
-            this.tBtGuardar.Image = global::Galactus.Properties.Resources.guardar16;
-            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtGuardar.Name = "tBtGuardar";
-            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tBtGuardar.Text = "Guardar";
+            this.cbRegimen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbRegimen.Font = new System.Drawing.Font("Arial", 9F);
+            this.cbRegimen.FormattingEnabled = true;
+            this.cbRegimen.Location = new System.Drawing.Point(125, 23);
+            this.cbRegimen.Name = "cbRegimen";
+            this.cbRegimen.Size = new System.Drawing.Size(229, 23);
+            this.cbRegimen.TabIndex = 41;
             // 
-            // tBtBuscar
+            // label12
             // 
-            this.tBtBuscar.Image = global::Galactus.Properties.Resources.search__1_;
-            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtBuscar.Name = "tBtBuscar";
-            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tBtBuscar.Text = "Buscar";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label12.Location = new System.Drawing.Point(10, 28);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 16);
+            this.label12.TabIndex = 40;
+            this.label12.Text = "Régimen:";
             // 
-            // toolStripButton1
+            // label2
             // 
-            this.toolStripButton1.Image = global::Galactus.Properties.Resources.anular24;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(62, 22);
-            this.toolStripButton1.Text = "Anular";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(29, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(199, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Información del Cliente.";
             // 
-            // buscarHCPacienteBtn
+            // pnlInformacion
             // 
-            this.buscarHCPacienteBtn.Image = global::Galactus.Properties.Resources.search__1_;
-            this.buscarHCPacienteBtn.Location = new System.Drawing.Point(325, 26);
-            this.buscarHCPacienteBtn.Name = "buscarHCPacienteBtn";
-            this.buscarHCPacienteBtn.Size = new System.Drawing.Size(26, 24);
-            this.buscarHCPacienteBtn.TabIndex = 36;
-            this.buscarHCPacienteBtn.UseVisualStyleBackColor = true;
+            this.pnlInformacion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInformacion.Controls.Add(this.txtDireccion);
+            this.pnlInformacion.Controls.Add(this.label5);
+            this.pnlInformacion.Controls.Add(this.txtCelular);
+            this.pnlInformacion.Controls.Add(this.label8);
+            this.pnlInformacion.Controls.Add(this.txtTelefono);
+            this.pnlInformacion.Controls.Add(this.label4);
+            this.pnlInformacion.Controls.Add(this.btnBuscarNit);
+            this.pnlInformacion.Controls.Add(this.txtRazonSocial);
+            this.pnlInformacion.Controls.Add(this.label7);
+            this.pnlInformacion.Controls.Add(this.nitCodeText);
+            this.pnlInformacion.Controls.Add(this.txtNit);
+            this.pnlInformacion.Controls.Add(this.label3);
+            this.pnlInformacion.Location = new System.Drawing.Point(15, 46);
+            this.pnlInformacion.Name = "pnlInformacion";
+            this.pnlInformacion.Size = new System.Drawing.Size(897, 70);
+            this.pnlInformacion.TabIndex = 1;
             // 
-            // buscarCiiuBtn
+            // txtDireccion
             // 
-            this.buscarCiiuBtn.Image = global::Galactus.Properties.Resources.search__1_;
-            this.buscarCiiuBtn.Location = new System.Drawing.Point(237, 200);
-            this.buscarCiiuBtn.Name = "buscarCiiuBtn";
-            this.buscarCiiuBtn.Size = new System.Drawing.Size(26, 24);
-            this.buscarCiiuBtn.TabIndex = 37;
-            this.buscarCiiuBtn.UseVisualStyleBackColor = true;
+            this.txtDireccion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(80, 37);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(274, 21);
+            this.txtDireccion.TabIndex = 48;
             // 
-            // buscarPucBtn
+            // label5
             // 
-            this.buscarPucBtn.Image = global::Galactus.Properties.Resources.search__1_;
-            this.buscarPucBtn.Location = new System.Drawing.Point(237, 161);
-            this.buscarPucBtn.Name = "buscarPucBtn";
-            this.buscarPucBtn.Size = new System.Drawing.Size(26, 24);
-            this.buscarPucBtn.TabIndex = 37;
-            this.buscarPucBtn.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(10, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 16);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Dirección:";
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Location = new System.Drawing.Point(722, 40);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(169, 21);
+            this.txtCelular.TabIndex = 46;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(667, 42);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 16);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "Celular:";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(497, 39);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(160, 21);
+            this.txtTelefono.TabIndex = 44;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(390, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 16);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Telèfono:";
+            // 
+            // btnBuscarNit
+            // 
+            this.btnBuscarNit.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btnBuscarNit.Location = new System.Drawing.Point(324, 7);
+            this.btnBuscarNit.Name = "btnBuscarNit";
+            this.btnBuscarNit.Size = new System.Drawing.Size(26, 24);
+            this.btnBuscarNit.TabIndex = 42;
+            this.btnBuscarNit.UseVisualStyleBackColor = true;
+            this.btnBuscarNit.Click += new System.EventHandler(this.btnBuscarNit_Click);
+            // 
+            // txtRazonSocial
+            // 
+            this.txtRazonSocial.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRazonSocial.Location = new System.Drawing.Point(497, 9);
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(395, 21);
+            this.txtRazonSocial.TabIndex = 41;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(390, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 16);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Razón social:";
+            // 
+            // nitCodeText
+            // 
+            this.nitCodeText.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nitCodeText.Location = new System.Drawing.Point(294, 9);
+            this.nitCodeText.Name = "nitCodeText";
+            this.nitCodeText.Size = new System.Drawing.Size(25, 21);
+            this.nitCodeText.TabIndex = 39;
+            // 
+            // txtNit
+            // 
+            this.txtNit.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNit.Location = new System.Drawing.Point(80, 9);
+            this.txtNit.Name = "txtNit";
+            this.txtNit.Size = new System.Drawing.Size(211, 21);
+            this.txtNit.TabIndex = 38;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(10, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 16);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "NIT:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(60, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 18);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Cliente";
+            // 
+            // TostMenu
+            // 
+            this.TostMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TostMenu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TostMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btNuevo,
+            this.toolStripLabel1,
+            this.btEditar,
+            this.toolStripLabel2,
+            this.btCancelar,
+            this.toolStripLabel3,
+            this.btGuardar,
+            this.toolStripLabel4,
+            this.btBuscar,
+            this.toolStripLabel5,
+            this.btAnular});
+            this.TostMenu.Location = new System.Drawing.Point(0, 501);
+            this.TostMenu.Name = "TostMenu";
+            this.TostMenu.Size = new System.Drawing.Size(969, 25);
+            this.TostMenu.TabIndex = 3;
+            this.TostMenu.Text = "toolStrip1";
+            // 
+            // btNuevo
+            // 
+            this.btNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.btNuevo.Name = "btNuevo";
+            this.btNuevo.Size = new System.Drawing.Size(64, 22);
+            this.btNuevo.Text = "Nuevo";
+            this.btNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btNuevo.Click += new System.EventHandler(this.btNuevo_Click);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(20, 22);
+            this.toolStripLabel1.Text = "   ";
+            // 
+            // btEditar
+            // 
+            this.btEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.btEditar.Name = "btEditar";
+            this.btEditar.Size = new System.Drawing.Size(61, 22);
+            this.btEditar.Text = "Editar";
+            this.btEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(20, 22);
+            this.toolStripLabel2.Text = "   ";
+            // 
+            // btCancelar
+            // 
+            this.btCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.Size = new System.Drawing.Size(81, 22);
+            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(20, 22);
+            this.toolStripLabel3.Text = "   ";
+            // 
+            // btGuardar
+            // 
+            this.btGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.btGuardar.Name = "btGuardar";
+            this.btGuardar.Size = new System.Drawing.Size(76, 22);
+            this.btGuardar.Text = "Guardar";
+            this.btGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
+            // 
+            // toolStripLabel4
+            // 
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(20, 22);
+            this.toolStripLabel4.Text = "   ";
+            // 
+            // btBuscar
+            // 
+            this.btBuscar.Name = "btBuscar";
+            this.btBuscar.Size = new System.Drawing.Size(51, 22);
+            this.btBuscar.Text = "Buscar";
+            this.btBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
+            // 
+            // toolStripLabel5
+            // 
+            this.toolStripLabel5.Name = "toolStripLabel5";
+            this.toolStripLabel5.Size = new System.Drawing.Size(20, 22);
+            this.toolStripLabel5.Text = "   ";
+            // 
+            // btAnular
+            // 
+            this.btAnular.Name = "btAnular";
+            this.btAnular.Size = new System.Drawing.Size(50, 22);
+            this.btAnular.Text = "Anular";
+            this.btAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btAnular.Click += new System.EventHandler(this.btAnular_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(25, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // numDevolucion
+            // 
+            this.numDevolucion.Font = new System.Drawing.Font("Arial", 9F);
+            this.numDevolucion.Location = new System.Drawing.Point(497, 74);
+            this.numDevolucion.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numDevolucion.Name = "numDevolucion";
+            this.numDevolucion.Size = new System.Drawing.Size(99, 21);
+            this.numDevolucion.TabIndex = 60;
+            this.numDevolucion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numDevolucion.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label9.Location = new System.Drawing.Point(605, 76);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 16);
+            this.label9.TabIndex = 61;
+            this.label9.Text = "Dia(s)";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label10.Location = new System.Drawing.Point(605, 128);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 16);
+            this.label10.TabIndex = 63;
+            this.label10.Text = "Dia(s)";
+            // 
+            // numEntrega
+            // 
+            this.numEntrega.Font = new System.Drawing.Font("Arial", 9F);
+            this.numEntrega.Location = new System.Drawing.Point(500, 126);
+            this.numEntrega.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numEntrega.Name = "numEntrega";
+            this.numEntrega.Size = new System.Drawing.Size(99, 21);
+            this.numEntrega.TabIndex = 62;
+            this.numEntrega.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numEntrega.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label11.Location = new System.Drawing.Point(233, 127);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 16);
+            this.label11.TabIndex = 65;
+            this.label11.Text = "Dia(s)";
+            // 
+            // numPlazo
+            // 
+            this.numPlazo.Font = new System.Drawing.Font("Arial", 9F);
+            this.numPlazo.Location = new System.Drawing.Point(125, 125);
+            this.numPlazo.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPlazo.Name = "numPlazo";
+            this.numPlazo.Size = new System.Drawing.Size(99, 21);
+            this.numPlazo.TabIndex = 64;
+            this.numPlazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numPlazo.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(940, 3);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(26, 24);
+            this.btnSalir.TabIndex = 43;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
+            this.btnSalir.MouseHover += new System.EventHandler(this.btnSalir_MouseHover);
             // 
             // ClienteUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(738, 362);
-            this.Controls.Add(this.clientesPB);
-            this.Controls.Add(this.tstMenuPatron);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(969, 526);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.TostMenu);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(969, 526);
+            this.MinimumSize = new System.Drawing.Size(969, 526);
             this.Name = "ClienteUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClienteUI";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tstMenuPatron.ResumeLayout(false);
-            this.tstMenuPatron.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesPB)).EndInit();
+            this.Load += new System.EventHandler(this.ClienteUI_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.pnlCaracteristica.ResumeLayout(false);
+            this.pnlCaracteristica.PerformLayout();
+            this.pnlInformacion.ResumeLayout(false);
+            this.pnlInformacion.PerformLayout();
+            this.TostMenu.ResumeLayout(false);
+            this.TostMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDevolucion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEntrega)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPlazo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -617,59 +712,60 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox nitCodeText;
-        private System.Windows.Forms.TextBox nitText;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox emailText;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox direccionText;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox telefonoText;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox paisBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox rsocialText;
+        private System.Windows.Forms.Panel pnlInformacion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStrip TostMenu;
+        private System.Windows.Forms.ToolStripLabel btNuevo;
+        private System.Windows.Forms.ToolStripLabel btEditar;
+        private System.Windows.Forms.ToolStripLabel btCancelar;
+        private System.Windows.Forms.ToolStripLabel btGuardar;
+        private System.Windows.Forms.ToolStripLabel btBuscar;
+        private System.Windows.Forms.ToolStripLabel btAnular;
+        private System.Windows.Forms.Panel pnlCaracteristica;
+        private System.Windows.Forms.Button btnBuscarNit;
+        private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox tipoClienteBox;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox ciudadBox;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox celularText;
-        private System.Windows.Forms.ComboBox departBox;
+        private System.Windows.Forms.TextBox nitCodeText;
+        private System.Windows.Forms.TextBox txtNit;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button buscarHCPacienteBtn;
-        private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton tBtNuevo;
-        private System.Windows.Forms.ToolStripButton tBtEditar;
-        private System.Windows.Forms.ToolStripButton tBtCancelar;
-        private System.Windows.Forms.ToolStripButton tBtGuardar;
-        private System.Windows.Forms.ToolStripButton tBtBuscar;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.TextBox ciiuText;
-        private System.Windows.Forms.TextBox pucText;
-        private System.Windows.Forms.Button buscarCiiuBtn;
-        private System.Windows.Forms.Button buscarPucBtn;
-        private System.Windows.Forms.TextBox ciiuBox;
-        private System.Windows.Forms.TextBox cuentaPucBox;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCuentaCIIU;
+        private System.Windows.Forms.TextBox txtPUC;
+        private System.Windows.Forms.Button btnBuscarCIIU;
+        private System.Windows.Forms.Button btnBuscarPUC;
+        private System.Windows.Forms.TextBox txtCIIU;
+        private System.Windows.Forms.TextBox txtCuentaPUC;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox diasDevolucionBox;
-        private System.Windows.Forms.ComboBox ubicacionBox;
+        private System.Windows.Forms.ComboBox cbUbicacion;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox diasEntregaBox;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox PlazoBox;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox formaPagoBox;
+        private System.Windows.Forms.ComboBox cbFormaPago;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox regimenBox;
+        private System.Windows.Forms.ComboBox cbRegimen;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox clientesPB;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.NumericUpDown numPlazo;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown numEntrega;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown numDevolucion;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

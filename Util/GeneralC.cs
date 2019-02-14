@@ -49,7 +49,41 @@ namespace Galactus
             }
 
         }
+        public static void llenarComboDatosDefinidor(DataTable dt,
+                                                     string valueMember,
+                                                     string displayMember,
+                                                     ComboBox combo)
+            
+        {
+            DataTable dtAux = new DataTable();
+            dtAux = dt.Clone();
+            DataRow drFila = dtAux.NewRow();
+            try
+            {
+                drFila[0] = "-1";
+                drFila[1] = "----Seleccionar----";
+                dtAux.Rows.Add(drFila);
 
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dRows in dt.Select()) {
+                        dtAux.ImportRow(dRows);
+                    }
+
+                    combo.DataSource = dtAux;
+                    combo.DisplayMember = displayMember;
+                    combo.ValueMember = valueMember;
+
+                    combo.AutoCompleteMode = AutoCompleteMode.None;
+                    combo.AutoCompleteSource = AutoCompleteSource.None;
+                    combo.DropDownStyle = ComboBoxStyle.DropDownList;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public static void llenarCombo(string query,
                                        string valueMember,
                                        string displayMember,

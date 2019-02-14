@@ -78,6 +78,7 @@
     <Compile Include="Entidades\HistoriaClinica\Resultado\JustificacionAntibiotico.cs" />
     <Compile Include="Entidades\Inventario\Bodega.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Producto.cs" />
+    <Compile Include="Entidades\Inventario\Cliente.cs" />
     <Compile Include="Modelo\Admision\Configuracion\ManualServicioDAL.cs" />
     <Compile Include="Modelo\Admision\manualTarifarioServicioDAL.cs" />
     <Compile Include="Modelo\Admision\PacienteDAL.cs" />
