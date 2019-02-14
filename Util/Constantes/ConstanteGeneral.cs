@@ -40,6 +40,7 @@ namespace Galactus.Util.Constantes
         public const int LINEA = 5;
         public const int VIAS_ADMINISTRACION = 6;
         public const int UNIDADES_DE_MEDIDA = 7;
+        public const int REGIMEN_SOCIO_ECONOMICO = 13;
         #endregion
 
     }

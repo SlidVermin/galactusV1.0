@@ -78,7 +78,7 @@ namespace Galactus.VistaControlador.Gestion
                 if (validarCampos() == true) {
                     try
                     {
-                        cargarObjeto();
+                        crearNuevoCliente();
                         ClienteDAL.guardarCliente(cliente);
                         GeneralC.habilitarBotones(ref TostMenu);
                         GeneralC.deshabilitarControles(this);
@@ -153,7 +153,7 @@ namespace Galactus.VistaControlador.Gestion
                 return true;
             }      
         }
-        private void cargarObjeto() {
+        private void crearNuevoCliente() {
             cliente.codigoFormaPago =Convert.ToInt32(cbFormaPago.SelectedValue.ToString());
             cliente.codigoRegimen = Convert.ToInt32(cbFormaPago.SelectedValue.ToString());
             cliente.codigoUbicacion = Convert.ToInt32(cbFormaPago.SelectedValue.ToString());
@@ -170,7 +170,11 @@ namespace Galactus.VistaControlador.Gestion
             txtCuentaPUC.ReadOnly = true;
         }
         private void iniciarCombos() {
-           // GeneralC.llenarCombo("", "", "", cbRegimen);
+            List<string> parametro = new List<string>();
+            string cadena;
+            parametro.Add(ConstanteGeneral.REGIMEN_SOCIO_ECONOMICO.ToString());
+            cadena = GeneralC.obtenerParametros(parametro);
+            GeneralC.llenarCombo(Query.PARAMETROS_CONSULTAR_DESCRIPCION + cadena, "Codigo", "Descripcion", cbRegimen);
             GeneralC.llenarComboDatosDefinidor(cliente.llenarComboFormaPago(),"Codigo", "Descripcion", cbFormaPago);
             GeneralC.llenarComboDatosDefinidor(cliente.llenarComboUbicacion(),"Codigo", "Descripcion", cbUbicacion);
         }  
