@@ -23,6 +23,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void UsuarioUI_Load(object sender, EventArgs e)
         {
+            GeneralC.colocarIconosMenu(tstMenuPatron);
             GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
         }
         private void tBtNuevo_Click(object sender, EventArgs e)

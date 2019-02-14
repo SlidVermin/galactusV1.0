@@ -22,6 +22,7 @@ namespace Galactus.VistaControlador.Inventario
         }
         private void BodegaUI_Load(object sender, EventArgs e)
         {
+            GeneralC.colocarIconosMenu(tstMenuPatron);
             GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
         }
         #region Metodos y funciones

@@ -79,7 +79,7 @@ namespace Galactus
                     combo.DropDownStyle = ComboBoxStyle.DropDownList;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -397,7 +397,7 @@ namespace Galactus
         {
             accionesGenerales(formulario, menu, btn1, btn2, btn3, btn4, btn5, msm);
         }
-  
+
         public static void posAnular(Form formulario,
                                       ToolStrip menu,
                                       ToolStripButton btn1,
@@ -468,15 +468,48 @@ namespace Galactus
                 btn.Enabled = true;
             }
         }
-       public static void mostrarMensajeInformacio(string mensaje,Control control) {
+        public static void mostrarMensajeInformacio(string mensaje, Control control)
+        {
             MessageBox.Show(mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             control.Focus();
         }
-       public static void quitarColumnaDatatable(string nombreColumna,DataTable tabla) {
+        public static void quitarColumnaDatatable(string nombreColumna, DataTable tabla)
+        {
             if (tabla.Columns.Contains(nombreColumna))
             {
                 tabla.Columns.Remove(nombreColumna);
             }
+        }
+        public static void colocarIconosMenu(ToolStrip menu)
+        {
+            foreach (ToolStripButton item in menu.Items)
+            {
+                switch (item.Name)
+                {
+                    case "tBtNuevo":
+                        item.Image = Properties.Resources.btn_nuevo;
+                        break;
+                    case "tBtEditar":
+                        item.Image = Properties.Resources.bt_editar;
+                        break;
+                    case "tBtCancelar":
+                        item.Image = Properties.Resources.btn_cancelar;
+                        break;
+                    case "tBtGuardar":
+                        item.Image = Properties.Resources.btn_guardar;
+                        break;
+                    case "tBtBuscar":
+                        item.Image = Properties.Resources.btn_buscar;
+                        break;
+                    case "tBtAnular":
+                        item.Image = Properties.Resources.btn_anular;
+                        break;
+                    default:
+                        item.Image = null;
+                        break;
+                }
+            }
+         
         }
     }
 }
