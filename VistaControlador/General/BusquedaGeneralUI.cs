@@ -18,6 +18,7 @@ namespace Galactus.VistaControlador.General
         internal Busqueda objBusqueda = new Busqueda();
         internal GeneralC.cargarInfoCodigo metodoPorCodigo;
         internal GeneralC.cargarInfoFila metodoPorFila;
+        internal List<string> listaColumnasOcultar;
 
         public BusquedaGeneralUI()
         {
@@ -29,14 +30,28 @@ namespace Galactus.VistaControlador.General
             dgvBusqueda.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvBusqueda.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             llenarTabla();
+            ocultarColumnas();
+        }
+        private void ocultarColumnas()
+        {
+            if (listaColumnasOcultar != null)
+            {
+                foreach (var item in listaColumnasOcultar)
+                {
+                    if (dgvBusqueda.Columns.Contains(item))
+                    {
+                        dgvBusqueda.Columns[item].Visible = false;
+                    }
+                }
+            }
         }
         private void dgvBusqueda_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {        
+        {
             if (GeneralC.filaValida(e.RowIndex))
             {
                 if (objBusqueda.BusquedaPorCodigo)
                 {
-                     string codigo = dgvBusqueda.Rows[dgvBusqueda.CurrentRow.Index].Cells[0].Value.ToString();
+                    string codigo = dgvBusqueda.Rows[dgvBusqueda.CurrentRow.Index].Cells[0].Value.ToString();
                     if (metodoPorCodigo != null)
                     {
                         metodoPorCodigo.Invoke(codigo);
@@ -53,19 +68,20 @@ namespace Galactus.VistaControlador.General
         }
         void llenarTabla()
         {
-            int cantidadParamatros = objBusqueda.parametros.Count -1;
+            int cantidadParamatros = objBusqueda.parametros.Count - 1;
             if (cantidadParamatros > -1)
             {
                 objBusqueda.parametros.RemoveAt(cantidadParamatros);
                 objBusqueda.parametros.Add(txtBusqueda.Text);
             }
-        
+
             objBusqueda.TablaResultados = BusquedaDAL.llenarResultado(objBusqueda.Query, objBusqueda.parametros);
             dgvBusqueda.DataSource = objBusqueda.TablaResultados;
             configurarDgv();
         }
-        void configurarDgv() {
-            int sumaTotal=0;
+        void configurarDgv()
+        {
+            int sumaTotal = 0;
             foreach (DataGridViewColumn item in dgvBusqueda.Columns)
             {
                 sumaTotal += item.Width;
@@ -87,7 +103,8 @@ namespace Galactus.VistaControlador.General
                 busqueda();
             }
         }
-        void busqueda() {
+        void busqueda()
+        {
             txtBusqueda.Text = GeneralC.validarComillas(txtBusqueda.Text);
             llenarTabla();
             txtBusqueda.SelectionStart = txtBusqueda.TextLength;

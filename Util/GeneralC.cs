@@ -254,7 +254,8 @@ namespace Galactus
                                               List<string> parametros,
                                               cargarInfoFila metodo,
                                               string Titulo,
-                                              bool buscarConEnter)
+                                              bool buscarConEnter,
+                                              List<string> listaColumnasOcultar)
         {
             BusquedaGeneralUI formBusqueda = new BusquedaGeneralUI();
             var objBusqueda = formBusqueda.objBusqueda;
@@ -263,6 +264,7 @@ namespace Galactus
             formBusqueda.metodoPorFila = metodo;
             objBusqueda.parametros = parametros;
             formBusqueda.Text = Titulo;
+            formBusqueda.listaColumnasOcultar = listaColumnasOcultar;
             objBusqueda.Query = query;
             formBusqueda.ShowDialog();
         }
@@ -465,6 +467,10 @@ namespace Galactus
             {
                 btn.Enabled = true;
             }
+        }
+       public static void mostrarMensajeInformacio(string mensaje,Control control) {
+            MessageBox.Show(mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            control.Focus();
         }
        public static void quitarColumnaDatatable(string nombreColumna,DataTable tabla) {
             if (tabla.Columns.Contains(nombreColumna))

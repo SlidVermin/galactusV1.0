@@ -1,4 +1,5 @@
 ﻿using Galactus.Entidades.ConfiguracionGeneral;
+using Galactus.Modelo.ConfiguracionGeneral;
 using Galactus.Util.Constantes;
 using Galactus.Util.Mensajes;
 using System;
@@ -20,7 +21,6 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             InitializeComponent();
         }
-
         private void UsuarioUI_Load(object sender, EventArgs e)
         {
             GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
@@ -37,40 +37,42 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             GeneralC.fnCancelarForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
         }
-
         private void tBtGuardar_Click(object sender, EventArgs e)
         {
-            //if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
-            //    producto.idProducto = (txtBCodigo.Text.Equals(String.Empty) ? 0 : int.Parse(txtBCodigo.Text));
-            //    producto.descripcion = txtDescripcion.Text;
-            //    producto.registroSanitario = txtRegSanitario.Text;
-            //    producto.codigoCUM = txtCUM.Text;
-            //    producto.iva = (double)ndIva.Value;
-            //    try
-            //    {
-            //        ProductoDAL.guardar(producto);
-            //        GeneralC.posGuardar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
-            //        txtBCodigo.Text = producto.idProducto.ToString();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show(ex.Message);
-            //    }
-            //}
+            if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                usuario.idUsuario = (txtBCodigo.Text.Equals(String.Empty) ? 0 : int.Parse(txtBCodigo.Text));
+                usuario.nombre = txtNombre.Text;
+                usuario.usuario = txtUsuario.Text;
+                usuario.pass = txtClave.Text;
+                try
+                {
+                    UsuarioDAL.guardar(usuario);
+                    GeneralC.posGuardar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    txtBCodigo.Text = usuario.idUsuario.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
-
         private void tBtBuscar_Click(object sender, EventArgs e)
         {
             try
             {
+                List<string> columnasOcultar = new List<string>();
+                columnasOcultar.Add("Clave");
+                columnasOcultar.Add("IdRol");
+                columnasOcultar.Add("Rol");
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                //GeneralC.buscarDevuelveFila(Query.PRODUCTO_BUSCAR,
-                //                            parametros,
-                //                            new GeneralC.cargarInfoFila(cargarProducto),
-                //                            Mensajes.BUSQUEDA_PRODUCTO,
-                //                            true);
+                GeneralC.buscarDevuelveFila(Query.USUARIO_BUSCAR,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(cargarUsuario),
+                                            Mensajes.BUSQUEDA_USUARIOS,
+                                            true,
+                                            columnasOcultar);
             }
             catch (Exception ex)
             {
@@ -79,41 +81,89 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void tBtAnular_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (usuario.idUsuario == 1)
             {
-                try
-                {
-                    //ProductoDAL.anular(producto);
-                    //GeneralC.posAnular(this, tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
+                MessageBox.Show("No se puede eliminar el usuario administrador!", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    try
+                    {
+                        UsuarioDAL.anular(usuario);
+                        GeneralC.posAnular(this, tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+
         }
-        void cargarRol(DataRow fila) {
-            usuario.idRol = fila.Field<int>("Código");
-            txtBRol.Text = fila.Field<string>("Descripción");
-        }
-        private void btnBuscarMarca_Click(object sender, EventArgs e)
+        private void btnBuscarRol_Click(object sender, EventArgs e)
         {
             try
             {
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                GeneralC.buscarDevuelveFila(Query.ROL_BUSCAR, 
-                                            parametros, 
-                                            new GeneralC.cargarInfoFila(cargarRol), 
+                GeneralC.buscarDevuelveFila(Query.ROL_BUSCAR,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(cargarRol),
                                             Mensajes.BUSQUEDA_ROL,
-                                            true);
-               
+                                            true,
+                                            null);
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+        void cargarRol(DataRow fila)
+        {
+            usuario.idRol = fila.Field<int>("Código");
+            txtBRol.Text = fila.Field<string>("Descripción");
+        }
+        void cargarUsuario(DataRow fila)
+        {
+            usuario.idUsuario = fila.Field<int>("Código");
+            txtBCodigo.Text = fila.Field<int>("Código").ToString();
+            txtNombre.Text = fila.Field<string>("Nombre");
+            txtUsuario.Text = fila.Field<string>("Usuario");
+            txtClave.Text = fila.Field<string>("Clave");
+            txtBRol.Text = fila.Field<string>("Rol");
+            usuario.idRol = fila.Field<int>("IdRol");
+            GeneralC.posBuscar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular);
+        }
+        private bool validarForm()
+        {
+            if (txtNombre.Text.Equals(""))
+            {
+                GeneralC.mostrarMensajeInformacio("Debe ingresar el nombre del usuario !", txtNombre);
+                return false;
+            }
+            else if (txtUsuario.Text.Equals(""))
+            {
+                GeneralC.mostrarMensajeInformacio("Debe ingresar el usuario !", txtUsuario);
+                return false;
+            }
+            else if (txtClave.Text.Equals(""))
+            {
+                GeneralC.mostrarMensajeInformacio("Debe ingresar la clave !", txtClave);
+                return false;
+            }
+            else if (txtBRol.Text.Equals(""))
+            {
+                GeneralC.mostrarMensajeInformacio("Debe escojer el rol para el usuario !", txtBRol);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
         }
     }
 }

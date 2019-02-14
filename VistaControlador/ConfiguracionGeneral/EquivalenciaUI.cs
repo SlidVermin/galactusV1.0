@@ -32,7 +32,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             cargarLineas();
             cargarVias();
             enlazarGrillas();
-         }
+        }
         private void tBtEditar_Click(object sender, EventArgs e)
         {
             GeneralC.fnEditarForm(this, tstMenuPatron, tBtGuardar, tBtCancelar);
@@ -93,12 +93,13 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         #endregion
         #region Metodos y funciones
-        private bool verificarExistenciaProductosenlazados() {
+        private bool verificarExistenciaProductosenlazados()
+        {
             if (dgvProductos.RowCount == 0)
             {
                 return true;
             }
-            MessageBox.Show("La equivalencia no se puede anular por que tiene productos asociados !","",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            MessageBox.Show("La equivalencia no se puede anular por que tiene productos asociados !", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             return false;
         }
         private void cargarLineas()
@@ -139,16 +140,16 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
             if (tablasResultado != null)
             {
-                DataRow filaResultado  = tablasResultado.Tables[0].Rows[0];
-                
+                DataRow filaResultado = tablasResultado.Tables[0].Rows[0];
+
                 equivalencia.descripcion = filaResultado.Field<string>("Nombre");
-                equivalencia.osmolalidad =  (double)filaResultado.Field<decimal>("Osmolalidad");
+                equivalencia.osmolalidad = (double)filaResultado.Field<decimal>("Osmolalidad");
                 equivalencia.descripcionATC = filaResultado.Field<string>("DescripcionATC");
                 equivalencia.codigoATC = filaResultado.Field<string>("CodigoATC");
                 equivalencia.grupoATC = filaResultado.Field<string>("GrupoATC");
                 equivalencia.concentracion = (double)filaResultado.Field<decimal>("Concentracion");
                 equivalencia.idUnidadMedida = filaResultado.Field<Nullable<int>>("idUnidad");
-                equivalencia.pos  = filaResultado.Field<bool>("pos");
+                equivalencia.pos = filaResultado.Field<bool>("pos");
                 equivalencia.medicamentoEspecial = filaResultado.Field<bool>("MedicamentoEspecial");
                 txtBUnidadMedida.Text = filaResultado.Field<string>("Valor");
 
@@ -157,7 +158,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 txtCodigoATC.Text = equivalencia.codigoATC;
                 cbGrupoATC.SelectedItem = equivalencia.grupoATC;
                 txtDescripcionATC.Text = equivalencia.descripcionATC;
-                numConce.Value = (decimal) equivalencia.concentracion;
+                numConce.Value = (decimal)equivalencia.concentracion;
                 chkPos.Checked = equivalencia.pos;
                 chkMedicamentoControl.Checked = equivalencia.medicamentoEspecial;
 
@@ -201,25 +202,22 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
             if (txtDescripcion.Text.Equals(""))
             {
-                MessageBox.Show("Debe ingresar la descripción !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtDescripcion.Focus();
+                GeneralC.mostrarMensajeInformacio("Debe ingresar la descripción !", txtDescripcion);
                 return false;
             }
             else if (txtBUnidadMedida.Text.Equals(""))
             {
-                MessageBox.Show("Debe escoger la unidad !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btBuscarUnidades.Focus();
+                GeneralC.mostrarMensajeInformacio("Debe escoger la unidad !", btBuscarUnidades);
                 return false;
             }
             else if (cbGrupoATC.SelectedIndex == 0)
             {
-                MessageBox.Show("Debe escoger el grupo ATC !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                cbGrupoATC.Focus();
+                GeneralC.mostrarMensajeInformacio("Debe escoger el grupo ATC !", cbGrupoATC);
                 return false;
             }
-            else if (equivalencia.tablaLineas.Select("Verificar = True").Count() == 0) {
-                MessageBox.Show("Debe seleccionar por lo menos una linea !", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgvLineas.Focus();
+            else if (equivalencia.tablaLineas.Select("Verificar = True").Count() == 0)
+            {
+                GeneralC.mostrarMensajeInformacio("Debe seleccionar por lo menos una linea !", dgvLineas);
                 return false;
             }
             else
@@ -262,5 +260,5 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         #endregion
 
-           }
+    }
 }

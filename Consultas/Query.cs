@@ -45,6 +45,7 @@ namespace Galactus
         #endregion
         #region SEGURIDAD
         public const String ROL_BUSCAR = ConstanteGeneral.ESQUEMA_SEGURIDAD + "[uspUsuarioRolBuscar]";
+        public const String USUARIO_BUSCAR = ConstanteGeneral.ESQUEMA_SEGURIDAD + "[uspUsuarioBuscar]";
         #endregion
         #region UBICACION
         public const String CARGARPAIS = ConstanteGeneral.ESQUEMA_ADMISION + "uspPaisCargar";

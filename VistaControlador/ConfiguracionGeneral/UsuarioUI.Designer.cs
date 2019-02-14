@@ -38,7 +38,7 @@
             this.tBtAnular = new System.Windows.Forms.ToolStripButton();
             this.txtBCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBRol = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtClave = new System.Windows.Forms.TextBox();
-            this.btnBuscarMarca = new System.Windows.Forms.Button();
+            this.btnBuscarRol = new System.Windows.Forms.Button();
             this.tstMenuPatron.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             this.tstMenuPatron.Location = new System.Drawing.Point(0, 236);
             this.tstMenuPatron.Name = "tstMenuPatron";
             this.tstMenuPatron.Size = new System.Drawing.Size(426, 25);
-            this.tstMenuPatron.TabIndex = 28;
+            this.tstMenuPatron.TabIndex = 0;
             this.tstMenuPatron.Text = "toolStrip1";
             // 
             // tBtNuevo
@@ -127,7 +127,7 @@
             this.txtBCodigo.Location = new System.Drawing.Point(94, 19);
             this.txtBCodigo.Name = "txtBCodigo";
             this.txtBCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtBCodigo.TabIndex = 44;
+            this.txtBCodigo.TabIndex = 0;
             // 
             // label1
             // 
@@ -138,12 +138,12 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "Código: ";
             // 
-            // txtDescripcion
+            // txtNombre
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(94, 45);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(302, 20);
-            this.txtDescripcion.TabIndex = 46;
+            this.txtNombre.Location = new System.Drawing.Point(94, 45);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(302, 20);
+            this.txtNombre.TabIndex = 1;
             // 
             // label9
             // 
@@ -168,14 +168,14 @@
             this.txtBRol.Location = new System.Drawing.Point(94, 123);
             this.txtBRol.Name = "txtBRol";
             this.txtBRol.Size = new System.Drawing.Size(202, 20);
-            this.txtBRol.TabIndex = 50;
+            this.txtBRol.TabIndex = 4;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(94, 71);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(202, 20);
-            this.txtUsuario.TabIndex = 48;
+            this.txtUsuario.TabIndex = 2;
             // 
             // label3
             // 
@@ -190,12 +190,12 @@
             // 
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtClave);
-            this.groupBox1.Controls.Add(this.btnBuscarMarca);
+            this.groupBox1.Controls.Add(this.btnBuscarRol);
             this.groupBox1.Controls.Add(this.txtBCodigo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtUsuario);
-            this.groupBox1.Controls.Add(this.txtDescripcion);
+            this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.txtBRol);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label2);
@@ -220,17 +220,17 @@
             this.txtClave.Location = new System.Drawing.Point(94, 97);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(202, 20);
-            this.txtClave.TabIndex = 53;
+            this.txtClave.TabIndex = 3;
             // 
-            // btnBuscarMarca
+            // btnBuscarRol
             // 
-            this.btnBuscarMarca.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarMarca.Image")));
-            this.btnBuscarMarca.Location = new System.Drawing.Point(302, 122);
-            this.btnBuscarMarca.Name = "btnBuscarMarca";
-            this.btnBuscarMarca.Size = new System.Drawing.Size(34, 23);
-            this.btnBuscarMarca.TabIndex = 52;
-            this.btnBuscarMarca.UseVisualStyleBackColor = true;
-            this.btnBuscarMarca.Click += new System.EventHandler(this.btnBuscarMarca_Click);
+            this.btnBuscarRol.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarRol.Image")));
+            this.btnBuscarRol.Location = new System.Drawing.Point(302, 122);
+            this.btnBuscarRol.Name = "btnBuscarRol";
+            this.btnBuscarRol.Size = new System.Drawing.Size(34, 23);
+            this.btnBuscarRol.TabIndex = 5;
+            this.btnBuscarRol.UseVisualStyleBackColor = true;
+            this.btnBuscarRol.Click += new System.EventHandler(this.btnBuscarRol_Click);
             // 
             // UsuarioUI
             // 
@@ -263,7 +263,7 @@
         private System.Windows.Forms.ToolStripButton tBtAnular;
         private System.Windows.Forms.TextBox txtBCodigo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBRol;
@@ -272,6 +272,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtClave;
-        private System.Windows.Forms.Button btnBuscarMarca;
+        private System.Windows.Forms.Button btnBuscarRol;
     }
 }
