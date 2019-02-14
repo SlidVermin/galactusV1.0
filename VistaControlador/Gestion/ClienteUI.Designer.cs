@@ -32,6 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlCaracteristica = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numPlazo = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numEntrega = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.numDevolucion = new System.Windows.Forms.NumericUpDown();
             this.txtCuentaCIIU = new System.Windows.Forms.TextBox();
             this.txtPUC = new System.Windows.Forms.TextBox();
             this.btnBuscarCIIU = new System.Windows.Forms.Button();
@@ -65,33 +71,27 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TostMenu = new System.Windows.Forms.ToolStrip();
-            this.btNuevo = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btEditar = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.btCancelar = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.btGuardar = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.btBuscar = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
-            this.btAnular = new System.Windows.Forms.ToolStripLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.numDevolucion = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numEntrega = new System.Windows.Forms.NumericUpDown();
-            this.label11 = new System.Windows.Forms.Label();
-            this.numPlazo = new System.Windows.Forms.NumericUpDown();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btEditar = new System.Windows.Forms.ToolStripButton();
+            this.btCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btBuscar = new System.Windows.Forms.ToolStripButton();
+            this.btAnular = new System.Windows.Forms.ToolStripButton();
+            this.btGuardar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.pnlCaracteristica.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPlazo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEntrega)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDevolucion)).BeginInit();
             this.pnlInformacion.SuspendLayout();
             this.TostMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDevolucion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEntrega)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numPlazo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -147,6 +147,93 @@
             this.pnlCaracteristica.Name = "pnlCaracteristica";
             this.pnlCaracteristica.Size = new System.Drawing.Size(897, 261);
             this.pnlCaracteristica.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label11.Location = new System.Drawing.Point(233, 127);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 16);
+            this.label11.TabIndex = 65;
+            this.label11.Text = "Dia(s)";
+            // 
+            // numPlazo
+            // 
+            this.numPlazo.Font = new System.Drawing.Font("Arial", 9F);
+            this.numPlazo.Location = new System.Drawing.Point(125, 125);
+            this.numPlazo.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPlazo.Name = "numPlazo";
+            this.numPlazo.Size = new System.Drawing.Size(99, 21);
+            this.numPlazo.TabIndex = 64;
+            this.numPlazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numPlazo.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label10.Location = new System.Drawing.Point(605, 128);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 16);
+            this.label10.TabIndex = 63;
+            this.label10.Text = "Dia(s)";
+            // 
+            // numEntrega
+            // 
+            this.numEntrega.Font = new System.Drawing.Font("Arial", 9F);
+            this.numEntrega.Location = new System.Drawing.Point(500, 126);
+            this.numEntrega.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numEntrega.Name = "numEntrega";
+            this.numEntrega.Size = new System.Drawing.Size(99, 21);
+            this.numEntrega.TabIndex = 62;
+            this.numEntrega.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numEntrega.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label9.Location = new System.Drawing.Point(605, 76);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(42, 16);
+            this.label9.TabIndex = 61;
+            this.label9.Text = "Dia(s)";
+            // 
+            // numDevolucion
+            // 
+            this.numDevolucion.Font = new System.Drawing.Font("Arial", 9F);
+            this.numDevolucion.Location = new System.Drawing.Point(497, 74);
+            this.numDevolucion.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numDevolucion.Name = "numDevolucion";
+            this.numDevolucion.Size = new System.Drawing.Size(99, 21);
+            this.numDevolucion.TabIndex = 60;
+            this.numDevolucion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numDevolucion.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txtCuentaCIIU
             // 
@@ -481,29 +568,11 @@
             this.TostMenu.TabIndex = 3;
             this.TostMenu.Text = "toolStrip1";
             // 
-            // btNuevo
-            // 
-            this.btNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.btNuevo.Name = "btNuevo";
-            this.btNuevo.Size = new System.Drawing.Size(64, 22);
-            this.btNuevo.Text = "Nuevo";
-            this.btNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btNuevo.Click += new System.EventHandler(this.btNuevo_Click);
-            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel1.Text = "   ";
-            // 
-            // btEditar
-            // 
-            this.btEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.btEditar.Name = "btEditar";
-            this.btEditar.Size = new System.Drawing.Size(61, 22);
-            this.btEditar.Text = "Editar";
-            this.btEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // toolStripLabel2
             // 
@@ -511,29 +580,11 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel2.Text = "   ";
             // 
-            // btCancelar
-            // 
-            this.btCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(81, 22);
-            this.btCancelar.Text = "Cancelar";
-            this.btCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
-            // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
             this.toolStripLabel3.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel3.Text = "   ";
-            // 
-            // btGuardar
-            // 
-            this.btGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.btGuardar.Name = "btGuardar";
-            this.btGuardar.Size = new System.Drawing.Size(76, 22);
-            this.btGuardar.Text = "Guardar";
-            this.btGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
             // toolStripLabel4
             // 
@@ -541,27 +592,11 @@
             this.toolStripLabel4.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel4.Text = "   ";
             // 
-            // btBuscar
-            // 
-            this.btBuscar.Name = "btBuscar";
-            this.btBuscar.Size = new System.Drawing.Size(51, 22);
-            this.btBuscar.Text = "Buscar";
-            this.btBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
-            // 
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
             this.toolStripLabel5.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel5.Text = "   ";
-            // 
-            // btAnular
-            // 
-            this.btAnular.Name = "btAnular";
-            this.btAnular.Size = new System.Drawing.Size(50, 22);
-            this.btAnular.Text = "Anular";
-            this.btAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btAnular.Click += new System.EventHandler(this.btAnular_Click);
             // 
             // pictureBox1
             // 
@@ -571,93 +606,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // numDevolucion
-            // 
-            this.numDevolucion.Font = new System.Drawing.Font("Arial", 9F);
-            this.numDevolucion.Location = new System.Drawing.Point(497, 74);
-            this.numDevolucion.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numDevolucion.Name = "numDevolucion";
-            this.numDevolucion.Size = new System.Drawing.Size(99, 21);
-            this.numDevolucion.TabIndex = 60;
-            this.numDevolucion.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numDevolucion.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label9.Location = new System.Drawing.Point(605, 76);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 16);
-            this.label9.TabIndex = 61;
-            this.label9.Text = "Dia(s)";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label10.Location = new System.Drawing.Point(605, 128);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 16);
-            this.label10.TabIndex = 63;
-            this.label10.Text = "Dia(s)";
-            // 
-            // numEntrega
-            // 
-            this.numEntrega.Font = new System.Drawing.Font("Arial", 9F);
-            this.numEntrega.Location = new System.Drawing.Point(500, 126);
-            this.numEntrega.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numEntrega.Name = "numEntrega";
-            this.numEntrega.Size = new System.Drawing.Size(99, 21);
-            this.numEntrega.TabIndex = 62;
-            this.numEntrega.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numEntrega.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label11.Location = new System.Drawing.Point(233, 127);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 16);
-            this.label11.TabIndex = 65;
-            this.label11.Text = "Dia(s)";
-            // 
-            // numPlazo
-            // 
-            this.numPlazo.Font = new System.Drawing.Font("Arial", 9F);
-            this.numPlazo.Location = new System.Drawing.Point(125, 125);
-            this.numPlazo.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numPlazo.Name = "numPlazo";
-            this.numPlazo.Size = new System.Drawing.Size(99, 21);
-            this.numPlazo.TabIndex = 64;
-            this.numPlazo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numPlazo.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // btnSalir
             // 
@@ -673,6 +621,62 @@
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
             this.btnSalir.MouseHover += new System.EventHandler(this.btnSalir_MouseHover);
+            // 
+            // btNuevo
+            // 
+            this.btNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.btNuevo.Name = "btNuevo";
+            this.btNuevo.Size = new System.Drawing.Size(68, 22);
+            this.btNuevo.Text = "Nuevo";
+            this.btNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btNuevo.Click += new System.EventHandler(this.btNuevo_Click);
+            // 
+            // btEditar
+            // 
+            this.btEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.btEditar.Name = "btEditar";
+            this.btEditar.Size = new System.Drawing.Size(65, 22);
+            this.btEditar.Text = "Editar";
+            this.btEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
+            // 
+            // btCancelar
+            // 
+            this.btCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.Size = new System.Drawing.Size(85, 22);
+            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            // 
+            // btBuscar
+            // 
+            this.btBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btBuscar.Image")));
+            this.btBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btBuscar.Name = "btBuscar";
+            this.btBuscar.Size = new System.Drawing.Size(71, 22);
+            this.btBuscar.Text = "Buscar";
+            this.btBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
+            // 
+            // btAnular
+            // 
+            this.btAnular.Image = ((System.Drawing.Image)(resources.GetObject("btAnular.Image")));
+            this.btAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btAnular.Name = "btAnular";
+            this.btAnular.Size = new System.Drawing.Size(70, 22);
+            this.btAnular.Text = "Anular";
+            this.btAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btAnular.Click += new System.EventHandler(this.btAnular_Click);
+            // 
+            // btGuardar
+            // 
+            this.btGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.btGuardar.Name = "btGuardar";
+            this.btGuardar.Size = new System.Drawing.Size(80, 22);
+            this.btGuardar.Text = "Guardar";
+            this.btGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
             // ClienteUI
             // 
@@ -697,14 +701,14 @@
             this.panel1.PerformLayout();
             this.pnlCaracteristica.ResumeLayout(false);
             this.pnlCaracteristica.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPlazo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEntrega)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDevolucion)).EndInit();
             this.pnlInformacion.ResumeLayout(false);
             this.pnlInformacion.PerformLayout();
             this.TostMenu.ResumeLayout(false);
             this.TostMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDevolucion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numEntrega)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numPlazo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,12 +722,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStrip TostMenu;
-        private System.Windows.Forms.ToolStripLabel btNuevo;
-        private System.Windows.Forms.ToolStripLabel btEditar;
-        private System.Windows.Forms.ToolStripLabel btCancelar;
-        private System.Windows.Forms.ToolStripLabel btGuardar;
-        private System.Windows.Forms.ToolStripLabel btBuscar;
-        private System.Windows.Forms.ToolStripLabel btAnular;
         private System.Windows.Forms.Panel pnlCaracteristica;
         private System.Windows.Forms.Button btnBuscarNit;
         private System.Windows.Forms.TextBox txtRazonSocial;
@@ -767,5 +765,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown numDevolucion;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ToolStripButton btNuevo;
+        private System.Windows.Forms.ToolStripButton btEditar;
+        private System.Windows.Forms.ToolStripButton btCancelar;
+        private System.Windows.Forms.ToolStripButton btBuscar;
+        private System.Windows.Forms.ToolStripButton btAnular;
+        private System.Windows.Forms.ToolStripButton btGuardar;
     }
 }

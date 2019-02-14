@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Galactus.Util.Mensajes;
 using Galactus.Util.Constantes;
 using Galactus.Entidades.Inventario;
+using Galactus.Util;
+using Galactus.Modelo.Gestion;
 
 namespace Galactus.VistaControlador.Gestion
 {
@@ -73,18 +75,51 @@ namespace Galactus.VistaControlador.Gestion
         {
             if (MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
+                if (validarCampos() == true) {
+                    try
+                    {
+                        cargarObjeto();
+                        ClienteDAL.guardarCliente(cliente);
+                        GeneralC.habilitarBotones(ref TostMenu);
+                        GeneralC.deshabilitarControles(this);
+                        btnSalir.Enabled = true;
+                        btGuardar.Enabled = true;
+                        btCancelar.Enabled = true;
+                        MessageBox.Show(Mensajes.CONFIRMACION_GUARDADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex) {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
         }
-
-        private void btBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btAnular_Click(object sender, EventArgs e)
         {
-
+            if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ClienteDAL.anularCliente(cliente.codigo);
+                GeneralC.deshabilitarBotones(ref TostMenu);
+                GeneralC.limpiarControles(this);
+                GeneralC.deshabilitarControles(this);
+                btBuscar.Enabled = true;
+                btNuevo.Enabled = true;
+            }
+        }
+        private void btBuscar_Click(object sender, EventArgs e)
+        {
+            GeneralC.buscarDevuelveFila(Query.BUSCAR_CLIENTE,
+                                    null,
+                                    cargarPersona,
+                                    Titulos.TITULO_BUSCAR_CLIENTE,
+                                    true);
+        } 
+        private void btnBuscarNit_Click(object sender, EventArgs e)
+        {
+            GeneralC.buscarDevuelveFila(Query.BUSCAR_PERSONA,
+                                      null,
+                                      cargarPersona,
+                                      Titulos.TITULO_BUSCAR_PERSONA,
+                                      true);
         }
 
         #region btnSalir
@@ -103,7 +138,31 @@ namespace Galactus.VistaControlador.Gestion
             btnSalir.BackColor = Control.DefaultBackColor;
         }
         #endregion
+        private void cargarPersona(DataRow dRows) {
 
+        }
+        private void cargarCliente(DataRow dRows) {
+
+        }
+        private Boolean validarCampos() {
+            if (txtNit.Text == string.Empty)
+            {
+                return false;
+            }
+            else {
+                return true;
+            }      
+        }
+        private void cargarObjeto() {
+            cliente.codigoFormaPago =Convert.ToInt32(cbFormaPago.SelectedValue.ToString());
+            cliente.codigoRegimen = Convert.ToInt32(cbFormaPago.SelectedValue.ToString());
+            cliente.codigoUbicacion = Convert.ToInt32(cbFormaPago.SelectedValue.ToString());
+            cliente.diaPlazo = Convert.ToInt32(numPlazo.Value.ToString());
+            cliente.diaEntrega = Convert.ToInt32(numEntrega.Value.ToString());
+            cliente.diaDevolucion = Convert.ToInt32(numDevolucion.Value.ToString());
+            cliente.cuentaPuc = txtCuentaPUC.Text;
+            cliente.cuentaCIIU = txtCuentaCIIU.Text;
+        }
         private void desHabilitadoPermanentemente() {
             txtCuentaCIIU.ReadOnly = true;
             txtCIIU.ReadOnly = true;
@@ -114,11 +173,6 @@ namespace Galactus.VistaControlador.Gestion
            // GeneralC.llenarCombo("", "", "", cbRegimen);
             GeneralC.llenarComboDatosDefinidor(cliente.llenarComboFormaPago(),"Codigo", "Descripcion", cbFormaPago);
             GeneralC.llenarComboDatosDefinidor(cliente.llenarComboUbicacion(),"Codigo", "Descripcion", cbUbicacion);
-        }
-
-        private void btnBuscarNit_Click(object sender, EventArgs e)
-        {
-
-        }
+        }  
     }
 }

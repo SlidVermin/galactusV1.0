@@ -86,6 +86,7 @@
     <Compile Include="Modelo\ConfiguracionGeneral\UsuarioDAL.cs" />
     <Compile Include="Modelo\EquivalenciaDAL.cs" />
     <Compile Include="Modelo\General\BusquedaDAL.cs" />
+    <Compile Include="Modelo\Gestion\ClienteDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
     <Compile Include="Modelo\Inventario\BodegaDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\ProductoDAL.cs" />

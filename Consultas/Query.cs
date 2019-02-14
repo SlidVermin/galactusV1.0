@@ -51,6 +51,11 @@ namespace Galactus
         public const String CARGARPAIS = ConstanteGeneral.ESQUEMA_ADMISION + "uspPaisCargar";
         public const String CARGAR_DEPARTAMENTO = ConstanteGeneral.ESQUEMA_ADMISION + "uspDepartamentoCargar";
         #endregion
-
+        #region Gestion
+        public const string BUSCAR_PERSONA = "";
+        public const string CARGAR_PERSONA = "";
+        public const string BUSCAR_CLIENTE = "";
+        public const string CARGAR_CLIENTE = "";
+        #endregion
     }
 }
