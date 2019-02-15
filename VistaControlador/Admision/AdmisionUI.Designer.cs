@@ -39,41 +39,28 @@
             this.tbtImprimir = new System.Windows.Forms.ToolStripButton();
             this.admisionesPB = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txttipoafiliacion = new System.Windows.Forms.TextBox();
-            this.fechaPacientePicker = new System.Windows.Forms.DateTimePicker();
-            this.label31 = new System.Windows.Forms.Label();
-            this.nombrePacienteText = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.estratoSocialText = new System.Windows.Forms.TextBox();
-            this.buscarHCPacienteBtn = new System.Windows.Forms.Button();
-            this.regimenText = new System.Windows.Forms.TextBox();
-            this.nRegistroText = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.hClinicaText = new System.Windows.Forms.TextBox();
-            this.Departamento = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.EPSNomText = new System.Windows.Forms.TextBox();
-            this.EPSCodText = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.buscarContactoOtrosBtn = new System.Windows.Forms.Button();
-            this.buscarContratoOtrosBtn = new System.Windows.Forms.Button();
-            this.contactoNomOtrosText = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.contratoNomOtrosText = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.contratoCodOtrosText = new System.Windows.Forms.TextBox();
-            this.contactoCodOtrosText = new System.Windows.Forms.TextBox();
-            this.buscarEspOtrosBtn = new System.Windows.Forms.Button();
-            this.especialidadText = new System.Windows.Forms.TextBox();
-            this.triageBox = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.borrarFirmaRespBtn = new System.Windows.Forms.Button();
+            this.firmaRespPB = new System.Windows.Forms.PictureBox();
+            this.tomarFirmaRespBtn = new System.Windows.Forms.Button();
+            this.dirResponsableBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.nombreRespText = new System.Windows.Forms.TextBox();
+            this.telRespText = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.departRespBox = new System.Windows.Forms.ComboBox();
+            this.idResponsableText = new System.Windows.Forms.TextBox();
+            this.paisResponsableBox = new System.Windows.Forms.ComboBox();
+            this.ciudadResBox = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tipoDocResponsableBox = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.copiarAcompañanteBtn = new System.Windows.Forms.Button();
             this.borrarFirmaAcompBtn = new System.Windows.Forms.Button();
@@ -95,38 +82,50 @@
             this.tipoDocAcompañanteBox = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.borrarFirmaRespBtn = new System.Windows.Forms.Button();
-            this.firmaRespPB = new System.Windows.Forms.PictureBox();
-            this.tomarFirmaRespBtn = new System.Windows.Forms.Button();
-            this.dirResponsableBox = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.nombreRespText = new System.Windows.Forms.TextBox();
-            this.telRespText = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.departRespBox = new System.Windows.Forms.ComboBox();
-            this.idResponsableText = new System.Windows.Forms.TextBox();
-            this.paisResponsableBox = new System.Windows.Forms.ComboBox();
-            this.ciudadResBox = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.tipoDocResponsableBox = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.buscarEspOtrosBtn = new System.Windows.Forms.Button();
+            this.especialidadText = new System.Windows.Forms.TextBox();
+            this.triageBox = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.buscarContactoOtrosBtn = new System.Windows.Forms.Button();
+            this.buscarContratoOtrosBtn = new System.Windows.Forms.Button();
+            this.contactoNomOtrosText = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.contratoNomOtrosText = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.contratoCodOtrosText = new System.Windows.Forms.TextBox();
+            this.contactoCodOtrosText = new System.Windows.Forms.TextBox();
+            this.EPSNomText = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txttipoafiliacion = new System.Windows.Forms.TextBox();
+            this.fechaPacientePicker = new System.Windows.Forms.DateTimePicker();
+            this.label31 = new System.Windows.Forms.Label();
+            this.nombrePacienteText = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.estratoSocialText = new System.Windows.Forms.TextBox();
+            this.buscarHCPacienteBtn = new System.Windows.Forms.Button();
+            this.regimenText = new System.Windows.Forms.TextBox();
+            this.nRegistroText = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.hClinicaText = new System.Windows.Forms.TextBox();
+            this.Departamento = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tstMenuPatron.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.admisionesPB)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.firmaAcompañantePB)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firmaRespPB)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.firmaAcompañantePB)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label15
@@ -244,344 +243,228 @@
             this.panel1.Size = new System.Drawing.Size(883, 537);
             this.panel1.TabIndex = 28;
             // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txttipoafiliacion);
-            this.panel2.Controls.Add(this.fechaPacientePicker);
-            this.panel2.Controls.Add(this.label31);
-            this.panel2.Controls.Add(this.nombrePacienteText);
-            this.panel2.Controls.Add(this.label30);
-            this.panel2.Controls.Add(this.estratoSocialText);
-            this.panel2.Controls.Add(this.buscarHCPacienteBtn);
-            this.panel2.Controls.Add(this.regimenText);
-            this.panel2.Controls.Add(this.nRegistroText);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.hClinicaText);
-            this.panel2.Controls.Add(this.Departamento);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(10, 31);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(862, 72);
-            this.panel2.TabIndex = 8;
-            // 
-            // txttipoafiliacion
-            // 
-            this.txttipoafiliacion.Location = new System.Drawing.Point(498, 41);
-            this.txttipoafiliacion.Name = "txttipoafiliacion";
-            this.txttipoafiliacion.ReadOnly = true;
-            this.txttipoafiliacion.Size = new System.Drawing.Size(134, 20);
-            this.txttipoafiliacion.TabIndex = 33;
-            // 
-            // fechaPacientePicker
-            // 
-            this.fechaPacientePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaPacientePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaPacientePicker.Location = new System.Drawing.Point(724, 41);
-            this.fechaPacientePicker.Name = "fechaPacientePicker";
-            this.fechaPacientePicker.Size = new System.Drawing.Size(132, 20);
-            this.fechaPacientePicker.TabIndex = 32;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label31.Location = new System.Drawing.Point(670, 43);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(48, 16);
-            this.label31.TabIndex = 31;
-            this.label31.Text = "Fecha:";
-            // 
-            // nombrePacienteText
-            // 
-            this.nombrePacienteText.Location = new System.Drawing.Point(498, 11);
-            this.nombrePacienteText.Name = "nombrePacienteText";
-            this.nombrePacienteText.ReadOnly = true;
-            this.nombrePacienteText.Size = new System.Drawing.Size(358, 20);
-            this.nombrePacienteText.TabIndex = 30;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label30.Location = new System.Drawing.Point(445, 14);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(57, 16);
-            this.label30.TabIndex = 29;
-            this.label30.Text = "Nombre:";
-            // 
-            // estratoSocialText
-            // 
-            this.estratoSocialText.Location = new System.Drawing.Point(285, 40);
-            this.estratoSocialText.Name = "estratoSocialText";
-            this.estratoSocialText.ReadOnly = true;
-            this.estratoSocialText.Size = new System.Drawing.Size(115, 20);
-            this.estratoSocialText.TabIndex = 28;
-            // 
-            // buscarHCPacienteBtn
-            // 
-            this.buscarHCPacienteBtn.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.buscarHCPacienteBtn.Location = new System.Drawing.Point(406, 5);
-            this.buscarHCPacienteBtn.Name = "buscarHCPacienteBtn";
-            this.buscarHCPacienteBtn.Size = new System.Drawing.Size(26, 24);
-            this.buscarHCPacienteBtn.TabIndex = 27;
-            this.buscarHCPacienteBtn.UseVisualStyleBackColor = true;
-            // 
-            // regimenText
-            // 
-            this.regimenText.Location = new System.Drawing.Point(74, 40);
-            this.regimenText.Name = "regimenText";
-            this.regimenText.ReadOnly = true;
-            this.regimenText.Size = new System.Drawing.Size(113, 20);
-            this.regimenText.TabIndex = 26;
-            // 
-            // nRegistroText
-            // 
-            this.nRegistroText.Location = new System.Drawing.Point(74, 7);
-            this.nRegistroText.Name = "nRegistroText";
-            this.nRegistroText.ReadOnly = true;
-            this.nRegistroText.Size = new System.Drawing.Size(113, 20);
-            this.nRegistroText.TabIndex = 25;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label4.Location = new System.Drawing.Point(416, 47);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 16);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Tipo Afiliación:";
-            // 
-            // hClinicaText
-            // 
-            this.hClinicaText.Location = new System.Drawing.Point(285, 7);
-            this.hClinicaText.Name = "hClinicaText";
-            this.hClinicaText.ReadOnly = true;
-            this.hClinicaText.Size = new System.Drawing.Size(115, 20);
-            this.hClinicaText.TabIndex = 23;
-            // 
-            // Departamento
-            // 
-            this.Departamento.AutoSize = true;
-            this.Departamento.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Departamento.Location = new System.Drawing.Point(209, 44);
-            this.Departamento.Name = "Departamento";
-            this.Departamento.Size = new System.Drawing.Size(92, 16);
-            this.Departamento.TabIndex = 22;
-            this.Departamento.Text = "Estrato social:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label3.Location = new System.Drawing.Point(209, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 16);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "H. Clínica:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label2.Location = new System.Drawing.Point(7, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 16);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Régimen:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label1.Location = new System.Drawing.Point(7, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Atencion";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(11, 6);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(207, 20);
-            this.label33.TabIndex = 48;
-            this.label33.Text = "Informacion del paciente";
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.buscarEspOtrosBtn);
-            this.panel3.Controls.Add(this.especialidadText);
-            this.panel3.Controls.Add(this.triageBox);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.buscarContactoOtrosBtn);
-            this.panel3.Controls.Add(this.buscarContratoOtrosBtn);
-            this.panel3.Controls.Add(this.contactoNomOtrosText);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.contratoNomOtrosText);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.contratoCodOtrosText);
-            this.panel3.Controls.Add(this.contactoCodOtrosText);
-            this.panel3.Controls.Add(this.EPSNomText);
-            this.panel3.Controls.Add(this.EPSCodText);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(10, 134);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(862, 103);
-            this.panel3.TabIndex = 49;
-            // 
-            // EPSNomText
-            // 
-            this.EPSNomText.Location = new System.Drawing.Point(236, 74);
-            this.EPSNomText.Name = "EPSNomText";
-            this.EPSNomText.ReadOnly = true;
-            this.EPSNomText.Size = new System.Drawing.Size(621, 20);
-            this.EPSNomText.TabIndex = 9;
-            // 
-            // EPSCodText
-            // 
-            this.EPSCodText.Location = new System.Drawing.Point(85, 74);
-            this.EPSCodText.Name = "EPSCodText";
-            this.EPSCodText.ReadOnly = true;
-            this.EPSCodText.Size = new System.Drawing.Size(140, 20);
-            this.EPSCodText.TabIndex = 7;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label9.Location = new System.Drawing.Point(8, 74);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(39, 16);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "EPS:";
-            // 
-            // buscarContactoOtrosBtn
-            // 
-            this.buscarContactoOtrosBtn.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.buscarContactoOtrosBtn.Location = new System.Drawing.Point(236, 37);
-            this.buscarContactoOtrosBtn.Name = "buscarContactoOtrosBtn";
-            this.buscarContactoOtrosBtn.Size = new System.Drawing.Size(26, 24);
-            this.buscarContactoOtrosBtn.TabIndex = 22;
-            this.buscarContactoOtrosBtn.UseVisualStyleBackColor = true;
-            // 
-            // buscarContratoOtrosBtn
-            // 
-            this.buscarContratoOtrosBtn.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.buscarContratoOtrosBtn.Location = new System.Drawing.Point(236, 9);
-            this.buscarContratoOtrosBtn.Name = "buscarContratoOtrosBtn";
-            this.buscarContratoOtrosBtn.Size = new System.Drawing.Size(26, 24);
-            this.buscarContratoOtrosBtn.TabIndex = 21;
-            this.buscarContratoOtrosBtn.UseVisualStyleBackColor = true;
-            // 
-            // contactoNomOtrosText
-            // 
-            this.contactoNomOtrosText.Location = new System.Drawing.Point(268, 38);
-            this.contactoNomOtrosText.Name = "contactoNomOtrosText";
-            this.contactoNomOtrosText.Size = new System.Drawing.Size(263, 20);
-            this.contactoNomOtrosText.TabIndex = 20;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label5.Location = new System.Drawing.Point(8, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 16);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Contrato:";
-            // 
-            // contratoNomOtrosText
-            // 
-            this.contratoNomOtrosText.Location = new System.Drawing.Point(268, 9);
-            this.contratoNomOtrosText.Name = "contratoNomOtrosText";
-            this.contratoNomOtrosText.Size = new System.Drawing.Size(263, 20);
-            this.contratoNomOtrosText.TabIndex = 19;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label6.Location = new System.Drawing.Point(8, 45);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 16);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Contacto:";
-            // 
-            // contratoCodOtrosText
-            // 
-            this.contratoCodOtrosText.Location = new System.Drawing.Point(85, 10);
-            this.contratoCodOtrosText.Name = "contratoCodOtrosText";
-            this.contratoCodOtrosText.Size = new System.Drawing.Size(140, 20);
-            this.contratoCodOtrosText.TabIndex = 17;
-            // 
-            // contactoCodOtrosText
-            // 
-            this.contactoCodOtrosText.Location = new System.Drawing.Point(85, 39);
-            this.contactoCodOtrosText.Name = "contactoCodOtrosText";
-            this.contactoCodOtrosText.Size = new System.Drawing.Size(140, 20);
-            this.contactoCodOtrosText.TabIndex = 18;
-            // 
-            // buscarEspOtrosBtn
-            // 
-            this.buscarEspOtrosBtn.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.buscarEspOtrosBtn.Location = new System.Drawing.Point(831, 37);
-            this.buscarEspOtrosBtn.Name = "buscarEspOtrosBtn";
-            this.buscarEspOtrosBtn.Size = new System.Drawing.Size(26, 24);
-            this.buscarEspOtrosBtn.TabIndex = 27;
-            this.buscarEspOtrosBtn.UseVisualStyleBackColor = true;
-            // 
-            // especialidadText
-            // 
-            this.especialidadText.Location = new System.Drawing.Point(637, 39);
-            this.especialidadText.Name = "especialidadText";
-            this.especialidadText.Size = new System.Drawing.Size(188, 20);
-            this.especialidadText.TabIndex = 26;
-            // 
-            // triageBox
-            // 
-            this.triageBox.FormattingEnabled = true;
-            this.triageBox.Location = new System.Drawing.Point(637, 10);
-            this.triageBox.Name = "triageBox";
-            this.triageBox.Size = new System.Drawing.Size(220, 21);
-            this.triageBox.TabIndex = 25;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label11.Location = new System.Drawing.Point(547, 41);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(86, 16);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Especialidad:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label10.Location = new System.Drawing.Point(583, 14);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 16);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Triage:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(11, 109);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 20);
-            this.label14.TabIndex = 50;
-            this.label14.Text = "Otros datos";
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(11, 387);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(207, 20);
+            this.label17.TabIndex = 54;
+            this.label17.Text = "Información responsable";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.borrarFirmaRespBtn);
+            this.panel5.Controls.Add(this.firmaRespPB);
+            this.panel5.Controls.Add(this.tomarFirmaRespBtn);
+            this.panel5.Controls.Add(this.dirResponsableBox);
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.nombreRespText);
+            this.panel5.Controls.Add(this.telRespText);
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.departRespBox);
+            this.panel5.Controls.Add(this.idResponsableText);
+            this.panel5.Controls.Add(this.paisResponsableBox);
+            this.panel5.Controls.Add(this.ciudadResBox);
+            this.panel5.Controls.Add(this.label29);
+            this.panel5.Controls.Add(this.label28);
+            this.panel5.Controls.Add(this.label27);
+            this.panel5.Controls.Add(this.label26);
+            this.panel5.Controls.Add(this.tipoDocResponsableBox);
+            this.panel5.Controls.Add(this.label25);
+            this.panel5.Controls.Add(this.label24);
+            this.panel5.Location = new System.Drawing.Point(10, 414);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(862, 103);
+            this.panel5.TabIndex = 53;
+            // 
+            // borrarFirmaRespBtn
+            // 
+            this.borrarFirmaRespBtn.Image = global::Galactus.Properties.Resources.error__1_;
+            this.borrarFirmaRespBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.borrarFirmaRespBtn.Location = new System.Drawing.Point(586, 62);
+            this.borrarFirmaRespBtn.Name = "borrarFirmaRespBtn";
+            this.borrarFirmaRespBtn.Size = new System.Drawing.Size(93, 33);
+            this.borrarFirmaRespBtn.TabIndex = 46;
+            this.borrarFirmaRespBtn.Text = "Borrar Firma";
+            this.borrarFirmaRespBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.borrarFirmaRespBtn.UseVisualStyleBackColor = true;
+            // 
+            // firmaRespPB
+            // 
+            this.firmaRespPB.BackColor = System.Drawing.Color.White;
+            this.firmaRespPB.Location = new System.Drawing.Point(357, 62);
+            this.firmaRespPB.Name = "firmaRespPB";
+            this.firmaRespPB.Size = new System.Drawing.Size(223, 33);
+            this.firmaRespPB.TabIndex = 45;
+            this.firmaRespPB.TabStop = false;
+            // 
+            // tomarFirmaRespBtn
+            // 
+            this.tomarFirmaRespBtn.Image = global::Galactus.Properties.Resources.checked__1_;
+            this.tomarFirmaRespBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tomarFirmaRespBtn.Location = new System.Drawing.Point(252, 62);
+            this.tomarFirmaRespBtn.Name = "tomarFirmaRespBtn";
+            this.tomarFirmaRespBtn.Size = new System.Drawing.Size(97, 33);
+            this.tomarFirmaRespBtn.TabIndex = 44;
+            this.tomarFirmaRespBtn.Text = "Tomar Firma";
+            this.tomarFirmaRespBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tomarFirmaRespBtn.UseVisualStyleBackColor = true;
+            // 
+            // dirResponsableBox
+            // 
+            this.dirResponsableBox.Location = new System.Drawing.Point(108, 69);
+            this.dirResponsableBox.Name = "dirResponsableBox";
+            this.dirResponsableBox.Size = new System.Drawing.Size(140, 20);
+            this.dirResponsableBox.TabIndex = 43;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label13.Location = new System.Drawing.Point(10, 72);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 16);
+            this.label13.TabIndex = 42;
+            this.label13.Text = "Dirección:";
+            // 
+            // nombreRespText
+            // 
+            this.nombreRespText.Location = new System.Drawing.Point(544, 5);
+            this.nombreRespText.Name = "nombreRespText";
+            this.nombreRespText.Size = new System.Drawing.Size(308, 20);
+            this.nombreRespText.TabIndex = 41;
+            // 
+            // telRespText
+            // 
+            this.telRespText.Location = new System.Drawing.Point(745, 34);
+            this.telRespText.Name = "telRespText";
+            this.telRespText.Size = new System.Drawing.Size(107, 20);
+            this.telRespText.TabIndex = 40;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label12.Location = new System.Drawing.Point(686, 36);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 16);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Teléfono:";
+            // 
+            // departRespBox
+            // 
+            this.departRespBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.departRespBox.FormattingEnabled = true;
+            this.departRespBox.Location = new System.Drawing.Point(351, 36);
+            this.departRespBox.Name = "departRespBox";
+            this.departRespBox.Size = new System.Drawing.Size(126, 21);
+            this.departRespBox.TabIndex = 38;
+            // 
+            // idResponsableText
+            // 
+            this.idResponsableText.Location = new System.Drawing.Point(351, 5);
+            this.idResponsableText.Name = "idResponsableText";
+            this.idResponsableText.Size = new System.Drawing.Size(126, 20);
+            this.idResponsableText.TabIndex = 37;
+            // 
+            // paisResponsableBox
+            // 
+            this.paisResponsableBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.paisResponsableBox.FormattingEnabled = true;
+            this.paisResponsableBox.Location = new System.Drawing.Point(109, 36);
+            this.paisResponsableBox.Name = "paisResponsableBox";
+            this.paisResponsableBox.Size = new System.Drawing.Size(140, 21);
+            this.paisResponsableBox.TabIndex = 36;
+            // 
+            // ciudadResBox
+            // 
+            this.ciudadResBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ciudadResBox.FormattingEnabled = true;
+            this.ciudadResBox.Location = new System.Drawing.Point(544, 36);
+            this.ciudadResBox.Name = "ciudadResBox";
+            this.ciudadResBox.Size = new System.Drawing.Size(135, 21);
+            this.ciudadResBox.TabIndex = 35;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label29.Location = new System.Drawing.Point(491, 39);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(52, 16);
+            this.label29.TabIndex = 34;
+            this.label29.Text = "Ciudad:";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label28.Location = new System.Drawing.Point(491, 8);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(57, 16);
+            this.label28.TabIndex = 33;
+            this.label28.Text = "Nombre:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label27.Location = new System.Drawing.Point(253, 39);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(93, 16);
+            this.label27.TabIndex = 32;
+            this.label27.Text = "Departamento:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label26.Location = new System.Drawing.Point(252, 9);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(87, 16);
+            this.label26.TabIndex = 31;
+            this.label26.Text = "Identificación:";
+            // 
+            // tipoDocResponsableBox
+            // 
+            this.tipoDocResponsableBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipoDocResponsableBox.FormattingEnabled = true;
+            this.tipoDocResponsableBox.Location = new System.Drawing.Point(108, 6);
+            this.tipoDocResponsableBox.Name = "tipoDocResponsableBox";
+            this.tipoDocResponsableBox.Size = new System.Drawing.Size(140, 21);
+            this.tipoDocResponsableBox.TabIndex = 30;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label25.Location = new System.Drawing.Point(10, 39);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(38, 16);
+            this.label25.TabIndex = 29;
+            this.label25.Text = "País:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label24.Location = new System.Drawing.Point(10, 9);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(92, 16);
+            this.label24.TabIndex = 28;
+            this.label24.Text = "T. Documento:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(11, 240);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(218, 20);
+            this.label16.TabIndex = 52;
+            this.label16.Text = "Información acompañante";
             // 
             // panel4
             // 
@@ -799,228 +682,342 @@
             this.label18.TabIndex = 23;
             this.label18.Text = "T. Documento:";
             // 
-            // label16
+            // label14
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(11, 240);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(218, 20);
-            this.label16.TabIndex = 52;
-            this.label16.Text = "Información acompañante";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(11, 109);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(103, 20);
+            this.label14.TabIndex = 50;
+            this.label14.Text = "Otros datos";
             // 
-            // panel5
+            // panel3
             // 
-            this.panel5.Controls.Add(this.borrarFirmaRespBtn);
-            this.panel5.Controls.Add(this.firmaRespPB);
-            this.panel5.Controls.Add(this.tomarFirmaRespBtn);
-            this.panel5.Controls.Add(this.dirResponsableBox);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.nombreRespText);
-            this.panel5.Controls.Add(this.telRespText);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.departRespBox);
-            this.panel5.Controls.Add(this.idResponsableText);
-            this.panel5.Controls.Add(this.paisResponsableBox);
-            this.panel5.Controls.Add(this.ciudadResBox);
-            this.panel5.Controls.Add(this.label29);
-            this.panel5.Controls.Add(this.label28);
-            this.panel5.Controls.Add(this.label27);
-            this.panel5.Controls.Add(this.label26);
-            this.panel5.Controls.Add(this.tipoDocResponsableBox);
-            this.panel5.Controls.Add(this.label25);
-            this.panel5.Controls.Add(this.label24);
-            this.panel5.Location = new System.Drawing.Point(10, 414);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(862, 103);
-            this.panel5.TabIndex = 53;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.buscarEspOtrosBtn);
+            this.panel3.Controls.Add(this.especialidadText);
+            this.panel3.Controls.Add(this.triageBox);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.buscarContactoOtrosBtn);
+            this.panel3.Controls.Add(this.buscarContratoOtrosBtn);
+            this.panel3.Controls.Add(this.contactoNomOtrosText);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.contratoNomOtrosText);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.contratoCodOtrosText);
+            this.panel3.Controls.Add(this.contactoCodOtrosText);
+            this.panel3.Controls.Add(this.EPSNomText);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Location = new System.Drawing.Point(10, 134);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(862, 103);
+            this.panel3.TabIndex = 49;
             // 
-            // borrarFirmaRespBtn
+            // buscarEspOtrosBtn
             // 
-            this.borrarFirmaRespBtn.Image = global::Galactus.Properties.Resources.error__1_;
-            this.borrarFirmaRespBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.borrarFirmaRespBtn.Location = new System.Drawing.Point(586, 62);
-            this.borrarFirmaRespBtn.Name = "borrarFirmaRespBtn";
-            this.borrarFirmaRespBtn.Size = new System.Drawing.Size(93, 33);
-            this.borrarFirmaRespBtn.TabIndex = 46;
-            this.borrarFirmaRespBtn.Text = "Borrar Firma";
-            this.borrarFirmaRespBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.borrarFirmaRespBtn.UseVisualStyleBackColor = true;
+            this.buscarEspOtrosBtn.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.buscarEspOtrosBtn.Location = new System.Drawing.Point(831, 37);
+            this.buscarEspOtrosBtn.Name = "buscarEspOtrosBtn";
+            this.buscarEspOtrosBtn.Size = new System.Drawing.Size(26, 24);
+            this.buscarEspOtrosBtn.TabIndex = 27;
+            this.buscarEspOtrosBtn.UseVisualStyleBackColor = true;
             // 
-            // firmaRespPB
+            // especialidadText
             // 
-            this.firmaRespPB.BackColor = System.Drawing.Color.White;
-            this.firmaRespPB.Location = new System.Drawing.Point(357, 62);
-            this.firmaRespPB.Name = "firmaRespPB";
-            this.firmaRespPB.Size = new System.Drawing.Size(223, 33);
-            this.firmaRespPB.TabIndex = 45;
-            this.firmaRespPB.TabStop = false;
+            this.especialidadText.Location = new System.Drawing.Point(637, 39);
+            this.especialidadText.Name = "especialidadText";
+            this.especialidadText.ReadOnly = true;
+            this.especialidadText.Size = new System.Drawing.Size(188, 20);
+            this.especialidadText.TabIndex = 26;
             // 
-            // tomarFirmaRespBtn
+            // triageBox
             // 
-            this.tomarFirmaRespBtn.Image = global::Galactus.Properties.Resources.checked__1_;
-            this.tomarFirmaRespBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tomarFirmaRespBtn.Location = new System.Drawing.Point(252, 62);
-            this.tomarFirmaRespBtn.Name = "tomarFirmaRespBtn";
-            this.tomarFirmaRespBtn.Size = new System.Drawing.Size(97, 33);
-            this.tomarFirmaRespBtn.TabIndex = 44;
-            this.tomarFirmaRespBtn.Text = "Tomar Firma";
-            this.tomarFirmaRespBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tomarFirmaRespBtn.UseVisualStyleBackColor = true;
+            this.triageBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.triageBox.FormattingEnabled = true;
+            this.triageBox.Location = new System.Drawing.Point(637, 10);
+            this.triageBox.Name = "triageBox";
+            this.triageBox.Size = new System.Drawing.Size(220, 21);
+            this.triageBox.TabIndex = 25;
             // 
-            // dirResponsableBox
+            // label11
             // 
-            this.dirResponsableBox.Location = new System.Drawing.Point(108, 69);
-            this.dirResponsableBox.Name = "dirResponsableBox";
-            this.dirResponsableBox.Size = new System.Drawing.Size(140, 20);
-            this.dirResponsableBox.TabIndex = 43;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label11.Location = new System.Drawing.Point(547, 41);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(86, 16);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Especialidad:";
             // 
-            // label13
+            // label10
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label13.Location = new System.Drawing.Point(10, 72);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(66, 16);
-            this.label13.TabIndex = 42;
-            this.label13.Text = "Dirección:";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label10.Location = new System.Drawing.Point(583, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 16);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Triage:";
             // 
-            // nombreRespText
+            // buscarContactoOtrosBtn
             // 
-            this.nombreRespText.Location = new System.Drawing.Point(544, 5);
-            this.nombreRespText.Name = "nombreRespText";
-            this.nombreRespText.Size = new System.Drawing.Size(308, 20);
-            this.nombreRespText.TabIndex = 41;
+            this.buscarContactoOtrosBtn.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.buscarContactoOtrosBtn.Location = new System.Drawing.Point(236, 37);
+            this.buscarContactoOtrosBtn.Name = "buscarContactoOtrosBtn";
+            this.buscarContactoOtrosBtn.Size = new System.Drawing.Size(26, 24);
+            this.buscarContactoOtrosBtn.TabIndex = 22;
+            this.buscarContactoOtrosBtn.UseVisualStyleBackColor = true;
             // 
-            // telRespText
+            // buscarContratoOtrosBtn
             // 
-            this.telRespText.Location = new System.Drawing.Point(745, 34);
-            this.telRespText.Name = "telRespText";
-            this.telRespText.Size = new System.Drawing.Size(107, 20);
-            this.telRespText.TabIndex = 40;
+            this.buscarContratoOtrosBtn.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.buscarContratoOtrosBtn.Location = new System.Drawing.Point(236, 9);
+            this.buscarContratoOtrosBtn.Name = "buscarContratoOtrosBtn";
+            this.buscarContratoOtrosBtn.Size = new System.Drawing.Size(26, 24);
+            this.buscarContratoOtrosBtn.TabIndex = 21;
+            this.buscarContratoOtrosBtn.UseVisualStyleBackColor = true;
             // 
-            // label12
+            // contactoNomOtrosText
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label12.Location = new System.Drawing.Point(686, 36);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 16);
-            this.label12.TabIndex = 39;
-            this.label12.Text = "Teléfono:";
+            this.contactoNomOtrosText.Location = new System.Drawing.Point(268, 38);
+            this.contactoNomOtrosText.Name = "contactoNomOtrosText";
+            this.contactoNomOtrosText.ReadOnly = true;
+            this.contactoNomOtrosText.Size = new System.Drawing.Size(263, 20);
+            this.contactoNomOtrosText.TabIndex = 20;
             // 
-            // departRespBox
+            // label5
             // 
-            this.departRespBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.departRespBox.FormattingEnabled = true;
-            this.departRespBox.Location = new System.Drawing.Point(351, 36);
-            this.departRespBox.Name = "departRespBox";
-            this.departRespBox.Size = new System.Drawing.Size(126, 21);
-            this.departRespBox.TabIndex = 38;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label5.Location = new System.Drawing.Point(8, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 16);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Contrato:";
             // 
-            // idResponsableText
+            // contratoNomOtrosText
             // 
-            this.idResponsableText.Location = new System.Drawing.Point(351, 5);
-            this.idResponsableText.Name = "idResponsableText";
-            this.idResponsableText.Size = new System.Drawing.Size(126, 20);
-            this.idResponsableText.TabIndex = 37;
+            this.contratoNomOtrosText.Location = new System.Drawing.Point(268, 9);
+            this.contratoNomOtrosText.Name = "contratoNomOtrosText";
+            this.contratoNomOtrosText.ReadOnly = true;
+            this.contratoNomOtrosText.Size = new System.Drawing.Size(263, 20);
+            this.contratoNomOtrosText.TabIndex = 19;
             // 
-            // paisResponsableBox
+            // label6
             // 
-            this.paisResponsableBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.paisResponsableBox.FormattingEnabled = true;
-            this.paisResponsableBox.Location = new System.Drawing.Point(109, 36);
-            this.paisResponsableBox.Name = "paisResponsableBox";
-            this.paisResponsableBox.Size = new System.Drawing.Size(140, 21);
-            this.paisResponsableBox.TabIndex = 36;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label6.Location = new System.Drawing.Point(8, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 16);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Contacto:";
             // 
-            // ciudadResBox
+            // contratoCodOtrosText
             // 
-            this.ciudadResBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ciudadResBox.FormattingEnabled = true;
-            this.ciudadResBox.Location = new System.Drawing.Point(544, 36);
-            this.ciudadResBox.Name = "ciudadResBox";
-            this.ciudadResBox.Size = new System.Drawing.Size(135, 21);
-            this.ciudadResBox.TabIndex = 35;
+            this.contratoCodOtrosText.Location = new System.Drawing.Point(85, 10);
+            this.contratoCodOtrosText.Name = "contratoCodOtrosText";
+            this.contratoCodOtrosText.ReadOnly = true;
+            this.contratoCodOtrosText.Size = new System.Drawing.Size(140, 20);
+            this.contratoCodOtrosText.TabIndex = 17;
             // 
-            // label29
+            // contactoCodOtrosText
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label29.Location = new System.Drawing.Point(491, 39);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(52, 16);
-            this.label29.TabIndex = 34;
-            this.label29.Text = "Ciudad:";
+            this.contactoCodOtrosText.Location = new System.Drawing.Point(85, 39);
+            this.contactoCodOtrosText.Name = "contactoCodOtrosText";
+            this.contactoCodOtrosText.ReadOnly = true;
+            this.contactoCodOtrosText.Size = new System.Drawing.Size(140, 20);
+            this.contactoCodOtrosText.TabIndex = 18;
             // 
-            // label28
+            // EPSNomText
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label28.Location = new System.Drawing.Point(491, 8);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(57, 16);
-            this.label28.TabIndex = 33;
-            this.label28.Text = "Nombre:";
+            this.EPSNomText.Location = new System.Drawing.Point(85, 74);
+            this.EPSNomText.Name = "EPSNomText";
+            this.EPSNomText.ReadOnly = true;
+            this.EPSNomText.Size = new System.Drawing.Size(772, 20);
+            this.EPSNomText.TabIndex = 9;
             // 
-            // label27
+            // label9
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label27.Location = new System.Drawing.Point(253, 39);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(93, 16);
-            this.label27.TabIndex = 32;
-            this.label27.Text = "Departamento:";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label9.Location = new System.Drawing.Point(8, 74);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 16);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "EPS:";
             // 
-            // label26
+            // label33
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label26.Location = new System.Drawing.Point(252, 9);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(87, 16);
-            this.label26.TabIndex = 31;
-            this.label26.Text = "Identificación:";
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(11, 6);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(207, 20);
+            this.label33.TabIndex = 48;
+            this.label33.Text = "Informacion del paciente";
             // 
-            // tipoDocResponsableBox
+            // panel2
             // 
-            this.tipoDocResponsableBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tipoDocResponsableBox.FormattingEnabled = true;
-            this.tipoDocResponsableBox.Location = new System.Drawing.Point(108, 6);
-            this.tipoDocResponsableBox.Name = "tipoDocResponsableBox";
-            this.tipoDocResponsableBox.Size = new System.Drawing.Size(140, 21);
-            this.tipoDocResponsableBox.TabIndex = 30;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txttipoafiliacion);
+            this.panel2.Controls.Add(this.fechaPacientePicker);
+            this.panel2.Controls.Add(this.label31);
+            this.panel2.Controls.Add(this.nombrePacienteText);
+            this.panel2.Controls.Add(this.label30);
+            this.panel2.Controls.Add(this.estratoSocialText);
+            this.panel2.Controls.Add(this.buscarHCPacienteBtn);
+            this.panel2.Controls.Add(this.regimenText);
+            this.panel2.Controls.Add(this.nRegistroText);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.hClinicaText);
+            this.panel2.Controls.Add(this.Departamento);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(10, 31);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(862, 72);
+            this.panel2.TabIndex = 8;
             // 
-            // label25
+            // txttipoafiliacion
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label25.Location = new System.Drawing.Point(10, 39);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(38, 16);
-            this.label25.TabIndex = 29;
-            this.label25.Text = "País:";
+            this.txttipoafiliacion.Location = new System.Drawing.Point(530, 41);
+            this.txttipoafiliacion.Name = "txttipoafiliacion";
+            this.txttipoafiliacion.ReadOnly = true;
+            this.txttipoafiliacion.Size = new System.Drawing.Size(134, 20);
+            this.txttipoafiliacion.TabIndex = 33;
             // 
-            // label24
+            // fechaPacientePicker
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label24.Location = new System.Drawing.Point(10, 9);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(92, 16);
-            this.label24.TabIndex = 28;
-            this.label24.Text = "T. Documento:";
+            this.fechaPacientePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechaPacientePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fechaPacientePicker.Location = new System.Drawing.Point(724, 41);
+            this.fechaPacientePicker.Name = "fechaPacientePicker";
+            this.fechaPacientePicker.Size = new System.Drawing.Size(132, 20);
+            this.fechaPacientePicker.TabIndex = 32;
             // 
-            // label17
+            // label31
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(11, 387);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(207, 20);
-            this.label17.TabIndex = 54;
-            this.label17.Text = "Información responsable";
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label31.Location = new System.Drawing.Point(670, 43);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(48, 16);
+            this.label31.TabIndex = 31;
+            this.label31.Text = "Fecha:";
+            // 
+            // nombrePacienteText
+            // 
+            this.nombrePacienteText.Location = new System.Drawing.Point(508, 8);
+            this.nombrePacienteText.Name = "nombrePacienteText";
+            this.nombrePacienteText.ReadOnly = true;
+            this.nombrePacienteText.Size = new System.Drawing.Size(348, 20);
+            this.nombrePacienteText.TabIndex = 30;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label30.Location = new System.Drawing.Point(445, 10);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(57, 16);
+            this.label30.TabIndex = 29;
+            this.label30.Text = "Nombre:";
+            // 
+            // estratoSocialText
+            // 
+            this.estratoSocialText.Location = new System.Drawing.Point(301, 41);
+            this.estratoSocialText.Name = "estratoSocialText";
+            this.estratoSocialText.ReadOnly = true;
+            this.estratoSocialText.Size = new System.Drawing.Size(115, 20);
+            this.estratoSocialText.TabIndex = 28;
+            // 
+            // buscarHCPacienteBtn
+            // 
+            this.buscarHCPacienteBtn.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.buscarHCPacienteBtn.Location = new System.Drawing.Point(406, 5);
+            this.buscarHCPacienteBtn.Name = "buscarHCPacienteBtn";
+            this.buscarHCPacienteBtn.Size = new System.Drawing.Size(26, 24);
+            this.buscarHCPacienteBtn.TabIndex = 27;
+            this.buscarHCPacienteBtn.UseVisualStyleBackColor = true;
+            this.buscarHCPacienteBtn.Click += new System.EventHandler(this.buscarHCPacienteBtn_Click_1);
+            // 
+            // regimenText
+            // 
+            this.regimenText.Location = new System.Drawing.Point(74, 40);
+            this.regimenText.Name = "regimenText";
+            this.regimenText.ReadOnly = true;
+            this.regimenText.Size = new System.Drawing.Size(113, 20);
+            this.regimenText.TabIndex = 26;
+            // 
+            // nRegistroText
+            // 
+            this.nRegistroText.Location = new System.Drawing.Point(74, 7);
+            this.nRegistroText.Name = "nRegistroText";
+            this.nRegistroText.ReadOnly = true;
+            this.nRegistroText.Size = new System.Drawing.Size(113, 20);
+            this.nRegistroText.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label4.Location = new System.Drawing.Point(430, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 16);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Tipo Afiliación:";
+            // 
+            // hClinicaText
+            // 
+            this.hClinicaText.Location = new System.Drawing.Point(285, 7);
+            this.hClinicaText.Name = "hClinicaText";
+            this.hClinicaText.ReadOnly = true;
+            this.hClinicaText.Size = new System.Drawing.Size(115, 20);
+            this.hClinicaText.TabIndex = 23;
+            // 
+            // Departamento
+            // 
+            this.Departamento.AutoSize = true;
+            this.Departamento.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Departamento.Location = new System.Drawing.Point(209, 44);
+            this.Departamento.Name = "Departamento";
+            this.Departamento.Size = new System.Drawing.Size(92, 16);
+            this.Departamento.TabIndex = 22;
+            this.Departamento.Text = "Estrato social:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label3.Location = new System.Drawing.Point(209, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 16);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "H. Clínica:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label2.Location = new System.Drawing.Point(7, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 16);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Régimen:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label1.Location = new System.Drawing.Point(7, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 16);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Atencion";
             // 
             // btnSalir
             // 
@@ -1047,6 +1044,7 @@
             this.Controls.Add(this.label15);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdmisionUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admision";
             this.Load += new System.EventHandler(this.AdmisionUI_Load);
             this.tstMenuPatron.ResumeLayout(false);
@@ -1054,16 +1052,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.admisionesPB)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.firmaAcompañantePB)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.firmaRespPB)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.firmaAcompañantePB)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1157,7 +1155,6 @@
         private System.Windows.Forms.TextBox contratoCodOtrosText;
         private System.Windows.Forms.TextBox contactoCodOtrosText;
         private System.Windows.Forms.TextBox EPSNomText;
-        private System.Windows.Forms.TextBox EPSCodText;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSalir;
     }

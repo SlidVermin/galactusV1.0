@@ -51,26 +51,16 @@ namespace Galactus.VistaControlador.Admision
 
         }
 
-        private void buscarHCPacienteBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                List<string> parametros = new List<string>();
-
-                GeneralC.buscarDevuelveFila(Query.CARGAR_EPS,
-                                                   parametros,
-                                                   new GeneralC.cargarInfoFila(cargarRegistro),
-                                                   Mensajes.BUSQUEDA_EPS, true);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
         public void cargarRegistro(DataRow fila)
         {
             admision.idPaciente = fila.Field<int>("IdPaciente");
             admision.cargarPaciente();
+            txttipoafiliacion.Text = admision.tipoAfiliacion;
+            hClinicaText.Text = admision.identificacion;
+            estratoSocialText.Text = admision.estratoSocial;
+            regimenText.Text = admision.regimen;
+            nombrePacienteText.Text = admision.nombrePaciente;
+            EPSNomText.Text = admision.nombreEPS;
         }
 
         private void AdmisionUI_Load(object sender, EventArgs e)
@@ -181,5 +171,23 @@ namespace Galactus.VistaControlador.Admision
             }
         }
         #endregion
+
+        private void buscarHCPacienteBtn_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                List<string> parametros = new List<string>();
+
+                GeneralC.buscarDevuelveFila(Query.ADMISION_PACIENTE_BUSCAR,
+                                                   parametros,
+                                                   new GeneralC.cargarInfoFila(cargarRegistro),
+                                                   Mensajes.BUSQUEDA_EPS, true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+       
     }
 }

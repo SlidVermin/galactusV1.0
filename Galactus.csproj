@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Admision\Admisiones.cs" />
     <Compile Include="Entidades\Admision\Configuracion\ManualServicio.cs" />
     <Compile Include="Entidades\Admision\manualTarifarioServicio.cs" />
     <Compile Include="Entidades\Admision\Paciente.cs" />
