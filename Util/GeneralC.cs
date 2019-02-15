@@ -49,6 +49,51 @@ namespace Galactus
             }
 
         }
+        public static void validarComboUbicacion(ComboBox cbUbicacion,
+                                                ComboBox cbDeshabilitar)
+        {
+            if (cbUbicacion.SelectedIndex > 0)
+            {
+                cbDeshabilitar.Enabled = true;
+            }
+            else
+            {
+                cbDeshabilitar.Enabled = false;
+            }
+        }
+
+        public static void calcularEdad(DateTime fechaNacimiento,
+                                     ref string campoFecha)
+        {
+
+            campoFecha = Convert.ToString(DateTime.Today.AddTicks(-fechaNacimiento.Ticks).Year - 1);
+        }
+        public static void cargarUbicacionGeografica(DataTable dtUbicaciones,
+                                                   String idMunicipio,
+                                                 ref ComboBox comboPais,
+                                                 ref ComboBox comboDepartamento,
+                                                 ref ComboBox comboMunicipio
+                                                   )
+        {
+
+            try
+            {
+                DataRow[] filaPais, filaDepartamento, filaMunicipio;
+                filaMunicipio = dtUbicaciones.Select("Código=" + idMunicipio + "");
+
+
+                filaDepartamento = dtUbicaciones.Select("Código=" + filaMunicipio[0]["idPadre"] + "");
+
+                filaPais = dtUbicaciones.Select("Código=" + filaDepartamento[0]["idPadre"] + "");
+                comboPais.SelectedValue = Convert.ToString(filaPais[0]["Código"]);
+                comboDepartamento.SelectedValue = Convert.ToString(filaDepartamento[0]["Código"]);
+                comboMunicipio.SelectedValue = idMunicipio;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public static void llenarComboDatosDefinidor(DataTable dt,
                                                      string valueMember,
                                                      string displayMember,

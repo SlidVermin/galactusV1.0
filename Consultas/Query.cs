@@ -51,6 +51,21 @@ namespace Galactus
         #region UBICACION
         public const String CARGARPAIS = ConstanteGeneral.ESQUEMA_ADMISION + "uspPaisCargar";
         public const String CARGAR_DEPARTAMENTO = ConstanteGeneral.ESQUEMA_ADMISION + "uspDepartamentoCargar";
+        public const String CARGAR_MUNICIPIO = ConstanteGeneral.ESQUEMA_ADMISION + "uspMunicipioCargar";
+        public const String CARGAR_TIPO_DOCUMENTOS = ConstanteGeneral.ESQUEMA_ADMISION + "uspTipoDocumentosBuscar";
+        public const String CARGAR_GENERO = ConstanteGeneral.ESQUEMA_ADMISION + "uspGeneroBuscar";
+        public const String CARGAR_ESTADO_CIVIL = ConstanteGeneral.ESQUEMA_ADMISION + "uspEstadoCivilBuscar";
+        public const String CARGAR_REGIMEN = ConstanteGeneral.ESQUEMA_ADMISION + "uspRegimenCargar";
+        public const String CARGAR_AFILIACION = ConstanteGeneral.ESQUEMA_ADMISION + "uspAfiliacionCargar";
+        public const String CARGAR_ZONA = ConstanteGeneral.ESQUEMA_ADMISION + "uspZonaCargar";
+        public const String CARGAR_ESTRATO_SOCIAL = ConstanteGeneral.ESQUEMA_ADMISION + "uspEstratoSocialCargar";
+        public const String CARGAR_EPS = ConstanteGeneral.ESQUEMA_ADMISION + "uspEpsBuscar";
+        public const String PACIENTE_CREAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspPacienteCrear";
+        public const String PACIENTE_BUSCAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspPacienteBuscar";
+        public const String PACIENTE_CARGAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspPacienteCargar";
+        public const String UBICACION_GEOGRAFICA = ConstanteGeneral.ESQUEMA_ADMISION + "uspUbicacionGeografica";
+        public const String PACIENTE_ANULAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspPacienteAnular";
+        public const string ADMISION_PACIENTE_CARGAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionPacienteCargar";
         #endregion
         #region Gestion
         public const string BUSCAR_TERCERO = ConstanteGeneral.ESQUEMA_TERCERO + "[uspTerceroBuscar]";

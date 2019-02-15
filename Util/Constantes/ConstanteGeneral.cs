@@ -21,6 +21,13 @@ namespace Galactus.Util.Constantes
         public const int METODO_SOAT = 2;
         public const int METODO_ISS = 3;
 
+        public const String VALUEMEMBER = "Código";
+        public const String DISPLAYMEMBER = "Descripcion";
+        public const String VALUE_VALOR = "IdDescripcionValor";
+        public const String DISPLAY_VALOR = "Valor";
+        public const String PREDETERMINADA = "-1";
+        
+
         public const String VALUEMEMBER_PAIS = "IdPais";
         public const String DISPLAYMEMBER_PAIS = "Descripcion";
 

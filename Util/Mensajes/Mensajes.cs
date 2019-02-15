@@ -26,6 +26,8 @@ namespace Galactus.Util.Mensajes
         public const string BUSQUEDA_UNIDAD_MEDIDA = "Busqueda de Unidades de Medida";
         public const string BUSQUEDA_ROL = "Busqueda de Roles";
         public const string BUSQUEDA_USUARIOS = "Busqueda de Usuarios";
+        public const string BUSQUEDA_EPS = "Busqueda eps";
+        public const string BUSQUEDA_PACIENTE = "Busqueda Paciente";
         #endregion
     }
 }
