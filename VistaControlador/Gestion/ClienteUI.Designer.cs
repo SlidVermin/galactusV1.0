@@ -71,19 +71,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TostMenu = new System.Windows.Forms.ToolStrip();
+            this.btNuevo = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.btEditar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.btCancelar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.btGuardar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.btBuscar = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.btAnular = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btEditar = new System.Windows.Forms.ToolStripButton();
-            this.btCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btBuscar = new System.Windows.Forms.ToolStripButton();
-            this.btAnular = new System.Windows.Forms.ToolStripButton();
-            this.btGuardar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.pnlCaracteristica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPlazo)).BeginInit();
@@ -568,11 +568,29 @@
             this.TostMenu.TabIndex = 3;
             this.TostMenu.Text = "toolStrip1";
             // 
+            // btNuevo
+            // 
+            this.btNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.btNuevo.Name = "btNuevo";
+            this.btNuevo.Size = new System.Drawing.Size(68, 22);
+            this.btNuevo.Text = "Nuevo";
+            this.btNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btNuevo.Click += new System.EventHandler(this.btNuevo_Click);
+            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel1.Text = "   ";
+            // 
+            // btEditar
+            // 
+            this.btEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.btEditar.Name = "btEditar";
+            this.btEditar.Size = new System.Drawing.Size(65, 22);
+            this.btEditar.Text = "Editar";
+            this.btEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // toolStripLabel2
             // 
@@ -580,11 +598,29 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel2.Text = "   ";
             // 
+            // btCancelar
+            // 
+            this.btCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.btCancelar.Name = "btCancelar";
+            this.btCancelar.Size = new System.Drawing.Size(85, 22);
+            this.btCancelar.Text = "Cancelar";
+            this.btCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
+            // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
             this.toolStripLabel3.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel3.Text = "   ";
+            // 
+            // btGuardar
+            // 
+            this.btGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.btGuardar.Name = "btGuardar";
+            this.btGuardar.Size = new System.Drawing.Size(80, 22);
+            this.btGuardar.Text = "Guardar";
+            this.btGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
             // toolStripLabel4
             // 
@@ -592,11 +628,31 @@
             this.toolStripLabel4.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel4.Text = "   ";
             // 
+            // btBuscar
+            // 
+            this.btBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.btBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btBuscar.Name = "btBuscar";
+            this.btBuscar.Size = new System.Drawing.Size(71, 22);
+            this.btBuscar.Text = "Buscar";
+            this.btBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
+            // 
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
             this.toolStripLabel5.Size = new System.Drawing.Size(20, 22);
             this.toolStripLabel5.Text = "   ";
+            // 
+            // btAnular
+            // 
+            this.btAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.btAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btAnular.Name = "btAnular";
+            this.btAnular.Size = new System.Drawing.Size(70, 22);
+            this.btAnular.Text = "Anular";
+            this.btAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btAnular.Click += new System.EventHandler(this.btAnular_Click);
             // 
             // pictureBox1
             // 
@@ -621,62 +677,6 @@
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
             this.btnSalir.MouseHover += new System.EventHandler(this.btnSalir_MouseHover);
-            // 
-            // btNuevo
-            // 
-            this.btNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.btNuevo.Name = "btNuevo";
-            this.btNuevo.Size = new System.Drawing.Size(68, 22);
-            this.btNuevo.Text = "Nuevo";
-            this.btNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btNuevo.Click += new System.EventHandler(this.btNuevo_Click);
-            // 
-            // btEditar
-            // 
-            this.btEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.btEditar.Name = "btEditar";
-            this.btEditar.Size = new System.Drawing.Size(65, 22);
-            this.btEditar.Text = "Editar";
-            this.btEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
-            // 
-            // btCancelar
-            // 
-            this.btCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(85, 22);
-            this.btCancelar.Text = "Cancelar";
-            this.btCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
-            // 
-            // btBuscar
-            // 
-            this.btBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btBuscar.Image")));
-            this.btBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btBuscar.Name = "btBuscar";
-            this.btBuscar.Size = new System.Drawing.Size(71, 22);
-            this.btBuscar.Text = "Buscar";
-            this.btBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
-            // 
-            // btAnular
-            // 
-            this.btAnular.Image = ((System.Drawing.Image)(resources.GetObject("btAnular.Image")));
-            this.btAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btAnular.Name = "btAnular";
-            this.btAnular.Size = new System.Drawing.Size(70, 22);
-            this.btAnular.Text = "Anular";
-            this.btAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btAnular.Click += new System.EventHandler(this.btAnular_Click);
-            // 
-            // btGuardar
-            // 
-            this.btGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.btGuardar.Name = "btGuardar";
-            this.btGuardar.Size = new System.Drawing.Size(80, 22);
-            this.btGuardar.Text = "Guardar";
-            this.btGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
             // ClienteUI
             // 

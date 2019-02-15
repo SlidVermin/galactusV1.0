@@ -41,6 +41,7 @@ namespace Galactus.VistaControlador.Gestion
             GeneralC.deshabilitarControles(pnlInformacion);
             desHabilitadoPermanentemente();
             GeneralC.limpiarControles(this);
+            cliente.codigo = 0;
             btnBuscarNit.Enabled = true;
             btGuardar.Enabled = true;
             btCancelar.Enabled = true;
@@ -65,6 +66,7 @@ namespace Galactus.VistaControlador.Gestion
                 GeneralC.deshabilitarBotones(ref TostMenu);
                 GeneralC.deshabilitarControles(this);
                 GeneralC.limpiarControles(this);
+                cliente.codigo = 0;
                 btNuevo.Enabled = true;
                 btBuscar.Enabled = true;
                 btnSalir.Enabled = true;
@@ -73,9 +75,9 @@ namespace Galactus.VistaControlador.Gestion
 
         private void btGuardar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (validarCampos() == true) 
             {
-                if (validarCampos() == true) {
+                if (MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) 
                     try
                     {
                         crearNuevoCliente();
@@ -92,7 +94,7 @@ namespace Galactus.VistaControlador.Gestion
                     }
                 }
             }
-        }
+        
         private void btAnular_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -133,16 +135,19 @@ namespace Galactus.VistaControlador.Gestion
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Close();
+            if (MessageBox.Show(Mensajes.SALIR_FORM,Mensajes.NOMBRE_SOFT,MessageBoxButtons.YesNo,MessageBoxIcon.Information)== DialogResult.Yes) {          
+                Close();
+            }
         }
         private void btnSalir_MouseLeave(object sender, EventArgs e)
         {
             btnSalir.BackColor = Control.DefaultBackColor;
         }
         #endregion
+
         private void cargarTercero(DataRow dRows) {
             cliente.codigo = dRows.Field<Int32>("codigo");
-            txtNit.Text = dRows.Field<string>("Nit").ToString();
+            txtNit.Text = dRows.Field<string>("Nit");
             txtRazonSocial.Text = dRows.Field<string>("RazonSocial");
             txtDireccion.Text = dRows.Field<string>("Direccion");
             txtTelefono.Text = dRows.Field<string>("Telefono");
@@ -154,6 +159,21 @@ namespace Galactus.VistaControlador.Gestion
         private Boolean validarCampos() {
             if (txtNit.Text == string.Empty)
             {
+                MessageBox.Show("¡ Favor seleccionar el tercero !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+            else if (cbRegimen.SelectedIndex == 0) {
+                MessageBox.Show("¡ Favor seleccionar el regimen !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+            else if (cbFormaPago.SelectedIndex == 0)
+            {
+                MessageBox.Show("¡ Favor seleccionar la forma de pago !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+            else if (cbUbicacion.SelectedIndex == 0)
+            {
+                MessageBox.Show("¡ Favor seleccionar la ubicación !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
             else {
@@ -161,14 +181,14 @@ namespace Galactus.VistaControlador.Gestion
             }      
         }
         private void crearNuevoCliente() {
-            cliente.codigoFormaPago =Convert.ToInt32(cbFormaPago.SelectedValue.ToString());
-            cliente.codigoRegimen = Convert.ToInt32(cbFormaPago.SelectedValue.ToString());
-            cliente.codigoUbicacion = Convert.ToInt32(cbFormaPago.SelectedValue.ToString());
-            cliente.diaPlazo = Convert.ToInt32(numPlazo.Value.ToString());
-            cliente.diaEntrega = Convert.ToInt32(numEntrega.Value.ToString());
-            cliente.diaDevolucion = Convert.ToInt32(numDevolucion.Value.ToString());
-            cliente.cuentaPuc = txtCuentaPUC.Text;
-            cliente.cuentaCIIU = txtCuentaCIIU.Text;
+            cliente.codigoFormaPago =Convert.ToInt32(cbFormaPago.SelectedValue);
+            cliente.codigoRegimen = Convert.ToInt32(cbFormaPago.SelectedValue);
+            cliente.codigoUbicacion = Convert.ToInt32(cbFormaPago.SelectedValue);
+            cliente.diaPlazo = Convert.ToInt32(numPlazo.Value);
+            cliente.diaEntrega = Convert.ToInt32(numEntrega.Value);
+            cliente.diaDevolucion = Convert.ToInt32(numDevolucion.Value);
+            cliente.cuentaPuc = string.IsNullOrEmpty(txtCuentaPUC.Text) ? null : txtCuentaPUC.Text;
+            cliente.cuentaCIIU = string.IsNullOrEmpty(txtCuentaCIIU.Text) ? null : txtCuentaCIIU.Text;
         }
         private void desHabilitadoPermanentemente() {
             txtCuentaCIIU.ReadOnly = true;
