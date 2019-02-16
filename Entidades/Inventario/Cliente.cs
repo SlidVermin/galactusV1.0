@@ -10,7 +10,7 @@ namespace Galactus.Entidades.Inventario
     class Cliente
     {
         private DataTable dt = new DataTable();
-        public int codigo {get;set;}
+        public string codigo {get;set;}
         public int codigoTercero { get; set; }
         public int codigoRegimen { get; set; }
         public int codigoUbicacion { get; set; }

@@ -41,7 +41,7 @@ namespace Galactus.VistaControlador.Gestion
             GeneralC.deshabilitarControles(pnlInformacion);
             desHabilitadoPermanentemente();
             GeneralC.limpiarControles(this);
-            cliente.codigo = 0;
+            cliente.codigo = null;
             btnBuscarNit.Enabled = true;
             btGuardar.Enabled = true;
             btCancelar.Enabled = true;
@@ -66,7 +66,7 @@ namespace Galactus.VistaControlador.Gestion
                 GeneralC.deshabilitarBotones(ref TostMenu);
                 GeneralC.deshabilitarControles(this);
                 GeneralC.limpiarControles(this);
-                cliente.codigo = 0;
+                cliente.codigo = null;
                 btNuevo.Enabled = true;
                 btBuscar.Enabled = true;
                 btnSalir.Enabled = true;
@@ -85,12 +85,12 @@ namespace Galactus.VistaControlador.Gestion
                         GeneralC.habilitarBotones(ref TostMenu);
                         GeneralC.deshabilitarControles(this);
                         btnSalir.Enabled = true;
-                        btGuardar.Enabled = true;
-                        btCancelar.Enabled = true;
+                        btGuardar.Enabled = false;
+                        btCancelar.Enabled = false;
                         MessageBox.Show(Mensajes.CONFIRMACION_GUARDADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex) {
-                        MessageBox.Show(ex.Message);
+                        MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -109,11 +109,16 @@ namespace Galactus.VistaControlador.Gestion
         }
         private void btBuscar_Click(object sender, EventArgs e)
         {
+            List<string> parametro = new List<string>();
+            parametro.Add(string.Empty);
+
             GeneralC.buscarDevuelveFila(Query.BUSCAR_CLIENTE,
-                                    null,
-                                    cargarCliente,
+                                    parametro,
+                                    new GeneralC.cargarInfoFila(cargarCliente),
                                     Titulos.TITULO_BUSCAR_CLIENTE,
-                                    true);
+                                    true, 
+                                    listaParametroOculto());
+
         } 
         private void btnBuscarNit_Click(object sender, EventArgs e)
         {
@@ -146,7 +151,7 @@ namespace Galactus.VistaControlador.Gestion
         #endregion
 
         private void cargarTercero(DataRow dRows) {
-            cliente.codigo = dRows.Field<Int32>("codigo");
+            cliente.codigoTercero = dRows.Field<int>("codigo");
             txtNit.Text = dRows.Field<string>("Nit");
             txtRazonSocial.Text = dRows.Field<string>("RazonSocial");
             txtDireccion.Text = dRows.Field<string>("Direccion");
@@ -154,7 +159,26 @@ namespace Galactus.VistaControlador.Gestion
             txtCelular.Text = dRows.Field<string>("Celular");
         }
         private void cargarCliente(DataRow dRows) {
-
+            try
+            {
+                cliente.codigo = dRows.Field<int>("idCliente").ToString();
+                cbRegimen.SelectedValue = dRows.Field<int>("IdRegimen").ToString();
+                cbFormaPago.SelectedValue = dRows.Field<int>("IdFormaPago").ToString();
+                cbUbicacion.SelectedValue = dRows.Field<int>("idUbicacion").ToString();
+                numEntrega.Value = dRows.Field<int>("Dia Entrega");
+                numPlazo.Value = dRows.Field<int>("Dia Plazo");
+                numDevolucion.Value = dRows.Field<int>("Dia Devolución");
+                txtCuentaPUC.Text = dRows.Field<string>("cuentaPuc");
+                txtPUC.Text = dRows.Field<string>("NombrePuc");
+                txtCuentaCIIU.Text = dRows.Field<string>("cuentaCIIU");
+                txtCIIU.Text = dRows.Field<string>("NombreCIIU");
+                cargarTercero(dRows);
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message,Mensajes.NOMBRE_SOFT,MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            btnSalir.Enabled = true;
+            GeneralC.posBuscar(this, TostMenu, btNuevo, btEditar, btBuscar, btCancelar);
         }
         private Boolean validarCampos() {
             if (txtNit.Text == string.Empty)
@@ -182,8 +206,8 @@ namespace Galactus.VistaControlador.Gestion
         }
         private void crearNuevoCliente() {
             cliente.codigoFormaPago =Convert.ToInt32(cbFormaPago.SelectedValue);
-            cliente.codigoRegimen = Convert.ToInt32(cbFormaPago.SelectedValue);
-            cliente.codigoUbicacion = Convert.ToInt32(cbFormaPago.SelectedValue);
+            cliente.codigoRegimen = Convert.ToInt32(cbRegimen.SelectedValue);
+            cliente.codigoUbicacion = Convert.ToInt32(cbUbicacion.SelectedValue);
             cliente.diaPlazo = Convert.ToInt32(numPlazo.Value);
             cliente.diaEntrega = Convert.ToInt32(numEntrega.Value);
             cliente.diaDevolucion = Convert.ToInt32(numDevolucion.Value);
@@ -204,6 +228,19 @@ namespace Galactus.VistaControlador.Gestion
             GeneralC.llenarCombo(Query.PARAMETROS_CONSULTAR_DESCRIPCION + cadena, "Codigo", "Descripcion", cbRegimen);
             GeneralC.llenarComboDatosDefinidor(cliente.llenarComboFormaPago(),"Codigo", "Descripcion", cbFormaPago);
             GeneralC.llenarComboDatosDefinidor(cliente.llenarComboUbicacion(),"Codigo", "Descripcion", cbUbicacion);
-        }  
+        }
+        private List<string> listaParametroOculto() {
+            List<string>paramtro= new List<string>();
+            paramtro.Add("idCliente");
+            paramtro.Add("codigo");
+            paramtro.Add("idRegimen");
+			paramtro.Add("idFormaPago");
+            paramtro.Add("idUbicacion");
+            paramtro.Add("cuentaPuc");
+            paramtro.Add("cuentaCIIU");
+            paramtro.Add("NombrePuc");
+            paramtro.Add("NombreCIIU");
+            return paramtro;
+        }
     }
 }
