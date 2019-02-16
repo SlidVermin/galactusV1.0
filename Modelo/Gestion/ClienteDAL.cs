@@ -44,7 +44,22 @@ namespace Galactus.Modelo.Gestion
 
         public static Boolean anularCliente(string codigo) {
             Boolean resultado=false;
-
+            try
+            {
+                using (SqlCommand sentencia = new SqlCommand())
+                {
+                    sentencia.Connection = PrincipalUI.Cnxion;
+                    sentencia.CommandType = System.Data.CommandType.StoredProcedure;
+                    sentencia.CommandText = Query.ANULAR_CLIENTE;
+                    sentencia.Parameters.Add(new SqlParameter("@IdCliente", SqlDbType.Int)).Value = codigo;
+                    sentencia.ExecuteNonQuery();
+                    resultado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             return resultado;
         } 
     }

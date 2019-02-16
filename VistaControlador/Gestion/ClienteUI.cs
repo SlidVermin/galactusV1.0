@@ -99,12 +99,22 @@ namespace Galactus.VistaControlador.Gestion
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                ClienteDAL.anularCliente(cliente.codigo);
-                GeneralC.deshabilitarBotones(ref TostMenu);
-                GeneralC.limpiarControles(this);
-                GeneralC.deshabilitarControles(this);
-                btBuscar.Enabled = true;
-                btNuevo.Enabled = true;
+                try {
+
+                if(ClienteDAL.anularCliente(cliente.codigo) == true) { 
+                   GeneralC.deshabilitarBotones(ref TostMenu);
+                   GeneralC.limpiarControles(this);
+                   GeneralC.deshabilitarControles(this);
+                   btnSalir.Enabled = true;
+                   btBuscar.Enabled = true;
+                   btNuevo.Enabled = true;
+                   MessageBox.Show(Mensajes.CONFIRMACION_ANULADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                 } catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
         private void btBuscar_Click(object sender, EventArgs e)
@@ -176,9 +186,9 @@ namespace Galactus.VistaControlador.Gestion
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message,Mensajes.NOMBRE_SOFT,MessageBoxButtons.OK,MessageBoxIcon.Warning);
-            }
+            }      
+            GeneralC.posBuscar(this, TostMenu, btNuevo, btEditar, btBuscar, btAnular);
             btnSalir.Enabled = true;
-            GeneralC.posBuscar(this, TostMenu, btNuevo, btEditar, btBuscar, btCancelar);
         }
         private Boolean validarCampos() {
             if (txtNit.Text == string.Empty)
