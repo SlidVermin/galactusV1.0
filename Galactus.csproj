@@ -169,6 +169,12 @@
     <Compile Include="VistaControlador\ConfiguracionGeneral\UsuarioUI.Designer.cs">
       <DependentUpon>UsuarioUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\Gestion\ProveedorUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Gestion\ProveedorUI.Designer.cs">
+      <DependentUpon>ProveedorUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\Gestion\ClienteUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,12 +186,6 @@
     </Compile>
     <Compile Include="VistaControlador\Gestion\ContratoUI.Designer.cs">
       <DependentUpon>ContratoUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VistaControlador\Gestion\ProveedorUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VistaControlador\Gestion\ProveedorUI.Designer.cs">
-      <DependentUpon>ProveedorUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\Gestion\TerceroUI.cs">
       <SubType>Form</SubType>
@@ -287,11 +287,11 @@
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\UsuarioUI.resx">
       <DependentUpon>UsuarioUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\Gestion\ClienteUI.resx">
-      <DependentUpon>ClienteUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Gestion\ProveedorUI.resx">
       <DependentUpon>ProveedorUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Gestion\ClienteUI.resx">
+      <DependentUpon>ClienteUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Gestion\TerceroUI.resx">
       <DependentUpon>TerceroUI.cs</DependentUpon>
