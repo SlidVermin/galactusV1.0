@@ -13,8 +13,10 @@ namespace Galactus.Util
         public const String TITULO_MANUAL_SERVICIO_ISS = "Buscar Manuales iss";
         public const String TITULO_MANUAL_SERVICIO_CUPS = "Buscar Manuales cups";
 
-        public const String TITULO_BUSCAR_TERCERO = "Busqueda de personas";
+        public const String TITULO_BUSCAR_TERCERO = "Busqueda de Tercero";
 
         public const String TITULO_BUSCAR_CLIENTE = "Busqueda Clientes";
+
+        public const String TITULO_BUSCAR_PROVEEDOR = "Busqueda proveedores";
     }
 }

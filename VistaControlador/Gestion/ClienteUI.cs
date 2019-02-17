@@ -134,7 +134,7 @@ namespace Galactus.VistaControlador.Gestion
         {
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
-            GeneralC.buscarDevuelveFila(Query.BUSCAR_TERCERO,
+            GeneralC.buscarDevuelveFila(Query.BUSCAR_TERCERO_CLIENTE,
                                       parametro,
                                       new GeneralC.cargarInfoFila(cargarTercero),
                                       Titulos.TITULO_BUSCAR_TERCERO,

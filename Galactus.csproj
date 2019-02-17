@@ -80,6 +80,8 @@
     <Compile Include="Entidades\Inventario\Bodega.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Producto.cs" />
     <Compile Include="Entidades\Inventario\Cliente.cs" />
+    <Compile Include="Entidades\Inventario\GeneralTercero.cs" />
+    <Compile Include="Entidades\Inventario\Proveedor.cs" />
     <Compile Include="Modelo\Admision\Configuracion\ManualServicioDAL.cs" />
     <Compile Include="Modelo\Admision\manualTarifarioServicioDAL.cs" />
     <Compile Include="Modelo\Admision\PacienteDAL.cs" />
@@ -87,6 +89,7 @@
     <Compile Include="Modelo\ConfiguracionGeneral\UsuarioDAL.cs" />
     <Compile Include="Modelo\EquivalenciaDAL.cs" />
     <Compile Include="Modelo\General\BusquedaDAL.cs" />
+    <Compile Include="Modelo\Gestion\ProveedorDAL.cs" />
     <Compile Include="Modelo\Gestion\ClienteDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
     <Compile Include="Modelo\Inventario\BodegaDAL.cs" />

@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+
+namespace Galactus.Entidades.Inventario
+{
+    class Proveedor : GeneralTercero
+    {
+        public int diaVencimiento { get; set; }
+        public int codigoBanco { get; set; }
+        public int codigoTipoCuenta { get; set; }
+        public string identidicacion { get; set; }
+        public string cuenta { get; set; }
+        public DataTable dtPlazo { get; set; }
+
+        public Proveedor() {
+
+        }
+    }
+}

@@ -70,10 +70,15 @@ namespace Galactus
         public const String ADMISION_PACIENTE_BUSCAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionPacienteBuscar";
         #endregion
         #region Gestion
-        public const string BUSCAR_TERCERO = ConstanteGeneral.ESQUEMA_TERCERO + "[uspTerceroClienteBuscar]";
+        public const string BUSCAR_TERCERO_CLIENTE = ConstanteGeneral.ESQUEMA_TERCERO + "[uspTerceroClienteBuscar]";
         public const string CREAR_CLIENTE = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspClienteCrear]";
         public const string BUSCAR_CLIENTE = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspClienteBuscar]";
         public const string ANULAR_CLIENTE = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspClienteAnular]";
+
+        public const string BUSCAR_TERCERO_PROVEEDOR = ConstanteGeneral.ESQUEMA_TERCERO + "[uspTerceroProveedorBuscar]";
+        public const string CREAR_PROVEEDOR = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspProveedorCrear]";
+        public const string BUSCAR_PROVEEDOR = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspProveedorBuscar]";
+        public const string ANULAR_PROVEEDOR = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspProveedorAnular]";
         #endregion
     }
 }
