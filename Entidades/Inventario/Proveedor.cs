@@ -10,8 +10,8 @@ namespace Galactus.Entidades.Inventario
     class Proveedor : GeneralTercero
     {
         public int diaVencimiento { get; set; }
-        public int codigoBanco { get; set; }
-        public int codigoTipoCuenta { get; set; }
+        public string codigoBanco { get; set; }
+        public string codigoTipoCuenta { get; set; }
         public string identidicacion { get; set; }
         public string cuenta { get; set; }
         public DataTable dtPlazo { get; set; }
