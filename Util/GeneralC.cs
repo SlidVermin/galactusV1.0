@@ -98,7 +98,7 @@ namespace Galactus
                                                      string valueMember,
                                                      string displayMember,
                                                      ComboBox combo)
-            
+
         {
             DataTable dtAux = new DataTable();
             dtAux = dt.Clone();
@@ -111,7 +111,8 @@ namespace Galactus
 
                 if (dt.Rows.Count > 0)
                 {
-                    foreach (DataRow dRows in dt.Select()) {
+                    foreach (DataRow dRows in dt.Select())
+                    {
                         dtAux.ImportRow(dRows);
                     }
 
@@ -161,6 +162,18 @@ namespace Galactus
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+        public static void llenarComboDependiente(ComboBox comboPadre,ComboBox comboHijo,string query)
+        {
+            if (comboPadre.SelectedIndex > 0)
+            {
+                string filtro = (comboPadre.SelectedIndex == 0) ? Util.Constantes.ConstanteGeneral.PREDETERMINADA : comboPadre.SelectedValue.ToString();
+                GeneralC.llenarCombo(query + " " + filtro + "",
+                                     Util.Constantes.ConstanteGeneral.VALUEMEMBER,
+                                     Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
+                                     comboHijo);
+                GeneralC.validarComboUbicacion(comboPadre, comboHijo);
             }
         }
         public static DataRow obtenerRegistroCompleto(string query,
@@ -583,7 +596,7 @@ namespace Galactus
                         break;
                 }
             }
-         
+
         }
     }
 }

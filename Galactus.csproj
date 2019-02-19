@@ -72,6 +72,7 @@
     <Compile Include="Entidades\Admision\manualTarifarioServicio.cs" />
     <Compile Include="Entidades\Admision\Paciente.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\ConfiguracionGeneral.cs" />
+    <Compile Include="Entidades\ConfiguracionGeneral\Empresa.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Equivalencia.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Usuario.cs" />
     <Compile Include="Entidades\General\Busqueda.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Modelo\Admision\manualTarifarioServicioDAL.cs" />
     <Compile Include="Modelo\Admision\PacienteDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\ConfiguracionGeneralDAL.cs" />
+    <Compile Include="Modelo\ConfiguracionGeneral\EmpresaDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\UsuarioDAL.cs" />
     <Compile Include="Modelo\EquivalenciaDAL.cs" />
     <Compile Include="Modelo\General\BusquedaDAL.cs" />
@@ -159,6 +161,12 @@
     </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\ConfiguracionGeneralUI.Designer.cs">
       <DependentUpon>ConfiguracionGeneralUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\EmpresaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\EmpresaUI.Designer.cs">
+      <DependentUpon>EmpresaUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\EquivalenciaUI.cs">
       <SubType>Form</SubType>
@@ -283,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\ConfiguracionGeneralUI.resx">
       <DependentUpon>ConfiguracionGeneralUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\EmpresaUI.resx">
+      <DependentUpon>EmpresaUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\EquivalenciaUI.resx">
       <DependentUpon>EquivalenciaUI.cs</DependentUpon>
