@@ -506,8 +506,10 @@
     <None Include="Resources\Document-copy-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Very-Basic-Search-icon3.png" />
     <None Include="Resources\btn-buscar.jpg" />
     <None Include="Resources\btn-anular.jpg" />
+    <None Include="Resources\Actions-file-close-icon3.png" />
     <Content Include="Resources\general-ico.png" />
     <Content Include="Resources\historia_clinica-ico.png" />
     <Content Include="Resources\laboratorio-ico.png" />

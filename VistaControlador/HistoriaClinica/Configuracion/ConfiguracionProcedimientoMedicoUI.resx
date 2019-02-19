@@ -147,6 +147,29 @@
   <metadata name="dgQuitarProcedimiento.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnBuscarCliente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAShJREFUOE+V
+        kj9LQlEYhy0KamlpDJpEcAyCaHFStybHvkG2iR/BTdqitaGhzcVF8Ts0CtGiTm01NBRBPc/RS8frvYY/
+        eOCew3n//d5bSKkOj/AMExjBFezBWvnAwDfowgXUoAXjBSXIlcFPcBROy9qFO5jCoRdp2baVs4ITbYHj
+        3IZTSla37X2wWp4q8A4rbzTMmS/h2Isc7cAXlMMpkm5rWBuaXqzRB5zMP//kbLpdhVfI66II33AQTpHc
+        s2tyth7MoAG2HOsGBvPPZfkPmMBVmeQa+vAAZ6D06BNOwylD/iTu2XF0O6lu21Y2+AeG0IFtWJE/iXt2
+        VbqtYc5s21Y22CRyD5lJlGO4Kt2ODbNykuDfJFnysUFxEn3bSOkkL7CxTGJlggvnv9MBQMcUAEd2AAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnBuscarProcedimiento.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAShJREFUOE+V
+        kj9LQlEYhy0KamlpDJpEcAyCaHFStybHvkG2iR/BTdqitaGhzcVF8Ts0CtGiTm01NBRBPc/RS8frvYY/
+        eOCew3n//d5bSKkOj/AMExjBFezBWvnAwDfowgXUoAXjBSXIlcFPcBROy9qFO5jCoRdp2baVs4ITbYHj
+        3IZTSla37X2wWp4q8A4rbzTMmS/h2Isc7cAXlMMpkm5rWBuaXqzRB5zMP//kbLpdhVfI66II33AQTpHc
+        s2tyth7MoAG2HOsGBvPPZfkPmMBVmeQa+vAAZ6D06BNOwylD/iTu2XF0O6lu21Y2+AeG0IFtWJE/iXt2
+        VbqtYc5s21Y22CRyD5lJlGO4Kt2ODbNykuDfJFnysUFxEn3bSOkkL7CxTGJlggvnv9MBQMcUAEd2AAAA
+        AElFTkSuQmCC
+</value>
+  </data>
   <metadata name="dgCodigoArea.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -160,7 +183,7 @@
     <value>True</value>
   </metadata>
   <metadata name="tstMenuPatron.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 5</value>
+    <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>27</value>

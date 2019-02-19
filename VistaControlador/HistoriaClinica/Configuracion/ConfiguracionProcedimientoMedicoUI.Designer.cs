@@ -29,23 +29,32 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfiguracionProcedimientoMedicoUI));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
+            this.dgcodigoMedicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDescripcionMedicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgcantidadMedicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgBuscarmedicamento = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgQuitarMedicamento = new System.Windows.Forms.DataGridViewImageColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
+            this.dgCodigoProcedimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDescripcionProcedimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgCantidadProcedimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgBuscarProcedimiento = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgQuitarProcedimiento = new System.Windows.Forms.DataGridViewImageColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBCodigo = new System.Windows.Forms.TextBox();
             this.txtBNombreProcedimiento = new System.Windows.Forms.TextBox();
-            this.btnBuscarProcedimiento = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBNombreCliente = new System.Windows.Forms.TextBox();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.chkCombo = new System.Windows.Forms.CheckBox();
@@ -55,47 +64,31 @@
             this.chkModuloFC = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvEntorno = new System.Windows.Forms.DataGridView();
-            this.lblTituloForm = new System.Windows.Forms.Label();
-            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn6 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgcodigoMedicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgDescripcionMedicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgcantidadMedicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgCodigoProcedimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgDescripcionProcedimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgCantidadProcedimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn7 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn8 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn9 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pnlCerrarForm = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnEditar = new System.Windows.Forms.ToolStripButton();
-            this.btnBuscar = new System.Windows.Forms.ToolStripButton();
-            this.btnGuardar = new System.Windows.Forms.ToolStripButton();
-            this.btnAnular = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnDuplicar = new System.Windows.Forms.ToolStripButton();
-            this.dgBuscarmedicamento = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgQuitarMedicamento = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgBuscarProcedimiento = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgQuitarProcedimiento = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgCodigoArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgDescripcionArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgBuscarArea = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgQuitarArea = new System.Windows.Forms.DataGridViewImageColumn();
+            this.lblTituloForm = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn6 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn7 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn8 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn9 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pnlCerrarForm = new System.Windows.Forms.Panel();
+            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
+            this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tBtEditar = new System.Windows.Forms.ToolStripButton();
+            this.tBtCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tBtBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tbtAnular = new System.Windows.Forms.ToolStripButton();
+            this.tbtImprimir = new System.Windows.Forms.ToolStripButton();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.btnBuscarProcedimiento = new System.Windows.Forms.Button();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -107,12 +100,11 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntorno)).BeginInit();
             this.tstMenuPatron.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
+            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox1.Controls.Add(this.tabControl1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnBuscarCliente);
@@ -127,7 +119,7 @@
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Location = new System.Drawing.Point(17, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(934, 580);
+            this.groupBox1.Size = new System.Drawing.Size(934, 525);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -185,6 +177,44 @@
             this.dgvMedicamentos.TabIndex = 4;
             this.dgvMedicamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicamentos_CellContentClick);
             // 
+            // dgcodigoMedicamento
+            // 
+            this.dgcodigoMedicamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgcodigoMedicamento.DataPropertyName = "Código ";
+            this.dgcodigoMedicamento.HeaderText = "Codigo";
+            this.dgcodigoMedicamento.Name = "dgcodigoMedicamento";
+            this.dgcodigoMedicamento.Visible = false;
+            this.dgcodigoMedicamento.Width = 46;
+            // 
+            // dgDescripcionMedicamento
+            // 
+            this.dgDescripcionMedicamento.DataPropertyName = "Descripción ";
+            this.dgDescripcionMedicamento.HeaderText = "Descripción";
+            this.dgDescripcionMedicamento.Name = "dgDescripcionMedicamento";
+            this.dgDescripcionMedicamento.Width = 270;
+            // 
+            // dgcantidadMedicamento
+            // 
+            this.dgcantidadMedicamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgcantidadMedicamento.DataPropertyName = "Cantidad";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgcantidadMedicamento.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgcantidadMedicamento.HeaderText = "Cantidad";
+            this.dgcantidadMedicamento.Name = "dgcantidadMedicamento";
+            this.dgcantidadMedicamento.Width = 79;
+            // 
+            // dgBuscarmedicamento
+            // 
+            this.dgBuscarmedicamento.HeaderText = "";
+            this.dgBuscarmedicamento.Name = "dgBuscarmedicamento";
+            this.dgBuscarmedicamento.Width = 25;
+            // 
+            // dgQuitarMedicamento
+            // 
+            this.dgQuitarMedicamento.HeaderText = "Quitar";
+            this.dgQuitarMedicamento.Name = "dgQuitarMedicamento";
+            this.dgQuitarMedicamento.Width = 50;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dgvProcedimientos);
@@ -227,6 +257,44 @@
             this.dgvProcedimientos.TabIndex = 4;
             this.dgvProcedimientos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellContentClick_1);
             // 
+            // dgCodigoProcedimiento
+            // 
+            this.dgCodigoProcedimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgCodigoProcedimiento.DataPropertyName = "Código";
+            this.dgCodigoProcedimiento.HeaderText = "Codigo";
+            this.dgCodigoProcedimiento.Name = "dgCodigoProcedimiento";
+            this.dgCodigoProcedimiento.Visible = false;
+            this.dgCodigoProcedimiento.Width = 46;
+            // 
+            // dgDescripcionProcedimiento
+            // 
+            this.dgDescripcionProcedimiento.DataPropertyName = "Descripción";
+            this.dgDescripcionProcedimiento.HeaderText = "Descripcion";
+            this.dgDescripcionProcedimiento.Name = "dgDescripcionProcedimiento";
+            this.dgDescripcionProcedimiento.Width = 270;
+            // 
+            // dgCantidadProcedimiento
+            // 
+            this.dgCantidadProcedimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgCantidadProcedimiento.DataPropertyName = "Cantidad";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgCantidadProcedimiento.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgCantidadProcedimiento.HeaderText = "Cantidad";
+            this.dgCantidadProcedimiento.Name = "dgCantidadProcedimiento";
+            this.dgCantidadProcedimiento.Width = 79;
+            // 
+            // dgBuscarProcedimiento
+            // 
+            this.dgBuscarProcedimiento.HeaderText = "";
+            this.dgBuscarProcedimiento.Name = "dgBuscarProcedimiento";
+            this.dgBuscarProcedimiento.Width = 25;
+            // 
+            // dgQuitarProcedimiento
+            // 
+            this.dgQuitarProcedimiento.HeaderText = "Quitar";
+            this.dgQuitarProcedimiento.Name = "dgQuitarProcedimiento";
+            this.dgQuitarProcedimiento.Width = 50;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -254,14 +322,6 @@
             this.txtBNombreProcedimiento.Size = new System.Drawing.Size(779, 21);
             this.txtBNombreProcedimiento.TabIndex = 45;
             // 
-            // btnBuscarProcedimiento
-            // 
-            //this.btnBuscarProcedimiento.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
-            this.btnBuscarProcedimiento.Location = new System.Drawing.Point(893, 14);
-            this.btnBuscarProcedimiento.Name = "btnBuscarProcedimiento";
-            this.btnBuscarProcedimiento.Size = new System.Drawing.Size(27, 23);
-            this.btnBuscarProcedimiento.TabIndex = 60016;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -279,13 +339,6 @@
             this.txtBNombreCliente.Name = "txtBNombreCliente";
             this.txtBNombreCliente.Size = new System.Drawing.Size(779, 21);
             this.txtBNombreCliente.TabIndex = 42;
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(893, 41);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(27, 23);
-            this.btnBuscarCliente.TabIndex = 60017;
             // 
             // label3
             // 
@@ -415,76 +468,44 @@
             this.dgvEntorno.TabIndex = 4;
             this.dgvEntorno.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEntorno_CellContentClick);
             // 
+            // dgCodigoArea
+            // 
+            this.dgCodigoArea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgCodigoArea.DataPropertyName = "Código";
+            this.dgCodigoArea.HeaderText = "CodigoArea";
+            this.dgCodigoArea.Name = "dgCodigoArea";
+            this.dgCodigoArea.Visible = false;
+            this.dgCodigoArea.Width = 68;
+            // 
+            // dgDescripcionArea
+            // 
+            this.dgDescripcionArea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgDescripcionArea.DataPropertyName = "Decripción ";
+            this.dgDescripcionArea.HeaderText = "Area";
+            this.dgDescripcionArea.Name = "dgDescripcionArea";
+            this.dgDescripcionArea.Width = 56;
+            // 
+            // dgBuscarArea
+            // 
+            this.dgBuscarArea.HeaderText = "";
+            this.dgBuscarArea.Name = "dgBuscarArea";
+            this.dgBuscarArea.Width = 25;
+            // 
+            // dgQuitarArea
+            // 
+            this.dgQuitarArea.HeaderText = "Quitar";
+            this.dgQuitarArea.Name = "dgQuitarArea";
+            this.dgQuitarArea.Width = 50;
+            // 
             // lblTituloForm
             // 
             this.lblTituloForm.AutoSize = true;
             this.lblTituloForm.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloForm.Location = new System.Drawing.Point(58, 10);
+            this.lblTituloForm.Location = new System.Drawing.Point(29, 10);
             this.lblTituloForm.Name = "lblTituloForm";
             this.lblTituloForm.Size = new System.Drawing.Size(309, 17);
             this.lblTituloForm.TabIndex = 0;
             this.lblTituloForm.Text = "CONFIGURACION DE PROCEDIMIENTOS MEDICOS";
-            // 
-            // tstMenuPatron
-            // 
-            this.tstMenuPatron.BackColor = System.Drawing.Color.White;
-            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuPatron.ImageScalingSize = new System.Drawing.Size(26, 26);
-            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNuevo,
-            this.toolStripSeparator2,
-            this.btnEditar,
-            this.toolStripSeparator3,
-            this.btnBuscar,
-            this.toolStripSeparator4,
-            this.btnGuardar,
-            this.toolStripSeparator5,
-            this.btnAnular,
-            this.toolStripSeparator6,
-            this.btnCancelar,
-            this.toolStripSeparator1,
-            this.btnDuplicar,
-            this.toolStripSeparator7});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 563);
-            this.tstMenuPatron.Name = "tstMenuPatron";
-            this.tstMenuPatron.Size = new System.Drawing.Size(968, 33);
-            this.tstMenuPatron.TabIndex = 2;
-            this.tstMenuPatron.Text = "toolStrip1";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 33);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 33);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 33);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 33);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 33);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 33);
             // 
             // dataGridViewImageColumn3
             // 
@@ -502,57 +523,128 @@
             // 
             this.dataGridViewImageColumn6.Name = "dataGridViewImageColumn6";
             // 
-            // dgcodigoMedicamento
+            // dataGridViewImageColumn7
             // 
-            this.dgcodigoMedicamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgcodigoMedicamento.DataPropertyName = "Código ";
-            this.dgcodigoMedicamento.HeaderText = "Codigo";
-            this.dgcodigoMedicamento.Name = "dgcodigoMedicamento";
-            this.dgcodigoMedicamento.Visible = false;
-            this.dgcodigoMedicamento.Width = 46;
+            this.dataGridViewImageColumn7.HeaderText = "";
+            this.dataGridViewImageColumn7.Name = "dataGridViewImageColumn7";
+            this.dataGridViewImageColumn7.Width = 25;
             // 
-            // dgDescripcionMedicamento
+            // dataGridViewImageColumn8
             // 
-            this.dgDescripcionMedicamento.DataPropertyName = "Descripción ";
-            this.dgDescripcionMedicamento.HeaderText = "Descripción";
-            this.dgDescripcionMedicamento.Name = "dgDescripcionMedicamento";
-            this.dgDescripcionMedicamento.Width = 270;
+            this.dataGridViewImageColumn8.HeaderText = "Quitar";
+            this.dataGridViewImageColumn8.Name = "dataGridViewImageColumn8";
+            this.dataGridViewImageColumn8.Width = 50;
             // 
-            // dgcantidadMedicamento
+            // dataGridViewImageColumn9
             // 
-            this.dgcantidadMedicamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgcantidadMedicamento.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgcantidadMedicamento.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgcantidadMedicamento.HeaderText = "Cantidad";
-            this.dgcantidadMedicamento.Name = "dgcantidadMedicamento";
-            this.dgcantidadMedicamento.Width = 79;
+            this.dataGridViewImageColumn9.HeaderText = "";
+            this.dataGridViewImageColumn9.Name = "dataGridViewImageColumn9";
             // 
-            // dgCodigoProcedimiento
+            // pnlCerrarForm
             // 
-            this.dgCodigoProcedimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgCodigoProcedimiento.DataPropertyName = "Código";
-            this.dgCodigoProcedimiento.HeaderText = "Codigo";
-            this.dgCodigoProcedimiento.Name = "dgCodigoProcedimiento";
-            this.dgCodigoProcedimiento.Visible = false;
-            this.dgCodigoProcedimiento.Width = 46;
+            this.pnlCerrarForm.BackgroundImage = global::Galactus.Properties.Resources.Actions_file_close_icon;
+            this.pnlCerrarForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnlCerrarForm.Location = new System.Drawing.Point(936, 0);
+            this.pnlCerrarForm.Name = "pnlCerrarForm";
+            this.pnlCerrarForm.Size = new System.Drawing.Size(30, 30);
+            this.pnlCerrarForm.TabIndex = 0;
+            this.pnlCerrarForm.Click += new System.EventHandler(this.pnlCerrarForm_Click);
             // 
-            // dgDescripcionProcedimiento
+            // tstMenuPatron
             // 
-            this.dgDescripcionProcedimiento.DataPropertyName = "Descripción";
-            this.dgDescripcionProcedimiento.HeaderText = "Descripcion";
-            this.dgDescripcionProcedimiento.Name = "dgDescripcionProcedimiento";
-            this.dgDescripcionProcedimiento.Width = 270;
+            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tBtNuevo,
+            this.tBtEditar,
+            this.tBtCancelar,
+            this.tBtGuardar,
+            this.tBtBuscar,
+            this.tbtAnular,
+            this.tbtImprimir});
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 571);
+            this.tstMenuPatron.Name = "tstMenuPatron";
+            this.tstMenuPatron.Size = new System.Drawing.Size(968, 25);
+            this.tstMenuPatron.TabIndex = 60019;
+            this.tstMenuPatron.Text = "toolStrip1";
             // 
-            // dgCantidadProcedimiento
+            // tBtNuevo
             // 
-            this.dgCantidadProcedimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgCantidadProcedimiento.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgCantidadProcedimiento.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgCantidadProcedimiento.HeaderText = "Cantidad";
-            this.dgCantidadProcedimiento.Name = "dgCantidadProcedimiento";
-            this.dgCantidadProcedimiento.Width = 79;
+            this.tBtNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtNuevo.Name = "tBtNuevo";
+            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tBtNuevo.Text = "Nuevo";
+            this.tBtNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // tBtEditar
+            // 
+            this.tBtEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtEditar.Name = "tBtEditar";
+            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
+            this.tBtEditar.Text = "Editar";
+            this.tBtEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // tBtCancelar
+            // 
+            this.tBtCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtCancelar.Name = "tBtCancelar";
+            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tBtCancelar.Text = "Cancelar";
+            this.tBtCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // tBtGuardar
+            // 
+            this.tBtGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtGuardar.Name = "tBtGuardar";
+            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tBtGuardar.Text = "Guardar";
+            this.tBtGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // tBtBuscar
+            // 
+            this.tBtBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtBuscar.Name = "tBtBuscar";
+            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tBtBuscar.Text = "Buscar";
+            this.tBtBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // tbtAnular
+            // 
+            this.tbtAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tbtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtAnular.Name = "tbtAnular";
+            this.tbtAnular.Size = new System.Drawing.Size(62, 22);
+            this.tbtAnular.Text = "Anular";
+            this.tbtAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // tbtImprimir
+            // 
+            this.tbtImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tbtImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtImprimir.Name = "tbtImprimir";
+            this.tbtImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tbtImprimir.Text = "Imprimir";
+            this.tbtImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCliente.Image")));
+            this.btnBuscarCliente.Location = new System.Drawing.Point(893, 41);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(27, 23);
+            this.btnBuscarCliente.TabIndex = 60017;
+            // 
+            // btnBuscarProcedimiento
+            // 
+            this.btnBuscarProcedimiento.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarProcedimiento.Image")));
+            this.btnBuscarProcedimiento.Location = new System.Drawing.Point(893, 14);
+            this.btnBuscarProcedimiento.Name = "btnBuscarProcedimiento";
+            this.btnBuscarProcedimiento.Size = new System.Drawing.Size(27, 23);
+            this.btnBuscarProcedimiento.TabIndex = 60016;
             // 
             // dataGridViewImageColumn1
             // 
@@ -572,188 +664,15 @@
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn2.Width = 25;
             // 
-            // dataGridViewImageColumn7
-            // 
-            this.dataGridViewImageColumn7.HeaderText = "";
-            this.dataGridViewImageColumn7.Image = null;//global::Galactus.Properties.Resources.Very_Basic_Search_icon;
-            this.dataGridViewImageColumn7.Name = "dataGridViewImageColumn7";
-            this.dataGridViewImageColumn7.Width = 25;
-            // 
-            // dataGridViewImageColumn8
-            // 
-            this.dataGridViewImageColumn8.HeaderText = "Quitar";
-            this.dataGridViewImageColumn8.Image = null;//global::Galactus.Properties.Resources.Industry_Trash_icon;
-            this.dataGridViewImageColumn8.Name = "dataGridViewImageColumn8";
-            this.dataGridViewImageColumn8.Width = 50;
-            // 
-            // dataGridViewImageColumn9
-            // 
-            this.dataGridViewImageColumn9.HeaderText = "";
-            //this.dataGridViewImageColumn9.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
-            this.dataGridViewImageColumn9.Name = "dataGridViewImageColumn9";
-            // 
-            // pnlCerrarForm
-            // 
-            //this.pnlCerrarForm.BackgroundImage = global::Galactus.Properties.Resources.Actions_file_close_icon;
-            this.pnlCerrarForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pnlCerrarForm.Location = new System.Drawing.Point(937, -1);
-            this.pnlCerrarForm.Name = "pnlCerrarForm";
-            this.pnlCerrarForm.Size = new System.Drawing.Size(30, 30);
-            this.pnlCerrarForm.TabIndex = 0;
-            this.pnlCerrarForm.Click += new System.EventHandler(this.pnlCerrarForm_Click);
-            // 
-            // pictureBox1
-            // 
-            //this.pictureBox1.Image = global::Galactus.Properties.Resources.Very_Basic_Settings_Filled_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(18, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Image = global::Galactus.Properties.Resources.Actions_document_new_icon;
-            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(72, 30);
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Enabled = false;
-            this.btnEditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Image = global::Galactus.Properties.Resources.Apps_menu_editor_icon;
-            this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(67, 30);
-            this.btnEditar.Text = "&Editar";
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Image = global::Galactus.Properties.Resources.Search_icon__1_;
-            this.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(72, 30);
-            this.btnBuscar.Text = "&Buscar";
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Enabled = false;
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Image = global::Galactus.Properties.Resources.Floppy_Drive_icon;
-            this.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(79, 30);
-            this.btnGuardar.Text = "&Guardar";
-            // 
-            // btnAnular
-            // 
-            this.btnAnular.Enabled = false;
-            this.btnAnular.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnular.Image = global::Galactus.Properties.Resources.Actions_project_development_close_icon;
-            this.btnAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAnular.Name = "btnAnular";
-            this.btnAnular.Size = new System.Drawing.Size(72, 30);
-            this.btnAnular.Text = "&Anular";
-            this.btnAnular.Click += new System.EventHandler(this.btnAnular_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Enabled = false;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::Galactus.Properties.Resources.Actions_document_revert_icon;
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(82, 30);
-            this.btnCancelar.Text = "&Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnDuplicar
-            // 
-            this.btnDuplicar.Enabled = false;
-            this.btnDuplicar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDuplicar.Image = global::Galactus.Properties.Resources.Document_copy_icon;
-            this.btnDuplicar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDuplicar.Name = "btnDuplicar";
-            this.btnDuplicar.Size = new System.Drawing.Size(82, 30);
-            this.btnDuplicar.Text = "&Duplicar";
-            // 
-            // dgBuscarmedicamento
-            // 
-            this.dgBuscarmedicamento.HeaderText = "";
-            //this.dgBuscarmedicamento.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
-            this.dgBuscarmedicamento.Name = "dgBuscarmedicamento";
-            this.dgBuscarmedicamento.Width = 25;
-            // 
-            // dgQuitarMedicamento
-            // 
-            this.dgQuitarMedicamento.HeaderText = "Quitar";
-            //this.dgQuitarMedicamento.Image = global::Galactus.Properties.Resources.Industry_Trash_icon;
-            this.dgQuitarMedicamento.Name = "dgQuitarMedicamento";
-            this.dgQuitarMedicamento.Width = 50;
-            // 
-            // dgBuscarProcedimiento
-            // 
-            this.dgBuscarProcedimiento.HeaderText = "";
-            //this.dgBuscarProcedimiento.Image = global::Galactus.Properties.Resources.Very_Basic_Search_icon;
-            this.dgBuscarProcedimiento.Name = "dgBuscarProcedimiento";
-            this.dgBuscarProcedimiento.Width = 25;
-            // 
-            // dgQuitarProcedimiento
-            // 
-            this.dgQuitarProcedimiento.HeaderText = "Quitar";
-            //this.dgQuitarProcedimiento.Image = global::Galactus.Properties.Resources.Industry_Trash_icon;
-            this.dgQuitarProcedimiento.Name = "dgQuitarProcedimiento";
-            this.dgQuitarProcedimiento.Width = 50;
-            // 
-            // dgCodigoArea
-            // 
-            this.dgCodigoArea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgCodigoArea.DataPropertyName = "Código";
-            this.dgCodigoArea.HeaderText = "CodigoArea";
-            this.dgCodigoArea.Name = "dgCodigoArea";
-            this.dgCodigoArea.Visible = false;
-            this.dgCodigoArea.Width = 75;
-            // 
-            // dgDescripcionArea
-            // 
-            this.dgDescripcionArea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgDescripcionArea.DataPropertyName = "Decripción ";
-            this.dgDescripcionArea.HeaderText = "Area";
-            this.dgDescripcionArea.Name = "dgDescripcionArea";
-            this.dgDescripcionArea.Width = 56;
-            // 
-            // dgBuscarArea
-            // 
-            this.dgBuscarArea.HeaderText = "";
-            this.dgBuscarArea.Image = null;// global::Galactus.Properties.Resources.Very_Basic_Search_icon;
-            this.dgBuscarArea.Name = "dgBuscarArea";
-            this.dgBuscarArea.Width = 25;
-            // 
-            // dgQuitarArea
-            // 
-            this.dgQuitarArea.HeaderText = "Quitar";
-            //this.dgQuitarArea.Image = global::Galactus.Properties.Resources.Industry_Trash_icon;
-            this.dgQuitarArea.Name = "dgQuitarArea";
-            this.dgQuitarArea.Width = 50;
-            // 
             // ConfiguracionProcedimientoMedicoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(968, 596);
-            this.Controls.Add(this.pnlCerrarForm);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblTituloForm);
             this.Controls.Add(this.tstMenuPatron);
+            this.Controls.Add(this.pnlCerrarForm);
+            this.Controls.Add(this.lblTituloForm);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -777,7 +696,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntorno)).EndInit();
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -787,19 +705,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblTituloForm;
-        private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton btnNuevo;
-        private System.Windows.Forms.ToolStripButton btnEditar;
-        private System.Windows.Forms.ToolStripButton btnBuscar;
-        private System.Windows.Forms.ToolStripButton btnGuardar;
-        private System.Windows.Forms.ToolStripButton btnAnular;
-        private System.Windows.Forms.ToolStripButton btnCancelar;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         public System.Windows.Forms.DataGridView dgvProcedimientos;
         public System.Windows.Forms.DataGridView dgvMedicamentos;
         public System.Windows.Forms.CheckBox chkCombo;
@@ -818,12 +723,9 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label2;
         internal System.Windows.Forms.TextBox txtBCodigo;
-        private System.Windows.Forms.ToolStripButton btnDuplicar;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
@@ -848,5 +750,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcionArea;
         private System.Windows.Forms.DataGridViewImageColumn dgBuscarArea;
         private System.Windows.Forms.DataGridViewImageColumn dgQuitarArea;
+        private System.Windows.Forms.ToolStrip tstMenuPatron;
+        private System.Windows.Forms.ToolStripButton tBtNuevo;
+        private System.Windows.Forms.ToolStripButton tBtEditar;
+        private System.Windows.Forms.ToolStripButton tBtCancelar;
+        private System.Windows.Forms.ToolStripButton tBtGuardar;
+        private System.Windows.Forms.ToolStripButton tBtBuscar;
+        private System.Windows.Forms.ToolStripButton tbtAnular;
+        private System.Windows.Forms.ToolStripButton tbtImprimir;
     }
 }

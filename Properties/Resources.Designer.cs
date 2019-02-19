@@ -103,6 +103,16 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actions_file_close_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions-file-close-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Actions_project_development_close_icon {
             get {
                 object obj = ResourceManager.GetObject("Actions-project-development-close-icon", resourceCulture);
@@ -646,6 +656,16 @@ namespace Galactus.Properties {
         internal static System.Drawing.Bitmap user__1_ {
             get {
                 object obj = ResourceManager.GetObject("user (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Very_Basic_Search_icon {
+            get {
+                object obj = ResourceManager.GetObject("Very-Basic-Search-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
