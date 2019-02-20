@@ -35,7 +35,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            GeneralC.formNuevo(this, tstMenuPatron, btnGuardar, btnCancelar);
+            //GeneralC.formNuevo(this, tstMenuPatron, btnGuardar, btnCancelar);
             configurarDatosDgv();
 
             configuracionProcedimientoMedico.tablaAreaAtencion.Rows.Add();
@@ -77,15 +77,15 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
         {
             datagrid.Columns[columnaDgv].DataPropertyName = columnaDt;
         }
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            GeneralC.fnEditarForm(this, tstMenuPatron, btnGuardar, btnCancelar);
-        }
+        //private void btnEditar_Click(object sender, EventArgs e)
+        //{
+        //    GeneralC.fnEditarForm(this, tstMenuPatron, btnGuardar, btnCancelar);
+        //}
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            GeneralC.fnCancelarForm(this, tstMenuPatron, btnNuevo, btnBuscar);
-        }
+        //private void btnCancelar_Click(object sender, EventArgs e)
+        //{
+        //    GeneralC.fnCancelarForm(this, tstMenuPatron, btnNuevo, btnBuscar);
+        //}
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -127,7 +127,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
                 txtBCodigo.Text = configuracionProcedimientoMedico.idConfiguracion.ToString();
                 txtBNombreProcedimiento.Text = configuracionProcedimientoMedico.descripcionItem;
 
-                GeneralC.posBuscar(this, tstMenuPatron, btnNuevo, btnBuscar, btnEditar, btnAnular);
+                //GeneralC.posBuscar(this, tstMenuPatron, btnNuevo, btnBuscar, btnEditar, btnAnular);
             }
 
 
@@ -149,7 +149,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
                 try
                 {
 
-                    GeneralC.posAnular(this, tstMenuPatron, btnNuevo, btnBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    //GeneralC.posAnular(this, tstMenuPatron, btnNuevo, btnBuscar, Mensajes.CONFIRMACION_ANULADO);
                 }
                 catch (Exception ex)
                 {
