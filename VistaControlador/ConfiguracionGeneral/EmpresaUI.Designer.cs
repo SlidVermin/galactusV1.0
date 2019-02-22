@@ -44,7 +44,7 @@
             this.Textsigla = new System.Windows.Forms.TextBox();
             this.Label24 = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.btBuscarUnidades = new System.Windows.Forms.Button();
+            this.btBuscarTercero = new System.Windows.Forms.Button();
             this.txtNombreTercero = new System.Windows.Forms.TextBox();
             this.txtIdRepresentante = new System.Windows.Forms.TextBox();
             this.Label11 = new System.Windows.Forms.Label();
@@ -280,7 +280,7 @@
             // 
             // GroupBox2
             // 
-            this.GroupBox2.Controls.Add(this.btBuscarUnidades);
+            this.GroupBox2.Controls.Add(this.btBuscarTercero);
             this.GroupBox2.Controls.Add(this.txtNombreTercero);
             this.GroupBox2.Controls.Add(this.txtIdRepresentante);
             this.GroupBox2.Controls.Add(this.Label11);
@@ -293,17 +293,17 @@
             this.GroupBox2.TabStop = false;
             this.GroupBox2.Text = "Representante legal";
             // 
-            // btBuscarUnidades
+            // btBuscarTercero
             // 
-            this.btBuscarUnidades.BackColor = System.Drawing.Color.White;
-            this.btBuscarUnidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBuscarUnidades.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarUnidades.Location = new System.Drawing.Point(231, 19);
-            this.btBuscarUnidades.Name = "btBuscarUnidades";
-            this.btBuscarUnidades.Size = new System.Drawing.Size(22, 22);
-            this.btBuscarUnidades.TabIndex = 10000;
-            this.btBuscarUnidades.UseVisualStyleBackColor = false;
-            this.btBuscarUnidades.Click += new System.EventHandler(this.btBuscarUnidades_Click);
+            this.btBuscarTercero.BackColor = System.Drawing.Color.White;
+            this.btBuscarTercero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscarTercero.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarTercero.Location = new System.Drawing.Point(231, 19);
+            this.btBuscarTercero.Name = "btBuscarTercero";
+            this.btBuscarTercero.Size = new System.Drawing.Size(22, 22);
+            this.btBuscarTercero.TabIndex = 10000;
+            this.btBuscarTercero.UseVisualStyleBackColor = false;
+            this.btBuscarTercero.Click += new System.EventHandler(this.btBuscarTercero_Click);
             // 
             // txtNombreTercero
             // 
@@ -702,7 +702,7 @@
         public System.Windows.Forms.Label Label3;
         public System.Windows.Forms.Label Label25;
         public System.Windows.Forms.Button btlogo;
-        private System.Windows.Forms.Button btBuscarUnidades;
+        private System.Windows.Forms.Button btBuscarTercero;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ToolStrip tstMenuPatron;

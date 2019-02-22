@@ -28,6 +28,7 @@ namespace Galactus.Util.Mensajes
         public const string BUSQUEDA_USUARIOS = "Busqueda de Usuarios";
         public const string BUSQUEDA_EPS = "Busqueda eps";
         public const string BUSQUEDA_PACIENTE = "Busqueda Paciente";
+        public const string BUSQUEDA_EMPRESA = "Busqueda Empresa";
         #endregion
     }
 }
