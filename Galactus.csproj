@@ -77,6 +77,7 @@
     <Compile Include="Entidades\ConfiguracionGeneral\Usuario.cs" />
     <Compile Include="Entidades\General\Busqueda.cs" />
     <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
+    <Compile Include="Entidades\HistoriaClinica\Resultado\Hemodialisis.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\JustificacionAntibiotico.cs" />
     <Compile Include="Entidades\Inventario\Bodega.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Producto.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Modelo\Gestion\ProveedorDAL.cs" />
     <Compile Include="Modelo\Gestion\ClienteDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\Resultado\HemodialisisDAL.cs" />
     <Compile Include="Modelo\Inventario\BodegaDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\ProductoDAL.cs" />
     <Compile Include="Program.cs" />
@@ -222,6 +224,12 @@
     <Compile Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.Designer.cs">
       <DependentUpon>ConfiguracionProcedimientoMedicoUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\HemodialisisUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\HemodialisisUI.Designer.cs">
+      <DependentUpon>HemodialisisUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\TransfusionSanguineaUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.resx">
       <DependentUpon>ConfiguracionProcedimientoMedicoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\HemodialisisUI.resx">
+      <DependentUpon>HemodialisisUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\TransfusionSanguineaUI.resx">
       <DependentUpon>TransfusionSanguineaUI.cs</DependentUpon>
