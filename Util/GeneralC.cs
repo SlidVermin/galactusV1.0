@@ -164,7 +164,7 @@ namespace Galactus
                 throw ex;
             }
         }
-        public static void llenarComboDependiente(ComboBox comboPadre,ComboBox comboHijo,string query)
+        public static void llenarComboDependiente(ComboBox comboPadre, ComboBox comboHijo, string query)
         {
             if (comboPadre.SelectedIndex > 0)
             {
@@ -597,6 +597,28 @@ namespace Galactus
                 }
             }
 
+        }
+        public static void seleccionarImagen(PictureBox pictu)
+        {
+            try
+            {
+                using (OpenFileDialog objetoSeleccion = new OpenFileDialog())
+                {
+                    objetoSeleccion.InitialDirectory = "";
+                    objetoSeleccion.Filter = "Todos los archivos de imagen | *.jpg; *.jpeg; *.png; *.bmp; *.gif; *.pdf; *| PDF | *.pdf | JPEG | *.jpeg; *.jpg | BMP | *.bmp | GIF | *.gif | PNG | *.png";
+                    objetoSeleccion.Title = "Seleccionar Archivo";
+                    if (objetoSeleccion.ShowDialog() == DialogResult.OK)
+                    {
+                        pictu.Image = null;
+                        pictu.SizeMode = PictureBoxSizeMode.StretchImage;
+                        pictu.Image = Image.FromFile(objetoSeleccion.FileName);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
