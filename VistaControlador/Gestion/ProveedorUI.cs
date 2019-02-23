@@ -120,8 +120,10 @@ namespace Galactus.VistaControlador.Gestion
         }
         private void btBuscar_Click(object sender, EventArgs e)
         {
-            List<string> parametro = new List<string>();
-            parametro.Add(string.Empty);
+            try
+            {
+           List<string> parametro = new List<string>();
+           parametro.Add(string.Empty);
 
             GeneralC.buscarDevuelveFila(Query.BUSCAR_PROVEEDOR,
                                     parametro,
@@ -129,17 +131,28 @@ namespace Galactus.VistaControlador.Gestion
                                     Titulos.TITULO_BUSCAR_PROVEEDOR,
                                     true, 
                                     listaParametroOculto());
+        }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-        } 
+} 
         private void btnBuscarNit_Click(object sender, EventArgs e)
         {
-            List<string> parametro = new List<string>();
-            parametro.Add(string.Empty);
-            GeneralC.buscarDevuelveFila(Query.BUSCAR_TERCERO_PROVEEDOR,
-                                      parametro,
-                                      new GeneralC.cargarInfoFila(cargarTercero),
-                                      Titulos.TITULO_BUSCAR_TERCERO,
-                                      true);
+            try
+            {
+                List<string> parametro = new List<string>();
+                parametro.Add(string.Empty);
+                GeneralC.buscarDevuelveFila(Query.BUSCAR_TERCERO_PROVEEDOR,
+                                          parametro,
+                                          new GeneralC.cargarInfoFila(cargarTercero),
+                                          Titulos.TITULO_BUSCAR_TERCERO,
+                                          true);
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
         private void cbFormaPago_TextChanged(object sender, EventArgs e)
         {

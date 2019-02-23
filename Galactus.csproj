@@ -226,7 +226,9 @@
     <Compile Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.Designer.cs">
       <DependentUpon>ConfiguracionProcedimientoMedicoUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\Resultado\InformeQuirurgicoUI.cs" />
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\InformeQuirurgicoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\InformeQuirurgicoUI.Designer.cs">
       <DependentUpon>InformeQuirurgicoUI.cs</DependentUpon>
     </Compile>
