@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Text;
 
 namespace Galactus.VistaControlador.ConfiguracionGeneral
 {
@@ -39,14 +41,14 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             try
             {
-                if (Textnit.Text.Equals(string.Empty))
+                if (txtNit.Text.Equals(string.Empty))
                 {
-                    Textdv.Text = string.Empty;
+                    txtBDv.Text = string.Empty;
                 }
                 else
                 {
                     DigitoVerificacion digitoVerificacion = new DigitoVerificacion();
-                    Textdv.Text = digitoVerificacion.calculaNit(Textnit.Text).ToString();
+                    txtBDv.Text = digitoVerificacion.calculaNit(txtNit.Text).ToString();
                 }
             }
             catch (Exception ex)
@@ -61,6 +63,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         #region Botones
         private void tBtNuevo_Click(object sender, EventArgs e)
         {
+            limpiarObjetoEmpresa();
             GeneralC.formNuevo(this, tstMenuPatron, tBtGuardar, tBtCancelar);
         }
         private void tBtEditar_Click(object sender, EventArgs e)
@@ -73,15 +76,27 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void tBtGuardar_Click(object sender, EventArgs e)
         {
-
+            if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                asignarDatosEmpresa();
+                try
+                {
+                    EmpresaDAL.guardar(empresa);
+                    GeneralC.posGuardar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
         private void tBtBuscar_Click(object sender, EventArgs e)
         {
             try
             {
                 List<string> parametros = new List<string>();
-                parametros.Add("");
-                GeneralC.buscarDevuelveFila(Query.EQUIVALENCIA_BUSCAR,
+                parametros.Add(string.Empty);
+                GeneralC.buscarDevuelveFila(Query.EMPRESA_BUSCAR,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarEmpresa),
                                             Mensajes.BUSQUEDA_EMPRESA,
@@ -120,21 +135,64 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void btlogo_Click(object sender, EventArgs e)
         {
-            GeneralC.seleccionarImagen(pictLogo);
+            GeneralC.seleccionarImagen(picLogo);
         }
         #endregion
         #region Metodos
         public void cargarTercero(DataRow fila)
         {
-            empresa.idEmpresa = fila.Field<int>("Código");
-            txtIdRepresentante.Text = fila.Field<string>("Nit");
-            txtNombreTercero.Text = fila.Field<string>("RazonSocial");
+            empresa.idResponsable = fila.Field<int>("Código");
+            txtIdentificacionRepresentante.Text = fila.Field<string>("Nit");
+            txtNombreResponsable.Text = fila.Field<string>("RazonSocial");
         }
         public void cargarEmpresa(DataRow fila)
         {
             empresa.idEmpresa = fila.Field<int>("Código");
-            txtIdRepresentante.Text = fila.Field<string>("Nit");
-            txtNombreTercero.Text = fila.Field<string>("RazonSocial");
+            List<string> parametros = new List<string>();
+            parametros.Add(empresa.idEmpresa.ToString());
+            DataRow filaResultado = GeneralC.devuelveUnaFila(Query.EMPRESA_CARGAR, parametros);
+            if (filaResultado != null)
+            {
+                empresa.nit = filaResultado.Field<string>("Nit");
+                empresa.razonSocial = filaResultado.Field<string>("RazonSocial");
+                empresa.codigoHabilitacion = filaResultado.Field<string>("CodigoHabilitacion");
+                empresa.ubicacion = filaResultado.Field<int>("IdMunicipio");
+                empresa.direccion = filaResultado.Field<string>("Direccion");
+                empresa.telefono = filaResultado.Field<string>("Telefono");
+                empresa.celular = filaResultado.Field<string>("Celular");
+                empresa.email = filaResultado.Field<string>("Email");
+                empresa.sigla = filaResultado.Field<string>("Sigla");
+                empresa.encabezado = filaResultado.Field<string>("EncabezadoFactura");
+                empresa.pie = filaResultado.Field<string>("PieFactura");
+                empresa.logo = filaResultado.Field<byte[]>("Logo");
+                empresa.idResponsable = filaResultado.Field<int>("IdTercero");
+
+                txtNit.Text = empresa.nit;
+                txtNombre.Text = empresa.razonSocial;
+                txtCodigoHabilitacion.Text = empresa.codigoHabilitacion;
+                txtDireccion.Text = empresa.direccion;
+                txtTelefono.Text = empresa.telefono;
+                txtCelular.Text = empresa.celular;
+                txtMail.Text = empresa.email;
+                txtSigla.Text = empresa.sigla;
+                txtEncabezado.Text = empresa.encabezado;
+                txtPie.Text = empresa.pie;
+                picLogo.Image = null;
+                if (empresa.logo != null)
+                {
+                    using (MemoryStream memSt = new MemoryStream(empresa.logo))
+                    {
+                        picLogo.Image = Image.FromStream(memSt);
+                    }
+                }
+
+                txtIdentificacionRepresentante.Text = filaResultado.Field<string>("identificacion");
+                txtNombreResponsable.Text = filaResultado.Field<string>("nombreTercero");
+                cbPais.SelectedValue = filaResultado.Field<int>("IdPais");
+                cbDepartamento.SelectedValue = filaResultado.Field<int>("IdDepartamento");
+                cbCiudad.SelectedValue = empresa.ubicacion;
+                GeneralC.posBuscar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular);
+            }
         }
         void iniciarlizarForm()
         {
@@ -143,11 +201,102 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                  cbPais);
         }
-        private void armarEmpresa()
+        bool validarForm()
         {
+            if (txtNit.Text.Equals(""))
+            {
+                GeneralC.mostrarMensajeInformacio("Debe ingresar el nit !", txtNit);
+                return false;
+            }
+            else if (txtCodigoHabilitacion.Text.Equals(""))
+            {
+                GeneralC.mostrarMensajeInformacio("Debe ingresar el codigo de habilitación !", txtCodigoHabilitacion);
+                return false;
+            }
+            else if (txtNombre.Text.Equals(""))
+            {
+                GeneralC.mostrarMensajeInformacio("Debe ingresar la razon social de la empresa !", txtNombre);
+                return false;
+            }
+            else if (txtDireccion.Text.Equals(""))
+            {
+                GeneralC.mostrarMensajeInformacio("Debe ingresar la dirección de la empresa !", txtDireccion);
+                return false;
+            }
+            else if (txtTelefono.Text.Equals("") && txtCelular.Text.Equals(""))
+            {
+                GeneralC.mostrarMensajeInformacio("Debe ingresar algún contacto para la empresa !", txtTelefono);
+                return false;
+            }
+            else if (cbPais.SelectedValue.Equals(Util.Constantes.ConstanteGeneral.PREDETERMINADA) || cbPais.SelectedValue == null)
+            {
+                GeneralC.mostrarMensajeInformacio("Debe escojer el pais !", cbPais);
+                return false;
+            }
+            else if (cbDepartamento.SelectedValue.Equals(Util.Constantes.ConstanteGeneral.PREDETERMINADA) || cbDepartamento.SelectedValue == null)
+            {
+                GeneralC.mostrarMensajeInformacio("Debe escojer el departamento !", cbDepartamento);
+                return false;
+            }
+            else if (cbCiudad.SelectedValue.Equals(Util.Constantes.ConstanteGeneral.PREDETERMINADA) || cbCiudad.SelectedValue == null)
+            {
+                GeneralC.mostrarMensajeInformacio("Debe escojer la municipio !", cbCiudad);
+                return false;
+            }
+            else if (txtIdentificacionRepresentante.Text.Equals(""))
+            {
+                GeneralC.mostrarMensajeInformacio("Debe escojer el representante de la empresa !", btBuscarTercero);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        private void asignarDatosEmpresa()
+        {
+            empresa.nit = txtNit.Text;
             empresa.razonSocial = txtNombre.Text;
+            empresa.codigoHabilitacion = txtCodigoHabilitacion.Text;
+            empresa.ubicacion = int.Parse(cbCiudad.SelectedValue.ToString());
+            empresa.direccion = txtDireccion.Text;
+            empresa.telefono = txtTelefono.Text;
+            empresa.celular = txtCelular.Text;
+            empresa.email = txtMail.Text;
+            empresa.sigla = txtSigla.Text;
+            empresa.encabezado = txtEncabezado.Text;
+            empresa.pie = txtPie.Text;
+            if (picLogo.Image != null)
+            {
+                using (Bitmap bmp = new Bitmap(picLogo.Image))
+                {
+                    using (MemoryStream memStream = new MemoryStream())
+                    {
+                        bmp.Save(memStream, picLogo.Image.RawFormat);
+                        empresa.logo = memStream.GetBuffer();
+                    }
+                }
+            }
+
+        }
+        void limpiarObjetoEmpresa()
+        {
+            empresa.idEmpresa = 0;
+            empresa.nit = string.Empty;
+            empresa.razonSocial = string.Empty;
+            empresa.codigoHabilitacion = string.Empty;
+            empresa.ubicacion = 0;
+            empresa.direccion = string.Empty;
+            empresa.telefono = string.Empty;
+            empresa.celular = string.Empty;
+            empresa.email = string.Empty;
+            empresa.sigla = string.Empty;
+            empresa.encabezado = string.Empty;
+            empresa.pie = string.Empty;
+            empresa.logo = null;
+            empresa.idResponsable = 0;
         }
         #endregion
-   
+
     }
 }

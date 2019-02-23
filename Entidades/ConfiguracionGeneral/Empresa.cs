@@ -8,6 +8,10 @@ namespace Galactus.Entidades.ConfiguracionGeneral
 {
     class Empresa
     {
+        public Empresa()
+        {
+            idEmpresa = 0;
+        }
         public int idEmpresa { get; set; }
         public string nit { get; set; }
         public string razonSocial { get; set; }
@@ -16,7 +20,7 @@ namespace Galactus.Entidades.ConfiguracionGeneral
         public string direccion { get; set; }
         public string telefono { get; set; }
         public string celular { get; set; }
-        public string corro { get; set; }
+        public string email { get; set; }
         public string sigla { get; set; }
         public string encabezado { get; set; }
         public string pie { get; set; }

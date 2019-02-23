@@ -35,25 +35,25 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.GroupBox4 = new System.Windows.Forms.GroupBox();
             this.btlogo = new System.Windows.Forms.Button();
-            this.pictLogo = new System.Windows.Forms.PictureBox();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.GroupBox7 = new System.Windows.Forms.GroupBox();
-            this.textpiepagina = new System.Windows.Forms.TextBox();
+            this.txtPie = new System.Windows.Forms.TextBox();
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
-            this.Textencabezado = new System.Windows.Forms.TextBox();
-            this.Textcelular = new System.Windows.Forms.TextBox();
-            this.Textsigla = new System.Windows.Forms.TextBox();
+            this.txtEncabezado = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.txtSigla = new System.Windows.Forms.TextBox();
             this.Label24 = new System.Windows.Forms.Label();
             this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.btBuscarTercero = new System.Windows.Forms.Button();
-            this.txtNombreTercero = new System.Windows.Forms.TextBox();
-            this.txtIdRepresentante = new System.Windows.Forms.TextBox();
+            this.txtNombreResponsable = new System.Windows.Forms.TextBox();
+            this.txtIdentificacionRepresentante = new System.Windows.Forms.TextBox();
             this.Label11 = new System.Windows.Forms.Label();
             this.Label10 = new System.Windows.Forms.Label();
-            this.Texttelefono = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.Label23 = new System.Windows.Forms.Label();
-            this.Textemail = new System.Windows.Forms.TextBox();
+            this.txtMail = new System.Windows.Forms.TextBox();
             this.Label21 = new System.Windows.Forms.Label();
-            this.Textdireccion = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.Label12 = new System.Windows.Forms.Label();
             this.cbCiudad = new System.Windows.Forms.ComboBox();
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
@@ -65,9 +65,9 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label4 = new System.Windows.Forms.Label();
-            this.Textcodhabilitacion = new System.Windows.Forms.TextBox();
-            this.Textdv = new System.Windows.Forms.TextBox();
-            this.Textnit = new System.Windows.Forms.TextBox();
+            this.txtCodigoHabilitacion = new System.Windows.Forms.TextBox();
+            this.txtBDv = new System.Windows.Forms.TextBox();
+            this.txtNit = new System.Windows.Forms.TextBox();
             this.Label3 = new System.Windows.Forms.Label();
             this.Label25 = new System.Windows.Forms.Label();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
@@ -83,7 +83,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.GroupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.GroupBox7.SuspendLayout();
             this.GroupBox6.SuspendLayout();
             this.GroupBox2.SuspendLayout();
@@ -116,15 +116,15 @@
             // 
             this.GroupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.GroupBox1.Controls.Add(this.tabControl1);
-            this.GroupBox1.Controls.Add(this.Textcelular);
-            this.GroupBox1.Controls.Add(this.Textsigla);
+            this.GroupBox1.Controls.Add(this.txtCelular);
+            this.GroupBox1.Controls.Add(this.txtSigla);
             this.GroupBox1.Controls.Add(this.Label24);
             this.GroupBox1.Controls.Add(this.GroupBox2);
-            this.GroupBox1.Controls.Add(this.Texttelefono);
+            this.GroupBox1.Controls.Add(this.txtTelefono);
             this.GroupBox1.Controls.Add(this.Label23);
-            this.GroupBox1.Controls.Add(this.Textemail);
+            this.GroupBox1.Controls.Add(this.txtMail);
             this.GroupBox1.Controls.Add(this.Label21);
-            this.GroupBox1.Controls.Add(this.Textdireccion);
+            this.GroupBox1.Controls.Add(this.txtDireccion);
             this.GroupBox1.Controls.Add(this.Label12);
             this.GroupBox1.Controls.Add(this.cbCiudad);
             this.GroupBox1.Controls.Add(this.cbDepartamento);
@@ -136,9 +136,9 @@
             this.GroupBox1.Controls.Add(this.txtNombre);
             this.GroupBox1.Controls.Add(this.Label5);
             this.GroupBox1.Controls.Add(this.Label4);
-            this.GroupBox1.Controls.Add(this.Textcodhabilitacion);
-            this.GroupBox1.Controls.Add(this.Textdv);
-            this.GroupBox1.Controls.Add(this.Textnit);
+            this.GroupBox1.Controls.Add(this.txtCodigoHabilitacion);
+            this.GroupBox1.Controls.Add(this.txtBDv);
+            this.GroupBox1.Controls.Add(this.txtNit);
             this.GroupBox1.Controls.Add(this.Label3);
             this.GroupBox1.Controls.Add(this.Label25);
             this.GroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -172,7 +172,7 @@
             // GroupBox4
             // 
             this.GroupBox4.Controls.Add(this.btlogo);
-            this.GroupBox4.Controls.Add(this.pictLogo);
+            this.GroupBox4.Controls.Add(this.picLogo);
             this.GroupBox4.Controls.Add(this.GroupBox7);
             this.GroupBox4.Controls.Add(this.GroupBox6);
             this.GroupBox4.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -196,20 +196,20 @@
             this.btlogo.UseVisualStyleBackColor = false;
             this.btlogo.Click += new System.EventHandler(this.btlogo_Click);
             // 
-            // pictLogo
+            // picLogo
             // 
-            this.pictLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictLogo.Location = new System.Drawing.Point(804, 20);
-            this.pictLogo.Name = "pictLogo";
-            this.pictLogo.Size = new System.Drawing.Size(170, 159);
-            this.pictLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictLogo.TabIndex = 0;
-            this.pictLogo.TabStop = false;
+            this.picLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picLogo.Location = new System.Drawing.Point(804, 20);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(170, 159);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
             // 
             // GroupBox7
             // 
-            this.GroupBox7.Controls.Add(this.textpiepagina);
+            this.GroupBox7.Controls.Add(this.txtPie);
             this.GroupBox7.Location = new System.Drawing.Point(6, 116);
             this.GroupBox7.Name = "GroupBox7";
             this.GroupBox7.Size = new System.Drawing.Size(792, 93);
@@ -217,19 +217,19 @@
             this.GroupBox7.TabStop = false;
             this.GroupBox7.Text = "Pie de factura";
             // 
-            // textpiepagina
+            // txtPie
             // 
-            this.textpiepagina.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textpiepagina.Location = new System.Drawing.Point(6, 20);
-            this.textpiepagina.Multiline = true;
-            this.textpiepagina.Name = "textpiepagina";
-            this.textpiepagina.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textpiepagina.Size = new System.Drawing.Size(780, 67);
-            this.textpiepagina.TabIndex = 21;
+            this.txtPie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPie.Location = new System.Drawing.Point(6, 20);
+            this.txtPie.Multiline = true;
+            this.txtPie.Name = "txtPie";
+            this.txtPie.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtPie.Size = new System.Drawing.Size(780, 67);
+            this.txtPie.TabIndex = 21;
             // 
             // GroupBox6
             // 
-            this.GroupBox6.Controls.Add(this.Textencabezado);
+            this.GroupBox6.Controls.Add(this.txtEncabezado);
             this.GroupBox6.Location = new System.Drawing.Point(6, 15);
             this.GroupBox6.Name = "GroupBox6";
             this.GroupBox6.Size = new System.Drawing.Size(792, 93);
@@ -237,36 +237,36 @@
             this.GroupBox6.TabStop = false;
             this.GroupBox6.Text = "Encabezado";
             // 
-            // Textencabezado
+            // txtEncabezado
             // 
-            this.Textencabezado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textencabezado.Location = new System.Drawing.Point(6, 20);
-            this.Textencabezado.Multiline = true;
-            this.Textencabezado.Name = "Textencabezado";
-            this.Textencabezado.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.Textencabezado.Size = new System.Drawing.Size(780, 67);
-            this.Textencabezado.TabIndex = 20;
+            this.txtEncabezado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEncabezado.Location = new System.Drawing.Point(6, 20);
+            this.txtEncabezado.Multiline = true;
+            this.txtEncabezado.Name = "txtEncabezado";
+            this.txtEncabezado.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtEncabezado.Size = new System.Drawing.Size(780, 67);
+            this.txtEncabezado.TabIndex = 20;
             // 
-            // Textcelular
+            // txtCelular
             // 
-            this.Textcelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textcelular.Location = new System.Drawing.Point(861, 69);
-            this.Textcelular.Name = "Textcelular";
-            this.Textcelular.ShortcutsEnabled = false;
-            this.Textcelular.Size = new System.Drawing.Size(137, 21);
-            this.Textcelular.TabIndex = 8;
+            this.txtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Location = new System.Drawing.Point(861, 69);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.ShortcutsEnabled = false;
+            this.txtCelular.Size = new System.Drawing.Size(137, 21);
+            this.txtCelular.TabIndex = 8;
             // 
-            // Textsigla
+            // txtSigla
             // 
-            this.Textsigla.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Textsigla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textsigla.Location = new System.Drawing.Point(609, 96);
-            this.Textsigla.MaxLength = 2;
-            this.Textsigla.Name = "Textsigla";
-            this.Textsigla.ShortcutsEnabled = false;
-            this.Textsigla.Size = new System.Drawing.Size(95, 21);
-            this.Textsigla.TabIndex = 11;
-            this.Textsigla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSigla.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSigla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSigla.Location = new System.Drawing.Point(609, 96);
+            this.txtSigla.MaxLength = 2;
+            this.txtSigla.Name = "txtSigla";
+            this.txtSigla.ShortcutsEnabled = false;
+            this.txtSigla.Size = new System.Drawing.Size(95, 21);
+            this.txtSigla.TabIndex = 11;
+            this.txtSigla.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Label24
             // 
@@ -281,8 +281,8 @@
             // GroupBox2
             // 
             this.GroupBox2.Controls.Add(this.btBuscarTercero);
-            this.GroupBox2.Controls.Add(this.txtNombreTercero);
-            this.GroupBox2.Controls.Add(this.txtIdRepresentante);
+            this.GroupBox2.Controls.Add(this.txtNombreResponsable);
+            this.GroupBox2.Controls.Add(this.txtIdentificacionRepresentante);
             this.GroupBox2.Controls.Add(this.Label11);
             this.GroupBox2.Controls.Add(this.Label10);
             this.GroupBox2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,23 +305,23 @@
             this.btBuscarTercero.UseVisualStyleBackColor = false;
             this.btBuscarTercero.Click += new System.EventHandler(this.btBuscarTercero_Click);
             // 
-            // txtNombreTercero
+            // txtNombreResponsable
             // 
-            this.txtNombreTercero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreTercero.Location = new System.Drawing.Point(340, 19);
-            this.txtNombreTercero.Name = "txtNombreTercero";
-            this.txtNombreTercero.ReadOnly = true;
-            this.txtNombreTercero.Size = new System.Drawing.Size(651, 21);
-            this.txtNombreTercero.TabIndex = 9999;
+            this.txtNombreResponsable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreResponsable.Location = new System.Drawing.Point(340, 19);
+            this.txtNombreResponsable.Name = "txtNombreResponsable";
+            this.txtNombreResponsable.ReadOnly = true;
+            this.txtNombreResponsable.Size = new System.Drawing.Size(651, 21);
+            this.txtNombreResponsable.TabIndex = 9999;
             // 
-            // txtIdRepresentante
+            // txtIdentificacionRepresentante
             // 
-            this.txtIdRepresentante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdRepresentante.Location = new System.Drawing.Point(91, 19);
-            this.txtIdRepresentante.Name = "txtIdRepresentante";
-            this.txtIdRepresentante.ReadOnly = true;
-            this.txtIdRepresentante.Size = new System.Drawing.Size(136, 21);
-            this.txtIdRepresentante.TabIndex = 9999;
+            this.txtIdentificacionRepresentante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdentificacionRepresentante.Location = new System.Drawing.Point(91, 19);
+            this.txtIdentificacionRepresentante.Name = "txtIdentificacionRepresentante";
+            this.txtIdentificacionRepresentante.ReadOnly = true;
+            this.txtIdentificacionRepresentante.Size = new System.Drawing.Size(136, 21);
+            this.txtIdentificacionRepresentante.TabIndex = 9999;
             // 
             // Label11
             // 
@@ -343,14 +343,14 @@
             this.Label10.TabIndex = 11;
             this.Label10.Text = "Identificación :";
             // 
-            // Texttelefono
+            // txtTelefono
             // 
-            this.Texttelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Texttelefono.Location = new System.Drawing.Point(609, 69);
-            this.Texttelefono.Name = "Texttelefono";
-            this.Texttelefono.ShortcutsEnabled = false;
-            this.Texttelefono.Size = new System.Drawing.Size(159, 21);
-            this.Texttelefono.TabIndex = 7;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(609, 69);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.ShortcutsEnabled = false;
+            this.txtTelefono.Size = new System.Drawing.Size(159, 21);
+            this.txtTelefono.TabIndex = 7;
             // 
             // Label23
             // 
@@ -362,13 +362,13 @@
             this.Label23.TabIndex = 17;
             this.Label23.Text = "Teléfono:";
             // 
-            // Textemail
+            // txtMail
             // 
-            this.Textemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textemail.Location = new System.Drawing.Point(68, 94);
-            this.Textemail.Name = "Textemail";
-            this.Textemail.Size = new System.Drawing.Size(422, 21);
-            this.Textemail.TabIndex = 9;
+            this.txtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMail.Location = new System.Drawing.Point(68, 94);
+            this.txtMail.Name = "txtMail";
+            this.txtMail.Size = new System.Drawing.Size(422, 21);
+            this.txtMail.TabIndex = 9;
             // 
             // Label21
             // 
@@ -380,13 +380,13 @@
             this.Label21.TabIndex = 15;
             this.Label21.Text = "Em@il:";
             // 
-            // Textdireccion
+            // txtDireccion
             // 
-            this.Textdireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textdireccion.Location = new System.Drawing.Point(68, 69);
-            this.Textdireccion.Name = "Textdireccion";
-            this.Textdireccion.Size = new System.Drawing.Size(422, 21);
-            this.Textdireccion.TabIndex = 6;
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(68, 69);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(422, 21);
+            this.txtDireccion.TabIndex = 6;
             // 
             // Label12
             // 
@@ -501,33 +501,34 @@
             this.Label4.TabIndex = 4;
             this.Label4.Text = "Nit:";
             // 
-            // Textcodhabilitacion
+            // txtCodigoHabilitacion
             // 
-            this.Textcodhabilitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textcodhabilitacion.Location = new System.Drawing.Point(331, 14);
-            this.Textcodhabilitacion.Name = "Textcodhabilitacion";
-            this.Textcodhabilitacion.ShortcutsEnabled = false;
-            this.Textcodhabilitacion.Size = new System.Drawing.Size(159, 21);
-            this.Textcodhabilitacion.TabIndex = 1;
+            this.txtCodigoHabilitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoHabilitacion.Location = new System.Drawing.Point(331, 14);
+            this.txtCodigoHabilitacion.Name = "txtCodigoHabilitacion";
+            this.txtCodigoHabilitacion.ShortcutsEnabled = false;
+            this.txtCodigoHabilitacion.Size = new System.Drawing.Size(159, 21);
+            this.txtCodigoHabilitacion.TabIndex = 1;
             // 
-            // Textdv
+            // txtBDv
             // 
-            this.Textdv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textdv.Location = new System.Drawing.Point(211, 13);
-            this.Textdv.Name = "Textdv";
-            this.Textdv.ReadOnly = true;
-            this.Textdv.Size = new System.Drawing.Size(16, 21);
-            this.Textdv.TabIndex = 9999;
+            this.txtBDv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBDv.Location = new System.Drawing.Point(211, 13);
+            this.txtBDv.Name = "txtBDv";
+            this.txtBDv.ReadOnly = true;
+            this.txtBDv.Size = new System.Drawing.Size(16, 21);
+            this.txtBDv.TabIndex = 9999;
             // 
-            // Textnit
+            // txtNit
             // 
-            this.Textnit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textnit.Location = new System.Drawing.Point(68, 13);
-            this.Textnit.Name = "Textnit";
-            this.Textnit.ShortcutsEnabled = false;
-            this.Textnit.Size = new System.Drawing.Size(136, 21);
-            this.Textnit.TabIndex = 0;
-            this.Textnit.TextChanged += new System.EventHandler(this.Textnit_TextChanged);
+            this.txtNit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNit.Location = new System.Drawing.Point(68, 13);
+            this.txtNit.MaxLength = 20;
+            this.txtNit.Name = "txtNit";
+            this.txtNit.ShortcutsEnabled = false;
+            this.txtNit.Size = new System.Drawing.Size(136, 21);
+            this.txtNit.TabIndex = 0;
+            this.txtNit.TextChanged += new System.EventHandler(this.Textnit_TextChanged);
             // 
             // Label3
             // 
@@ -648,7 +649,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.GroupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.GroupBox7.ResumeLayout(false);
             this.GroupBox7.PerformLayout();
             this.GroupBox6.ResumeLayout(false);
@@ -666,25 +667,25 @@
         public System.Windows.Forms.TabControl tbcEmpresa;
         public System.Windows.Forms.TabPage tbpInformacion;
         public System.Windows.Forms.GroupBox GroupBox1;
-        public System.Windows.Forms.TextBox Textcelular;
+        public System.Windows.Forms.TextBox txtCelular;
         public System.Windows.Forms.GroupBox GroupBox4;
-        public System.Windows.Forms.PictureBox pictLogo;
+        public System.Windows.Forms.PictureBox picLogo;
         public System.Windows.Forms.GroupBox GroupBox7;
-        public System.Windows.Forms.TextBox textpiepagina;
+        public System.Windows.Forms.TextBox txtPie;
         public System.Windows.Forms.GroupBox GroupBox6;
-        public System.Windows.Forms.TextBox Textencabezado;
-        public System.Windows.Forms.TextBox Textsigla;
+        public System.Windows.Forms.TextBox txtEncabezado;
+        public System.Windows.Forms.TextBox txtSigla;
         public System.Windows.Forms.Label Label24;
         public System.Windows.Forms.GroupBox GroupBox2;
-        public System.Windows.Forms.TextBox txtNombreTercero;
-        public System.Windows.Forms.TextBox txtIdRepresentante;
+        public System.Windows.Forms.TextBox txtNombreResponsable;
+        public System.Windows.Forms.TextBox txtIdentificacionRepresentante;
         public System.Windows.Forms.Label Label11;
         public System.Windows.Forms.Label Label10;
-        public System.Windows.Forms.TextBox Texttelefono;
+        public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.Label Label23;
-        public System.Windows.Forms.TextBox Textemail;
+        public System.Windows.Forms.TextBox txtMail;
         public System.Windows.Forms.Label Label21;
-        public System.Windows.Forms.TextBox Textdireccion;
+        public System.Windows.Forms.TextBox txtDireccion;
         public System.Windows.Forms.Label Label12;
         public System.Windows.Forms.ComboBox cbCiudad;
         public System.Windows.Forms.ComboBox cbDepartamento;
@@ -696,9 +697,9 @@
         public System.Windows.Forms.TextBox txtNombre;
         public System.Windows.Forms.Label Label5;
         public System.Windows.Forms.Label Label4;
-        public System.Windows.Forms.TextBox Textcodhabilitacion;
-        public System.Windows.Forms.TextBox Textdv;
-        public System.Windows.Forms.TextBox Textnit;
+        public System.Windows.Forms.TextBox txtCodigoHabilitacion;
+        public System.Windows.Forms.TextBox txtBDv;
+        public System.Windows.Forms.TextBox txtNit;
         public System.Windows.Forms.Label Label3;
         public System.Windows.Forms.Label Label25;
         public System.Windows.Forms.Button btlogo;

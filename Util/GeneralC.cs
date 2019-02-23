@@ -557,7 +557,7 @@ namespace Galactus
         }
         public static void mostrarMensajeInformacio(string mensaje, Control control)
         {
-            MessageBox.Show(mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
             control.Focus();
         }
         public static void quitarColumnaDatatable(string nombreColumna, DataTable tabla)
