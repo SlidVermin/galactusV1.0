@@ -574,7 +574,10 @@ namespace Galactus.VistaControlador
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Close();
+            if (MessageBox.Show(Mensajes.SALIR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Close();
+            }
         }
 
         private void btnSalir_MouseHover(object sender, EventArgs e)

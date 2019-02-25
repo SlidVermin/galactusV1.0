@@ -71,6 +71,14 @@ namespace Galactus
 
         public const String ADMISION_PACIENTE_CARGAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionPacienteCargar";
         public const String ADMISION_PACIENTE_BUSCAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionPacienteBuscar";
+        public const String ADMISION_CONTRATO_EPS = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionContratoEps";
+        public const String ADMISION_TERCERO_PACIENTE = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionTerceroPaciente";
+        public const String ADMISION_ESPECIALIDAD = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionEspecialidad";
+        public const String ADMISION_TRIAGE = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionTriage";
+        public const String ADMISION_CREAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionCrear";
+        public const String ADMISION_BUSCAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionBuscar";
+        public const String ADMISION_ANULAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionAnular";
+        public const String ADMISION_CARGAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionCargar";
         #endregion
         #region Gestion
         public const string BUSCAR_TERCERO = ConstanteGeneral.ESQUEMA_TERCERO + "[uspTerceroBuscar]";

@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="tstMenuPatron.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>He confirmado que el paciente es la persona indicada en la solictud, tambien su grupo sanguíneo ABO y RH, he comparado y confirmado el nombre, numero de grupo sanguíneo ABO y RH del donante que aparece escrito en la solicitud y en el rotulo de la bolsa.</value>
+  </data>
+  <data name="richTextBox3.Text" xml:space="preserve">
+    <value>Doy constancia como paciente (o acudiente responsable) que soy debidamente informado por mi personal médico tratante de los beneficios de recibir la transfusión sanguínea o de alguno de sus componete y tambien de los eventos adversos que eventualmente pidieses ocurrir con sus consecuencias como reacciones transfusionales, contraer enfermedades infecciosas, según decreto 1571 y otras, a pesar de la institución haber realizado una selección adecuada de los donantes y realizar todas las pruebas de laboratorio como disponen las normas legales, y los resultados sean negativos. Por lo tanto, doy mi consentimiento para que me realicen las transfusiones sanguíneas que sean necesarias.</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>

@@ -85,6 +85,7 @@
     <Compile Include="Entidades\Inventario\Cliente.cs" />
     <Compile Include="Entidades\Inventario\GeneralTercero.cs" />
     <Compile Include="Entidades\Inventario\Proveedor.cs" />
+    <Compile Include="Modelo\Admision\AdmisionDAL.cs" />
     <Compile Include="Modelo\Admision\Configuracion\ManualServicioDAL.cs" />
     <Compile Include="Modelo\Admision\manualTarifarioServicioDAL.cs" />
     <Compile Include="Modelo\Admision\PacienteDAL.cs" />

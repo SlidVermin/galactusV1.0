@@ -21,6 +21,8 @@ namespace Galactus.Util.Constantes
         public const int METODO_SOAT = 2;
         public const int METODO_ISS = 3;
 
+      
+
         public const String VALUEMEMBER = "Código";
         public const String DISPLAYMEMBER = "Descripcion";
         public const String VALUE_VALOR = "IdDescripcionValor";
@@ -51,6 +53,8 @@ namespace Galactus.Util.Constantes
         public const int UNIDADES_DE_MEDIDA = 7;
         public const int REGIMEN_SOCIO_ECONOMICO = 13;
         public const int BANCO = 14;
+        public const int TRIAGE = 15;
+        public const int ESPECIALIDAD = 16;
         #endregion
 
     }

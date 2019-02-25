@@ -39,11 +39,10 @@
             this.tbtImprimir = new System.Windows.Forms.ToolStripButton();
             this.admisionesPB = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkResponsable = new System.Windows.Forms.CheckBox();
+            this.checkAcompanante = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.borrarFirmaRespBtn = new System.Windows.Forms.Button();
-            this.firmaRespPB = new System.Windows.Forms.PictureBox();
-            this.tomarFirmaRespBtn = new System.Windows.Forms.Button();
+            this.pnlresponsable = new System.Windows.Forms.Panel();
             this.dirResponsableBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.nombreRespText = new System.Windows.Forms.TextBox();
@@ -61,11 +60,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.copiarAcompañanteBtn = new System.Windows.Forms.Button();
-            this.borrarFirmaAcompBtn = new System.Windows.Forms.Button();
-            this.firmaAcompañantePB = new System.Windows.Forms.PictureBox();
-            this.tomarFirmaAcompBtn = new System.Windows.Forms.Button();
+            this.pnlacompanante = new System.Windows.Forms.Panel();
             this.nombreAcompañanteText = new System.Windows.Forms.TextBox();
             this.telAcompañanteText = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -120,10 +115,8 @@
             this.tstMenuPatron.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.admisionesPB)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.firmaRespPB)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.firmaAcompañantePB)).BeginInit();
+            this.pnlresponsable.SuspendLayout();
+            this.pnlacompanante.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -163,6 +156,7 @@
             this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
             this.tBtNuevo.Text = "Nuevo";
             this.tBtNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tBtNuevo.Click += new System.EventHandler(this.tBtNuevo_Click);
             // 
             // tBtEditar
             // 
@@ -172,6 +166,7 @@
             this.tBtEditar.Size = new System.Drawing.Size(57, 22);
             this.tBtEditar.Text = "Editar";
             this.tBtEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tBtEditar.Click += new System.EventHandler(this.tBtEditar_Click);
             // 
             // tBtCancelar
             // 
@@ -181,6 +176,7 @@
             this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
             this.tBtCancelar.Text = "Cancelar";
             this.tBtCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tBtCancelar.Click += new System.EventHandler(this.tBtCancelar_Click);
             // 
             // tBtGuardar
             // 
@@ -190,6 +186,7 @@
             this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
             this.tBtGuardar.Text = "Guardar";
             this.tBtGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tBtGuardar.Click += new System.EventHandler(this.tBtGuardar_Click);
             // 
             // tBtBuscar
             // 
@@ -199,6 +196,7 @@
             this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
             this.tBtBuscar.Text = "Buscar";
             this.tBtBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tBtBuscar.Click += new System.EventHandler(this.tBtBuscar_Click);
             // 
             // tbtAnular
             // 
@@ -208,6 +206,7 @@
             this.tbtAnular.Size = new System.Drawing.Size(62, 22);
             this.tbtAnular.Text = "Anular";
             this.tbtAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tbtAnular.Click += new System.EventHandler(this.tbtAnular_Click);
             // 
             // tbtImprimir
             // 
@@ -230,10 +229,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.checkResponsable);
+            this.panel1.Controls.Add(this.checkAcompanante);
             this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.pnlresponsable);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.pnlacompanante);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label33);
@@ -243,80 +244,66 @@
             this.panel1.Size = new System.Drawing.Size(883, 537);
             this.panel1.TabIndex = 28;
             // 
+            // checkResponsable
+            // 
+            this.checkResponsable.AutoSize = true;
+            this.checkResponsable.Location = new System.Drawing.Point(9, 402);
+            this.checkResponsable.Name = "checkResponsable";
+            this.checkResponsable.Size = new System.Drawing.Size(15, 14);
+            this.checkResponsable.TabIndex = 56;
+            this.checkResponsable.UseVisualStyleBackColor = true;
+            this.checkResponsable.CheckedChanged += new System.EventHandler(this.checkResponsable_CheckedChanged);
+            // 
+            // checkAcompanante
+            // 
+            this.checkAcompanante.AutoSize = true;
+            this.checkAcompanante.Location = new System.Drawing.Point(9, 257);
+            this.checkAcompanante.Name = "checkAcompanante";
+            this.checkAcompanante.Size = new System.Drawing.Size(15, 14);
+            this.checkAcompanante.TabIndex = 55;
+            this.checkAcompanante.UseVisualStyleBackColor = true;
+            this.checkAcompanante.CheckedChanged += new System.EventHandler(this.checkAcompanante_CheckedChanged);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(11, 387);
+            this.label17.Location = new System.Drawing.Point(11, 385);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(207, 20);
             this.label17.TabIndex = 54;
             this.label17.Text = "Información responsable";
             // 
-            // panel5
+            // pnlresponsable
             // 
-            this.panel5.Controls.Add(this.borrarFirmaRespBtn);
-            this.panel5.Controls.Add(this.firmaRespPB);
-            this.panel5.Controls.Add(this.tomarFirmaRespBtn);
-            this.panel5.Controls.Add(this.dirResponsableBox);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.nombreRespText);
-            this.panel5.Controls.Add(this.telRespText);
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.departRespBox);
-            this.panel5.Controls.Add(this.idResponsableText);
-            this.panel5.Controls.Add(this.paisResponsableBox);
-            this.panel5.Controls.Add(this.ciudadResBox);
-            this.panel5.Controls.Add(this.label29);
-            this.panel5.Controls.Add(this.label28);
-            this.panel5.Controls.Add(this.label27);
-            this.panel5.Controls.Add(this.label26);
-            this.panel5.Controls.Add(this.tipoDocResponsableBox);
-            this.panel5.Controls.Add(this.label25);
-            this.panel5.Controls.Add(this.label24);
-            this.panel5.Location = new System.Drawing.Point(10, 414);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(862, 103);
-            this.panel5.TabIndex = 53;
-            // 
-            // borrarFirmaRespBtn
-            // 
-            this.borrarFirmaRespBtn.Image = global::Galactus.Properties.Resources.error__1_;
-            this.borrarFirmaRespBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.borrarFirmaRespBtn.Location = new System.Drawing.Point(586, 62);
-            this.borrarFirmaRespBtn.Name = "borrarFirmaRespBtn";
-            this.borrarFirmaRespBtn.Size = new System.Drawing.Size(93, 33);
-            this.borrarFirmaRespBtn.TabIndex = 46;
-            this.borrarFirmaRespBtn.Text = "Borrar Firma";
-            this.borrarFirmaRespBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.borrarFirmaRespBtn.UseVisualStyleBackColor = true;
-            // 
-            // firmaRespPB
-            // 
-            this.firmaRespPB.BackColor = System.Drawing.Color.White;
-            this.firmaRespPB.Location = new System.Drawing.Point(357, 62);
-            this.firmaRespPB.Name = "firmaRespPB";
-            this.firmaRespPB.Size = new System.Drawing.Size(223, 33);
-            this.firmaRespPB.TabIndex = 45;
-            this.firmaRespPB.TabStop = false;
-            // 
-            // tomarFirmaRespBtn
-            // 
-            this.tomarFirmaRespBtn.Image = global::Galactus.Properties.Resources.checked__1_;
-            this.tomarFirmaRespBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tomarFirmaRespBtn.Location = new System.Drawing.Point(252, 62);
-            this.tomarFirmaRespBtn.Name = "tomarFirmaRespBtn";
-            this.tomarFirmaRespBtn.Size = new System.Drawing.Size(97, 33);
-            this.tomarFirmaRespBtn.TabIndex = 44;
-            this.tomarFirmaRespBtn.Text = "Tomar Firma";
-            this.tomarFirmaRespBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tomarFirmaRespBtn.UseVisualStyleBackColor = true;
+            this.pnlresponsable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlresponsable.Controls.Add(this.dirResponsableBox);
+            this.pnlresponsable.Controls.Add(this.label13);
+            this.pnlresponsable.Controls.Add(this.nombreRespText);
+            this.pnlresponsable.Controls.Add(this.telRespText);
+            this.pnlresponsable.Controls.Add(this.label12);
+            this.pnlresponsable.Controls.Add(this.departRespBox);
+            this.pnlresponsable.Controls.Add(this.idResponsableText);
+            this.pnlresponsable.Controls.Add(this.paisResponsableBox);
+            this.pnlresponsable.Controls.Add(this.ciudadResBox);
+            this.pnlresponsable.Controls.Add(this.label29);
+            this.pnlresponsable.Controls.Add(this.label28);
+            this.pnlresponsable.Controls.Add(this.label27);
+            this.pnlresponsable.Controls.Add(this.label26);
+            this.pnlresponsable.Controls.Add(this.tipoDocResponsableBox);
+            this.pnlresponsable.Controls.Add(this.label25);
+            this.pnlresponsable.Controls.Add(this.label24);
+            this.pnlresponsable.Enabled = false;
+            this.pnlresponsable.Location = new System.Drawing.Point(10, 414);
+            this.pnlresponsable.Name = "pnlresponsable";
+            this.pnlresponsable.Size = new System.Drawing.Size(862, 103);
+            this.pnlresponsable.TabIndex = 53;
             // 
             // dirResponsableBox
             // 
             this.dirResponsableBox.Location = new System.Drawing.Point(108, 69);
             this.dirResponsableBox.Name = "dirResponsableBox";
-            this.dirResponsableBox.Size = new System.Drawing.Size(140, 20);
+            this.dirResponsableBox.Size = new System.Drawing.Size(574, 20);
             this.dirResponsableBox.TabIndex = 43;
             // 
             // label13
@@ -331,14 +318,14 @@
             // 
             // nombreRespText
             // 
-            this.nombreRespText.Location = new System.Drawing.Point(544, 5);
+            this.nombreRespText.Location = new System.Drawing.Point(544, 12);
             this.nombreRespText.Name = "nombreRespText";
             this.nombreRespText.Size = new System.Drawing.Size(308, 20);
             this.nombreRespText.TabIndex = 41;
             // 
             // telRespText
             // 
-            this.telRespText.Location = new System.Drawing.Point(745, 34);
+            this.telRespText.Location = new System.Drawing.Point(745, 40);
             this.telRespText.Name = "telRespText";
             this.telRespText.Size = new System.Drawing.Size(107, 20);
             this.telRespText.TabIndex = 40;
@@ -347,7 +334,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label12.Location = new System.Drawing.Point(686, 36);
+            this.label12.Location = new System.Drawing.Point(686, 42);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 16);
             this.label12.TabIndex = 39;
@@ -357,14 +344,15 @@
             // 
             this.departRespBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.departRespBox.FormattingEnabled = true;
-            this.departRespBox.Location = new System.Drawing.Point(351, 36);
+            this.departRespBox.Location = new System.Drawing.Point(351, 42);
             this.departRespBox.Name = "departRespBox";
             this.departRespBox.Size = new System.Drawing.Size(126, 21);
             this.departRespBox.TabIndex = 38;
+            this.departRespBox.SelectedValueChanged += new System.EventHandler(this.departRespBox_SelectedValueChanged_1);
             // 
             // idResponsableText
             // 
-            this.idResponsableText.Location = new System.Drawing.Point(351, 5);
+            this.idResponsableText.Location = new System.Drawing.Point(351, 12);
             this.idResponsableText.Name = "idResponsableText";
             this.idResponsableText.Size = new System.Drawing.Size(126, 20);
             this.idResponsableText.TabIndex = 37;
@@ -373,16 +361,17 @@
             // 
             this.paisResponsableBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.paisResponsableBox.FormattingEnabled = true;
-            this.paisResponsableBox.Location = new System.Drawing.Point(109, 36);
+            this.paisResponsableBox.Location = new System.Drawing.Point(109, 42);
             this.paisResponsableBox.Name = "paisResponsableBox";
             this.paisResponsableBox.Size = new System.Drawing.Size(140, 21);
             this.paisResponsableBox.TabIndex = 36;
+            this.paisResponsableBox.SelectedValueChanged += new System.EventHandler(this.paisResponsableBox_SelectedValueChanged_1);
             // 
             // ciudadResBox
             // 
             this.ciudadResBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ciudadResBox.FormattingEnabled = true;
-            this.ciudadResBox.Location = new System.Drawing.Point(544, 36);
+            this.ciudadResBox.Location = new System.Drawing.Point(544, 42);
             this.ciudadResBox.Name = "ciudadResBox";
             this.ciudadResBox.Size = new System.Drawing.Size(135, 21);
             this.ciudadResBox.TabIndex = 35;
@@ -391,7 +380,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label29.Location = new System.Drawing.Point(491, 39);
+            this.label29.Location = new System.Drawing.Point(491, 45);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(52, 16);
             this.label29.TabIndex = 34;
@@ -401,7 +390,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label28.Location = new System.Drawing.Point(491, 8);
+            this.label28.Location = new System.Drawing.Point(491, 15);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(57, 16);
             this.label28.TabIndex = 33;
@@ -411,7 +400,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label27.Location = new System.Drawing.Point(253, 39);
+            this.label27.Location = new System.Drawing.Point(253, 45);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(93, 16);
             this.label27.TabIndex = 32;
@@ -421,7 +410,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label26.Location = new System.Drawing.Point(252, 9);
+            this.label26.Location = new System.Drawing.Point(252, 16);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(87, 16);
             this.label26.TabIndex = 31;
@@ -431,7 +420,7 @@
             // 
             this.tipoDocResponsableBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoDocResponsableBox.FormattingEnabled = true;
-            this.tipoDocResponsableBox.Location = new System.Drawing.Point(108, 6);
+            this.tipoDocResponsableBox.Location = new System.Drawing.Point(108, 13);
             this.tipoDocResponsableBox.Name = "tipoDocResponsableBox";
             this.tipoDocResponsableBox.Size = new System.Drawing.Size(140, 21);
             this.tipoDocResponsableBox.TabIndex = 30;
@@ -440,7 +429,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label25.Location = new System.Drawing.Point(10, 39);
+            this.label25.Location = new System.Drawing.Point(10, 45);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(38, 16);
             this.label25.TabIndex = 29;
@@ -450,7 +439,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label24.Location = new System.Drawing.Point(10, 9);
+            this.label24.Location = new System.Drawing.Point(10, 16);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(92, 16);
             this.label24.TabIndex = 28;
@@ -460,95 +449,47 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(11, 240);
+            this.label16.Location = new System.Drawing.Point(11, 238);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(218, 20);
             this.label16.TabIndex = 52;
             this.label16.Text = "Información acompañante";
             // 
-            // panel4
+            // pnlacompanante
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.copiarAcompañanteBtn);
-            this.panel4.Controls.Add(this.borrarFirmaAcompBtn);
-            this.panel4.Controls.Add(this.firmaAcompañantePB);
-            this.panel4.Controls.Add(this.tomarFirmaAcompBtn);
-            this.panel4.Controls.Add(this.nombreAcompañanteText);
-            this.panel4.Controls.Add(this.telAcompañanteText);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.idAcompañanteText);
-            this.panel4.Controls.Add(this.dirAcompañanteText);
-            this.panel4.Controls.Add(this.paisAcompañante);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.ciudadAcompañanteBox);
-            this.panel4.Controls.Add(this.label23);
-            this.panel4.Controls.Add(this.label22);
-            this.panel4.Controls.Add(this.departAcompañanteBox);
-            this.panel4.Controls.Add(this.label21);
-            this.panel4.Controls.Add(this.label20);
-            this.panel4.Controls.Add(this.tipoDocAcompañanteBox);
-            this.panel4.Controls.Add(this.label19);
-            this.panel4.Controls.Add(this.label18);
-            this.panel4.Location = new System.Drawing.Point(10, 268);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(862, 114);
-            this.panel4.TabIndex = 51;
-            // 
-            // copiarAcompañanteBtn
-            // 
-            this.copiarAcompañanteBtn.Image = global::Galactus.Properties.Resources.document;
-            this.copiarAcompañanteBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.copiarAcompañanteBtn.Location = new System.Drawing.Point(709, 67);
-            this.copiarAcompañanteBtn.Name = "copiarAcompañanteBtn";
-            this.copiarAcompañanteBtn.Size = new System.Drawing.Size(145, 33);
-            this.copiarAcompañanteBtn.TabIndex = 42;
-            this.copiarAcompañanteBtn.Text = "Copiar acompañante";
-            this.copiarAcompañanteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.copiarAcompañanteBtn.UseVisualStyleBackColor = true;
-            // 
-            // borrarFirmaAcompBtn
-            // 
-            this.borrarFirmaAcompBtn.Image = global::Galactus.Properties.Resources.error__1_;
-            this.borrarFirmaAcompBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.borrarFirmaAcompBtn.Location = new System.Drawing.Point(588, 67);
-            this.borrarFirmaAcompBtn.Name = "borrarFirmaAcompBtn";
-            this.borrarFirmaAcompBtn.Size = new System.Drawing.Size(93, 33);
-            this.borrarFirmaAcompBtn.TabIndex = 41;
-            this.borrarFirmaAcompBtn.Text = "Borrar Firma";
-            this.borrarFirmaAcompBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.borrarFirmaAcompBtn.UseVisualStyleBackColor = true;
-            // 
-            // firmaAcompañantePB
-            // 
-            this.firmaAcompañantePB.BackColor = System.Drawing.Color.White;
-            this.firmaAcompañantePB.Location = new System.Drawing.Point(359, 67);
-            this.firmaAcompañantePB.Name = "firmaAcompañantePB";
-            this.firmaAcompañantePB.Size = new System.Drawing.Size(223, 33);
-            this.firmaAcompañantePB.TabIndex = 40;
-            this.firmaAcompañantePB.TabStop = false;
-            // 
-            // tomarFirmaAcompBtn
-            // 
-            this.tomarFirmaAcompBtn.Image = global::Galactus.Properties.Resources.checked__1_;
-            this.tomarFirmaAcompBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tomarFirmaAcompBtn.Location = new System.Drawing.Point(254, 67);
-            this.tomarFirmaAcompBtn.Name = "tomarFirmaAcompBtn";
-            this.tomarFirmaAcompBtn.Size = new System.Drawing.Size(97, 33);
-            this.tomarFirmaAcompBtn.TabIndex = 39;
-            this.tomarFirmaAcompBtn.Text = "Tomar Firma";
-            this.tomarFirmaAcompBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tomarFirmaAcompBtn.UseVisualStyleBackColor = true;
+            this.pnlacompanante.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlacompanante.Controls.Add(this.nombreAcompañanteText);
+            this.pnlacompanante.Controls.Add(this.telAcompañanteText);
+            this.pnlacompanante.Controls.Add(this.label8);
+            this.pnlacompanante.Controls.Add(this.idAcompañanteText);
+            this.pnlacompanante.Controls.Add(this.dirAcompañanteText);
+            this.pnlacompanante.Controls.Add(this.paisAcompañante);
+            this.pnlacompanante.Controls.Add(this.label7);
+            this.pnlacompanante.Controls.Add(this.ciudadAcompañanteBox);
+            this.pnlacompanante.Controls.Add(this.label23);
+            this.pnlacompanante.Controls.Add(this.label22);
+            this.pnlacompanante.Controls.Add(this.departAcompañanteBox);
+            this.pnlacompanante.Controls.Add(this.label21);
+            this.pnlacompanante.Controls.Add(this.label20);
+            this.pnlacompanante.Controls.Add(this.tipoDocAcompañanteBox);
+            this.pnlacompanante.Controls.Add(this.label19);
+            this.pnlacompanante.Controls.Add(this.label18);
+            this.pnlacompanante.Enabled = false;
+            this.pnlacompanante.Location = new System.Drawing.Point(10, 268);
+            this.pnlacompanante.Name = "pnlacompanante";
+            this.pnlacompanante.Size = new System.Drawing.Size(862, 114);
+            this.pnlacompanante.TabIndex = 51;
             // 
             // nombreAcompañanteText
             // 
-            this.nombreAcompañanteText.Location = new System.Drawing.Point(535, 5);
+            this.nombreAcompañanteText.Location = new System.Drawing.Point(535, 12);
             this.nombreAcompañanteText.Name = "nombreAcompañanteText";
             this.nombreAcompañanteText.Size = new System.Drawing.Size(319, 20);
             this.nombreAcompañanteText.TabIndex = 38;
             // 
             // telAcompañanteText
             // 
-            this.telAcompañanteText.Location = new System.Drawing.Point(746, 35);
+            this.telAcompañanteText.Location = new System.Drawing.Point(746, 42);
             this.telAcompañanteText.Name = "telAcompañanteText";
             this.telAcompañanteText.Size = new System.Drawing.Size(108, 20);
             this.telAcompañanteText.TabIndex = 37;
@@ -556,7 +497,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(688, 39);
+            this.label8.Location = new System.Drawing.Point(688, 46);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 36;
@@ -564,7 +505,7 @@
             // 
             // idAcompañanteText
             // 
-            this.idAcompañanteText.Location = new System.Drawing.Point(350, 6);
+            this.idAcompañanteText.Location = new System.Drawing.Point(350, 13);
             this.idAcompañanteText.Name = "idAcompañanteText";
             this.idAcompañanteText.Size = new System.Drawing.Size(126, 20);
             this.idAcompañanteText.TabIndex = 35;
@@ -573,17 +514,18 @@
             // 
             this.dirAcompañanteText.Location = new System.Drawing.Point(107, 73);
             this.dirAcompañanteText.Name = "dirAcompañanteText";
-            this.dirAcompañanteText.Size = new System.Drawing.Size(141, 20);
+            this.dirAcompañanteText.Size = new System.Drawing.Size(574, 20);
             this.dirAcompañanteText.TabIndex = 34;
             // 
             // paisAcompañante
             // 
             this.paisAcompañante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.paisAcompañante.FormattingEnabled = true;
-            this.paisAcompañante.Location = new System.Drawing.Point(107, 38);
+            this.paisAcompañante.Location = new System.Drawing.Point(107, 45);
             this.paisAcompañante.Name = "paisAcompañante";
             this.paisAcompañante.Size = new System.Drawing.Size(140, 21);
             this.paisAcompañante.TabIndex = 33;
+            this.paisAcompañante.SelectedValueChanged += new System.EventHandler(this.paisAcompañante_SelectedValueChanged_1);
             // 
             // label7
             // 
@@ -599,7 +541,7 @@
             // 
             this.ciudadAcompañanteBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ciudadAcompañanteBox.FormattingEnabled = true;
-            this.ciudadAcompañanteBox.Location = new System.Drawing.Point(535, 34);
+            this.ciudadAcompañanteBox.Location = new System.Drawing.Point(535, 41);
             this.ciudadAcompañanteBox.Name = "ciudadAcompañanteBox";
             this.ciudadAcompañanteBox.Size = new System.Drawing.Size(146, 21);
             this.ciudadAcompañanteBox.TabIndex = 31;
@@ -608,7 +550,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label23.Location = new System.Drawing.Point(482, 39);
+            this.label23.Location = new System.Drawing.Point(482, 46);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(52, 16);
             this.label23.TabIndex = 30;
@@ -618,7 +560,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label22.Location = new System.Drawing.Point(482, 9);
+            this.label22.Location = new System.Drawing.Point(482, 16);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(57, 16);
             this.label22.TabIndex = 29;
@@ -628,16 +570,17 @@
             // 
             this.departAcompañanteBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.departAcompañanteBox.FormattingEnabled = true;
-            this.departAcompañanteBox.Location = new System.Drawing.Point(350, 34);
+            this.departAcompañanteBox.Location = new System.Drawing.Point(350, 41);
             this.departAcompañanteBox.Name = "departAcompañanteBox";
             this.departAcompañanteBox.Size = new System.Drawing.Size(126, 21);
             this.departAcompañanteBox.TabIndex = 28;
+            this.departAcompañanteBox.SelectedValueChanged += new System.EventHandler(this.departAcompañanteBox_SelectedValueChanged_1);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label21.Location = new System.Drawing.Point(252, 37);
+            this.label21.Location = new System.Drawing.Point(252, 44);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(93, 16);
             this.label21.TabIndex = 27;
@@ -647,7 +590,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label20.Location = new System.Drawing.Point(251, 9);
+            this.label20.Location = new System.Drawing.Point(251, 16);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(87, 16);
             this.label20.TabIndex = 26;
@@ -657,7 +600,7 @@
             // 
             this.tipoDocAcompañanteBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoDocAcompañanteBox.FormattingEnabled = true;
-            this.tipoDocAcompañanteBox.Location = new System.Drawing.Point(107, 7);
+            this.tipoDocAcompañanteBox.Location = new System.Drawing.Point(107, 14);
             this.tipoDocAcompañanteBox.Name = "tipoDocAcompañanteBox";
             this.tipoDocAcompañanteBox.Size = new System.Drawing.Size(140, 21);
             this.tipoDocAcompañanteBox.TabIndex = 25;
@@ -666,7 +609,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label19.Location = new System.Drawing.Point(8, 42);
+            this.label19.Location = new System.Drawing.Point(8, 49);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(38, 16);
             this.label19.TabIndex = 24;
@@ -676,7 +619,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label18.Location = new System.Drawing.Point(8, 10);
+            this.label18.Location = new System.Drawing.Point(8, 17);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(92, 16);
             this.label18.TabIndex = 23;
@@ -723,6 +666,7 @@
             this.buscarEspOtrosBtn.Size = new System.Drawing.Size(26, 24);
             this.buscarEspOtrosBtn.TabIndex = 27;
             this.buscarEspOtrosBtn.UseVisualStyleBackColor = true;
+            this.buscarEspOtrosBtn.Click += new System.EventHandler(this.buscarEspOtrosBtn_Click);
             // 
             // especialidadText
             // 
@@ -769,6 +713,7 @@
             this.buscarContactoOtrosBtn.Size = new System.Drawing.Size(26, 24);
             this.buscarContactoOtrosBtn.TabIndex = 22;
             this.buscarContactoOtrosBtn.UseVisualStyleBackColor = true;
+            this.buscarContactoOtrosBtn.Click += new System.EventHandler(this.buscarContactoOtrosBtn_Click);
             // 
             // buscarContratoOtrosBtn
             // 
@@ -778,6 +723,7 @@
             this.buscarContratoOtrosBtn.Size = new System.Drawing.Size(26, 24);
             this.buscarContratoOtrosBtn.TabIndex = 21;
             this.buscarContratoOtrosBtn.UseVisualStyleBackColor = true;
+            this.buscarContratoOtrosBtn.Click += new System.EventHandler(this.buscarContratoOtrosBtn_Click);
             // 
             // contactoNomOtrosText
             // 
@@ -1030,6 +976,9 @@
             this.btnSalir.TabIndex = 45;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.btnSalir.MouseLeave += new System.EventHandler(this.btnSalir_MouseLeave);
+            this.btnSalir.MouseHover += new System.EventHandler(this.btnSalir_MouseHover);
             // 
             // AdmisionUI
             // 
@@ -1052,12 +1001,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.admisionesPB)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.firmaRespPB)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.firmaAcompañantePB)).EndInit();
+            this.pnlresponsable.ResumeLayout(false);
+            this.pnlresponsable.PerformLayout();
+            this.pnlacompanante.ResumeLayout(false);
+            this.pnlacompanante.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1097,10 +1044,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button borrarFirmaRespBtn;
-        private System.Windows.Forms.PictureBox firmaRespPB;
-        private System.Windows.Forms.Button tomarFirmaRespBtn;
+        private System.Windows.Forms.Panel pnlresponsable;
         private System.Windows.Forms.TextBox dirResponsableBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox nombreRespText;
@@ -1118,11 +1062,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button copiarAcompañanteBtn;
-        private System.Windows.Forms.Button borrarFirmaAcompBtn;
-        private System.Windows.Forms.PictureBox firmaAcompañantePB;
-        private System.Windows.Forms.Button tomarFirmaAcompBtn;
+        private System.Windows.Forms.Panel pnlacompanante;
         private System.Windows.Forms.TextBox nombreAcompañanteText;
         private System.Windows.Forms.TextBox telAcompañanteText;
         private System.Windows.Forms.Label label8;
@@ -1157,5 +1097,7 @@
         private System.Windows.Forms.TextBox EPSNomText;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.CheckBox checkResponsable;
+        private System.Windows.Forms.CheckBox checkAcompanante;
     }
 }
