@@ -122,7 +122,7 @@ namespace Galactus
                     info.Nombre = item.Field<string>("Descripcion");
 
                     info.NombreForm = item.Field<string>("Formulario");
-                    ToolStripMenuItem subItem = new ToolStripMenuItem(info.Nombre, global::Galactus.Properties.Resources.add);
+                    ToolStripMenuItem subItem = new ToolStripMenuItem(info.Nombre, null);
                     if (info.NombreForm != null)
                     {
                         agregarMenuItem(info.NombreForm, subItem);
