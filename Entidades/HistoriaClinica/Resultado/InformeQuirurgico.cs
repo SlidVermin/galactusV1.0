@@ -15,6 +15,7 @@ namespace Galactus.Entidades.HistoriaClinica.Resultado
         public int codigoAnastesiologo { get; set; }
         public int codigoAnastesia { get; set; }
         public string notaQuirurgica { get; set; }
+        public DateTime fecha { get; set; }
 
         public InformeQuirurgico() {
 

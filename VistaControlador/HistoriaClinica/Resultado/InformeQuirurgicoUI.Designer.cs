@@ -1,6 +1,6 @@
 ﻿namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 {
-    partial class HemodialisisUI
+    partial class InformeQuirurgicoUI
     {
         /// <summary>
         /// Required designer variable.
@@ -42,16 +42,27 @@
             this.btAnular = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtNotaSigno = new System.Windows.Forms.TextBox();
+            this.txtNota = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlCaracteristica = new System.Windows.Forms.Panel();
-            this.txtNota = new System.Windows.Forms.TextBox();
+            this.btBuscarAnastesia = new System.Windows.Forms.Button();
+            this.txtAnastesia = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btBuscarAnastesiologo = new System.Windows.Forms.Button();
+            this.txtAnastesiologo = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btBuscarAyudante = new System.Windows.Forms.Button();
+            this.txtAyudante = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btBuscarVia = new System.Windows.Forms.Button();
+            this.txtVia = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnBuscarNit = new System.Windows.Forms.Button();
+            this.btnBuscarPaciente = new System.Windows.Forms.Button();
             this.txtCodigoAdministradora = new System.Windows.Forms.TextBox();
             this.txtAdministradora = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -202,51 +213,11 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtNotaSigno);
-            this.panel2.Location = new System.Drawing.Point(15, 360);
+            this.panel2.Controls.Add(this.txtNota);
+            this.panel2.Location = new System.Drawing.Point(15, 248);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(897, 129);
+            this.panel2.Size = new System.Drawing.Size(897, 241);
             this.panel2.TabIndex = 6;
-            // 
-            // txtNotaSigno
-            // 
-            this.txtNotaSigno.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNotaSigno.Location = new System.Drawing.Point(3, 3);
-            this.txtNotaSigno.Multiline = true;
-            this.txtNotaSigno.Name = "txtNotaSigno";
-            this.txtNotaSigno.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNotaSigno.Size = new System.Drawing.Size(889, 121);
-            this.txtNotaSigno.TabIndex = 40;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(30, 336);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(124, 20);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Signos Vitales";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(30, 126);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 20);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Nota.";
-            // 
-            // pnlCaracteristica
-            // 
-            this.pnlCaracteristica.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlCaracteristica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCaracteristica.Controls.Add(this.txtNota);
-            this.pnlCaracteristica.Location = new System.Drawing.Point(15, 149);
-            this.pnlCaracteristica.Name = "pnlCaracteristica";
-            this.pnlCaracteristica.Size = new System.Drawing.Size(897, 178);
-            this.pnlCaracteristica.TabIndex = 2;
             // 
             // txtNota
             // 
@@ -255,8 +226,161 @@
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
             this.txtNota.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNota.Size = new System.Drawing.Size(889, 170);
-            this.txtNota.TabIndex = 39;
+            this.txtNota.Size = new System.Drawing.Size(889, 233);
+            this.txtNota.TabIndex = 40;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(30, 225);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(134, 20);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "Nota Quirurgica";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(30, 126);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(153, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Datos Quirurgicos";
+            // 
+            // pnlCaracteristica
+            // 
+            this.pnlCaracteristica.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlCaracteristica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCaracteristica.Controls.Add(this.btBuscarAnastesia);
+            this.pnlCaracteristica.Controls.Add(this.txtAnastesia);
+            this.pnlCaracteristica.Controls.Add(this.label13);
+            this.pnlCaracteristica.Controls.Add(this.btBuscarAnastesiologo);
+            this.pnlCaracteristica.Controls.Add(this.txtAnastesiologo);
+            this.pnlCaracteristica.Controls.Add(this.label14);
+            this.pnlCaracteristica.Controls.Add(this.btBuscarAyudante);
+            this.pnlCaracteristica.Controls.Add(this.txtAyudante);
+            this.pnlCaracteristica.Controls.Add(this.label12);
+            this.pnlCaracteristica.Controls.Add(this.btBuscarVia);
+            this.pnlCaracteristica.Controls.Add(this.txtVia);
+            this.pnlCaracteristica.Controls.Add(this.label11);
+            this.pnlCaracteristica.Location = new System.Drawing.Point(15, 153);
+            this.pnlCaracteristica.Name = "pnlCaracteristica";
+            this.pnlCaracteristica.Size = new System.Drawing.Size(897, 60);
+            this.pnlCaracteristica.TabIndex = 2;
+            // 
+            // btBuscarAnastesia
+            // 
+            this.btBuscarAnastesia.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarAnastesia.Location = new System.Drawing.Point(833, 31);
+            this.btBuscarAnastesia.Name = "btBuscarAnastesia";
+            this.btBuscarAnastesia.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarAnastesia.TabIndex = 55;
+            this.btBuscarAnastesia.UseVisualStyleBackColor = true;
+            // 
+            // txtAnastesia
+            // 
+            this.txtAnastesia.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.txtAnastesia.Location = new System.Drawing.Point(574, 33);
+            this.txtAnastesia.Name = "txtAnastesia";
+            this.txtAnastesia.Size = new System.Drawing.Size(256, 21);
+            this.txtAnastesia.TabIndex = 54;
+            this.txtAnastesia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label13.Location = new System.Drawing.Point(477, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(66, 16);
+            this.label13.TabIndex = 53;
+            this.label13.Text = "Anastesia";
+            // 
+            // btBuscarAnastesiologo
+            // 
+            this.btBuscarAnastesiologo.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarAnastesiologo.Location = new System.Drawing.Point(833, 4);
+            this.btBuscarAnastesiologo.Name = "btBuscarAnastesiologo";
+            this.btBuscarAnastesiologo.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarAnastesiologo.TabIndex = 52;
+            this.btBuscarAnastesiologo.UseVisualStyleBackColor = true;
+            // 
+            // txtAnastesiologo
+            // 
+            this.txtAnastesiologo.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.txtAnastesiologo.Location = new System.Drawing.Point(574, 6);
+            this.txtAnastesiologo.Name = "txtAnastesiologo";
+            this.txtAnastesiologo.Size = new System.Drawing.Size(256, 21);
+            this.txtAnastesiologo.TabIndex = 51;
+            this.txtAnastesiologo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label14.Location = new System.Drawing.Point(477, 8);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(94, 16);
+            this.label14.TabIndex = 50;
+            this.label14.Text = "Anastesiologo:";
+            // 
+            // btBuscarAyudante
+            // 
+            this.btBuscarAyudante.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarAyudante.Location = new System.Drawing.Point(373, 30);
+            this.btBuscarAyudante.Name = "btBuscarAyudante";
+            this.btBuscarAyudante.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarAyudante.TabIndex = 49;
+            this.btBuscarAyudante.UseVisualStyleBackColor = true;
+            // 
+            // txtAyudante
+            // 
+            this.txtAyudante.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.txtAyudante.Location = new System.Drawing.Point(114, 32);
+            this.txtAyudante.Name = "txtAyudante";
+            this.txtAyudante.Size = new System.Drawing.Size(256, 21);
+            this.txtAyudante.TabIndex = 48;
+            this.txtAyudante.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label12.Location = new System.Drawing.Point(21, 32);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 16);
+            this.label12.TabIndex = 47;
+            this.label12.Text = "Ayudante:";
+            // 
+            // btBuscarVia
+            // 
+            this.btBuscarVia.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarVia.Location = new System.Drawing.Point(373, 3);
+            this.btBuscarVia.Name = "btBuscarVia";
+            this.btBuscarVia.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarVia.TabIndex = 46;
+            this.btBuscarVia.UseVisualStyleBackColor = true;
+            // 
+            // txtVia
+            // 
+            this.txtVia.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.txtVia.Location = new System.Drawing.Point(114, 5);
+            this.txtVia.Name = "txtVia";
+            this.txtVia.Size = new System.Drawing.Size(256, 21);
+            this.txtVia.TabIndex = 45;
+            this.txtVia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label11.Location = new System.Drawing.Point(21, 7);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(31, 16);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "Via:";
             // 
             // label2
             // 
@@ -274,7 +398,7 @@
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlInformacion.Controls.Add(this.dtFecha);
             this.pnlInformacion.Controls.Add(this.label4);
-            this.pnlInformacion.Controls.Add(this.btnBuscarNit);
+            this.pnlInformacion.Controls.Add(this.btnBuscarPaciente);
             this.pnlInformacion.Controls.Add(this.txtCodigoAdministradora);
             this.pnlInformacion.Controls.Add(this.txtAdministradora);
             this.pnlInformacion.Controls.Add(this.label10);
@@ -313,15 +437,15 @@
             this.label4.TabIndex = 44;
             this.label4.Text = "Fecha:";
             // 
-            // btnBuscarNit
+            // btnBuscarPaciente
             // 
-            this.btnBuscarNit.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btnBuscarNit.Location = new System.Drawing.Point(234, 5);
-            this.btnBuscarNit.Name = "btnBuscarNit";
-            this.btnBuscarNit.Size = new System.Drawing.Size(26, 24);
-            this.btnBuscarNit.TabIndex = 43;
-            this.btnBuscarNit.UseVisualStyleBackColor = true;
-            this.btnBuscarNit.Click += new System.EventHandler(this.btnBuscarNit_Click);
+            this.btnBuscarPaciente.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btnBuscarPaciente.Location = new System.Drawing.Point(234, 5);
+            this.btnBuscarPaciente.Name = "btnBuscarPaciente";
+            this.btnBuscarPaciente.Size = new System.Drawing.Size(26, 24);
+            this.btnBuscarPaciente.TabIndex = 43;
+            this.btnBuscarPaciente.UseVisualStyleBackColor = true;
+            this.btnBuscarPaciente.Click += new System.EventHandler(this.btnBuscarNit_Click);
             // 
             // txtCodigoAdministradora
             // 
@@ -441,9 +565,9 @@
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F);
             this.label5.Location = new System.Drawing.Point(21, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.Size = new System.Drawing.Size(78, 16);
             this.label5.TabIndex = 15;
-            this.label5.Text = "Nº Atención:";
+            this.label5.Text = "Nº Registro:";
             // 
             // pictureBox1
             // 
@@ -460,9 +584,9 @@
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(57, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 18);
+            this.label1.Size = new System.Drawing.Size(135, 18);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Hemodialisis";
+            this.label1.Text = "Informe Quirurgico";
             // 
             // btnSalir
             // 
@@ -477,7 +601,7 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // HemodialisisUI
+            // InformeQuirurgicoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -491,9 +615,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(969, 580);
             this.MinimumSize = new System.Drawing.Size(969, 580);
-            this.Name = "HemodialisisUI";
-            this.Text = "HemodialisisUI";
-            this.Load += new System.EventHandler(this.HemodialisisUI_Load);
+            this.Name = "InformeQuirurgicoUI";
+            this.Text = "InformeQuirurgicoUI";
+            this.Load += new System.EventHandler(this.InformeQuirurgicoUI_Load);
             this.TostMenu.ResumeLayout(false);
             this.TostMenu.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -533,7 +657,6 @@
         private System.Windows.Forms.Panel pnlInformacion;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNotaSigno;
         private System.Windows.Forms.TextBox txtNota;
         private System.Windows.Forms.TextBox txtCodigoAdministradora;
         private System.Windows.Forms.TextBox txtAdministradora;
@@ -548,9 +671,21 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnBuscarNit;
+        private System.Windows.Forms.Button btnBuscarPaciente;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btBuscarAnastesia;
+        private System.Windows.Forms.TextBox txtAnastesia;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btBuscarAnastesiologo;
+        private System.Windows.Forms.TextBox txtAnastesiologo;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btBuscarAyudante;
+        private System.Windows.Forms.TextBox txtAyudante;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btBuscarVia;
+        private System.Windows.Forms.TextBox txtVia;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -16,21 +16,22 @@ using Galactus.Modelo.HistoriaClinica.Resultado;
 
 namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 {
-    public partial class HemodialisisUI : Form
+    public partial class InformeQuirurgicoUI : Form
     {
-        Hemodialisis hemodialisis;
-        public HemodialisisUI()
+        InformeQuirurgico informeQx;
+        public InformeQuirurgicoUI()
         {
             InitializeComponent();
         }
 
-        private void HemodialisisUI_Load(object sender, EventArgs e)
+        private void InformeQuirurgicoUI_Load(object sender, EventArgs e)
         {
-            hemodialisis = new Hemodialisis();
+            informeQx = new InformeQuirurgico();
             GeneralC.deshabilitarBotones(ref TostMenu);
             GeneralC.deshabilitarControles(this);
             btBuscar.Enabled = true;
             btNuevo.Enabled = true;
+
         }
         #region btnSalir
 
@@ -61,7 +62,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 try
                 {
 
-                    if (HemodialisisDAL.anularHemodialisis(hemodialisis.codigo))
+                    if (InformeQuirurgicoDAL.anularInformeQuirurgico(informeQx.codigo))
                     {
                         GeneralC.deshabilitarBotones(ref TostMenu);
                         GeneralC.limpiarControles(this);
@@ -85,10 +86,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Query.BUSCAR_HEMODIALISIS,
+            GeneralC.buscarDevuelveFila(Query.BUSCAR_INFORME_QX,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarHemodialisis),
-                                    Titulos.TITULO_BUSCAR_HEMODIALISIS,
+                                    Titulos.TITULO_BUSCAR_INFORME_QX,
                                     true,
                                     listaParametroOculto());
         }
@@ -100,7 +101,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 GeneralC.deshabilitarBotones(ref TostMenu);
                 GeneralC.deshabilitarControles(this);
                 GeneralC.limpiarControles(this);
-                hemodialisis.codigo = null;
+                informeQx.codigo = null;
                 btNuevo.Enabled = true;
                 btBuscar.Enabled = true;
                 btnSalir.Enabled = true;
@@ -114,8 +115,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 if (MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     try
                     {
-                        crearNuevaHemodialisis();
-                        HemodialisisDAL.guardarHemodialisis(hemodialisis);
+                        crearNuevaInformeQx();
+                        InformeQuirurgicoDAL.guardarInformeQuirurgico(informeQx);
                         GeneralC.habilitarBotones(ref TostMenu);
                         GeneralC.deshabilitarControles(this);
                         btnSalir.Enabled = true;
@@ -149,9 +150,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             GeneralC.habilitarControles(this);
             GeneralC.deshabilitarControles(pnlInformacion);
             GeneralC.limpiarControles(this);
-            hemodialisis.codigo=null;
+            informeQx.codigo=null;
             dtFecha.Enabled = true;
-            btnBuscarNit.Enabled = true;
+            btnBuscarPaciente.Enabled = true;
             btGuardar.Enabled = true;
             btCancelar.Enabled = true;
         }
@@ -161,7 +162,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Query.BUSCAR_PACIENTE_HEMODIALISIS,
+            GeneralC.buscarDevuelveFila(Query.BUSCAR_PACIENTE_INFORME_QX,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarInformacionAtencion),
                                     Titulos.TITULO_BUSCAR_PACIENTE,
@@ -174,24 +175,20 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             txtIdentificacion.Text = dRows.Field<string>("identificacion").ToString();
             txtServicio.Text = dRows.Field<string>("servicio").ToString();
             txtOrdenMedica.Text = dRows.Field<string>("ordenMedica").ToString();
-            txtCodigoAdministradora.Text= dRows.Field<int>("codigoAdministracion").ToString();
-            txtAdministradora.Text= dRows.Field<string>("administracion").ToString();
+            txtCodigoAdministradora.Text = dRows.Field<int>("codigoAdministracion").ToString();
+            txtAdministradora.Text = dRows.Field<string>("administracion").ToString();
         }
 
-        private void crearNuevaHemodialisis() {
-            hemodialisis.nota = txtNota.Text;
-            hemodialisis.fecha = dtFecha.Value;
-            hemodialisis.notaSigno = string.IsNullOrEmpty(txtNotaSigno.Text) ? null : txtNotaSigno.Text;
+        private void crearNuevaInformeQx() {
+            informeQx.notaQuirurgica = txtNota.Text;
+            informeQx.fecha = dtFecha.Value;
         }
         private void cargarHemodialisis(DataRow dRows)
         {
             try
             {
-                hemodialisis.codigo = dRows.Field<int>("idHemodialisis").ToString();
-                dtFecha.Value = dRows.Field<DateTime>("fecha");
-                txtNota.Text = dRows.Field<string>("Nota").ToString();
-                txtNotaSigno.Text = dRows.Field<string>("notaSigno").ToString();
-               cargarInformacionAtencion(dRows);
+                informeQx.codigo = dRows.Field<int>("idCliente").ToString();
+                cargarInformacionAtencion(dRows);
             }
             catch (Exception ex)
             {
@@ -230,6 +227,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             {
                 return true;
             }
+        }
+        private void desHabilitadoPermanente() {
+
         }
 
     }

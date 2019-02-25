@@ -80,6 +80,7 @@ namespace Galactus
         public const String ADMISION_ANULAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionAnular";
         public const String ADMISION_CARGAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionCargar";
         #endregion
+
         #region Gestion
         public const string BUSCAR_TERCERO = ConstanteGeneral.ESQUEMA_TERCERO + "[uspTerceroBuscar]";
         public const string BUSCAR_TERCERO_CLIENTE = ConstanteGeneral.ESQUEMA_TERCERO + "[uspTerceroClienteBuscar]";
@@ -91,6 +92,18 @@ namespace Galactus
         public const string CREAR_PROVEEDOR = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspProveedorCrear]";
         public const string BUSCAR_PROVEEDOR = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspProveedorBuscar]";
         public const string ANULAR_PROVEEDOR = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspProveedorAnular]";
+        #endregion
+
+        #region Historia Clinica
+        public const string BUSCAR_PACIENTE_HEMODIALISIS = "";
+        public const string BUSCAR_HEMODIALISIS = "";
+        public const string ANULAR_HEMODIALISIS = "";
+        public const string CREAR_HEMODIALISIS = "";
+
+        public const string BUSCAR_PACIENTE_INFORME_QX = "";
+        public const string BUSCAR_INFORME_QX = "";
+        public const string ANULAR_INFORME_QX = "";
+        public const string CREAR_INFORME_QX = "";
         #endregion
     }
 }

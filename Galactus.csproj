@@ -98,6 +98,7 @@
     <Compile Include="Modelo\Gestion\ClienteDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\HemodialisisDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\Resultado\InformeQuirurgicoDAL.cs" />
     <Compile Include="Modelo\Inventario\BodegaDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\ProductoDAL.cs" />
     <Compile Include="Program.cs" />
@@ -233,6 +234,12 @@
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\HemodialisisUI.Designer.cs">
       <DependentUpon>HemodialisisUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\InformeQuirurgicoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\InformeQuirurgicoUI.Designer.cs">
+      <DependentUpon>InformeQuirurgicoUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\TransfusionSanguineaUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\HemodialisisUI.resx">
       <DependentUpon>HemodialisisUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\InformeQuirurgicoUI.resx">
+      <DependentUpon>InformeQuirurgicoUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\TransfusionSanguineaUI.resx">
       <DependentUpon>TransfusionSanguineaUI.cs</DependentUpon>
