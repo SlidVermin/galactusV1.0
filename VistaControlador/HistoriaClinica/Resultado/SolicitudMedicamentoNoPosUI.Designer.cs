@@ -33,7 +33,23 @@
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.txtContraindicaciones = new System.Windows.Forms.TextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.txtReaccionSegundaria = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txtPeligoVida = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtPrecaucion = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtDosis = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.NumDosisSolicitada = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
+            this.numFrecuencia = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
+            this.numDuracionMedicamento = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
             this.txtInvima = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txtPresentacion = new System.Windows.Forms.TextBox();
@@ -71,52 +87,30 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnsPanel = new System.Windows.Forms.Panel();
-            this.anularBtn = new System.Windows.Forms.Button();
-            this.cancelarBtn = new System.Windows.Forms.Button();
-            this.editarBtn = new System.Windows.Forms.Button();
-            this.buscarBtn = new System.Windows.Forms.Button();
-            this.guardarBtn = new System.Windows.Forms.Button();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.nuevoBtn = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.numDuracionMedicamento = new System.Windows.Forms.NumericUpDown();
-            this.numFrecuencia = new System.Windows.Forms.NumericUpDown();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.NumDosisSolicitada = new System.Windows.Forms.NumericUpDown();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtDosis = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.txtPrecaucion = new System.Windows.Forms.TextBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.txtPeligoVida = new System.Windows.Forms.TextBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.txtReaccionSegundaria = new System.Windows.Forms.TextBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.txtContraindicaciones = new System.Windows.Forms.TextBox();
+            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
+            this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tBtEditar = new System.Windows.Forms.ToolStripButton();
+            this.tBtCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tBtBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tBtAnular = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.admisionesPB)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumDosisSolicitada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFrecuencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDuracionMedicamento)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnostico)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.btnsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numDuracionMedicamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numFrecuencia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumDosisSolicitada)).BeginInit();
-            this.groupBox7.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox10.SuspendLayout();
+            this.tstMenuPatron.SuspendLayout();
             this.SuspendLayout();
             // 
             // admisionesPB
@@ -166,6 +160,86 @@
             this.panel1.Size = new System.Drawing.Size(887, 418);
             this.panel1.TabIndex = 14;
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.txtContraindicaciones);
+            this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox10.Location = new System.Drawing.Point(3, 644);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(862, 66);
+            this.groupBox10.TabIndex = 25;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Existe contraindicaciones con respecto al medicamento ?";
+            // 
+            // txtContraindicaciones
+            // 
+            this.txtContraindicaciones.Location = new System.Drawing.Point(0, 19);
+            this.txtContraindicaciones.Multiline = true;
+            this.txtContraindicaciones.Name = "txtContraindicaciones";
+            this.txtContraindicaciones.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtContraindicaciones.Size = new System.Drawing.Size(856, 44);
+            this.txtContraindicaciones.TabIndex = 17;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.txtReaccionSegundaria);
+            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Location = new System.Drawing.Point(3, 573);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(862, 66);
+            this.groupBox9.TabIndex = 24;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Reacción Segundaria";
+            // 
+            // txtReaccionSegundaria
+            // 
+            this.txtReaccionSegundaria.Location = new System.Drawing.Point(0, 19);
+            this.txtReaccionSegundaria.Multiline = true;
+            this.txtReaccionSegundaria.Name = "txtReaccionSegundaria";
+            this.txtReaccionSegundaria.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtReaccionSegundaria.Size = new System.Drawing.Size(856, 44);
+            this.txtReaccionSegundaria.TabIndex = 17;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.txtPeligoVida);
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox8.Location = new System.Drawing.Point(3, 503);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(862, 66);
+            this.groupBox8.TabIndex = 23;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Peligro para la vida del paciente";
+            // 
+            // txtPeligoVida
+            // 
+            this.txtPeligoVida.Location = new System.Drawing.Point(0, 16);
+            this.txtPeligoVida.Multiline = true;
+            this.txtPeligoVida.Name = "txtPeligoVida";
+            this.txtPeligoVida.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtPeligoVida.Size = new System.Drawing.Size(856, 44);
+            this.txtPeligoVida.TabIndex = 17;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txtPrecaucion);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(3, 434);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(862, 66);
+            this.groupBox7.TabIndex = 22;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Precaución, Contraindicación, efectos segundarios o abuso del medicamento";
+            // 
+            // txtPrecaucion
+            // 
+            this.txtPrecaucion.Location = new System.Drawing.Point(0, 17);
+            this.txtPrecaucion.Multiline = true;
+            this.txtPrecaucion.Name = "txtPrecaucion";
+            this.txtPrecaucion.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtPrecaucion.Size = new System.Drawing.Size(856, 44);
+            this.txtPrecaucion.TabIndex = 17;
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.txtDosis);
@@ -189,6 +263,70 @@
             this.groupBox5.TabIndex = 21;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Datos del Medicamento Solicitado";
+            // 
+            // txtDosis
+            // 
+            this.txtDosis.Location = new System.Drawing.Point(166, 65);
+            this.txtDosis.Name = "txtDosis";
+            this.txtDosis.Size = new System.Drawing.Size(118, 20);
+            this.txtDosis.TabIndex = 33;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(7, 68);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(42, 13);
+            this.label20.TabIndex = 32;
+            this.label20.Text = "Dosis:";
+            // 
+            // NumDosisSolicitada
+            // 
+            this.NumDosisSolicitada.Location = new System.Drawing.Point(706, 38);
+            this.NumDosisSolicitada.Name = "NumDosisSolicitada";
+            this.NumDosisSolicitada.Size = new System.Drawing.Size(122, 20);
+            this.NumDosisSolicitada.TabIndex = 31;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(580, 43);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(120, 13);
+            this.label19.TabIndex = 30;
+            this.label19.Text = "Nº Dosis Solicitada:";
+            // 
+            // numFrecuencia
+            // 
+            this.numFrecuencia.Location = new System.Drawing.Point(406, 38);
+            this.numFrecuencia.Name = "numFrecuencia";
+            this.numFrecuencia.Size = new System.Drawing.Size(137, 20);
+            this.numFrecuencia.TabIndex = 29;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(303, 45);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(74, 13);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "Frecuencia:";
+            // 
+            // numDuracionMedicamento
+            // 
+            this.numDuracionMedicamento.Location = new System.Drawing.Point(166, 41);
+            this.numDuracionMedicamento.Name = "numDuracionMedicamento";
+            this.numDuracionMedicamento.Size = new System.Drawing.Size(120, 20);
+            this.numDuracionMedicamento.TabIndex = 27;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(7, 45);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(154, 13);
+            this.label17.TabIndex = 26;
+            this.label17.Text = "Duración del Tratamiento:";
             // 
             // txtInvima
             // 
@@ -545,282 +683,83 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Nº Registro:";
             // 
-            // btnsPanel
+            // tstMenuPatron
             // 
-            this.btnsPanel.Controls.Add(this.anularBtn);
-            this.btnsPanel.Controls.Add(this.cancelarBtn);
-            this.btnsPanel.Controls.Add(this.editarBtn);
-            this.btnsPanel.Controls.Add(this.buscarBtn);
-            this.btnsPanel.Controls.Add(this.guardarBtn);
-            this.btnsPanel.Controls.Add(this.label36);
-            this.btnsPanel.Controls.Add(this.label35);
-            this.btnsPanel.Controls.Add(this.label34);
-            this.btnsPanel.Controls.Add(this.label33);
-            this.btnsPanel.Controls.Add(this.label32);
-            this.btnsPanel.Controls.Add(this.label14);
-            this.btnsPanel.Controls.Add(this.nuevoBtn);
-            this.btnsPanel.Location = new System.Drawing.Point(5, 607);
-            this.btnsPanel.Name = "btnsPanel";
-            this.btnsPanel.Size = new System.Drawing.Size(897, 72);
-            this.btnsPanel.TabIndex = 10;
+            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tBtNuevo,
+            this.tBtEditar,
+            this.tBtCancelar,
+            this.tBtGuardar,
+            this.tBtBuscar,
+            this.tBtAnular});
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 660);
+            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.Name = "tstMenuPatron";
+            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.TabIndex = 48;
+            this.tstMenuPatron.Text = "toolStrip1";
             // 
-            // anularBtn
+            // tBtNuevo
             // 
-            this.anularBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.anularBtn.Image = global::Galactus.Properties.Resources.error;
-            this.anularBtn.Location = new System.Drawing.Point(420, 0);
-            this.anularBtn.Name = "anularBtn";
-            this.anularBtn.Size = new System.Drawing.Size(69, 52);
-            this.anularBtn.TabIndex = 31;
-            this.anularBtn.UseVisualStyleBackColor = true;
+            this.tBtNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tBtNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtNuevo.Name = "tBtNuevo";
+            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tBtNuevo.Text = "Nuevo";
             // 
-            // cancelarBtn
+            // tBtEditar
             // 
-            this.cancelarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelarBtn.Image = global::Galactus.Properties.Resources.back_arrow;
-            this.cancelarBtn.Location = new System.Drawing.Point(338, 0);
-            this.cancelarBtn.Name = "cancelarBtn";
-            this.cancelarBtn.Size = new System.Drawing.Size(69, 52);
-            this.cancelarBtn.TabIndex = 30;
-            this.cancelarBtn.UseVisualStyleBackColor = true;
+            this.tBtEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtEditar.Name = "tBtEditar";
+            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
+            this.tBtEditar.Text = "Editar";
             // 
-            // editarBtn
+            // tBtCancelar
             // 
-            this.editarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editarBtn.Image = global::Galactus.Properties.Resources.edit;
-            this.editarBtn.Location = new System.Drawing.Point(251, 0);
-            this.editarBtn.Name = "editarBtn";
-            this.editarBtn.Size = new System.Drawing.Size(69, 52);
-            this.editarBtn.TabIndex = 29;
-            this.editarBtn.UseVisualStyleBackColor = true;
+            this.tBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtCancelar.Name = "tBtCancelar";
+            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tBtCancelar.Text = "Cancelar";
             // 
-            // buscarBtn
+            // tBtGuardar
             // 
-            this.buscarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buscarBtn.Image = global::Galactus.Properties.Resources.search;
-            this.buscarBtn.Location = new System.Drawing.Point(168, 0);
-            this.buscarBtn.Name = "buscarBtn";
-            this.buscarBtn.Size = new System.Drawing.Size(69, 52);
-            this.buscarBtn.TabIndex = 28;
-            this.buscarBtn.UseVisualStyleBackColor = true;
+            this.tBtGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtGuardar.Name = "tBtGuardar";
+            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tBtGuardar.Text = "Guardar";
             // 
-            // guardarBtn
+            // tBtBuscar
             // 
-            this.guardarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.guardarBtn.Image = global::Galactus.Properties.Resources.save;
-            this.guardarBtn.Location = new System.Drawing.Point(84, 0);
-            this.guardarBtn.Name = "guardarBtn";
-            this.guardarBtn.Size = new System.Drawing.Size(69, 52);
-            this.guardarBtn.TabIndex = 27;
-            this.guardarBtn.UseVisualStyleBackColor = true;
+            this.tBtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtBuscar.Name = "tBtBuscar";
+            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tBtBuscar.Text = "Buscar";
             // 
-            // label36
+            // tBtAnular
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(438, 55);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(37, 13);
-            this.label36.TabIndex = 26;
-            this.label36.Text = "Anular";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(348, 55);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(49, 13);
-            this.label35.TabIndex = 25;
-            this.label35.Text = "Cancelar";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(262, 55);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(49, 13);
-            this.label34.TabIndex = 24;
-            this.label34.Text = "   Editar  ";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(179, 55);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(40, 13);
-            this.label33.TabIndex = 23;
-            this.label33.Text = "Buscar";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(87, 55);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(69, 13);
-            this.label32.TabIndex = 22;
-            this.label32.Text = "   Guardar     ";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(14, 55);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(39, 13);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "Nuevo";
-            // 
-            // nuevoBtn
-            // 
-            this.nuevoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nuevoBtn.Image = global::Galactus.Properties.Resources.plus__1_;
-            this.nuevoBtn.Location = new System.Drawing.Point(0, 0);
-            this.nuevoBtn.Name = "nuevoBtn";
-            this.nuevoBtn.Size = new System.Drawing.Size(69, 52);
-            this.nuevoBtn.TabIndex = 20;
-            this.nuevoBtn.UseVisualStyleBackColor = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(7, 45);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(154, 13);
-            this.label17.TabIndex = 26;
-            this.label17.Text = "Duración del Tratamiento:";
-            // 
-            // numDuracionMedicamento
-            // 
-            this.numDuracionMedicamento.Location = new System.Drawing.Point(166, 41);
-            this.numDuracionMedicamento.Name = "numDuracionMedicamento";
-            this.numDuracionMedicamento.Size = new System.Drawing.Size(120, 20);
-            this.numDuracionMedicamento.TabIndex = 27;
-            // 
-            // numFrecuencia
-            // 
-            this.numFrecuencia.Location = new System.Drawing.Point(406, 38);
-            this.numFrecuencia.Name = "numFrecuencia";
-            this.numFrecuencia.Size = new System.Drawing.Size(137, 20);
-            this.numFrecuencia.TabIndex = 29;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(303, 45);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 13);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "Frecuencia:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(580, 43);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(120, 13);
-            this.label19.TabIndex = 30;
-            this.label19.Text = "Nº Dosis Solicitada:";
-            // 
-            // NumDosisSolicitada
-            // 
-            this.NumDosisSolicitada.Location = new System.Drawing.Point(706, 38);
-            this.NumDosisSolicitada.Name = "NumDosisSolicitada";
-            this.NumDosisSolicitada.Size = new System.Drawing.Size(122, 20);
-            this.NumDosisSolicitada.TabIndex = 31;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(7, 68);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(42, 13);
-            this.label20.TabIndex = 32;
-            this.label20.Text = "Dosis:";
-            // 
-            // txtDosis
-            // 
-            this.txtDosis.Location = new System.Drawing.Point(166, 65);
-            this.txtDosis.Name = "txtDosis";
-            this.txtDosis.Size = new System.Drawing.Size(118, 20);
-            this.txtDosis.TabIndex = 33;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.txtPrecaucion);
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(3, 434);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(862, 66);
-            this.groupBox7.TabIndex = 22;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Precaución, Contraindicación, efectos segundarios o abuso del medicamento";
-            // 
-            // txtPrecaucion
-            // 
-            this.txtPrecaucion.Location = new System.Drawing.Point(0, 17);
-            this.txtPrecaucion.Multiline = true;
-            this.txtPrecaucion.Name = "txtPrecaucion";
-            this.txtPrecaucion.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtPrecaucion.Size = new System.Drawing.Size(856, 44);
-            this.txtPrecaucion.TabIndex = 17;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.txtPeligoVida);
-            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(3, 503);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(862, 66);
-            this.groupBox8.TabIndex = 23;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Peligro para la vida del paciente";
-            // 
-            // txtPeligoVida
-            // 
-            this.txtPeligoVida.Location = new System.Drawing.Point(0, 16);
-            this.txtPeligoVida.Multiline = true;
-            this.txtPeligoVida.Name = "txtPeligoVida";
-            this.txtPeligoVida.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtPeligoVida.Size = new System.Drawing.Size(856, 44);
-            this.txtPeligoVida.TabIndex = 17;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.txtReaccionSegundaria);
-            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(3, 573);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(862, 66);
-            this.groupBox9.TabIndex = 24;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Reacción Segundaria";
-            // 
-            // txtReaccionSegundaria
-            // 
-            this.txtReaccionSegundaria.Location = new System.Drawing.Point(0, 19);
-            this.txtReaccionSegundaria.Multiline = true;
-            this.txtReaccionSegundaria.Name = "txtReaccionSegundaria";
-            this.txtReaccionSegundaria.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtReaccionSegundaria.Size = new System.Drawing.Size(856, 44);
-            this.txtReaccionSegundaria.TabIndex = 17;
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.txtContraindicaciones);
-            this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.Location = new System.Drawing.Point(3, 644);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(862, 66);
-            this.groupBox10.TabIndex = 25;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Existe contraindicaciones con respecto al medicamento ?";
-            // 
-            // txtContraindicaciones
-            // 
-            this.txtContraindicaciones.Location = new System.Drawing.Point(0, 19);
-            this.txtContraindicaciones.Multiline = true;
-            this.txtContraindicaciones.Name = "txtContraindicaciones";
-            this.txtContraindicaciones.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtContraindicaciones.Size = new System.Drawing.Size(856, 44);
-            this.txtContraindicaciones.TabIndex = 17;
+            this.tBtAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tBtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtAnular.Name = "tBtAnular";
+            this.tBtAnular.Size = new System.Drawing.Size(62, 22);
+            this.tBtAnular.Text = "Anular";
             // 
             // SolicitudMedicamentoNoPosUI
             // 
@@ -828,7 +767,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(907, 685);
-            this.Controls.Add(this.btnsPanel);
+            this.Controls.Add(this.tstMenuPatron);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.admisionesPB);
             this.Controls.Add(this.label15);
@@ -838,8 +777,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.admisionesPB)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumDosisSolicitada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numFrecuencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDuracionMedicamento)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -848,19 +798,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.btnsPanel.ResumeLayout(false);
-            this.btnsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numDuracionMedicamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numFrecuencia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumDosisSolicitada)).EndInit();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
+            this.tstMenuPatron.ResumeLayout(false);
+            this.tstMenuPatron.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -871,19 +810,6 @@
         private System.Windows.Forms.PictureBox admisionesPB;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Panel btnsPanel;
-        private System.Windows.Forms.Button anularBtn;
-        private System.Windows.Forms.Button cancelarBtn;
-        private System.Windows.Forms.Button editarBtn;
-        private System.Windows.Forms.Button buscarBtn;
-        private System.Windows.Forms.Button guardarBtn;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button nuevoBtn;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox txtCodigoAdministradora;
         private System.Windows.Forms.TextBox txtAdministradora;
@@ -939,5 +865,12 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown numDuracionMedicamento;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ToolStrip tstMenuPatron;
+        private System.Windows.Forms.ToolStripButton tBtNuevo;
+        private System.Windows.Forms.ToolStripButton tBtEditar;
+        private System.Windows.Forms.ToolStripButton tBtCancelar;
+        private System.Windows.Forms.ToolStripButton tBtGuardar;
+        private System.Windows.Forms.ToolStripButton tBtBuscar;
+        private System.Windows.Forms.ToolStripButton tBtAnular;
     }
 }

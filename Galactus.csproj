@@ -321,6 +321,9 @@
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\UsuarioUI.resx">
       <DependentUpon>UsuarioUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Gestion\ContratoUI.resx">
+      <DependentUpon>ContratoUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Gestion\ProveedorUI.resx">
       <DependentUpon>ProveedorUI.cs</DependentUpon>
     </EmbeddedResource>

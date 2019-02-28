@@ -109,61 +109,67 @@
             // 
             // tBtNuevo
             // 
-            this.tBtNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBtNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
             this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tBtNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tBtNuevo.Name = "tBtNuevo";
-            this.tBtNuevo.Size = new System.Drawing.Size(64, 22);
+            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
             this.tBtNuevo.Text = "Nuevo";
             this.tBtNuevo.Click += new System.EventHandler(this.tBtNuevo_Click);
             // 
             // tBtEditar
             // 
-            this.tBtEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBtEditar.Image = global::Galactus.Properties.Resources.bt_editar;
             this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tBtEditar.Name = "tBtEditar";
-            this.tBtEditar.Size = new System.Drawing.Size(59, 22);
+            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
             this.tBtEditar.Text = "Editar";
             this.tBtEditar.Click += new System.EventHandler(this.tBtEditar_Click);
             // 
             // tBtCancelar
             // 
-            this.tBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBtCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
             this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tBtCancelar.Name = "tBtCancelar";
-            this.tBtCancelar.Size = new System.Drawing.Size(74, 22);
+            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
             this.tBtCancelar.Text = "Cancelar";
             this.tBtCancelar.Click += new System.EventHandler(this.tBtCancelar_Click);
             // 
             // tBtGuardar
             // 
-            this.tBtGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBtGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
             this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tBtGuardar.Name = "tBtGuardar";
-            this.tBtGuardar.Size = new System.Drawing.Size(72, 22);
+            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
             this.tBtGuardar.Text = "Guardar";
             this.tBtGuardar.Click += new System.EventHandler(this.tBtGuardar_Click);
             // 
             // tBtBuscar
             // 
-            this.tBtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBtBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
             this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tBtBuscar.Name = "tBtBuscar";
-            this.tBtBuscar.Size = new System.Drawing.Size(64, 22);
+            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
             this.tBtBuscar.Text = "Buscar";
             this.tBtBuscar.Click += new System.EventHandler(this.tBtBuscar_Click);
             // 
             // tBtAnular
             // 
-            this.tBtAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tBtAnular.Image = global::Galactus.Properties.Resources.btn_anular;
             this.tBtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tBtAnular.Name = "tBtAnular";
-            this.tBtAnular.Size = new System.Drawing.Size(63, 22);
+            this.tBtAnular.Size = new System.Drawing.Size(62, 22);
             this.tBtAnular.Text = "Anular";
             this.tBtAnular.Click += new System.EventHandler(this.tBtAnular_Click);
             // 
@@ -582,7 +588,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1025, 584);
+            this.ClientSize = new System.Drawing.Size(1009, 545);
             this.Controls.Add(this.gbPrincipal);
             this.Controls.Add(this.tstMenuPatron);
             this.ForeColor = System.Drawing.SystemColors.ControlText;

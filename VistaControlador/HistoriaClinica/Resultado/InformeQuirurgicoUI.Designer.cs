@@ -28,41 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TostMenu = new System.Windows.Forms.ToolStrip();
-            this.btNuevo = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.btEditar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.btGuardar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.btCancelar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.btBuscar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
-            this.btAnular = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtNota = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlCaracteristica = new System.Windows.Forms.Panel();
-            this.btBuscarAnastesia = new System.Windows.Forms.Button();
             this.txtAnastesia = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.btBuscarAnastesiologo = new System.Windows.Forms.Button();
             this.txtAnastesiologo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.btBuscarAyudante = new System.Windows.Forms.Button();
             this.txtAyudante = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.btBuscarVia = new System.Windows.Forms.Button();
             this.txtVia = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnBuscarPaciente = new System.Windows.Forms.Button();
             this.txtCodigoAdministradora = new System.Windows.Forms.TextBox();
             this.txtAdministradora = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -76,124 +59,28 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.TostMenu.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btBuscarAnastesia = new System.Windows.Forms.Button();
+            this.btBuscarAnastesiologo = new System.Windows.Forms.Button();
+            this.btBuscarAyudante = new System.Windows.Forms.Button();
+            this.btBuscarVia = new System.Windows.Forms.Button();
+            this.btnBuscarPaciente = new System.Windows.Forms.Button();
+            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
+            this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tBtEditar = new System.Windows.Forms.ToolStripButton();
+            this.tBtCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tBtBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tBtAnular = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlCaracteristica.SuspendLayout();
             this.pnlInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tstMenuPatron.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // TostMenu
-            // 
-            this.TostMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TostMenu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TostMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btNuevo,
-            this.toolStripLabel1,
-            this.btEditar,
-            this.toolStripLabel2,
-            this.btGuardar,
-            this.toolStripLabel3,
-            this.btCancelar,
-            this.toolStripLabel4,
-            this.btBuscar,
-            this.toolStripLabel5,
-            this.btAnular});
-            this.TostMenu.Location = new System.Drawing.Point(0, 555);
-            this.TostMenu.Name = "TostMenu";
-            this.TostMenu.Size = new System.Drawing.Size(969, 25);
-            this.TostMenu.TabIndex = 4;
-            this.TostMenu.Text = "toolStrip1";
-            // 
-            // btNuevo
-            // 
-            this.btNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.btNuevo.Name = "btNuevo";
-            this.btNuevo.Size = new System.Drawing.Size(68, 22);
-            this.btNuevo.Text = "Nuevo";
-            this.btNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btNuevo.Click += new System.EventHandler(this.btNuevo_Click);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(20, 22);
-            this.toolStripLabel1.Text = "   ";
-            // 
-            // btEditar
-            // 
-            this.btEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.btEditar.Name = "btEditar";
-            this.btEditar.Size = new System.Drawing.Size(65, 22);
-            this.btEditar.Text = "Editar";
-            this.btEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(20, 22);
-            this.toolStripLabel2.Text = "   ";
-            // 
-            // btGuardar
-            // 
-            this.btGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.btGuardar.Name = "btGuardar";
-            this.btGuardar.Size = new System.Drawing.Size(80, 22);
-            this.btGuardar.Text = "Guardar";
-            this.btGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
-            // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(20, 22);
-            this.toolStripLabel3.Text = "   ";
-            // 
-            // btCancelar
-            // 
-            this.btCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(85, 22);
-            this.btCancelar.Text = "Cancelar";
-            this.btCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
-            // 
-            // toolStripLabel4
-            // 
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(20, 22);
-            this.toolStripLabel4.Text = "   ";
-            // 
-            // btBuscar
-            // 
-            this.btBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
-            this.btBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btBuscar.Name = "btBuscar";
-            this.btBuscar.Size = new System.Drawing.Size(71, 22);
-            this.btBuscar.Text = "Buscar";
-            this.btBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
-            // 
-            // toolStripLabel5
-            // 
-            this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(20, 22);
-            this.toolStripLabel5.Text = "   ";
-            // 
-            // btAnular
-            // 
-            this.btAnular.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.btAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btAnular.Name = "btAnular";
-            this.btAnular.Size = new System.Drawing.Size(70, 22);
-            this.btAnular.Text = "Anular";
-            this.btAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btAnular.Click += new System.EventHandler(this.btAnular_Click);
             // 
             // panel1
             // 
@@ -270,15 +157,6 @@
             this.pnlCaracteristica.Size = new System.Drawing.Size(897, 60);
             this.pnlCaracteristica.TabIndex = 2;
             // 
-            // btBuscarAnastesia
-            // 
-            this.btBuscarAnastesia.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarAnastesia.Location = new System.Drawing.Point(833, 31);
-            this.btBuscarAnastesia.Name = "btBuscarAnastesia";
-            this.btBuscarAnastesia.Size = new System.Drawing.Size(26, 24);
-            this.btBuscarAnastesia.TabIndex = 55;
-            this.btBuscarAnastesia.UseVisualStyleBackColor = true;
-            // 
             // txtAnastesia
             // 
             this.txtAnastesia.Font = new System.Drawing.Font("Arial Narrow", 9F);
@@ -297,15 +175,6 @@
             this.label13.Size = new System.Drawing.Size(66, 16);
             this.label13.TabIndex = 53;
             this.label13.Text = "Anastesia";
-            // 
-            // btBuscarAnastesiologo
-            // 
-            this.btBuscarAnastesiologo.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarAnastesiologo.Location = new System.Drawing.Point(833, 4);
-            this.btBuscarAnastesiologo.Name = "btBuscarAnastesiologo";
-            this.btBuscarAnastesiologo.Size = new System.Drawing.Size(26, 24);
-            this.btBuscarAnastesiologo.TabIndex = 52;
-            this.btBuscarAnastesiologo.UseVisualStyleBackColor = true;
             // 
             // txtAnastesiologo
             // 
@@ -326,15 +195,6 @@
             this.label14.TabIndex = 50;
             this.label14.Text = "Anastesiologo:";
             // 
-            // btBuscarAyudante
-            // 
-            this.btBuscarAyudante.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarAyudante.Location = new System.Drawing.Point(373, 30);
-            this.btBuscarAyudante.Name = "btBuscarAyudante";
-            this.btBuscarAyudante.Size = new System.Drawing.Size(26, 24);
-            this.btBuscarAyudante.TabIndex = 49;
-            this.btBuscarAyudante.UseVisualStyleBackColor = true;
-            // 
             // txtAyudante
             // 
             this.txtAyudante.Font = new System.Drawing.Font("Arial Narrow", 9F);
@@ -353,15 +213,6 @@
             this.label12.Size = new System.Drawing.Size(67, 16);
             this.label12.TabIndex = 47;
             this.label12.Text = "Ayudante:";
-            // 
-            // btBuscarVia
-            // 
-            this.btBuscarVia.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarVia.Location = new System.Drawing.Point(373, 3);
-            this.btBuscarVia.Name = "btBuscarVia";
-            this.btBuscarVia.Size = new System.Drawing.Size(26, 24);
-            this.btBuscarVia.TabIndex = 46;
-            this.btBuscarVia.UseVisualStyleBackColor = true;
             // 
             // txtVia
             // 
@@ -436,16 +287,6 @@
             this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 44;
             this.label4.Text = "Fecha:";
-            // 
-            // btnBuscarPaciente
-            // 
-            this.btnBuscarPaciente.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btnBuscarPaciente.Location = new System.Drawing.Point(234, 5);
-            this.btnBuscarPaciente.Name = "btnBuscarPaciente";
-            this.btnBuscarPaciente.Size = new System.Drawing.Size(26, 24);
-            this.btnBuscarPaciente.TabIndex = 43;
-            this.btnBuscarPaciente.UseVisualStyleBackColor = true;
-            this.btnBuscarPaciente.Click += new System.EventHandler(this.btnBuscarNit_Click);
             // 
             // txtCodigoAdministradora
             // 
@@ -569,15 +410,6 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Nº Registro:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(22, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -601,25 +433,156 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(22, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btBuscarAnastesia
+            // 
+            this.btBuscarAnastesia.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarAnastesia.Location = new System.Drawing.Point(833, 31);
+            this.btBuscarAnastesia.Name = "btBuscarAnastesia";
+            this.btBuscarAnastesia.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarAnastesia.TabIndex = 55;
+            this.btBuscarAnastesia.UseVisualStyleBackColor = true;
+            // 
+            // btBuscarAnastesiologo
+            // 
+            this.btBuscarAnastesiologo.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarAnastesiologo.Location = new System.Drawing.Point(833, 4);
+            this.btBuscarAnastesiologo.Name = "btBuscarAnastesiologo";
+            this.btBuscarAnastesiologo.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarAnastesiologo.TabIndex = 52;
+            this.btBuscarAnastesiologo.UseVisualStyleBackColor = true;
+            // 
+            // btBuscarAyudante
+            // 
+            this.btBuscarAyudante.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarAyudante.Location = new System.Drawing.Point(373, 30);
+            this.btBuscarAyudante.Name = "btBuscarAyudante";
+            this.btBuscarAyudante.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarAyudante.TabIndex = 49;
+            this.btBuscarAyudante.UseVisualStyleBackColor = true;
+            // 
+            // btBuscarVia
+            // 
+            this.btBuscarVia.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarVia.Location = new System.Drawing.Point(373, 3);
+            this.btBuscarVia.Name = "btBuscarVia";
+            this.btBuscarVia.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarVia.TabIndex = 46;
+            this.btBuscarVia.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarPaciente
+            // 
+            this.btnBuscarPaciente.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btnBuscarPaciente.Location = new System.Drawing.Point(234, 5);
+            this.btnBuscarPaciente.Name = "btnBuscarPaciente";
+            this.btnBuscarPaciente.Size = new System.Drawing.Size(26, 24);
+            this.btnBuscarPaciente.TabIndex = 43;
+            this.btnBuscarPaciente.UseVisualStyleBackColor = true;
+            this.btnBuscarPaciente.Click += new System.EventHandler(this.btnBuscarNit_Click);
+            // 
+            // tstMenuPatron
+            // 
+            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tBtNuevo,
+            this.tBtEditar,
+            this.tBtCancelar,
+            this.tBtGuardar,
+            this.tBtBuscar,
+            this.tBtAnular});
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 555);
+            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.Name = "tstMenuPatron";
+            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.TabIndex = 48;
+            this.tstMenuPatron.Text = "toolStrip1";
+            // 
+            // tBtNuevo
+            // 
+            this.tBtNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tBtNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtNuevo.Name = "tBtNuevo";
+            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tBtNuevo.Text = "Nuevo";
+            // 
+            // tBtEditar
+            // 
+            this.tBtEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtEditar.Name = "tBtEditar";
+            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
+            this.tBtEditar.Text = "Editar";
+            // 
+            // tBtCancelar
+            // 
+            this.tBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtCancelar.Name = "tBtCancelar";
+            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tBtCancelar.Text = "Cancelar";
+            // 
+            // tBtGuardar
+            // 
+            this.tBtGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtGuardar.Name = "tBtGuardar";
+            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tBtGuardar.Text = "Guardar";
+            // 
+            // tBtBuscar
+            // 
+            this.tBtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtBuscar.Name = "tBtBuscar";
+            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tBtBuscar.Text = "Buscar";
+            // 
+            // tBtAnular
+            // 
+            this.tBtAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tBtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtAnular.Name = "tBtAnular";
+            this.tBtAnular.Size = new System.Drawing.Size(62, 22);
+            this.tBtAnular.Text = "Anular";
+            // 
             // InformeQuirurgicoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(969, 580);
+            this.Controls.Add(this.tstMenuPatron);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.TostMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(969, 580);
             this.MinimumSize = new System.Drawing.Size(969, 580);
             this.Name = "InformeQuirurgicoUI";
             this.Text = "InformeQuirurgicoUI";
             this.Load += new System.EventHandler(this.InformeQuirurgicoUI_Load);
-            this.TostMenu.ResumeLayout(false);
-            this.TostMenu.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -629,25 +592,14 @@
             this.pnlInformacion.ResumeLayout(false);
             this.pnlInformacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tstMenuPatron.ResumeLayout(false);
+            this.tstMenuPatron.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStrip TostMenu;
-        private System.Windows.Forms.ToolStripButton btNuevo;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton btEditar;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripButton btGuardar;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
-        private System.Windows.Forms.ToolStripButton btCancelar;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripButton btBuscar;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
-        private System.Windows.Forms.ToolStripButton btAnular;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label21;
@@ -687,5 +639,12 @@
         private System.Windows.Forms.Button btBuscarVia;
         private System.Windows.Forms.TextBox txtVia;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ToolStrip tstMenuPatron;
+        private System.Windows.Forms.ToolStripButton tBtNuevo;
+        private System.Windows.Forms.ToolStripButton tBtEditar;
+        private System.Windows.Forms.ToolStripButton tBtCancelar;
+        private System.Windows.Forms.ToolStripButton tBtGuardar;
+        private System.Windows.Forms.ToolStripButton tBtBuscar;
+        private System.Windows.Forms.ToolStripButton tBtAnular;
     }
 }

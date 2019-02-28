@@ -16,5 +16,35 @@ namespace Galactus.VistaControlador.Gestion
         {
             InitializeComponent();
         }
+
+        private void tBtNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tBtEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tBtCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tBtGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tBtBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tBtAnular_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

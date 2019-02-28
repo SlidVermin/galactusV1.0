@@ -28,20 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.manejoIntegralText = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.buscarEspOtrosBtn = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.apNoRB = new System.Windows.Forms.RadioButton();
+            this.apSiRB = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.serviciosGridView = new System.Windows.Forms.DataGridView();
+            this.codigoCIECOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quitarAnularCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diasCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quitarCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.justificacionClinicaText = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.servElectivosRB = new System.Windows.Forms.RadioButton();
             this.posteriorRB = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.servicioActualText = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.registroText = new System.Windows.Forms.TextBox();
@@ -57,42 +77,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.NRegistroText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.apSiRB = new System.Windows.Forms.RadioButton();
-            this.apNoRB = new System.Windows.Forms.RadioButton();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.buscarEspOtrosBtn = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.manejoIntegralText = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
             this.tBtEditar = new System.Windows.Forms.ToolStripButton();
             this.tBtCancelar = new System.Windows.Forms.ToolStripButton();
             this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
             this.tBtBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tbtAnular = new System.Windows.Forms.ToolStripButton();
-            this.tbtImprimir = new System.Windows.Forms.ToolStripButton();
-            this.codigoCIECOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quitarAnularCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diasCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quitarCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label11 = new System.Windows.Forms.Label();
+            this.tBtAnular = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.serviciosGridView)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.tstMenuPatron.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +112,129 @@
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(12, 200);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(160, 13);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Manejo Integral Según Día";
+            // 
+            // manejoIntegralText
+            // 
+            this.manejoIntegralText.Location = new System.Drawing.Point(12, 216);
+            this.manejoIntegralText.Multiline = true;
+            this.manejoIntegralText.Name = "manejoIntegralText";
+            this.manejoIntegralText.Size = new System.Drawing.Size(804, 59);
+            this.manejoIntegralText.TabIndex = 10;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.buscarEspOtrosBtn);
+            this.groupBox6.Controls.Add(this.textBox3);
+            this.groupBox6.Controls.Add(this.label9);
+            this.groupBox6.Controls.Add(this.radioButton3);
+            this.groupBox6.Controls.Add(this.radioButton2);
+            this.groupBox6.Controls.Add(this.radioButton1);
+            this.groupBox6.Location = new System.Drawing.Point(316, 153);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(495, 35);
+            this.groupBox6.TabIndex = 9;
+            this.groupBox6.TabStop = false;
+            // 
+            // buscarEspOtrosBtn
+            // 
+            this.buscarEspOtrosBtn.Image = global::Galactus.Properties.Resources.search__1_;
+            this.buscarEspOtrosBtn.Location = new System.Drawing.Point(452, 8);
+            this.buscarEspOtrosBtn.Name = "buscarEspOtrosBtn";
+            this.buscarEspOtrosBtn.Size = new System.Drawing.Size(26, 24);
+            this.buscarEspOtrosBtn.TabIndex = 7;
+            this.buscarEspOtrosBtn.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(332, 11);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(114, 20);
+            this.textBox3.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(262, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 13);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Trasladar A:";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(182, 12);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(74, 17);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "C. Externa";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(108, 12);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(68, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Urgencia";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 12);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(96, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Hospitalización";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.apNoRB);
+            this.groupBox5.Controls.Add(this.apSiRB);
+            this.groupBox5.Location = new System.Drawing.Point(198, 153);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(110, 35);
+            this.groupBox5.TabIndex = 8;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Atención Prioritaria";
+            // 
+            // apNoRB
+            // 
+            this.apNoRB.AutoSize = true;
+            this.apNoRB.Location = new System.Drawing.Point(47, 12);
+            this.apNoRB.Name = "apNoRB";
+            this.apNoRB.Size = new System.Drawing.Size(41, 17);
+            this.apNoRB.TabIndex = 1;
+            this.apNoRB.TabStop = true;
+            this.apNoRB.Text = "NO";
+            this.apNoRB.UseVisualStyleBackColor = true;
+            // 
+            // apSiRB
+            // 
+            this.apSiRB.AutoSize = true;
+            this.apSiRB.Location = new System.Drawing.Point(6, 12);
+            this.apSiRB.Name = "apSiRB";
+            this.apSiRB.Size = new System.Drawing.Size(35, 17);
+            this.apSiRB.TabIndex = 0;
+            this.apSiRB.TabStop = true;
+            this.apSiRB.Text = "SI";
+            this.apSiRB.UseVisualStyleBackColor = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.serviciosGridView);
@@ -125,17 +247,17 @@
             // 
             // serviciosGridView
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.serviciosGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.serviciosGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.serviciosGridView.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.serviciosGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.serviciosGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.serviciosGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.serviciosGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoCIECOL,
@@ -144,31 +266,72 @@
             this.quitarAnularCol,
             this.diasCol,
             this.quitarCol});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.serviciosGridView.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.serviciosGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.serviciosGridView.GridColor = System.Drawing.Color.DarkGray;
             this.serviciosGridView.Location = new System.Drawing.Point(9, 19);
             this.serviciosGridView.MultiSelect = false;
             this.serviciosGridView.Name = "serviciosGridView";
             this.serviciosGridView.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.serviciosGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.serviciosGridView.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.serviciosGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.serviciosGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.serviciosGridView.Size = new System.Drawing.Size(790, 120);
             this.serviciosGridView.TabIndex = 1;
+            // 
+            // codigoCIECOL
+            // 
+            this.codigoCIECOL.HeaderText = "Código CUPS";
+            this.codigoCIECOL.Name = "codigoCIECOL";
+            this.codigoCIECOL.ReadOnly = true;
+            this.codigoCIECOL.Width = 120;
+            // 
+            // descripcionDiagCol
+            // 
+            this.descripcionDiagCol.HeaderText = "Descripción Servicio";
+            this.descripcionDiagCol.Name = "descripcionDiagCol";
+            this.descripcionDiagCol.ReadOnly = true;
+            this.descripcionDiagCol.Width = 300;
+            // 
+            // observacionDiagCol
+            // 
+            this.observacionDiagCol.HeaderText = "Día Inicial";
+            this.observacionDiagCol.Name = "observacionDiagCol";
+            this.observacionDiagCol.ReadOnly = true;
+            this.observacionDiagCol.Width = 80;
+            // 
+            // quitarAnularCol
+            // 
+            this.quitarAnularCol.HeaderText = "Día Final";
+            this.quitarAnularCol.Name = "quitarAnularCol";
+            this.quitarAnularCol.ReadOnly = true;
+            this.quitarAnularCol.Width = 80;
+            // 
+            // diasCol
+            // 
+            this.diasCol.HeaderText = "Días";
+            this.diasCol.Name = "diasCol";
+            this.diasCol.ReadOnly = true;
+            this.diasCol.Width = 60;
+            // 
+            // quitarCol
+            // 
+            this.quitarCol.HeaderText = "Quitar/Anular";
+            this.quitarCol.Name = "quitarCol";
+            this.quitarCol.ReadOnly = true;
             // 
             // label8
             // 
@@ -246,6 +409,22 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Básicos";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(712, 27);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(74, 20);
+            this.textBox2.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(667, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Orden:";
             // 
             // servicioActualText
             // 
@@ -366,259 +545,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Identificación:";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(712, 27);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(74, 20);
-            this.textBox2.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(667, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Orden:";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.apNoRB);
-            this.groupBox5.Controls.Add(this.apSiRB);
-            this.groupBox5.Location = new System.Drawing.Point(198, 153);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(110, 35);
-            this.groupBox5.TabIndex = 8;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Atención Prioritaria";
-            // 
-            // apSiRB
-            // 
-            this.apSiRB.AutoSize = true;
-            this.apSiRB.Location = new System.Drawing.Point(6, 12);
-            this.apSiRB.Name = "apSiRB";
-            this.apSiRB.Size = new System.Drawing.Size(35, 17);
-            this.apSiRB.TabIndex = 0;
-            this.apSiRB.TabStop = true;
-            this.apSiRB.Text = "SI";
-            this.apSiRB.UseVisualStyleBackColor = true;
-            // 
-            // apNoRB
-            // 
-            this.apNoRB.AutoSize = true;
-            this.apNoRB.Location = new System.Drawing.Point(47, 12);
-            this.apNoRB.Name = "apNoRB";
-            this.apNoRB.Size = new System.Drawing.Size(41, 17);
-            this.apNoRB.TabIndex = 1;
-            this.apNoRB.TabStop = true;
-            this.apNoRB.Text = "NO";
-            this.apNoRB.UseVisualStyleBackColor = true;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.buscarEspOtrosBtn);
-            this.groupBox6.Controls.Add(this.textBox3);
-            this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Controls.Add(this.radioButton3);
-            this.groupBox6.Controls.Add(this.radioButton2);
-            this.groupBox6.Controls.Add(this.radioButton1);
-            this.groupBox6.Location = new System.Drawing.Point(316, 153);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(495, 35);
-            this.groupBox6.TabIndex = 9;
-            this.groupBox6.TabStop = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 12);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(96, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Hospitalización";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(108, 12);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(68, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Urgencia";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(182, 12);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(74, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "C. Externa";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(262, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Trasladar A:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(332, 11);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 20);
-            this.textBox3.TabIndex = 4;
-            // 
-            // buscarEspOtrosBtn
-            // 
-            this.buscarEspOtrosBtn.Image = global::Galactus.Properties.Resources.search__1_;
-            this.buscarEspOtrosBtn.Location = new System.Drawing.Point(452, 8);
-            this.buscarEspOtrosBtn.Name = "buscarEspOtrosBtn";
-            this.buscarEspOtrosBtn.Size = new System.Drawing.Size(26, 24);
-            this.buscarEspOtrosBtn.TabIndex = 7;
-            this.buscarEspOtrosBtn.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 200);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(160, 13);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Manejo Integral Según Día";
-            // 
-            // manejoIntegralText
-            // 
-            this.manejoIntegralText.Location = new System.Drawing.Point(12, 216);
-            this.manejoIntegralText.Multiline = true;
-            this.manejoIntegralText.Name = "manejoIntegralText";
-            this.manejoIntegralText.Size = new System.Drawing.Size(804, 59);
-            this.manejoIntegralText.TabIndex = 10;
-            // 
-            // tstMenuPatron
-            // 
-            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tBtNuevo,
-            this.tBtEditar,
-            this.tBtCancelar,
-            this.tBtGuardar,
-            this.tBtBuscar,
-            this.tbtAnular,
-            this.tbtImprimir});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 600);
-            this.tstMenuPatron.Name = "tstMenuPatron";
-            this.tstMenuPatron.Size = new System.Drawing.Size(854, 25);
-            this.tstMenuPatron.TabIndex = 30;
-            this.tstMenuPatron.Text = "toolStrip1";
-            // 
-            // tBtNuevo
-            // 
-            this.tBtNuevo.Image = global::Galactus.Properties.Resources.add;
-            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtNuevo.Name = "tBtNuevo";
-            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tBtNuevo.Text = "Nuevo";
-            // 
-            // tBtEditar
-            // 
-            this.tBtEditar.Image = global::Galactus.Properties.Resources.edit;
-            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtEditar.Name = "tBtEditar";
-            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
-            this.tBtEditar.Text = "Editar";
-            // 
-            // tBtCancelar
-            // 
-            this.tBtCancelar.Image = global::Galactus.Properties.Resources.back_arrow;
-            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtCancelar.Name = "tBtCancelar";
-            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tBtCancelar.Text = "Cancelar";
-            // 
-            // tBtGuardar
-            // 
-            this.tBtGuardar.Image = global::Galactus.Properties.Resources.guardar16;
-            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtGuardar.Name = "tBtGuardar";
-            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tBtGuardar.Text = "Guardar";
-            // 
-            // tBtBuscar
-            // 
-            this.tBtBuscar.Image = global::Galactus.Properties.Resources.search__1_;
-            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtBuscar.Name = "tBtBuscar";
-            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tBtBuscar.Text = "Buscar";
-            // 
-            // tbtAnular
-            // 
-            this.tbtAnular.Image = global::Galactus.Properties.Resources.anular24;
-            this.tbtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtAnular.Name = "tbtAnular";
-            this.tbtAnular.Size = new System.Drawing.Size(62, 22);
-            this.tbtAnular.Text = "Anular";
-            // 
-            // tbtImprimir
-            // 
-            this.tbtImprimir.Image = global::Galactus.Properties.Resources.print__2_;
-            this.tbtImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtImprimir.Name = "tbtImprimir";
-            this.tbtImprimir.Size = new System.Drawing.Size(73, 22);
-            this.tbtImprimir.Text = "Imprimir";
-            // 
-            // codigoCIECOL
-            // 
-            this.codigoCIECOL.HeaderText = "Código CUPS";
-            this.codigoCIECOL.Name = "codigoCIECOL";
-            this.codigoCIECOL.ReadOnly = true;
-            this.codigoCIECOL.Width = 120;
-            // 
-            // descripcionDiagCol
-            // 
-            this.descripcionDiagCol.HeaderText = "Descripción Servicio";
-            this.descripcionDiagCol.Name = "descripcionDiagCol";
-            this.descripcionDiagCol.ReadOnly = true;
-            this.descripcionDiagCol.Width = 300;
-            // 
-            // observacionDiagCol
-            // 
-            this.observacionDiagCol.HeaderText = "Día Inicial";
-            this.observacionDiagCol.Name = "observacionDiagCol";
-            this.observacionDiagCol.ReadOnly = true;
-            this.observacionDiagCol.Width = 80;
-            // 
-            // quitarAnularCol
-            // 
-            this.quitarAnularCol.HeaderText = "Día Final";
-            this.quitarAnularCol.Name = "quitarAnularCol";
-            this.quitarAnularCol.ReadOnly = true;
-            this.quitarAnularCol.Width = 80;
-            // 
-            // diasCol
-            // 
-            this.diasCol.HeaderText = "Días";
-            this.diasCol.Name = "diasCol";
-            this.diasCol.ReadOnly = true;
-            this.diasCol.Width = 60;
-            // 
-            // quitarCol
-            // 
-            this.quitarCol.HeaderText = "Quitar/Anular";
-            this.quitarCol.Name = "quitarCol";
-            this.quitarCol.ReadOnly = true;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -629,29 +555,107 @@
             this.label11.TabIndex = 31;
             this.label11.Text = "ANEXO 3: SOLICITUD DE SERVICIOS";
             // 
+            // tstMenuPatron
+            // 
+            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tBtNuevo,
+            this.tBtEditar,
+            this.tBtCancelar,
+            this.tBtGuardar,
+            this.tBtBuscar,
+            this.tBtAnular});
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 600);
+            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.Name = "tstMenuPatron";
+            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.TabIndex = 48;
+            this.tstMenuPatron.Text = "toolStrip1";
+            // 
+            // tBtNuevo
+            // 
+            this.tBtNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tBtNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtNuevo.Name = "tBtNuevo";
+            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tBtNuevo.Text = "Nuevo";
+            // 
+            // tBtEditar
+            // 
+            this.tBtEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtEditar.Name = "tBtEditar";
+            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
+            this.tBtEditar.Text = "Editar";
+            // 
+            // tBtCancelar
+            // 
+            this.tBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtCancelar.Name = "tBtCancelar";
+            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tBtCancelar.Text = "Cancelar";
+            // 
+            // tBtGuardar
+            // 
+            this.tBtGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtGuardar.Name = "tBtGuardar";
+            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tBtGuardar.Text = "Guardar";
+            // 
+            // tBtBuscar
+            // 
+            this.tBtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtBuscar.Name = "tBtBuscar";
+            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tBtBuscar.Text = "Buscar";
+            // 
+            // tBtAnular
+            // 
+            this.tBtAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBtAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tBtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tBtAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tBtAnular.Name = "tBtAnular";
+            this.tBtAnular.Size = new System.Drawing.Size(62, 22);
+            this.tBtAnular.Text = "Anular";
+            // 
             // Anexo3UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(854, 625);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.tstMenuPatron);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox1);
             this.Name = "Anexo3UI";
             this.Text = "Anexo3UI";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.serviciosGridView)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
             this.ResumeLayout(false);
@@ -699,14 +703,6 @@
         private System.Windows.Forms.Button buscarEspOtrosBtn;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox manejoIntegralText;
-        private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton tBtNuevo;
-        private System.Windows.Forms.ToolStripButton tBtEditar;
-        private System.Windows.Forms.ToolStripButton tBtCancelar;
-        private System.Windows.Forms.ToolStripButton tBtGuardar;
-        private System.Windows.Forms.ToolStripButton tBtBuscar;
-        private System.Windows.Forms.ToolStripButton tbtAnular;
-        private System.Windows.Forms.ToolStripButton tbtImprimir;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoCIECOL;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDiagCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacionDiagCol;
@@ -714,5 +710,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diasCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn quitarCol;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ToolStrip tstMenuPatron;
+        private System.Windows.Forms.ToolStripButton tBtNuevo;
+        private System.Windows.Forms.ToolStripButton tBtEditar;
+        private System.Windows.Forms.ToolStripButton tBtCancelar;
+        private System.Windows.Forms.ToolStripButton tBtGuardar;
+        private System.Windows.Forms.ToolStripButton tBtBuscar;
+        private System.Windows.Forms.ToolStripButton tBtAnular;
     }
 }
