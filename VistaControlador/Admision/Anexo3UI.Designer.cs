@@ -79,12 +79,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tBtEditar = new System.Windows.Forms.ToolStripButton();
-            this.tBtCancelar = new System.Windows.Forms.ToolStripButton();
-            this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tBtBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tBtAnular = new System.Windows.Forms.ToolStripButton();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tstEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -559,79 +559,79 @@
             // 
             this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tBtNuevo,
-            this.tBtEditar,
-            this.tBtCancelar,
-            this.tBtGuardar,
-            this.tBtBuscar,
-            this.tBtAnular});
+            this.tsbNuevo,
+            this.tstEditar,
+            this.tsbGuardar,
+            this.tsbBuscar,
+            this.tsbAnular,
+            this.tsbCancelar});
             this.tstMenuPatron.Location = new System.Drawing.Point(0, 600);
             this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.Name = "tstMenuPatron";
             this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.TabIndex = 48;
+            this.tstMenuPatron.TabIndex = 49;
             this.tstMenuPatron.Text = "toolStrip1";
             // 
-            // tBtNuevo
+            // tsbNuevo
             // 
-            this.tBtNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.White;
-            this.tBtNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtNuevo.Name = "tBtNuevo";
-            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tBtNuevo.Text = "Nuevo";
+            this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
             // 
-            // tBtEditar
+            // tstEditar
             // 
-            this.tBtEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtEditar.Name = "tBtEditar";
-            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
-            this.tBtEditar.Text = "Editar";
+            this.tstEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tstEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tstEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstEditar.Name = "tstEditar";
+            this.tstEditar.Size = new System.Drawing.Size(57, 22);
+            this.tstEditar.Text = "Editar";
             // 
-            // tBtCancelar
+            // tsbGuardar
             // 
-            this.tBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtCancelar.Name = "tBtCancelar";
-            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tBtCancelar.Text = "Cancelar";
+            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
             // 
-            // tBtGuardar
+            // tsbBuscar
             // 
-            this.tBtGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtGuardar.Name = "tBtGuardar";
-            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tBtGuardar.Text = "Guardar";
+            this.tsbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscar.Text = "Buscar";
             // 
-            // tBtBuscar
+            // tsbAnular
             // 
-            this.tBtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
-            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtBuscar.Name = "tBtBuscar";
-            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tBtBuscar.Text = "Buscar";
+            this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbAnular.Name = "tsbAnular";
+            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnular.Text = "Anular";
             // 
-            // tBtAnular
+            // tsbCancelar
             // 
-            this.tBtAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtAnular.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.tBtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtAnular.Name = "tBtAnular";
-            this.tBtAnular.Size = new System.Drawing.Size(62, 22);
-            this.tBtAnular.Text = "Anular";
+            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
             // 
             // Anexo3UI
             // 
@@ -711,11 +711,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quitarCol;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton tBtNuevo;
-        private System.Windows.Forms.ToolStripButton tBtEditar;
-        private System.Windows.Forms.ToolStripButton tBtCancelar;
-        private System.Windows.Forms.ToolStripButton tBtGuardar;
-        private System.Windows.Forms.ToolStripButton tBtBuscar;
-        private System.Windows.Forms.ToolStripButton tBtAnular;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tstEditar;
+        private System.Windows.Forms.ToolStripButton tsbGuardar;
+        private System.Windows.Forms.ToolStripButton tsbBuscar;
+        private System.Windows.Forms.ToolStripButton tsbAnular;
+        private System.Windows.Forms.ToolStripButton tsbCancelar;
     }
 }

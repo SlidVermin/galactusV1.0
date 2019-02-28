@@ -26,7 +26,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void EmpresaUI_Load(object sender, EventArgs e)
         {
-            GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
             iniciarlizarForm();
         }
         private void cbPais_SelectedValueChanged(object sender, EventArgs e)
@@ -61,20 +61,20 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         #endregion
         #region Botones
-        private void tBtNuevo_Click(object sender, EventArgs e)
+        private void tsbNuevo_Click(object sender, EventArgs e)
         {
             limpiarObjetoEmpresa();
-            GeneralC.formNuevo(this, tstMenuPatron, tBtGuardar, tBtCancelar);
+            GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
-        private void tBtEditar_Click(object sender, EventArgs e)
+        private void tstEditar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tBtGuardar, tBtCancelar);
+            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
-        private void tBtCancelar_Click(object sender, EventArgs e)
+        private void tsbCancelar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnCancelarForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
         }
-        private void tBtGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click(object sender, EventArgs e)
         {
             if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -82,7 +82,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 try
                 {
                     EmpresaDAL.guardar(empresa);
-                    GeneralC.posGuardar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                 }
                 catch (Exception ex)
                 {
@@ -90,7 +90,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 }
             }
         }
-        private void tBtBuscar_Click(object sender, EventArgs e)
+        private void tsbBuscar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -107,14 +107,14 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 MessageBox.Show(ex.Message);
             }
         }
-        private void tBtAnular_Click(object sender, EventArgs e)
+        private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     EmpresaDAL.anular(empresa);
-                    GeneralC.posAnular(this, tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
                 }
                 catch (Exception ex)
                 {
@@ -123,7 +123,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
             }
         }
-        private void btBuscarTercero_Click(object sender, EventArgs e)
+        private void tsbBuscarTercero_Click(object sender, EventArgs e)
         {
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
@@ -191,7 +191,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 cbPais.SelectedValue = filaResultado.Field<int>("IdPais");
                 cbDepartamento.SelectedValue = filaResultado.Field<int>("IdDepartamento");
                 cbCiudad.SelectedValue = empresa.ubicacion;
-                GeneralC.posBuscar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular);
+                GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular);
             }
         }
         void iniciarlizarForm()
@@ -245,7 +245,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             }
             else if (txtIdentificacionRepresentante.Text.Equals(""))
             {
-                GeneralC.mostrarMensajeInformacio("Debe escojer el representante de la empresa !", btBuscarTercero);
+                GeneralC.mostrarMensajeInformacio("Debe escojer el representante de la empresa !", tsbBuscarTercero);
                 return false;
             }
             else

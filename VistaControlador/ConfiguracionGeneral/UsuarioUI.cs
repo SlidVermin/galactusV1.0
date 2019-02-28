@@ -24,21 +24,21 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         private void UsuarioUI_Load(object sender, EventArgs e)
         {
             GeneralC.colocarIconosMenu(tstMenuPatron);
-            GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
         }
-        private void tBtNuevo_Click(object sender, EventArgs e)
+        private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            GeneralC.formNuevo(this, tstMenuPatron, tBtGuardar, tBtCancelar);
+            GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
-        private void tBtEditar_Click(object sender, EventArgs e)
+        private void tstEditar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tBtGuardar, tBtCancelar);
+            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
-        private void tBtCancelar_Click(object sender, EventArgs e)
+        private void tsbCancelar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnCancelarForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
         }
-        private void tBtGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click(object sender, EventArgs e)
         {
             if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -49,7 +49,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 try
                 {
                     UsuarioDAL.guardar(usuario);
-                    GeneralC.posGuardar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     txtBCodigo.Text = usuario.idUsuario.ToString();
                 }
                 catch (Exception ex)
@@ -58,7 +58,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 }
             }
         }
-        private void tBtBuscar_Click(object sender, EventArgs e)
+        private void tsbBuscar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        private void tBtAnular_Click(object sender, EventArgs e)
+        private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (usuario.idUsuario == 1)
             {
@@ -93,7 +93,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                     try
                     {
                         UsuarioDAL.anular(usuario);
-                        GeneralC.posAnular(this, tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
+                        GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
                     }
                     catch (Exception ex)
                     {
@@ -103,7 +103,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             }
 
         }
-        private void btnBuscarRol_Click(object sender, EventArgs e)
+        private void tsbBuscarRol_Click(object sender, EventArgs e)
         {
             try
             {
@@ -136,7 +136,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             txtClave.Text = fila.Field<string>("Clave");
             txtBRol.Text = fila.Field<string>("Rol");
             usuario.idRol = fila.Field<int>("IdRol");
-            GeneralC.posBuscar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular);
+            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular);
         }
         private bool validarForm()
         {

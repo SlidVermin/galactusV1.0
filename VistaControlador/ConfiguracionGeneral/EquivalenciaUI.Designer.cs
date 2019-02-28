@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tBtEditar = new System.Windows.Forms.ToolStripButton();
-            this.tBtCancelar = new System.Windows.Forms.ToolStripButton();
-            this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tBtBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tBtAnular = new System.Windows.Forms.ToolStripButton();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tstEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.gbInformacionATC = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbGrupoATC = new System.Windows.Forms.ComboBox();
@@ -51,7 +51,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.numOsmolalidad = new System.Windows.Forms.NumericUpDown();
             this.txtBUnidadMedida = new System.Windows.Forms.TextBox();
-            this.btBuscarUnidades = new System.Windows.Forms.Button();
+            this.tsbBuscarUnidades = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtBCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -93,12 +93,12 @@
             // 
             this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tBtNuevo,
-            this.tBtEditar,
-            this.tBtCancelar,
-            this.tBtGuardar,
-            this.tBtBuscar,
-            this.tBtAnular});
+            this.tsbNuevo,
+            this.tstEditar,
+            this.tsbGuardar,
+            this.tsbBuscar,
+            this.tsbAnular,
+            this.tsbCancelar});
             this.tstMenuPatron.Location = new System.Drawing.Point(0, 520);
             this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
@@ -107,71 +107,71 @@
             this.tstMenuPatron.TabIndex = 47;
             this.tstMenuPatron.Text = "toolStrip1";
             // 
-            // tBtNuevo
+            // tsbNuevo
             // 
-            this.tBtNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.White;
-            this.tBtNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtNuevo.Name = "tBtNuevo";
-            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tBtNuevo.Text = "Nuevo";
-            this.tBtNuevo.Click += new System.EventHandler(this.tBtNuevo_Click);
+            this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
-            // tBtEditar
+            // tstEditar
             // 
-            this.tBtEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtEditar.Name = "tBtEditar";
-            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
-            this.tBtEditar.Text = "Editar";
-            this.tBtEditar.Click += new System.EventHandler(this.tBtEditar_Click);
+            this.tstEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tstEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tstEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstEditar.Name = "tstEditar";
+            this.tstEditar.Size = new System.Drawing.Size(57, 22);
+            this.tstEditar.Text = "Editar";
+            this.tstEditar.Click += new System.EventHandler(this.tstEditar_Click);
             // 
-            // tBtCancelar
+            // tsbCancelar
             // 
-            this.tBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtCancelar.Name = "tBtCancelar";
-            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tBtCancelar.Text = "Cancelar";
-            this.tBtCancelar.Click += new System.EventHandler(this.tBtCancelar_Click);
+            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
-            // tBtGuardar
+            // tsbGuardar
             // 
-            this.tBtGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtGuardar.Name = "tBtGuardar";
-            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tBtGuardar.Text = "Guardar";
-            this.tBtGuardar.Click += new System.EventHandler(this.tBtGuardar_Click);
+            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
-            // tBtBuscar
+            // tsbBuscar
             // 
-            this.tBtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
-            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtBuscar.Name = "tBtBuscar";
-            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tBtBuscar.Text = "Buscar";
-            this.tBtBuscar.Click += new System.EventHandler(this.tBtBuscar_Click);
+            this.tsbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscar.Text = "Buscar";
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
             // 
-            // tBtAnular
+            // tsbAnular
             // 
-            this.tBtAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtAnular.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.tBtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtAnular.Name = "tBtAnular";
-            this.tBtAnular.Size = new System.Drawing.Size(62, 22);
-            this.tBtAnular.Text = "Anular";
-            this.tBtAnular.Click += new System.EventHandler(this.tBtAnular_Click);
+            this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbAnular.Name = "tsbAnular";
+            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnular.Text = "Anular";
+            this.tsbAnular.Click += new System.EventHandler(this.tsbAnular_Click);
             // 
             // gbInformacionATC
             // 
@@ -275,7 +275,7 @@
             this.gbDatosBasicos.Controls.Add(this.label4);
             this.gbDatosBasicos.Controls.Add(this.numOsmolalidad);
             this.gbDatosBasicos.Controls.Add(this.txtBUnidadMedida);
-            this.gbDatosBasicos.Controls.Add(this.btBuscarUnidades);
+            this.gbDatosBasicos.Controls.Add(this.tsbBuscarUnidades);
             this.gbDatosBasicos.Controls.Add(this.label5);
             this.gbDatosBasicos.Controls.Add(this.txtBCodigo);
             this.gbDatosBasicos.Controls.Add(this.label1);
@@ -367,17 +367,17 @@
             this.txtBUnidadMedida.Size = new System.Drawing.Size(163, 20);
             this.txtBUnidadMedida.TabIndex = 67;
             // 
-            // btBuscarUnidades
+            // tsbBuscarUnidades
             // 
-            this.btBuscarUnidades.BackColor = System.Drawing.Color.White;
-            this.btBuscarUnidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBuscarUnidades.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarUnidades.Location = new System.Drawing.Point(262, 82);
-            this.btBuscarUnidades.Name = "btBuscarUnidades";
-            this.btBuscarUnidades.Size = new System.Drawing.Size(22, 22);
-            this.btBuscarUnidades.TabIndex = 68;
-            this.btBuscarUnidades.UseVisualStyleBackColor = false;
-            this.btBuscarUnidades.Click += new System.EventHandler(this.btnBuscarUnidades_Click);
+            this.tsbBuscarUnidades.BackColor = System.Drawing.Color.White;
+            this.tsbBuscarUnidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbBuscarUnidades.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.tsbBuscarUnidades.Location = new System.Drawing.Point(262, 82);
+            this.tsbBuscarUnidades.Name = "tsbBuscarUnidades";
+            this.tsbBuscarUnidades.Size = new System.Drawing.Size(22, 22);
+            this.tsbBuscarUnidades.TabIndex = 68;
+            this.tsbBuscarUnidades.UseVisualStyleBackColor = false;
+            this.tsbBuscarUnidades.Click += new System.EventHandler(this.tsbBuscarUnidades_Click);
             // 
             // label5
             // 
@@ -623,12 +623,12 @@
 
         #endregion
         private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton tBtNuevo;
-        private System.Windows.Forms.ToolStripButton tBtEditar;
-        private System.Windows.Forms.ToolStripButton tBtCancelar;
-        private System.Windows.Forms.ToolStripButton tBtGuardar;
-        private System.Windows.Forms.ToolStripButton tBtBuscar;
-        private System.Windows.Forms.ToolStripButton tBtAnular;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tstEditar;
+        private System.Windows.Forms.ToolStripButton tsbCancelar;
+        private System.Windows.Forms.ToolStripButton tsbGuardar;
+        private System.Windows.Forms.ToolStripButton tsbBuscar;
+        private System.Windows.Forms.ToolStripButton tsbAnular;
         private System.Windows.Forms.GroupBox gbInformacionATC;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.ComboBox cbGrupoATC;
@@ -660,7 +660,7 @@
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.NumericUpDown numOsmolalidad;
         private System.Windows.Forms.TextBox txtBUnidadMedida;
-        private System.Windows.Forms.Button btBuscarUnidades;
+        private System.Windows.Forms.Button tsbBuscarUnidades;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtBCodigo;
         private System.Windows.Forms.Label label1;

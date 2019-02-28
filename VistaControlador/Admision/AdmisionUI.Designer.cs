@@ -30,13 +30,13 @@
         {
             this.label15 = new System.Windows.Forms.Label();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tBtEditar = new System.Windows.Forms.ToolStripButton();
-            this.tBtCancelar = new System.Windows.Forms.ToolStripButton();
-            this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tBtBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tbtAnular = new System.Windows.Forms.ToolStripButton();
-            this.tbtImprimir = new System.Windows.Forms.ToolStripButton();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tstEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
+            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.admisionesPB = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkResponsable = new System.Windows.Forms.CheckBox();
@@ -135,87 +135,94 @@
             // 
             this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tBtNuevo,
-            this.tBtEditar,
-            this.tBtCancelar,
-            this.tBtGuardar,
-            this.tBtBuscar,
-            this.tbtAnular,
-            this.tbtImprimir});
+            this.tsbNuevo,
+            this.tstEditar,
+            this.tsbCancelar,
+            this.tsbGuardar,
+            this.tsbBuscar,
+            this.tsbAnular,
+            this.tstImprimir});
             this.tstMenuPatron.Location = new System.Drawing.Point(0, 599);
             this.tstMenuPatron.Name = "tstMenuPatron";
             this.tstMenuPatron.Size = new System.Drawing.Size(907, 25);
             this.tstMenuPatron.TabIndex = 27;
             this.tstMenuPatron.Text = "toolStrip1";
             // 
-            // tBtNuevo
+            // tsbNuevo
             // 
-            this.tBtNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtNuevo.Name = "tBtNuevo";
-            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tBtNuevo.Text = "Nuevo";
-            this.tBtNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tBtNuevo.Click += new System.EventHandler(this.tBtNuevo_Click);
+            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
-            // tBtEditar
+            // tstEditar
             // 
-            this.tBtEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtEditar.Name = "tBtEditar";
-            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
-            this.tBtEditar.Text = "Editar";
-            this.tBtEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tBtEditar.Click += new System.EventHandler(this.tBtEditar_Click);
+            this.tstEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tstEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstEditar.Name = "tstEditar";
+            this.tstEditar.Size = new System.Drawing.Size(57, 22);
+            this.tstEditar.Text = "Editar";
+            this.tstEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tstEditar.Click += new System.EventHandler(this.tstEditar_Click);
             // 
-            // tBtCancelar
+            // tsbCancelar
             // 
-            this.tBtCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtCancelar.Name = "tBtCancelar";
-            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tBtCancelar.Text = "Cancelar";
-            this.tBtCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tBtCancelar.Click += new System.EventHandler(this.tBtCancelar_Click);
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
-            // tBtGuardar
+            // tsbGuardar
             // 
-            this.tBtGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtGuardar.Name = "tBtGuardar";
-            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tBtGuardar.Text = "Guardar";
-            this.tBtGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tBtGuardar.Click += new System.EventHandler(this.tBtGuardar_Click);
+            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
-            // tBtBuscar
+            // tsbBuscar
             // 
-            this.tBtBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
-            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtBuscar.Name = "tBtBuscar";
-            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tBtBuscar.Text = "Buscar";
-            this.tBtBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tBtBuscar.Click += new System.EventHandler(this.tBtBuscar_Click);
+            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscar.Text = "Buscar";
+            this.tsbBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
             // 
-            // tbtAnular
+            // tsbAnular
             // 
-            this.tbtAnular.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.tbtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtAnular.Name = "tbtAnular";
-            this.tbtAnular.Size = new System.Drawing.Size(62, 22);
-            this.tbtAnular.Text = "Anular";
-            this.tbtAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tbtAnular.Click += new System.EventHandler(this.tbtAnular_Click);
+            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbAnular.Name = "tsbAnular";
+            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnular.Text = "Anular";
+            this.tsbAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbAnular.Click += new System.EventHandler(this.tsbAnular_Click);
             // 
-            // tbtImprimir
+            // tstImprimir
             // 
-            this.tbtImprimir.Image = global::Galactus.Properties.Resources.print__2_;
-            this.tbtImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtImprimir.Name = "tbtImprimir";
-            this.tbtImprimir.Size = new System.Drawing.Size(73, 22);
-            this.tbtImprimir.Text = "Imprimir";
-            this.tbtImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstImprimir.Name = "tstImprimir";
+            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tstImprimir.Text = "Imprimir";
+            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // admisionesPB
             // 
@@ -1018,13 +1025,13 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox admisionesPB;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton tBtNuevo;
-        private System.Windows.Forms.ToolStripButton tBtEditar;
-        private System.Windows.Forms.ToolStripButton tBtCancelar;
-        private System.Windows.Forms.ToolStripButton tBtGuardar;
-        private System.Windows.Forms.ToolStripButton tBtBuscar;
-        private System.Windows.Forms.ToolStripButton tbtAnular;
-        private System.Windows.Forms.ToolStripButton tbtImprimir;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tstEditar;
+        private System.Windows.Forms.ToolStripButton tsbCancelar;
+        private System.Windows.Forms.ToolStripButton tsbGuardar;
+        private System.Windows.Forms.ToolStripButton tsbBuscar;
+        private System.Windows.Forms.ToolStripButton tsbAnular;
+        private System.Windows.Forms.ToolStripButton tstImprimir;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txttipoafiliacion;

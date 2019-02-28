@@ -43,9 +43,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.btlimpiar = new System.Windows.Forms.Button();
-            this.btBuscarParametro = new System.Windows.Forms.Button();
-            this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tBtAnular = new System.Windows.Forms.ToolStripButton();
+            this.tsbBuscarParametro = new System.Windows.Forms.Button();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -119,7 +119,7 @@
             // 
             this.groupBox1.Controls.Add(this.btlimpiar);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btBuscarParametro);
+            this.groupBox1.Controls.Add(this.tsbBuscarParametro);
             this.groupBox1.Controls.Add(this.txtBParametro);
             this.groupBox1.Controls.Add(this.txtDescripción);
             this.groupBox1.Controls.Add(this.label2);
@@ -184,8 +184,8 @@
             // 
             this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tBtGuardar,
-            this.tBtAnular});
+            this.tsbGuardar,
+            this.tsbAnular});
             this.tstMenuPatron.Location = new System.Drawing.Point(0, 400);
             this.tstMenuPatron.Name = "tstMenuPatron";
             this.tstMenuPatron.Size = new System.Drawing.Size(577, 25);
@@ -202,33 +202,33 @@
             this.btlimpiar.UseVisualStyleBackColor = true;
             this.btlimpiar.Click += new System.EventHandler(this.btlimpiar_Click);
             // 
-            // btBuscarParametro
+            // tsbBuscarParametro
             // 
-            this.btBuscarParametro.Image = global::Galactus.Properties.Resources.search__1_;
-            this.btBuscarParametro.Location = new System.Drawing.Point(257, 19);
-            this.btBuscarParametro.Name = "btBuscarParametro";
-            this.btBuscarParametro.Size = new System.Drawing.Size(31, 23);
-            this.btBuscarParametro.TabIndex = 5;
-            this.btBuscarParametro.UseVisualStyleBackColor = true;
-            this.btBuscarParametro.Click += new System.EventHandler(this.btBuscarParametro_Click);
+            this.tsbBuscarParametro.Image = global::Galactus.Properties.Resources.search__1_;
+            this.tsbBuscarParametro.Location = new System.Drawing.Point(257, 19);
+            this.tsbBuscarParametro.Name = "tsbBuscarParametro";
+            this.tsbBuscarParametro.Size = new System.Drawing.Size(31, 23);
+            this.tsbBuscarParametro.TabIndex = 5;
+            this.tsbBuscarParametro.UseVisualStyleBackColor = true;
+            this.tsbBuscarParametro.Click += new System.EventHandler(this.tsbBuscarParametro_Click);
             // 
-            // tBtGuardar
+            // tsbGuardar
             // 
-            this.tBtGuardar.Image = global::Galactus.Properties.Resources.guardar16;
-            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtGuardar.Name = "tBtGuardar";
-            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tBtGuardar.Text = "Guardar";
-            this.tBtGuardar.Click += new System.EventHandler(this.tBtGuardar_Click);
+            this.tsbGuardar.Image = global::Galactus.Properties.Resources.guardar16;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
-            // tBtAnular
+            // tsbAnular
             // 
-            this.tBtAnular.Image = global::Galactus.Properties.Resources.anular24;
-            this.tBtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtAnular.Name = "tBtAnular";
-            this.tBtAnular.Size = new System.Drawing.Size(62, 22);
-            this.tBtAnular.Text = "Anular";
-            this.tBtAnular.Click += new System.EventHandler(this.tBtAnular_Click);
+            this.tsbAnular.Image = global::Galactus.Properties.Resources.anular24;
+            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnular.Name = "tsbAnular";
+            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnular.Text = "Anular";
+            this.tsbAnular.Click += new System.EventHandler(this.tsbAnular_Click);
             // 
             // ConfiguracionGeneralUI
             // 
@@ -263,12 +263,12 @@
         private System.Windows.Forms.TextBox txtBCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btBuscarParametro;
+        private System.Windows.Forms.Button tsbBuscarParametro;
         private System.Windows.Forms.TextBox txtBParametro;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ToolStripButton tBtGuardar;
-        private System.Windows.Forms.ToolStripButton tBtAnular;
+        private System.Windows.Forms.ToolStripButton tsbGuardar;
+        private System.Windows.Forms.ToolStripButton tsbAnular;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripción;

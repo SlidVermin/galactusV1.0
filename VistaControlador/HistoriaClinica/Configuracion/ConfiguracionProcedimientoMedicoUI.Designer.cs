@@ -78,15 +78,15 @@
             this.dataGridViewImageColumn9 = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlCerrarForm = new System.Windows.Forms.Panel();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tBtEditar = new System.Windows.Forms.ToolStripButton();
-            this.tBtCancelar = new System.Windows.Forms.ToolStripButton();
-            this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tBtBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tbtAnular = new System.Windows.Forms.ToolStripButton();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tstEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.tbtImprimir = new System.Windows.Forms.ToolStripButton();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.btnBuscarProcedimiento = new System.Windows.Forms.Button();
+            this.tsbBuscarCliente = new System.Windows.Forms.Button();
+            this.tsbBuscarProcedimiento = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1.SuspendLayout();
@@ -107,10 +107,10 @@
             this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox1.Controls.Add(this.tabControl1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btnBuscarCliente);
+            this.groupBox1.Controls.Add(this.tsbBuscarCliente);
             this.groupBox1.Controls.Add(this.txtBCodigo);
             this.groupBox1.Controls.Add(this.txtBNombreProcedimiento);
-            this.groupBox1.Controls.Add(this.btnBuscarProcedimiento);
+            this.groupBox1.Controls.Add(this.tsbBuscarProcedimiento);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtBNombreCliente);
             this.groupBox1.Controls.Add(this.label3);
@@ -554,12 +554,12 @@
             // 
             this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tBtNuevo,
-            this.tBtEditar,
-            this.tBtCancelar,
-            this.tBtGuardar,
-            this.tBtBuscar,
-            this.tbtAnular,
+            this.tsbNuevo,
+            this.tstEditar,
+            this.tsbCancelar,
+            this.tsbGuardar,
+            this.tsbBuscar,
+            this.tsbAnular,
             this.tbtImprimir});
             this.tstMenuPatron.Location = new System.Drawing.Point(0, 571);
             this.tstMenuPatron.Name = "tstMenuPatron";
@@ -567,59 +567,59 @@
             this.tstMenuPatron.TabIndex = 60019;
             this.tstMenuPatron.Text = "toolStrip1";
             // 
-            // tBtNuevo
+            // tsbNuevo
             // 
-            this.tBtNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtNuevo.Name = "tBtNuevo";
-            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tBtNuevo.Text = "Nuevo";
-            this.tBtNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // tBtEditar
+            // tstEditar
             // 
-            this.tBtEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtEditar.Name = "tBtEditar";
-            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
-            this.tBtEditar.Text = "Editar";
-            this.tBtEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tstEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tstEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstEditar.Name = "tstEditar";
+            this.tstEditar.Size = new System.Drawing.Size(57, 22);
+            this.tstEditar.Text = "Editar";
+            this.tstEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // tBtCancelar
+            // tsbCancelar
             // 
-            this.tBtCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtCancelar.Name = "tBtCancelar";
-            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tBtCancelar.Text = "Cancelar";
-            this.tBtCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // tBtGuardar
+            // tsbGuardar
             // 
-            this.tBtGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtGuardar.Name = "tBtGuardar";
-            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tBtGuardar.Text = "Guardar";
-            this.tBtGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // tBtBuscar
+            // tsbBuscar
             // 
-            this.tBtBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
-            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtBuscar.Name = "tBtBuscar";
-            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tBtBuscar.Text = "Buscar";
-            this.tBtBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscar.Text = "Buscar";
+            this.tsbBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // tbtAnular
+            // tsbAnular
             // 
-            this.tbtAnular.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.tbtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtAnular.Name = "tbtAnular";
-            this.tbtAnular.Size = new System.Drawing.Size(62, 22);
-            this.tbtAnular.Text = "Anular";
-            this.tbtAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnular.Name = "tsbAnular";
+            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnular.Text = "Anular";
+            this.tsbAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // tbtImprimir
             // 
@@ -630,21 +630,21 @@
             this.tbtImprimir.Text = "Imprimir";
             this.tbtImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // btnBuscarCliente
+            // tsbBuscarCliente
             // 
-            this.btnBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarCliente.Image")));
-            this.btnBuscarCliente.Location = new System.Drawing.Point(893, 41);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(27, 23);
-            this.btnBuscarCliente.TabIndex = 60017;
+            this.tsbBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarCliente.Image")));
+            this.tsbBuscarCliente.Location = new System.Drawing.Point(893, 41);
+            this.tsbBuscarCliente.Name = "tsbBuscarCliente";
+            this.tsbBuscarCliente.Size = new System.Drawing.Size(27, 23);
+            this.tsbBuscarCliente.TabIndex = 60017;
             // 
-            // btnBuscarProcedimiento
+            // tsbBuscarProcedimiento
             // 
-            this.btnBuscarProcedimiento.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarProcedimiento.Image")));
-            this.btnBuscarProcedimiento.Location = new System.Drawing.Point(893, 14);
-            this.btnBuscarProcedimiento.Name = "btnBuscarProcedimiento";
-            this.btnBuscarProcedimiento.Size = new System.Drawing.Size(27, 23);
-            this.btnBuscarProcedimiento.TabIndex = 60016;
+            this.tsbBuscarProcedimiento.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarProcedimiento.Image")));
+            this.tsbBuscarProcedimiento.Location = new System.Drawing.Point(893, 14);
+            this.tsbBuscarProcedimiento.Name = "tsbBuscarProcedimiento";
+            this.tsbBuscarProcedimiento.Size = new System.Drawing.Size(27, 23);
+            this.tsbBuscarProcedimiento.TabIndex = 60016;
             // 
             // dataGridViewImageColumn1
             // 
@@ -716,10 +716,10 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox txtBNombreProcedimiento;
-        private System.Windows.Forms.Button btnBuscarProcedimiento;
+        private System.Windows.Forms.Button tsbBuscarProcedimiento;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBNombreCliente;
-        private System.Windows.Forms.Button btnBuscarCliente;
+        private System.Windows.Forms.Button tsbBuscarCliente;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label2;
         internal System.Windows.Forms.TextBox txtBCodigo;
@@ -751,12 +751,12 @@
         private System.Windows.Forms.DataGridViewImageColumn dgBuscarArea;
         private System.Windows.Forms.DataGridViewImageColumn dgQuitarArea;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton tBtNuevo;
-        private System.Windows.Forms.ToolStripButton tBtEditar;
-        private System.Windows.Forms.ToolStripButton tBtCancelar;
-        private System.Windows.Forms.ToolStripButton tBtGuardar;
-        private System.Windows.Forms.ToolStripButton tBtBuscar;
-        private System.Windows.Forms.ToolStripButton tbtAnular;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tstEditar;
+        private System.Windows.Forms.ToolStripButton tsbCancelar;
+        private System.Windows.Forms.ToolStripButton tsbGuardar;
+        private System.Windows.Forms.ToolStripButton tsbBuscar;
+        private System.Windows.Forms.ToolStripButton tsbAnular;
         private System.Windows.Forms.ToolStripButton tbtImprimir;
     }
 }

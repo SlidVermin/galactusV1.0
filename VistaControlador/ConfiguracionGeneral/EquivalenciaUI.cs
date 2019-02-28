@@ -23,25 +23,25 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void EquivalenciaUI_Load(object sender, EventArgs e)
         {
-            GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
         }
         #region Botones
-        private void tBtNuevo_Click(object sender, EventArgs e)
+        private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            GeneralC.formNuevo(this, tstMenuPatron, tBtGuardar, tBtCancelar);
+            GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
             cargarLineas();
             cargarVias();
             enlazarGrillas();
         }
-        private void tBtEditar_Click(object sender, EventArgs e)
+        private void tstEditar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tBtGuardar, tBtCancelar);
+            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
-        private void tBtCancelar_Click(object sender, EventArgs e)
+        private void tsbCancelar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnCancelarForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
         }
-        private void tBtGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click(object sender, EventArgs e)
         {
             if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -49,7 +49,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 try
                 {
                     EquivalenciaDAL.guardar(equivalencia);
-                    GeneralC.posGuardar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     txtBCodigo.Text = equivalencia.idEquivalencia.ToString();
                 }
                 catch (Exception ex)
@@ -58,7 +58,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 }
             }
         }
-        private void tBtBuscar_Click(object sender, EventArgs e)
+        private void tsbBuscar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -75,14 +75,14 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 MessageBox.Show(ex.Message);
             }
         }
-        private void tBtAnular_Click(object sender, EventArgs e)
+        private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (verificarExistenciaProductosenlazados() && MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     EquivalenciaDAL.anular(equivalencia);
-                    GeneralC.posAnular(this, tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
                 }
                 catch (Exception ex)
                 {
@@ -170,10 +170,10 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 equivalencia.tablaProductos = tablasResultado.Tables[3].Copy();
                 enlazarGrillas();
 
-                GeneralC.posBuscar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular);
+                GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular);
             }
         }
-        private void btnBuscarUnidades_Click(object sender, EventArgs e)
+        private void tsbBuscarUnidades_Click(object sender, EventArgs e)
         {
             try
             {
@@ -207,7 +207,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             }
             else if (txtBUnidadMedida.Text.Equals(""))
             {
-                GeneralC.mostrarMensajeInformacio("Debe escoger la unidad !", btBuscarUnidades);
+                GeneralC.mostrarMensajeInformacio("Debe escoger la unidad !", tsbBuscarUnidades);
                 return false;
             }
             else if (cbGrupoATC.SelectedIndex == 0)

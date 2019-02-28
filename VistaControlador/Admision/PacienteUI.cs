@@ -59,7 +59,7 @@ namespace Galactus.VistaControlador
 
         private void PacienteUI_Load(object sender, EventArgs e)
         {
-            GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
             GeneralC.llenarCombo(Query.CARGARPAIS,
                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
@@ -106,20 +106,6 @@ namespace Galactus.VistaControlador
             ciudadResBox.Enabled = false;
         }
 
-
-
-
-        private void departBox_SelectedValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void paisNacBox_SelectedValueChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void departNacBox_SelectedValueChanged(object sender, EventArgs e)
         {
             if (departNacBox.SelectedIndex > 0)
@@ -138,31 +124,6 @@ namespace Galactus.VistaControlador
                                  MuniNacBox);
                 GeneralC.validarComboUbicacion(departNacBox, MuniNacBox);
             }
-        }
-
-        private void paisResBox_SelectedValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void departResBox_SelectedValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tBtNuevo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tBtEditar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tBtCancelar_Click(object sender, EventArgs e)
-        {
-
         }
 
         public bool validarForm()
@@ -312,7 +273,7 @@ namespace Galactus.VistaControlador
             paciente.idEstadoCivil = (string)estadoCivilBox.SelectedValue;
             paciente.idestrato = (string)estratoBox.SelectedValue;
         }
-        private void tBtGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click(object sender, EventArgs e)
         {
 
         }
@@ -328,7 +289,7 @@ namespace Galactus.VistaControlador
             epsText.Text = fila.Field<string>("Descripcion");
         }
 
-        private void tBtBuscar_Click(object sender, EventArgs e)
+        private void tsbBuscar_Click(object sender, EventArgs e)
         {
 
         }
@@ -360,27 +321,12 @@ namespace Galactus.VistaControlador
             fechaNPicker.Value = paciente.fechaNacimiento;
             GeneralC.calcularEdad(fechaNPicker.Value, ref edad);
             edadText.Text = edad;
-            tBtEditar.Enabled = true;
-            tBtAnular.Enabled = true;
+            tstEditar.Enabled = true;
+            tsbAnular.Enabled = true;
             deshabilitarCombo();
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void sApellidoText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tBtGuardar_Click_1(object sender, EventArgs e)
+       private void tsbGuardar_Click_1(object sender, EventArgs e)
         {
             if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -388,7 +334,7 @@ namespace Galactus.VistaControlador
                 {
                     asignarDatos();
                     PacienteDAL.guardar(paciente);
-                    GeneralC.posGuardar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
 
                 }
                 catch (Exception ex)
@@ -398,7 +344,7 @@ namespace Galactus.VistaControlador
             }
         }
 
-        private void tBtBuscar_Click_1(object sender, EventArgs e)
+        private void tsbBuscar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -415,22 +361,22 @@ namespace Galactus.VistaControlador
             }
         }
 
-        private void tBtCancelar_Click_1(object sender, EventArgs e)
+        private void tsbCancelar_Click_1(object sender, EventArgs e)
         {
-            GeneralC.fnCancelarForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
             paciente.idPaciente = 0;
             btnSalir.Enabled = true;
             fechaNPicker.ResetText();
         }
 
-        private void tBtEditar_Click_1(object sender, EventArgs e)
+        private void tstEditar_Click_1(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tBtGuardar, tBtCancelar);
+            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
 
-        private void tBtNuevo_Click_1(object sender, EventArgs e)
+        private void tsbNuevo_Click_1(object sender, EventArgs e)
         {
-            GeneralC.formNuevo(this, tstMenuPatron, tBtGuardar, tBtCancelar);
+            GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
             deshabilitarControles();
             paciente.idPaciente = 0;
             fechaNPicker.ResetText();
@@ -590,14 +536,14 @@ namespace Galactus.VistaControlador
             btnSalir.BackColor = Control.DefaultBackColor;
         }
 
-        private void tBtAnular_Click(object sender, EventArgs e)
+        private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     paciente.eliminar();
-                    GeneralC.posAnular(this, tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
                     btnSalir.Enabled = true;
                 }
                 catch (Exception ex)

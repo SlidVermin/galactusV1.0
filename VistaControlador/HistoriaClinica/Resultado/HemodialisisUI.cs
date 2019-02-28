@@ -27,10 +27,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void HemodialisisUI_Load(object sender, EventArgs e)
         {
             hemodialisis = new Hemodialisis();
-            GeneralC.deshabilitarBotones(ref TostMenu);
+            GeneralC.deshabilitarBotones(ref tstMenuPatron);
             GeneralC.deshabilitarControles(this);
-            btBuscar.Enabled = true;
-            btNuevo.Enabled = true;
+            tsbBuscar.Enabled = true;
+            tsbNuevo.Enabled = true;
         }
         #region btnSalir
 
@@ -54,7 +54,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
         #endregion
 
-        private void btAnular_Click(object sender, EventArgs e)
+        private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -63,12 +63,12 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
                     if (HemodialisisDAL.anularHemodialisis(hemodialisis.codigo))
                     {
-                        GeneralC.deshabilitarBotones(ref TostMenu);
+                        GeneralC.deshabilitarBotones(ref tstMenuPatron);
                         GeneralC.limpiarControles(this);
                         GeneralC.deshabilitarControles(this);
                         btnSalir.Enabled = true;
-                        btBuscar.Enabled = true;
-                        btNuevo.Enabled = true;
+                        tsbBuscar.Enabled = true;
+                        tsbNuevo.Enabled = true;
                         MessageBox.Show(Mensajes.CONFIRMACION_ANULADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
@@ -80,7 +80,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             }
         }
 
-        private void btBuscar_Click(object sender, EventArgs e)
+        private void tsbBuscar_Click(object sender, EventArgs e)
         {
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
@@ -93,21 +93,21 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                                     listaParametroOculto());
         }
 
-        private void btCancelar_Click(object sender, EventArgs e)
+        private void tsbCancelar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.CANCELAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                GeneralC.deshabilitarBotones(ref TostMenu);
+                GeneralC.deshabilitarBotones(ref tstMenuPatron);
                 GeneralC.deshabilitarControles(this);
                 GeneralC.limpiarControles(this);
                 hemodialisis.codigo = null;
-                btNuevo.Enabled = true;
-                btBuscar.Enabled = true;
+                tsbNuevo.Enabled = true;
+                tsbBuscar.Enabled = true;
                 btnSalir.Enabled = true;
             }
         }
 
-        private void btGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click(object sender, EventArgs e)
         {
             if (validarCampos() == true)
             {
@@ -116,11 +116,11 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                     {
                         crearNuevaHemodialisis();
                         HemodialisisDAL.guardarHemodialisis(hemodialisis);
-                        GeneralC.habilitarBotones(ref TostMenu);
+                        GeneralC.habilitarBotones(ref tstMenuPatron);
                         GeneralC.deshabilitarControles(this);
                         btnSalir.Enabled = true;
-                        btGuardar.Enabled = false;
-                        btCancelar.Enabled = false;
+                        tsbGuardar.Enabled = false;
+                        tsbCancelar.Enabled = false;
                         MessageBox.Show(Mensajes.CONFIRMACION_GUARDADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
@@ -134,29 +134,29 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         {
             if (MessageBox.Show(Mensajes.EDITAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                GeneralC.deshabilitarBotones(ref TostMenu);
+                GeneralC.deshabilitarBotones(ref tstMenuPatron);
                 GeneralC.habilitarControles(this);
                 GeneralC.deshabilitarControles(pnlInformacion);
                 dtFecha.Enabled = true;
-                btGuardar.Enabled = true;
-                btCancelar.Enabled = true;
+                tsbGuardar.Enabled = true;
+                tsbCancelar.Enabled = true;
             }
         }
 
-        private void btNuevo_Click(object sender, EventArgs e)
+        private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            GeneralC.deshabilitarBotones(ref TostMenu);
+            GeneralC.deshabilitarBotones(ref tstMenuPatron);
             GeneralC.habilitarControles(this);
             GeneralC.deshabilitarControles(pnlInformacion);
             GeneralC.limpiarControles(this);
             hemodialisis.codigo=null;
             dtFecha.Enabled = true;
-            btnBuscarNit.Enabled = true;
-            btGuardar.Enabled = true;
-            btCancelar.Enabled = true;
+            tsbBuscarNit.Enabled = true;
+            tsbGuardar.Enabled = true;
+            tsbCancelar.Enabled = true;
         }
 
-        private void btnBuscarNit_Click(object sender, EventArgs e)
+        private void tsbBuscarNit_Click(object sender, EventArgs e)
         {
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
@@ -197,7 +197,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             {
                 MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            GeneralC.posBuscar(this, TostMenu, btNuevo, btEditar, btBuscar, btAnular);
+            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tstEditar, tsbBuscar, tsbAnular);
             btnSalir.Enabled = true;
         }
         private List<string> listaParametroOculto()

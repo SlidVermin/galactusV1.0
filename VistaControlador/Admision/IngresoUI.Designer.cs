@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tBtEditar = new System.Windows.Forms.ToolStripButton();
-            this.tBtCancelar = new System.Windows.Forms.ToolStripButton();
-            this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tBtBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tBtAnular = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.txtobservacion = new System.Windows.Forms.RichTextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dgvDiagnostico = new System.Windows.Forms.DataGridView();
+            this.dgQuitar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.fechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.cbArea = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbCama = new System.Windows.Forms.ComboBox();
@@ -78,13 +77,13 @@
             this.label30 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pacientePB = new System.Windows.Forms.PictureBox();
-            this.txtobservacion = new System.Windows.Forms.RichTextBox();
-            this.fechaIngreso = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgQuitar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tstMenuPatron.SuspendLayout();
+            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tstEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -93,81 +92,8 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
+            this.tstMenuPatron.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tstMenuPatron
-            // 
-            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tBtNuevo,
-            this.tBtEditar,
-            this.tBtCancelar,
-            this.tBtGuardar,
-            this.tBtBuscar,
-            this.tBtAnular});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 570);
-            this.tstMenuPatron.Name = "tstMenuPatron";
-            this.tstMenuPatron.Size = new System.Drawing.Size(906, 25);
-            this.tstMenuPatron.TabIndex = 38;
-            this.tstMenuPatron.Text = "toolStrip1";
-            // 
-            // tBtNuevo
-            // 
-            this.tBtNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtNuevo.Name = "tBtNuevo";
-            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tBtNuevo.Text = "Nuevo";
-            this.tBtNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tBtNuevo.Click += new System.EventHandler(this.tBtNuevo_Click);
-            // 
-            // tBtEditar
-            // 
-            this.tBtEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtEditar.Name = "tBtEditar";
-            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
-            this.tBtEditar.Text = "Editar";
-            this.tBtEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tBtEditar.Click += new System.EventHandler(this.tBtEditar_Click);
-            // 
-            // tBtCancelar
-            // 
-            this.tBtCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtCancelar.Name = "tBtCancelar";
-            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tBtCancelar.Text = "Cancelar";
-            this.tBtCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tBtCancelar.Click += new System.EventHandler(this.tBtCancelar_Click);
-            // 
-            // tBtGuardar
-            // 
-            this.tBtGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtGuardar.Name = "tBtGuardar";
-            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tBtGuardar.Text = "Guardar";
-            this.tBtGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tBtGuardar.Click += new System.EventHandler(this.tBtGuardar_Click);
-            // 
-            // tBtBuscar
-            // 
-            this.tBtBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
-            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtBuscar.Name = "tBtBuscar";
-            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tBtBuscar.Text = "Buscar";
-            this.tBtBuscar.Click += new System.EventHandler(this.tBtBuscar_Click);
-            // 
-            // tBtAnular
-            // 
-            this.tBtAnular.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.tBtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtAnular.Name = "tBtAnular";
-            this.tBtAnular.Size = new System.Drawing.Size(62, 22);
-            this.tBtAnular.Text = "Anular";
-            this.tBtAnular.Click += new System.EventHandler(this.tBtAnular_Click);
             // 
             // panel1
             // 
@@ -206,6 +132,15 @@
             this.panel6.Size = new System.Drawing.Size(859, 75);
             this.panel6.TabIndex = 56;
             // 
+            // txtobservacion
+            // 
+            this.txtobservacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtobservacion.Location = new System.Drawing.Point(0, 0);
+            this.txtobservacion.Name = "txtobservacion";
+            this.txtobservacion.Size = new System.Drawing.Size(857, 73);
+            this.txtobservacion.TabIndex = 0;
+            this.txtobservacion.Text = "";
+            // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -238,6 +173,34 @@
             this.dgvDiagnostico.Size = new System.Drawing.Size(857, 125);
             this.dgvDiagnostico.TabIndex = 0;
             this.dgvDiagnostico.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiagnostico_CellDoubleClick);
+            // 
+            // dgQuitar
+            // 
+            this.dgQuitar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = "System.Drawing.Image";
+            this.dgQuitar.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgQuitar.HeaderText = "Quitar";
+            this.dgQuitar.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.dgQuitar.Name = "dgQuitar";
+            this.dgQuitar.ReadOnly = true;
+            this.dgQuitar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgQuitar.Width = 41;
+            // 
+            // dgCodigo
+            // 
+            this.dgCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgCodigo.HeaderText = "Código cie";
+            this.dgCodigo.Name = "dgCodigo";
+            this.dgCodigo.ReadOnly = true;
+            this.dgCodigo.Width = 82;
+            // 
+            // dgDescripcion
+            // 
+            this.dgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgDescripcion.HeaderText = "Descripcion";
+            this.dgDescripcion.Name = "dgDescripcion";
+            this.dgDescripcion.ReadOnly = true;
             // 
             // label10
             // 
@@ -272,6 +235,25 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(859, 90);
             this.panel4.TabIndex = 53;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(350, 9);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 15);
+            this.label12.TabIndex = 60027;
+            this.label12.Text = "Fecha ingreso:";
+            // 
+            // fechaIngreso
+            // 
+            this.fechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaIngreso.Location = new System.Drawing.Point(440, 8);
+            this.fechaIngreso.Name = "fechaIngreso";
+            this.fechaIngreso.Size = new System.Drawing.Size(102, 20);
+            this.fechaIngreso.TabIndex = 60026;
             // 
             // cbArea
             // 
@@ -660,61 +642,83 @@
             this.pacientePB.TabIndex = 41;
             this.pacientePB.TabStop = false;
             // 
-            // txtobservacion
+            // tstMenuPatron
             // 
-            this.txtobservacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtobservacion.Location = new System.Drawing.Point(0, 0);
-            this.txtobservacion.Name = "txtobservacion";
-            this.txtobservacion.Size = new System.Drawing.Size(857, 73);
-            this.txtobservacion.TabIndex = 0;
-            this.txtobservacion.Text = "";
+            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tstEditar,
+            this.tsbGuardar,
+            this.tsbBuscar,
+            this.tsbAnular,
+            this.tsbCancelar});
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 570);
+            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.Name = "tstMenuPatron";
+            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.TabIndex = 49;
+            this.tstMenuPatron.Text = "toolStrip1";
             // 
-            // fechaIngreso
+            // tsbNuevo
             // 
-            this.fechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fechaIngreso.Location = new System.Drawing.Point(440, 8);
-            this.fechaIngreso.Name = "fechaIngreso";
-            this.fechaIngreso.Size = new System.Drawing.Size(102, 20);
-            this.fechaIngreso.TabIndex = 60026;
+            this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
             // 
-            // label12
+            // tstEditar
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(350, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 15);
-            this.label12.TabIndex = 60027;
-            this.label12.Text = "Fecha ingreso:";
+            this.tstEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tstEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tstEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstEditar.Name = "tstEditar";
+            this.tstEditar.Size = new System.Drawing.Size(57, 22);
+            this.tstEditar.Text = "Editar";
             // 
-            // dgDescripcion
+            // tsbGuardar
             // 
-            this.dgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgDescripcion.HeaderText = "Descripcion";
-            this.dgDescripcion.Name = "dgDescripcion";
-            this.dgDescripcion.ReadOnly = true;
+            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
             // 
-            // dgCodigo
+            // tsbBuscar
             // 
-            this.dgCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgCodigo.HeaderText = "Código cie";
-            this.dgCodigo.Name = "dgCodigo";
-            this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 82;
+            this.tsbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscar.Text = "Buscar";
             // 
-            // dgQuitar
+            // tsbAnular
             // 
-            this.dgQuitar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.NullValue = "System.Drawing.Image";
-            this.dgQuitar.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgQuitar.HeaderText = "Quitar";
-            this.dgQuitar.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.dgQuitar.Name = "dgQuitar";
-            this.dgQuitar.ReadOnly = true;
-            this.dgQuitar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgQuitar.Width = 41;
+            this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbAnular.Name = "tsbAnular";
+            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnular.Text = "Anular";
+            // 
+            // tsbCancelar
+            // 
+            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
             // 
             // IngresoUI
             // 
@@ -722,18 +726,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(906, 595);
+            this.Controls.Add(this.tstMenuPatron);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.pacientePB);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tstMenuPatron);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IngresoUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingreso";
             this.Load += new System.EventHandler(this.IngresoUI_Load);
-            this.tstMenuPatron.ResumeLayout(false);
-            this.tstMenuPatron.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -746,20 +748,14 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).EndInit();
+            this.tstMenuPatron.ResumeLayout(false);
+            this.tstMenuPatron.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton tBtNuevo;
-        private System.Windows.Forms.ToolStripButton tBtEditar;
-        private System.Windows.Forms.ToolStripButton tBtCancelar;
-        private System.Windows.Forms.ToolStripButton tBtGuardar;
-        private System.Windows.Forms.ToolStripButton tBtBuscar;
-        private System.Windows.Forms.ToolStripButton tBtAnular;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.PictureBox pacientePB;
@@ -808,5 +804,12 @@
         private System.Windows.Forms.DataGridViewImageColumn dgQuitar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcion;
+        private System.Windows.Forms.ToolStrip tstMenuPatron;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tstEditar;
+        private System.Windows.Forms.ToolStripButton tsbGuardar;
+        private System.Windows.Forms.ToolStripButton tsbBuscar;
+        private System.Windows.Forms.ToolStripButton tsbAnular;
+        private System.Windows.Forms.ToolStripButton tsbCancelar;
     }
 }

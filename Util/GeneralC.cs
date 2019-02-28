@@ -588,22 +588,22 @@ namespace Galactus
             {
                 switch (item.Name)
                 {
-                    case "tBtNuevo":
+                    case "tsbNuevo":
                         item.Image = Properties.Resources.btn_nuevo;
                         break;
-                    case "tBtEditar":
+                    case "tstEditar":
                         item.Image = Properties.Resources.bt_editar;
                         break;
-                    case "tBtCancelar":
+                    case "tsbCancelar":
                         item.Image = Properties.Resources.btn_cancelar;
                         break;
-                    case "tBtGuardar":
+                    case "tsbGuardar":
                         item.Image = Properties.Resources.btn_guardar;
                         break;
-                    case "tBtBuscar":
+                    case "tsbBuscar":
                         item.Image = Properties.Resources.btn_buscar;
                         break;
-                    case "tBtAnular":
+                    case "tsbAnular":
                         item.Image = Properties.Resources.btn_anular;
                         break;
                     default:

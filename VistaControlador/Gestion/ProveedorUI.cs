@@ -26,55 +26,55 @@ namespace Galactus.VistaControlador.Gestion
         private void proveedorUI_Load(object sender, EventArgs e)
         {
             proveedor = new Proveedor();
-            GeneralC.deshabilitarBotones(ref TostMenu);
+            GeneralC.deshabilitarBotones(ref tstMenuPatron);
             GeneralC.deshabilitarControles(this);
             iniciarCombos();
-            btNuevo.Enabled = true;
-            btBuscar.Enabled = true;
+            tsbNuevo.Enabled = true;
+            tsbBuscar.Enabled = true;
             btnSalir.Enabled = true;
         }
 
-        private void btNuevo_Click(object sender, EventArgs e)
+        private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            GeneralC.deshabilitarBotones(ref TostMenu);
+            GeneralC.deshabilitarBotones(ref tstMenuPatron);
             GeneralC.habilitarControles(this);
             GeneralC.deshabilitarControles(pnlInformacion);
             desHabilitadoPermanentemente();
             GeneralC.limpiarControles(this);
             proveedor.codigo = null;
-            btnBuscarNit.Enabled = true;
-            btGuardar.Enabled = true;
-            btCancelar.Enabled = true;
+            tsbBuscarNit.Enabled = true;
+            tsbGuardar.Enabled = true;
+            tsbCancelar.Enabled = true;
         }
 
         private void btEditar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.EDITAR_FORM,Mensajes.NOMBRE_SOFT,MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes) {
-                GeneralC.deshabilitarBotones(ref TostMenu);
+                GeneralC.deshabilitarBotones(ref tstMenuPatron);
                 GeneralC.habilitarControles(this);
                 GeneralC.deshabilitarControles(pnlInformacion);
                 validarFormaPago();
                 desHabilitadoPermanentemente();
-                btGuardar.Enabled = true;
-                btCancelar.Enabled = true;
+                tsbGuardar.Enabled = true;
+                tsbCancelar.Enabled = true;
             }
         }
 
-        private void btCancelar_Click(object sender, EventArgs e)
+        private void tsbCancelar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.CANCELAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                GeneralC.deshabilitarBotones(ref TostMenu);
+                GeneralC.deshabilitarBotones(ref tstMenuPatron);
                 GeneralC.deshabilitarControles(this);
                 GeneralC.limpiarControles(this);
                 proveedor.codigo = null;
-                btNuevo.Enabled = true;
-                btBuscar.Enabled = true;
+                tsbNuevo.Enabled = true;
+                tsbBuscar.Enabled = true;
                 btnSalir.Enabled = true;
             }
         }
 
-        private void btGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click(object sender, EventArgs e)
         {
             if (validarCampos() == true) 
             {
@@ -83,11 +83,11 @@ namespace Galactus.VistaControlador.Gestion
                     {
                         crearNuevoproveedor();
                         ProveedorDAL.guardarproveedor(proveedor);
-                        GeneralC.habilitarBotones(ref TostMenu);
+                        GeneralC.habilitarBotones(ref tstMenuPatron);
                         GeneralC.deshabilitarControles(this);
                         btnSalir.Enabled = true;
-                        btGuardar.Enabled = false;
-                        btCancelar.Enabled = false;
+                        tsbGuardar.Enabled = false;
+                        tsbCancelar.Enabled = false;
                         MessageBox.Show(Mensajes.CONFIRMACION_GUARDADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex) {
@@ -96,19 +96,19 @@ namespace Galactus.VistaControlador.Gestion
                 }
             }
         
-        private void btAnular_Click(object sender, EventArgs e)
+        private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try {
 
                 if(ProveedorDAL.anularproveedor(proveedor.codigo) == true) { 
-                   GeneralC.deshabilitarBotones(ref TostMenu);
+                   GeneralC.deshabilitarBotones(ref tstMenuPatron);
                    GeneralC.limpiarControles(this);
                    GeneralC.deshabilitarControles(this);
                    btnSalir.Enabled = true;
-                   btBuscar.Enabled = true;
-                   btNuevo.Enabled = true;
+                   tsbBuscar.Enabled = true;
+                   tsbNuevo.Enabled = true;
                    MessageBox.Show(Mensajes.CONFIRMACION_ANULADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
@@ -118,7 +118,7 @@ namespace Galactus.VistaControlador.Gestion
                 }
             }
         }
-        private void btBuscar_Click(object sender, EventArgs e)
+        private void tsbBuscar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -137,7 +137,7 @@ namespace Galactus.VistaControlador.Gestion
             }
 
 } 
-        private void btnBuscarNit_Click(object sender, EventArgs e)
+        private void tsbBuscarNit_Click(object sender, EventArgs e)
         {
             try
             {
@@ -223,7 +223,7 @@ namespace Galactus.VistaControlador.Gestion
             catch (Exception ex) {
                 MessageBox.Show(ex.Message,Mensajes.NOMBRE_SOFT,MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }      
-            GeneralC.posBuscar(this, TostMenu, btNuevo, btEditar, btBuscar, btAnular);
+            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tstEditar, tsbBuscar, tsbAnular);
             btnSalir.Enabled = true;
         }
         private Boolean validarCampos() {

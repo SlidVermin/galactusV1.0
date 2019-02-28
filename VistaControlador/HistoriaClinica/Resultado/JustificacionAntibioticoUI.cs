@@ -27,18 +27,18 @@ namespace Galactus.VistaControlador.HistoriaClinica
             objJustificacionAnt = new JustificacionAntibiotico();
             GeneralC.deshabilitarBotones(ref tstMenuPatron);
             GeneralC.deshabilitarControles(this);
-            btnNuevo.Enabled = true;
-            btnBuscar.Enabled = true;
+            tsbNuevo.Enabled = true;
+            tsbBuscar.Enabled = true;
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void tsbNuevo_Click(object sender, EventArgs e)
         {
             GeneralC.deshabilitarBotones(ref tstMenuPatron);
             GeneralC.habilitarControles(this);
             GeneralC.limpiarControles(this);
             objJustificacionAnt.codigo = null;
-            btnCancelar.Enabled = true;
-            btnGuardar.Enabled = true;
+            tsbCancelar.Enabled = true;
+            tsbGuardar.Enabled = true;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -47,12 +47,12 @@ namespace Galactus.VistaControlador.HistoriaClinica
             {
                 GeneralC.deshabilitarBotones(ref tstMenuPatron);
                 GeneralC.habilitarControles(this);
-                btnCancelar.Enabled = true;
-                btnGuardar.Enabled = true;
+                tsbCancelar.Enabled = true;
+                tsbGuardar.Enabled = true;
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void tsbCancelar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.CANCELAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -60,25 +60,25 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 GeneralC.deshabilitarControles(this);
                 GeneralC.limpiarControles(this);
                 objJustificacionAnt.codigo = null;
-                btnNuevo.Enabled = true;
-                btnBuscar.Enabled = true;
+                tsbNuevo.Enabled = true;
+                tsbBuscar.Enabled = true;
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                // ManualServicioDAL.guardarManual(objManual);
                 GeneralC.habilitarBotones(ref tstMenuPatron);
                 GeneralC.deshabilitarControles(this);
-                btnGuardar.Enabled = false;
-                btnCancelar.Enabled = false;
+                tsbGuardar.Enabled = false;
+                tsbCancelar.Enabled = false;
                 MessageBox.Show(Mensajes.CONFIRMACION_GUARDADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void tsbBuscar_Click(object sender, EventArgs e)
         {
             GeneralC.buscarDevuelveFila(Query.MANUAL_SERVICIO_BUSCAR,
                                       null,
@@ -87,7 +87,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
                                       true);
         }
 
-        private void btnAnular_Click(object sender, EventArgs e)
+        private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {

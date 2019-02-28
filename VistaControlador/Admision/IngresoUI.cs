@@ -22,7 +22,7 @@ namespace Galactus.VistaControlador.Admision
 
         private void IngresoUI_Load(object sender, EventArgs e)
         {
-            GeneralC.posCargadoForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
             establecerGridview();
             btnSalir.Enabled = true;
             GeneralC.llenarCombo(Query.ATENCION_CAUSA_EXTERNA + " " + Util.Constantes.ConstanteGeneral.CAUSA_EXTERNA + "",
@@ -141,7 +141,7 @@ namespace Galactus.VistaControlador.Admision
             dgvDiagnostico.Rows[dgvDiagnostico.CurrentCell.RowIndex].Cells["dgDescripcion"].Value = filas.Field<String>("Descripcion");
         }
 
-        private void tBtNuevo_Click(object sender, EventArgs e)
+        private void tsbNuevo_Click(object sender, EventArgs e)
         {
             habilitarNuevo();
         }
@@ -149,19 +149,19 @@ namespace Galactus.VistaControlador.Admision
         public void habilitarNuevo()
         {
             btPacienteAdmision.Enabled = true;
-            tBtNuevo.Enabled = false;
-            tBtGuardar.Enabled = true;
-            tBtCancelar.Enabled = true;
-            tBtBuscar.Enabled = false;
+            tsbNuevo.Enabled = false;
+            tsbGuardar.Enabled = true;
+            tsbCancelar.Enabled = true;
+            tsbBuscar.Enabled = false;
             dgvDiagnostico.Enabled = true;
             GeneralC.limpiarControles(this);
             atencion.dtDiagnostico.Rows.Add();
             rbIniciado.Checked = true;
         }
 
-        private void tBtEditar_Click(object sender, EventArgs e)
+        private void tstEditar_Click(object sender, EventArgs e)
         {
-          if ( GeneralC.fnEditarForm(this, tstMenuPatron, tBtGuardar, tBtCancelar))
+          if ( GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar))
             {
                 atencion.dtDiagnostico.Rows.Add();
                 btPacienteAdmision.Enabled = false;
@@ -169,9 +169,9 @@ namespace Galactus.VistaControlador.Admision
             }      
         }
 
-        private void tBtCancelar_Click(object sender, EventArgs e)
+        private void tsbCancelar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnCancelarForm(this, tstMenuPatron, tBtNuevo, tBtBuscar);
+            GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
             btnSalir.Enabled = true;
             rbIniciado.Checked = true;
         }
@@ -222,7 +222,7 @@ namespace Galactus.VistaControlador.Admision
             atencion.fechaIngreso = fechaIngreso.Value;
             atencion.numeroAutorizacion = Textautorizacion.Text.Equals(string.Empty) ? 0 : Convert.ToInt16( Textautorizacion.Text);
         }
-        private void tBtGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click(object sender, EventArgs e)
         {
             if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -230,7 +230,7 @@ namespace Galactus.VistaControlador.Admision
                 {
                     asignarDatos();
                     atencion.guardar();
-                    GeneralC.posGuardar(this, tstMenuPatron, tBtNuevo, tBtBuscar, tBtEditar, tBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     atencion.dtDiagnostico.Rows.RemoveAt(atencion.dtDiagnostico.Rows.Count - 1);
                 }
                 catch (Exception ex)
@@ -240,7 +240,7 @@ namespace Galactus.VistaControlador.Admision
             }
         }
 
-        private void tBtBuscar_Click(object sender, EventArgs e)
+        private void tsbBuscar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -275,8 +275,8 @@ namespace Galactus.VistaControlador.Admision
             txtFechaAdmision.Text = Convert.ToString( atencion.fechaAdmision);
             dgvDiagnostico.DataSource = atencion.dtDiagnostico;
             establecerAtencion();
-            tBtEditar.Enabled = true;
-            tBtAnular.Enabled = true;
+            tstEditar.Enabled = true;
+            tsbAnular.Enabled = true;
         }
         public void establecerAtencion()
         {
@@ -320,14 +320,14 @@ namespace Galactus.VistaControlador.Admision
             }
         }
 
-        private void tBtAnular_Click(object sender, EventArgs e)
+        private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
                     atencion.anular();
-                    GeneralC.posAnular(this, tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
                     btnSalir.Enabled = true;
                     rbIniciado.Checked = true;
                 }

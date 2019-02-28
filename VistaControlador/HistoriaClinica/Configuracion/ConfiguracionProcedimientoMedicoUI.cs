@@ -33,9 +33,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
 
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            //GeneralC.formNuevo(this, tstMenuPatron, btnGuardar, btnCancelar);
+            //GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
             configurarDatosDgv();
 
             configuracionProcedimientoMedico.tablaAreaAtencion.Rows.Add();
@@ -79,15 +79,15 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
         }
         //private void btnEditar_Click(object sender, EventArgs e)
         //{
-        //    GeneralC.fnEditarForm(this, tstMenuPatron, btnGuardar, btnCancelar);
+        //    GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         //}
 
-        //private void btnCancelar_Click(object sender, EventArgs e)
+        //private void tsbCancelar_Click(object sender, EventArgs e)
         //{
-        //    GeneralC.fnCancelarForm(this, tstMenuPatron, btnNuevo, btnBuscar);
+        //    GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
         //}
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void tsbBuscar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -127,7 +127,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
                 txtBCodigo.Text = configuracionProcedimientoMedico.idConfiguracion.ToString();
                 txtBNombreProcedimiento.Text = configuracionProcedimientoMedico.descripcionItem;
 
-                //GeneralC.posBuscar(this, tstMenuPatron, btnNuevo, btnBuscar, btnEditar, btnAnular);
+                //GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, btnEditar, tsbAnular);
             }
 
 
@@ -142,14 +142,14 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
         }
         
 
-        private void btnAnular_Click(object sender, EventArgs e)
+        private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
 
-                    //GeneralC.posAnular(this, tstMenuPatron, btnNuevo, btnBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    //GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
                 }
                 catch (Exception ex)
                 {

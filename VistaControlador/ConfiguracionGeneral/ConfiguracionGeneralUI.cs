@@ -27,7 +27,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             DataGridViewColumnCollection columnas = dgvDetalle.Columns;
             columnas["Código"].DataPropertyName = "Código";
             columnas["Descripción"].DataPropertyName = "Descripción";
-            btBuscarParametro.Enabled = true;
+            tsbBuscarParametro.Enabled = true;
             dgvDetalle.Enabled = true;
             btlimpiar.Enabled = true;
         }
@@ -38,7 +38,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             txtBCodigo.ResetText();
             txtDescripción.ResetText();
             txtDescripción.Enabled = true;
-            tBtGuardar.Enabled = true;
+            tsbGuardar.Enabled = true;
             llenarGrilla();
         }
         void llenarGrilla()
@@ -64,7 +64,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             if (txtBParametro.Text.Equals(""))
             {
                 MessageBox.Show("Debe escoger el parametro padre ! ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btBuscarParametro.Focus();
+                tsbBuscarParametro.Focus();
                 return false;
             }
             else if (txtDescripción.Text.Equals(""))
@@ -82,13 +82,13 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             txtBCodigo.Text = "";
             txtDescripción.Text = "";
-            tBtAnular.Enabled = false;
-            btBuscarParametro.Enabled = true;
+            tsbAnular.Enabled = false;
+            tsbBuscarParametro.Enabled = true;
             btlimpiar.Enabled = true;
             txtDescripción.Enabled = true;
             llenarGrilla();
         }
-        private void btBuscarParametro_Click(object sender, EventArgs e)
+        private void tsbBuscarParametro_Click(object sender, EventArgs e)
         {
             List<string> parametros = new List<string>();
             parametros.Add("");
@@ -98,7 +98,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                                         "Busqueda de Parametros",
                                         true);
         }
-        private void tBtGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click(object sender, EventArgs e)
         {
             if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -121,7 +121,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             txtDescripción.ResetText();
             txtBCodigo.ResetText();
         }
-        private void tBtAnular_Click(object sender, EventArgs e)
+        private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (txtDescripción.Text.Equals("") && txtBCodigo.Text.Equals(""))
             {
@@ -162,8 +162,8 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 txtBCodigo.Text = dgvDetalle["Código", e.RowIndex].Value.ToString();
                 txtDescripción.Text = dgvDetalle["Descripción", e.RowIndex].Value.ToString();
                 txtDescripción.Enabled = true;
-                tBtGuardar.Enabled = true;
-                tBtAnular.Enabled = true;
+                tsbGuardar.Enabled = true;
+                tsbAnular.Enabled = true;
             }
         }
 

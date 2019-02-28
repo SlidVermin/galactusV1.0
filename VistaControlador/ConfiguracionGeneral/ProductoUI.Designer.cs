@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoUI));
             this.ndIva = new System.Windows.Forms.NumericUpDown();
-            this.btnBuscarEquivalencia = new System.Windows.Forms.Button();
+            this.tsbBuscarEquivalencia = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtBEquivalencia = new System.Windows.Forms.TextBox();
-            this.btnBuscarMarca = new System.Windows.Forms.Button();
+            this.tsbBuscarMarca = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCUM = new System.Windows.Forms.TextBox();
@@ -48,14 +48,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBCodigo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btBuscarPresentacion = new System.Windows.Forms.Button();
+            this.tsbBuscarPresentacion = new System.Windows.Forms.Button();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.tBtNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tBtEditar = new System.Windows.Forms.ToolStripButton();
-            this.tBtCancelar = new System.Windows.Forms.ToolStripButton();
-            this.tBtGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tBtBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tBtAnular = new System.Windows.Forms.ToolStripButton();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tstEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.ndIva)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tstMenuPatron.SuspendLayout();
@@ -74,15 +74,15 @@
             this.ndIva.Size = new System.Drawing.Size(55, 20);
             this.ndIva.TabIndex = 45;
             // 
-            // btnBuscarEquivalencia
+            // tsbBuscarEquivalencia
             // 
-            this.btnBuscarEquivalencia.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarEquivalencia.Image")));
-            this.btnBuscarEquivalencia.Location = new System.Drawing.Point(451, 95);
-            this.btnBuscarEquivalencia.Name = "btnBuscarEquivalencia";
-            this.btnBuscarEquivalencia.Size = new System.Drawing.Size(34, 23);
-            this.btnBuscarEquivalencia.TabIndex = 44;
-            this.btnBuscarEquivalencia.UseVisualStyleBackColor = true;
-            this.btnBuscarEquivalencia.Click += new System.EventHandler(this.btnBuscarEquivalencia_Click);
+            this.tsbBuscarEquivalencia.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarEquivalencia.Image")));
+            this.tsbBuscarEquivalencia.Location = new System.Drawing.Point(451, 95);
+            this.tsbBuscarEquivalencia.Name = "tsbBuscarEquivalencia";
+            this.tsbBuscarEquivalencia.Size = new System.Drawing.Size(34, 23);
+            this.tsbBuscarEquivalencia.TabIndex = 44;
+            this.tsbBuscarEquivalencia.UseVisualStyleBackColor = true;
+            this.tsbBuscarEquivalencia.Click += new System.EventHandler(this.tsbBuscarEquivalencia_Click);
             // 
             // label9
             // 
@@ -100,15 +100,15 @@
             this.txtBEquivalencia.Size = new System.Drawing.Size(364, 20);
             this.txtBEquivalencia.TabIndex = 42;
             // 
-            // btnBuscarMarca
+            // tsbBuscarMarca
             // 
-            this.btnBuscarMarca.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarMarca.Image")));
-            this.btnBuscarMarca.Location = new System.Drawing.Point(451, 69);
-            this.btnBuscarMarca.Name = "btnBuscarMarca";
-            this.btnBuscarMarca.Size = new System.Drawing.Size(34, 23);
-            this.btnBuscarMarca.TabIndex = 41;
-            this.btnBuscarMarca.UseVisualStyleBackColor = true;
-            this.btnBuscarMarca.Click += new System.EventHandler(this.btnBuscarMarca_Click);
+            this.tsbBuscarMarca.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarMarca.Image")));
+            this.tsbBuscarMarca.Location = new System.Drawing.Point(451, 69);
+            this.tsbBuscarMarca.Name = "tsbBuscarMarca";
+            this.tsbBuscarMarca.Size = new System.Drawing.Size(34, 23);
+            this.tsbBuscarMarca.TabIndex = 41;
+            this.tsbBuscarMarca.UseVisualStyleBackColor = true;
+            this.tsbBuscarMarca.Click += new System.EventHandler(this.tsbBuscarMarca_Click);
             // 
             // label7
             // 
@@ -217,17 +217,17 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btBuscarPresentacion);
+            this.groupBox1.Controls.Add(this.tsbBuscarPresentacion);
             this.groupBox1.Controls.Add(this.txtBCodigo);
             this.groupBox1.Controls.Add(this.ndIva);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnBuscarEquivalencia);
+            this.groupBox1.Controls.Add(this.tsbBuscarEquivalencia);
             this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtBEquivalencia);
             this.groupBox1.Controls.Add(this.txtBMarca);
-            this.groupBox1.Controls.Add(this.btnBuscarMarca);
+            this.groupBox1.Controls.Add(this.tsbBuscarMarca);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtBPresentacion);
@@ -243,26 +243,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información Principal";
             // 
-            // btBuscarPresentacion
+            // tsbBuscarPresentacion
             // 
-            this.btBuscarPresentacion.Image = ((System.Drawing.Image)(resources.GetObject("btBuscarPresentacion.Image")));
-            this.btBuscarPresentacion.Location = new System.Drawing.Point(451, 121);
-            this.btBuscarPresentacion.Name = "btBuscarPresentacion";
-            this.btBuscarPresentacion.Size = new System.Drawing.Size(34, 23);
-            this.btBuscarPresentacion.TabIndex = 46;
-            this.btBuscarPresentacion.UseVisualStyleBackColor = true;
-            this.btBuscarPresentacion.Click += new System.EventHandler(this.btPresentacion_Click);
+            this.tsbBuscarPresentacion.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarPresentacion.Image")));
+            this.tsbBuscarPresentacion.Location = new System.Drawing.Point(451, 121);
+            this.tsbBuscarPresentacion.Name = "tsbBuscarPresentacion";
+            this.tsbBuscarPresentacion.Size = new System.Drawing.Size(34, 23);
+            this.tsbBuscarPresentacion.TabIndex = 46;
+            this.tsbBuscarPresentacion.UseVisualStyleBackColor = true;
+            this.tsbBuscarPresentacion.Click += new System.EventHandler(this.btPresentacion_Click);
             // 
             // tstMenuPatron
             // 
             this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tBtNuevo,
-            this.tBtEditar,
-            this.tBtCancelar,
-            this.tBtGuardar,
-            this.tBtBuscar,
-            this.tBtAnular});
+            this.tsbNuevo,
+            this.tstEditar,
+            this.tsbCancelar,
+            this.tsbGuardar,
+            this.tsbBuscar,
+            this.tsbAnular});
             this.tstMenuPatron.Location = new System.Drawing.Point(0, 380);
             this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
@@ -271,65 +271,65 @@
             this.tstMenuPatron.TabIndex = 48;
             this.tstMenuPatron.Text = "toolStrip1";
             // 
-            // tBtNuevo
+            // tsbNuevo
             // 
-            this.tBtNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.tBtNuevo.ImageTransparentColor = System.Drawing.Color.White;
-            this.tBtNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtNuevo.Name = "tBtNuevo";
-            this.tBtNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tBtNuevo.Text = "Nuevo";
+            this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
             // 
-            // tBtEditar
+            // tstEditar
             // 
-            this.tBtEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.tBtEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtEditar.Name = "tBtEditar";
-            this.tBtEditar.Size = new System.Drawing.Size(57, 22);
-            this.tBtEditar.Text = "Editar";
+            this.tstEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tstEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tstEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstEditar.Name = "tstEditar";
+            this.tstEditar.Size = new System.Drawing.Size(57, 22);
+            this.tstEditar.Text = "Editar";
             // 
-            // tBtCancelar
+            // tsbCancelar
             // 
-            this.tBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtCancelar.Name = "tBtCancelar";
-            this.tBtCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tBtCancelar.Text = "Cancelar";
+            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
             // 
-            // tBtGuardar
+            // tsbGuardar
             // 
-            this.tBtGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.tBtGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtGuardar.Name = "tBtGuardar";
-            this.tBtGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tBtGuardar.Text = "Guardar";
+            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
             // 
-            // tBtBuscar
+            // tsbBuscar
             // 
-            this.tBtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
-            this.tBtBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtBuscar.Name = "tBtBuscar";
-            this.tBtBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tBtBuscar.Text = "Buscar";
+            this.tsbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscar.Text = "Buscar";
             // 
-            // tBtAnular
+            // tsbAnular
             // 
-            this.tBtAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBtAnular.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.tBtAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tBtAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tBtAnular.Name = "tBtAnular";
-            this.tBtAnular.Size = new System.Drawing.Size(62, 22);
-            this.tBtAnular.Text = "Anular";
+            this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbAnular.Name = "tsbAnular";
+            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnular.Text = "Anular";
             // 
             // ProductoUI
             // 
@@ -355,10 +355,10 @@
 
         #endregion
         private System.Windows.Forms.NumericUpDown ndIva;
-        private System.Windows.Forms.Button btnBuscarEquivalencia;
+        private System.Windows.Forms.Button tsbBuscarEquivalencia;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtBEquivalencia;
-        private System.Windows.Forms.Button btnBuscarMarca;
+        private System.Windows.Forms.Button tsbBuscarMarca;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCUM;
@@ -373,13 +373,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBCodigo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btBuscarPresentacion;
+        private System.Windows.Forms.Button tsbBuscarPresentacion;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton tBtNuevo;
-        private System.Windows.Forms.ToolStripButton tBtEditar;
-        private System.Windows.Forms.ToolStripButton tBtCancelar;
-        private System.Windows.Forms.ToolStripButton tBtGuardar;
-        private System.Windows.Forms.ToolStripButton tBtBuscar;
-        private System.Windows.Forms.ToolStripButton tBtAnular;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tstEditar;
+        private System.Windows.Forms.ToolStripButton tsbCancelar;
+        private System.Windows.Forms.ToolStripButton tsbGuardar;
+        private System.Windows.Forms.ToolStripButton tsbBuscar;
+        private System.Windows.Forms.ToolStripButton tsbAnular;
     }
 }
