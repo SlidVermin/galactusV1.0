@@ -43,6 +43,7 @@ namespace Galactus.Util.Constantes
         public const string ESQUEMA_GENERAL = "[General].";
         public const string ESQUEMA_TERCERO = "[Tercero].";
         public const string ESQUEMA_CLIENTE = "[Cliente].";
+       
         #region configuracion general
         public const int MARCA = 1;
         public const int PRESENTACION = 2;
@@ -55,6 +56,11 @@ namespace Galactus.Util.Constantes
         public const int BANCO = 14;
         public const int TRIAGE = 15;
         public const int ESPECIALIDAD = 16;
+        public const int CAMA = 17;
+        public const int VIA_INGRESO = 18;
+        public const int CAUSA_EXTERNA = 19;
+        public const int INSTITUCIÓN = 20;
+
         #endregion
 
     }

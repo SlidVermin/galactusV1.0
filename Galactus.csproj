@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Admision\Admisiones.cs" />
+    <Compile Include="Entidades\Admision\Atencion.cs" />
     <Compile Include="Entidades\Admision\Configuracion\ManualServicio.cs" />
     <Compile Include="Entidades\Admision\manualTarifarioServicio.cs" />
     <Compile Include="Entidades\Admision\Paciente.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Entidades\Inventario\GeneralTercero.cs" />
     <Compile Include="Entidades\Inventario\Proveedor.cs" />
     <Compile Include="Modelo\Admision\AdmisionDAL.cs" />
+    <Compile Include="Modelo\Admision\AtencionDAL.cs" />
     <Compile Include="Modelo\Admision\Configuracion\ManualServicioDAL.cs" />
     <Compile Include="Modelo\Admision\manualTarifarioServicioDAL.cs" />
     <Compile Include="Modelo\Admision\PacienteDAL.cs" />
@@ -530,6 +532,11 @@
     <None Include="Resources\Document-copy-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\User-Orange-icon.png" />
+    <None Include="Resources\User-Blue-icon %281%29.png" />
+    <None Include="Resources\User-Yellow-icon %281%29.png" />
+    <None Include="Resources\User-Red-icon %281%29.png" />
+    <None Include="Resources\User-Green-icon %281%29.png" />
     <None Include="Resources\Very-Basic-Search-icon3.png" />
     <None Include="Resources\btn-buscar.jpg" />
     <None Include="Resources\btn-anular.jpg" />

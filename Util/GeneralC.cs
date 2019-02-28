@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Galactus
 {
     class GeneralC
@@ -62,6 +63,17 @@ namespace Galactus
             }
         }
 
+        public static object castFromDbItemVacio( Object DbItem )
+        {
+            if (DbItem is DBNull)
+            {
+              return  DbItem = "";
+            }else
+            {
+                return DbItem;
+            }
+        }
+      
         public static void calcularEdad(DateTime fechaNacimiento,
                                      ref string campoFecha)
         {
@@ -412,7 +424,10 @@ namespace Galactus
                     if ((vControl as DataGridView).DataSource is BindingSource)
                         (vControl as DataGridView).DataSource = String.Empty;
                     else if ((vControl as DataGridView).DataSource != null)
-                        (vControl as DataGridView).DataSource = String.Empty;
+                        if ((vControl as DataGridView).DataSource is DataTable)
+                        {
+                            ((DataTable)(vControl as DataGridView).DataSource).Rows.Clear();
+                        }
                     //diseñoDGV(ref vControl);
                 }
                 else

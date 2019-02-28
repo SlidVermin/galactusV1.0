@@ -598,6 +598,7 @@ namespace Galactus.VistaControlador
                 {
                     paciente.eliminar();
                     GeneralC.posAnular(this, tstMenuPatron, tBtNuevo, tBtBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    btnSalir.Enabled = true;
                 }
                 catch (Exception ex)
                 {

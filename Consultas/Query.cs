@@ -79,6 +79,20 @@ namespace Galactus
         public const String ADMISION_BUSCAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionBuscar";
         public const String ADMISION_ANULAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionAnular";
         public const String ADMISION_CARGAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionCargar";
+
+        public const String GENERAL_AREA_ATENCION = ConstanteGeneral.ESQUEMA_GENERAL + "uspAreaAtencion";
+        public const String GENERAL_ENTORNO_ATENCION = ConstanteGeneral.ESQUEMA_GENERAL + "uspEntornoAtencion";
+        public const String ATENCION_CAUSA_EXTERNA = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionCausaExterna";
+        public const String ATENCION_INSTITUCION = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionInstitucion";
+        public const String ATENCION_CAMA = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionCama";
+        public const String ATENCION_BUSCAR_PACIENTE_ADMISIONADO = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionPacienteAdmisionado";
+        public const String GENERAL_BUSCAR_DIAGNOSTICO = ConstanteGeneral.ESQUEMA_GENERAL + "uspDiagnosticosBuscar";
+        public const String ATENCION_VIA_INGRESO = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionViaIngreso";
+        public const String ATENCION_CREAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionCrear";
+        public const String ATENCION_BUSCAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionBuscar";
+        public const String ATENCION_CARGAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionCargar";
+        public const String ATENCION_PACIENTE_ATENCION = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionPacienteCargar";
+        public const String ATENCION_ANULAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionAnular";
         #endregion
 
         #region Gestion

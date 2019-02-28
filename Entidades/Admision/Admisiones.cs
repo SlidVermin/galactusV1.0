@@ -90,23 +90,25 @@ namespace Galactus.Entidades.Admision
                 especialidad = dt["table"].Rows[0].Field<String>("especialidad");
 
             }
-            else if (dt["table1"].Rows.Count > 0)
+             if (dt["table1"].Rows.Count > 0)
             {
-                tipoDocumentoAcompañante = dt["table1"].Rows[0].Field<String>("idtipodocumento");
-                identificacionAcompañante = dt["table1"].Rows[0].Field<String>("documentoIdentificacion");
+                tipoDocumentoAcompañante =Convert.ToString( dt["table1"].Rows[0].Field<int>("idtipodocumento"));
+                identificacionAcompañante =Convert.ToString( dt["table1"].Rows[0].Field<int>("documentoIdentificacion"));
                 idMunicipioAcompañante = Convert.ToString( dt["table1"].Rows[0].Field<int>("idMunicipio"));
                 nombreAcompañante = dt["table1"].Rows[0].Field<String>("nombreAcompanante");
                 direccionAcompañante = dt["table1"].Rows[0].Field<String>("direccion");
-                telefonoAcompañante = dt["table1"].Rows[0].Field<String>("telefono");
+                telefonoAcompañante = Convert.ToString( dt["table1"].Rows[0].Field<int>("telefono"));
                 acompanante = true;
-            }else if (dt["table2"].Rows.Count > 0)
+            }
+
+            if (dt["table2"].Rows.Count > 0)
             {
-                tipoDocumentoResponsable = dt["table2"].Rows[0].Field<String>("idtipodocumento");
-                identificacionResponsable = dt["table2"].Rows[0].Field<String>("documentoIdentificacion");
+                tipoDocumentoResponsable =Convert.ToString( dt["table2"].Rows[0].Field<int>("idtipodocumento"));
+                identificacionResponsable =Convert.ToString( dt["table2"].Rows[0].Field<int>("documentoIdentificacion"));
                 idMunicipioResponsable = Convert.ToString(dt["table2"].Rows[0].Field<int>("idMunicipio"));
                 nombreResponsable = dt["table2"].Rows[0].Field<String>("nombreResponsable");
                 direccionResponsable = dt["table2"].Rows[0].Field<String>("direccion");
-                telefonoResponsable = dt["table2"].Rows[0].Field<String>("telefono");
+                telefonoResponsable =Convert.ToString( dt["table2"].Rows[0].Field<int>("telefono"));
                 responsable = true;
             }
         }
