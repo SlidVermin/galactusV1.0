@@ -16,5 +16,20 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
             InitializeComponent();
         }
+
+        private void AtencionIngresoUI_Load(object sender, EventArgs e)
+        {
+            GeneralC.deshabilitarBotones(ref tstMenuPatron);
+            GeneralC.deshabilitarControles(this);
+            tstEditar.Enabled = true;
+        }
+
+        private void tstEditar_Click(object sender, EventArgs e)
+        {
+            GeneralC.habilitarControles(this);
+            GeneralC.deshabilitarBotones(ref tstMenuPatron);
+            tsbGuardar.Enabled = true;
+            tsbCancelar.Enabled = true;
+        }
     }
 }
