@@ -115,6 +115,9 @@
     <Compile Include="Util\Mensajes\Mensajes.cs" />
     <Compile Include="Util\MyRenderer.cs" />
     <Compile Include="Util\Sesion.cs" />
+    <Compile Include="Util\TabControlGalactus.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Util\Titulos.cs" />
     <Compile Include="VistaControlador\Admision\AdmisionUI.cs">
       <SubType>Form</SubType>
@@ -229,6 +232,12 @@
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.Designer.cs">
       <DependentUpon>ConfiguracionProcedimientoMedicoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\HistoriaClinicaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\HistoriaClinicaUI.designer.cs">
+      <DependentUpon>HistoriaClinicaUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\HemodialisisUI.cs">
       <SubType>Form</SubType>
@@ -348,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.resx">
       <DependentUpon>ConfiguracionProcedimientoMedicoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\HistoriaClinicaUI.resx">
+      <DependentUpon>HistoriaClinicaUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\HemodialisisUI.resx">
       <DependentUpon>HemodialisisUI.cs</DependentUpon>
