@@ -635,5 +635,14 @@ namespace Galactus
                 throw ex;
             }
         }
+        public static void cargarFormularioPanel(Panel panelForm, Form formEntrante ) {
+            if (panelForm.Controls.Count > 0) panelForm.Controls.RemoveAt(0);
+            formEntrante.TopLevel = false;
+            formEntrante.Dock = DockStyle.Fill;
+            formEntrante.FormBorderStyle = FormBorderStyle.None;
+            panelForm.Controls.Add(formEntrante);
+            panelForm.Tag = formEntrante;
+            formEntrante.Show();
+        }
     }
 }

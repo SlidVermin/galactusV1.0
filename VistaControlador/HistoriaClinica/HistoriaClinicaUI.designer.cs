@@ -44,14 +44,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.tabControlGalactus1 = new Galactus.Util.Controles.TabControlGalactus();
             this.pagIngreso = new System.Windows.Forms.TabPage();
+            this.panelIngreso = new System.Windows.Forms.Panel();
             this.pagOrdenMedica = new System.Windows.Forms.TabPage();
             this.pagEvolucion = new System.Windows.Forms.TabPage();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.pnlInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlGalactus1.SuspendLayout();
+            this.pagIngreso.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlInformacion
@@ -73,7 +75,7 @@
             this.pnlInformacion.Controls.Add(this.label5);
             this.pnlInformacion.Location = new System.Drawing.Point(4, 38);
             this.pnlInformacion.Name = "pnlInformacion";
-            this.pnlInformacion.Size = new System.Drawing.Size(1081, 59);
+            this.pnlInformacion.Size = new System.Drawing.Size(1260, 59);
             this.pnlInformacion.TabIndex = 2;
             // 
             // dtFecha
@@ -110,7 +112,7 @@
             this.txtAdministradora.Font = new System.Drawing.Font("Arial Narrow", 9F);
             this.txtAdministradora.Location = new System.Drawing.Point(776, 30);
             this.txtAdministradora.Name = "txtAdministradora";
-            this.txtAdministradora.Size = new System.Drawing.Size(297, 21);
+            this.txtAdministradora.Size = new System.Drawing.Size(475, 21);
             this.txtAdministradora.TabIndex = 26;
             this.txtAdministradora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -219,6 +221,19 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Historia Clinica";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(1236, 3);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(26, 24);
+            this.btnSalir.TabIndex = 45;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // tabControlGalactus1
             // 
             this.tabControlGalactus1.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -231,26 +246,37 @@
             this.tabControlGalactus1.Multiline = true;
             this.tabControlGalactus1.Name = "tabControlGalactus1";
             this.tabControlGalactus1.SelectedIndex = 0;
-            this.tabControlGalactus1.Size = new System.Drawing.Size(1081, 427);
+            this.tabControlGalactus1.Size = new System.Drawing.Size(1260, 548);
             this.tabControlGalactus1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlGalactus1.TabIndex = 0;
+            this.tabControlGalactus1.SelectedIndexChanged += new System.EventHandler(this.tabControlGalactus1_SelectedIndexChanged);
             // 
             // pagIngreso
             // 
+            this.pagIngreso.Controls.Add(this.panelIngreso);
             this.pagIngreso.Location = new System.Drawing.Point(124, 4);
             this.pagIngreso.Name = "pagIngreso";
             this.pagIngreso.Padding = new System.Windows.Forms.Padding(3);
-            this.pagIngreso.Size = new System.Drawing.Size(953, 419);
+            this.pagIngreso.Size = new System.Drawing.Size(1132, 540);
             this.pagIngreso.TabIndex = 2;
             this.pagIngreso.Text = "Ingreso";
             this.pagIngreso.UseVisualStyleBackColor = true;
+            // 
+            // panelIngreso
+            // 
+            this.panelIngreso.AutoScroll = true;
+            this.panelIngreso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelIngreso.Location = new System.Drawing.Point(3, 3);
+            this.panelIngreso.Name = "panelIngreso";
+            this.panelIngreso.Size = new System.Drawing.Size(1126, 534);
+            this.panelIngreso.TabIndex = 0;
             // 
             // pagOrdenMedica
             // 
             this.pagOrdenMedica.Location = new System.Drawing.Point(124, 4);
             this.pagOrdenMedica.Name = "pagOrdenMedica";
             this.pagOrdenMedica.Padding = new System.Windows.Forms.Padding(3);
-            this.pagOrdenMedica.Size = new System.Drawing.Size(953, 396);
+            this.pagOrdenMedica.Size = new System.Drawing.Size(1132, 429);
             this.pagOrdenMedica.TabIndex = 1;
             this.pagOrdenMedica.Text = "Orden Medica";
             this.pagOrdenMedica.UseVisualStyleBackColor = true;
@@ -260,38 +286,25 @@
             this.pagEvolucion.Location = new System.Drawing.Point(124, 4);
             this.pagEvolucion.Name = "pagEvolucion";
             this.pagEvolucion.Padding = new System.Windows.Forms.Padding(3);
-            this.pagEvolucion.Size = new System.Drawing.Size(953, 396);
+            this.pagEvolucion.Size = new System.Drawing.Size(1132, 429);
             this.pagEvolucion.TabIndex = 3;
             this.pagEvolucion.Text = "Evolución";
             this.pagEvolucion.UseVisualStyleBackColor = true;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(1059, 3);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(26, 24);
-            this.btnSalir.TabIndex = 45;
-            this.btnSalir.Text = "X";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // HistoriaClinicaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1090, 533);
+            this.ClientSize = new System.Drawing.Size(1269, 650);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlInformacion);
             this.Controls.Add(this.tabControlGalactus1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1090, 533);
-            this.MinimumSize = new System.Drawing.Size(1090, 533);
+            this.MaximumSize = new System.Drawing.Size(1269, 650);
+            this.MinimumSize = new System.Drawing.Size(1269, 650);
             this.Name = "HistoriaClinicaUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HistoriaClinicaUI";
@@ -299,6 +312,7 @@
             this.pnlInformacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControlGalactus1.ResumeLayout(false);
+            this.pagIngreso.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,5 +341,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Panel panelIngreso;
     }
 }

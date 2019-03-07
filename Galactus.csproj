@@ -227,6 +227,12 @@
     <Compile Include="VistaControlador\General\BusquedaGeneralUI.Designer.cs">
       <DependentUpon>BusquedaGeneralUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\AtencionIngresoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\AtencionIngresoUI.Designer.cs">
+      <DependentUpon>AtencionIngresoUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\General\BusquedaGeneralUI.resx">
       <DependentUpon>BusquedaGeneralUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\AtencionIngresoUI.resx">
+      <DependentUpon>AtencionIngresoUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.resx">
       <DependentUpon>ConfiguracionProcedimientoMedicoUI.cs</DependentUpon>

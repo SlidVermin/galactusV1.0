@@ -44,5 +44,18 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
 
         }
+
+        private void tabControlGalactus1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControlGalactus1.SelectedIndex == 0) {
+                GeneralC.cargarFormularioPanel(panelIngreso,new AtencionIngresoUI());
+            }
+            else if (tabControlGalactus1.SelectedIndex == 1) {
+
+            }
+            else if (tabControlGalactus1.SelectedIndex == 2) {
+
+            }
+        }
     }
 }
