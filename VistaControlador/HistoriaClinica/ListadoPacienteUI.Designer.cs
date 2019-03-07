@@ -1,6 +1,6 @@
 ﻿namespace Galactus.VistaControlador.HistoriaClinica
 {
-    partial class ListadoPaciente
+    partial class ListadoPacienteUI
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             this.pacientePB = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvListaPaciente = new System.Windows.Forms.DataGridView();
             this.dgAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgEntorno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaPaciente)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +91,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvListaPaciente);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F);
             this.groupBox1.Location = new System.Drawing.Point(7, 55);
             this.groupBox1.Name = "groupBox1";
@@ -100,12 +100,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Numero de paciente(200)";
             // 
-            // dataGridView1
+            // dgvListaPaciente
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListaPaciente.AllowUserToAddRows = false;
+            this.dgvListaPaciente.BackgroundColor = System.Drawing.Color.White;
+            this.dgvListaPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaPaciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgAtencion,
             this.dgPaciente,
             this.dgEntorno,
@@ -114,16 +114,17 @@
             this.dgEdad,
             this.dgGenero,
             this.dgEps});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.ShowCellErrors = false;
-            this.dataGridView1.ShowCellToolTips = false;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1229, 507);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvListaPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvListaPaciente.Location = new System.Drawing.Point(3, 18);
+            this.dgvListaPaciente.Name = "dgvListaPaciente";
+            this.dgvListaPaciente.RowHeadersVisible = false;
+            this.dgvListaPaciente.ShowCellErrors = false;
+            this.dgvListaPaciente.ShowCellToolTips = false;
+            this.dgvListaPaciente.ShowEditingIcon = false;
+            this.dgvListaPaciente.ShowRowErrors = false;
+            this.dgvListaPaciente.Size = new System.Drawing.Size(1229, 507);
+            this.dgvListaPaciente.TabIndex = 0;
+            this.dgvListaPaciente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaPaciente_CellDoubleClick);
             // 
             // dgAtencion
             // 
@@ -286,27 +287,28 @@
             this.btnSalir.TabIndex = 46;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // ListadoPaciente
+            // ListadoPacienteUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1325, 650);
+            this.ClientSize = new System.Drawing.Size(1269, 650);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.pacientePB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1325, 650);
-            this.MinimumSize = new System.Drawing.Size(1325, 650);
-            this.Name = "ListadoPaciente";
+            this.MaximumSize = new System.Drawing.Size(1269, 650);
+            this.MinimumSize = new System.Drawing.Size(1269, 650);
+            this.Name = "ListadoPacienteUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListadoPaciente";
             this.Load += new System.EventHandler(this.ListadoPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaPaciente)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -325,7 +327,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buscarHCPacienteBtn;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListaPaciente;
         private System.Windows.Forms.ComboBox triageBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgAtencion;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgPaciente;
