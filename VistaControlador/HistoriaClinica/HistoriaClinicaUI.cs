@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Galactus.Util.Mensajes;
+using Galactus.VistaControlador.HistoriaClinica.FormIngreso;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
@@ -40,21 +41,32 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         #endregion
 
-        private void txtPaciente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabControlGalactus1_SelectedIndexChanged(object sender, EventArgs e)
+        private void tabControlGalactus1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             if (tabControlGalactus1.SelectedIndex == 0) {
                 GeneralC.cargarFormularioPanel(panelIngreso,new AtencionIngresoUI());
             }
             else if (tabControlGalactus1.SelectedIndex == 1) {
-
+                GeneralC.cargarFormularioPanel(pnlAntecFamiliares, new AntecedentesFamiliaresUI());
             }
             else if (tabControlGalactus1.SelectedIndex == 2) {
-
+                GeneralC.cargarFormularioPanel(pnlAntecPersonales, new AntecedentesPersonalesUI());
+            }
+            else if (tabControlGalactus1.SelectedIndex == 3)
+            {
+                GeneralC.cargarFormularioPanel(pnlAntecMaterno, new AntecedentesMaternosUI());
+            }
+            else if (tabControlGalactus1.SelectedIndex == 4)
+            {
+                GeneralC.cargarFormularioPanel(pnlAntecRecienNacido, new AntecedenteRecienNacidoUI());
+            }
+            else if (tabControlGalactus1.SelectedIndex == 5)
+            {
+                GeneralC.cargarFormularioPanel(pnlEventoNacido, new EventoNacimientoUI());
+            }
+            else if (tabControlGalactus1.SelectedIndex == 6)
+            {
+                GeneralC.cargarFormularioPanel(pnlPronostico, new PronosticoUI());
             }
         }
     }

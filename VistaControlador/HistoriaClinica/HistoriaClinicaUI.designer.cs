@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.txtEstancia = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSexo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodigoAdministradora = new System.Windows.Forms.TextBox();
             this.txtAdministradora = new System.Windows.Forms.TextBox();
@@ -41,16 +46,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.txtSexo = new System.Windows.Forms.TextBox();
-            this.txtEdad = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtEstancia = new System.Windows.Forms.TextBox();
-            this.tabControlGalactus1 = new Galactus.Util.Controles.TabControlGalactus();
+            this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
             this.pagIngreso = new System.Windows.Forms.TabPage();
+            this.pagOrdenMedica = new System.Windows.Forms.TabPage();
+            this.pagEvolucion = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabControlGalactus1 = new Galactus.Util.Controles.TabControlGalactus();
+            this.pagDatosIngreso = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Label38 = new System.Windows.Forms.Label();
             this.txtPeso = new System.Windows.Forms.TextBox();
@@ -68,13 +72,31 @@
             this.txtEstadoAtencion = new System.Windows.Forms.TextBox();
             this.Label42 = new System.Windows.Forms.Label();
             this.panelIngreso = new System.Windows.Forms.Panel();
-            this.pagOrdenMedica = new System.Windows.Forms.TabPage();
-            this.pagEvolucion = new System.Windows.Forms.TabPage();
+            this.pagAntecedentesFamiliares = new System.Windows.Forms.TabPage();
+            this.pnlAntecFamiliares = new System.Windows.Forms.Panel();
+            this.pagAntecedentesPersonales = new System.Windows.Forms.TabPage();
+            this.pnlAntecPersonales = new System.Windows.Forms.Panel();
+            this.pagAntecedenteMaterno = new System.Windows.Forms.TabPage();
+            this.pnlAntecMaterno = new System.Windows.Forms.Panel();
+            this.pagRecienNacido = new System.Windows.Forms.TabPage();
+            this.pnlAntecRecienNacido = new System.Windows.Forms.Panel();
+            this.pagEventoNacido = new System.Windows.Forms.TabPage();
+            this.pnlEventoNacido = new System.Windows.Forms.Panel();
+            this.pagPronostico = new System.Windows.Forms.TabPage();
+            this.pnlPronostico = new System.Windows.Forms.Panel();
             this.pnlInformacion.SuspendLayout();
+            this.tabHistoriaClinica.SuspendLayout();
+            this.pagIngreso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlGalactus1.SuspendLayout();
-            this.pagIngreso.SuspendLayout();
+            this.pagDatosIngreso.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pagAntecedentesFamiliares.SuspendLayout();
+            this.pagAntecedentesPersonales.SuspendLayout();
+            this.pagAntecedenteMaterno.SuspendLayout();
+            this.pagRecienNacido.SuspendLayout();
+            this.pagEventoNacido.SuspendLayout();
+            this.pagPronostico.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlInformacion
@@ -102,6 +124,53 @@
             this.pnlInformacion.Name = "pnlInformacion";
             this.pnlInformacion.Size = new System.Drawing.Size(1260, 59);
             this.pnlInformacion.TabIndex = 2;
+            // 
+            // txtEstancia
+            // 
+            this.txtEstancia.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.txtEstancia.Location = new System.Drawing.Point(1092, 30);
+            this.txtEstancia.Name = "txtEstancia";
+            this.txtEstancia.Size = new System.Drawing.Size(158, 21);
+            this.txtEstancia.TabIndex = 49;
+            this.txtEstancia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label6.Location = new System.Drawing.Point(1025, 33);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 16);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "Estancia:";
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.txtEdad.Location = new System.Drawing.Point(1092, 6);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(158, 21);
+            this.txtEdad.TabIndex = 47;
+            this.txtEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label2.Location = new System.Drawing.Point(1025, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 16);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Edad:";
+            // 
+            // txtSexo
+            // 
+            this.txtSexo.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.txtSexo.Location = new System.Drawing.Point(860, 6);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(145, 21);
+            this.txtSexo.TabIndex = 45;
+            this.txtSexo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -167,7 +236,6 @@
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Size = new System.Drawing.Size(392, 21);
             this.txtPaciente.TabIndex = 22;
-            this.txtPaciente.TextChanged += new System.EventHandler(this.txtPaciente_TextChanged);
             // 
             // txtIdentificacion
             // 
@@ -217,20 +285,11 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Nº Atención:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 15);
+            this.label1.Location = new System.Drawing.Point(36, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 18);
             this.label1.TabIndex = 8;
@@ -249,81 +308,91 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // txtSexo
+            // tabHistoriaClinica
             // 
-            this.txtSexo.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtSexo.Location = new System.Drawing.Point(860, 6);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(145, 21);
-            this.txtSexo.TabIndex = 45;
-            this.txtSexo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tabHistoriaClinica.Controls.Add(this.pagIngreso);
+            this.tabHistoriaClinica.Controls.Add(this.pagOrdenMedica);
+            this.tabHistoriaClinica.Controls.Add(this.pagEvolucion);
+            this.tabHistoriaClinica.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.tabHistoriaClinica.Location = new System.Drawing.Point(4, 100);
+            this.tabHistoriaClinica.Name = "tabHistoriaClinica";
+            this.tabHistoriaClinica.SelectedIndex = 0;
+            this.tabHistoriaClinica.Size = new System.Drawing.Size(1260, 539);
+            this.tabHistoriaClinica.TabIndex = 46;
             // 
-            // txtEdad
+            // pagIngreso
             // 
-            this.txtEdad.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtEdad.Location = new System.Drawing.Point(1092, 6);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(158, 21);
-            this.txtEdad.TabIndex = 47;
-            this.txtEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pagIngreso.Controls.Add(this.tabControlGalactus1);
+            this.pagIngreso.Location = new System.Drawing.Point(4, 25);
+            this.pagIngreso.Name = "pagIngreso";
+            this.pagIngreso.Padding = new System.Windows.Forms.Padding(3);
+            this.pagIngreso.Size = new System.Drawing.Size(1252, 510);
+            this.pagIngreso.TabIndex = 0;
+            this.pagIngreso.Text = "Ingreso Clinico";
+            this.pagIngreso.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // pagOrdenMedica
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label2.Location = new System.Drawing.Point(1025, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 16);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Edad:";
+            this.pagOrdenMedica.Location = new System.Drawing.Point(4, 25);
+            this.pagOrdenMedica.Name = "pagOrdenMedica";
+            this.pagOrdenMedica.Padding = new System.Windows.Forms.Padding(3);
+            this.pagOrdenMedica.Size = new System.Drawing.Size(1252, 510);
+            this.pagOrdenMedica.TabIndex = 1;
+            this.pagOrdenMedica.Text = "Orden Medica";
+            this.pagOrdenMedica.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // pagEvolucion
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label6.Location = new System.Drawing.Point(1025, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 16);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "Estancia:";
+            this.pagEvolucion.Location = new System.Drawing.Point(4, 25);
+            this.pagEvolucion.Name = "pagEvolucion";
+            this.pagEvolucion.Padding = new System.Windows.Forms.Padding(3);
+            this.pagEvolucion.Size = new System.Drawing.Size(1252, 510);
+            this.pagEvolucion.TabIndex = 2;
+            this.pagEvolucion.Text = "Evolución";
+            this.pagEvolucion.UseVisualStyleBackColor = true;
             // 
-            // txtEstancia
+            // pictureBox1
             // 
-            this.txtEstancia.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtEstancia.Location = new System.Drawing.Point(1092, 30);
-            this.txtEstancia.Name = "txtEstancia";
-            this.txtEstancia.Size = new System.Drawing.Size(158, 21);
-            this.txtEstancia.TabIndex = 49;
-            this.txtEstancia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // tabControlGalactus1
             // 
             this.tabControlGalactus1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControlGalactus1.Controls.Add(this.pagIngreso);
-            this.tabControlGalactus1.Controls.Add(this.pagOrdenMedica);
-            this.tabControlGalactus1.Controls.Add(this.pagEvolucion);
+            this.tabControlGalactus1.Controls.Add(this.pagDatosIngreso);
+            this.tabControlGalactus1.Controls.Add(this.pagAntecedentesFamiliares);
+            this.tabControlGalactus1.Controls.Add(this.pagAntecedentesPersonales);
+            this.tabControlGalactus1.Controls.Add(this.pagAntecedenteMaterno);
+            this.tabControlGalactus1.Controls.Add(this.pagRecienNacido);
+            this.tabControlGalactus1.Controls.Add(this.pagEventoNacido);
+            this.tabControlGalactus1.Controls.Add(this.pagPronostico);
+            this.tabControlGalactus1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlGalactus1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlGalactus1.ItemSize = new System.Drawing.Size(30, 120);
-            this.tabControlGalactus1.Location = new System.Drawing.Point(4, 101);
+            this.tabControlGalactus1.Location = new System.Drawing.Point(3, 3);
             this.tabControlGalactus1.Multiline = true;
             this.tabControlGalactus1.Name = "tabControlGalactus1";
             this.tabControlGalactus1.SelectedIndex = 0;
-            this.tabControlGalactus1.Size = new System.Drawing.Size(1260, 548);
+            this.tabControlGalactus1.Size = new System.Drawing.Size(1246, 504);
             this.tabControlGalactus1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControlGalactus1.TabIndex = 0;
-            this.tabControlGalactus1.SelectedIndexChanged += new System.EventHandler(this.tabControlGalactus1_SelectedIndexChanged);
+            this.tabControlGalactus1.TabIndex = 1;
+            this.tabControlGalactus1.SelectedIndexChanged += new System.EventHandler(this.tabControlGalactus1_SelectedIndexChanged_1);
             // 
-            // pagIngreso
+            // pagDatosIngreso
             // 
-            this.pagIngreso.Controls.Add(this.panel1);
-            this.pagIngreso.Controls.Add(this.panelIngreso);
-            this.pagIngreso.Location = new System.Drawing.Point(124, 4);
-            this.pagIngreso.Name = "pagIngreso";
-            this.pagIngreso.Padding = new System.Windows.Forms.Padding(3);
-            this.pagIngreso.Size = new System.Drawing.Size(1132, 540);
-            this.pagIngreso.TabIndex = 2;
-            this.pagIngreso.Text = "Ingreso";
-            this.pagIngreso.UseVisualStyleBackColor = true;
+            this.pagDatosIngreso.Controls.Add(this.panel1);
+            this.pagDatosIngreso.Controls.Add(this.panelIngreso);
+            this.pagDatosIngreso.Location = new System.Drawing.Point(124, 4);
+            this.pagDatosIngreso.Name = "pagDatosIngreso";
+            this.pagDatosIngreso.Padding = new System.Windows.Forms.Padding(3);
+            this.pagDatosIngreso.Size = new System.Drawing.Size(1118, 496);
+            this.pagDatosIngreso.TabIndex = 2;
+            this.pagDatosIngreso.Text = "Datos del Ingreso";
+            this.pagDatosIngreso.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -346,7 +415,7 @@
             this.panel1.Controls.Add(this.Label42);
             this.panel1.Location = new System.Drawing.Point(3, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1126, 60);
+            this.panel1.Size = new System.Drawing.Size(1112, 60);
             this.panel1.TabIndex = 1;
             // 
             // Label38
@@ -354,7 +423,7 @@
             this.Label38.AutoSize = true;
             this.Label38.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Label38.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label38.Location = new System.Drawing.Point(1094, 35);
+            this.Label38.Location = new System.Drawing.Point(1073, 35);
             this.Label38.Name = "Label38";
             this.Label38.Size = new System.Drawing.Size(28, 16);
             this.Label38.TabIndex = 10085;
@@ -363,7 +432,7 @@
             // txtPeso
             // 
             this.txtPeso.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtPeso.Location = new System.Drawing.Point(1019, 32);
+            this.txtPeso.Location = new System.Drawing.Point(998, 32);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(72, 21);
             this.txtPeso.TabIndex = 10084;
@@ -374,7 +443,7 @@
             this.Label37.AutoSize = true;
             this.Label37.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Label37.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label37.Location = new System.Drawing.Point(973, 35);
+            this.Label37.Location = new System.Drawing.Point(952, 35);
             this.Label37.Name = "Label37";
             this.Label37.Size = new System.Drawing.Size(42, 16);
             this.Label37.TabIndex = 10083;
@@ -385,7 +454,7 @@
             this.txtCama.Font = new System.Drawing.Font("Arial Narrow", 9F);
             this.txtCama.Location = new System.Drawing.Point(809, 33);
             this.txtCama.Name = "txtCama";
-            this.txtCama.Size = new System.Drawing.Size(153, 21);
+            this.txtCama.Size = new System.Drawing.Size(132, 21);
             this.txtCama.TabIndex = 10082;
             this.txtCama.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -425,7 +494,7 @@
             this.txtInstitucion.Font = new System.Drawing.Font("Arial Narrow", 9F);
             this.txtInstitucion.Location = new System.Drawing.Point(585, 8);
             this.txtInstitucion.Name = "txtInstitucion";
-            this.txtInstitucion.Size = new System.Drawing.Size(538, 21);
+            this.txtInstitucion.Size = new System.Drawing.Size(516, 21);
             this.txtInstitucion.TabIndex = 10078;
             // 
             // Label39
@@ -505,28 +574,132 @@
             this.panelIngreso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelIngreso.Location = new System.Drawing.Point(3, 69);
             this.panelIngreso.Name = "panelIngreso";
-            this.panelIngreso.Size = new System.Drawing.Size(1126, 465);
+            this.panelIngreso.Size = new System.Drawing.Size(1112, 424);
             this.panelIngreso.TabIndex = 0;
             // 
-            // pagOrdenMedica
+            // pagAntecedentesFamiliares
             // 
-            this.pagOrdenMedica.Location = new System.Drawing.Point(124, 4);
-            this.pagOrdenMedica.Name = "pagOrdenMedica";
-            this.pagOrdenMedica.Padding = new System.Windows.Forms.Padding(3);
-            this.pagOrdenMedica.Size = new System.Drawing.Size(1132, 540);
-            this.pagOrdenMedica.TabIndex = 1;
-            this.pagOrdenMedica.Text = "Orden Medica";
-            this.pagOrdenMedica.UseVisualStyleBackColor = true;
+            this.pagAntecedentesFamiliares.Controls.Add(this.pnlAntecFamiliares);
+            this.pagAntecedentesFamiliares.Location = new System.Drawing.Point(124, 4);
+            this.pagAntecedentesFamiliares.Name = "pagAntecedentesFamiliares";
+            this.pagAntecedentesFamiliares.Padding = new System.Windows.Forms.Padding(3);
+            this.pagAntecedentesFamiliares.Size = new System.Drawing.Size(1118, 496);
+            this.pagAntecedentesFamiliares.TabIndex = 1;
+            this.pagAntecedentesFamiliares.Text = "Antec. Familiares";
+            this.pagAntecedentesFamiliares.UseVisualStyleBackColor = true;
             // 
-            // pagEvolucion
+            // pnlAntecFamiliares
             // 
-            this.pagEvolucion.Location = new System.Drawing.Point(124, 4);
-            this.pagEvolucion.Name = "pagEvolucion";
-            this.pagEvolucion.Padding = new System.Windows.Forms.Padding(3);
-            this.pagEvolucion.Size = new System.Drawing.Size(1132, 540);
-            this.pagEvolucion.TabIndex = 3;
-            this.pagEvolucion.Text = "Evolución";
-            this.pagEvolucion.UseVisualStyleBackColor = true;
+            this.pnlAntecFamiliares.AutoScroll = true;
+            this.pnlAntecFamiliares.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlAntecFamiliares.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAntecFamiliares.Location = new System.Drawing.Point(3, 3);
+            this.pnlAntecFamiliares.Name = "pnlAntecFamiliares";
+            this.pnlAntecFamiliares.Size = new System.Drawing.Size(1112, 490);
+            this.pnlAntecFamiliares.TabIndex = 1;
+            // 
+            // pagAntecedentesPersonales
+            // 
+            this.pagAntecedentesPersonales.Controls.Add(this.pnlAntecPersonales);
+            this.pagAntecedentesPersonales.Location = new System.Drawing.Point(124, 4);
+            this.pagAntecedentesPersonales.Name = "pagAntecedentesPersonales";
+            this.pagAntecedentesPersonales.Size = new System.Drawing.Size(1118, 496);
+            this.pagAntecedentesPersonales.TabIndex = 4;
+            this.pagAntecedentesPersonales.Text = "Antec. Personales";
+            this.pagAntecedentesPersonales.UseVisualStyleBackColor = true;
+            // 
+            // pnlAntecPersonales
+            // 
+            this.pnlAntecPersonales.AutoScroll = true;
+            this.pnlAntecPersonales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlAntecPersonales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAntecPersonales.Location = new System.Drawing.Point(0, 0);
+            this.pnlAntecPersonales.Name = "pnlAntecPersonales";
+            this.pnlAntecPersonales.Size = new System.Drawing.Size(1118, 496);
+            this.pnlAntecPersonales.TabIndex = 2;
+            // 
+            // pagAntecedenteMaterno
+            // 
+            this.pagAntecedenteMaterno.Controls.Add(this.pnlAntecMaterno);
+            this.pagAntecedenteMaterno.Location = new System.Drawing.Point(124, 4);
+            this.pagAntecedenteMaterno.Name = "pagAntecedenteMaterno";
+            this.pagAntecedenteMaterno.Size = new System.Drawing.Size(1118, 496);
+            this.pagAntecedenteMaterno.TabIndex = 7;
+            this.pagAntecedenteMaterno.Text = "Antec. Materno";
+            this.pagAntecedenteMaterno.UseVisualStyleBackColor = true;
+            // 
+            // pnlAntecMaterno
+            // 
+            this.pnlAntecMaterno.AutoScroll = true;
+            this.pnlAntecMaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlAntecMaterno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAntecMaterno.Location = new System.Drawing.Point(0, 0);
+            this.pnlAntecMaterno.Name = "pnlAntecMaterno";
+            this.pnlAntecMaterno.Size = new System.Drawing.Size(1118, 496);
+            this.pnlAntecMaterno.TabIndex = 3;
+            // 
+            // pagRecienNacido
+            // 
+            this.pagRecienNacido.Controls.Add(this.pnlAntecRecienNacido);
+            this.pagRecienNacido.Location = new System.Drawing.Point(124, 4);
+            this.pagRecienNacido.Name = "pagRecienNacido";
+            this.pagRecienNacido.Padding = new System.Windows.Forms.Padding(3);
+            this.pagRecienNacido.Size = new System.Drawing.Size(1118, 496);
+            this.pagRecienNacido.TabIndex = 5;
+            this.pagRecienNacido.Text = "Ant. Recien Nacido";
+            this.pagRecienNacido.UseVisualStyleBackColor = true;
+            // 
+            // pnlAntecRecienNacido
+            // 
+            this.pnlAntecRecienNacido.AutoScroll = true;
+            this.pnlAntecRecienNacido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlAntecRecienNacido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAntecRecienNacido.Location = new System.Drawing.Point(3, 3);
+            this.pnlAntecRecienNacido.Name = "pnlAntecRecienNacido";
+            this.pnlAntecRecienNacido.Size = new System.Drawing.Size(1112, 490);
+            this.pnlAntecRecienNacido.TabIndex = 4;
+            // 
+            // pagEventoNacido
+            // 
+            this.pagEventoNacido.Controls.Add(this.pnlEventoNacido);
+            this.pagEventoNacido.Location = new System.Drawing.Point(124, 4);
+            this.pagEventoNacido.Name = "pagEventoNacido";
+            this.pagEventoNacido.Padding = new System.Windows.Forms.Padding(3);
+            this.pagEventoNacido.Size = new System.Drawing.Size(1118, 496);
+            this.pagEventoNacido.TabIndex = 6;
+            this.pagEventoNacido.Text = "E. Recien Nacido";
+            this.pagEventoNacido.UseVisualStyleBackColor = true;
+            // 
+            // pnlEventoNacido
+            // 
+            this.pnlEventoNacido.AutoScroll = true;
+            this.pnlEventoNacido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEventoNacido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlEventoNacido.Location = new System.Drawing.Point(3, 3);
+            this.pnlEventoNacido.Name = "pnlEventoNacido";
+            this.pnlEventoNacido.Size = new System.Drawing.Size(1112, 490);
+            this.pnlEventoNacido.TabIndex = 4;
+            // 
+            // pagPronostico
+            // 
+            this.pagPronostico.Controls.Add(this.pnlPronostico);
+            this.pagPronostico.Location = new System.Drawing.Point(124, 4);
+            this.pagPronostico.Name = "pagPronostico";
+            this.pagPronostico.Padding = new System.Windows.Forms.Padding(3);
+            this.pagPronostico.Size = new System.Drawing.Size(1118, 496);
+            this.pagPronostico.TabIndex = 3;
+            this.pagPronostico.Text = "Pronostico";
+            this.pagPronostico.UseVisualStyleBackColor = true;
+            // 
+            // pnlPronostico
+            // 
+            this.pnlPronostico.AutoScroll = true;
+            this.pnlPronostico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlPronostico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPronostico.Location = new System.Drawing.Point(3, 3);
+            this.pnlPronostico.Name = "pnlPronostico";
+            this.pnlPronostico.Size = new System.Drawing.Size(1112, 490);
+            this.pnlPronostico.TabIndex = 4;
             // 
             // HistoriaClinicaUI
             // 
@@ -534,11 +707,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1269, 650);
+            this.Controls.Add(this.tabHistoriaClinica);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlInformacion);
-            this.Controls.Add(this.tabControlGalactus1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1269, 650);
             this.MinimumSize = new System.Drawing.Size(1269, 650);
@@ -547,22 +720,25 @@
             this.Text = "HistoriaClinicaUI";
             this.pnlInformacion.ResumeLayout(false);
             this.pnlInformacion.PerformLayout();
+            this.tabHistoriaClinica.ResumeLayout(false);
+            this.pagIngreso.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControlGalactus1.ResumeLayout(false);
-            this.pagIngreso.ResumeLayout(false);
+            this.pagDatosIngreso.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.pagAntecedentesFamiliares.ResumeLayout(false);
+            this.pagAntecedentesPersonales.ResumeLayout(false);
+            this.pagAntecedenteMaterno.ResumeLayout(false);
+            this.pagRecienNacido.ResumeLayout(false);
+            this.pagEventoNacido.ResumeLayout(false);
+            this.pagPronostico.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Util.Controles.TabControlGalactus tabControlGalactus1;
-        private System.Windows.Forms.TabPage pagOrdenMedica;
-        private System.Windows.Forms.TabPage pagIngreso;
-        private System.Windows.Forms.TabPage pagEvolucion;
         private System.Windows.Forms.Panel pnlInformacion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCodigoAdministradora;
@@ -579,12 +755,15 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Panel panelIngreso;
         private System.Windows.Forms.TextBox txtEstancia;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSexo;
+        private System.Windows.Forms.TabControl tabHistoriaClinica;
+        private System.Windows.Forms.TabPage pagIngreso;
+        private Util.Controles.TabControlGalactus tabControlGalactus1;
+        private System.Windows.Forms.TabPage pagDatosIngreso;
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.Label Label38;
         internal System.Windows.Forms.TextBox txtPeso;
@@ -601,5 +780,20 @@
         internal System.Windows.Forms.Label Label41;
         internal System.Windows.Forms.TextBox txtEstadoAtencion;
         internal System.Windows.Forms.Label Label42;
+        private System.Windows.Forms.Panel panelIngreso;
+        private System.Windows.Forms.TabPage pagAntecedentesFamiliares;
+        private System.Windows.Forms.TabPage pagPronostico;
+        private System.Windows.Forms.TabPage pagOrdenMedica;
+        private System.Windows.Forms.TabPage pagEvolucion;
+        private System.Windows.Forms.TabPage pagAntecedentesPersonales;
+        private System.Windows.Forms.TabPage pagAntecedenteMaterno;
+        private System.Windows.Forms.TabPage pagRecienNacido;
+        private System.Windows.Forms.TabPage pagEventoNacido;
+        private System.Windows.Forms.Panel pnlAntecFamiliares;
+        private System.Windows.Forms.Panel pnlAntecPersonales;
+        private System.Windows.Forms.Panel pnlAntecMaterno;
+        private System.Windows.Forms.Panel pnlAntecRecienNacido;
+        private System.Windows.Forms.Panel pnlEventoNacido;
+        private System.Windows.Forms.Panel pnlPronostico;
     }
 }
