@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfiguracionProcedimientoMedicoUI));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -51,8 +51,10 @@
             this.dgBuscarProcedimiento = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgQuitarProcedimiento = new System.Windows.Forms.DataGridViewImageColumn();
             this.label2 = new System.Windows.Forms.Label();
+            this.tsbBuscarCliente = new System.Windows.Forms.Button();
             this.txtBCodigo = new System.Windows.Forms.TextBox();
             this.txtBNombreProcedimiento = new System.Windows.Forms.TextBox();
+            this.tsbBuscarProcedimiento = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBNombreCliente = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -79,14 +81,12 @@
             this.pnlCerrarForm = new System.Windows.Forms.Panel();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tstEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.tbtImprimir = new System.Windows.Forms.ToolStripButton();
-            this.tsbBuscarCliente = new System.Windows.Forms.Button();
-            this.tsbBuscarProcedimiento = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1.SuspendLayout();
@@ -184,7 +184,6 @@
             this.dgcodigoMedicamento.HeaderText = "Codigo";
             this.dgcodigoMedicamento.Name = "dgcodigoMedicamento";
             this.dgcodigoMedicamento.Visible = false;
-            this.dgcodigoMedicamento.Width = 46;
             // 
             // dgDescripcionMedicamento
             // 
@@ -264,7 +263,6 @@
             this.dgCodigoProcedimiento.HeaderText = "Codigo";
             this.dgCodigoProcedimiento.Name = "dgCodigoProcedimiento";
             this.dgCodigoProcedimiento.Visible = false;
-            this.dgCodigoProcedimiento.Width = 46;
             // 
             // dgDescripcionProcedimiento
             // 
@@ -306,6 +304,14 @@
             this.label2.TabIndex = 60015;
             this.label2.Text = "Código:";
             // 
+            // tsbBuscarCliente
+            // 
+            this.tsbBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarCliente.Image")));
+            this.tsbBuscarCliente.Location = new System.Drawing.Point(893, 41);
+            this.tsbBuscarCliente.Name = "tsbBuscarCliente";
+            this.tsbBuscarCliente.Size = new System.Drawing.Size(27, 23);
+            this.tsbBuscarCliente.TabIndex = 60017;
+            // 
             // txtBCodigo
             // 
             this.txtBCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -321,6 +327,14 @@
             this.txtBNombreProcedimiento.Name = "txtBNombreProcedimiento";
             this.txtBNombreProcedimiento.Size = new System.Drawing.Size(779, 21);
             this.txtBNombreProcedimiento.TabIndex = 45;
+            // 
+            // tsbBuscarProcedimiento
+            // 
+            this.tsbBuscarProcedimiento.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarProcedimiento.Image")));
+            this.tsbBuscarProcedimiento.Location = new System.Drawing.Point(893, 14);
+            this.tsbBuscarProcedimiento.Name = "tsbBuscarProcedimiento";
+            this.tsbBuscarProcedimiento.Size = new System.Drawing.Size(27, 23);
+            this.tsbBuscarProcedimiento.TabIndex = 60016;
             // 
             // label1
             // 
@@ -475,7 +489,6 @@
             this.dgCodigoArea.HeaderText = "CodigoArea";
             this.dgCodigoArea.Name = "dgCodigoArea";
             this.dgCodigoArea.Visible = false;
-            this.dgCodigoArea.Width = 68;
             // 
             // dgDescripcionArea
             // 
@@ -555,7 +568,7 @@
             this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
-            this.tstEditar,
+            this.tsbEditar,
             this.tsbCancelar,
             this.tsbGuardar,
             this.tsbBuscar,
@@ -576,14 +589,14 @@
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // tstEditar
+            // tsbEditar
             // 
-            this.tstEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.tstEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstEditar.Name = "tstEditar";
-            this.tstEditar.Size = new System.Drawing.Size(57, 22);
-            this.tstEditar.Text = "Editar";
-            this.tstEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tsbEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tsbEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEditar.Name = "tsbEditar";
+            this.tsbEditar.Size = new System.Drawing.Size(57, 22);
+            this.tsbEditar.Text = "Editar";
+            this.tsbEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // tsbCancelar
             // 
@@ -629,22 +642,6 @@
             this.tbtImprimir.Size = new System.Drawing.Size(73, 22);
             this.tbtImprimir.Text = "Imprimir";
             this.tbtImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            // 
-            // tsbBuscarCliente
-            // 
-            this.tsbBuscarCliente.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarCliente.Image")));
-            this.tsbBuscarCliente.Location = new System.Drawing.Point(893, 41);
-            this.tsbBuscarCliente.Name = "tsbBuscarCliente";
-            this.tsbBuscarCliente.Size = new System.Drawing.Size(27, 23);
-            this.tsbBuscarCliente.TabIndex = 60017;
-            // 
-            // tsbBuscarProcedimiento
-            // 
-            this.tsbBuscarProcedimiento.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarProcedimiento.Image")));
-            this.tsbBuscarProcedimiento.Location = new System.Drawing.Point(893, 14);
-            this.tsbBuscarProcedimiento.Name = "tsbBuscarProcedimiento";
-            this.tsbBuscarProcedimiento.Size = new System.Drawing.Size(27, 23);
-            this.tsbBuscarProcedimiento.TabIndex = 60016;
             // 
             // dataGridViewImageColumn1
             // 
@@ -752,7 +749,7 @@
         private System.Windows.Forms.DataGridViewImageColumn dgQuitarArea;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
-        private System.Windows.Forms.ToolStripButton tstEditar;
+        private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbCancelar;
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbBuscar;

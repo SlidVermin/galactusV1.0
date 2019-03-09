@@ -47,56 +47,63 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
             this.pagIngreso = new System.Windows.Forms.TabPage();
+            this.pagEstancia = new System.Windows.Forms.TabPage();
             this.pagOrdenMedica = new System.Windows.Forms.TabPage();
+            this.pagLaboratorios = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.pagEvolucion = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tabControlGalactus1 = new Galactus.Util.Controles.TabControlGalactus();
             this.pagDatosIngreso = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Label38 = new System.Windows.Forms.Label();
-            this.txtPeso = new System.Windows.Forms.TextBox();
-            this.Label37 = new System.Windows.Forms.Label();
-            this.txtCama = new System.Windows.Forms.TextBox();
-            this.Label35 = new System.Windows.Forms.Label();
-            this.txtCausaExterna = new System.Windows.Forms.TextBox();
-            this.Label36 = new System.Windows.Forms.Label();
-            this.txtInstitucion = new System.Windows.Forms.TextBox();
-            this.Label39 = new System.Windows.Forms.Label();
-            this.txtViaIngreso = new System.Windows.Forms.TextBox();
-            this.Label40 = new System.Windows.Forms.Label();
-            this.txtAutorizacion = new System.Windows.Forms.TextBox();
-            this.Label41 = new System.Windows.Forms.Label();
-            this.txtEstadoAtencion = new System.Windows.Forms.TextBox();
-            this.Label42 = new System.Windows.Forms.Label();
-            this.panelIngreso = new System.Windows.Forms.Panel();
+            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tsbEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
+            this.tbtImprimir = new System.Windows.Forms.ToolStripButton();
             this.pagAntecedentesFamiliares = new System.Windows.Forms.TabPage();
             this.pnlAntecFamiliares = new System.Windows.Forms.Panel();
-            this.pagAntecedentesPersonales = new System.Windows.Forms.TabPage();
-            this.pnlAntecPersonales = new System.Windows.Forms.Panel();
-            this.pagAntecedenteMaterno = new System.Windows.Forms.TabPage();
-            this.pnlAntecMaterno = new System.Windows.Forms.Panel();
-            this.pagRecienNacido = new System.Windows.Forms.TabPage();
-            this.pnlAntecRecienNacido = new System.Windows.Forms.Panel();
-            this.pagEventoNacido = new System.Windows.Forms.TabPage();
-            this.pnlEventoNacido = new System.Windows.Forms.Panel();
-            this.pagPronostico = new System.Windows.Forms.TabPage();
-            this.pnlPronostico = new System.Windows.Forms.Panel();
+            this.pagExamenFisico = new System.Windows.Forms.TabPage();
+            this.pagAnalisis = new System.Windows.Forms.TabPage();
+            this.tabControlGalactus2 = new Galactus.Util.Controles.TabControlGalactus();
+            this.pagIndicaciones = new System.Windows.Forms.TabPage();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pagProcedimientos = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pagMedicamentos = new System.Windows.Forms.TabPage();
+            this.pagGlucometrias = new System.Windows.Forms.TabPage();
+            this.pagInfusiones = new System.Windows.Forms.TabPage();
             this.pnlInformacion.SuspendLayout();
             this.tabHistoriaClinica.SuspendLayout();
             this.pagIngreso.SuspendLayout();
+            this.pagOrdenMedica.SuspendLayout();
+            this.pagLaboratorios.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControlGalactus1.SuspendLayout();
             this.pagDatosIngreso.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.tstMenuPatron.SuspendLayout();
             this.pagAntecedentesFamiliares.SuspendLayout();
-            this.pagAntecedentesPersonales.SuspendLayout();
-            this.pagAntecedenteMaterno.SuspendLayout();
-            this.pagRecienNacido.SuspendLayout();
-            this.pagEventoNacido.SuspendLayout();
-            this.pagPronostico.SuspendLayout();
+            this.tabControlGalactus2.SuspendLayout();
+            this.pagIndicaciones.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.pagProcedimientos.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlInformacion
@@ -295,23 +302,13 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Historia Clinica";
             // 
-            // btnSalir
-            // 
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(1236, 3);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(26, 24);
-            this.btnSalir.TabIndex = 45;
-            this.btnSalir.Text = "X";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // tabHistoriaClinica
             // 
+            this.tabHistoriaClinica.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabHistoriaClinica.Controls.Add(this.pagIngreso);
+            this.tabHistoriaClinica.Controls.Add(this.pagEstancia);
             this.tabHistoriaClinica.Controls.Add(this.pagOrdenMedica);
+            this.tabHistoriaClinica.Controls.Add(this.pagLaboratorios);
             this.tabHistoriaClinica.Controls.Add(this.pagEvolucion);
             this.tabHistoriaClinica.Font = new System.Drawing.Font("Arial", 9.75F);
             this.tabHistoriaClinica.Location = new System.Drawing.Point(4, 100);
@@ -323,32 +320,103 @@
             // pagIngreso
             // 
             this.pagIngreso.Controls.Add(this.tabControlGalactus1);
-            this.pagIngreso.Location = new System.Drawing.Point(4, 25);
+            this.pagIngreso.Location = new System.Drawing.Point(4, 28);
             this.pagIngreso.Name = "pagIngreso";
             this.pagIngreso.Padding = new System.Windows.Forms.Padding(3);
-            this.pagIngreso.Size = new System.Drawing.Size(1252, 510);
+            this.pagIngreso.Size = new System.Drawing.Size(1252, 507);
             this.pagIngreso.TabIndex = 0;
             this.pagIngreso.Text = "Ingreso Clinico";
             this.pagIngreso.UseVisualStyleBackColor = true;
             // 
+            // pagEstancia
+            // 
+            this.pagEstancia.Location = new System.Drawing.Point(4, 28);
+            this.pagEstancia.Name = "pagEstancia";
+            this.pagEstancia.Size = new System.Drawing.Size(1252, 507);
+            this.pagEstancia.TabIndex = 3;
+            this.pagEstancia.Text = "Estancia";
+            this.pagEstancia.UseVisualStyleBackColor = true;
+            // 
             // pagOrdenMedica
             // 
-            this.pagOrdenMedica.Location = new System.Drawing.Point(4, 25);
+            this.pagOrdenMedica.Controls.Add(this.tabControlGalactus2);
+            this.pagOrdenMedica.Location = new System.Drawing.Point(4, 28);
             this.pagOrdenMedica.Name = "pagOrdenMedica";
             this.pagOrdenMedica.Padding = new System.Windows.Forms.Padding(3);
-            this.pagOrdenMedica.Size = new System.Drawing.Size(1252, 510);
+            this.pagOrdenMedica.Size = new System.Drawing.Size(1252, 507);
             this.pagOrdenMedica.TabIndex = 1;
             this.pagOrdenMedica.Text = "Orden Medica";
             this.pagOrdenMedica.UseVisualStyleBackColor = true;
             // 
+            // pagLaboratorios
+            // 
+            this.pagLaboratorios.Controls.Add(this.panel3);
+            this.pagLaboratorios.Controls.Add(this.groupBox1);
+            this.pagLaboratorios.Location = new System.Drawing.Point(4, 28);
+            this.pagLaboratorios.Name = "pagLaboratorios";
+            this.pagLaboratorios.Size = new System.Drawing.Size(1252, 507);
+            this.pagLaboratorios.TabIndex = 4;
+            this.pagLaboratorios.Text = "Laboratorios";
+            this.pagLaboratorios.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Location = new System.Drawing.Point(14, 35);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(183, 140);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(30, 24);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(91, 26);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(30, 110);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(91, 26);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "radioButton3";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(30, 69);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(91, 26);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
             // pagEvolucion
             // 
-            this.pagEvolucion.Location = new System.Drawing.Point(4, 25);
+            this.pagEvolucion.Location = new System.Drawing.Point(4, 28);
             this.pagEvolucion.Name = "pagEvolucion";
             this.pagEvolucion.Padding = new System.Windows.Forms.Padding(3);
-            this.pagEvolucion.Size = new System.Drawing.Size(1252, 510);
+            this.pagEvolucion.Size = new System.Drawing.Size(1252, 507);
             this.pagEvolucion.TabIndex = 2;
-            this.pagEvolucion.Text = "Evolución";
+            this.pagEvolucion.Text = "Evoluciones";
             this.pagEvolucion.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
@@ -360,232 +428,134 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(203, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1044, 438);
+            this.panel3.TabIndex = 4;
+            // 
             // tabControlGalactus1
             // 
             this.tabControlGalactus1.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControlGalactus1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControlGalactus1.Controls.Add(this.pagDatosIngreso);
             this.tabControlGalactus1.Controls.Add(this.pagAntecedentesFamiliares);
-            this.tabControlGalactus1.Controls.Add(this.pagAntecedentesPersonales);
-            this.tabControlGalactus1.Controls.Add(this.pagAntecedenteMaterno);
-            this.tabControlGalactus1.Controls.Add(this.pagRecienNacido);
-            this.tabControlGalactus1.Controls.Add(this.pagEventoNacido);
-            this.tabControlGalactus1.Controls.Add(this.pagPronostico);
+            this.tabControlGalactus1.Controls.Add(this.pagExamenFisico);
+            this.tabControlGalactus1.Controls.Add(this.pagAnalisis);
             this.tabControlGalactus1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlGalactus1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControlGalactus1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlGalactus1.ItemSize = new System.Drawing.Size(30, 120);
             this.tabControlGalactus1.Location = new System.Drawing.Point(3, 3);
             this.tabControlGalactus1.Multiline = true;
             this.tabControlGalactus1.Name = "tabControlGalactus1";
             this.tabControlGalactus1.SelectedIndex = 0;
-            this.tabControlGalactus1.Size = new System.Drawing.Size(1246, 504);
+            this.tabControlGalactus1.Size = new System.Drawing.Size(1246, 501);
             this.tabControlGalactus1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlGalactus1.TabIndex = 1;
             this.tabControlGalactus1.SelectedIndexChanged += new System.EventHandler(this.tabControlGalactus1_SelectedIndexChanged_1);
             // 
             // pagDatosIngreso
             // 
-            this.pagDatosIngreso.Controls.Add(this.panel1);
-            this.pagDatosIngreso.Controls.Add(this.panelIngreso);
-            this.pagDatosIngreso.Location = new System.Drawing.Point(124, 4);
+            this.pagDatosIngreso.Controls.Add(this.tstMenuPatron);
+            this.pagDatosIngreso.Location = new System.Drawing.Point(133, 4);
+            this.pagDatosIngreso.Margin = new System.Windows.Forms.Padding(0);
             this.pagDatosIngreso.Name = "pagDatosIngreso";
-            this.pagDatosIngreso.Padding = new System.Windows.Forms.Padding(3);
-            this.pagDatosIngreso.Size = new System.Drawing.Size(1118, 496);
+            this.pagDatosIngreso.Size = new System.Drawing.Size(1109, 493);
             this.pagDatosIngreso.TabIndex = 2;
-            this.pagDatosIngreso.Text = "Datos del Ingreso";
+            this.pagDatosIngreso.Text = "Valoración";
             this.pagDatosIngreso.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // tstMenuPatron
             // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.Label38);
-            this.panel1.Controls.Add(this.txtPeso);
-            this.panel1.Controls.Add(this.Label37);
-            this.panel1.Controls.Add(this.txtCama);
-            this.panel1.Controls.Add(this.Label35);
-            this.panel1.Controls.Add(this.txtCausaExterna);
-            this.panel1.Controls.Add(this.Label36);
-            this.panel1.Controls.Add(this.txtInstitucion);
-            this.panel1.Controls.Add(this.Label39);
-            this.panel1.Controls.Add(this.txtViaIngreso);
-            this.panel1.Controls.Add(this.Label40);
-            this.panel1.Controls.Add(this.txtAutorizacion);
-            this.panel1.Controls.Add(this.Label41);
-            this.panel1.Controls.Add(this.txtEstadoAtencion);
-            this.panel1.Controls.Add(this.Label42);
-            this.panel1.Location = new System.Drawing.Point(3, 6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1112, 60);
-            this.panel1.TabIndex = 1;
+            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tsbEditar,
+            this.tsbCancelar,
+            this.tsbGuardar,
+            this.tsbBuscar,
+            this.tsbAnular,
+            this.tbtImprimir});
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 468);
+            this.tstMenuPatron.Name = "tstMenuPatron";
+            this.tstMenuPatron.Size = new System.Drawing.Size(1109, 25);
+            this.tstMenuPatron.TabIndex = 60020;
+            this.tstMenuPatron.Text = "toolStrip1";
             // 
-            // Label38
+            // tsbNuevo
             // 
-            this.Label38.AutoSize = true;
-            this.Label38.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Label38.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label38.Location = new System.Drawing.Point(1073, 35);
-            this.Label38.Name = "Label38";
-            this.Label38.Size = new System.Drawing.Size(28, 16);
-            this.Label38.TabIndex = 10085;
-            this.Label38.Text = "Kg.";
+            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // txtPeso
+            // tsbEditar
             // 
-            this.txtPeso.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtPeso.Location = new System.Drawing.Point(998, 32);
-            this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(72, 21);
-            this.txtPeso.TabIndex = 10084;
-            this.txtPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tsbEditar.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.tsbEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEditar.Name = "tsbEditar";
+            this.tsbEditar.Size = new System.Drawing.Size(57, 22);
+            this.tsbEditar.Text = "Editar";
+            this.tsbEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // Label37
+            // tsbCancelar
             // 
-            this.Label37.AutoSize = true;
-            this.Label37.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Label37.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label37.Location = new System.Drawing.Point(952, 35);
-            this.Label37.Name = "Label37";
-            this.Label37.Size = new System.Drawing.Size(42, 16);
-            this.Label37.TabIndex = 10083;
-            this.Label37.Text = "Peso:";
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // txtCama
+            // tsbGuardar
             // 
-            this.txtCama.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtCama.Location = new System.Drawing.Point(809, 33);
-            this.txtCama.Name = "txtCama";
-            this.txtCama.Size = new System.Drawing.Size(132, 21);
-            this.txtCama.TabIndex = 10082;
-            this.txtCama.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // Label35
+            // tsbBuscar
             // 
-            this.Label35.AutoSize = true;
-            this.Label35.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Label35.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label35.Location = new System.Drawing.Point(758, 35);
-            this.Label35.Name = "Label35";
-            this.Label35.Size = new System.Drawing.Size(46, 16);
-            this.Label35.TabIndex = 10081;
-            this.Label35.Text = "Cama:";
+            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscar.Text = "Buscar";
+            this.tsbBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // txtCausaExterna
+            // tsbAnular
             // 
-            this.txtCausaExterna.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtCausaExterna.Location = new System.Drawing.Point(460, 33);
-            this.txtCausaExterna.Name = "txtCausaExterna";
-            this.txtCausaExterna.Size = new System.Drawing.Size(270, 21);
-            this.txtCausaExterna.TabIndex = 10080;
-            this.txtCausaExterna.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnular.Name = "tsbAnular";
+            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnular.Text = "Anular";
+            this.tsbAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // Label36
+            // tbtImprimir
             // 
-            this.Label36.AutoSize = true;
-            this.Label36.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Label36.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label36.Location = new System.Drawing.Point(359, 36);
-            this.Label36.Name = "Label36";
-            this.Label36.Size = new System.Drawing.Size(98, 16);
-            this.Label36.TabIndex = 10079;
-            this.Label36.Text = "Causa Externa:";
-            // 
-            // txtInstitucion
-            // 
-            this.txtInstitucion.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtInstitucion.Location = new System.Drawing.Point(585, 8);
-            this.txtInstitucion.Name = "txtInstitucion";
-            this.txtInstitucion.Size = new System.Drawing.Size(516, 21);
-            this.txtInstitucion.TabIndex = 10078;
-            // 
-            // Label39
-            // 
-            this.Label39.AutoSize = true;
-            this.Label39.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Label39.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label39.Location = new System.Drawing.Point(510, 11);
-            this.Label39.Name = "Label39";
-            this.Label39.Size = new System.Drawing.Size(71, 16);
-            this.Label39.TabIndex = 10077;
-            this.Label39.Text = "Institución:";
-            // 
-            // txtViaIngreso
-            // 
-            this.txtViaIngreso.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtViaIngreso.Location = new System.Drawing.Point(104, 33);
-            this.txtViaIngreso.Name = "txtViaIngreso";
-            this.txtViaIngreso.Size = new System.Drawing.Size(247, 21);
-            this.txtViaIngreso.TabIndex = 10076;
-            this.txtViaIngreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Label40
-            // 
-            this.Label40.AutoSize = true;
-            this.Label40.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Label40.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label40.Location = new System.Drawing.Point(3, 36);
-            this.Label40.Name = "Label40";
-            this.Label40.Size = new System.Drawing.Size(95, 16);
-            this.Label40.TabIndex = 10075;
-            this.Label40.Text = "Via de Ingreso:";
-            // 
-            // txtAutorizacion
-            // 
-            this.txtAutorizacion.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtAutorizacion.Location = new System.Drawing.Point(348, 8);
-            this.txtAutorizacion.Name = "txtAutorizacion";
-            this.txtAutorizacion.Size = new System.Drawing.Size(150, 21);
-            this.txtAutorizacion.TabIndex = 10074;
-            this.txtAutorizacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Label41
-            // 
-            this.Label41.AutoSize = true;
-            this.Label41.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Label41.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label41.Location = new System.Drawing.Point(225, 10);
-            this.Label41.Name = "Label41";
-            this.Label41.Size = new System.Drawing.Size(119, 16);
-            this.Label41.TabIndex = 10073;
-            this.Label41.Text = "N° de Autorización:";
-            // 
-            // txtEstadoAtencion
-            // 
-            this.txtEstadoAtencion.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtEstadoAtencion.Location = new System.Drawing.Point(104, 8);
-            this.txtEstadoAtencion.Name = "txtEstadoAtencion";
-            this.txtEstadoAtencion.Size = new System.Drawing.Size(109, 21);
-            this.txtEstadoAtencion.TabIndex = 10072;
-            this.txtEstadoAtencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // Label42
-            // 
-            this.Label42.AutoSize = true;
-            this.Label42.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Label42.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label42.Location = new System.Drawing.Point(4, 11);
-            this.Label42.Name = "Label42";
-            this.Label42.Size = new System.Drawing.Size(63, 16);
-            this.Label42.TabIndex = 10071;
-            this.Label42.Text = "Atención:";
-            // 
-            // panelIngreso
-            // 
-            this.panelIngreso.AutoScroll = true;
-            this.panelIngreso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelIngreso.Location = new System.Drawing.Point(3, 69);
-            this.panelIngreso.Name = "panelIngreso";
-            this.panelIngreso.Size = new System.Drawing.Size(1112, 424);
-            this.panelIngreso.TabIndex = 0;
+            this.tbtImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tbtImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtImprimir.Name = "tbtImprimir";
+            this.tbtImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tbtImprimir.Text = "Imprimir";
+            this.tbtImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // pagAntecedentesFamiliares
             // 
             this.pagAntecedentesFamiliares.Controls.Add(this.pnlAntecFamiliares);
-            this.pagAntecedentesFamiliares.Location = new System.Drawing.Point(124, 4);
+            this.pagAntecedentesFamiliares.Location = new System.Drawing.Point(133, 4);
             this.pagAntecedentesFamiliares.Name = "pagAntecedentesFamiliares";
             this.pagAntecedentesFamiliares.Padding = new System.Windows.Forms.Padding(3);
-            this.pagAntecedentesFamiliares.Size = new System.Drawing.Size(1118, 496);
+            this.pagAntecedentesFamiliares.Size = new System.Drawing.Size(1109, 493);
             this.pagAntecedentesFamiliares.TabIndex = 1;
-            this.pagAntecedentesFamiliares.Text = "Antec. Familiares";
+            this.pagAntecedentesFamiliares.Text = "Antecedentes";
             this.pagAntecedentesFamiliares.UseVisualStyleBackColor = true;
             // 
             // pnlAntecFamiliares
@@ -595,120 +565,204 @@
             this.pnlAntecFamiliares.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAntecFamiliares.Location = new System.Drawing.Point(3, 3);
             this.pnlAntecFamiliares.Name = "pnlAntecFamiliares";
-            this.pnlAntecFamiliares.Size = new System.Drawing.Size(1112, 490);
+            this.pnlAntecFamiliares.Size = new System.Drawing.Size(1103, 487);
             this.pnlAntecFamiliares.TabIndex = 1;
             // 
-            // pagAntecedentesPersonales
+            // pagExamenFisico
             // 
-            this.pagAntecedentesPersonales.Controls.Add(this.pnlAntecPersonales);
-            this.pagAntecedentesPersonales.Location = new System.Drawing.Point(124, 4);
-            this.pagAntecedentesPersonales.Name = "pagAntecedentesPersonales";
-            this.pagAntecedentesPersonales.Size = new System.Drawing.Size(1118, 496);
-            this.pagAntecedentesPersonales.TabIndex = 4;
-            this.pagAntecedentesPersonales.Text = "Antec. Personales";
-            this.pagAntecedentesPersonales.UseVisualStyleBackColor = true;
+            this.pagExamenFisico.Location = new System.Drawing.Point(133, 4);
+            this.pagExamenFisico.Name = "pagExamenFisico";
+            this.pagExamenFisico.Size = new System.Drawing.Size(1109, 493);
+            this.pagExamenFisico.TabIndex = 3;
+            this.pagExamenFisico.Text = "Examen físico";
+            this.pagExamenFisico.UseVisualStyleBackColor = true;
             // 
-            // pnlAntecPersonales
+            // pagAnalisis
             // 
-            this.pnlAntecPersonales.AutoScroll = true;
-            this.pnlAntecPersonales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlAntecPersonales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlAntecPersonales.Location = new System.Drawing.Point(0, 0);
-            this.pnlAntecPersonales.Name = "pnlAntecPersonales";
-            this.pnlAntecPersonales.Size = new System.Drawing.Size(1118, 496);
-            this.pnlAntecPersonales.TabIndex = 2;
+            this.pagAnalisis.Location = new System.Drawing.Point(133, 4);
+            this.pagAnalisis.Name = "pagAnalisis";
+            this.pagAnalisis.Size = new System.Drawing.Size(1109, 493);
+            this.pagAnalisis.TabIndex = 4;
+            this.pagAnalisis.Text = "Analisis";
+            this.pagAnalisis.UseVisualStyleBackColor = true;
             // 
-            // pagAntecedenteMaterno
+            // tabControlGalactus2
             // 
-            this.pagAntecedenteMaterno.Controls.Add(this.pnlAntecMaterno);
-            this.pagAntecedenteMaterno.Location = new System.Drawing.Point(124, 4);
-            this.pagAntecedenteMaterno.Name = "pagAntecedenteMaterno";
-            this.pagAntecedenteMaterno.Size = new System.Drawing.Size(1118, 496);
-            this.pagAntecedenteMaterno.TabIndex = 7;
-            this.pagAntecedenteMaterno.Text = "Antec. Materno";
-            this.pagAntecedenteMaterno.UseVisualStyleBackColor = true;
+            this.tabControlGalactus2.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControlGalactus2.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tabControlGalactus2.Controls.Add(this.pagIndicaciones);
+            this.tabControlGalactus2.Controls.Add(this.pagProcedimientos);
+            this.tabControlGalactus2.Controls.Add(this.pagMedicamentos);
+            this.tabControlGalactus2.Controls.Add(this.pagGlucometrias);
+            this.tabControlGalactus2.Controls.Add(this.pagInfusiones);
+            this.tabControlGalactus2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlGalactus2.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.tabControlGalactus2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlGalactus2.ItemSize = new System.Drawing.Size(30, 120);
+            this.tabControlGalactus2.Location = new System.Drawing.Point(3, 3);
+            this.tabControlGalactus2.Multiline = true;
+            this.tabControlGalactus2.Name = "tabControlGalactus2";
+            this.tabControlGalactus2.SelectedIndex = 0;
+            this.tabControlGalactus2.Size = new System.Drawing.Size(1246, 501);
+            this.tabControlGalactus2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControlGalactus2.TabIndex = 2;
             // 
-            // pnlAntecMaterno
+            // pagIndicaciones
             // 
-            this.pnlAntecMaterno.AutoScroll = true;
-            this.pnlAntecMaterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlAntecMaterno.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlAntecMaterno.Location = new System.Drawing.Point(0, 0);
-            this.pnlAntecMaterno.Name = "pnlAntecMaterno";
-            this.pnlAntecMaterno.Size = new System.Drawing.Size(1118, 496);
-            this.pnlAntecMaterno.TabIndex = 3;
+            this.pagIndicaciones.Controls.Add(this.toolStrip1);
+            this.pagIndicaciones.Controls.Add(this.panel1);
+            this.pagIndicaciones.Location = new System.Drawing.Point(166, 4);
+            this.pagIndicaciones.Margin = new System.Windows.Forms.Padding(0);
+            this.pagIndicaciones.Name = "pagIndicaciones";
+            this.pagIndicaciones.Size = new System.Drawing.Size(1076, 493);
+            this.pagIndicaciones.TabIndex = 2;
+            this.pagIndicaciones.Text = "Indicaciones";
+            this.pagIndicaciones.UseVisualStyleBackColor = true;
             // 
-            // pagRecienNacido
+            // toolStrip1
             // 
-            this.pagRecienNacido.Controls.Add(this.pnlAntecRecienNacido);
-            this.pagRecienNacido.Location = new System.Drawing.Point(124, 4);
-            this.pagRecienNacido.Name = "pagRecienNacido";
-            this.pagRecienNacido.Padding = new System.Windows.Forms.Padding(3);
-            this.pagRecienNacido.Size = new System.Drawing.Size(1118, 496);
-            this.pagRecienNacido.TabIndex = 5;
-            this.pagRecienNacido.Text = "Ant. Recien Nacido";
-            this.pagRecienNacido.UseVisualStyleBackColor = true;
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripButton7});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 468);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1076, 25);
+            this.toolStrip1.TabIndex = 60020;
+            this.toolStrip1.Text = "toolStrip1";
             // 
-            // pnlAntecRecienNacido
+            // toolStripButton1
             // 
-            this.pnlAntecRecienNacido.AutoScroll = true;
-            this.pnlAntecRecienNacido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlAntecRecienNacido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlAntecRecienNacido.Location = new System.Drawing.Point(3, 3);
-            this.pnlAntecRecienNacido.Name = "pnlAntecRecienNacido";
-            this.pnlAntecRecienNacido.Size = new System.Drawing.Size(1112, 490);
-            this.pnlAntecRecienNacido.TabIndex = 4;
+            this.toolStripButton1.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton1.Text = "Nuevo";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // pagEventoNacido
+            // toolStripButton2
             // 
-            this.pagEventoNacido.Controls.Add(this.pnlEventoNacido);
-            this.pagEventoNacido.Location = new System.Drawing.Point(124, 4);
-            this.pagEventoNacido.Name = "pagEventoNacido";
-            this.pagEventoNacido.Padding = new System.Windows.Forms.Padding(3);
-            this.pagEventoNacido.Size = new System.Drawing.Size(1118, 496);
-            this.pagEventoNacido.TabIndex = 6;
-            this.pagEventoNacido.Text = "E. Recien Nacido";
-            this.pagEventoNacido.UseVisualStyleBackColor = true;
+            this.toolStripButton2.Image = global::Galactus.Properties.Resources.bt_editar;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButton2.Text = "Editar";
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // pnlEventoNacido
+            // toolStripButton3
             // 
-            this.pnlEventoNacido.AutoScroll = true;
-            this.pnlEventoNacido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlEventoNacido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlEventoNacido.Location = new System.Drawing.Point(3, 3);
-            this.pnlEventoNacido.Name = "pnlEventoNacido";
-            this.pnlEventoNacido.Size = new System.Drawing.Size(1112, 490);
-            this.pnlEventoNacido.TabIndex = 4;
+            this.toolStripButton3.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(73, 22);
+            this.toolStripButton3.Text = "Cancelar";
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // pagPronostico
+            // toolStripButton4
             // 
-            this.pagPronostico.Controls.Add(this.pnlPronostico);
-            this.pagPronostico.Location = new System.Drawing.Point(124, 4);
-            this.pagPronostico.Name = "pagPronostico";
-            this.pagPronostico.Padding = new System.Windows.Forms.Padding(3);
-            this.pagPronostico.Size = new System.Drawing.Size(1118, 496);
-            this.pagPronostico.TabIndex = 3;
-            this.pagPronostico.Text = "Pronostico";
-            this.pagPronostico.UseVisualStyleBackColor = true;
+            this.toolStripButton4.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(69, 22);
+            this.toolStripButton4.Text = "Guardar";
+            this.toolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
-            // pnlPronostico
+            // toolStripButton5
             // 
-            this.pnlPronostico.AutoScroll = true;
-            this.pnlPronostico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlPronostico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPronostico.Location = new System.Drawing.Point(3, 3);
-            this.pnlPronostico.Name = "pnlPronostico";
-            this.pnlPronostico.Size = new System.Drawing.Size(1112, 490);
-            this.pnlPronostico.TabIndex = 4;
+            this.toolStripButton5.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton5.Text = "Buscar";
+            this.toolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton6.Text = "Anular";
+            this.toolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.Image = global::Galactus.Properties.Resources.print__2_;
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(73, 22);
+            this.toolStripButton7.Text = "Imprimir";
+            this.toolStripButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1112, 462);
+            this.panel1.TabIndex = 0;
+            // 
+            // pagProcedimientos
+            // 
+            this.pagProcedimientos.Controls.Add(this.panel2);
+            this.pagProcedimientos.Location = new System.Drawing.Point(166, 4);
+            this.pagProcedimientos.Name = "pagProcedimientos";
+            this.pagProcedimientos.Padding = new System.Windows.Forms.Padding(3);
+            this.pagProcedimientos.Size = new System.Drawing.Size(1076, 493);
+            this.pagProcedimientos.TabIndex = 1;
+            this.pagProcedimientos.Text = "Procedimientos";
+            this.pagProcedimientos.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1070, 487);
+            this.panel2.TabIndex = 1;
+            // 
+            // pagMedicamentos
+            // 
+            this.pagMedicamentos.Location = new System.Drawing.Point(166, 4);
+            this.pagMedicamentos.Name = "pagMedicamentos";
+            this.pagMedicamentos.Size = new System.Drawing.Size(1076, 493);
+            this.pagMedicamentos.TabIndex = 3;
+            this.pagMedicamentos.Text = "Medicamentos";
+            this.pagMedicamentos.UseVisualStyleBackColor = true;
+            // 
+            // pagGlucometrias
+            // 
+            this.pagGlucometrias.Location = new System.Drawing.Point(166, 4);
+            this.pagGlucometrias.Name = "pagGlucometrias";
+            this.pagGlucometrias.Size = new System.Drawing.Size(1076, 493);
+            this.pagGlucometrias.TabIndex = 4;
+            this.pagGlucometrias.Text = "Glucometrias";
+            this.pagGlucometrias.UseVisualStyleBackColor = true;
+            // 
+            // pagInfusiones
+            // 
+            this.pagInfusiones.Location = new System.Drawing.Point(166, 4);
+            this.pagInfusiones.Name = "pagInfusiones";
+            this.pagInfusiones.Size = new System.Drawing.Size(1076, 493);
+            this.pagInfusiones.TabIndex = 5;
+            this.pagInfusiones.Text = "Infusiones";
+            this.pagInfusiones.UseVisualStyleBackColor = true;
             // 
             // HistoriaClinicaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1269, 650);
             this.Controls.Add(this.tabHistoriaClinica);
-            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlInformacion);
@@ -716,23 +770,30 @@
             this.MaximumSize = new System.Drawing.Size(1269, 650);
             this.MinimumSize = new System.Drawing.Size(1269, 650);
             this.Name = "HistoriaClinicaUI";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HistoriaClinicaUI";
             this.pnlInformacion.ResumeLayout(false);
             this.pnlInformacion.PerformLayout();
             this.tabHistoriaClinica.ResumeLayout(false);
             this.pagIngreso.ResumeLayout(false);
+            this.pagOrdenMedica.ResumeLayout(false);
+            this.pagLaboratorios.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControlGalactus1.ResumeLayout(false);
             this.pagDatosIngreso.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pagDatosIngreso.PerformLayout();
+            this.tstMenuPatron.ResumeLayout(false);
+            this.tstMenuPatron.PerformLayout();
             this.pagAntecedentesFamiliares.ResumeLayout(false);
-            this.pagAntecedentesPersonales.ResumeLayout(false);
-            this.pagAntecedenteMaterno.ResumeLayout(false);
-            this.pagRecienNacido.ResumeLayout(false);
-            this.pagEventoNacido.ResumeLayout(false);
-            this.pagPronostico.ResumeLayout(false);
+            this.tabControlGalactus2.ResumeLayout(false);
+            this.pagIndicaciones.ResumeLayout(false);
+            this.pagIndicaciones.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.pagProcedimientos.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -754,7 +815,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TextBox txtEstancia;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEdad;
@@ -764,36 +824,42 @@
         private System.Windows.Forms.TabPage pagIngreso;
         private Util.Controles.TabControlGalactus tabControlGalactus1;
         private System.Windows.Forms.TabPage pagDatosIngreso;
-        private System.Windows.Forms.Panel panel1;
-        internal System.Windows.Forms.Label Label38;
-        internal System.Windows.Forms.TextBox txtPeso;
-        internal System.Windows.Forms.Label Label37;
-        internal System.Windows.Forms.TextBox txtCama;
-        internal System.Windows.Forms.Label Label35;
-        internal System.Windows.Forms.TextBox txtCausaExterna;
-        internal System.Windows.Forms.Label Label36;
-        internal System.Windows.Forms.TextBox txtInstitucion;
-        internal System.Windows.Forms.Label Label39;
-        internal System.Windows.Forms.TextBox txtViaIngreso;
-        internal System.Windows.Forms.Label Label40;
-        internal System.Windows.Forms.TextBox txtAutorizacion;
-        internal System.Windows.Forms.Label Label41;
-        internal System.Windows.Forms.TextBox txtEstadoAtencion;
-        internal System.Windows.Forms.Label Label42;
-        private System.Windows.Forms.Panel panelIngreso;
         private System.Windows.Forms.TabPage pagAntecedentesFamiliares;
-        private System.Windows.Forms.TabPage pagPronostico;
         private System.Windows.Forms.TabPage pagOrdenMedica;
         private System.Windows.Forms.TabPage pagEvolucion;
-        private System.Windows.Forms.TabPage pagAntecedentesPersonales;
-        private System.Windows.Forms.TabPage pagAntecedenteMaterno;
-        private System.Windows.Forms.TabPage pagRecienNacido;
-        private System.Windows.Forms.TabPage pagEventoNacido;
         private System.Windows.Forms.Panel pnlAntecFamiliares;
-        private System.Windows.Forms.Panel pnlAntecPersonales;
-        private System.Windows.Forms.Panel pnlAntecMaterno;
-        private System.Windows.Forms.Panel pnlAntecRecienNacido;
-        private System.Windows.Forms.Panel pnlEventoNacido;
-        private System.Windows.Forms.Panel pnlPronostico;
+        private System.Windows.Forms.TabPage pagExamenFisico;
+        private System.Windows.Forms.TabPage pagAnalisis;
+        private System.Windows.Forms.TabPage pagEstancia;
+        private Util.Controles.TabControlGalactus tabControlGalactus2;
+        private System.Windows.Forms.TabPage pagIndicaciones;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TabPage pagProcedimientos;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TabPage pagMedicamentos;
+        private System.Windows.Forms.TabPage pagGlucometrias;
+        private System.Windows.Forms.TabPage pagInfusiones;
+        private System.Windows.Forms.TabPage pagLaboratorios;
+        private System.Windows.Forms.ToolStrip tstMenuPatron;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tsbEditar;
+        private System.Windows.Forms.ToolStripButton tsbCancelar;
+        private System.Windows.Forms.ToolStripButton tsbGuardar;
+        private System.Windows.Forms.ToolStripButton tsbBuscar;
+        private System.Windows.Forms.ToolStripButton tsbAnular;
+        private System.Windows.Forms.ToolStripButton tbtImprimir;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

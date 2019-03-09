@@ -77,15 +77,15 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
         {
             datagrid.Columns[columnaDgv].DataPropertyName = columnaDt;
         }
-        //private void btnEditar_Click(object sender, EventArgs e)
-        //{
-        //    GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
-        //}
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+        }
 
-        //private void tsbCancelar_Click(object sender, EventArgs e)
-        //{
-        //    GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
-        //}
+        private void tsbCancelar_Click(object sender, EventArgs e)
+        {
+            GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
+        }
 
         private void tsbBuscar_Click(object sender, EventArgs e)
         {
