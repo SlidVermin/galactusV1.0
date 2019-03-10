@@ -1,6 +1,6 @@
 ﻿namespace Galactus.VistaControlador.HistoriaClinica
 {
-    partial class AtencionIngresoUI
+    partial class ValoracionIngresoUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AtencionIngresoUI));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ValoracionIngresoUI));
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.tstEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();

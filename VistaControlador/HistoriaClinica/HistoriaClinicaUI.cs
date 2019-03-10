@@ -15,21 +15,15 @@ namespace Galactus.VistaControlador.HistoriaClinica
 {
     public partial class HistoriaClinicaUI : Form
     {
-        AtencionIngresoUI atencionUI = new AtencionIngresoUI();
-        ProductoUI productoUI = new ProductoUI();
+        ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();
+        FormIngreso.ProductoUI antecedentesUI = new FormIngreso.ProductoUI();
 
         public HistoriaClinicaUI()
         {
             InitializeComponent();
         }
 
-        #region btnSalir
-
-        //private void btnSalir_MouseHover(object sender, EventArgs e)
-        //{
-        //    btnSalir.BackColor = Color.LightCoral;
-        //}
-
+        #region btnSalir      
         private void btnSalir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.SALIR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
@@ -37,37 +31,37 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 Close();
             }
         }
-        //private void btnSalir_MouseLeave(object sender, EventArgs e)
-        //{
-        //    btnSalir.BackColor = Control.DefaultBackColor;
-        //}
-
-
         #endregion
 
-        private void tabControlGalactus1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            if (tabControlGalactus1.SelectedIndex == 0) {
-                //GeneralC.cargarFormularioPanel(panelIngreso,new AtencionIngresoUI());
-            }
-            else if (tabControlGalactus1.SelectedIndex == 1) {
-                GeneralC.cargarFormularioPanel(pnlAntecFamiliares, new AntecedentesFamiliaresUI());
-            }
-            
-        }
-
+        
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            GeneralC.cargarFormularioPanel(panel3, atencionUI);
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            GeneralC.cargarFormularioPanel(panel3, productoUI);
         }
 
-        public void guardar() {
-            
+        private void tabControlGalactus1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int tabSeleccionado = tcIngresoClinico.SelectedIndex;
+
+            switch (tabSeleccionado){
+                case 0:
+                    GeneralC.cargarFormularioEnPestana(tpValoracion, valoracionUI);
+                    break;
+                case 1:
+                    GeneralC.cargarFormularioEnPestana(tpAntecedentes, antecedentesUI);
+                    break;
+                case 2:
+                    GeneralC.cargarFormularioEnPestana(tpExamenFisico, valoracionUI);
+                    break;
+                case 3:
+                    GeneralC.cargarFormularioEnPestana(tpAnalisis, valoracionUI);
+                    break;
+            }          
         }
+
+        
     }
 }

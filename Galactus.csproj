@@ -245,17 +245,17 @@
     <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesMaternosUI.Designer.cs">
       <DependentUpon>AntecedentesMaternosUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesPersonalesUI.cs">
+    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesIngresoUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesPersonalesUI.Designer.cs">
-      <DependentUpon>AntecedentesPersonalesUI.cs</DependentUpon>
+    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesIngresoUI.Designer.cs">
+      <DependentUpon>AntecedentesIngresoUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AtencionIngresoUI.cs">
+    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\ValoracionIngresoUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AtencionIngresoUI.Designer.cs">
-      <DependentUpon>AtencionIngresoUI.cs</DependentUpon>
+    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\ValoracionIngresoUI.Designer.cs">
+      <DependentUpon>ValoracionIngresoUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.cs">
       <SubType>Form</SubType>
@@ -418,11 +418,11 @@
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesMaternosUI.resx">
       <DependentUpon>AntecedentesMaternosUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesPersonalesUI.resx">
-      <DependentUpon>AntecedentesPersonalesUI.cs</DependentUpon>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesIngresoUI.resx">
+      <DependentUpon>AntecedentesIngresoUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\AtencionIngresoUI.resx">
-      <DependentUpon>AtencionIngresoUI.cs</DependentUpon>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\ValoracionIngresoUI.resx">
+      <DependentUpon>ValoracionIngresoUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoUI.resx">
       <DependentUpon>ConfiguracionProcedimientoMedicoUI.cs</DependentUpon>

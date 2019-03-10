@@ -636,13 +636,32 @@ namespace Galactus
             }
         }
         public static void cargarFormularioPanel(Panel panelForm, Form formEntrante ) {
-            if (panelForm.Controls.Count > 0) panelForm.Controls.RemoveAt(0);
+            if (panelForm.Controls.Count > 0)
+            {
+                panelForm.Controls.RemoveAt(0);
+            }
+
             formEntrante.TopLevel = false;
             formEntrante.Dock = DockStyle.Fill;
             formEntrante.FormBorderStyle = FormBorderStyle.None;
-            panelForm.Controls.Add(formEntrante);
+            formEntrante.Controls.Add(formEntrante);
             panelForm.Tag = formEntrante;
             formEntrante.Show();
+       }
+
+        public static void cargarFormularioEnPestana(TabPage tabPage, Form formContenido)
+        {
+            if (tabPage.Controls.Count > 0)
+            {
+                tabPage.Controls.RemoveAt(0);
+            }
+
+            formContenido.TopLevel = false;
+            formContenido.Dock = DockStyle.Fill;
+            formContenido.FormBorderStyle = FormBorderStyle.None;
+            tabPage.Controls.Add(formContenido);
+            tabPage.Tag = formContenido;
+            formContenido.Show();
         }
     }
 }
