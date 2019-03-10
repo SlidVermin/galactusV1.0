@@ -187,5 +187,9 @@ namespace Galactus
             }
 
         }
+        private void PrincipalUI_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

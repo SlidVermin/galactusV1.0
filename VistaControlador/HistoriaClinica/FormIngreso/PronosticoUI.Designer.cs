@@ -32,12 +32,6 @@
             this.Label59 = new System.Windows.Forms.Label();
             this.txtPronosticoN = new System.Windows.Forms.TextBox();
             this.txtAnalisisN = new System.Windows.Forms.TextBox();
-            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.tstEditar = new System.Windows.Forms.ToolStripButton();
-            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
-            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
-            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tstMenuPatron.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -82,76 +76,17 @@
             this.txtAnalisisN.Size = new System.Drawing.Size(726, 175);
             this.txtAnalisisN.TabIndex = 10063;
             // 
-            // tstMenuPatron
-            // 
-            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tstEditar,
-            this.tsbCancelar,
-            this.tsbAnular,
-            this.tsbGuardar});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 364);
-            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.Name = "tstMenuPatron";
-            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.TabIndex = 10098;
-            this.tstMenuPatron.Text = "toolStrip1";
-            // 
-            // tstEditar
-            // 
-            this.tstEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tstEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.tstEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstEditar.Name = "tstEditar";
-            this.tstEditar.Size = new System.Drawing.Size(57, 22);
-            this.tstEditar.Text = "Editar";
-            // 
-            // tsbCancelar
-            // 
-            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsbCancelar.Text = "Cancelar";
-            // 
-            // tsbAnular
-            // 
-            this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbAnular.Name = "tsbAnular";
-            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
-            this.tsbAnular.Text = "Anular";
-            // 
-            // tsbGuardar
-            // 
-            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tsbGuardar.Text = "Guardar";
-            // 
             // PronosticoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 389);
-            this.Controls.Add(this.tstMenuPatron);
+            this.ClientSize = new System.Drawing.Size(927, 355);
             this.Controls.Add(this.txtPronosticoN);
             this.Controls.Add(this.txtAnalisisN);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Label59);
             this.Name = "PronosticoUI";
             this.Text = "PronosticoUI";
-            this.tstMenuPatron.ResumeLayout(false);
-            this.tstMenuPatron.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,10 +98,5 @@
         internal System.Windows.Forms.Label Label59;
         internal System.Windows.Forms.TextBox txtPronosticoN;
         internal System.Windows.Forms.TextBox txtAnalisisN;
-        private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton tstEditar;
-        private System.Windows.Forms.ToolStripButton tsbCancelar;
-        private System.Windows.Forms.ToolStripButton tsbAnular;
-        private System.Windows.Forms.ToolStripButton tsbGuardar;
     }
 }

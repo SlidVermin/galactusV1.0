@@ -66,6 +66,7 @@
             this.IsMdiContainer = true;
             this.Name = "PrincipalUI";
             this.Text = "Galactus V1.0";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrincipalUI_FormClosing);
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.stsInformacionGeneral.ResumeLayout(false);
             this.stsInformacionGeneral.PerformLayout();
