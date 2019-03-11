@@ -293,6 +293,24 @@
     <Compile Include="VistaControlador\HistoriaClinica\ListadoPacienteUI.Designer.cs">
       <DependentUpon>ListadoPacienteUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\IndiceacionesUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\IndiceacionesUI.Designer.cs">
+      <DependentUpon>IndiceacionesUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\MedicamentosUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\MedicamentosUI.Designer.cs">
+      <DependentUpon>MedicamentosUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\ProcedimientosUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\ProcedimientosUI.Designer.cs">
+      <DependentUpon>ProcedimientosUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\HemodialisisUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,6 +459,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\ListadoPacienteUI.resx">
       <DependentUpon>ListadoPacienteUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\IndiceacionesUI.resx">
+      <DependentUpon>IndiceacionesUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\MedicamentosUI.resx">
+      <DependentUpon>MedicamentosUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\ProcedimientosUI.resx">
+      <DependentUpon>ProcedimientosUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\HemodialisisUI.resx">
       <DependentUpon>HemodialisisUI.cs</DependentUpon>

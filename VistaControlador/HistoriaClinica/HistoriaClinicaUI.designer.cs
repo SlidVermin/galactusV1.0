@@ -50,6 +50,13 @@
             this.tbLaboratorios = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tpOrdenMedica = new System.Windows.Forms.TabPage();
+            this.tstMenuOrdenMedica = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.tcOrdenMedica = new Galactus.Util.Controles.TabControlGalactus();
             this.tpIndicaciones = new System.Windows.Forms.TabPage();
             this.tbProcedimientos = new System.Windows.Forms.TabPage();
@@ -57,30 +64,29 @@
             this.tpAnalisisOrden = new System.Windows.Forms.TabPage();
             this.tpEstancia = new System.Windows.Forms.TabPage();
             this.tbIngreso = new System.Windows.Forms.TabPage();
+            this.tstMenuIngreso = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.tcIngresoClinico = new Galactus.Util.Controles.TabControlGalactus();
             this.tpValoracion = new System.Windows.Forms.TabPage();
             this.tpAntecedentes = new System.Windows.Forms.TabPage();
             this.tpExamenFisico = new System.Windows.Forms.TabPage();
             this.tpAnalisis = new System.Windows.Forms.TabPage();
             this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tstEditar = new System.Windows.Forms.ToolStripButton();
-            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
-            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.pnlInformacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tbLaboratorios.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
+            this.tstMenuOrdenMedica.SuspendLayout();
             this.tcOrdenMedica.SuspendLayout();
             this.tbIngreso.SuspendLayout();
+            this.tstMenuIngreso.SuspendLayout();
             this.tcIngresoClinico.SuspendLayout();
             this.tabHistoriaClinica.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tstMenuPatron.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlInformacion
@@ -262,7 +268,7 @@
             this.tpEvolucion.Location = new System.Drawing.Point(4, 29);
             this.tpEvolucion.Name = "tpEvolucion";
             this.tpEvolucion.Padding = new System.Windows.Forms.Padding(3);
-            this.tpEvolucion.Size = new System.Drawing.Size(1289, 432);
+            this.tpEvolucion.Size = new System.Drawing.Size(1289, 464);
             this.tpEvolucion.TabIndex = 2;
             this.tpEvolucion.Text = "Evoluciones";
             this.tpEvolucion.UseVisualStyleBackColor = true;
@@ -272,7 +278,7 @@
             this.tbLaboratorios.Controls.Add(this.panel3);
             this.tbLaboratorios.Location = new System.Drawing.Point(4, 29);
             this.tbLaboratorios.Name = "tbLaboratorios";
-            this.tbLaboratorios.Size = new System.Drawing.Size(1289, 432);
+            this.tbLaboratorios.Size = new System.Drawing.Size(1289, 464);
             this.tbLaboratorios.TabIndex = 4;
             this.tbLaboratorios.Text = "Laboratorios";
             this.tbLaboratorios.UseVisualStyleBackColor = true;
@@ -286,14 +292,94 @@
             // 
             // tpOrdenMedica
             // 
+            this.tpOrdenMedica.Controls.Add(this.tstMenuOrdenMedica);
             this.tpOrdenMedica.Controls.Add(this.tcOrdenMedica);
             this.tpOrdenMedica.Location = new System.Drawing.Point(4, 29);
             this.tpOrdenMedica.Name = "tpOrdenMedica";
             this.tpOrdenMedica.Padding = new System.Windows.Forms.Padding(3);
-            this.tpOrdenMedica.Size = new System.Drawing.Size(1289, 432);
+            this.tpOrdenMedica.Size = new System.Drawing.Size(1289, 464);
             this.tpOrdenMedica.TabIndex = 1;
             this.tpOrdenMedica.Text = "Orden Medica";
             this.tpOrdenMedica.UseVisualStyleBackColor = true;
+            // 
+            // tstMenuOrdenMedica
+            // 
+            this.tstMenuOrdenMedica.BackColor = System.Drawing.Color.White;
+            this.tstMenuOrdenMedica.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuOrdenMedica.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripButton5,
+            this.toolStripButton6});
+            this.tstMenuOrdenMedica.Location = new System.Drawing.Point(3, 436);
+            this.tstMenuOrdenMedica.MaximumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuOrdenMedica.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuOrdenMedica.Name = "tstMenuOrdenMedica";
+            this.tstMenuOrdenMedica.Size = new System.Drawing.Size(1040, 25);
+            this.tstMenuOrdenMedica.TabIndex = 49;
+            this.tstMenuOrdenMedica.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.White;
+            this.toolStripButton1.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton1.Text = "Nuevo";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButton2.Text = "Editar";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(69, 22);
+            this.toolStripButton3.Text = "Guardar";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton4.Text = "Buscar";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton5.Text = "Anular";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(73, 22);
+            this.toolStripButton6.Text = "Cancelar";
             // 
             // tcOrdenMedica
             // 
@@ -307,16 +393,17 @@
             this.tcOrdenMedica.Multiline = true;
             this.tcOrdenMedica.Name = "tcOrdenMedica";
             this.tcOrdenMedica.SelectedIndex = 0;
-            this.tcOrdenMedica.Size = new System.Drawing.Size(1240, 423);
+            this.tcOrdenMedica.Size = new System.Drawing.Size(1240, 428);
             this.tcOrdenMedica.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tcOrdenMedica.TabIndex = 4;
+            this.tcOrdenMedica.SelectedIndexChanged += new System.EventHandler(this.tcOrdenMedica_SelectedIndexChanged);
             // 
             // tpIndicaciones
             // 
             this.tpIndicaciones.Location = new System.Drawing.Point(124, 4);
             this.tpIndicaciones.Name = "tpIndicaciones";
             this.tpIndicaciones.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIndicaciones.Size = new System.Drawing.Size(1112, 415);
+            this.tpIndicaciones.Size = new System.Drawing.Size(1112, 420);
             this.tpIndicaciones.TabIndex = 0;
             this.tpIndicaciones.Text = "Indicaciones";
             this.tpIndicaciones.UseVisualStyleBackColor = true;
@@ -326,7 +413,7 @@
             this.tbProcedimientos.Location = new System.Drawing.Point(124, 4);
             this.tbProcedimientos.Name = "tbProcedimientos";
             this.tbProcedimientos.Padding = new System.Windows.Forms.Padding(3);
-            this.tbProcedimientos.Size = new System.Drawing.Size(1112, 415);
+            this.tbProcedimientos.Size = new System.Drawing.Size(1112, 420);
             this.tbProcedimientos.TabIndex = 1;
             this.tbProcedimientos.Text = "Procedimientos";
             this.tbProcedimientos.UseVisualStyleBackColor = true;
@@ -335,7 +422,7 @@
             // 
             this.tpMedicamentos.Location = new System.Drawing.Point(124, 4);
             this.tpMedicamentos.Name = "tpMedicamentos";
-            this.tpMedicamentos.Size = new System.Drawing.Size(1112, 415);
+            this.tpMedicamentos.Size = new System.Drawing.Size(1112, 420);
             this.tpMedicamentos.TabIndex = 2;
             this.tpMedicamentos.Text = "Medicamentos";
             this.tpMedicamentos.UseVisualStyleBackColor = true;
@@ -344,7 +431,7 @@
             // 
             this.tpAnalisisOrden.Location = new System.Drawing.Point(124, 4);
             this.tpAnalisisOrden.Name = "tpAnalisisOrden";
-            this.tpAnalisisOrden.Size = new System.Drawing.Size(1112, 415);
+            this.tpAnalisisOrden.Size = new System.Drawing.Size(1112, 420);
             this.tpAnalisisOrden.TabIndex = 3;
             this.tpAnalisisOrden.Text = "Analisis";
             this.tpAnalisisOrden.UseVisualStyleBackColor = true;
@@ -353,21 +440,101 @@
             // 
             this.tpEstancia.Location = new System.Drawing.Point(4, 29);
             this.tpEstancia.Name = "tpEstancia";
-            this.tpEstancia.Size = new System.Drawing.Size(1289, 432);
+            this.tpEstancia.Size = new System.Drawing.Size(1289, 464);
             this.tpEstancia.TabIndex = 3;
             this.tpEstancia.Text = "Estancia";
             this.tpEstancia.UseVisualStyleBackColor = true;
             // 
             // tbIngreso
             // 
+            this.tbIngreso.Controls.Add(this.tstMenuIngreso);
             this.tbIngreso.Controls.Add(this.tcIngresoClinico);
             this.tbIngreso.Location = new System.Drawing.Point(4, 29);
             this.tbIngreso.Name = "tbIngreso";
             this.tbIngreso.Padding = new System.Windows.Forms.Padding(3);
-            this.tbIngreso.Size = new System.Drawing.Size(1289, 432);
+            this.tbIngreso.Size = new System.Drawing.Size(1289, 464);
             this.tbIngreso.TabIndex = 0;
             this.tbIngreso.Text = "Ingreso Clinico";
             this.tbIngreso.UseVisualStyleBackColor = true;
+            // 
+            // tstMenuIngreso
+            // 
+            this.tstMenuIngreso.BackColor = System.Drawing.Color.White;
+            this.tstMenuIngreso.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuIngreso.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton7,
+            this.toolStripButton8,
+            this.toolStripButton9,
+            this.toolStripButton10,
+            this.toolStripButton11,
+            this.toolStripButton12});
+            this.tstMenuIngreso.Location = new System.Drawing.Point(3, 436);
+            this.tstMenuIngreso.MaximumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuIngreso.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuIngreso.Name = "tstMenuIngreso";
+            this.tstMenuIngreso.Size = new System.Drawing.Size(1040, 25);
+            this.tstMenuIngreso.TabIndex = 50;
+            this.tstMenuIngreso.Text = "toolStrip2";
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.White;
+            this.toolStripButton7.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton7.Text = "Nuevo";
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButton8.Text = "Editar";
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(69, 22);
+            this.toolStripButton9.Text = "Guardar";
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
+            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton10.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton10.Text = "Buscar";
+            // 
+            // toolStripButton11
+            // 
+            this.toolStripButton11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
+            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton11.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.Size = new System.Drawing.Size(62, 22);
+            this.toolStripButton11.Text = "Anular";
+            // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton12.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.Size = new System.Drawing.Size(73, 22);
+            this.toolStripButton12.Text = "Cancelar";
             // 
             // tcIngresoClinico
             // 
@@ -381,7 +548,7 @@
             this.tcIngresoClinico.Multiline = true;
             this.tcIngresoClinico.Name = "tcIngresoClinico";
             this.tcIngresoClinico.SelectedIndex = 0;
-            this.tcIngresoClinico.Size = new System.Drawing.Size(1277, 422);
+            this.tcIngresoClinico.Size = new System.Drawing.Size(1277, 427);
             this.tcIngresoClinico.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tcIngresoClinico.TabIndex = 3;
             this.tcIngresoClinico.SelectedIndexChanged += new System.EventHandler(this.tabControlGalactus1_SelectedIndexChanged);
@@ -391,7 +558,7 @@
             this.tpValoracion.Location = new System.Drawing.Point(124, 4);
             this.tpValoracion.Name = "tpValoracion";
             this.tpValoracion.Padding = new System.Windows.Forms.Padding(3);
-            this.tpValoracion.Size = new System.Drawing.Size(1149, 414);
+            this.tpValoracion.Size = new System.Drawing.Size(1149, 419);
             this.tpValoracion.TabIndex = 0;
             this.tpValoracion.Text = "Valoracion";
             this.tpValoracion.UseVisualStyleBackColor = true;
@@ -401,7 +568,7 @@
             this.tpAntecedentes.Location = new System.Drawing.Point(124, 4);
             this.tpAntecedentes.Name = "tpAntecedentes";
             this.tpAntecedentes.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAntecedentes.Size = new System.Drawing.Size(1149, 414);
+            this.tpAntecedentes.Size = new System.Drawing.Size(1149, 419);
             this.tpAntecedentes.TabIndex = 1;
             this.tpAntecedentes.Text = "Antecedentes";
             this.tpAntecedentes.UseVisualStyleBackColor = true;
@@ -410,7 +577,7 @@
             // 
             this.tpExamenFisico.Location = new System.Drawing.Point(124, 4);
             this.tpExamenFisico.Name = "tpExamenFisico";
-            this.tpExamenFisico.Size = new System.Drawing.Size(1149, 414);
+            this.tpExamenFisico.Size = new System.Drawing.Size(1149, 419);
             this.tpExamenFisico.TabIndex = 2;
             this.tpExamenFisico.Text = "ExamenFisico";
             this.tpExamenFisico.UseVisualStyleBackColor = true;
@@ -419,7 +586,7 @@
             // 
             this.tpAnalisis.Location = new System.Drawing.Point(124, 4);
             this.tpAnalisis.Name = "tpAnalisis";
-            this.tpAnalisis.Size = new System.Drawing.Size(1149, 414);
+            this.tpAnalisis.Size = new System.Drawing.Size(1149, 419);
             this.tpAnalisis.TabIndex = 3;
             this.tpAnalisis.Text = "Analisis";
             this.tpAnalisis.UseVisualStyleBackColor = true;
@@ -436,94 +603,9 @@
             this.tabHistoriaClinica.Location = new System.Drawing.Point(5, 104);
             this.tabHistoriaClinica.Name = "tabHistoriaClinica";
             this.tabHistoriaClinica.SelectedIndex = 0;
-            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 465);
+            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 497);
             this.tabHistoriaClinica.TabIndex = 46;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.tstMenuPatron);
-            this.panel1.Location = new System.Drawing.Point(5, 569);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(945, 28);
-            this.panel1.TabIndex = 47;
-            // 
-            // tstMenuPatron
-            // 
-            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tstEditar,
-            this.tsbGuardar,
-            this.tsbBuscar,
-            this.tsbAnular,
-            this.tsbCancelar});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 3);
-            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.Name = "tstMenuPatron";
-            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.TabIndex = 48;
-            this.tstMenuPatron.Text = "toolStrip1";
-            // 
-            // tsbNuevo
-            // 
-            this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
-            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
-            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tsbNuevo.Text = "Nuevo";
-            // 
-            // tstEditar
-            // 
-            this.tstEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tstEditar.Image = ((System.Drawing.Image)(resources.GetObject("tstEditar.Image")));
-            this.tstEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstEditar.Name = "tstEditar";
-            this.tstEditar.Size = new System.Drawing.Size(57, 22);
-            this.tstEditar.Text = "Editar";
-            // 
-            // tsbGuardar
-            // 
-            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsbGuardar.Image")));
-            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tsbGuardar.Text = "Guardar";
-            // 
-            // tsbBuscar
-            // 
-            this.tsbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscar.Image")));
-            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbBuscar.Name = "tsbBuscar";
-            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tsbBuscar.Text = "Buscar";
-            // 
-            // tsbAnular
-            // 
-            this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbAnular.Image = ((System.Drawing.Image)(resources.GetObject("tsbAnular.Image")));
-            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbAnular.Name = "tsbAnular";
-            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
-            this.tsbAnular.Text = "Anular";
-            // 
-            // tsbCancelar
-            // 
-            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelar.Image")));
-            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsbCancelar.Text = "Cancelar";
+            this.tabHistoriaClinica.SelectedIndexChanged += new System.EventHandler(this.tabHistoriaClinica_SelectedIndexChanged);
             // 
             // HistoriaClinicaUI
             // 
@@ -531,7 +613,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1304, 601);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabHistoriaClinica);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -543,19 +624,22 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historia Clinica";
+            this.Load += new System.EventHandler(this.HistoriaClinicaUI_Load);
             this.pnlInformacion.ResumeLayout(false);
             this.pnlInformacion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tbLaboratorios.ResumeLayout(false);
             this.tpOrdenMedica.ResumeLayout(false);
+            this.tpOrdenMedica.PerformLayout();
+            this.tstMenuOrdenMedica.ResumeLayout(false);
+            this.tstMenuOrdenMedica.PerformLayout();
             this.tcOrdenMedica.ResumeLayout(false);
             this.tbIngreso.ResumeLayout(false);
+            this.tbIngreso.PerformLayout();
+            this.tstMenuIngreso.ResumeLayout(false);
+            this.tstMenuIngreso.PerformLayout();
             this.tcIngresoClinico.ResumeLayout(false);
             this.tabHistoriaClinica.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.tstMenuPatron.ResumeLayout(false);
-            this.tstMenuPatron.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -596,13 +680,19 @@
         private System.Windows.Forms.TabPage tpExamenFisico;
         private System.Windows.Forms.TabPage tpAnalisis;
         private System.Windows.Forms.TabControl tabHistoriaClinica;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton tsbNuevo;
-        private System.Windows.Forms.ToolStripButton tstEditar;
-        private System.Windows.Forms.ToolStripButton tsbGuardar;
-        private System.Windows.Forms.ToolStripButton tsbBuscar;
-        private System.Windows.Forms.ToolStripButton tsbAnular;
-        private System.Windows.Forms.ToolStripButton tsbCancelar;
+        private System.Windows.Forms.ToolStrip tstMenuOrdenMedica;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStrip tstMenuIngreso;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripButton toolStripButton11;
+        private System.Windows.Forms.ToolStripButton toolStripButton12;
     }
 }

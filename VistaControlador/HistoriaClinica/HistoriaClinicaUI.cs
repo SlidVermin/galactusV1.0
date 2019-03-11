@@ -17,7 +17,9 @@ namespace Galactus.VistaControlador.HistoriaClinica
     {
         ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();
         FormIngreso.ProductoUI antecedentesUI = new FormIngreso.ProductoUI();
-
+        HistoriaClinica.OrdenMedica.IndiceacionesUI indicaciones = new HistoriaClinica.OrdenMedica.IndiceacionesUI();
+        HistoriaClinica.OrdenMedica.ProcedimientosUI procedimientos = new HistoriaClinica.OrdenMedica.ProcedimientosUI();
+        HistoriaClinica.OrdenMedica.MedicamentosUI medicamentos = new HistoriaClinica.OrdenMedica.MedicamentosUI();
         public HistoriaClinicaUI()
         {
             InitializeComponent();
@@ -61,7 +63,34 @@ namespace Galactus.VistaControlador.HistoriaClinica
                     break;
             }          
         }
+        private void tcOrdenMedica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tcOrdenMedica.SelectedIndex)
+            {
+                case 0:
+                    GeneralC.cargarFormularioEnPestana(tpIndicaciones, indicaciones);
+                    break;
+                case 1:
+                    GeneralC.cargarFormularioEnPestana(tbProcedimientos, procedimientos);
+                    break;
+                case 2:
+                    GeneralC.cargarFormularioEnPestana(tpMedicamentos, medicamentos);
+                    break;
+                case 3:
+                    //GeneralC.cargarFormularioEnPestana(tpAnalisis, valoracionUI);
+                    break;
+            }
+        }
 
-        
+        private void HistoriaClinicaUI_Load(object sender, EventArgs e)
+        {
+            tabControlGalactus1_SelectedIndexChanged(null, null);
+            tcOrdenMedica_SelectedIndexChanged(null,null);
+        }
+
+        private void tabHistoriaClinica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
