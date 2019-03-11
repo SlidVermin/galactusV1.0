@@ -13,8 +13,6 @@ using Galactus.Entidades.HistoriaClinica.Configuracion;
 namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
 {
 
-
-
     public partial class ConfiguracionProcedimientoMedicoUI : Form
     {
         ConfiguracionProcedimientoMedico configuracionProcedimientoMedico = new ConfiguracionProcedimientoMedico();
