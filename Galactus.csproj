@@ -78,6 +78,10 @@
     <Compile Include="Entidades\ConfiguracionGeneral\Usuario.cs" />
     <Compile Include="Entidades\General\Busqueda.cs" />
     <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
+    <Compile Include="Entidades\HistoriaClinica\HistoriaClinicaPaciente.cs" />
+    <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Indicacion\OrdenClinicaIndicacion.cs" />
+    <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Medicamento\OrdenClinicaMedicamento.cs" />
+    <Compile Include="Entidades\HistoriaClinica\OrdenMedica\OrdenClinica.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\Hemodialisis.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\InformeQuirurgico.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\JustificacionAntibiotico.cs" />

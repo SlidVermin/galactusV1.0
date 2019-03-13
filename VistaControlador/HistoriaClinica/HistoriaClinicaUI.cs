@@ -10,16 +10,21 @@ using System.Windows.Forms;
 using Galactus.Util.Mensajes;
 using Galactus.VistaControlador.HistoriaClinica.FormIngreso;
 using Galactus.VistaControlador.Inventario;
+using Galactus.Entidades.HistoriaClinica;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
+
     public partial class HistoriaClinicaUI : Form
     {
+        private HistoriaClinicaPaciente historiaClinica = new HistoriaClinicaPaciente();
         ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();
         FormIngreso.ProductoUI antecedentesUI = new FormIngreso.ProductoUI();
         HistoriaClinica.OrdenMedica.IndiceacionesUI indicaciones = new HistoriaClinica.OrdenMedica.IndiceacionesUI();
         HistoriaClinica.OrdenMedica.ProcedimientosUI procedimientos = new HistoriaClinica.OrdenMedica.ProcedimientosUI();
         HistoriaClinica.OrdenMedica.MedicamentosUI medicamentos = new HistoriaClinica.OrdenMedica.MedicamentosUI();
+
+       
         public HistoriaClinicaUI()
         {
             InitializeComponent();
@@ -69,6 +74,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             {
                 case 0:
                     GeneralC.cargarFormularioEnPestana(tpIndicaciones, indicaciones);
+                    indicaciones.indicacion = historiaClinica.orden.indicacion;
                     break;
                 case 1:
                     GeneralC.cargarFormularioEnPestana(tbProcedimientos, procedimientos);

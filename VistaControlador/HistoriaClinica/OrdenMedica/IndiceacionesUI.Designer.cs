@@ -46,6 +46,7 @@
             this.txtIndicaciones.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtIndicaciones.Size = new System.Drawing.Size(871, 268);
             this.txtIndicaciones.TabIndex = 0;
+            this.txtIndicaciones.TextChanged += new System.EventHandler(this.txtIndicaciones_TextChanged);
             // 
             // panel1
             // 
@@ -80,6 +81,8 @@
             this.Controls.Add(this.panel1);
             this.Name = "IndiceacionesUI";
             this.Text = "IndiceacionesUI";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IndiceacionesUI_FormClosing);
+            this.Load += new System.EventHandler(this.IndiceacionesUI_Load);
             this.panel1.ResumeLayout(false);
             this.GroupBox17.ResumeLayout(false);
             this.GroupBox17.PerformLayout();
