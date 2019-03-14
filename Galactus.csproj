@@ -79,6 +79,7 @@
     <Compile Include="Entidades\General\Busqueda.cs" />
     <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
     <Compile Include="Entidades\HistoriaClinica\HistoriaClinicaPaciente.cs" />
+    <Compile Include="Entidades\HistoriaClinica\ListadoPaciente.cs" />
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Indicacion\OrdenClinicaIndicacion.cs" />
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Medicamento\OrdenClinicaMedicamento.cs" />
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\OrdenClinica.cs" />

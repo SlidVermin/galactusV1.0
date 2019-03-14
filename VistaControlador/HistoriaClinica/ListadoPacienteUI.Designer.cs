@@ -33,26 +33,29 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvListaPaciente = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtArea = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbEntorno = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buscarHCPacienteBtn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.dgAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgAdmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgFechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgEntorno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgEdad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgEps = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.triageBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buscarHCPacienteBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
+            this.dgColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -107,13 +110,16 @@
             this.dgvListaPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaPaciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgAtencion,
+            this.dgAdmision,
             this.dgPaciente,
+            this.dgFechaIngreso,
             this.dgEntorno,
             this.dgArea,
             this.dgEstancia,
             this.dgEdad,
             this.dgGenero,
-            this.dgEps});
+            this.dgEps,
+            this.dgColor});
             this.dgvListaPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListaPaciente.Location = new System.Drawing.Point(3, 18);
             this.dgvListaPaciente.Name = "dgvListaPaciente";
@@ -126,56 +132,15 @@
             this.dgvListaPaciente.TabIndex = 0;
             this.dgvListaPaciente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaPaciente_CellDoubleClick);
             // 
-            // dgAtencion
-            // 
-            this.dgAtencion.HeaderText = "Atencion";
-            this.dgAtencion.Name = "dgAtencion";
-            // 
-            // dgPaciente
-            // 
-            this.dgPaciente.HeaderText = "Paciente";
-            this.dgPaciente.Name = "dgPaciente";
-            this.dgPaciente.Width = 200;
-            // 
-            // dgEntorno
-            // 
-            this.dgEntorno.HeaderText = "Entorno";
-            this.dgEntorno.Name = "dgEntorno";
-            // 
-            // dgArea
-            // 
-            this.dgArea.HeaderText = "Area";
-            this.dgArea.Name = "dgArea";
-            // 
-            // dgEstancia
-            // 
-            this.dgEstancia.HeaderText = "Estancia";
-            this.dgEstancia.Name = "dgEstancia";
-            // 
-            // dgEdad
-            // 
-            this.dgEdad.HeaderText = "Edad";
-            this.dgEdad.Name = "dgEdad";
-            // 
-            // dgGenero
-            // 
-            this.dgGenero.HeaderText = "Genero";
-            this.dgGenero.Name = "dgGenero";
-            // 
-            // dgEps
-            // 
-            this.dgEps.HeaderText = "EPS";
-            this.dgEps.Name = "dgEps";
-            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cbEstado);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.txtArea);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.triageBox);
+            this.panel2.Controls.Add(this.cbEntorno);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.buscarHCPacienteBtn);
             this.panel2.Controls.Add(this.textBox1);
@@ -185,14 +150,15 @@
             this.panel2.Size = new System.Drawing.Size(1235, 37);
             this.panel2.TabIndex = 0;
             // 
-            // comboBox1
+            // cbEstado
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1029, 7);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(198, 21);
-            this.comboBox1.TabIndex = 42;
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(1029, 7);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(198, 21);
+            this.cbEstado.TabIndex = 42;
+            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -212,14 +178,16 @@
             this.button1.Size = new System.Drawing.Size(26, 24);
             this.button1.TabIndex = 40;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox3
+            // txtArea
             // 
-            this.textBox3.Location = new System.Drawing.Point(664, 7);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(262, 20);
-            this.textBox3.TabIndex = 39;
+            this.txtArea.Location = new System.Drawing.Point(664, 7);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.ReadOnly = true;
+            this.txtArea.Size = new System.Drawing.Size(262, 20);
+            this.txtArea.TabIndex = 39;
+            this.txtArea.TextChanged += new System.EventHandler(this.txtArea_TextChanged);
             // 
             // label3
             // 
@@ -231,14 +199,16 @@
             this.label3.TabIndex = 37;
             this.label3.Text = "Area:";
             // 
-            // triageBox
+            // cbEntorno
             // 
-            this.triageBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.triageBox.FormattingEnabled = true;
-            this.triageBox.Location = new System.Drawing.Point(388, 5);
-            this.triageBox.Name = "triageBox";
-            this.triageBox.Size = new System.Drawing.Size(212, 21);
-            this.triageBox.TabIndex = 30;
+            this.cbEntorno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEntorno.Enabled = false;
+            this.cbEntorno.FormattingEnabled = true;
+            this.cbEntorno.Location = new System.Drawing.Point(388, 5);
+            this.cbEntorno.Name = "cbEntorno";
+            this.cbEntorno.Size = new System.Drawing.Size(212, 21);
+            this.cbEntorno.TabIndex = 30;
+            this.cbEntorno.SelectedIndexChanged += new System.EventHandler(this.cbEntorno_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -289,6 +259,66 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // dgAtencion
+            // 
+            this.dgAtencion.HeaderText = "Atencion";
+            this.dgAtencion.Name = "dgAtencion";
+            // 
+            // dgAdmision
+            // 
+            this.dgAdmision.HeaderText = "Admision";
+            this.dgAdmision.Name = "dgAdmision";
+            // 
+            // dgPaciente
+            // 
+            this.dgPaciente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgPaciente.HeaderText = "Paciente";
+            this.dgPaciente.Name = "dgPaciente";
+            this.dgPaciente.Width = 84;
+            // 
+            // dgFechaIngreso
+            // 
+            this.dgFechaIngreso.HeaderText = "FechaIngreso";
+            this.dgFechaIngreso.Name = "dgFechaIngreso";
+            // 
+            // dgEntorno
+            // 
+            this.dgEntorno.HeaderText = "Entorno";
+            this.dgEntorno.Name = "dgEntorno";
+            // 
+            // dgArea
+            // 
+            this.dgArea.HeaderText = "Area";
+            this.dgArea.Name = "dgArea";
+            // 
+            // dgEstancia
+            // 
+            this.dgEstancia.HeaderText = "Estancia";
+            this.dgEstancia.Name = "dgEstancia";
+            // 
+            // dgEdad
+            // 
+            this.dgEdad.HeaderText = "Edad";
+            this.dgEdad.Name = "dgEdad";
+            // 
+            // dgGenero
+            // 
+            this.dgGenero.HeaderText = "Genero";
+            this.dgGenero.Name = "dgGenero";
+            // 
+            // dgEps
+            // 
+            this.dgEps.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgEps.HeaderText = "EPS";
+            this.dgEps.Name = "dgEps";
+            this.dgEps.Width = 60;
+            // 
+            // dgColor
+            // 
+            this.dgColor.HeaderText = "Color";
+            this.dgColor.Name = "dgColor";
+            this.dgColor.Visible = false;
+            // 
             // ListadoPacienteUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,20 +358,23 @@
         private System.Windows.Forms.Button buscarHCPacienteBtn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvListaPaciente;
-        private System.Windows.Forms.ComboBox triageBox;
+        private System.Windows.Forms.ComboBox cbEntorno;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtArea;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgAtencion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgAdmision;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgPaciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgFechaIngreso;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgEntorno;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgArea;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgEstancia;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgEdad;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgGenero;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgEps;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgColor;
     }
 }

@@ -78,7 +78,7 @@ namespace Galactus
                                      ref string campoFecha)
         {
 
-            campoFecha = Convert.ToString(DateTime.Today.AddTicks(-fechaNacimiento.Ticks).Year - 1);
+            campoFecha = Convert.ToString(DateTime.Today.AddTicks(-fechaNacimiento.Ticks).Year );
         }
         public static void cargarUbicacionGeografica(DataTable dtUbicaciones,
                                                    String idMunicipio,

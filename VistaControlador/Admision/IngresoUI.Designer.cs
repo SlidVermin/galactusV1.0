@@ -426,7 +426,7 @@
             this.rbPrefacturado.Name = "rbPrefacturado";
             this.rbPrefacturado.Size = new System.Drawing.Size(125, 24);
             this.rbPrefacturado.TabIndex = 10;
-            this.rbPrefacturado.Tag = "6";
+            this.rbPrefacturado.Tag = "93";
             this.rbPrefacturado.Text = "    Pre-Facturado";
             this.rbPrefacturado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rbPrefacturado.UseVisualStyleBackColor = true;
@@ -456,7 +456,7 @@
             this.rbCerrado.Name = "rbCerrado";
             this.rbCerrado.Size = new System.Drawing.Size(88, 24);
             this.rbCerrado.TabIndex = 6;
-            this.rbCerrado.Tag = "2";
+            this.rbCerrado.Tag = "92";
             this.rbCerrado.Text = "    Cerrado";
             this.rbCerrado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rbCerrado.UseVisualStyleBackColor = true;
@@ -472,7 +472,7 @@
             this.rbFacturado.Name = "rbFacturado";
             this.rbFacturado.Size = new System.Drawing.Size(101, 24);
             this.rbFacturado.TabIndex = 8;
-            this.rbFacturado.Tag = "4";
+            this.rbFacturado.Tag = "94";
             this.rbFacturado.Text = "    Facturado";
             this.rbFacturado.UseVisualStyleBackColor = true;
             // 
@@ -504,7 +504,7 @@
             this.rbIniciado.Size = new System.Drawing.Size(89, 24);
             this.rbIniciado.TabIndex = 1;
             this.rbIniciado.TabStop = true;
-            this.rbIniciado.Tag = "1";
+            this.rbIniciado.Tag = "91";
             this.rbIniciado.Text = "    Iniciado";
             this.rbIniciado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.rbIniciado.UseVisualStyleBackColor = true;
