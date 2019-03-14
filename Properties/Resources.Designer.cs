@@ -453,6 +453,16 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap infusion16 {
+            get {
+                object obj = ResourceManager.GetObject("infusion16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap laboratorio_ico {
             get {
                 object obj = ResourceManager.GetObject("laboratorio_ico", resourceCulture);

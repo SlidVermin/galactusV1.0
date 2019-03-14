@@ -77,10 +77,13 @@ namespace Galactus.VistaControlador.HistoriaClinica
                     indicaciones.indicacion = historiaClinica.orden.indicacion;
                     break;
                 case 1:
+                    procedimientos.procedimientos = historiaClinica.orden.procedimiento;
                     GeneralC.cargarFormularioEnPestana(tbProcedimientos, procedimientos);
                     break;
                 case 2:
+                    medicamentos.medicamentos = historiaClinica.orden.medicamento;
                     GeneralC.cargarFormularioEnPestana(tpMedicamentos, medicamentos);
+                  
                     break;
                 case 3:
                     //GeneralC.cargarFormularioEnPestana(tpAnalisis, valoracionUI);
@@ -97,6 +100,12 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private void tabHistoriaClinica_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void tsBtNuevo_Click(object sender, EventArgs e)
+        {
+            historiaClinica.orden.nuevaOrden();
+            
         }
     }
 }

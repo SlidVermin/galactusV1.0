@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcedimientosUI));
             this.panel1 = new System.Windows.Forms.Panel();
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
@@ -35,6 +36,9 @@
             this.txtJustificacion = new System.Windows.Forms.TextBox();
             this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.justificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anulardiagevoN = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.GroupBox17.SuspendLayout();
@@ -98,6 +102,9 @@
             this.dgvProcedimientos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvProcedimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProcedimientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.descripcion,
+            this.cantidad,
+            this.justificacion,
             this.anulardiagevoN});
             this.dgvProcedimientos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProcedimientos.Location = new System.Drawing.Point(3, 18);
@@ -115,6 +122,31 @@
             this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // descripcion
+            // 
+            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.descripcion.HeaderText = "Descripción";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            this.descripcion.Width = 107;
+            // 
+            // cantidad
+            // 
+            this.cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.cantidad.DefaultCellStyle = dataGridViewCellStyle1;
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            this.cantidad.Width = 90;
+            // 
+            // justificacion
+            // 
+            this.justificacion.HeaderText = "Justificación";
+            this.justificacion.Name = "justificacion";
+            this.justificacion.ReadOnly = true;
+            this.justificacion.Width = 112;
             // 
             // anulardiagevoN
             // 
@@ -134,6 +166,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ProcedimientosUI";
             this.Text = "ProcedimientosUI";
+            this.Load += new System.EventHandler(this.ProcedimientosUI_Load);
             this.panel1.ResumeLayout(false);
             this.GroupBox17.ResumeLayout(false);
             this.PanelJustificacionN.ResumeLayout(false);
@@ -149,8 +182,11 @@
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.GroupBox GroupBox17;
         internal System.Windows.Forms.DataGridView dgvProcedimientos;
-        internal System.Windows.Forms.DataGridViewImageColumn anulardiagevoN;
         internal System.Windows.Forms.Panel PanelJustificacionN;
         internal System.Windows.Forms.TextBox txtJustificacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn justificacion;
+        private System.Windows.Forms.DataGridViewImageColumn anulardiagevoN;
     }
 }

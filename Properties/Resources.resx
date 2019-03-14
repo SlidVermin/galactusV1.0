@@ -142,9 +142,6 @@
   <data name="Database-Delete-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Database-Delete-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="print (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\print (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Actions-document-new-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions-document-new-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,6 +150,9 @@
   </data>
   <data name="Apps-menu-editor-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Apps-menu-editor-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User-Orange-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User-Orange-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="team (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\team (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -165,9 +165,6 @@
   </data>
   <data name="User-Green-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User-Green-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="User-Blue-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User-Blue-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="guardar16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guardar16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -195,6 +192,9 @@
   </data>
   <data name="Actions-file-close-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions-file-close-icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Database-Add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Database-Add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow-undo-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow-undo-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,6 +226,9 @@
   <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="hospital-reception" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hospital-reception.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="laboratorio_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\laboratorio-ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -250,8 +253,8 @@
   <data name="Document-copy-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Document-copy-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hospital-reception" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hospital-reception.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="User-Blue-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User-Blue-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -292,8 +295,8 @@
   <data name="disk-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\disk-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Database-Add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Database-Add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="print (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\print (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,7 +316,7 @@
   <data name="login-btIngresar-fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login-btIngresar-fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User-Orange-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User-Orange-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="infusion16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\infusion16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

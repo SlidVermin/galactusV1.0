@@ -51,7 +51,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tpOrdenMedica = new System.Windows.Forms.TabPage();
             this.tstMenuOrdenMedica = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
@@ -307,7 +307,7 @@
             this.tstMenuOrdenMedica.BackColor = System.Drawing.Color.White;
             this.tstMenuOrdenMedica.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tstMenuOrdenMedica.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.tsBtNuevo,
             this.toolStripButton2,
             this.toolStripButton3,
             this.toolStripButton4,
@@ -321,15 +321,16 @@
             this.tstMenuOrdenMedica.TabIndex = 49;
             this.tstMenuOrdenMedica.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // tsBtNuevo
             // 
-            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.White;
-            this.toolStripButton1.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(62, 22);
-            this.toolStripButton1.Text = "Nuevo";
+            this.tsBtNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsBtNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsBtNuevo.Image")));
+            this.tsBtNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tsBtNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsBtNuevo.Name = "tsBtNuevo";
+            this.tsBtNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsBtNuevo.Text = "Nuevo";
+            this.tsBtNuevo.Click += new System.EventHandler(this.tsBtNuevo_Click);
             // 
             // toolStripButton2
             // 
@@ -681,7 +682,7 @@
         private System.Windows.Forms.TabPage tpAnalisis;
         private System.Windows.Forms.TabControl tabHistoriaClinica;
         private System.Windows.Forms.ToolStrip tstMenuOrdenMedica;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsBtNuevo;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;

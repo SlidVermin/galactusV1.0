@@ -13,6 +13,10 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica.Medicamentos
         public OrdenClinicaMedicamento()
         {
             tblMedicamentos = new DataTable();
+            tblMedicamentos.Columns.Add("codigo",Type.GetType("System.Int32"));
+            tblMedicamentos.Columns.Add("descripcion", Type.GetType("System.String"));
+            tblMedicamentos.Columns.Add("concentracion", Type.GetType("System.String"));
+            tblMedicamentos.Columns["concentracion"].DefaultValue = 0;
         }
     }
 }

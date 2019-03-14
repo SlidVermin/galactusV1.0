@@ -83,6 +83,7 @@
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Indicacion\OrdenClinicaIndicacion.cs" />
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Medicamento\OrdenClinicaMedicamento.cs" />
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\OrdenClinica.cs" />
+    <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Procedimientos\OrdenClinicaProcedimiento.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\Hemodialisis.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\InformeQuirurgico.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\JustificacionAntibiotico.cs" />
@@ -672,6 +673,7 @@
     <None Include="Resources\Actions-file-close-icon3.png" />
     <Content Include="Resources\general-ico.png" />
     <Content Include="Resources\historia_clinica-ico.png" />
+    <None Include="Resources\infusion16.png" />
     <Content Include="Resources\laboratorio-ico.png" />
     <Content Include="Resources\seguridad-ico.png" />
     <None Include="Resources\principal-fondo.jpg" />
