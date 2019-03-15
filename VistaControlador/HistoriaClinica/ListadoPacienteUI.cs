@@ -25,38 +25,48 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private void ListadoPaciente_Load(object sender, EventArgs e)
         {
             listaPaciente.idMenu = Tag.ToString();
+            switch (listaPaciente.idMenu)
+            {
+                case ConstanteGeneral.MENU_ATENCION_MEDICA:
+                    lbTitulo.Text = ConstanteGeneral.TITULO_ATENCIÓN_MEDICA;
+                    break;
+                case ConstanteGeneral.MENU_ATENCION_ENFERMERIA:
+                    lbTitulo.Text = ConstanteGeneral.TITULO_ATENCIÓN_ENFERMERIA;
+                    break;
+            }
             GeneralC.llenarCombo(ConsultasHistoriaClinica.ESTADO_ATENCION + " " + Util.Constantes.ConstanteGeneral.ESTADO_ATENCION + "",
                                   Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                   Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                   cbEstado);
            
             cbEstado.SelectedValue = ConstanteGeneral.ESTADO_INICIADO;
-           
+            listaPaciente.idEstadoAtencion = ConstanteGeneral.ESTADO_INICIADO;
             establecerGridview();
+
             
         }
 
         public void preCargar()
         {
             listaPaciente.listarPacientes();
+            dibujarGridView();
+        }
+
+        public void dibujarGridView()
+        {
             for (int i = 0; i < dgvListaPaciente.Rows.Count; i++)
             {
                 dgvListaPaciente.Rows[i].Cells["dgAtencion"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
                 dgvListaPaciente.Rows[i].Cells["dgAdmision"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
+
+                dgvListaPaciente.Rows[i].Cells["dgArea"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
+                dgvListaPaciente.Rows[i].Cells["dgEntorno"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
             }
         }
         public void cargar()
-        {
-            listaPaciente.idEstadoAtencion = ConstanteGeneral.ESTADO_INICIADO;
-           
+        {           
             listaPaciente.listarPacientes();
             dgvListaPaciente.DataSource = listaPaciente.dtPaciente;
-
-            for (int i = 0; i < dgvListaPaciente.Rows.Count ; i++)
-            {
-                dgvListaPaciente.Rows[i].Cells["dgAtencion"].Style.BackColor = Color.FromArgb(Convert.ToInt32( dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
-                dgvListaPaciente.Rows[i].Cells["dgAdmision"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
-            }
         }
         public void establecerGridview()
         {
@@ -84,8 +94,18 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void dgvListaPaciente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            HistoriaClinicaUI formHistoriaClinica = new HistoriaClinicaUI();
-            formHistoriaClinica.ShowDialog();
+            switch (listaPaciente.idMenu)
+            {
+                case ConstanteGeneral.MENU_ATENCION_MEDICA:
+                    HistoriaClinicaUI formHistoriaClinica = new HistoriaClinicaUI();
+                    formHistoriaClinica.ShowDialog();
+                    break;
+                case ConstanteGeneral.MENU_ATENCION_ENFERMERIA:
+                    HistoriaEnfermeriaUI formHistoriaEnfermeria = new HistoriaEnfermeriaUI();
+                    formHistoriaEnfermeria.ShowDialog();
+                    break;               
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -116,6 +136,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             if (txtArea.Text.Equals(String.Empty))
             {
                 cbEntorno.Enabled = false;
+                btLimpiar.Visible = false;
             }else
             {
                 GeneralC.llenarCombo(ConsultasHistoriaClinica.ENTORNO_ATENCION + " " + listaPaciente.idArea + "",
@@ -123,12 +144,13 @@ namespace Galactus.VistaControlador.HistoriaClinica
                              Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                              cbEntorno);
                 cbEntorno.Enabled = true;
+                btLimpiar.Visible = true;
             }
         }
 
         private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if  (! cbEstado.ValueMember.ToString().Equals(String.Empty))
+            if  (cbEstado.SelectedIndex !=0)
             {
                 listaPaciente.idEstadoAtencion = Convert.ToInt16( cbEstado.SelectedValue);
                 preCargar();
@@ -138,11 +160,28 @@ namespace Galactus.VistaControlador.HistoriaClinica
        
         private void cbEntorno_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!cbEntorno.ValueMember.ToString().Equals(String.Empty))
+            if (cbEntorno.SelectedIndex !=0)
             {
                 listaPaciente.idEntorno = Convert.ToInt16(cbEntorno.SelectedValue);
                 preCargar();
+            }else
+            {
+                listaPaciente.idEntorno = 0;
+                preCargar();
             }
+        }
+
+        private void btLimpiar_Click(object sender, EventArgs e)
+        {
+            txtArea.Clear();
+            listaPaciente.idArea = 0;
+            cbEntorno.SelectedValue = -1;
+            preCargar();
+        }
+
+        private void ListadoPacienteUI_Shown(object sender, EventArgs e)
+        {
+            dibujarGridView();
         }
     }
 }

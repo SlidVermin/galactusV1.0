@@ -16,6 +16,7 @@ namespace Galactus.Util.Mensajes
         public const string SALIR_FORM = "¿ Desea salir ?";
         public const string CONFIRMACION_GUARDADO = "Registro Guardado !";
         public const string CONFIRMACION_ANULADO = "Registro anulado !";
+       
 
         #region Titulos
         public const string BUSQUEDA_BODEGA = "Busqueda de Bodega";

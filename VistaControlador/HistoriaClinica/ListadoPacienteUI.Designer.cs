@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label30 = new System.Windows.Forms.Label();
+            this.lbTitulo = new System.Windows.Forms.Label();
             this.pacientePB = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -45,6 +45,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btLimpiar = new System.Windows.Forms.Button();
             this.dgAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgAdmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,15 +64,15 @@
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label30
+            // lbTitulo
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial", 12F);
-            this.label30.Location = new System.Drawing.Point(52, 16);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(136, 18);
-            this.label30.TabIndex = 31;
-            this.label30.Text = "Lista de pacientes";
+            this.lbTitulo.AutoSize = true;
+            this.lbTitulo.Font = new System.Drawing.Font("Arial", 12F);
+            this.lbTitulo.Location = new System.Drawing.Point(52, 16);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(136, 18);
+            this.lbTitulo.TabIndex = 31;
+            this.lbTitulo.Text = "Lista de pacientes";
             // 
             // pacientePB
             // 
@@ -106,6 +107,8 @@
             // dgvListaPaciente
             // 
             this.dgvListaPaciente.AllowUserToAddRows = false;
+            this.dgvListaPaciente.AllowUserToResizeColumns = false;
+            this.dgvListaPaciente.AllowUserToResizeRows = false;
             this.dgvListaPaciente.BackgroundColor = System.Drawing.Color.White;
             this.dgvListaPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaPaciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -123,6 +126,7 @@
             this.dgvListaPaciente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvListaPaciente.Location = new System.Drawing.Point(3, 18);
             this.dgvListaPaciente.Name = "dgvListaPaciente";
+            this.dgvListaPaciente.ReadOnly = true;
             this.dgvListaPaciente.RowHeadersVisible = false;
             this.dgvListaPaciente.ShowCellErrors = false;
             this.dgvListaPaciente.ShowCellToolTips = false;
@@ -135,6 +139,7 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btLimpiar);
             this.panel2.Controls.Add(this.cbEstado);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.button1);
@@ -259,64 +264,97 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btLimpiar
+            // 
+            this.btLimpiar.Image = global::Galactus.Properties.Resources.error__1_;
+            this.btLimpiar.Location = new System.Drawing.Point(900, 5);
+            this.btLimpiar.Name = "btLimpiar";
+            this.btLimpiar.Size = new System.Drawing.Size(26, 24);
+            this.btLimpiar.TabIndex = 47;
+            this.btLimpiar.UseVisualStyleBackColor = true;
+            this.btLimpiar.Visible = false;
+            this.btLimpiar.Click += new System.EventHandler(this.btLimpiar_Click);
+            // 
             // dgAtencion
             // 
             this.dgAtencion.HeaderText = "Atencion";
             this.dgAtencion.Name = "dgAtencion";
+            this.dgAtencion.ReadOnly = true;
             // 
             // dgAdmision
             // 
+            this.dgAdmision.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgAdmision.HeaderText = "Admision";
             this.dgAdmision.Name = "dgAdmision";
+            this.dgAdmision.ReadOnly = true;
             // 
             // dgPaciente
             // 
             this.dgPaciente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgPaciente.HeaderText = "Paciente";
             this.dgPaciente.Name = "dgPaciente";
+            this.dgPaciente.ReadOnly = true;
             this.dgPaciente.Width = 84;
             // 
             // dgFechaIngreso
             // 
             this.dgFechaIngreso.HeaderText = "FechaIngreso";
             this.dgFechaIngreso.Name = "dgFechaIngreso";
+            this.dgFechaIngreso.ReadOnly = true;
             // 
             // dgEntorno
             // 
+            this.dgEntorno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgEntorno.HeaderText = "Entorno";
             this.dgEntorno.Name = "dgEntorno";
+            this.dgEntorno.ReadOnly = true;
+            this.dgEntorno.Width = 78;
             // 
             // dgArea
             // 
+            this.dgArea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgArea.HeaderText = "Area";
             this.dgArea.Name = "dgArea";
+            this.dgArea.ReadOnly = true;
+            this.dgArea.Width = 60;
             // 
             // dgEstancia
             // 
+            this.dgEstancia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgEstancia.HeaderText = "Estancia";
             this.dgEstancia.Name = "dgEstancia";
+            this.dgEstancia.ReadOnly = true;
+            this.dgEstancia.Width = 84;
             // 
             // dgEdad
             // 
+            this.dgEdad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgEdad.HeaderText = "Edad";
             this.dgEdad.Name = "dgEdad";
+            this.dgEdad.ReadOnly = true;
+            this.dgEdad.Width = 63;
             // 
             // dgGenero
             // 
+            this.dgGenero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgGenero.HeaderText = "Genero";
             this.dgGenero.Name = "dgGenero";
+            this.dgGenero.ReadOnly = true;
+            this.dgGenero.Width = 75;
             // 
             // dgEps
             // 
             this.dgEps.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.dgEps.HeaderText = "EPS";
             this.dgEps.Name = "dgEps";
+            this.dgEps.ReadOnly = true;
             this.dgEps.Width = 60;
             // 
             // dgColor
             // 
             this.dgColor.HeaderText = "Color";
             this.dgColor.Name = "dgColor";
+            this.dgColor.ReadOnly = true;
             this.dgColor.Visible = false;
             // 
             // ListadoPacienteUI
@@ -326,7 +364,7 @@
             this.ClientSize = new System.Drawing.Size(1269, 650);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label30);
+            this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.pacientePB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1269, 650);
@@ -335,6 +373,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListadoPaciente";
             this.Load += new System.EventHandler(this.ListadoPaciente_Load);
+            this.Shown += new System.EventHandler(this.ListadoPacienteUI_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -348,7 +387,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.PictureBox pacientePB;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -365,6 +404,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtArea;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btLimpiar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgAtencion;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgAdmision;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgPaciente;

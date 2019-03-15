@@ -293,6 +293,12 @@
     <Compile Include="VistaControlador\HistoriaClinica\HistoriaClinicaUI.designer.cs">
       <DependentUpon>HistoriaClinicaUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\HistoriaEnfermeriaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\HistoriaEnfermeriaUI.Designer.cs">
+      <DependentUpon>HistoriaEnfermeriaUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\ListadoPacienteUI.cs">
       <SubType>Form</SubType>
     </Compile>

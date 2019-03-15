@@ -21,7 +21,8 @@ namespace Galactus.Util.Constantes
         public const int METODO_SOAT = 2;
         public const int METODO_ISS = 3;
 
-      
+        public const string TITULO_ATENCIÓN_MEDICA = "Lista de pacientes/Atención medica";
+        public const string TITULO_ATENCIÓN_ENFERMERIA = "Lista de pacientes/Atención enfermeria";
 
         public const String VALUEMEMBER = "Código";
         public const String DISPLAYMEMBER = "Descripcion";
@@ -65,6 +66,9 @@ namespace Galactus.Util.Constantes
         public const int INSTITUCIÓN = 20;
         public const int ESTADO_ATENCION = 21;
         #endregion
-
+        #region Menu
+        public const string MENU_ATENCION_MEDICA = "27";
+        public const string MENU_ATENCION_ENFERMERIA = "29";
+        #endregion
     }
 }

@@ -323,6 +323,7 @@ namespace Galactus.VistaControlador
             edadText.Text = edad;
             tstEditar.Enabled = true;
             tsbAnular.Enabled = true;
+            btnSalir.Enabled = true;
             deshabilitarCombo();
         }
 

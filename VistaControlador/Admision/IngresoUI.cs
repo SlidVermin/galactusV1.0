@@ -148,6 +148,7 @@ namespace Galactus.VistaControlador.Admision
 
         public void habilitarNuevo()
         {
+            rbIniciado.Enabled = true;
             btPacienteAdmision.Enabled = true;
             tsbNuevo.Enabled = false;
             tsbGuardar.Enabled = true;
@@ -161,12 +162,7 @@ namespace Galactus.VistaControlador.Admision
 
         private void tstEditar_Click(object sender, EventArgs e)
         {
-          if ( GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar))
-            {
-                atencion.dtDiagnostico.Rows.Add();
-                btPacienteAdmision.Enabled = false;
-                fechaIngreso.Enabled = false;
-            }      
+
         }
 
         private void tsbCancelar_Click(object sender, EventArgs e)
@@ -183,7 +179,46 @@ namespace Galactus.VistaControlador.Admision
 
         public bool validarForm()
         {
-            return true;
+            if (txtIdAdmision.Text.Equals(String.Empty))
+            {
+                MessageBox.Show("¡ Por favor cargue un paciente  !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                btPacienteAdmision.Focus();
+                return false;
+            }else if (cbVia.SelectedIndex == 0)
+            {
+                MessageBox.Show("¡ Por favor seleccione la via de ingreso !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                cbVia.Focus();
+                return false;
+            }else if(cbCausaExterna.SelectedIndex == 0)
+            {
+                MessageBox.Show("¡ Por favor seleccione una causa externa  !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                cbCausaExterna.Focus();
+                return false;
+            }else if (cbInstitucion.SelectedIndex == 0)
+            {
+                MessageBox.Show("¡ Por favor seleccione la institucion  !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                cbInstitucion.Focus();
+                return false;
+            }else if (cbArea.SelectedIndex == 0)
+            {
+                MessageBox.Show("¡ Por favor seleccione el area  !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                cbArea.Focus();
+                return false;
+            }else if (cbEntorno.SelectedIndex == 0)
+            {
+                MessageBox.Show("¡ Por favor seleccione el entorno  !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                cbEntorno.Focus();
+                return false;
+            }else if (cbCama.SelectedIndex == 0)
+            {
+                MessageBox.Show("¡ Por favor seleccione la cama  !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                cbCama.Focus();
+                return false;
+            }else
+            {
+                return true;
+            }
+           
         }
 
         public void asignarAtencion()
@@ -222,7 +257,7 @@ namespace Galactus.VistaControlador.Admision
             atencion.fechaIngreso = fechaIngreso.Value;
             atencion.numeroAutorizacion = Textautorizacion.Text.Equals(string.Empty) ? 0 : Convert.ToInt16( Textautorizacion.Text);
         }
-        private void tsbGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click_1(object sender, EventArgs e)
         {
             if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -242,19 +277,7 @@ namespace Galactus.VistaControlador.Admision
 
         private void tsbBuscar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                List<string> parametros = new List<string>();
 
-                GeneralC.buscarDevuelveFila(Query.ATENCION_BUSCAR,
-                                                   parametros,
-                                                   new GeneralC.cargarInfoFila(cargarDatos),
-                                                   Mensajes.BUSQUEDA_PACIENTE, true);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
         public void cargarDatos(DataRow filas)
         {
@@ -320,7 +343,7 @@ namespace Galactus.VistaControlador.Admision
             }
         }
 
-        private void tsbAnular_Click(object sender, EventArgs e)
+        private void tsbAnular_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -338,5 +361,120 @@ namespace Galactus.VistaControlador.Admision
 
             }
         }
+
+        private void tsbNuevo_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tstEditar_Click_1(object sender, EventArgs e)
+        {
+            if (GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar))
+            {
+                atencion.dtDiagnostico.Rows.Add();
+                btPacienteAdmision.Enabled = false;
+                fechaIngreso.Enabled = false;
+            }
+        }
+
+        private void tsbAnular_Click(object sender, EventArgs e)
+        {
+            if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    asignarDatos();
+                    atencion.guardar();
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    atencion.dtDiagnostico.Rows.RemoveAt(atencion.dtDiagnostico.Rows.Count - 1);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void tsbNuevo_Click_2(object sender, EventArgs e)
+        {
+            habilitarNuevo();
+            tstEditar.Enabled = false;
+            tsbAnular.Enabled = false;
+            
+        }
+
+        private void tstEditar_Click_2(object sender, EventArgs e)
+        {
+            if (GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar))
+            {
+                atencion.dtDiagnostico.Rows.Add();
+                btPacienteAdmision.Enabled = false;
+                fechaIngreso.Enabled = false;
+            }
+        }
+
+        private void tsbCancelar_Click_1(object sender, EventArgs e)
+        {
+            GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
+            btnSalir.Enabled = true;
+            rbIniciado.Checked = true;
+        }
+
+        private void tsbGuardar_Click(object sender, EventArgs e)
+        {
+            if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    asignarDatos();
+                    atencion.guardar();
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    atencion.dtDiagnostico.Rows.RemoveAt(atencion.dtDiagnostico.Rows.Count - 1);
+                    btnSalir.Enabled = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void tsbBuscar_Click_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                List<string> parametros = new List<string>();
+
+                GeneralC.buscarDevuelveFila(Query.ATENCION_BUSCAR,
+                                                   parametros,
+                                                   new GeneralC.cargarInfoFila(cargarDatos),
+                                                   Mensajes.BUSQUEDA_PACIENTE, true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void tsbAnular_Click_2(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    atencion.anular();
+                    GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    btnSalir.Enabled = true;
+                    rbIniciado.Checked = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+        }
+
     }
 }
