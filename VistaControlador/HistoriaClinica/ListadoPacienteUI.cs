@@ -68,13 +68,14 @@ namespace Galactus.VistaControlador.HistoriaClinica
             listaPaciente.listarPacientes();
             dgvListaPaciente.DataSource = listaPaciente.dtPaciente;
         }
+
         public void establecerGridview()
         {
-           
+
             dgvListaPaciente.Columns["dgAtencion"].DataPropertyName = "Atencion";
             dgvListaPaciente.Columns["dgAdmision"].DataPropertyName = "Admision";
             dgvListaPaciente.Columns["dgPaciente"].DataPropertyName = "Paciente";
-            dgvListaPaciente.Columns["dgFechaIngreso"].DataPropertyName = "FechaIngreso";
+            dgvListaPaciente.Columns["dgFechaIngreso"].DataPropertyName = "Fecha Ingreso";
             dgvListaPaciente.Columns["dgEntorno"].DataPropertyName = "Entorno";
             dgvListaPaciente.Columns["dgArea"].DataPropertyName = "Area";
             dgvListaPaciente.Columns["dgEstancia"].DataPropertyName = "Estancia";
@@ -82,7 +83,10 @@ namespace Galactus.VistaControlador.HistoriaClinica
             dgvListaPaciente.Columns["dgGenero"].DataPropertyName = "Genero";
             dgvListaPaciente.Columns["dgEps"].DataPropertyName = "EPS";
             dgvListaPaciente.Columns["dgColor"].DataPropertyName = "Color";
+
+           
             cargar();
+            
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -182,6 +186,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private void ListadoPacienteUI_Shown(object sender, EventArgs e)
         {
             dibujarGridView();
+            dgvListaPaciente.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
     }
 }

@@ -34,6 +34,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvListaPaciente = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btLimpiar = new System.Windows.Forms.Button();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btLimpiar = new System.Windows.Forms.Button();
             this.dgAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgAdmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -107,10 +107,11 @@
             // dgvListaPaciente
             // 
             this.dgvListaPaciente.AllowUserToAddRows = false;
+            this.dgvListaPaciente.AllowUserToDeleteRows = false;
             this.dgvListaPaciente.AllowUserToResizeColumns = false;
             this.dgvListaPaciente.AllowUserToResizeRows = false;
             this.dgvListaPaciente.BackgroundColor = System.Drawing.Color.White;
-            this.dgvListaPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvListaPaciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgAtencion,
             this.dgAdmision,
@@ -154,6 +155,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1235, 37);
             this.panel2.TabIndex = 0;
+            // 
+            // btLimpiar
+            // 
+            this.btLimpiar.Image = global::Galactus.Properties.Resources.error__1_;
+            this.btLimpiar.Location = new System.Drawing.Point(900, 5);
+            this.btLimpiar.Name = "btLimpiar";
+            this.btLimpiar.Size = new System.Drawing.Size(26, 24);
+            this.btLimpiar.TabIndex = 47;
+            this.btLimpiar.UseVisualStyleBackColor = true;
+            this.btLimpiar.Visible = false;
+            this.btLimpiar.Click += new System.EventHandler(this.btLimpiar_Click);
             // 
             // cbEstado
             // 
@@ -264,22 +276,12 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btLimpiar
-            // 
-            this.btLimpiar.Image = global::Galactus.Properties.Resources.error__1_;
-            this.btLimpiar.Location = new System.Drawing.Point(900, 5);
-            this.btLimpiar.Name = "btLimpiar";
-            this.btLimpiar.Size = new System.Drawing.Size(26, 24);
-            this.btLimpiar.TabIndex = 47;
-            this.btLimpiar.UseVisualStyleBackColor = true;
-            this.btLimpiar.Visible = false;
-            this.btLimpiar.Click += new System.EventHandler(this.btLimpiar_Click);
-            // 
             // dgAtencion
             // 
             this.dgAtencion.HeaderText = "Atencion";
             this.dgAtencion.Name = "dgAtencion";
             this.dgAtencion.ReadOnly = true;
+            this.dgAtencion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dgAdmision
             // 
@@ -287,6 +289,7 @@
             this.dgAdmision.HeaderText = "Admision";
             this.dgAdmision.Name = "dgAdmision";
             this.dgAdmision.ReadOnly = true;
+            this.dgAdmision.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dgPaciente
             // 
@@ -294,13 +297,15 @@
             this.dgPaciente.HeaderText = "Paciente";
             this.dgPaciente.Name = "dgPaciente";
             this.dgPaciente.ReadOnly = true;
-            this.dgPaciente.Width = 84;
+            this.dgPaciente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgPaciente.Width = 65;
             // 
             // dgFechaIngreso
             // 
-            this.dgFechaIngreso.HeaderText = "FechaIngreso";
+            this.dgFechaIngreso.HeaderText = "Fecha Ingreso";
             this.dgFechaIngreso.Name = "dgFechaIngreso";
             this.dgFechaIngreso.ReadOnly = true;
+            this.dgFechaIngreso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // dgEntorno
             // 
@@ -308,7 +313,8 @@
             this.dgEntorno.HeaderText = "Entorno";
             this.dgEntorno.Name = "dgEntorno";
             this.dgEntorno.ReadOnly = true;
-            this.dgEntorno.Width = 78;
+            this.dgEntorno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgEntorno.Width = 59;
             // 
             // dgArea
             // 
@@ -316,7 +322,8 @@
             this.dgArea.HeaderText = "Area";
             this.dgArea.Name = "dgArea";
             this.dgArea.ReadOnly = true;
-            this.dgArea.Width = 60;
+            this.dgArea.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgArea.Width = 41;
             // 
             // dgEstancia
             // 
@@ -324,7 +331,8 @@
             this.dgEstancia.HeaderText = "Estancia";
             this.dgEstancia.Name = "dgEstancia";
             this.dgEstancia.ReadOnly = true;
-            this.dgEstancia.Width = 84;
+            this.dgEstancia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgEstancia.Width = 65;
             // 
             // dgEdad
             // 
@@ -332,7 +340,8 @@
             this.dgEdad.HeaderText = "Edad";
             this.dgEdad.Name = "dgEdad";
             this.dgEdad.ReadOnly = true;
-            this.dgEdad.Width = 63;
+            this.dgEdad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgEdad.Width = 44;
             // 
             // dgGenero
             // 
@@ -340,7 +349,8 @@
             this.dgGenero.HeaderText = "Genero";
             this.dgGenero.Name = "dgGenero";
             this.dgGenero.ReadOnly = true;
-            this.dgGenero.Width = 75;
+            this.dgGenero.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgGenero.Width = 56;
             // 
             // dgEps
             // 
@@ -348,13 +358,15 @@
             this.dgEps.HeaderText = "EPS";
             this.dgEps.Name = "dgEps";
             this.dgEps.ReadOnly = true;
-            this.dgEps.Width = 60;
+            this.dgEps.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgEps.Width = 41;
             // 
             // dgColor
             // 
             this.dgColor.HeaderText = "Color";
             this.dgColor.Name = "dgColor";
             this.dgColor.ReadOnly = true;
+            this.dgColor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dgColor.Visible = false;
             // 
             // ListadoPacienteUI
