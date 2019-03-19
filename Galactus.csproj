@@ -305,11 +305,11 @@
     <Compile Include="VistaControlador\HistoriaClinica\ListadoPacienteUI.Designer.cs">
       <DependentUpon>ListadoPacienteUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\IndiceacionesUI.cs">
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\IndicacionesUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\IndiceacionesUI.Designer.cs">
-      <DependentUpon>IndiceacionesUI.cs</DependentUpon>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\IndicacionesUI.Designer.cs">
+      <DependentUpon>IndicacionesUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\MedicamentosUI.cs">
       <SubType>Form</SubType>
@@ -472,8 +472,8 @@
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\ListadoPacienteUI.resx">
       <DependentUpon>ListadoPacienteUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\IndiceacionesUI.resx">
-      <DependentUpon>IndiceacionesUI.cs</DependentUpon>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\IndicacionesUI.resx">
+      <DependentUpon>IndicacionesUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\MedicamentosUI.resx">
       <DependentUpon>MedicamentosUI.cs</DependentUpon>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Galactus.VistaControlador.HistoriaClinica.FormIngreso
 {
-    public partial class ProductoUI : Form
+    public partial class AntecedentesIngresoUI : Form
     {
-        public ProductoUI()
+        public AntecedentesIngresoUI()
         {
             InitializeComponent();
         }

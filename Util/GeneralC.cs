@@ -80,6 +80,29 @@ namespace Galactus
 
             campoFecha = Convert.ToString(DateTime.Today.AddTicks(-fechaNacimiento.Ticks).Year );
         }
+
+        public static DataTable copiarNewDatatable(DataTable dtDatos,
+                                                   String nombreCampo,
+                                                   int codigoCampo)
+        {
+            DataTable dt = new DataTable();
+            dt = dtDatos.Clone();
+            DataRow[] filas;
+            try
+               
+            {
+                filas = dtDatos.Select(nombreCampo + "='" + codigoCampo + "'");
+                foreach (DataRow dw in filas)
+                {
+                    dt.ImportRow(dw);
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            return dt;
+        }
         public static void cargarUbicacionGeografica(DataTable dtUbicaciones,
                                                    String idMunicipio,
                                                  ref ComboBox comboPais,
@@ -635,32 +658,20 @@ namespace Galactus
                 throw ex;
             }
         }
-        public static void cargarFormularioPanel(Panel panelForm, Form formEntrante ) {
-            if (panelForm.Controls.Count > 0)
-            {
-                panelForm.Controls.RemoveAt(0);
-            }
-
-            formEntrante.TopLevel = false;
-            formEntrante.Dock = DockStyle.Fill;
-            formEntrante.FormBorderStyle = FormBorderStyle.None;
-            formEntrante.Controls.Add(formEntrante);
-            panelForm.Tag = formEntrante;
-            formEntrante.Show();
-       }
 
         public static void cargarFormularioEnPestana(TabPage tabPage, Form formContenido)
         {
             if (tabPage.Controls.Count > 0)
             {
-                tabPage.Controls.RemoveAt(0);
+                tabPage.Controls.Clear();
             }
-
+            
             formContenido.TopLevel = false;
-            formContenido.Dock = DockStyle.Fill;
+            formContenido.Dock = DockStyle.None;
             formContenido.FormBorderStyle = FormBorderStyle.None;
             tabPage.Controls.Add(formContenido);
             tabPage.Tag = formContenido;
+            tabPage.AutoScroll = true;                    
             formContenido.Show();
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace Galactus.VistaControlador.HistoriaClinica.FormIngreso
 {
-    partial class ProductoUI
+    partial class AntecedentesIngresoUI
     {
         /// <summary>
         /// Required designer variable.

@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Galactus.Util.Mensajes;
-using Galactus.VistaControlador.HistoriaClinica.FormIngreso;
-using Galactus.VistaControlador.Inventario;
 using Galactus.Entidades.HistoriaClinica;
+using Galactus.VistaControlador.HistoriaClinica.OrdenMedica;
+using Galactus.VistaControlador.HistoriaClinica.FormIngreso;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
@@ -18,16 +12,18 @@ namespace Galactus.VistaControlador.HistoriaClinica
     public partial class HistoriaClinicaUI : Form
     {
         private HistoriaClinicaPaciente historiaClinica = new HistoriaClinicaPaciente();
-        ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();
-        FormIngreso.ProductoUI antecedentesUI = new FormIngreso.ProductoUI();
-        HistoriaClinica.OrdenMedica.IndiceacionesUI indicaciones = new HistoriaClinica.OrdenMedica.IndiceacionesUI();
-        HistoriaClinica.OrdenMedica.ProcedimientosUI procedimientos = new HistoriaClinica.OrdenMedica.ProcedimientosUI();
-        HistoriaClinica.OrdenMedica.MedicamentosUI medicamentos = new HistoriaClinica.OrdenMedica.MedicamentosUI();
+        ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();        
+        AntecedentesIngresoUI antecedentesUI = new AntecedentesIngresoUI();
+        ExamenFisicoUI examenFisico = new ExamenFisicoUI();
+        IndicacionesUI indicaciones = new IndicacionesUI();
+        PronosticoUI analisis = new PronosticoUI();
+        ProcedimientosUI procedimientos = new ProcedimientosUI();
+        MedicamentosUI medicamentos = new MedicamentosUI();
 
        
         public HistoriaClinicaUI()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
         #region btnSalir      
@@ -38,63 +34,40 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 Close();
             }
         }
-        #endregion
-
-        
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void tabControlGalactus1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int tabSeleccionado = tcIngresoClinico.SelectedIndex;
-
-            switch (tabSeleccionado){
-                case 0:
-                    GeneralC.cargarFormularioEnPestana(tpValoracion, valoracionUI);
-                    break;
-                case 1:
-                    GeneralC.cargarFormularioEnPestana(tpAntecedentes, antecedentesUI);
-                    break;
-                case 2:
-                    GeneralC.cargarFormularioEnPestana(tpExamenFisico, valoracionUI);
-                    break;
-                case 3:
-                    GeneralC.cargarFormularioEnPestana(tpAnalisis, valoracionUI);
-                    break;
-            }          
-        }
-        private void tcOrdenMedica_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (tcOrdenMedica.SelectedIndex)
-            {
-                case 0:
-                    GeneralC.cargarFormularioEnPestana(tpIndicaciones, indicaciones);
-                    indicaciones.indicacion = historiaClinica.orden.indicacion;
-                    break;
-                case 1:
-                    procedimientos.procedimientos = historiaClinica.orden.procedimiento;
-                    GeneralC.cargarFormularioEnPestana(tbProcedimientos, procedimientos);
-                    break;
-                case 2:
-                    medicamentos.medicamentos = historiaClinica.orden.medicamento;
-                    GeneralC.cargarFormularioEnPestana(tpMedicamentos, medicamentos);
-                  
-                    break;
-                case 3:
-                    //GeneralC.cargarFormularioEnPestana(tpAnalisis, valoracionUI);
-                    break;
-            }
-        }
+        #endregion        
 
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
         {
-            tabControlGalactus1_SelectedIndexChanged(null, null);
-            tcOrdenMedica_SelectedIndexChanged(null,null);
+            GeneralC.cargarFormularioEnPestana(tpValoracion, valoracionUI);
+            GeneralC.cargarFormularioEnPestana(tpAntecedentes, antecedentesUI);
+            GeneralC.cargarFormularioEnPestana(tpExamenFisico, examenFisico);
+            GeneralC.cargarFormularioEnPestana(tpAnalisis, analisis);
+
+            GeneralC.cargarFormularioEnPestana(tpIndicaciones, indicaciones);
+            GeneralC.cargarFormularioEnPestana(tbProcedimientos, procedimientos);
+            GeneralC.cargarFormularioEnPestana(tpMedicamentos, medicamentos);
+
+            indicaciones.indicacion = historiaClinica.orden.indicacion;
+            medicamentos.medicamentos = historiaClinica.orden.medicamento;
+            procedimientos.procedimientos = historiaClinica.orden.procedimiento;
+        }
+
+        public  void obtenerDatosPaciente(ListadoPaciente listaPaciente,int idIngreso)
+        {
+            DataTable dtDatos = new DataTable();
+            dtDatos = GeneralC.copiarNewDatatable(listaPaciente.dtPaciente, "Atencion", idIngreso);
+            if (dtDatos.Rows.Count > 0)
+            {
+                txtAtencion.Text = Convert.ToString(dtDatos.Rows[0].Field<int>("Atencion"));
+                txtAdmision.Text = Convert.ToString(dtDatos.Rows[0].Field<int>("Admision"));
+                txtPaciente.Text = dtDatos.Rows[0].Field<String>("Paciente");
+                txtEdad.Text = Convert.ToString(dtDatos.Rows[0].Field<String>("Edad"));
+                txtContrato.Text = dtDatos.Rows[0].Field<String>("EPS");
+                txtEstancia.Text = Convert.ToString(dtDatos.Rows[0].Field<int>("Estancia"));
+                txtSexo.Text = dtDatos.Rows[0].Field<String>("Genero");
+                txtServicio.Text = dtDatos.Rows[0].Field<String>("Entorno");
+                txtfechaIngreso.Text = Convert.ToString(dtDatos.Rows[0].Field<DateTime>("Fecha ingreso"));
+            }
         }
 
         private void tabHistoriaClinica_SelectedIndexChanged(object sender, EventArgs e)
