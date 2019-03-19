@@ -102,6 +102,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             {
                 case ConstanteGeneral.MENU_ATENCION_MEDICA:
                     HistoriaClinicaUI formHistoriaClinica = new HistoriaClinicaUI();
+                    formHistoriaClinica.obtenerDatosPaciente(listaPaciente,Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value));
                     formHistoriaClinica.ShowDialog();
                     break;
                 case ConstanteGeneral.MENU_ATENCION_ENFERMERIA:

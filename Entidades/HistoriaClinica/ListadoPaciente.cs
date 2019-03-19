@@ -9,7 +9,7 @@ using Galactus.Util.Constantes;
 
 namespace Galactus.Entidades.HistoriaClinica
 {
-    class ListadoPaciente
+  public  class ListadoPaciente
     {
       public  DataTable dtPaciente = new DataTable();
         public String idMenu { get; set; }

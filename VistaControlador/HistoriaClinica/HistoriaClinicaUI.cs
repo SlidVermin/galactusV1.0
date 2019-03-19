@@ -12,6 +12,7 @@ using Galactus.VistaControlador.HistoriaClinica.FormIngreso;
 using Galactus.VistaControlador.Inventario;
 using Galactus.Entidades.HistoriaClinica;
 
+
 namespace Galactus.VistaControlador.HistoriaClinica
 {
 
@@ -95,6 +96,24 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
             tabControlGalactus1_SelectedIndexChanged(null, null);
             tcOrdenMedica_SelectedIndexChanged(null,null);
+        }
+
+        public  void obtenerDatosPaciente(ListadoPaciente listaPaciente,int idIngreso)
+        {
+            DataTable dtDatos = new DataTable();
+            dtDatos = GeneralC.copiarNewDatatable(listaPaciente.dtPaciente, "Atencion", idIngreso);
+            if (dtDatos.Rows.Count > 0)
+            {
+                txtAtencion.Text = Convert.ToString(dtDatos.Rows[0].Field<int>("Atencion"));
+                txtAdmision.Text = Convert.ToString(dtDatos.Rows[0].Field<int>("Admision"));
+                txtPaciente.Text = dtDatos.Rows[0].Field<String>("Paciente");
+                txtEdad.Text = Convert.ToString(dtDatos.Rows[0].Field<String>("Edad"));
+                txtContrato.Text = dtDatos.Rows[0].Field<String>("EPS");
+                txtEstancia.Text = Convert.ToString(dtDatos.Rows[0].Field<int>("Estancia"));
+                txtSexo.Text = dtDatos.Rows[0].Field<String>("Genero");
+                txtServicio.Text = dtDatos.Rows[0].Field<String>("Entorno");
+                txtfechaIngreso.Text = Convert.ToString(dtDatos.Rows[0].Field<DateTime>("Fecha ingreso"));
+            }
         }
 
         private void tabHistoriaClinica_SelectedIndexChanged(object sender, EventArgs e)

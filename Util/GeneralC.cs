@@ -80,6 +80,29 @@ namespace Galactus
 
             campoFecha = Convert.ToString(DateTime.Today.AddTicks(-fechaNacimiento.Ticks).Year );
         }
+
+        public static DataTable copiarNewDatatable(DataTable dtDatos,
+                                                   String nombreCampo,
+                                                   int codigoCampo)
+        {
+            DataTable dt = new DataTable();
+            dt = dtDatos.Clone();
+            DataRow[] filas;
+            try
+               
+            {
+                filas = dtDatos.Select(nombreCampo + "='" + codigoCampo + "'");
+                foreach (DataRow dw in filas)
+                {
+                    dt.ImportRow(dw);
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            return dt;
+        }
         public static void cargarUbicacionGeografica(DataTable dtUbicaciones,
                                                    String idMunicipio,
                                                  ref ComboBox comboPais,
