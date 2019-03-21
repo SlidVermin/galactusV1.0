@@ -50,6 +50,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
             indicaciones.indicacion = historiaClinica.orden.indicacion;
             medicamentos.medicamentos = historiaClinica.orden.medicamento;
             procedimientos.procedimientos = historiaClinica.orden.procedimiento;
+
+            GeneralC.formNuevo(this, tsIngreso, tsbGuardarIngreso, tsbCancelarIngreso);
         }
 
         public  void obtenerDatosPaciente(ListadoPaciente listaPaciente,int idIngreso)

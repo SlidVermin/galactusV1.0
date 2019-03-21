@@ -48,8 +48,7 @@
             this.txtAtencion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbTitulo = new System.Windows.Forms.Label();
             this.tpEvolucion = new System.Windows.Forms.TabPage();
             this.tbLaboratorios = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -61,36 +60,35 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.tcOrdenMedica = new Galactus.Util.Controles.TabControlGalactus();
-            this.tpIndicaciones = new System.Windows.Forms.TabPage();
-            this.tbProcedimientos = new System.Windows.Forms.TabPage();
-            this.tpMedicamentos = new System.Windows.Forms.TabPage();
-            this.tpAnalisisOrden = new System.Windows.Forms.TabPage();
             this.tpEstancia = new System.Windows.Forms.TabPage();
             this.tbIngreso = new System.Windows.Forms.TabPage();
-            this.tstMenuIngreso = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.tsIngreso = new System.Windows.Forms.ToolStrip();
+            this.tsbNuevoIngreso = new System.Windows.Forms.ToolStripButton();
+            this.tsbModificarIngreso = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardarIngreso = new System.Windows.Forms.ToolStripButton();
+            this.tsbBuscarIngreso = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnularIngreso = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelarIngreso = new System.Windows.Forms.ToolStripButton();
+            this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
             this.tcIngresoClinico = new Galactus.Util.Controles.TabControlGalactus();
             this.tpValoracion = new System.Windows.Forms.TabPage();
             this.tpAntecedentes = new System.Windows.Forms.TabPage();
             this.tpExamenFisico = new System.Windows.Forms.TabPage();
             this.tpAnalisis = new System.Windows.Forms.TabPage();
-            this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
+            this.tcOrdenMedica = new Galactus.Util.Controles.TabControlGalactus();
+            this.tpIndicaciones = new System.Windows.Forms.TabPage();
+            this.tbProcedimientos = new System.Windows.Forms.TabPage();
+            this.tpMedicamentos = new System.Windows.Forms.TabPage();
+            this.tpAnalisisOrden = new System.Windows.Forms.TabPage();
             this.pnlInformacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tbLaboratorios.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
             this.tstMenuOrdenMedica.SuspendLayout();
-            this.tcOrdenMedica.SuspendLayout();
             this.tbIngreso.SuspendLayout();
-            this.tstMenuIngreso.SuspendLayout();
-            this.tcIngresoClinico.SuspendLayout();
+            this.tsIngreso.SuspendLayout();
             this.tabHistoriaClinica.SuspendLayout();
+            this.tcIngresoClinico.SuspendLayout();
+            this.tcOrdenMedica.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlInformacion
@@ -133,10 +131,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(696, 30);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 16);
+            this.label10.Size = new System.Drawing.Size(62, 17);
             this.label10.TabIndex = 54;
             this.label10.Text = "Contrato:";
             // 
@@ -153,10 +151,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(230, 31);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 16);
+            this.label8.Size = new System.Drawing.Size(92, 17);
             this.label8.TabIndex = 52;
             this.label8.Text = "Fecha ingreso:";
             // 
@@ -173,10 +171,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(9, 31);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 16);
+            this.label7.Size = new System.Drawing.Size(85, 17);
             this.label7.TabIndex = 50;
             this.label7.Text = "Nº Admision:";
             // 
@@ -193,10 +191,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(1010, 6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 16);
+            this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 48;
             this.label6.Text = "Estancia:";
             // 
@@ -213,10 +211,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(732, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 16);
+            this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 46;
             this.label2.Text = "Edad:";
             // 
@@ -233,20 +231,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(850, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 16);
+            this.label4.Size = new System.Drawing.Size(39, 17);
             this.label4.TabIndex = 44;
             this.label4.Text = "Sexo:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(481, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 16);
+            this.label9.Size = new System.Drawing.Size(56, 17);
             this.label9.TabIndex = 24;
             this.label9.Text = "Servicio:";
             // 
@@ -282,41 +280,32 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(230, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 16);
+            this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 16;
             this.label3.Text = "Paciente:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(9, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.Size = new System.Drawing.Size(81, 17);
             this.label5.TabIndex = 15;
             this.label5.Text = "Nº Atención:";
             // 
-            // label1
+            // lbTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 18);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Historia Clinica";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.lbTitulo.AutoSize = true;
+            this.lbTitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.Location = new System.Drawing.Point(7, 10);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(126, 21);
+            this.lbTitulo.TabIndex = 8;
+            this.lbTitulo.Text = "Historia Clinica";
             // 
             // tpEvolucion
             // 
@@ -394,7 +383,7 @@
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(78, 22);
             this.toolStripButton2.Text = "Modificar";
             // 
             // toolStripButton3
@@ -437,60 +426,6 @@
             this.toolStripButton6.Size = new System.Drawing.Size(73, 22);
             this.toolStripButton6.Text = "Cancelar";
             // 
-            // tcOrdenMedica
-            // 
-            this.tcOrdenMedica.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tcOrdenMedica.Controls.Add(this.tpIndicaciones);
-            this.tcOrdenMedica.Controls.Add(this.tbProcedimientos);
-            this.tcOrdenMedica.Controls.Add(this.tpMedicamentos);
-            this.tcOrdenMedica.Controls.Add(this.tpAnalisisOrden);
-            this.tcOrdenMedica.ItemSize = new System.Drawing.Size(30, 120);
-            this.tcOrdenMedica.Location = new System.Drawing.Point(6, 5);
-            this.tcOrdenMedica.Multiline = true;
-            this.tcOrdenMedica.Name = "tcOrdenMedica";
-            this.tcOrdenMedica.SelectedIndex = 0;
-            this.tcOrdenMedica.Size = new System.Drawing.Size(1240, 428);
-            this.tcOrdenMedica.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tcOrdenMedica.TabIndex = 4;
-            // 
-            // tpIndicaciones
-            // 
-            this.tpIndicaciones.Location = new System.Drawing.Point(124, 4);
-            this.tpIndicaciones.Name = "tpIndicaciones";
-            this.tpIndicaciones.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIndicaciones.Size = new System.Drawing.Size(1112, 420);
-            this.tpIndicaciones.TabIndex = 0;
-            this.tpIndicaciones.Text = "Indicaciones";
-            this.tpIndicaciones.UseVisualStyleBackColor = true;
-            // 
-            // tbProcedimientos
-            // 
-            this.tbProcedimientos.Location = new System.Drawing.Point(124, 4);
-            this.tbProcedimientos.Name = "tbProcedimientos";
-            this.tbProcedimientos.Padding = new System.Windows.Forms.Padding(3);
-            this.tbProcedimientos.Size = new System.Drawing.Size(1112, 420);
-            this.tbProcedimientos.TabIndex = 1;
-            this.tbProcedimientos.Text = "Procedimientos";
-            this.tbProcedimientos.UseVisualStyleBackColor = true;
-            // 
-            // tpMedicamentos
-            // 
-            this.tpMedicamentos.Location = new System.Drawing.Point(124, 4);
-            this.tpMedicamentos.Name = "tpMedicamentos";
-            this.tpMedicamentos.Size = new System.Drawing.Size(1112, 420);
-            this.tpMedicamentos.TabIndex = 2;
-            this.tpMedicamentos.Text = "Medicamentos";
-            this.tpMedicamentos.UseVisualStyleBackColor = true;
-            // 
-            // tpAnalisisOrden
-            // 
-            this.tpAnalisisOrden.Location = new System.Drawing.Point(124, 4);
-            this.tpAnalisisOrden.Name = "tpAnalisisOrden";
-            this.tpAnalisisOrden.Size = new System.Drawing.Size(1112, 420);
-            this.tpAnalisisOrden.TabIndex = 3;
-            this.tpAnalisisOrden.Text = "Analisis";
-            this.tpAnalisisOrden.UseVisualStyleBackColor = true;
-            // 
             // tpEstancia
             // 
             this.tpEstancia.Location = new System.Drawing.Point(4, 29);
@@ -502,7 +437,7 @@
             // 
             // tbIngreso
             // 
-            this.tbIngreso.Controls.Add(this.tstMenuIngreso);
+            this.tbIngreso.Controls.Add(this.tsIngreso);
             this.tbIngreso.Controls.Add(this.tcIngresoClinico);
             this.tbIngreso.Location = new System.Drawing.Point(4, 29);
             this.tbIngreso.Name = "tbIngreso";
@@ -512,84 +447,99 @@
             this.tbIngreso.Text = "Ingreso Clinico";
             this.tbIngreso.UseVisualStyleBackColor = true;
             // 
-            // tstMenuIngreso
+            // tsIngreso
             // 
-            this.tstMenuIngreso.BackColor = System.Drawing.Color.White;
-            this.tstMenuIngreso.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuIngreso.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton7,
-            this.toolStripButton8,
-            this.toolStripButton9,
-            this.toolStripButton10,
-            this.toolStripButton11,
-            this.toolStripButton12});
-            this.tstMenuIngreso.Location = new System.Drawing.Point(3, 436);
-            this.tstMenuIngreso.MaximumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuIngreso.MinimumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuIngreso.Name = "tstMenuIngreso";
-            this.tstMenuIngreso.Size = new System.Drawing.Size(1040, 25);
-            this.tstMenuIngreso.TabIndex = 50;
-            this.tstMenuIngreso.Text = "toolStrip2";
+            this.tsIngreso.BackColor = System.Drawing.Color.White;
+            this.tsIngreso.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tsIngreso.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevoIngreso,
+            this.tsbModificarIngreso,
+            this.tsbGuardarIngreso,
+            this.tsbBuscarIngreso,
+            this.tsbAnularIngreso,
+            this.tsbCancelarIngreso});
+            this.tsIngreso.Location = new System.Drawing.Point(3, 436);
+            this.tsIngreso.MaximumSize = new System.Drawing.Size(1280, 25);
+            this.tsIngreso.MinimumSize = new System.Drawing.Size(1280, 25);
+            this.tsIngreso.Name = "tsIngreso";
+            this.tsIngreso.Size = new System.Drawing.Size(1280, 25);
+            this.tsIngreso.TabIndex = 50;
+            this.tsIngreso.Text = "toolStrip2";
             // 
-            // toolStripButton7
+            // tsbNuevoIngreso
             // 
-            this.toolStripButton7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.White;
-            this.toolStripButton7.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(62, 22);
-            this.toolStripButton7.Text = "Nuevo";
+            this.tsbNuevoIngreso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbNuevoIngreso.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevoIngreso.Image")));
+            this.tsbNuevoIngreso.ImageTransparentColor = System.Drawing.Color.White;
+            this.tsbNuevoIngreso.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbNuevoIngreso.Name = "tsbNuevoIngreso";
+            this.tsbNuevoIngreso.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevoIngreso.Text = "Nuevo";
             // 
-            // toolStripButton8
+            // tsbModificarIngreso
             // 
-            this.toolStripButton8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(57, 22);
-            this.toolStripButton8.Text = "Modificar";
+            this.tsbModificarIngreso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbModificarIngreso.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificarIngreso.Image")));
+            this.tsbModificarIngreso.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbModificarIngreso.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbModificarIngreso.Name = "tsbModificarIngreso";
+            this.tsbModificarIngreso.Size = new System.Drawing.Size(78, 22);
+            this.tsbModificarIngreso.Text = "Modificar";
             // 
-            // toolStripButton9
+            // tsbGuardarIngreso
             // 
-            this.toolStripButton9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(69, 22);
-            this.toolStripButton9.Text = "Guardar";
+            this.tsbGuardarIngreso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbGuardarIngreso.Image = ((System.Drawing.Image)(resources.GetObject("tsbGuardarIngreso.Image")));
+            this.tsbGuardarIngreso.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardarIngreso.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbGuardarIngreso.Name = "tsbGuardarIngreso";
+            this.tsbGuardarIngreso.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardarIngreso.Text = "Guardar";
             // 
-            // toolStripButton10
+            // tsbBuscarIngreso
             // 
-            this.toolStripButton10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(62, 22);
-            this.toolStripButton10.Text = "Buscar";
+            this.tsbBuscarIngreso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbBuscarIngreso.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarIngreso.Image")));
+            this.tsbBuscarIngreso.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscarIngreso.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbBuscarIngreso.Name = "tsbBuscarIngreso";
+            this.tsbBuscarIngreso.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscarIngreso.Text = "Buscar";
             // 
-            // toolStripButton11
+            // tsbAnularIngreso
             // 
-            this.toolStripButton11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
-            this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton11.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.Size = new System.Drawing.Size(62, 22);
-            this.toolStripButton11.Text = "Anular";
+            this.tsbAnularIngreso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbAnularIngreso.Image = ((System.Drawing.Image)(resources.GetObject("tsbAnularIngreso.Image")));
+            this.tsbAnularIngreso.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnularIngreso.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbAnularIngreso.Name = "tsbAnularIngreso";
+            this.tsbAnularIngreso.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnularIngreso.Text = "Anular";
             // 
-            // toolStripButton12
+            // tsbCancelarIngreso
             // 
-            this.toolStripButton12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
-            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton12.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(73, 22);
-            this.toolStripButton12.Text = "Cancelar";
+            this.tsbCancelarIngreso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelarIngreso.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelarIngreso.Image")));
+            this.tsbCancelarIngreso.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelarIngreso.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelarIngreso.Name = "tsbCancelarIngreso";
+            this.tsbCancelarIngreso.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelarIngreso.Text = "Cancelar";
+            // 
+            // tabHistoriaClinica
+            // 
+            this.tabHistoriaClinica.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabHistoriaClinica.Controls.Add(this.tbIngreso);
+            this.tabHistoriaClinica.Controls.Add(this.tpEstancia);
+            this.tabHistoriaClinica.Controls.Add(this.tpOrdenMedica);
+            this.tabHistoriaClinica.Controls.Add(this.tbLaboratorios);
+            this.tabHistoriaClinica.Controls.Add(this.tpEvolucion);
+            this.tabHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabHistoriaClinica.Location = new System.Drawing.Point(5, 104);
+            this.tabHistoriaClinica.Name = "tabHistoriaClinica";
+            this.tabHistoriaClinica.SelectedIndex = 0;
+            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 497);
+            this.tabHistoriaClinica.TabIndex = 46;
             // 
             // tcIngresoClinico
             // 
@@ -645,20 +595,59 @@
             this.tpAnalisis.Text = "Analisis";
             this.tpAnalisis.UseVisualStyleBackColor = true;
             // 
-            // tabHistoriaClinica
+            // tcOrdenMedica
             // 
-            this.tabHistoriaClinica.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabHistoriaClinica.Controls.Add(this.tbIngreso);
-            this.tabHistoriaClinica.Controls.Add(this.tpEstancia);
-            this.tabHistoriaClinica.Controls.Add(this.tpOrdenMedica);
-            this.tabHistoriaClinica.Controls.Add(this.tbLaboratorios);
-            this.tabHistoriaClinica.Controls.Add(this.tpEvolucion);
-            this.tabHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabHistoriaClinica.Location = new System.Drawing.Point(5, 104);
-            this.tabHistoriaClinica.Name = "tabHistoriaClinica";
-            this.tabHistoriaClinica.SelectedIndex = 0;
-            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 497);
-            this.tabHistoriaClinica.TabIndex = 46;
+            this.tcOrdenMedica.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tcOrdenMedica.Controls.Add(this.tpIndicaciones);
+            this.tcOrdenMedica.Controls.Add(this.tbProcedimientos);
+            this.tcOrdenMedica.Controls.Add(this.tpMedicamentos);
+            this.tcOrdenMedica.Controls.Add(this.tpAnalisisOrden);
+            this.tcOrdenMedica.ItemSize = new System.Drawing.Size(30, 120);
+            this.tcOrdenMedica.Location = new System.Drawing.Point(6, 5);
+            this.tcOrdenMedica.Multiline = true;
+            this.tcOrdenMedica.Name = "tcOrdenMedica";
+            this.tcOrdenMedica.SelectedIndex = 0;
+            this.tcOrdenMedica.Size = new System.Drawing.Size(1240, 428);
+            this.tcOrdenMedica.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tcOrdenMedica.TabIndex = 4;
+            // 
+            // tpIndicaciones
+            // 
+            this.tpIndicaciones.Location = new System.Drawing.Point(124, 4);
+            this.tpIndicaciones.Name = "tpIndicaciones";
+            this.tpIndicaciones.Padding = new System.Windows.Forms.Padding(3);
+            this.tpIndicaciones.Size = new System.Drawing.Size(1112, 420);
+            this.tpIndicaciones.TabIndex = 0;
+            this.tpIndicaciones.Text = "Indicaciones";
+            this.tpIndicaciones.UseVisualStyleBackColor = true;
+            // 
+            // tbProcedimientos
+            // 
+            this.tbProcedimientos.Location = new System.Drawing.Point(124, 4);
+            this.tbProcedimientos.Name = "tbProcedimientos";
+            this.tbProcedimientos.Padding = new System.Windows.Forms.Padding(3);
+            this.tbProcedimientos.Size = new System.Drawing.Size(1112, 420);
+            this.tbProcedimientos.TabIndex = 1;
+            this.tbProcedimientos.Text = "Procedimientos";
+            this.tbProcedimientos.UseVisualStyleBackColor = true;
+            // 
+            // tpMedicamentos
+            // 
+            this.tpMedicamentos.Location = new System.Drawing.Point(124, 4);
+            this.tpMedicamentos.Name = "tpMedicamentos";
+            this.tpMedicamentos.Size = new System.Drawing.Size(1112, 420);
+            this.tpMedicamentos.TabIndex = 2;
+            this.tpMedicamentos.Text = "Medicamentos";
+            this.tpMedicamentos.UseVisualStyleBackColor = true;
+            // 
+            // tpAnalisisOrden
+            // 
+            this.tpAnalisisOrden.Location = new System.Drawing.Point(124, 4);
+            this.tpAnalisisOrden.Name = "tpAnalisisOrden";
+            this.tpAnalisisOrden.Size = new System.Drawing.Size(1112, 420);
+            this.tpAnalisisOrden.TabIndex = 3;
+            this.tpAnalisisOrden.Text = "Analisis";
+            this.tpAnalisisOrden.UseVisualStyleBackColor = true;
             // 
             // HistoriaClinicaUI
             // 
@@ -667,32 +656,29 @@
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1304, 601);
             this.Controls.Add(this.tabHistoriaClinica);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.pnlInformacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximumSize = new System.Drawing.Size(1320, 640);
+            this.MaximumSize = new System.Drawing.Size(1340, 650);
             this.MinimumSize = new System.Drawing.Size(1320, 640);
             this.Name = "HistoriaClinicaUI";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Historia Clinica";
             this.Load += new System.EventHandler(this.HistoriaClinicaUI_Load);
             this.pnlInformacion.ResumeLayout(false);
             this.pnlInformacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tbLaboratorios.ResumeLayout(false);
             this.tpOrdenMedica.ResumeLayout(false);
             this.tpOrdenMedica.PerformLayout();
             this.tstMenuOrdenMedica.ResumeLayout(false);
             this.tstMenuOrdenMedica.PerformLayout();
-            this.tcOrdenMedica.ResumeLayout(false);
             this.tbIngreso.ResumeLayout(false);
             this.tbIngreso.PerformLayout();
-            this.tstMenuIngreso.ResumeLayout(false);
-            this.tstMenuIngreso.PerformLayout();
-            this.tcIngresoClinico.ResumeLayout(false);
+            this.tsIngreso.ResumeLayout(false);
+            this.tsIngreso.PerformLayout();
             this.tabHistoriaClinica.ResumeLayout(false);
+            this.tcIngresoClinico.ResumeLayout(false);
+            this.tcOrdenMedica.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -707,8 +693,7 @@
         private System.Windows.Forms.TextBox txtAtencion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.TextBox txtEstancia;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEdad;
@@ -738,13 +723,13 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStrip tstMenuIngreso;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
-        private System.Windows.Forms.ToolStripButton toolStripButton9;
-        private System.Windows.Forms.ToolStripButton toolStripButton10;
-        private System.Windows.Forms.ToolStripButton toolStripButton11;
-        private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.ToolStrip tsIngreso;
+        private System.Windows.Forms.ToolStripButton tsbNuevoIngreso;
+        private System.Windows.Forms.ToolStripButton tsbModificarIngreso;
+        private System.Windows.Forms.ToolStripButton tsbGuardarIngreso;
+        private System.Windows.Forms.ToolStripButton tsbBuscarIngreso;
+        private System.Windows.Forms.ToolStripButton tsbAnularIngreso;
+        private System.Windows.Forms.ToolStripButton tsbCancelarIngreso;
         private System.Windows.Forms.TextBox txtContrato;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtfechaIngreso;
