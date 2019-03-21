@@ -33,9 +33,9 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             cargarVias();
             enlazarGrillas();
         }
-        private void tstEditar_Click(object sender, EventArgs e)
+        private void tstModificar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+            GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
@@ -49,7 +49,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 try
                 {
                     EquivalenciaDAL.guardar(equivalencia);
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     txtBCodigo.Text = equivalencia.idEquivalencia.ToString();
                 }
                 catch (Exception ex)
@@ -170,7 +170,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 equivalencia.tablaProductos = tablasResultado.Tables[3].Copy();
                 enlazarGrillas();
 
-                GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular);
+                GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular);
             }
         }
         private void tsbBuscarUnidades_Click(object sender, EventArgs e)

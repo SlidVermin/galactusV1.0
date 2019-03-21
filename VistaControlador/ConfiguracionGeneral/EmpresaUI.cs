@@ -66,9 +66,9 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             limpiarObjetoEmpresa();
             GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
-        private void tstEditar_Click(object sender, EventArgs e)
+        private void tstModificar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+            GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
@@ -82,7 +82,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 try
                 {
                     EmpresaDAL.guardar(empresa);
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                 }
                 catch (Exception ex)
                 {
@@ -191,7 +191,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 cbPais.SelectedValue = filaResultado.Field<int>("IdPais");
                 cbDepartamento.SelectedValue = filaResultado.Field<int>("IdDepartamento");
                 cbCiudad.SelectedValue = empresa.ubicacion;
-                GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular);
+                GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular);
             }
         }
         void iniciarlizarForm()

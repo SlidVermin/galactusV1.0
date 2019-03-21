@@ -131,9 +131,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             }
         }
 
-        private void btEditar_Click(object sender, EventArgs e)
+        private void btModificar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Mensajes.EDITAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Mensajes.Modificar_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 GeneralC.deshabilitarBotones(ref tstMenuPatron);
                 GeneralC.habilitarControles(this);
@@ -194,7 +194,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             {
                 MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tstEditar, tsbBuscar, tsbAnular);
+            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tstModificar, tsbBuscar, tsbAnular);
             btnSalir.Enabled = true;
         }
         private List<string> listaParametroOculto()

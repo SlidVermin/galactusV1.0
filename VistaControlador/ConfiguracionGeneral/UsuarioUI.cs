@@ -30,9 +30,9 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
-        private void tstEditar_Click(object sender, EventArgs e)
+        private void tstModificar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+            GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
@@ -49,7 +49,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 try
                 {
                     UsuarioDAL.guardar(usuario);
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     txtBCodigo.Text = usuario.idUsuario.ToString();
                 }
                 catch (Exception ex)
@@ -136,7 +136,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             txtClave.Text = fila.Field<string>("Clave");
             txtBRol.Text = fila.Field<string>("Rol");
             usuario.idRol = fila.Field<int>("IdRol");
-            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular);
+            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular);
         }
         private bool validarForm()
         {

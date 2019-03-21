@@ -9,7 +9,7 @@ namespace Galactus.Util.Mensajes
     class Mensajes
     {
         public const string NOMBRE_SOFT = "Galactus";
-        public const string EDITAR_FORM = "¿ Desea editar el registro ?";
+        public const string Modificar_FORM = "¿ Desea Modificar el registro ?";
         public const string CANCELAR_FORM = "¿ Desea cancelar ?";
         public const string GUARDAR_FORM = "¿ Desea guardar ?";
         public const string ANULAR_FORM = "¿ Desea anular ?";

@@ -160,7 +160,7 @@ namespace Galactus.VistaControlador.Admision
             rbIniciado.Checked = true;
         }
 
-        private void tstEditar_Click(object sender, EventArgs e)
+        private void tstModificar_Click(object sender, EventArgs e)
         {
 
         }
@@ -265,7 +265,7 @@ namespace Galactus.VistaControlador.Admision
                 {
                     asignarDatos();
                     atencion.guardar();
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     atencion.dtDiagnostico.Rows.RemoveAt(atencion.dtDiagnostico.Rows.Count - 1);
                 }
                 catch (Exception ex)
@@ -298,7 +298,7 @@ namespace Galactus.VistaControlador.Admision
             txtFechaAdmision.Text = Convert.ToString( atencion.fechaAdmision);
             dgvDiagnostico.DataSource = atencion.dtDiagnostico;
             establecerAtencion();
-            tstEditar.Enabled = true;
+            tstModificar.Enabled = true;
             tsbAnular.Enabled = true;
         }
         public void establecerAtencion()
@@ -367,9 +367,9 @@ namespace Galactus.VistaControlador.Admision
            
         }
 
-        private void tstEditar_Click_1(object sender, EventArgs e)
+        private void tstModificar_Click_1(object sender, EventArgs e)
         {
-            if (GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar))
+            if (GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar))
             {
                 atencion.dtDiagnostico.Rows.Add();
                 btPacienteAdmision.Enabled = false;
@@ -385,7 +385,7 @@ namespace Galactus.VistaControlador.Admision
                 {
                     asignarDatos();
                     atencion.guardar();
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     atencion.dtDiagnostico.Rows.RemoveAt(atencion.dtDiagnostico.Rows.Count - 1);
                 }
                 catch (Exception ex)
@@ -398,14 +398,14 @@ namespace Galactus.VistaControlador.Admision
         private void tsbNuevo_Click_2(object sender, EventArgs e)
         {
             habilitarNuevo();
-            tstEditar.Enabled = false;
+            tstModificar.Enabled = false;
             tsbAnular.Enabled = false;
             
         }
 
-        private void tstEditar_Click_2(object sender, EventArgs e)
+        private void tstModificar_Click_2(object sender, EventArgs e)
         {
-            if (GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar))
+            if (GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar))
             {
                 atencion.dtDiagnostico.Rows.Add();
                 btPacienteAdmision.Enabled = false;
@@ -428,7 +428,7 @@ namespace Galactus.VistaControlador.Admision
                 {
                     asignarDatos();
                     atencion.guardar();
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     atencion.dtDiagnostico.Rows.RemoveAt(atencion.dtDiagnostico.Rows.Count - 1);
                     btnSalir.Enabled = true;
                 }

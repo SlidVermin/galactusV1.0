@@ -72,7 +72,7 @@
             this.Label25 = new System.Windows.Forms.Label();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tstEditar = new System.Windows.Forms.ToolStripButton();
+            this.tstModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
@@ -555,7 +555,7 @@
             this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
-            this.tstEditar,
+            this.tstModificar,
             this.tsbCancelar,
             this.tsbGuardar,
             this.tsbBuscar,
@@ -578,15 +578,15 @@
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
             // 
-            // tstEditar
+            // tstModificar
             // 
-            this.tstEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tstEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.tstEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstEditar.Name = "tstEditar";
-            this.tstEditar.Size = new System.Drawing.Size(57, 22);
-            this.tstEditar.Text = "Editar";
+            this.tstModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tstModificar.Image = global::Galactus.Properties.Resources.bt_Editar;
+            this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstModificar.Name = "tstModificar";
+            this.tstModificar.Size = new System.Drawing.Size(57, 22);
+            this.tstModificar.Text = "Modificar";
             // 
             // tsbCancelar
             // 
@@ -708,7 +708,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
-        private System.Windows.Forms.ToolStripButton tstEditar;
+        private System.Windows.Forms.ToolStripButton tstModificar;
         private System.Windows.Forms.ToolStripButton tsbCancelar;
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbBuscar;

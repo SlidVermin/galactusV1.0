@@ -178,8 +178,8 @@
   <data name="team (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\team (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bt-editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bt-editar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bt-Editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bt-Editar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Very-Basic-Search-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Very-Basic-Search-icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

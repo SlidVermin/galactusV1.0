@@ -532,12 +532,12 @@ namespace Galactus
             limpiarControles(formulario);
             accionesGenerales(formulario, menu, btn1, btn2, null, null, null, msm);
         }
-        public static bool fnEditarForm(Form formulario,
+        public static bool fnModificarForm(Form formulario,
                                         ToolStrip menu,
                                         ToolStripButton btn1,
                                         ToolStripButton btn2)
         {
-            if (MessageBox.Show(Mensajes.EDITAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show(Mensajes.Modificar_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return false;
             }
@@ -614,8 +614,8 @@ namespace Galactus
                     case "tsbNuevo":
                         item.Image = Properties.Resources.btn_nuevo;
                         break;
-                    case "tstEditar":
-                        item.Image = Properties.Resources.bt_editar;
+                    case "tstModificar":
+                        item.Image = Properties.Resources.bt_Editar;
                         break;
                     case "tsbCancelar":
                         item.Image = Properties.Resources.btn_cancelar;

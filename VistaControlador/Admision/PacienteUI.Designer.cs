@@ -101,7 +101,7 @@
             this.label30 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tstEditar = new System.Windows.Forms.ToolStripButton();
+            this.tstModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
@@ -864,16 +864,16 @@
             this.tsbNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click_1);
             // 
-            // tstEditar
+            // tstModificar
             // 
-            this.tstEditar.Image = global::Galactus.Properties.Resources.bt_editar;
-            this.tstEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstEditar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstEditar.Name = "tstEditar";
-            this.tstEditar.Size = new System.Drawing.Size(57, 22);
-            this.tstEditar.Text = "Editar";
-            this.tstEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.tstEditar.Click += new System.EventHandler(this.tstEditar_Click_1);
+            this.tstModificar.Image = global::Galactus.Properties.Resources.bt_Editar;
+            this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstModificar.Name = "tstModificar";
+            this.tstModificar.Size = new System.Drawing.Size(57, 22);
+            this.tstModificar.Text = "Modificar";
+            this.tstModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.tstModificar.Click += new System.EventHandler(this.tstModificar_Click_1);
             // 
             // tsbCancelar
             // 
@@ -922,7 +922,7 @@
             this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
-            this.tstEditar,
+            this.tstModificar,
             this.tsbCancelar,
             this.tsbGuardar,
             this.tsbBuscar,
@@ -1045,7 +1045,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
-        private System.Windows.Forms.ToolStripButton tstEditar;
+        private System.Windows.Forms.ToolStripButton tstModificar;
         private System.Windows.Forms.ToolStripButton tsbCancelar;
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbBuscar;

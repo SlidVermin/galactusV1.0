@@ -43,7 +43,7 @@ namespace Galactus.VistaControlador.Inventario
         {
             txtBCodigo.Text = fila.Field<int>(0).ToString();
             txtDescripcion.Text = fila.Field<string>(1);
-            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular);
+            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular);
         }
         #endregion
         #region Eventos de botones
@@ -59,7 +59,7 @@ namespace Galactus.VistaControlador.Inventario
                     try
                     {
                         BodegaDAL.guardar(bodega);
-                        GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                        GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                         txtBCodigo.Text = bodega.idBodega.ToString();
                     }
                     catch (Exception ex)
@@ -91,9 +91,9 @@ namespace Galactus.VistaControlador.Inventario
         {
             GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
-        private void tstEditar_Click(object sender, EventArgs e)
+        private void tstModificar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+            GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
         private void tsbCancelar_Click(object sender, EventArgs e)
         {

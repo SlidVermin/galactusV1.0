@@ -12,13 +12,13 @@ namespace Galactus.VistaControlador.HistoriaClinica
     public partial class HistoriaClinicaUI : Form
     {
         private HistoriaClinicaPaciente historiaClinica = new HistoriaClinicaPaciente();
-        ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();        
-        AntecedentesIngresoUI antecedentesUI = new AntecedentesIngresoUI();
-        ExamenFisicoUI examenFisico = new ExamenFisicoUI();
-        IndicacionesUI indicaciones = new IndicacionesUI();
-        PronosticoUI analisis = new PronosticoUI();
-        ProcedimientosUI procedimientos = new ProcedimientosUI();
-        MedicamentosUI medicamentos = new MedicamentosUI();
+        private ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();        
+        private AntecedentesIngresoUI antecedentesUI = new AntecedentesIngresoUI();
+        private ExamenFisicoUI examenFisico = new ExamenFisicoUI();
+        private IndicacionesUI indicaciones = new IndicacionesUI();
+        private PronosticoUI analisis = new PronosticoUI();
+        private ProcedimientosUI procedimientos = new ProcedimientosUI();
+        private MedicamentosUI medicamentos = new MedicamentosUI();
 
        
         public HistoriaClinicaUI()
@@ -69,12 +69,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 txtfechaIngreso.Text = Convert.ToString(dtDatos.Rows[0].Field<DateTime>("Fecha ingreso"));
             }
         }
-
-        private void tabHistoriaClinica_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
+      
         private void tsBtNuevo_Click(object sender, EventArgs e)
         {
             historiaClinica.orden.nuevaOrden();

@@ -22,7 +22,7 @@ namespace Galactus.VistaControlador.Gestion
 
         }
 
-        private void tstEditar_Click(object sender, EventArgs e)
+        private void tstModificar_Click(object sender, EventArgs e)
         {
 
         }

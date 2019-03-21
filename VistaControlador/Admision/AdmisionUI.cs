@@ -36,7 +36,7 @@ namespace Galactus.VistaControlador.Admision
 
         }
 
-        private void editarBtn_Click(object sender, EventArgs e)
+        private void ModificarBtn_Click(object sender, EventArgs e)
         {
 
         }
@@ -406,7 +406,7 @@ namespace Galactus.VistaControlador.Admision
                     asignarDatos();
                     admision.guardar();
                     nRegistroText.Text = Convert.ToString(admision.idAdmision);
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
 
                 }
                 catch (Exception ex)
@@ -467,9 +467,9 @@ namespace Galactus.VistaControlador.Admision
             ciudadResBox.Enabled = false;
         }
 
-        private void tstEditar_Click(object sender, EventArgs e)
+        private void tstModificar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+            GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
             buscarHCPacienteBtn.Enabled = false;
             fechaPacientePicker.Enabled = false;
         }
@@ -518,7 +518,7 @@ namespace Galactus.VistaControlador.Admision
             triageBox.SelectedValue = admision.idTriage;
             especialidadText.Text = admision.especialidad;
             nRegistroText.Text = Convert.ToString( admision.idAdmision);
-            tstEditar.Enabled = true;
+            tstModificar.Enabled = true;
             tsbAnular.Enabled = true;
             if (admision.acompanante)
             {

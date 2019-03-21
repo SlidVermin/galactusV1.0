@@ -93,7 +93,7 @@ namespace Galactus.VistaControlador.Inventario
                 txtRegSanitario.Text = producto.registroSanitario;
                 txtCUM.Text = producto.codigoCUM;
                 ndIva.Value = (decimal)producto.iva;
-                GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular);
+                GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular);
             }
 
 
@@ -119,9 +119,9 @@ namespace Galactus.VistaControlador.Inventario
         {
             GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
-        private void tstEditar_Click(object sender, EventArgs e)
+        private void tstModificar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+            GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
@@ -209,7 +209,7 @@ namespace Galactus.VistaControlador.Inventario
                 try
                 {
                     ProductoDAL.guardar(producto);
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     txtBCodigo.Text = producto.idProducto.ToString();
                 }
                 catch (Exception ex)

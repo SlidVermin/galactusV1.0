@@ -75,9 +75,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
         {
             datagrid.Columns[columnaDgv].DataPropertyName = columnaDt;
         }
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+            GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
 
         private void tsbCancelar_Click(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
                 txtBCodigo.Text = configuracionProcedimientoMedico.idConfiguracion.ToString();
                 txtBNombreProcedimiento.Text = configuracionProcedimientoMedico.descripcionItem;
 
-                //GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, btnEditar, tsbAnular);
+                //GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, btnModificar, tsbAnular);
             }
 
 

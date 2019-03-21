@@ -42,7 +42,7 @@ namespace Galactus.VistaControlador
 
         }
 
-        private void editarBtn_Click(object sender, EventArgs e)
+        private void ModificarBtn_Click(object sender, EventArgs e)
         {
 
         }
@@ -321,7 +321,7 @@ namespace Galactus.VistaControlador
             fechaNPicker.Value = paciente.fechaNacimiento;
             GeneralC.calcularEdad(fechaNPicker.Value, ref edad);
             edadText.Text = edad;
-            tstEditar.Enabled = true;
+            tstModificar.Enabled = true;
             tsbAnular.Enabled = true;
             btnSalir.Enabled = true;
             deshabilitarCombo();
@@ -335,7 +335,7 @@ namespace Galactus.VistaControlador
                 {
                     asignarDatos();
                     PacienteDAL.guardar(paciente);
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstEditar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
 
                 }
                 catch (Exception ex)
@@ -370,9 +370,9 @@ namespace Galactus.VistaControlador
             fechaNPicker.ResetText();
         }
 
-        private void tstEditar_Click_1(object sender, EventArgs e)
+        private void tstModificar_Click_1(object sender, EventArgs e)
         {
-            GeneralC.fnEditarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+            GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
         }
 
         private void tsbNuevo_Click_1(object sender, EventArgs e)
