@@ -107,6 +107,7 @@
     <Compile Include="Modelo\Gestion\ClienteDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\HistoriaClinicaDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\IngresoClinicoDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\HemodialisisDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\InformeQuirurgicoDAL.cs" />
     <Compile Include="Modelo\Inventario\BodegaDAL.cs" />
@@ -241,12 +242,6 @@
     <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedenteRecienNacidoUI.Designer.cs">
       <DependentUpon>AntecedenteRecienNacidoUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesFamiliaresUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesFamiliaresUI.Designer.cs">
-      <DependentUpon>AntecedentesFamiliaresUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesMaternosUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,11 +278,11 @@
     <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\ExamenFisicoUI.Designer.cs">
       <DependentUpon>ExamenFisicoUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\PronosticoUI.cs">
+    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AnalisisUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\PronosticoUI.Designer.cs">
-      <DependentUpon>PronosticoUI.cs</DependentUpon>
+    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AnalisisUI.Designer.cs">
+      <DependentUpon>AnalisisUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\HistoriaClinicaUI.cs">
       <SubType>Form</SubType>
@@ -300,6 +295,12 @@
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\HistoriaEnfermeriaUI.Designer.cs">
       <DependentUpon>HistoriaEnfermeriaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\IngresoClinicoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\IngresoClinicoUI.Designer.cs">
+      <DependentUpon>IngresoClinicoUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\ListadoPacienteUI.cs">
       <SubType>Form</SubType>
@@ -444,9 +445,6 @@
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedenteRecienNacidoUI.resx">
       <DependentUpon>AntecedenteRecienNacidoUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesFamiliaresUI.resx">
-      <DependentUpon>AntecedentesFamiliaresUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedentesMaternosUI.resx">
       <DependentUpon>AntecedentesMaternosUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -465,11 +463,14 @@
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\ExamenFisicoUI.resx">
       <DependentUpon>ExamenFisicoUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\PronosticoUI.resx">
-      <DependentUpon>PronosticoUI.cs</DependentUpon>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\AnalisisUI.resx">
+      <DependentUpon>AnalisisUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\HistoriaClinicaUI.resx">
       <DependentUpon>HistoriaClinicaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\IngresoClinicoUI.resx">
+      <DependentUpon>IngresoClinicoUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\ListadoPacienteUI.resx">
       <DependentUpon>ListadoPacienteUI.cs</DependentUpon>

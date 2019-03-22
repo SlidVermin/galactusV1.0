@@ -12,13 +12,10 @@ namespace Galactus.VistaControlador.HistoriaClinica
     public partial class HistoriaClinicaUI : Form
     {
         private HistoriaClinicaPaciente historiaClinica = new HistoriaClinicaPaciente();
-        private ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();        
-        private AntecedentesIngresoUI antecedentesUI = new AntecedentesIngresoUI();
-        private ExamenFisicoUI examenFisico = new ExamenFisicoUI();
         private IndicacionesUI indicaciones = new IndicacionesUI();
-        private PronosticoUI analisis = new PronosticoUI();
         private ProcedimientosUI procedimientos = new ProcedimientosUI();
         private MedicamentosUI medicamentos = new MedicamentosUI();
+        private IngresoClinicoUI ingreso = new IngresoClinicoUI();
 
        
         public HistoriaClinicaUI()
@@ -37,12 +34,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
         #endregion        
 
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
-        {
-            GeneralC.cargarFormularioEnPestana(tpValoracion, valoracionUI);
-            GeneralC.cargarFormularioEnPestana(tpAntecedentes, antecedentesUI);
-            GeneralC.cargarFormularioEnPestana(tpExamenFisico, examenFisico);
-            GeneralC.cargarFormularioEnPestana(tpAnalisis, analisis);
-
+        {           
+            GeneralC.cargarFormularioEnPestana(tpIngresoClinico, ingreso);
             GeneralC.cargarFormularioEnPestana(tpIndicaciones, indicaciones);
             GeneralC.cargarFormularioEnPestana(tbProcedimientos, procedimientos);
             GeneralC.cargarFormularioEnPestana(tpMedicamentos, medicamentos);
@@ -50,8 +43,6 @@ namespace Galactus.VistaControlador.HistoriaClinica
             indicaciones.indicacion = historiaClinica.orden.indicacion;
             medicamentos.medicamentos = historiaClinica.orden.medicamento;
             procedimientos.procedimientos = historiaClinica.orden.procedimiento;
-
-           
         }
 
         public  void obtenerDatosPaciente(ListadoPaciente listaPaciente,int idIngreso)
@@ -64,7 +55,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 txtAdmision.Text = Convert.ToString(dtDatos.Rows[0].Field<int>("Admision"));
                 txtPaciente.Text = dtDatos.Rows[0].Field<String>("Paciente");
                 txtEdad.Text = Convert.ToString(dtDatos.Rows[0].Field<String>("Edad"));
-                txtContrato.Text = dtDatos.Rows[0].Field<String>("EPS");
+                tcHistoriaClinica.Text = dtDatos.Rows[0].Field<String>("EPS");
                 txtEstancia.Text = Convert.ToString(dtDatos.Rows[0].Field<int>("Estancia"));
                 txtSexo.Text = dtDatos.Rows[0].Field<String>("Genero");
                 txtServicio.Text = dtDatos.Rows[0].Field<String>("Entorno");
@@ -74,8 +65,12 @@ namespace Galactus.VistaControlador.HistoriaClinica
       
         private void tsBtNuevo_Click(object sender, EventArgs e)
         {
-            historiaClinica.orden.nuevaOrden();
-            
+            historiaClinica.orden.nuevaOrden();            
+        }
+
+        private void tsbGuardarIngreso_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

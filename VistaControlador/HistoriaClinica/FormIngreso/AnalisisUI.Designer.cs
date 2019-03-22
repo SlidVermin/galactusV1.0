@@ -1,6 +1,6 @@
 ﻿namespace Galactus.VistaControlador.HistoriaClinica.FormIngreso
 {
-    partial class PronosticoUI
+    partial class AnalisisUI
     {
         /// <summary>
         /// Required designer variable.
@@ -30,59 +30,59 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.Label59 = new System.Windows.Forms.Label();
-            this.txtPronosticoN = new System.Windows.Forms.TextBox();
-            this.txtAnalisisN = new System.Windows.Forms.TextBox();
+            this.txtAnalisis = new System.Windows.Forms.TextBox();
+            this.txtPronostico = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(16, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 16);
+            this.label1.Size = new System.Drawing.Size(51, 17);
             this.label1.TabIndex = 10061;
-            this.label1.Text = "Antecedentes Familiares:";
+            this.label1.Text = "Analisis";
             // 
             // Label59
             // 
             this.Label59.AutoSize = true;
-            this.Label59.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Label59.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label59.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label59.Location = new System.Drawing.Point(16, 180);
+            this.Label59.Location = new System.Drawing.Point(16, 147);
             this.Label59.Name = "Label59";
-            this.Label59.Size = new System.Drawing.Size(134, 16);
+            this.Label59.Size = new System.Drawing.Size(70, 17);
             this.Label59.TabIndex = 10060;
-            this.Label59.Text = "Revisión por Sistema:";
+            this.Label59.Text = "Pronostico";
             // 
-            // txtPronosticoN
+            // txtAnalisis
             // 
-            this.txtPronosticoN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtPronosticoN.Location = new System.Drawing.Point(189, 12);
-            this.txtPronosticoN.Multiline = true;
-            this.txtPronosticoN.Name = "txtPronosticoN";
-            this.txtPronosticoN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPronosticoN.Size = new System.Drawing.Size(726, 157);
-            this.txtPronosticoN.TabIndex = 10062;
+            this.txtAnalisis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAnalisis.Location = new System.Drawing.Point(19, 39);
+            this.txtAnalisis.Multiline = true;
+            this.txtAnalisis.Name = "txtAnalisis";
+            this.txtAnalisis.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtAnalisis.Size = new System.Drawing.Size(896, 84);
+            this.txtAnalisis.TabIndex = 10062;
             // 
-            // txtAnalisisN
+            // txtPronostico
             // 
-            this.txtAnalisisN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtAnalisisN.Location = new System.Drawing.Point(189, 175);
-            this.txtAnalisisN.Multiline = true;
-            this.txtAnalisisN.Name = "txtAnalisisN";
-            this.txtAnalisisN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAnalisisN.Size = new System.Drawing.Size(726, 175);
-            this.txtAnalisisN.TabIndex = 10063;
+            this.txtPronostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtPronostico.Location = new System.Drawing.Point(19, 167);
+            this.txtPronostico.Multiline = true;
+            this.txtPronostico.Name = "txtPronostico";
+            this.txtPronostico.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPronostico.Size = new System.Drawing.Size(896, 88);
+            this.txtPronostico.TabIndex = 10063;
             // 
             // PronosticoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(927, 355);
-            this.Controls.Add(this.txtPronosticoN);
-            this.Controls.Add(this.txtAnalisisN);
+            this.ClientSize = new System.Drawing.Size(927, 279);
+            this.Controls.Add(this.txtAnalisis);
+            this.Controls.Add(this.txtPronostico);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Label59);
             this.Name = "PronosticoUI";
@@ -96,7 +96,7 @@
 
         internal System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label Label59;
-        internal System.Windows.Forms.TextBox txtPronosticoN;
-        internal System.Windows.Forms.TextBox txtAnalisisN;
+        internal System.Windows.Forms.TextBox txtAnalisis;
+        internal System.Windows.Forms.TextBox txtPronostico;
     }
 }

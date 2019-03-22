@@ -16,5 +16,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.FormIngreso
         {
             InitializeComponent();
         }
+
+      
     }
 }

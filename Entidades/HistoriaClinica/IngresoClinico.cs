@@ -19,6 +19,7 @@ namespace Galactus.Entidades.HistoriaClinica
         public String AntecedentesToxicos { get; set; }
         public String AntecedentesFamiliares { get; set; }
         public String RevisionSistema { get; set; }
+        public String Generales { get; set; }
         public String SignosVitales { get; set; }
         public String CabezaCuello { get; set; }
         public String Torax { get; set; }
@@ -29,7 +30,7 @@ namespace Galactus.Entidades.HistoriaClinica
         public String SistemaNervioso { get; set; }
         public String Paraclinicos { get; set; }
         public String Analisis { get; set; }
-        public String Pronosticos { get; set; }
+        public String Pronostico { get; set; }
         public int IdUsuario { get; set; }
         public int IdUsuarioOrigen { get; set; }
         public DateTime FechaOrigen { get; set; }

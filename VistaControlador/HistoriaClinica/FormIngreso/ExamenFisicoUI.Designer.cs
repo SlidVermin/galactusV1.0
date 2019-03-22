@@ -30,47 +30,49 @@
         {
             this.GroupBox26 = new System.Windows.Forms.GroupBox();
             this.Label160 = new System.Windows.Forms.Label();
-            this.txtGeneralesN = new System.Windows.Forms.TextBox();
-            this.Label93 = new System.Windows.Forms.Label();
-            this.txtS_NervN = new System.Windows.Forms.TextBox();
+            this.txtSistemaNervioso = new System.Windows.Forms.TextBox();
             this.Label89 = new System.Windows.Forms.Label();
-            this.txtExtremidadesN = new System.Windows.Forms.TextBox();
+            this.txtExtremidades = new System.Windows.Forms.TextBox();
             this.Label90 = new System.Windows.Forms.Label();
-            this.txtGenitoN = new System.Windows.Forms.TextBox();
+            this.txtGenitalUrinario = new System.Windows.Forms.TextBox();
             this.Label91 = new System.Windows.Forms.Label();
-            this.txtAbdomenN = new System.Windows.Forms.TextBox();
+            this.txtAbdomen = new System.Windows.Forms.TextBox();
             this.Label92 = new System.Windows.Forms.Label();
-            this.txtCardioN = new System.Windows.Forms.TextBox();
+            this.txtCardioPulmonar = new System.Windows.Forms.TextBox();
             this.Label85 = new System.Windows.Forms.Label();
-            this.txtToraxN = new System.Windows.Forms.TextBox();
+            this.txtTorax = new System.Windows.Forms.TextBox();
             this.Label86 = new System.Windows.Forms.Label();
-            this.txtCab_cuelloN = new System.Windows.Forms.TextBox();
+            this.txtCabezaCuello = new System.Windows.Forms.TextBox();
             this.Label87 = new System.Windows.Forms.Label();
-            this.txtSig_vitalesN = new System.Windows.Forms.TextBox();
+            this.txtSignosVitales = new System.Windows.Forms.TextBox();
             this.Label88 = new System.Windows.Forms.Label();
+            this.txtPielFaneras = new System.Windows.Forms.TextBox();
+            this.txtGenerales = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.GroupBox26.SuspendLayout();
             this.SuspendLayout();
             // 
             // GroupBox26
             // 
+            this.GroupBox26.Controls.Add(this.label1);
+            this.GroupBox26.Controls.Add(this.txtGenerales);
+            this.GroupBox26.Controls.Add(this.txtPielFaneras);
             this.GroupBox26.Controls.Add(this.Label160);
-            this.GroupBox26.Controls.Add(this.txtGeneralesN);
-            this.GroupBox26.Controls.Add(this.Label93);
-            this.GroupBox26.Controls.Add(this.txtS_NervN);
+            this.GroupBox26.Controls.Add(this.txtSistemaNervioso);
             this.GroupBox26.Controls.Add(this.Label89);
-            this.GroupBox26.Controls.Add(this.txtExtremidadesN);
+            this.GroupBox26.Controls.Add(this.txtExtremidades);
             this.GroupBox26.Controls.Add(this.Label90);
-            this.GroupBox26.Controls.Add(this.txtGenitoN);
+            this.GroupBox26.Controls.Add(this.txtGenitalUrinario);
             this.GroupBox26.Controls.Add(this.Label91);
-            this.GroupBox26.Controls.Add(this.txtAbdomenN);
+            this.GroupBox26.Controls.Add(this.txtAbdomen);
             this.GroupBox26.Controls.Add(this.Label92);
-            this.GroupBox26.Controls.Add(this.txtCardioN);
+            this.GroupBox26.Controls.Add(this.txtCardioPulmonar);
             this.GroupBox26.Controls.Add(this.Label85);
-            this.GroupBox26.Controls.Add(this.txtToraxN);
+            this.GroupBox26.Controls.Add(this.txtTorax);
             this.GroupBox26.Controls.Add(this.Label86);
-            this.GroupBox26.Controls.Add(this.txtCab_cuelloN);
+            this.GroupBox26.Controls.Add(this.txtCabezaCuello);
             this.GroupBox26.Controls.Add(this.Label87);
-            this.GroupBox26.Controls.Add(this.txtSig_vitalesN);
+            this.GroupBox26.Controls.Add(this.txtSignosVitales);
             this.GroupBox26.Controls.Add(this.Label88);
             this.GroupBox26.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.GroupBox26.ForeColor = System.Drawing.Color.Black;
@@ -85,42 +87,21 @@
             this.Label160.AutoSize = true;
             this.Label160.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Label160.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label160.Location = new System.Drawing.Point(6, 223);
+            this.Label160.Location = new System.Drawing.Point(487, 170);
             this.Label160.Name = "Label160";
             this.Label160.Size = new System.Drawing.Size(96, 16);
             this.Label160.TabIndex = 10075;
             this.Label160.Text = "Piel y Faneras:";
             // 
-            // txtGeneralesN
+            // txtSistemaNervioso
             // 
-            this.txtGeneralesN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtGeneralesN.Location = new System.Drawing.Point(115, 17);
-            this.txtGeneralesN.Multiline = true;
-            this.txtGeneralesN.Name = "txtGeneralesN";
-            this.txtGeneralesN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtGeneralesN.Size = new System.Drawing.Size(801, 41);
-            this.txtGeneralesN.TabIndex = 10074;
-            // 
-            // Label93
-            // 
-            this.Label93.AutoSize = true;
-            this.Label93.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Label93.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label93.Location = new System.Drawing.Point(6, 20);
-            this.Label93.Name = "Label93";
-            this.Label93.Size = new System.Drawing.Size(71, 16);
-            this.Label93.TabIndex = 10073;
-            this.Label93.Text = "Generales:";
-            // 
-            // txtS_NervN
-            // 
-            this.txtS_NervN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtS_NervN.Location = new System.Drawing.Point(606, 113);
-            this.txtS_NervN.Multiline = true;
-            this.txtS_NervN.Name = "txtS_NervN";
-            this.txtS_NervN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtS_NervN.Size = new System.Drawing.Size(310, 41);
-            this.txtS_NervN.TabIndex = 10072;
+            this.txtSistemaNervioso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtSistemaNervioso.Location = new System.Drawing.Point(606, 113);
+            this.txtSistemaNervioso.Multiline = true;
+            this.txtSistemaNervioso.Name = "txtSistemaNervioso";
+            this.txtSistemaNervioso.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSistemaNervioso.Size = new System.Drawing.Size(303, 41);
+            this.txtSistemaNervioso.TabIndex = 10072;
             // 
             // Label89
             // 
@@ -133,15 +114,15 @@
             this.Label89.TabIndex = 10071;
             this.Label89.Text = "S. Nerv. Central:";
             // 
-            // txtExtremidadesN
+            // txtExtremidades
             // 
-            this.txtExtremidadesN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtExtremidadesN.Location = new System.Drawing.Point(115, 205);
-            this.txtExtremidadesN.Multiline = true;
-            this.txtExtremidadesN.Name = "txtExtremidadesN";
-            this.txtExtremidadesN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtExtremidadesN.Size = new System.Drawing.Size(353, 41);
-            this.txtExtremidadesN.TabIndex = 10070;
+            this.txtExtremidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtExtremidades.Location = new System.Drawing.Point(115, 204);
+            this.txtExtremidades.Multiline = true;
+            this.txtExtremidades.Name = "txtExtremidades";
+            this.txtExtremidades.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtExtremidades.Size = new System.Drawing.Size(353, 41);
+            this.txtExtremidades.TabIndex = 10070;
             // 
             // Label90
             // 
@@ -154,15 +135,15 @@
             this.Label90.TabIndex = 10069;
             this.Label90.Text = "Extremidades";
             // 
-            // txtGenitoN
+            // txtGenitalUrinario
             // 
-            this.txtGenitoN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtGenitoN.Location = new System.Drawing.Point(606, 66);
-            this.txtGenitoN.Multiline = true;
-            this.txtGenitoN.Name = "txtGenitoN";
-            this.txtGenitoN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtGenitoN.Size = new System.Drawing.Size(310, 41);
-            this.txtGenitoN.TabIndex = 10068;
+            this.txtGenitalUrinario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtGenitalUrinario.Location = new System.Drawing.Point(606, 66);
+            this.txtGenitalUrinario.Multiline = true;
+            this.txtGenitalUrinario.Name = "txtGenitalUrinario";
+            this.txtGenitalUrinario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtGenitalUrinario.Size = new System.Drawing.Size(303, 41);
+            this.txtGenitalUrinario.TabIndex = 10068;
             // 
             // Label91
             // 
@@ -175,15 +156,15 @@
             this.Label91.TabIndex = 10067;
             this.Label91.Text = "Genito Urinario:";
             // 
-            // txtAbdomenN
+            // txtAbdomen
             // 
-            this.txtAbdomenN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtAbdomenN.Location = new System.Drawing.Point(115, 158);
-            this.txtAbdomenN.Multiline = true;
-            this.txtAbdomenN.Name = "txtAbdomenN";
-            this.txtAbdomenN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAbdomenN.Size = new System.Drawing.Size(353, 41);
-            this.txtAbdomenN.TabIndex = 10066;
+            this.txtAbdomen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAbdomen.Location = new System.Drawing.Point(115, 158);
+            this.txtAbdomen.Multiline = true;
+            this.txtAbdomen.Name = "txtAbdomen";
+            this.txtAbdomen.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtAbdomen.Size = new System.Drawing.Size(353, 41);
+            this.txtAbdomen.TabIndex = 10066;
             // 
             // Label92
             // 
@@ -196,15 +177,15 @@
             this.Label92.TabIndex = 10065;
             this.Label92.Text = "Abdomen:";
             // 
-            // txtCardioN
+            // txtCardioPulmonar
             // 
-            this.txtCardioN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtCardioN.Location = new System.Drawing.Point(115, 298);
-            this.txtCardioN.Multiline = true;
-            this.txtCardioN.Name = "txtCardioN";
-            this.txtCardioN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtCardioN.Size = new System.Drawing.Size(353, 41);
-            this.txtCardioN.TabIndex = 10064;
+            this.txtCardioPulmonar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtCardioPulmonar.Location = new System.Drawing.Point(115, 298);
+            this.txtCardioPulmonar.Multiline = true;
+            this.txtCardioPulmonar.Name = "txtCardioPulmonar";
+            this.txtCardioPulmonar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCardioPulmonar.Size = new System.Drawing.Size(353, 41);
+            this.txtCardioPulmonar.TabIndex = 10064;
             // 
             // Label85
             // 
@@ -217,15 +198,15 @@
             this.Label85.TabIndex = 10063;
             this.Label85.Text = "Cardio-pulmonar:";
             // 
-            // txtToraxN
+            // txtTorax
             // 
-            this.txtToraxN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtToraxN.Location = new System.Drawing.Point(115, 111);
-            this.txtToraxN.Multiline = true;
-            this.txtToraxN.Name = "txtToraxN";
-            this.txtToraxN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtToraxN.Size = new System.Drawing.Size(353, 41);
-            this.txtToraxN.TabIndex = 10062;
+            this.txtTorax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtTorax.Location = new System.Drawing.Point(115, 111);
+            this.txtTorax.Multiline = true;
+            this.txtTorax.Name = "txtTorax";
+            this.txtTorax.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTorax.Size = new System.Drawing.Size(353, 41);
+            this.txtTorax.TabIndex = 10062;
             // 
             // Label86
             // 
@@ -238,15 +219,15 @@
             this.Label86.TabIndex = 10061;
             this.Label86.Text = "Tórax:";
             // 
-            // txtCab_cuelloN
+            // txtCabezaCuello
             // 
-            this.txtCab_cuelloN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtCab_cuelloN.Location = new System.Drawing.Point(115, 251);
-            this.txtCab_cuelloN.Multiline = true;
-            this.txtCab_cuelloN.Name = "txtCab_cuelloN";
-            this.txtCab_cuelloN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtCab_cuelloN.Size = new System.Drawing.Size(353, 41);
-            this.txtCab_cuelloN.TabIndex = 10060;
+            this.txtCabezaCuello.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtCabezaCuello.Location = new System.Drawing.Point(115, 251);
+            this.txtCabezaCuello.Multiline = true;
+            this.txtCabezaCuello.Name = "txtCabezaCuello";
+            this.txtCabezaCuello.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCabezaCuello.Size = new System.Drawing.Size(353, 41);
+            this.txtCabezaCuello.TabIndex = 10060;
             // 
             // Label87
             // 
@@ -259,15 +240,15 @@
             this.Label87.TabIndex = 10059;
             this.Label87.Text = "Cabeza y Cuello:";
             // 
-            // txtSig_vitalesN
+            // txtSignosVitales
             // 
-            this.txtSig_vitalesN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtSig_vitalesN.Location = new System.Drawing.Point(115, 64);
-            this.txtSig_vitalesN.Multiline = true;
-            this.txtSig_vitalesN.Name = "txtSig_vitalesN";
-            this.txtSig_vitalesN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSig_vitalesN.Size = new System.Drawing.Size(353, 41);
-            this.txtSig_vitalesN.TabIndex = 10058;
+            this.txtSignosVitales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtSignosVitales.Location = new System.Drawing.Point(115, 64);
+            this.txtSignosVitales.Multiline = true;
+            this.txtSignosVitales.Name = "txtSignosVitales";
+            this.txtSignosVitales.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtSignosVitales.Size = new System.Drawing.Size(353, 41);
+            this.txtSignosVitales.TabIndex = 10058;
             // 
             // Label88
             // 
@@ -279,6 +260,37 @@
             this.Label88.Size = new System.Drawing.Size(96, 16);
             this.Label88.TabIndex = 10057;
             this.Label88.Text = "Signos Vitales:";
+            // 
+            // txtPielFaneras
+            // 
+            this.txtPielFaneras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtPielFaneras.Location = new System.Drawing.Point(606, 165);
+            this.txtPielFaneras.Multiline = true;
+            this.txtPielFaneras.Name = "txtPielFaneras";
+            this.txtPielFaneras.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPielFaneras.Size = new System.Drawing.Size(303, 41);
+            this.txtPielFaneras.TabIndex = 10076;
+            // 
+            // txtGenerales
+            // 
+            this.txtGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtGenerales.Location = new System.Drawing.Point(115, 15);
+            this.txtGenerales.Multiline = true;
+            this.txtGenerales.Name = "txtGenerales";
+            this.txtGenerales.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtGenerales.Size = new System.Drawing.Size(794, 41);
+            this.txtGenerales.TabIndex = 10077;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(6, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.TabIndex = 10078;
+            this.label1.Text = "Generales";
             // 
             // ExamenFisicoUI
             // 
@@ -298,23 +310,24 @@
 
         internal System.Windows.Forms.GroupBox GroupBox26;
         internal System.Windows.Forms.Label Label160;
-        internal System.Windows.Forms.TextBox txtGeneralesN;
-        internal System.Windows.Forms.Label Label93;
-        internal System.Windows.Forms.TextBox txtS_NervN;
+        internal System.Windows.Forms.TextBox txtSistemaNervioso;
         internal System.Windows.Forms.Label Label89;
-        internal System.Windows.Forms.TextBox txtExtremidadesN;
+        internal System.Windows.Forms.TextBox txtExtremidades;
         internal System.Windows.Forms.Label Label90;
-        internal System.Windows.Forms.TextBox txtGenitoN;
+        internal System.Windows.Forms.TextBox txtGenitalUrinario;
         internal System.Windows.Forms.Label Label91;
-        internal System.Windows.Forms.TextBox txtAbdomenN;
+        internal System.Windows.Forms.TextBox txtAbdomen;
         internal System.Windows.Forms.Label Label92;
-        internal System.Windows.Forms.TextBox txtCardioN;
+        internal System.Windows.Forms.TextBox txtCardioPulmonar;
         internal System.Windows.Forms.Label Label85;
-        internal System.Windows.Forms.TextBox txtToraxN;
+        internal System.Windows.Forms.TextBox txtTorax;
         internal System.Windows.Forms.Label Label86;
-        internal System.Windows.Forms.TextBox txtCab_cuelloN;
+        internal System.Windows.Forms.TextBox txtCabezaCuello;
         internal System.Windows.Forms.Label Label87;
-        internal System.Windows.Forms.TextBox txtSig_vitalesN;
+        internal System.Windows.Forms.TextBox txtSignosVitales;
         internal System.Windows.Forms.Label Label88;
+        internal System.Windows.Forms.TextBox txtPielFaneras;
+        internal System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.TextBox txtGenerales;
     }
 }

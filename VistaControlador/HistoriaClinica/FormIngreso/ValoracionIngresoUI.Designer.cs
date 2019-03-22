@@ -31,18 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ValoracionIngresoUI));
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.gbResumenClinico = new System.Windows.Forms.GroupBox();
+            this.txtResumenClinico = new System.Windows.Forms.TextBox();
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
             this.PanelJustificacionN = new System.Windows.Forms.Panel();
             this.txtJustificacionN = new System.Windows.Forms.TextBox();
             this.dgvImpresionN = new System.Windows.Forms.DataGridView();
             this.anulardiagevoN = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtResumenClinico = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMotivoIngreso = new System.Windows.Forms.TextBox();
             this.gbResumenClinico.SuspendLayout();
             this.GroupBox17.SuspendLayout();
             this.PanelJustificacionN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImpresionN)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewImageColumn1
@@ -64,6 +67,14 @@
             this.gbResumenClinico.TabIndex = 10091;
             this.gbResumenClinico.TabStop = false;
             this.gbResumenClinico.Text = "Resumen Clinico:";
+            // 
+            // txtResumenClinico
+            // 
+            this.txtResumenClinico.Location = new System.Drawing.Point(3, 24);
+            this.txtResumenClinico.Multiline = true;
+            this.txtResumenClinico.Name = "txtResumenClinico";
+            this.txtResumenClinico.Size = new System.Drawing.Size(925, 84);
+            this.txtResumenClinico.TabIndex = 0;
             // 
             // GroupBox17
             // 
@@ -133,27 +144,39 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.GroupBox17);
             this.panel1.Controls.Add(this.gbResumenClinico);
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(944, 297);
+            this.panel1.Size = new System.Drawing.Size(952, 459);
             this.panel1.TabIndex = 0;
             // 
-            // txtResumenClinico
+            // groupBox1
             // 
-            this.txtResumenClinico.Location = new System.Drawing.Point(3, 24);
-            this.txtResumenClinico.Multiline = true;
-            this.txtResumenClinico.Name = "txtResumenClinico";
-            this.txtResumenClinico.Size = new System.Drawing.Size(925, 84);
-            this.txtResumenClinico.TabIndex = 0;
+            this.groupBox1.Controls.Add(this.txtMotivoIngreso);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(10, 307);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(934, 133);
+            this.groupBox1.TabIndex = 10093;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Motivo  Ingreso";
+            // 
+            // txtMotivoIngreso
+            // 
+            this.txtMotivoIngreso.Location = new System.Drawing.Point(3, 24);
+            this.txtMotivoIngreso.Multiline = true;
+            this.txtMotivoIngreso.Name = "txtMotivoIngreso";
+            this.txtMotivoIngreso.Size = new System.Drawing.Size(925, 91);
+            this.txtMotivoIngreso.TabIndex = 0;
             // 
             // ValoracionIngresoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(948, 310);
+            this.ClientSize = new System.Drawing.Size(948, 492);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ValoracionIngresoUI";
@@ -166,6 +189,8 @@
             this.PanelJustificacionN.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImpresionN)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -180,5 +205,7 @@
         internal System.Windows.Forms.DataGridViewImageColumn anulardiagevoN;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtResumenClinico;
+        private System.Windows.Forms.GroupBox groupBox1;
+        internal System.Windows.Forms.TextBox txtMotivoIngreso;
     }
 }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoriaClinicaUI));
             this.pnlInformacion = new System.Windows.Forms.Panel();
-            this.txtContrato = new System.Windows.Forms.TextBox();
+            this.tcHistoriaClinica = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtfechaIngreso = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -60,39 +60,27 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.tpEstancia = new System.Windows.Forms.TabPage();
-            this.tbIngreso = new System.Windows.Forms.TabPage();
-            this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
             this.tcOrdenMedica = new Galactus.Util.Controles.TabControlGalactus();
             this.tpIndicaciones = new System.Windows.Forms.TabPage();
             this.tbProcedimientos = new System.Windows.Forms.TabPage();
             this.tpMedicamentos = new System.Windows.Forms.TabPage();
             this.tpAnalisisOrden = new System.Windows.Forms.TabPage();
-            this.tpAnalisis = new System.Windows.Forms.TabPage();
-            this.tpExamenFisico = new System.Windows.Forms.TabPage();
-            this.tpAntecedentes = new System.Windows.Forms.TabPage();
-            this.tpValoracion = new System.Windows.Forms.TabPage();
-            this.tcIngresoClinico = new Galactus.Util.Controles.TabControlGalactus();
-            this.tsbModificarIngreso = new System.Windows.Forms.ToolStripButton();
-            this.tsbGuardarIngreso = new System.Windows.Forms.ToolStripButton();
-            this.tsbCancelarIngreso = new System.Windows.Forms.ToolStripButton();
-            this.tsIngreso = new System.Windows.Forms.ToolStrip();
+            this.tpEstancia = new System.Windows.Forms.TabPage();
+            this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
+            this.tpIngresoClinico = new System.Windows.Forms.TabPage();
             this.pnlInformacion.SuspendLayout();
             this.tbLaboratorios.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
             this.tstMenuOrdenMedica.SuspendLayout();
-            this.tbIngreso.SuspendLayout();
-            this.tabHistoriaClinica.SuspendLayout();
             this.tcOrdenMedica.SuspendLayout();
-            this.tcIngresoClinico.SuspendLayout();
-            this.tsIngreso.SuspendLayout();
+            this.tabHistoriaClinica.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlInformacion
             // 
             this.pnlInformacion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlInformacion.Controls.Add(this.txtContrato);
+            this.pnlInformacion.Controls.Add(this.tcHistoriaClinica);
             this.pnlInformacion.Controls.Add(this.label10);
             this.pnlInformacion.Controls.Add(this.txtfechaIngreso);
             this.pnlInformacion.Controls.Add(this.label8);
@@ -115,15 +103,15 @@
             this.pnlInformacion.Size = new System.Drawing.Size(1297, 59);
             this.pnlInformacion.TabIndex = 2;
             // 
-            // txtContrato
+            // tcHistoriaClinica
             // 
-            this.txtContrato.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtContrato.Location = new System.Drawing.Point(780, 28);
-            this.txtContrato.Name = "txtContrato";
-            this.txtContrato.ReadOnly = true;
-            this.txtContrato.Size = new System.Drawing.Size(503, 22);
-            this.txtContrato.TabIndex = 56;
-            this.txtContrato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tcHistoriaClinica.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.tcHistoriaClinica.Location = new System.Drawing.Point(780, 28);
+            this.tcHistoriaClinica.Name = "tcHistoriaClinica";
+            this.tcHistoriaClinica.ReadOnly = true;
+            this.tcHistoriaClinica.Size = new System.Drawing.Size(503, 22);
+            this.tcHistoriaClinica.TabIndex = 56;
+            this.tcHistoriaClinica.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
             // 
@@ -423,42 +411,6 @@
             this.toolStripButton6.Size = new System.Drawing.Size(73, 22);
             this.toolStripButton6.Text = "Cancelar";
             // 
-            // tpEstancia
-            // 
-            this.tpEstancia.Location = new System.Drawing.Point(4, 29);
-            this.tpEstancia.Name = "tpEstancia";
-            this.tpEstancia.Size = new System.Drawing.Size(1289, 464);
-            this.tpEstancia.TabIndex = 3;
-            this.tpEstancia.Text = "Estancia";
-            this.tpEstancia.UseVisualStyleBackColor = true;
-            // 
-            // tbIngreso
-            // 
-            this.tbIngreso.Controls.Add(this.tsIngreso);
-            this.tbIngreso.Controls.Add(this.tcIngresoClinico);
-            this.tbIngreso.Location = new System.Drawing.Point(4, 29);
-            this.tbIngreso.Name = "tbIngreso";
-            this.tbIngreso.Padding = new System.Windows.Forms.Padding(3);
-            this.tbIngreso.Size = new System.Drawing.Size(1289, 464);
-            this.tbIngreso.TabIndex = 0;
-            this.tbIngreso.Text = "Ingreso Clinico";
-            this.tbIngreso.UseVisualStyleBackColor = true;
-            // 
-            // tabHistoriaClinica
-            // 
-            this.tabHistoriaClinica.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabHistoriaClinica.Controls.Add(this.tbIngreso);
-            this.tabHistoriaClinica.Controls.Add(this.tpEstancia);
-            this.tabHistoriaClinica.Controls.Add(this.tpOrdenMedica);
-            this.tabHistoriaClinica.Controls.Add(this.tbLaboratorios);
-            this.tabHistoriaClinica.Controls.Add(this.tpEvolucion);
-            this.tabHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabHistoriaClinica.Location = new System.Drawing.Point(4, 103);
-            this.tabHistoriaClinica.Name = "tabHistoriaClinica";
-            this.tabHistoriaClinica.SelectedIndex = 0;
-            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 497);
-            this.tabHistoriaClinica.TabIndex = 46;
-            // 
             // tcOrdenMedica
             // 
             this.tcOrdenMedica.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -513,107 +465,39 @@
             this.tpAnalisisOrden.Text = "Analisis";
             this.tpAnalisisOrden.UseVisualStyleBackColor = true;
             // 
-            // tpAnalisis
+            // tpEstancia
             // 
-            this.tpAnalisis.Location = new System.Drawing.Point(124, 4);
-            this.tpAnalisis.Name = "tpAnalisis";
-            this.tpAnalisis.Size = new System.Drawing.Size(1149, 419);
-            this.tpAnalisis.TabIndex = 3;
-            this.tpAnalisis.Text = "Analisis";
-            this.tpAnalisis.UseVisualStyleBackColor = true;
+            this.tpEstancia.Location = new System.Drawing.Point(4, 29);
+            this.tpEstancia.Name = "tpEstancia";
+            this.tpEstancia.Size = new System.Drawing.Size(1289, 464);
+            this.tpEstancia.TabIndex = 3;
+            this.tpEstancia.Text = "Estancia";
+            this.tpEstancia.UseVisualStyleBackColor = true;
             // 
-            // tpExamenFisico
+            // tabHistoriaClinica
             // 
-            this.tpExamenFisico.Location = new System.Drawing.Point(124, 4);
-            this.tpExamenFisico.Name = "tpExamenFisico";
-            this.tpExamenFisico.Size = new System.Drawing.Size(1149, 419);
-            this.tpExamenFisico.TabIndex = 2;
-            this.tpExamenFisico.Text = "Examen Fisico";
-            this.tpExamenFisico.UseVisualStyleBackColor = true;
+            this.tabHistoriaClinica.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabHistoriaClinica.Controls.Add(this.tpIngresoClinico);
+            this.tabHistoriaClinica.Controls.Add(this.tpEstancia);
+            this.tabHistoriaClinica.Controls.Add(this.tpOrdenMedica);
+            this.tabHistoriaClinica.Controls.Add(this.tbLaboratorios);
+            this.tabHistoriaClinica.Controls.Add(this.tpEvolucion);
+            this.tabHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabHistoriaClinica.Location = new System.Drawing.Point(4, 103);
+            this.tabHistoriaClinica.Name = "tabHistoriaClinica";
+            this.tabHistoriaClinica.SelectedIndex = 0;
+            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 497);
+            this.tabHistoriaClinica.TabIndex = 46;
             // 
-            // tpAntecedentes
+            // tpIngresoClinico
             // 
-            this.tpAntecedentes.Location = new System.Drawing.Point(124, 4);
-            this.tpAntecedentes.Name = "tpAntecedentes";
-            this.tpAntecedentes.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAntecedentes.Size = new System.Drawing.Size(1149, 419);
-            this.tpAntecedentes.TabIndex = 1;
-            this.tpAntecedentes.Text = "Antecedentes";
-            this.tpAntecedentes.UseVisualStyleBackColor = true;
-            // 
-            // tpValoracion
-            // 
-            this.tpValoracion.Location = new System.Drawing.Point(124, 4);
-            this.tpValoracion.Name = "tpValoracion";
-            this.tpValoracion.Padding = new System.Windows.Forms.Padding(3);
-            this.tpValoracion.Size = new System.Drawing.Size(1149, 419);
-            this.tpValoracion.TabIndex = 0;
-            this.tpValoracion.Text = "Valoracion";
-            this.tpValoracion.UseVisualStyleBackColor = true;
-            // 
-            // tcIngresoClinico
-            // 
-            this.tcIngresoClinico.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tcIngresoClinico.Controls.Add(this.tpValoracion);
-            this.tcIngresoClinico.Controls.Add(this.tpAntecedentes);
-            this.tcIngresoClinico.Controls.Add(this.tpExamenFisico);
-            this.tcIngresoClinico.Controls.Add(this.tpAnalisis);
-            this.tcIngresoClinico.ItemSize = new System.Drawing.Size(30, 120);
-            this.tcIngresoClinico.Location = new System.Drawing.Point(6, 6);
-            this.tcIngresoClinico.Multiline = true;
-            this.tcIngresoClinico.Name = "tcIngresoClinico";
-            this.tcIngresoClinico.SelectedIndex = 0;
-            this.tcIngresoClinico.Size = new System.Drawing.Size(1277, 427);
-            this.tcIngresoClinico.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tcIngresoClinico.TabIndex = 3;
-            // 
-            // tsbModificarIngreso
-            // 
-            this.tsbModificarIngreso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbModificarIngreso.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificarIngreso.Image")));
-            this.tsbModificarIngreso.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbModificarIngreso.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbModificarIngreso.Name = "tsbModificarIngreso";
-            this.tsbModificarIngreso.Size = new System.Drawing.Size(78, 22);
-            this.tsbModificarIngreso.Text = "Modificar";
-            this.tsbModificarIngreso.Click += new System.EventHandler(this.tsbModificarIngreso_Click);
-            // 
-            // tsbGuardarIngreso
-            // 
-            this.tsbGuardarIngreso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbGuardarIngreso.Image = ((System.Drawing.Image)(resources.GetObject("tsbGuardarIngreso.Image")));
-            this.tsbGuardarIngreso.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGuardarIngreso.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbGuardarIngreso.Name = "tsbGuardarIngreso";
-            this.tsbGuardarIngreso.Size = new System.Drawing.Size(69, 22);
-            this.tsbGuardarIngreso.Text = "Guardar";
-            this.tsbGuardarIngreso.Click += new System.EventHandler(this.tsbGuardarIngreso_Click);
-            // 
-            // tsbCancelarIngreso
-            // 
-            this.tsbCancelarIngreso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbCancelarIngreso.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelarIngreso.Image")));
-            this.tsbCancelarIngreso.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelarIngreso.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbCancelarIngreso.Name = "tsbCancelarIngreso";
-            this.tsbCancelarIngreso.Size = new System.Drawing.Size(73, 22);
-            this.tsbCancelarIngreso.Text = "Cancelar";
-            // 
-            // tsIngreso
-            // 
-            this.tsIngreso.BackColor = System.Drawing.Color.White;
-            this.tsIngreso.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tsIngreso.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbModificarIngreso,
-            this.tsbGuardarIngreso,
-            this.tsbCancelarIngreso});
-            this.tsIngreso.Location = new System.Drawing.Point(3, 436);
-            this.tsIngreso.MaximumSize = new System.Drawing.Size(1280, 25);
-            this.tsIngreso.MinimumSize = new System.Drawing.Size(1280, 25);
-            this.tsIngreso.Name = "tsIngreso";
-            this.tsIngreso.Size = new System.Drawing.Size(1280, 25);
-            this.tsIngreso.TabIndex = 50;
-            this.tsIngreso.Text = "toolStrip2";
+            this.tpIngresoClinico.Location = new System.Drawing.Point(4, 29);
+            this.tpIngresoClinico.Name = "tpIngresoClinico";
+            this.tpIngresoClinico.Padding = new System.Windows.Forms.Padding(3);
+            this.tpIngresoClinico.Size = new System.Drawing.Size(1289, 464);
+            this.tpIngresoClinico.TabIndex = 0;
+            this.tpIngresoClinico.Text = "Ingreso Clinico";
+            this.tpIngresoClinico.UseVisualStyleBackColor = true;
             // 
             // HistoriaClinicaUI
             // 
@@ -638,13 +522,8 @@
             this.tpOrdenMedica.PerformLayout();
             this.tstMenuOrdenMedica.ResumeLayout(false);
             this.tstMenuOrdenMedica.PerformLayout();
-            this.tbIngreso.ResumeLayout(false);
-            this.tbIngreso.PerformLayout();
-            this.tabHistoriaClinica.ResumeLayout(false);
             this.tcOrdenMedica.ResumeLayout(false);
-            this.tcIngresoClinico.ResumeLayout(false);
-            this.tsIngreso.ResumeLayout(false);
-            this.tsIngreso.PerformLayout();
+            this.tabHistoriaClinica.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -675,7 +554,6 @@
         private System.Windows.Forms.TabPage tpMedicamentos;
         private System.Windows.Forms.TabPage tpAnalisisOrden;
         private System.Windows.Forms.TabPage tpEstancia;
-        private System.Windows.Forms.TabPage tbIngreso;
         private System.Windows.Forms.TabControl tabHistoriaClinica;
         private System.Windows.Forms.ToolStrip tstMenuOrdenMedica;
         private System.Windows.Forms.ToolStripButton tsBtNuevo;
@@ -684,20 +562,12 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.TextBox txtContrato;
+        private System.Windows.Forms.TextBox tcHistoriaClinica;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtfechaIngreso;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtAdmision;
         private System.Windows.Forms.Label label7;
-        private Util.Controles.TabControlGalactus tcIngresoClinico;
-        private System.Windows.Forms.TabPage tpValoracion;
-        private System.Windows.Forms.TabPage tpAntecedentes;
-        private System.Windows.Forms.TabPage tpExamenFisico;
-        private System.Windows.Forms.TabPage tpAnalisis;
-        private System.Windows.Forms.ToolStrip tsIngreso;
-        private System.Windows.Forms.ToolStripButton tsbModificarIngreso;
-        private System.Windows.Forms.ToolStripButton tsbGuardarIngreso;
-        private System.Windows.Forms.ToolStripButton tsbCancelarIngreso;
+        private System.Windows.Forms.TabPage tpIngresoClinico;
     }
 }
