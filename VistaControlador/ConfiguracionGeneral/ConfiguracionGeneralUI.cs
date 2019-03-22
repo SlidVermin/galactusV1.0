@@ -92,7 +92,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             List<string> parametros = new List<string>();
             parametros.Add("");
-            GeneralC.buscarDevuelveFila(Query.PARAMETROS_CARGAR,
+            GeneralC.buscarDevuelveFila(Sentencias.PARAMETROS_CARGAR,
                                         parametros,
                                         new GeneralC.cargarInfoFila(cargarParametro),
                                         "Busqueda de Parametros",

@@ -19,7 +19,7 @@ namespace Galactus.Modelo.Gestion
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
 
-                    sentencia.CommandText = Query.CREAR_CLIENTE;
+                    sentencia.CommandText = Sentencias.CREAR_CLIENTE;
                     sentencia.Parameters.Add(new SqlParameter("@codigo", SqlDbType.NVarChar)).Value = cliente.codigo;
                     sentencia.Parameters.Add(new SqlParameter("@codigoTercero", SqlDbType.Int)).Value = cliente.codigoTercero;
                     sentencia.Parameters.Add(new SqlParameter("@codigoRegimen", SqlDbType.Int)).Value = cliente.codigoRegimen;
@@ -50,7 +50,7 @@ namespace Galactus.Modelo.Gestion
                 {
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
-                    sentencia.CommandText = Query.ANULAR_CLIENTE;
+                    sentencia.CommandText = Sentencias.ANULAR_CLIENTE;
                     sentencia.Parameters.Add(new SqlParameter("@IdCliente", SqlDbType.Int)).Value = codigo;
                     sentencia.ExecuteNonQuery();
                     resultado = true;

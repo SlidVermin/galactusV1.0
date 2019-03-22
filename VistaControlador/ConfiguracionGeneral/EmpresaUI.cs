@@ -31,11 +31,11 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void cbPais_SelectedValueChanged(object sender, EventArgs e)
         {
-            GeneralC.llenarComboDependiente(cbPais, cbDepartamento, Query.CARGAR_DEPARTAMENTO);
+            GeneralC.llenarComboDependiente(cbPais, cbDepartamento, Sentencias.CARGAR_DEPARTAMENTO);
         }
         private void cbDepartamento_SelectedValueChanged(object sender, EventArgs e)
         {
-            GeneralC.llenarComboDependiente(cbDepartamento, cbCiudad, Query.CARGAR_MUNICIPIO);
+            GeneralC.llenarComboDependiente(cbDepartamento, cbCiudad, Sentencias.CARGAR_MUNICIPIO);
         }
         private void Textnit_TextChanged(object sender, EventArgs e)
         {
@@ -96,7 +96,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             {
                 List<string> parametros = new List<string>();
                 parametros.Add(string.Empty);
-                GeneralC.buscarDevuelveFila(Query.EMPRESA_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.EMPRESA_BUSCAR,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarEmpresa),
                                             Mensajes.BUSQUEDA_EMPRESA,
@@ -127,7 +127,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
-            GeneralC.buscarDevuelveFila(Query.BUSCAR_TERCERO,
+            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_TERCERO,
                                         parametro,
                                         new GeneralC.cargarInfoFila(cargarTercero),
                                         Util.Titulos.TITULO_BUSCAR_TERCERO,
@@ -150,7 +150,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             empresa.idEmpresa = fila.Field<int>("Código");
             List<string> parametros = new List<string>();
             parametros.Add(empresa.idEmpresa.ToString());
-            DataRow filaResultado = GeneralC.devuelveUnaFila(Query.EMPRESA_CARGAR, parametros);
+            DataRow filaResultado = GeneralC.devuelveUnaFila(Sentencias.EMPRESA_CARGAR, parametros);
             if (filaResultado != null)
             {
                 empresa.nit = filaResultado.Field<string>("Nit");
@@ -196,7 +196,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         void iniciarlizarForm()
         {
-            GeneralC.llenarCombo(Query.CARGARPAIS,
+            GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                  cbPais);

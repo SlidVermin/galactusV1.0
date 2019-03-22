@@ -25,27 +25,27 @@ namespace Galactus.VistaControlador.Admision
             GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
             establecerGridview();
             btnSalir.Enabled = true;
-            GeneralC.llenarCombo(Query.ATENCION_CAUSA_EXTERNA + " " + Util.Constantes.ConstanteGeneral.CAUSA_EXTERNA + "",
+            GeneralC.llenarCombo(Sentencias.ATENCION_CAUSA_EXTERNA + " " + Util.Constantes.ConstanteGeneral.CAUSA_EXTERNA + "",
                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                cbCausaExterna);
-            GeneralC.llenarCombo(Query.ATENCION_INSTITUCION + " " + Util.Constantes.ConstanteGeneral.INSTITUCIÓN + "",
+            GeneralC.llenarCombo(Sentencias.ATENCION_INSTITUCION + " " + Util.Constantes.ConstanteGeneral.INSTITUCIÓN + "",
                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                cbInstitucion);
-            GeneralC.llenarCombo(Query.ATENCION_CAMA + " " + Util.Constantes.ConstanteGeneral.CAMA + "",
+            GeneralC.llenarCombo(Sentencias.ATENCION_CAMA + " " + Util.Constantes.ConstanteGeneral.CAMA + "",
                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                cbCama);
-            GeneralC.llenarCombo(Query.GENERAL_ENTORNO_ATENCION,
+            GeneralC.llenarCombo(Sentencias.GENERAL_ENTORNO_ATENCION,
                               Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                               Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                               cbEntorno);
-            GeneralC.llenarCombo(Query.GENERAL_AREA_ATENCION,
+            GeneralC.llenarCombo(Sentencias.GENERAL_AREA_ATENCION,
                              Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                              Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                              cbArea);
-            GeneralC.llenarCombo(Query.ATENCION_VIA_INGRESO + " " + Util.Constantes.ConstanteGeneral.VIA_INGRESO + "",
+            GeneralC.llenarCombo(Sentencias.ATENCION_VIA_INGRESO + " " + Util.Constantes.ConstanteGeneral.VIA_INGRESO + "",
                              Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                              Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                              cbVia);
@@ -67,7 +67,7 @@ namespace Galactus.VistaControlador.Admision
             {
                 List<string> parametros = new List<string>();
 
-                GeneralC.buscarDevuelveFila(Query.ATENCION_BUSCAR_PACIENTE_ADMISIONADO,
+                GeneralC.buscarDevuelveFila(Sentencias.ATENCION_BUSCAR_PACIENTE_ADMISIONADO,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarPaciente),
                                                    Mensajes.BUSQUEDA_PACIENTE, true);
@@ -117,7 +117,7 @@ namespace Galactus.VistaControlador.Admision
                 {
                     List<string> parametros = new List<string>();
 
-                    GeneralC.buscarDevuelveFila(Query.GENERAL_BUSCAR_DIAGNOSTICO,
+                    GeneralC.buscarDevuelveFila(Sentencias.GENERAL_BUSCAR_DIAGNOSTICO,
                                                        parametros,
                                                        new GeneralC.cargarInfoFila(cargarDiagnostico),
                                                        Mensajes.BUSQUEDA_PACIENTE, true);
@@ -446,7 +446,7 @@ namespace Galactus.VistaControlador.Admision
             {
                 List<string> parametros = new List<string>();
 
-                GeneralC.buscarDevuelveFila(Query.ATENCION_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.ATENCION_BUSCAR,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarDatos),
                                                    Mensajes.BUSQUEDA_PACIENTE, true);

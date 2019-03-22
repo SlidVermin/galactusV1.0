@@ -20,7 +20,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
 
-                    sentencia.CommandText = Query.CREAR_HEMODIALISIS;
+                    sentencia.CommandText = Sentencias.CREAR_HEMODIALISIS;
                     sentencia.Parameters.Add(new SqlParameter("@codigo", SqlDbType.NVarChar)).Value = hemodialisis.codigo;
                     sentencia.Parameters.Add(new SqlParameter("@codigoAtencion", SqlDbType.Int)).Value = hemodialisis.codigoAtencion;
                     sentencia.Parameters.Add(new SqlParameter("@nota", SqlDbType.Int)).Value = hemodialisis.nota;
@@ -47,7 +47,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                 {
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
-                    sentencia.CommandText = Query.ANULAR_HEMODIALISIS;
+                    sentencia.CommandText = Sentencias.ANULAR_HEMODIALISIS;
                     sentencia.Parameters.Add(new SqlParameter("@IdHemodialisis", SqlDbType.Int)).Value = codigo;
                     sentencia.ExecuteNonQuery();
                     resultado = true;

@@ -66,21 +66,21 @@ namespace Galactus.VistaControlador.Admision
         private void AdmisionUI_Load(object sender, EventArgs e)
         {
             GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
-            GeneralC.llenarCombo(Query.CARGAR_TIPO_DOCUMENTOS, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
+            GeneralC.llenarCombo(Sentencias.CARGAR_TIPO_DOCUMENTOS, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                                Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
                                tipoDocAcompañanteBox);
-            GeneralC.llenarCombo(Query.CARGAR_TIPO_DOCUMENTOS, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
+            GeneralC.llenarCombo(Sentencias.CARGAR_TIPO_DOCUMENTOS, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                                Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
                                tipoDocResponsableBox);
-            GeneralC.llenarCombo(Query.CARGARPAIS,
+            GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                paisResponsableBox);
-            GeneralC.llenarCombo(Query.CARGARPAIS,
+            GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                paisAcompañante);
-            GeneralC.llenarCombo(Query.ADMISION_TRIAGE +" "+ Util.Constantes.ConstanteGeneral.TRIAGE + "",
+            GeneralC.llenarCombo(Sentencias.ADMISION_TRIAGE +" "+ Util.Constantes.ConstanteGeneral.TRIAGE + "",
                               Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                               Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                               triageBox);
@@ -118,7 +118,7 @@ namespace Galactus.VistaControlador.Admision
             {
                 List<string> parametros = new List<string>();
 
-                GeneralC.buscarDevuelveFila(Query.ADMISION_PACIENTE_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.ADMISION_PACIENTE_BUSCAR,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarRegistro),
                                                    Mensajes.BUSQUEDA_EPS, true);
@@ -134,7 +134,7 @@ namespace Galactus.VistaControlador.Admision
             if (paisAcompañante.SelectedIndex > 0)
             {
 
-                GeneralC.llenarCombo(Query.CARGAR_DEPARTAMENTO + " " + paisAcompañante.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + paisAcompañante.SelectedValue + "",
                                     Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                     Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                     departAcompañanteBox);
@@ -143,7 +143,7 @@ namespace Galactus.VistaControlador.Admision
             else
             {
 
-                GeneralC.llenarCombo(Query.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                    Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                    Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                    departAcompañanteBox);
@@ -156,7 +156,7 @@ namespace Galactus.VistaControlador.Admision
             if (departAcompañanteBox.SelectedIndex > 0)
             {
 
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + departAcompañanteBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + departAcompañanteBox.SelectedValue + "",
                                     Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                     Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                     ciudadAcompañanteBox);
@@ -164,7 +164,7 @@ namespace Galactus.VistaControlador.Admision
             }
             else
             {
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                    Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                    Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                    ciudadAcompañanteBox);
@@ -177,7 +177,7 @@ namespace Galactus.VistaControlador.Admision
             if (paisResponsableBox.SelectedIndex > 0)
             {
 
-                GeneralC.llenarCombo(Query.CARGAR_DEPARTAMENTO + " " + paisResponsableBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + paisResponsableBox.SelectedValue + "",
                                     Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                     Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                     departRespBox);
@@ -186,7 +186,7 @@ namespace Galactus.VistaControlador.Admision
             else
             {
 
-                GeneralC.llenarCombo(Query.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                    Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                    Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                    departRespBox);
@@ -199,7 +199,7 @@ namespace Galactus.VistaControlador.Admision
             if (departRespBox.SelectedIndex > 0)
             {
 
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + departRespBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + departRespBox.SelectedValue + "",
                                     Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                     Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                     ciudadResBox);
@@ -207,7 +207,7 @@ namespace Galactus.VistaControlador.Admision
             }
             else
             {
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                    Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                    Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                    ciudadResBox);
@@ -221,7 +221,7 @@ namespace Galactus.VistaControlador.Admision
             {
                 List<string> parametros = new List<string>();
                 parametros.Add(Convert.ToString(admision.idEps));
-                GeneralC.buscarDevuelveFila(Query.ADMISION_CONTRATO_EPS,
+                GeneralC.buscarDevuelveFila(Sentencias.ADMISION_CONTRATO_EPS,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarContratoEps),
                                                    Mensajes.BUSQUEDA_CONTRATO_EPS, true);
@@ -245,7 +245,7 @@ namespace Galactus.VistaControlador.Admision
             {
                 List<string> parametros = new List<string>();
                 
-                GeneralC.buscarDevuelveFila(Query.ADMISION_TERCERO_PACIENTE,
+                GeneralC.buscarDevuelveFila(Sentencias.ADMISION_TERCERO_PACIENTE,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarContacto),
                                                    Mensajes.BUSQUEDA_CONTRATO_EPS, true);
@@ -269,7 +269,7 @@ namespace Galactus.VistaControlador.Admision
             {
                 List<string> parametros = new List<string>();
                 parametros.Add(Convert.ToString(Util.Constantes.ConstanteGeneral.ESPECIALIDAD));
-                GeneralC.buscarDevuelveFila(Query.ADMISION_ESPECIALIDAD,
+                GeneralC.buscarDevuelveFila(Sentencias.ADMISION_ESPECIALIDAD,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarEspecialidad),
                                                    Mensajes.BUSQUEDA_CONTRATO_EPS, true);
@@ -496,7 +496,7 @@ namespace Galactus.VistaControlador.Admision
             {
                 List<string> parametros = new List<string>();
 
-                GeneralC.buscarDevuelveFila(Query.ADMISION_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.ADMISION_BUSCAR,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarDatos),
                                                    Mensajes.BUSQUEDA_CONTRATO_EPS, true);

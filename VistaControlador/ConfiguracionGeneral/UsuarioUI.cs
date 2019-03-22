@@ -68,7 +68,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 columnasOcultar.Add("Rol");
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                GeneralC.buscarDevuelveFila(Query.USUARIO_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.USUARIO_BUSCAR,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarUsuario),
                                             Mensajes.BUSQUEDA_USUARIOS,
@@ -109,7 +109,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             {
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                GeneralC.buscarDevuelveFila(Query.ROL_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.ROL_BUSCAR,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarRol),
                                             Mensajes.BUSQUEDA_ROL,

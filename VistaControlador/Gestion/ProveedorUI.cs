@@ -125,7 +125,7 @@ namespace Galactus.VistaControlador.Gestion
            List<string> parametro = new List<string>();
            parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Query.BUSCAR_PROVEEDOR,
+            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_PROVEEDOR,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarproveedor),
                                     Titulos.TITULO_BUSCAR_PROVEEDOR,
@@ -143,7 +143,7 @@ namespace Galactus.VistaControlador.Gestion
             {
                 List<string> parametro = new List<string>();
                 parametro.Add(string.Empty);
-                GeneralC.buscarDevuelveFila(Query.BUSCAR_TERCERO_PROVEEDOR,
+                GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_TERCERO_PROVEEDOR,
                                           parametro,
                                           new GeneralC.cargarInfoFila(cargarTercero),
                                           Titulos.TITULO_BUSCAR_TERCERO,
@@ -276,11 +276,11 @@ namespace Galactus.VistaControlador.Gestion
             string cadena;
             parametro.Add(ConstanteGeneral.REGIMEN_SOCIO_ECONOMICO.ToString());
             cadena = GeneralC.obtenerParametros(parametro);
-            GeneralC.llenarCombo(Query.PARAMETROS_CONSULTAR_DESCRIPCION + cadena, "Codigo", "Descripcion", cbRegimen);
+            GeneralC.llenarCombo(Sentencias.PARAMETROS_CONSULTAR_DESCRIPCION + cadena, "Codigo", "Descripcion", cbRegimen);
             parametro.Clear();
             parametro.Add(ConstanteGeneral.BANCO.ToString());
             cadena = GeneralC.obtenerParametros(parametro);
-            GeneralC.llenarCombo(Query.PARAMETROS_CONSULTAR_DESCRIPCION + cadena, "Codigo", "Descripcion", cbBanco);
+            GeneralC.llenarCombo(Sentencias.PARAMETROS_CONSULTAR_DESCRIPCION + cadena, "Codigo", "Descripcion", cbBanco);
             GeneralC.llenarComboDatosDefinidor(proveedor.llenarComboFormaPago(),"Codigo", "Descripcion", cbFormaPago);
             GeneralC.llenarComboDatosDefinidor(proveedor.llenarComboUbicacion(),"Codigo", "Descripcion", cbUbicacion);
             GeneralC.llenarComboDatosDefinidor(proveedor.llenarComboTipoCuenta(), "Codigo", "Descripcion", cbTipoCuenta);

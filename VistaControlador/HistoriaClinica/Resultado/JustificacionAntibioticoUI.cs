@@ -80,7 +80,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void tsbBuscar_Click(object sender, EventArgs e)
         {
-            GeneralC.buscarDevuelveFila(Query.MANUAL_SERVICIO_BUSCAR,
+            GeneralC.buscarDevuelveFila(Sentencias.MANUAL_SERVICIO_BUSCAR,
                                       null,
                                       cargarInformacion,
                                       Titulos.TITULO_MANUAL_SERVICIO,

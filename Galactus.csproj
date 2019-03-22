@@ -79,6 +79,7 @@
     <Compile Include="Entidades\General\Busqueda.cs" />
     <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
     <Compile Include="Entidades\HistoriaClinica\HistoriaClinicaPaciente.cs" />
+    <Compile Include="Entidades\HistoriaClinica\IngresoClinico.cs" />
     <Compile Include="Entidades\HistoriaClinica\ListadoPaciente.cs" />
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Indicacion\OrdenClinicaIndicacion.cs" />
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Medicamento\OrdenClinicaMedicamento.cs" />
@@ -105,13 +106,14 @@
     <Compile Include="Modelo\Gestion\ProveedorDAL.cs" />
     <Compile Include="Modelo\Gestion\ClienteDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\HistoriaClinicaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\HemodialisisDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\InformeQuirurgicoDAL.cs" />
     <Compile Include="Modelo\Inventario\BodegaDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\ProductoDAL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Consultas\Query.cs" />
+    <Compile Include="Instrucciones\Sentencias.cs" />
     <Compile Include="Util\Constantes\ConstanteGeneral.cs" />
     <Compile Include="Util\Constantes\ConsultasHistoriaClinica.cs" />
     <Compile Include="Util\DigitoVerificacion.cs" />

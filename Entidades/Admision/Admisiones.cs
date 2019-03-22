@@ -57,7 +57,7 @@ namespace Galactus.Entidades.Admision
         {
             List<string> param = new List<string>();
             param.Add(Convert.ToString(idPaciente));
-            GeneralC.llenarTabla(Query.ADMISION_PACIENTE_CARGAR, param, dtPaciente);
+            GeneralC.llenarTabla(Sentencias.ADMISION_PACIENTE_CARGAR, param, dtPaciente);
 
             if (dtPaciente.Rows.Count > 0)
             {
@@ -74,7 +74,7 @@ namespace Galactus.Entidades.Admision
         {
             List<string> param = new List<string>();
             param.Add(Convert.ToString(idAdmision));
-            dsDatos = GeneralC.llenarDataset(Query.ADMISION_CARGAR, param);
+            dsDatos = GeneralC.llenarDataset(Sentencias.ADMISION_CARGAR, param);
 
             DataTableCollection dt = dsDatos.Tables;
             if (dt["table"].Rows.Count > 0)
@@ -115,7 +115,7 @@ namespace Galactus.Entidades.Admision
         public void cargarUbicaciones()
         {
             List<String> paramas = new List<string>();
-            GeneralC.llenarTabla(Query.UBICACION_GEOGRAFICA, paramas, dtUbicacion);
+            GeneralC.llenarTabla(Sentencias.UBICACION_GEOGRAFICA, paramas, dtUbicacion);
         }
     }
 }

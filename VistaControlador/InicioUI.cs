@@ -54,7 +54,7 @@ namespace Galactus
         public bool iniciarSesion(List<string> listaParametros)
         {
             DataRow filaResultado = null;
-            filaResultado = GeneralC.devuelveUnaFila(Query.SEG_AUTENTICACION, listaParametros);
+            filaResultado = GeneralC.devuelveUnaFila(Sentencias.SEG_AUTENTICACION, listaParametros);
             if (filaResultado != null)
             {
                 Sesion.IdRol = (int)filaResultado.ItemArray[0];

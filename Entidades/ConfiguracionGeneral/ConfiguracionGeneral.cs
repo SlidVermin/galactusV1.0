@@ -30,7 +30,7 @@ namespace Galactus.Entidades.ConfiguracionGeneral
             {
                 List<string> listaParametros = new List<string>();
                 listaParametros.Add(idParametro.ToString());
-                GeneralC.llenarTabla(Query.PARAMETROS_CARGAR_DOCUMENTOS,
+                GeneralC.llenarTabla(Sentencias.PARAMETROS_CARGAR_DOCUMENTOS,
                                      listaParametros,
                                      tablaDocumentos);
                 enlace.DataSource = tablaDocumentos;

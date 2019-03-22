@@ -60,37 +60,37 @@ namespace Galactus.VistaControlador
         private void PacienteUI_Load(object sender, EventArgs e)
         {
             GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
-            GeneralC.llenarCombo(Query.CARGARPAIS,
+            GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                 paisBox);
-            GeneralC.llenarCombo(Query.CARGARPAIS,
+            GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                paisNacBox);
-            GeneralC.llenarCombo(Query.CARGARPAIS,
+            GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                paisResBox);
-            GeneralC.llenarCombo(Query.CARGAR_TIPO_DOCUMENTOS, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
+            GeneralC.llenarCombo(Sentencias.CARGAR_TIPO_DOCUMENTOS, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                                Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
                                tipoDocBox);
-            GeneralC.llenarCombo(Query.CARGAR_GENERO, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
+            GeneralC.llenarCombo(Sentencias.CARGAR_GENERO, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                                Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
                                sexoBox);
-            GeneralC.llenarCombo(Query.CARGAR_ESTADO_CIVIL, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
+            GeneralC.llenarCombo(Sentencias.CARGAR_ESTADO_CIVIL, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                                Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
                                estadoCivilBox);
-            GeneralC.llenarCombo(Query.CARGAR_AFILIACION, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
+            GeneralC.llenarCombo(Sentencias.CARGAR_AFILIACION, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
                               tipoAfiliacionBox);
-            GeneralC.llenarCombo(Query.CARGAR_ESTRATO_SOCIAL, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
+            GeneralC.llenarCombo(Sentencias.CARGAR_ESTRATO_SOCIAL, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
                               estratoBox);
-            GeneralC.llenarCombo(Query.CARGAR_REGIMEN, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
+            GeneralC.llenarCombo(Sentencias.CARGAR_REGIMEN, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
                               regimenBox);
-            GeneralC.llenarCombo(Query.CARGAR_ZONA, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
+            GeneralC.llenarCombo(Sentencias.CARGAR_ZONA, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
                               zonaBox);
             btnSalir.Enabled = true;
@@ -110,7 +110,7 @@ namespace Galactus.VistaControlador
         {
             if (departNacBox.SelectedIndex > 0)
             {
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + departNacBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + departNacBox.SelectedValue + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                  MuniNacBox);
@@ -118,7 +118,7 @@ namespace Galactus.VistaControlador
             }
             else
             {
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                  MuniNacBox);
@@ -351,7 +351,7 @@ namespace Galactus.VistaControlador
             {
                 List<string> parametros = new List<string>();
 
-                GeneralC.buscarDevuelveFila(Query.PACIENTE_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.PACIENTE_BUSCAR,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarPaciente),
                                                    Mensajes.BUSQUEDA_PACIENTE, true);
@@ -388,7 +388,7 @@ namespace Galactus.VistaControlador
             if (paisBox.SelectedIndex > 0)
             {
 
-                GeneralC.llenarCombo(Query.CARGAR_DEPARTAMENTO + " " + paisBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + paisBox.SelectedValue + "",
                                     Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                     Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                     departBox);
@@ -397,7 +397,7 @@ namespace Galactus.VistaControlador
             else
             {
 
-                GeneralC.llenarCombo(Query.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                    Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                    Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                    departBox);
@@ -410,7 +410,7 @@ namespace Galactus.VistaControlador
             if (departBox.SelectedIndex > 0)
             {
 
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + departBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + departBox.SelectedValue + "",
                                     Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                     Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                     muniBox);
@@ -418,7 +418,7 @@ namespace Galactus.VistaControlador
             }
             else
             {
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                    Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                    Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                    muniBox);
@@ -430,7 +430,7 @@ namespace Galactus.VistaControlador
         {
             if (paisNacBox.SelectedIndex > 0)
             {
-                GeneralC.llenarCombo(Query.CARGAR_DEPARTAMENTO + " " + paisNacBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + paisNacBox.SelectedValue + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                  departNacBox);
@@ -438,7 +438,7 @@ namespace Galactus.VistaControlador
             }
             else
             {
-                GeneralC.llenarCombo(Query.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                  departNacBox);
@@ -455,7 +455,7 @@ namespace Galactus.VistaControlador
         {
             if (departNacBox.SelectedIndex > 0)
             {
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + departNacBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + departNacBox.SelectedValue + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                  MuniNacBox);
@@ -463,7 +463,7 @@ namespace Galactus.VistaControlador
             }
             else
             {
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                  MuniNacBox);
@@ -475,7 +475,7 @@ namespace Galactus.VistaControlador
         {
             if (paisResBox.SelectedIndex > 0)
             {
-                GeneralC.llenarCombo(Query.CARGAR_DEPARTAMENTO + " " + paisResBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + paisResBox.SelectedValue + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                  departResBox);
@@ -483,7 +483,7 @@ namespace Galactus.VistaControlador
             }
             else
             {
-                GeneralC.llenarCombo(Query.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                  departResBox);
@@ -503,7 +503,7 @@ namespace Galactus.VistaControlador
         {
             if (departResBox.SelectedIndex > 0)
             {
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + departResBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + departResBox.SelectedValue + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                  ciudadResBox);
@@ -511,7 +511,7 @@ namespace Galactus.VistaControlador
             }
             else
             {
-                GeneralC.llenarCombo(Query.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                 ciudadResBox);
@@ -561,7 +561,7 @@ namespace Galactus.VistaControlador
             {
                 List<string> parametros = new List<string>();
 
-                GeneralC.buscarDevuelveFila(Query.CARGAR_EPS,
+                GeneralC.buscarDevuelveFila(Sentencias.CARGAR_EPS,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarRegistro),
                                                    Mensajes.BUSQUEDA_EPS, true);

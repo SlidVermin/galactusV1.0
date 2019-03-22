@@ -64,7 +64,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             {
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                GeneralC.buscarDevuelveFila(Query.EQUIVALENCIA_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.EQUIVALENCIA_BUSCAR,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarEquivalencia),
                                             Mensajes.BUSQUEDA_EQUIVALENCIA,
@@ -107,14 +107,14 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             List<string> listaParametros = new List<string>();
             listaParametros.Add(Util.Constantes.ConstanteGeneral.LINEA.ToString());
             listaParametros.Add("");
-            GeneralC.llenarTabla(Query.PARAMETROS_LISTAR_DOCUMENTOS, listaParametros, equivalencia.tablaLineas);
+            GeneralC.llenarTabla(Sentencias.PARAMETROS_LISTAR_DOCUMENTOS, listaParametros, equivalencia.tablaLineas);
         }
         private void cargarVias()
         {
             List<string> listaParametros = new List<string>();
             listaParametros.Add(Util.Constantes.ConstanteGeneral.VIAS_ADMINISTRACION.ToString());
             listaParametros.Add("");
-            GeneralC.llenarTabla(Query.PARAMETROS_LISTAR_DOCUMENTOS, listaParametros, equivalencia.tablaVias);
+            GeneralC.llenarTabla(Sentencias.PARAMETROS_LISTAR_DOCUMENTOS, listaParametros, equivalencia.tablaVias);
         }
         void cargarUnidad(DataRow fila)
         {
@@ -130,7 +130,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             DataSet tablasResultado = new DataSet();
             try
             {
-                tablasResultado = GeneralC.llenarDataset(Query.EQUIVALENCIA_CARGAR, listaParametros);
+                tablasResultado = GeneralC.llenarDataset(Sentencias.EQUIVALENCIA_CARGAR, listaParametros);
             }
             catch (Exception ex)
             {
@@ -180,7 +180,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 List<string> parametros = new List<string>();
                 parametros.Add(ConstanteGeneral.UNIDADES_DE_MEDIDA.ToString());
                 parametros.Add("");
-                GeneralC.listarDocumentosGenerales(Query.PARAMETROS_LISTAR_DOCUMENTOS,
+                GeneralC.listarDocumentosGenerales(Sentencias.PARAMETROS_LISTAR_DOCUMENTOS,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarUnidad),
                                                    Mensajes.BUSQUEDA_UNIDAD_MEDIDA);

@@ -397,7 +397,7 @@ namespace Galactus
         {
             try
             {
-                GeneralC.buscarDevuelveFila(Query.PARAMETROS_LISTAR_DOCUMENTOS,
+                GeneralC.buscarDevuelveFila(Sentencias.PARAMETROS_LISTAR_DOCUMENTOS,
                                             parametros,
                                             new GeneralC.cargarInfoFila(metodo),
                                             titulo,
@@ -523,19 +523,12 @@ namespace Galactus
             accionesGenerales(formulario, menu, btn1, btn2, btn3, btn4, btn5, msm);
         }
 
-        public static void posAnular(Form formulario,
-                                      ToolStrip menu,
-                                      ToolStripButton btn1,
-                                      ToolStripButton btn2,
-                                       string msm = "")
+        public static void posAnular(Form formulario, ToolStrip menu, ToolStripButton btn1, ToolStripButton btn2, string msm = "")
         {
             limpiarControles(formulario);
             accionesGenerales(formulario, menu, btn1, btn2, null, null, null, msm);
         }
-        public static bool fnModificarForm(Form formulario,
-                                        ToolStrip menu,
-                                        ToolStripButton btn1,
-                                        ToolStripButton btn2)
+        public static bool fnModificarForm(Object formulario, ToolStrip menu, ToolStripButton btn1, ToolStripButton btn2)
         {
             if (MessageBox.Show(Mensajes.Modificar_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {

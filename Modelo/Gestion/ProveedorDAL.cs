@@ -19,7 +19,7 @@ namespace Galactus.Modelo.Gestion
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
 
-                    sentencia.CommandText = Query.CREAR_PROVEEDOR;
+                    sentencia.CommandText = Sentencias.CREAR_PROVEEDOR;
                     sentencia.Parameters.Add(new SqlParameter("@codigo", SqlDbType.NVarChar)).Value = proveedor.codigo;
                     sentencia.Parameters.Add(new SqlParameter("@codigoTercero", SqlDbType.Int)).Value = proveedor.codigoTercero;
                     sentencia.Parameters.Add(new SqlParameter("@codigoRegimen", SqlDbType.Int)).Value = proveedor.codigoRegimen;
@@ -55,7 +55,7 @@ namespace Galactus.Modelo.Gestion
                 {
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
-                    sentencia.CommandText = Query.ANULAR_PROVEEDOR;
+                    sentencia.CommandText = Sentencias.ANULAR_PROVEEDOR;
                     sentencia.Parameters.Add(new SqlParameter("@Idproveedor", SqlDbType.Int)).Value = codigo;
                     sentencia.ExecuteNonQuery();
                     resultado = true;

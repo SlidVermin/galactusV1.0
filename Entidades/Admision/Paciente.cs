@@ -45,7 +45,7 @@ namespace Galactus.Entidades.Admision
         {
             List<string> paramas = new List<string>();
             paramas.Add(Convert.ToString(idPaciente));
-            GeneralC.llenarTabla(Query.PACIENTE_CARGAR, paramas, dtDatos);
+            GeneralC.llenarTabla(Sentencias.PACIENTE_CARGAR, paramas, dtDatos);
             if (dtDatos.Rows.Count > 0)
             {
                 tipoIdentificacion = Convert.ToString(dtDatos.Rows[0].Field<int>("IdTipoIdentificacion"));
@@ -82,7 +82,7 @@ namespace Galactus.Entidades.Admision
         public void cargarUbicaciones()
         {
             List<String> paramas = new List<string>();
-            GeneralC.llenarTabla(Query.UBICACION_GEOGRAFICA, paramas, dtUbicacion);
+            GeneralC.llenarTabla(Sentencias.UBICACION_GEOGRAFICA, paramas, dtUbicacion);
         }
     }
 

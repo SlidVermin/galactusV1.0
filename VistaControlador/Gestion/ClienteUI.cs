@@ -122,7 +122,7 @@ namespace Galactus.VistaControlador.Gestion
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Query.BUSCAR_CLIENTE,
+            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_CLIENTE,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarCliente),
                                     Titulos.TITULO_BUSCAR_CLIENTE,
@@ -134,7 +134,7 @@ namespace Galactus.VistaControlador.Gestion
         {
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
-            GeneralC.buscarDevuelveFila(Query.BUSCAR_TERCERO_CLIENTE,
+            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_TERCERO_CLIENTE,
                                       parametro,
                                       new GeneralC.cargarInfoFila(cargarTercero),
                                       Titulos.TITULO_BUSCAR_TERCERO,
@@ -235,7 +235,7 @@ namespace Galactus.VistaControlador.Gestion
             string cadena;
             parametro.Add(ConstanteGeneral.REGIMEN_SOCIO_ECONOMICO.ToString());
             cadena = GeneralC.obtenerParametros(parametro);
-            GeneralC.llenarCombo(Query.PARAMETROS_CONSULTAR_DESCRIPCION + cadena, "Codigo", "Descripcion", cbRegimen);
+            GeneralC.llenarCombo(Sentencias.PARAMETROS_CONSULTAR_DESCRIPCION + cadena, "Codigo", "Descripcion", cbRegimen);
             GeneralC.llenarComboDatosDefinidor(cliente.llenarComboFormaPago(),"Codigo", "Descripcion", cbFormaPago);
             GeneralC.llenarComboDatosDefinidor(cliente.llenarComboUbicacion(),"Codigo", "Descripcion", cbUbicacion);
         }

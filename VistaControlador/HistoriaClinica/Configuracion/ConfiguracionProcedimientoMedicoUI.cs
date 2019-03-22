@@ -91,7 +91,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
             {
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                GeneralC.buscarDevuelveFila(Query.PRODUCTO_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.PRODUCTO_BUSCAR,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarConfiguracionMedica),
                                             Mensajes.BUSQUEDA_PRODUCTO,
@@ -108,7 +108,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
             configuracionProcedimientoMedico.idConfiguracion = fila.Field<int>("CodigoConfiguracion");
             List<string> listaParametros = new List<string>();
             listaParametros.Add(configuracionProcedimientoMedico.idConfiguracion.ToString());
-            DataRow filaResultado = GeneralC.obtenerRegistroCompleto(Query.PRODUCTO_CARGAR, listaParametros);
+            DataRow filaResultado = GeneralC.obtenerRegistroCompleto(Sentencias.PRODUCTO_CARGAR, listaParametros);
             if (filaResultado != null)
             {
                 configuracionProcedimientoMedico.idItem = filaResultado.Field<string>("idItem");
@@ -159,7 +159,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
 
         private void dgvEntorno_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            buscarItemDatagrid(Query.PRODUCTO_BUSCAR, new GeneralC.cargarInfoFila(cargarItemDatagrid), Mensajes.BUSQUEDA_PRODUCTO);
+            buscarItemDatagrid(Sentencias.PRODUCTO_BUSCAR, new GeneralC.cargarInfoFila(cargarItemDatagrid), Mensajes.BUSQUEDA_PRODUCTO);
         }
         private void buscarItemDatagrid(string consulta, GeneralC.cargarInfoFila metodo, string titulo) {
             try
@@ -184,7 +184,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
             {
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                GeneralC.buscarDevuelveFila(Query.PRODUCTO_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.PRODUCTO_BUSCAR,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarConfiguracionMedica),
                                             Mensajes.BUSQUEDA_PRODUCTO,
@@ -202,7 +202,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
             {
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                GeneralC.buscarDevuelveFila(Query.PRODUCTO_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.PRODUCTO_BUSCAR,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarConfiguracionMedica),
                                             Mensajes.BUSQUEDA_PRODUCTO,

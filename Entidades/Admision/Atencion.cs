@@ -39,7 +39,7 @@ namespace Galactus.Entidades.Admision
         {
             List<string> param = new List<string>();
             param.Add(Convert.ToString(idAtencion));
-            dsDatos = GeneralC.llenarDataset(Query.ATENCION_CARGAR, param);
+            dsDatos = GeneralC.llenarDataset(Sentencias.ATENCION_CARGAR, param);
 
             DataTableCollection tables = dsDatos.Tables;
 
@@ -75,7 +75,7 @@ namespace Galactus.Entidades.Admision
             List<string> param = new List<string>();
             param.Add(Convert.ToString(idAdmision));
             DataTable dt = new DataTable();
-            GeneralC.llenarTabla(Query.ATENCION_PACIENTE_ATENCION, param,dt);
+            GeneralC.llenarTabla(Sentencias.ATENCION_PACIENTE_ATENCION, param,dt);
             if (dt.Rows.Count > 0)
             {
                 idAdmision = dt.Rows[0].Field<int>("admision");

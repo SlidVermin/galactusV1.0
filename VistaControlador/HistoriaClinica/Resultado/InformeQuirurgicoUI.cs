@@ -86,7 +86,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Query.BUSCAR_INFORME_QX,
+            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_INFORME_QX,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarHemodialisis),
                                     Titulos.TITULO_BUSCAR_INFORME_QX,
@@ -162,7 +162,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Query.BUSCAR_PACIENTE_INFORME_QX,
+            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_PACIENTE_INFORME_QX,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarInformacionAtencion),
                                     Titulos.TITULO_BUSCAR_PACIENTE,

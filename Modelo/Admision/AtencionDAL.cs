@@ -18,7 +18,7 @@ namespace Galactus.Modelo.Admision
                 {
                     comando.Connection = PrincipalUI.Cnxion;
                     comando.CommandType = System.Data.CommandType.StoredProcedure;
-                    comando.CommandText = Query.ATENCION_CREAR;
+                    comando.CommandText = Sentencias.ATENCION_CREAR;
                     comando.Parameters.Add(new SqlParameter("@IdAtencion", System.Data.SqlDbType.Int)).Value = atencion.idAtencion;
                     comando.Parameters.Add(new SqlParameter("@idAdmision", System.Data.SqlDbType.Int)).Value = atencion.idAdmision;
                     comando.Parameters.Add(new SqlParameter("@IdArea", System.Data.SqlDbType.Int)).Value = atencion.idArea;
@@ -49,7 +49,7 @@ namespace Galactus.Modelo.Admision
                 {
                     comando.Connection = PrincipalUI.Cnxion;
                     comando.CommandType = System.Data.CommandType.StoredProcedure;
-                    comando.CommandText = Query.ATENCION_ANULAR;
+                    comando.CommandText = Sentencias.ATENCION_ANULAR;
                     comando.Parameters.Add(new SqlParameter("@idAtencion", System.Data.SqlDbType.Int)).Value = atencion.idAtencion;
                     comando.ExecuteNonQuery();
                 }

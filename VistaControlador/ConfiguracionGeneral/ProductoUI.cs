@@ -66,7 +66,7 @@ namespace Galactus.VistaControlador.Inventario
             DataRow filaResultado = null;
             try
             {
-                filaResultado = GeneralC.obtenerRegistroCompleto(Query.PRODUCTO_CARGAR, listaParametros);
+                filaResultado = GeneralC.obtenerRegistroCompleto(Sentencias.PRODUCTO_CARGAR, listaParametros);
             }
             catch (Exception ex)
             {
@@ -133,7 +133,7 @@ namespace Galactus.VistaControlador.Inventario
             {
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                GeneralC.buscarDevuelveFila(Query.PRODUCTO_BUSCAR,
+                GeneralC.buscarDevuelveFila(Sentencias.PRODUCTO_BUSCAR,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarProducto),
                                             Mensajes.BUSQUEDA_PRODUCTO,
@@ -151,7 +151,7 @@ namespace Galactus.VistaControlador.Inventario
                 List<string> parametros = new List<string>();
                 parametros.Add(ConstanteGeneral.MARCA.ToString());
                 parametros.Add("");
-                GeneralC.listarDocumentosGenerales(Query.PARAMETROS_LISTAR_DOCUMENTOS,
+                GeneralC.listarDocumentosGenerales(Sentencias.PARAMETROS_LISTAR_DOCUMENTOS,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarMarca),
                                                    Mensajes.BUSQUEDA_MARCA);
@@ -167,7 +167,7 @@ namespace Galactus.VistaControlador.Inventario
             {
                 List<string> parametros = new List<string>();
                 parametros.Add("");
-                GeneralC.buscarDevuelveFila(Query.PRODUCTO_LISTAR_EQUIVALENCIA,
+                GeneralC.buscarDevuelveFila(Sentencias.PRODUCTO_LISTAR_EQUIVALENCIA,
                                             parametros,
                                             new GeneralC.cargarInfoFila(cargarEquivalencia),
                                             Mensajes.BUSQUEDA_EQUIVALENCIA,
@@ -186,7 +186,7 @@ namespace Galactus.VistaControlador.Inventario
                 List<string> parametros = new List<string>();
                 parametros.Add(ConstanteGeneral.PRESENTACION.ToString());
                 parametros.Add("");
-                GeneralC.listarDocumentosGenerales(Query.PARAMETROS_LISTAR_DOCUMENTOS,
+                GeneralC.listarDocumentosGenerales(Sentencias.PARAMETROS_LISTAR_DOCUMENTOS,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarPresentacion),
                                                    Mensajes.BUSQUEDA_PRESENTACION);

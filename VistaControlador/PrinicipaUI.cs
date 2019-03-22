@@ -67,8 +67,8 @@ namespace Galactus
             MenuStrip menu = new MenuStrip();
             List<string> pamaetros = new List<string>();
             pamaetros.Add(Sesion.IdRol.ToString());
-            GeneralC.llenarTabla(Query.SEG_ARMAR_MENU, pamaetros, Sesion.dtmenu);
-            GeneralC.llenarTabla(Query.SEG_LLENAR_PERMISOS, pamaetros, Sesion.dtPermisos);
+            GeneralC.llenarTabla(Sentencias.SEG_ARMAR_MENU, pamaetros, Sesion.dtmenu);
+            GeneralC.llenarTabla(Sentencias.SEG_LLENAR_PERMISOS, pamaetros, Sesion.dtPermisos);
             return colocarPadres(menu);
         }
         public MenuStrip colocarPadres(MenuStrip menu)
