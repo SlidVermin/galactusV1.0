@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.GroupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtAntecedentesAlergicos = new System.Windows.Forms.TextBox();
+            this.Label14 = new System.Windows.Forms.Label();
+            this.txtAntecedentesMedicos = new System.Windows.Forms.Label();
             this.txtAntecedentesToxicos = new System.Windows.Forms.TextBox();
             this.Label15 = new System.Windows.Forms.Label();
             this.Label16 = new System.Windows.Forms.Label();
@@ -39,19 +42,17 @@
             this.Label12 = new System.Windows.Forms.Label();
             this.txtAnteM = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtAntecedentesFamiliares = new System.Windows.Forms.TextBox();
-            this.txtAntecedentesMedicos = new System.Windows.Forms.Label();
-            this.Label14 = new System.Windows.Forms.Label();
-            this.txtAntecedentesAlergicos = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtRevisionSistema = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtRevisionSistema = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtAntecedentesFamiliares = new System.Windows.Forms.TextBox();
             this.GroupBox4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GroupBox4
             // 
+            this.GroupBox4.BackColor = System.Drawing.Color.White;
             this.GroupBox4.Controls.Add(this.txtAntecedentesAlergicos);
             this.GroupBox4.Controls.Add(this.Label14);
             this.GroupBox4.Controls.Add(this.txtAntecedentesMedicos);
@@ -72,6 +73,38 @@
             this.GroupBox4.TabIndex = 10087;
             this.GroupBox4.TabStop = false;
             // 
+            // txtAntecedentesAlergicos
+            // 
+            this.txtAntecedentesAlergicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAntecedentesAlergicos.Location = new System.Drawing.Point(13, 173);
+            this.txtAntecedentesAlergicos.Multiline = true;
+            this.txtAntecedentesAlergicos.Name = "txtAntecedentesAlergicos";
+            this.txtAntecedentesAlergicos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtAntecedentesAlergicos.Size = new System.Drawing.Size(877, 44);
+            this.txtAntecedentesAlergicos.TabIndex = 10067;
+            // 
+            // Label14
+            // 
+            this.Label14.AutoSize = true;
+            this.Label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Label14.Location = new System.Drawing.Point(13, 81);
+            this.Label14.Name = "Label14";
+            this.Label14.Size = new System.Drawing.Size(78, 17);
+            this.Label14.TabIndex = 10066;
+            this.Label14.Text = "Traumáticos";
+            // 
+            // txtAntecedentesMedicos
+            // 
+            this.txtAntecedentesMedicos.AutoSize = true;
+            this.txtAntecedentesMedicos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAntecedentesMedicos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtAntecedentesMedicos.Location = new System.Drawing.Point(13, 13);
+            this.txtAntecedentesMedicos.Name = "txtAntecedentesMedicos";
+            this.txtAntecedentesMedicos.Size = new System.Drawing.Size(58, 17);
+            this.txtAntecedentesMedicos.TabIndex = 10065;
+            this.txtAntecedentesMedicos.Text = "Médicos";
+            // 
             // txtAntecedentesToxicos
             // 
             this.txtAntecedentesToxicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -85,22 +118,22 @@
             // Label15
             // 
             this.Label15.AutoSize = true;
-            this.Label15.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Label15.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label15.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Label15.Location = new System.Drawing.Point(10, 384);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(53, 16);
+            this.Label15.Size = new System.Drawing.Size(51, 17);
             this.Label15.TabIndex = 10063;
             this.Label15.Text = "Tóxicos";
             // 
             // Label16
             // 
             this.Label16.AutoSize = true;
-            this.Label16.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label16.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Label16.Location = new System.Drawing.Point(10, 154);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(62, 16);
+            this.Label16.Size = new System.Drawing.Size(62, 17);
             this.Label16.TabIndex = 10061;
             this.Label16.Text = "Alérgicos";
             // 
@@ -117,11 +150,11 @@
             // Label13
             // 
             this.Label13.AutoSize = true;
-            this.Label13.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label13.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Label13.Location = new System.Drawing.Point(10, 308);
             this.Label13.Name = "Label13";
-            this.Label13.Size = new System.Drawing.Size(98, 16);
+            this.Label13.Size = new System.Drawing.Size(97, 17);
             this.Label13.TabIndex = 10059;
             this.Label13.Text = "Transfusionales";
             // 
@@ -148,11 +181,11 @@
             // Label12
             // 
             this.Label12.AutoSize = true;
-            this.Label12.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.Label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label12.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Label12.Location = new System.Drawing.Point(10, 228);
             this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(70, 16);
+            this.Label12.Size = new System.Drawing.Size(71, 17);
             this.Label12.TabIndex = 10055;
             this.Label12.Text = "Quirúgicos";
             // 
@@ -168,6 +201,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtRevisionSistema);
             this.panel1.Controls.Add(this.label2);
@@ -177,58 +211,16 @@
             this.panel1.Size = new System.Drawing.Size(907, 172);
             this.panel1.TabIndex = 10090;
             // 
-            // txtAntecedentesFamiliares
+            // label1
             // 
-            this.txtAntecedentesFamiliares.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtAntecedentesFamiliares.Location = new System.Drawing.Point(16, 31);
-            this.txtAntecedentesFamiliares.Multiline = true;
-            this.txtAntecedentesFamiliares.Name = "txtAntecedentesFamiliares";
-            this.txtAntecedentesFamiliares.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAntecedentesFamiliares.Size = new System.Drawing.Size(874, 44);
-            this.txtAntecedentesFamiliares.TabIndex = 10091;
-            // 
-            // txtAntecedentesMedicos
-            // 
-            this.txtAntecedentesMedicos.AutoSize = true;
-            this.txtAntecedentesMedicos.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtAntecedentesMedicos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtAntecedentesMedicos.Location = new System.Drawing.Point(13, 13);
-            this.txtAntecedentesMedicos.Name = "txtAntecedentesMedicos";
-            this.txtAntecedentesMedicos.Size = new System.Drawing.Size(57, 16);
-            this.txtAntecedentesMedicos.TabIndex = 10065;
-            this.txtAntecedentesMedicos.Text = "Médicos";
-            // 
-            // Label14
-            // 
-            this.Label14.AutoSize = true;
-            this.Label14.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label14.Location = new System.Drawing.Point(13, 81);
-            this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(79, 16);
-            this.Label14.TabIndex = 10066;
-            this.Label14.Text = "Traumáticos";
-            // 
-            // txtAntecedentesAlergicos
-            // 
-            this.txtAntecedentesAlergicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtAntecedentesAlergicos.Location = new System.Drawing.Point(13, 173);
-            this.txtAntecedentesAlergicos.Multiline = true;
-            this.txtAntecedentesAlergicos.Name = "txtAntecedentesAlergicos";
-            this.txtAntecedentesAlergicos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAntecedentesAlergicos.Size = new System.Drawing.Size(877, 44);
-            this.txtAntecedentesAlergicos.TabIndex = 10067;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(10, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 16);
-            this.label2.TabIndex = 10092;
-            this.label2.Text = "Revision por Sistema";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(13, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.TabIndex = 10094;
+            this.label1.Text = "Familiares";
             // 
             // txtRevisionSistema
             // 
@@ -240,21 +232,32 @@
             this.txtRevisionSistema.Size = new System.Drawing.Size(877, 44);
             this.txtRevisionSistema.TabIndex = 10093;
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(13, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 16);
-            this.label1.TabIndex = 10094;
-            this.label1.Text = "Familiares";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(10, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 17);
+            this.label2.TabIndex = 10092;
+            this.label2.Text = "Revision por Sistema";
+            // 
+            // txtAntecedentesFamiliares
+            // 
+            this.txtAntecedentesFamiliares.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAntecedentesFamiliares.Location = new System.Drawing.Point(16, 31);
+            this.txtAntecedentesFamiliares.Multiline = true;
+            this.txtAntecedentesFamiliares.Name = "txtAntecedentesFamiliares";
+            this.txtAntecedentesFamiliares.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtAntecedentesFamiliares.Size = new System.Drawing.Size(874, 44);
+            this.txtAntecedentesFamiliares.TabIndex = 10091;
             // 
             // AntecedentesIngresoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(927, 689);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.GroupBox4);

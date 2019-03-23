@@ -11,11 +11,13 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
     public partial class HistoriaClinicaUI : Form
     {
+        private int idAtencion;
         private HistoriaClinicaPaciente historiaClinica = new HistoriaClinicaPaciente();
         private IndicacionesUI indicaciones = new IndicacionesUI();
         private ProcedimientosUI procedimientos = new ProcedimientosUI();
         private MedicamentosUI medicamentos = new MedicamentosUI();
-        private IngresoClinicoUI ingreso = new IngresoClinicoUI();
+        private IngresoClinicoUI ingreso;
+        
 
        
         public HistoriaClinicaUI()
@@ -34,7 +36,9 @@ namespace Galactus.VistaControlador.HistoriaClinica
         #endregion        
 
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
-        {           
+        {
+            ingreso = new IngresoClinicoUI(idAtencion);
+
             GeneralC.cargarFormularioEnPestana(tpIngresoClinico, ingreso);
             GeneralC.cargarFormularioEnPestana(tpIndicaciones, indicaciones);
             GeneralC.cargarFormularioEnPestana(tbProcedimientos, procedimientos);
@@ -42,7 +46,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
             indicaciones.indicacion = historiaClinica.orden.indicacion;
             medicamentos.medicamentos = historiaClinica.orden.medicamento;
-            procedimientos.procedimientos = historiaClinica.orden.procedimiento;
+            procedimientos.procedimientos = historiaClinica.orden.procedimiento;           
         }
 
         public  void obtenerDatosPaciente(ListadoPaciente listaPaciente,int idIngreso)
@@ -60,6 +64,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 txtSexo.Text = dtDatos.Rows[0].Field<String>("Genero");
                 txtServicio.Text = dtDatos.Rows[0].Field<String>("Entorno");
                 txtfechaIngreso.Text = Convert.ToString(dtDatos.Rows[0].Field<DateTime>("Fecha ingreso"));
+
+                idAtencion = int.Parse(txtAtencion.Text);
             }
         }
       

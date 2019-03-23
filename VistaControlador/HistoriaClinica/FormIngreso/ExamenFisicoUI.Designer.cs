@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.GroupBox26 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtGenerales = new System.Windows.Forms.TextBox();
+            this.txtPielFaneras = new System.Windows.Forms.TextBox();
             this.Label160 = new System.Windows.Forms.Label();
             this.txtSistemaNervioso = new System.Windows.Forms.TextBox();
             this.Label89 = new System.Windows.Forms.Label();
@@ -46,9 +49,6 @@
             this.Label87 = new System.Windows.Forms.Label();
             this.txtSignosVitales = new System.Windows.Forms.TextBox();
             this.Label88 = new System.Windows.Forms.Label();
-            this.txtPielFaneras = new System.Windows.Forms.TextBox();
-            this.txtGenerales = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.GroupBox26.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,6 +81,37 @@
             this.GroupBox26.Size = new System.Drawing.Size(918, 355);
             this.GroupBox26.TabIndex = 10101;
             this.GroupBox26.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(6, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.TabIndex = 10078;
+            this.label1.Text = "Generales";
+            // 
+            // txtGenerales
+            // 
+            this.txtGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtGenerales.Location = new System.Drawing.Point(115, 15);
+            this.txtGenerales.Multiline = true;
+            this.txtGenerales.Name = "txtGenerales";
+            this.txtGenerales.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtGenerales.Size = new System.Drawing.Size(794, 41);
+            this.txtGenerales.TabIndex = 10077;
+            // 
+            // txtPielFaneras
+            // 
+            this.txtPielFaneras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtPielFaneras.Location = new System.Drawing.Point(606, 165);
+            this.txtPielFaneras.Multiline = true;
+            this.txtPielFaneras.Name = "txtPielFaneras";
+            this.txtPielFaneras.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPielFaneras.Size = new System.Drawing.Size(303, 41);
+            this.txtPielFaneras.TabIndex = 10076;
             // 
             // Label160
             // 
@@ -261,41 +292,11 @@
             this.Label88.TabIndex = 10057;
             this.Label88.Text = "Signos Vitales:";
             // 
-            // txtPielFaneras
-            // 
-            this.txtPielFaneras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtPielFaneras.Location = new System.Drawing.Point(606, 165);
-            this.txtPielFaneras.Multiline = true;
-            this.txtPielFaneras.Name = "txtPielFaneras";
-            this.txtPielFaneras.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPielFaneras.Size = new System.Drawing.Size(303, 41);
-            this.txtPielFaneras.TabIndex = 10076;
-            // 
-            // txtGenerales
-            // 
-            this.txtGenerales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtGenerales.Location = new System.Drawing.Point(115, 15);
-            this.txtGenerales.Multiline = true;
-            this.txtGenerales.Name = "txtGenerales";
-            this.txtGenerales.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtGenerales.Size = new System.Drawing.Size(794, 41);
-            this.txtGenerales.TabIndex = 10077;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(6, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
-            this.label1.TabIndex = 10078;
-            this.label1.Text = "Generales";
-            // 
             // ExamenFisicoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(927, 364);
             this.Controls.Add(this.GroupBox26);
             this.Name = "ExamenFisicoUI";

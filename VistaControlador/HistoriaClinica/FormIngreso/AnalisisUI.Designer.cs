@@ -59,6 +59,7 @@
             // txtAnalisis
             // 
             this.txtAnalisis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAnalisis.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtAnalisis.Location = new System.Drawing.Point(19, 39);
             this.txtAnalisis.Multiline = true;
             this.txtAnalisis.Name = "txtAnalisis";
@@ -76,16 +77,17 @@
             this.txtPronostico.Size = new System.Drawing.Size(896, 88);
             this.txtPronostico.TabIndex = 10063;
             // 
-            // PronosticoUI
+            // AnalisisUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(927, 279);
             this.Controls.Add(this.txtAnalisis);
             this.Controls.Add(this.txtPronostico);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Label59);
-            this.Name = "PronosticoUI";
+            this.Name = "AnalisisUI";
             this.Text = "PronosticoUI";
             this.ResumeLayout(false);
             this.PerformLayout();
