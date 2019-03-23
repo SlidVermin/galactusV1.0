@@ -42,9 +42,9 @@ namespace Galactus.Modelo.HistoriaClinica
                     comando.Parameters.Add(new SqlParameter("@Paraclinicos", System.Data.SqlDbType.NVarChar)).Value = ingreso.Paraclinicos;
                     comando.Parameters.Add(new SqlParameter("@Analisis", System.Data.SqlDbType.NVarChar)).Value = ingreso.Analisis;
                     comando.Parameters.Add(new SqlParameter("@Pronosticos", System.Data.SqlDbType.NVarChar)).Value = ingreso.Pronostico;
-                    comando.Parameters.Add(new SqlParameter("@IdUsuario", System.Data.SqlDbType.NVarChar)).Value = ingreso.IdUsuario;
-                    comando.Parameters.Add(new SqlParameter("@IdUsuarioOrigen", System.Data.SqlDbType.NVarChar)).Value = ingreso.IdUsuarioOrigen;
-                    comando.Parameters.Add(new SqlParameter("@FechaOrigen", System.Data.SqlDbType.NVarChar)).Value = ingreso.FechaOrigen;
+                    comando.Parameters.Add(new SqlParameter("@IdUsuario", System.Data.SqlDbType.NVarChar)).Value = Sesion.IdUsuario;
+                    comando.Parameters.Add(new SqlParameter("@IdUsuarioOrigen", System.Data.SqlDbType.NVarChar)).Value = Sesion.IdUsuario;
+                    comando.Parameters.Add(new SqlParameter("@FechaOrigen", System.Data.SqlDbType.DateTime)).Value = DateTime.Today;
 
                     comando.ExecuteScalar();
                 }
