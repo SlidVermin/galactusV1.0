@@ -18,7 +18,8 @@ namespace Galactus.Modelo.HistoriaClinica
                 {
                     comando.Connection = PrincipalUI.Cnxion;
                     comando.CommandType = System.Data.CommandType.StoredProcedure;
-                    comando.CommandText = Sentencias.PACIENTE_CREAR;
+                    comando.CommandText = Sentencias.CREAR_INGRESO_CLINICO;
+                    comando.Parameters.Add(new SqlParameter("@IdAtencion", System.Data.SqlDbType.Int)).Value = ingreso.IdAtencion;
                     comando.Parameters.Add(new SqlParameter("@Peso", System.Data.SqlDbType.NVarChar)).Value = ingreso.Peso;
                     comando.Parameters.Add(new SqlParameter("@MotivoIngreso", System.Data.SqlDbType.NVarChar)).Value = ingreso.MotivoIngreso;
                     comando.Parameters.Add(new SqlParameter("@AntecedentesMedicos", System.Data.SqlDbType.NVarChar)).Value = ingreso.AntecedentesMedicos;
@@ -29,6 +30,7 @@ namespace Galactus.Modelo.HistoriaClinica
                     comando.Parameters.Add(new SqlParameter("@AntecedentesToxicos", System.Data.SqlDbType.NVarChar)).Value = ingreso.AntecedentesToxicos;
                     comando.Parameters.Add(new SqlParameter("@AntecedentesFamiliares", System.Data.SqlDbType.NVarChar)).Value = ingreso.AntecedentesFamiliares;
                     comando.Parameters.Add(new SqlParameter("@RevisionSistema", System.Data.SqlDbType.NVarChar)).Value = ingreso.RevisionSistema;
+                    comando.Parameters.Add(new SqlParameter("@Generales", System.Data.SqlDbType.NVarChar)).Value = ingreso.Generales;
                     comando.Parameters.Add(new SqlParameter("@SignosVitales", System.Data.SqlDbType.NVarChar)).Value = ingreso.SignosVitales;
                     comando.Parameters.Add(new SqlParameter("@CabezaCuello", System.Data.SqlDbType.NVarChar)).Value = ingreso.CabezaCuello;
                     comando.Parameters.Add(new SqlParameter("@Torax", System.Data.SqlDbType.NVarChar)).Value = ingreso.Torax;

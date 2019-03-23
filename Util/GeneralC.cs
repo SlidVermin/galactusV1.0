@@ -104,11 +104,10 @@ namespace Galactus
             return dt;
         }
         public static void cargarUbicacionGeografica(DataTable dtUbicaciones,
-                                                   String idMunicipio,
-                                                 ref ComboBox comboPais,
-                                                 ref ComboBox comboDepartamento,
-                                                 ref ComboBox comboMunicipio
-                                                   )
+                                                     String idMunicipio,
+                                                     ref ComboBox comboPais,
+                                                     ref ComboBox comboDepartamento,
+                                                     ref ComboBox comboMunicipio)
         {
 
             try

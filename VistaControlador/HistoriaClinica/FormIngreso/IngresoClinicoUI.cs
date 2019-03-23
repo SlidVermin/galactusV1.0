@@ -35,6 +35,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             ingreso.IdAtencion = 10;
             ingreso.Peso = "80";
             ingreso.MotivoIngreso = valoracionUI.txtMotivoIngreso.Text;
+            ingreso.Paraclinicos = "PRUEBA";
             ingreso.AntecedentesMedicos = antecedentesUI.txtAntecedentesMedicos.Text;
             ingreso.AntecedentesQuirurgicos = antecedentesUI.txtAntecedentesQuirurgicos.Text;
             ingreso.AntecedentesTransfusionales = antecedentesUI.txtAntecedentesTransfusionales.Text;
@@ -51,7 +52,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             ingreso.Abdomen = examenFisicoUI.txtAbdomen.Text;
             ingreso.GenitalUrinario = examenFisicoUI.txtGenitalUrinario.Text;
             ingreso.Extremidades = examenFisicoUI.txtExtremidades.Text;
-            ingreso.SistemaNervioso = examenFisicoUI.txtSistemaNervioso.Text;
+            ingreso.SistemaNervioso = examenFisicoUI.txtSistemaNervioso.Text;            
             ingreso.Analisis = analisisUI.txtAnalisis.Text;
             ingreso.Pronostico = analisisUI.txtPronostico.Text;
             /*ingreso.txtIdUsuario;
@@ -70,17 +71,12 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                guardarIngreso();
-            }
-            catch {
-                                
-            }
+            guardarIngreso();
         }
 
         private void guardarIngreso() {
             IngresoClinicoDAL.guardarIngreso(crearIngreso());
+            MessageBox.Show("Guardado exitosamente");
         }
     }
 }
