@@ -43,7 +43,8 @@ namespace Galactus.Modelo.HistoriaClinica
                     comando.Parameters.Add(new SqlParameter("@Analisis", System.Data.SqlDbType.NVarChar)).Value = ingreso.Analisis;
                     comando.Parameters.Add(new SqlParameter("@Pronosticos", System.Data.SqlDbType.NVarChar)).Value = ingreso.Pronostico;
                     comando.Parameters.Add(new SqlParameter("@IdUsuario", System.Data.SqlDbType.NVarChar)).Value = Sesion.IdUsuario;
-                    comando.Parameters.Add(new SqlParameter("@IdUsuarioOrigen", System.Data.SqlDbType.NVarChar)).Value = Sesion.IdUsuario;
+                    comando.Parameters.Add(new SqlParameter("@ResumenClinico", System.Data.SqlDbType.NVarChar)).Value = ingreso.resumenClinico;
+                    comando.Parameters.Add(new SqlParameter("@PielFaneras", System.Data.SqlDbType.NVarChar)).Value = ingreso.pielFaneras;
                     comando.Parameters.Add(new SqlParameter("@FechaOrigen", System.Data.SqlDbType.DateTime)).Value = DateTime.Today;
 
                     comando.ExecuteScalar();
@@ -53,6 +54,19 @@ namespace Galactus.Modelo.HistoriaClinica
             {
                 throw ex;
             }
+        }
+        public static void cargarDiagnostico(IngresoClinico ingreso)
+        {
+            List<string> list = new List<string>();
+            list.Add(Convert.ToString(ingreso.IdAtencion));
+            GeneralC.llenarTabla(Sentencias.CARGAR_DIAGNOSTICO_INGRESO, list, ingreso.dtDiagnostico);
+        }
+
+        public static void cargarDatos(IngresoClinico ingreso)
+        {
+            List<string> list = new List<string>();
+            list.Add(Convert.ToString(ingreso.IdAtencion));
+            GeneralC.llenarTabla(Sentencias.CARGAR_INGRESO, list, ingreso.dtDatos);
         }
     }
 }

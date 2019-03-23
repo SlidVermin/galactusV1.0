@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data;
+using Galactus.Modelo.HistoriaClinica;
 namespace Galactus.Entidades.HistoriaClinica
 {
-    class IngresoClinico
+   public class IngresoClinico
     {
         public int IdAtencion { get; set; }
         public String Peso { get; set; }
@@ -32,8 +33,48 @@ namespace Galactus.Entidades.HistoriaClinica
         public String Analisis { get; set; }
         public String Pronostico { get; set; }
         public int IdUsuario { get; set; }
-        public int IdUsuarioOrigen { get; set; }
+        public String resumenClinico { get; set;}
+        public String pielFaneras { get; set; }
         public DateTime FechaOrigen { get; set; }
         public DateTime FechaActualizacion { get; set; }
+
+        public DataTable dtDiagnostico = new DataTable();
+        public DataTable dtDatos = new DataTable();
+
+        public void cargarDiagnostico()
+        {
+            IngresoClinicoDAL.cargarDiagnostico(this);
+        }
+        public void cargarDatos()
+        {
+            IngresoClinicoDAL.cargarDatos(this);
+            if (dtDatos.Rows.Count > 0)
+            {
+                Peso = dtDatos.Rows[0].Field<String>("peso");
+                MotivoIngreso = dtDatos.Rows[0].Field<String>("motivoingreso");
+                AntecedentesMedicos = dtDatos.Rows[0].Field<String>("AntecedentesMedicos");
+                AntecedentesQuirurgicos = dtDatos.Rows[0].Field<String>("AntecedentesQuirurgicos");
+                AntecedentesTransfusionales = dtDatos.Rows[0].Field<String>("AntecedentesTransfusionales");
+                AntecedentesAlergicos = dtDatos.Rows[0].Field<String>("AntecedentesAlergicos");
+                AntecedentesTraumaticos = dtDatos.Rows[0].Field<String>("AntecedentesTraumaticos");
+                AntecedentesFamiliares = dtDatos.Rows[0].Field<String>("AntecedentesFamiliares");
+                RevisionSistema = dtDatos.Rows[0].Field<String>("revisionSistema");
+                SignosVitales = dtDatos.Rows[0].Field<String>("SignosVitales");
+                CabezaCuello = dtDatos.Rows[0].Field<String>("cabezaCuello");
+                CardioPulmonar = dtDatos.Rows[0].Field<String>("cardioPulmonar");
+                Abdomen = dtDatos.Rows[0].Field<String>("abdomen");
+                GenitalUrinario = dtDatos.Rows[0].Field<String>("genitalurinario");
+                Extremidades = dtDatos.Rows[0].Field<String>("extremidades");
+                SistemaNervioso = dtDatos.Rows[0].Field<String>("sistemanervioso");
+                Paraclinicos = dtDatos.Rows[0].Field<String>("paraclinicos");
+                Analisis = dtDatos.Rows[0].Field<String>("analisis");
+                Pronostico = dtDatos.Rows[0].Field<String>("pronosticos");
+                Torax = dtDatos.Rows[0].Field<String>("torax");
+                AntecedentesToxicos = dtDatos.Rows[0].Field<String>("antecedentesToxicos");
+                Generales = dtDatos.Rows[0].Field<String>("generales");
+                resumenClinico = dtDatos.Rows[0].Field<String>("resumenClinico");
+                pielFaneras = dtDatos.Rows[0].Field<String>("pielFaneras");
+            }
+        }
     }
 }

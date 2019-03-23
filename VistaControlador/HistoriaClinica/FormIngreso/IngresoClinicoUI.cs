@@ -3,6 +3,7 @@ using Galactus.Modelo.HistoriaClinica;
 using Galactus.VistaControlador.HistoriaClinica.FormIngreso;
 using System;
 using System.Windows.Forms;
+using Galactus.Util.Mensajes;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
@@ -13,7 +14,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private AntecedentesIngresoUI antecedentesUI = new AntecedentesIngresoUI();
         private ExamenFisicoUI examenFisicoUI = new ExamenFisicoUI();
         private AnalisisUI analisisUI = new AnalisisUI();
-
+        
         public IngresoClinicoUI()
         {
             InitializeComponent();
@@ -27,12 +28,45 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void IngresoClinicoUI_Load(object sender, EventArgs e)
         {
+            valoracionUI = new ValoracionIngresoUI(idAtencion);
+
             GeneralC.cargarFormularioEnPestana(tpValoracion, valoracionUI);
             GeneralC.cargarFormularioEnPestana(tpAntecedentes, antecedentesUI);
             GeneralC.cargarFormularioEnPestana(tpExamenFisico, examenFisicoUI);
             GeneralC.cargarFormularioEnPestana(tpAnalisis, analisisUI);
 
             GeneralC.posCargadoForm(this, tsIngreso, tsbModificar, null);
+            cargarIngreso();
+        }
+
+        private void cargarIngreso()
+        {
+            IngresoClinico ingreso = new IngresoClinico();
+            ingreso.IdAtencion = idAtencion;
+            ingreso.cargarDatos();
+
+            valoracionUI.txtMotivoIngreso.Text = ingreso.MotivoIngreso;
+            valoracionUI.txtResumenClinico.Text = ingreso.resumenClinico;
+            antecedentesUI.txtAnteM.Text = ingreso.AntecedentesMedicos;
+            antecedentesUI.txtAntecedentesAlergicos.Text = ingreso.AntecedentesAlergicos;
+            antecedentesUI.txtAntecedentesFamiliares.Text = ingreso.AntecedentesFamiliares;
+            antecedentesUI.txtAntecedentesQuirurgicos.Text = ingreso.AntecedentesQuirurgicos;
+            antecedentesUI.txtAntecedentesToxicos.Text = ingreso.AntecedentesToxicos;
+            antecedentesUI.txtAntecedentesTransfusionales.Text = ingreso.AntecedentesTransfusionales;
+            antecedentesUI.txtAntecedentesTraumaticos.Text = ingreso.AntecedentesTraumaticos;
+            antecedentesUI.txtRevisionSistema.Text = ingreso.RevisionSistema;
+            examenFisicoUI.txtAbdomen.Text = ingreso.Abdomen;
+            examenFisicoUI.txtCabezaCuello.Text = ingreso.CabezaCuello;
+            examenFisicoUI.txtCardioPulmonar.Text = ingreso.CardioPulmonar;
+            examenFisicoUI.txtExtremidades.Text = ingreso.Extremidades;
+            examenFisicoUI.txtGenitalUrinario.Text = ingreso.GenitalUrinario;
+            examenFisicoUI.txtSignosVitales.Text = ingreso.SignosVitales;
+            examenFisicoUI.txtSistemaNervioso.Text = ingreso.SistemaNervioso;
+            examenFisicoUI.txtTorax.Text = ingreso.Torax;
+            examenFisicoUI.txtGenerales.Text = ingreso.Generales;
+            examenFisicoUI.txtPielFaneras.Text = ingreso.pielFaneras;
+            analisisUI.txtAnalisis.Text = ingreso.Analisis;
+            analisisUI.txtPronostico.Text = ingreso.Pronostico;
         }
 
         private IngresoClinico crearIngreso()
@@ -42,8 +76,9 @@ namespace Galactus.VistaControlador.HistoriaClinica
             ingreso.IdAtencion = idAtencion;
             ingreso.Peso = "80";
             ingreso.MotivoIngreso = valoracionUI.txtMotivoIngreso.Text;
+            ingreso.resumenClinico = valoracionUI.txtResumenClinico.Text;
             ingreso.Paraclinicos = "PRUEBA";
-            ingreso.AntecedentesMedicos = antecedentesUI.txtAntecedentesMedicos.Text;
+            ingreso.AntecedentesMedicos = antecedentesUI.txtAnteM.Text;
             ingreso.AntecedentesQuirurgicos = antecedentesUI.txtAntecedentesQuirurgicos.Text;
             ingreso.AntecedentesTransfusionales = antecedentesUI.txtAntecedentesTransfusionales.Text;
             ingreso.AntecedentesAlergicos = antecedentesUI.txtAntecedentesAlergicos.Text;
@@ -62,6 +97,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             ingreso.SistemaNervioso = examenFisicoUI.txtSistemaNervioso.Text;            
             ingreso.Analisis = analisisUI.txtAnalisis.Text;
             ingreso.Pronostico = analisisUI.txtPronostico.Text;
+            ingreso.pielFaneras = examenFisicoUI.txtPielFaneras.Text;
             /*ingreso.txtIdUsuario;
             ingreso.txtIdUsuarioOrigen;
             ingreso.txtFechaOrigen;
@@ -80,10 +116,25 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
             guardarIngreso();
         }
-
+        public bool validarForm()
+        {
+            return true;
+        }
         private void guardarIngreso() {
-            IngresoClinicoDAL.guardarIngreso(crearIngreso());
-            MessageBox.Show("Guardado exitosamente");
+           
+            if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    IngresoClinicoDAL.guardarIngreso(crearIngreso());
+                    GeneralC.posGuardar(this, tsIngreso, tsbModificar, null, null, null, null, Mensajes.CONFIRMACION_GUARDADO);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

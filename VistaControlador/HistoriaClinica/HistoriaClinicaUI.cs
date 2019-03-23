@@ -17,7 +17,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private ProcedimientosUI procedimientos = new ProcedimientosUI();
         private MedicamentosUI medicamentos = new MedicamentosUI();
         private IngresoClinicoUI ingreso;
-        
+  
 
        
         public HistoriaClinicaUI()
@@ -38,6 +38,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
         {
             ingreso = new IngresoClinicoUI(idAtencion);
+          
 
             GeneralC.cargarFormularioEnPestana(tpIngresoClinico, ingreso);
             GeneralC.cargarFormularioEnPestana(tpIndicaciones, indicaciones);

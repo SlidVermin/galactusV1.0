@@ -182,6 +182,7 @@
             this.Name = "ValoracionIngresoUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AtencionIngresoUI";
+            this.Load += new System.EventHandler(this.ValoracionIngresoUI_Load);
             this.gbResumenClinico.ResumeLayout(false);
             this.gbResumenClinico.PerformLayout();
             this.GroupBox17.ResumeLayout(false);
@@ -204,8 +205,8 @@
         internal System.Windows.Forms.DataGridView dgvImpresionN;
         internal System.Windows.Forms.DataGridViewImageColumn anulardiagevoN;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtResumenClinico;
         private System.Windows.Forms.GroupBox groupBox1;
         internal System.Windows.Forms.TextBox txtMotivoIngreso;
+        internal System.Windows.Forms.TextBox txtResumenClinico;
     }
 }
