@@ -9,5 +9,9 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica
     public class OrdenClinicaIndicacion
     {
         public string indicacion { get; set; }
+        public OrdenClinicaIndicacion()
+        {
+            indicacion = string.Empty;
+        }
     }
 }

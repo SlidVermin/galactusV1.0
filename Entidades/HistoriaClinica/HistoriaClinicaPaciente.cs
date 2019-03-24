@@ -12,7 +12,7 @@ namespace Galactus.Entidades.HistoriaClinica
         public OrdenClinica orden { get; set; }
         public HistoriaClinicaPaciente()
         {
-            orden = new OrdenClinica();
+           
         }
     }
 }

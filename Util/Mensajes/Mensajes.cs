@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Galactus.Util.Mensajes
 {
@@ -16,7 +17,7 @@ namespace Galactus.Util.Mensajes
         public const string SALIR_FORM = "¿ Desea salir ?";
         public const string CONFIRMACION_GUARDADO = "Registro Guardado !";
         public const string CONFIRMACION_ANULADO = "Registro anulado !";
-       
+
 
         #region Titulos
         public const string BUSQUEDA_BODEGA = "Busqueda de Bodega";
@@ -32,7 +33,15 @@ namespace Galactus.Util.Mensajes
         public const string BUSQUEDA_EMPRESA = "Busqueda Empresa";
         public const string BUSQUEDA_CONTRATO_EPS = "Busqueda contrato eps";
         public const string BUSQUEDA_AREA = "Busqueda area";
-       
+
         #endregion
+        public static void mensajeFaltaInformacion(string mensaje)
+        {
+            MessageBox.Show(mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public static bool preguntaGuardar()
+        {
+            return MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+        }
     }
 }

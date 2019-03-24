@@ -60,11 +60,6 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.tcOrdenMedica = new Galactus.Util.Controles.TabControlGalactus();
-            this.tpIndicaciones = new System.Windows.Forms.TabPage();
-            this.tbProcedimientos = new System.Windows.Forms.TabPage();
-            this.tpMedicamentos = new System.Windows.Forms.TabPage();
-            this.tpAnalisisOrden = new System.Windows.Forms.TabPage();
             this.tpEstancia = new System.Windows.Forms.TabPage();
             this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
             this.tpIngresoClinico = new System.Windows.Forms.TabPage();
@@ -72,7 +67,6 @@
             this.tbLaboratorios.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
             this.tstMenuOrdenMedica.SuspendLayout();
-            this.tcOrdenMedica.SuspendLayout();
             this.tabHistoriaClinica.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -322,7 +316,6 @@
             // tpOrdenMedica
             // 
             this.tpOrdenMedica.Controls.Add(this.tstMenuOrdenMedica);
-            this.tpOrdenMedica.Controls.Add(this.tcOrdenMedica);
             this.tpOrdenMedica.Location = new System.Drawing.Point(4, 29);
             this.tpOrdenMedica.Name = "tpOrdenMedica";
             this.tpOrdenMedica.Padding = new System.Windows.Forms.Padding(3);
@@ -412,60 +405,6 @@
             this.toolStripButton6.Size = new System.Drawing.Size(73, 22);
             this.toolStripButton6.Text = "Cancelar";
             // 
-            // tcOrdenMedica
-            // 
-            this.tcOrdenMedica.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tcOrdenMedica.Controls.Add(this.tpIndicaciones);
-            this.tcOrdenMedica.Controls.Add(this.tbProcedimientos);
-            this.tcOrdenMedica.Controls.Add(this.tpMedicamentos);
-            this.tcOrdenMedica.Controls.Add(this.tpAnalisisOrden);
-            this.tcOrdenMedica.ItemSize = new System.Drawing.Size(30, 120);
-            this.tcOrdenMedica.Location = new System.Drawing.Point(6, 5);
-            this.tcOrdenMedica.Multiline = true;
-            this.tcOrdenMedica.Name = "tcOrdenMedica";
-            this.tcOrdenMedica.SelectedIndex = 0;
-            this.tcOrdenMedica.Size = new System.Drawing.Size(1240, 428);
-            this.tcOrdenMedica.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tcOrdenMedica.TabIndex = 4;
-            // 
-            // tpIndicaciones
-            // 
-            this.tpIndicaciones.Location = new System.Drawing.Point(124, 4);
-            this.tpIndicaciones.Name = "tpIndicaciones";
-            this.tpIndicaciones.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIndicaciones.Size = new System.Drawing.Size(1112, 420);
-            this.tpIndicaciones.TabIndex = 0;
-            this.tpIndicaciones.Text = "Indicaciones";
-            this.tpIndicaciones.UseVisualStyleBackColor = true;
-            // 
-            // tbProcedimientos
-            // 
-            this.tbProcedimientos.Location = new System.Drawing.Point(124, 4);
-            this.tbProcedimientos.Name = "tbProcedimientos";
-            this.tbProcedimientos.Padding = new System.Windows.Forms.Padding(3);
-            this.tbProcedimientos.Size = new System.Drawing.Size(1112, 420);
-            this.tbProcedimientos.TabIndex = 1;
-            this.tbProcedimientos.Text = "Procedimientos";
-            this.tbProcedimientos.UseVisualStyleBackColor = true;
-            // 
-            // tpMedicamentos
-            // 
-            this.tpMedicamentos.Location = new System.Drawing.Point(124, 4);
-            this.tpMedicamentos.Name = "tpMedicamentos";
-            this.tpMedicamentos.Size = new System.Drawing.Size(1112, 420);
-            this.tpMedicamentos.TabIndex = 2;
-            this.tpMedicamentos.Text = "Medicamentos";
-            this.tpMedicamentos.UseVisualStyleBackColor = true;
-            // 
-            // tpAnalisisOrden
-            // 
-            this.tpAnalisisOrden.Location = new System.Drawing.Point(124, 4);
-            this.tpAnalisisOrden.Name = "tpAnalisisOrden";
-            this.tpAnalisisOrden.Size = new System.Drawing.Size(1112, 420);
-            this.tpAnalisisOrden.TabIndex = 3;
-            this.tpAnalisisOrden.Text = "Analisis";
-            this.tpAnalisisOrden.UseVisualStyleBackColor = true;
-            // 
             // tpEstancia
             // 
             this.tpEstancia.Location = new System.Drawing.Point(4, 29);
@@ -523,7 +462,6 @@
             this.tpOrdenMedica.PerformLayout();
             this.tstMenuOrdenMedica.ResumeLayout(false);
             this.tstMenuOrdenMedica.PerformLayout();
-            this.tcOrdenMedica.ResumeLayout(false);
             this.tabHistoriaClinica.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -549,11 +487,6 @@
         private System.Windows.Forms.TabPage tbLaboratorios;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabPage tpOrdenMedica;
-        private Util.Controles.TabControlGalactus tcOrdenMedica;
-        private System.Windows.Forms.TabPage tpIndicaciones;
-        private System.Windows.Forms.TabPage tbProcedimientos;
-        private System.Windows.Forms.TabPage tpMedicamentos;
-        private System.Windows.Forms.TabPage tpAnalisisOrden;
         private System.Windows.Forms.TabPage tpEstancia;
         private System.Windows.Forms.TabControl tabHistoriaClinica;
         private System.Windows.Forms.ToolStrip tstMenuOrdenMedica;

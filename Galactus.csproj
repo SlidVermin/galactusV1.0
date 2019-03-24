@@ -106,8 +106,8 @@
     <Compile Include="Modelo\Gestion\ProveedorDAL.cs" />
     <Compile Include="Modelo\Gestion\ClienteDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
-    <Compile Include="Modelo\HistoriaClinica\HistoriaClinicaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\IngresoClinicoDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\OrdenClinicaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\HemodialisisDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\InformeQuirurgicoDAL.cs" />
     <Compile Include="Modelo\Inventario\BodegaDAL.cs" />
@@ -320,6 +320,12 @@
     <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\MedicamentosUI.Designer.cs">
       <DependentUpon>MedicamentosUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\OrdenMedicaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\OrdenMedicaUI.Designer.cs">
+      <DependentUpon>OrdenMedicaUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\ProcedimientosUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -480,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\MedicamentosUI.resx">
       <DependentUpon>MedicamentosUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\OrdenMedicaUI.resx">
+      <DependentUpon>OrdenMedicaUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\ProcedimientosUI.resx">
       <DependentUpon>ProcedimientosUI.cs</DependentUpon>

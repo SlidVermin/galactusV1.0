@@ -3,8 +3,8 @@ using System.Data;
 using System.Windows.Forms;
 using Galactus.Util.Mensajes;
 using Galactus.Entidades.HistoriaClinica;
+using Galactus.Entidades.HistoriaClinica.OrdenMedica;
 using Galactus.VistaControlador.HistoriaClinica.OrdenMedica;
-using Galactus.VistaControlador.HistoriaClinica.FormIngreso;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
@@ -13,16 +13,14 @@ namespace Galactus.VistaControlador.HistoriaClinica
     {
         private int idAtencion;
         private HistoriaClinicaPaciente historiaClinica = new HistoriaClinicaPaciente();
-        private IndicacionesUI indicaciones = new IndicacionesUI();
-        private ProcedimientosUI procedimientos = new ProcedimientosUI();
-        private MedicamentosUI medicamentos = new MedicamentosUI();
+        private OrdenMedicaUI OrdenClinica;
         private IngresoClinicoUI ingreso;
-  
 
-       
+
+
         public HistoriaClinicaUI()
         {
-            InitializeComponent();           
+            InitializeComponent();
         }
 
         #region btnSalir      
@@ -38,19 +36,12 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
         {
             ingreso = new IngresoClinicoUI(idAtencion);
-          
-
+            OrdenClinica = new OrdenMedicaUI(idAtencion);
             GeneralC.cargarFormularioEnPestana(tpIngresoClinico, ingreso);
-            GeneralC.cargarFormularioEnPestana(tpIndicaciones, indicaciones);
-            GeneralC.cargarFormularioEnPestana(tbProcedimientos, procedimientos);
-            GeneralC.cargarFormularioEnPestana(tpMedicamentos, medicamentos);
+            GeneralC.cargarFormularioEnPestana(tpOrdenMedica, OrdenClinica);
 
-            indicaciones.indicacion = historiaClinica.orden.indicacion;
-            medicamentos.medicamentos = historiaClinica.orden.medicamento;
-            procedimientos.procedimientos = historiaClinica.orden.procedimiento;           
         }
-
-        public  void obtenerDatosPaciente(ListadoPaciente listaPaciente,int idIngreso)
+        public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso)
         {
             DataTable dtDatos = new DataTable();
             dtDatos = GeneralC.copiarNewDatatable(listaPaciente.dtPaciente, "Atencion", idIngreso);
@@ -69,10 +60,10 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 idAtencion = int.Parse(txtAtencion.Text);
             }
         }
-      
+
         private void tsBtNuevo_Click(object sender, EventArgs e)
         {
-            historiaClinica.orden.nuevaOrden();            
+            historiaClinica.orden.nuevaOrden();
         }
 
         private void tsbGuardarIngreso_Click(object sender, EventArgs e)

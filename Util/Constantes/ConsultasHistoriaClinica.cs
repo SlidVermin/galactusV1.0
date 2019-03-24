@@ -13,5 +13,6 @@ namespace Galactus.Util.Constantes
         public const String AREA_ATENCION = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspAreaAtencion";
         public const String ENTORNO_ATENCION = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEntornoAtencion";
         public const String ESTADO_ATENCION = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEstadoAtencion";
+        public const int NUEVO = -1;
     }
 }

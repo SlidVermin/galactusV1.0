@@ -13,14 +13,19 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 {
     public partial class IndicacionesUI : Form
     {
-        public OrdenClinicaIndicacion indicacion { get; set; }
+        public OrdenClinicaIndicacion indicacion;
         public IndicacionesUI()
         {
             InitializeComponent();
         }
+        public IndicacionesUI(int idAtencion)
+        {
+            InitializeComponent();
+            
+        }
         private void IndiceacionesUI_Load(object sender, EventArgs e)
         {
-            txtIndicaciones.Text = indicacion.indicacion;
+
         }
 
         private void txtIndicaciones_TextChanged(object sender, EventArgs e)
