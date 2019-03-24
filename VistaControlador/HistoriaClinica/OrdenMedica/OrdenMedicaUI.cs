@@ -52,7 +52,21 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         }
         private void tsBtBuscar_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                List<string> parametros = new List<string>();
+                parametros.Add(ordenClinica.idAtencion.ToString());
+                parametros.Add(string.Empty);
+                GeneralC.buscarDevuelveFila(Sentencias.ORDEN_CLINICA_BUSCAR,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(cargarOrdenClinica),
+                                            Mensajes.BUSQUEDA_ORDENES_MEDICAS,
+                                            true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void tsBtModificar_Click(object sender, EventArgs e)
         {
@@ -93,13 +107,18 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 return true;
             }
         }
-        void cargarOrdenClinica() {
-
+        void cargarOrdenClinica(DataRow filaResultado)
+        {
+            if (filaResultado != null)
+            {
+                tstTxtCodigoOrden.Text = filaResultado.Field<int>("Código Orden").ToString();
+                maskedTextBox1.Text = filaResultado.Field<DateTime>("Fecha").ToString();
+            }
         }
 
 
         #endregion
 
-       
+
     }
 }
