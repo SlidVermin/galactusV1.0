@@ -52,7 +52,17 @@ namespace Galactus.Util
             }
             return valor;
         }
-
+        public static bool fechaValida(string fecha) {
+            try
+            {
+                DateTime fechaEsperada;
+                fechaEsperada = DateTime.Parse(fecha);
+                return true;
+            }
+            catch (Exception ex) {
+                return false;
+            }
+        }
 
 
     }

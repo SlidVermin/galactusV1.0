@@ -32,5 +32,23 @@ namespace Galactus.Modelo.HistoriaClinica
                 throw ex;
             }
         }
+        public static void anularOrdenMedica(OrdenClinica OrdenClinica)
+        {
+            try
+            {
+                using (System.Data.SqlClient.SqlCommand comando = new SqlCommand())
+                {
+                    comando.Connection = PrincipalUI.Cnxion;
+                    comando.CommandType = System.Data.CommandType.StoredProcedure;
+                    comando.CommandText = Sentencias.ORDEN_CLINICA_ANULAR;
+                    comando.Parameters.Add(new SqlParameter("@pIdOrdenMedica", System.Data.SqlDbType.Int)).Value = OrdenClinica.idOrden;
+                    comando.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

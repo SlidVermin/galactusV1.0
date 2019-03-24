@@ -37,5 +37,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         {
 
         }
+        public void visualizarIndicacionCargada()
+        {
+            txtIndicaciones.Text = indicacion.indicacion;
+        }
     }
 }

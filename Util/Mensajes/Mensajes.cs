@@ -42,11 +42,15 @@ namespace Galactus.Util.Mensajes
         #endregion
         public static void mensajeFaltaInformacion(string mensaje)
         {
-            MessageBox.Show(mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
         public static bool preguntaGuardar()
         {
             return MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+        }
+        public static bool preguntaAnular()
+        {
+            return MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
     }
 }
