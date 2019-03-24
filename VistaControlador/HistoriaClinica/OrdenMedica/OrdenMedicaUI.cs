@@ -23,6 +23,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         private IndicacionesUI indicaciones = new IndicacionesUI();
         private ProcedimientosUI procedimientos = new ProcedimientosUI();
         private MedicamentosUI medicamentos = new MedicamentosUI();
+        #region "Conctrutores"
         public OrdenMedicaUI()
         {
             InitializeComponent();
@@ -34,6 +35,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             ordenClinica.idAtencion = idAtencion;
             indicaciones.indicacion = ordenClinica.indicacion;
         }
+        #endregion
+
         private void OrdenMedicaUI_Load(object sender, EventArgs e)
         {
             GeneralC.cargarFormularioEnPestana(tpIndicaciones, indicaciones);
@@ -46,6 +49,14 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         {
             ordenClinica.nuevaOrden();
             GeneralC.formNuevo(this, tstMenuOrdenMedica, tsBtGuardar, tsBtCancelar);
+        }
+        private void tsBtBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void tsBtModificar_Click(object sender, EventArgs e)
+        {
+            GeneralC.fnModificarForm(this, tstMenuOrdenMedica, tsBtGuardar, tsBtCancelar);
         }
         private void tsBtGuardar_Click(object sender, EventArgs e)
         {
@@ -82,8 +93,13 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 return true;
             }
         }
+        void cargarOrdenClinica() {
+
+        }
+
 
         #endregion
 
+       
     }
 }

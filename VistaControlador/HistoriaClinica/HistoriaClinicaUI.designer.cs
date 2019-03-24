@@ -426,7 +426,7 @@
             this.tabHistoriaClinica.Location = new System.Drawing.Point(4, 103);
             this.tabHistoriaClinica.Name = "tabHistoriaClinica";
             this.tabHistoriaClinica.SelectedIndex = 0;
-            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 497);
+            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 506);
             this.tabHistoriaClinica.TabIndex = 46;
             // 
             // tpIngresoClinico
@@ -435,7 +435,7 @@
             this.tpIngresoClinico.Location = new System.Drawing.Point(4, 29);
             this.tpIngresoClinico.Name = "tpIngresoClinico";
             this.tpIngresoClinico.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIngresoClinico.Size = new System.Drawing.Size(1289, 464);
+            this.tpIngresoClinico.Size = new System.Drawing.Size(1289, 473);
             this.tpIngresoClinico.TabIndex = 0;
             this.tpIngresoClinico.Text = "Ingreso Clinico";
             // 
@@ -444,7 +444,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(1304, 601);
+            this.ClientSize = new System.Drawing.Size(1304, 611);
             this.Controls.Add(this.tabHistoriaClinica);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.pnlInformacion);

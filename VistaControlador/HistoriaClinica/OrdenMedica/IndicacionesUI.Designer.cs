@@ -44,7 +44,7 @@
             this.txtIndicaciones.Multiline = true;
             this.txtIndicaciones.Name = "txtIndicaciones";
             this.txtIndicaciones.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtIndicaciones.Size = new System.Drawing.Size(871, 268);
+            this.txtIndicaciones.Size = new System.Drawing.Size(871, 227);
             this.txtIndicaciones.TabIndex = 0;
             this.txtIndicaciones.TextChanged += new System.EventHandler(this.txtIndicaciones_TextChanged);
             // 
@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 308);
+            this.panel1.Size = new System.Drawing.Size(907, 267);
             this.panel1.TabIndex = 2;
             // 
             // GroupBox17
@@ -67,7 +67,7 @@
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(12, 3);
             this.GroupBox17.Name = "GroupBox17";
-            this.GroupBox17.Size = new System.Drawing.Size(883, 295);
+            this.GroupBox17.Size = new System.Drawing.Size(883, 254);
             this.GroupBox17.TabIndex = 10092;
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Indicaciones";
@@ -77,7 +77,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(907, 308);
+            this.ClientSize = new System.Drawing.Size(907, 267);
             this.Controls.Add(this.panel1);
             this.Name = "IndicacionesUI";
             this.Text = "Indicaciones";

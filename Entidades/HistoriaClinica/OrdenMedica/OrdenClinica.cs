@@ -16,9 +16,9 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica
         public DateTime fechaOrden { get; set; }
         public OrdenClinicaIndicacion indicacion { get; set; }
         public OrdenClinicaMedicamento medicamento { get; set; }
-       public OrdenClinicaProcedimiento procedimiento { get; set; }
+        public OrdenClinicaProcedimiento procedimiento { get; set; }
         public OrdenClinica()
-        {        
+        {
             indicacion = new OrdenClinicaIndicacion();
             medicamento = new OrdenClinicaMedicamento();
             procedimiento = new OrdenClinicaProcedimiento();
@@ -28,6 +28,10 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica
             idOrden = ConsultasHistoriaClinica.NUEVO;
             indicacion.indicacion = string.Empty;
             medicamento.tblMedicamentos.Clear();
+        }
+        public void cargarOrdenClinica()
+        {
+
         }
     }
 }
