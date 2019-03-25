@@ -115,8 +115,12 @@ namespace Galactus.VistaControlador.Inventario
 
             }
         }
+
         #endregion
 
+        private void tsbNuevo_Click_1(object sender, EventArgs e)
+        {
 
+        }
     }
 }

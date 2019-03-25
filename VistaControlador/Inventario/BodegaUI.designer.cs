@@ -116,6 +116,7 @@
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tstModificar
             // 
@@ -124,8 +125,9 @@
             this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tstModificar.Name = "tstModificar";
-            this.tstModificar.Size = new System.Drawing.Size(57, 22);
+            this.tstModificar.Size = new System.Drawing.Size(78, 22);
             this.tstModificar.Text = "Modificar";
+            this.tstModificar.Click += new System.EventHandler(this.tstModificar_Click);
             // 
             // tsbCancelar
             // 
@@ -136,6 +138,7 @@
             this.tsbCancelar.Name = "tsbCancelar";
             this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
             this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
             // tsbGuardar
             // 
@@ -146,6 +149,7 @@
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // tsbBuscar
             // 
@@ -156,6 +160,7 @@
             this.tsbBuscar.Name = "tsbBuscar";
             this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
             this.tsbBuscar.Text = "Buscar";
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
             // 
             // tsbAnular
             // 
@@ -166,6 +171,7 @@
             this.tsbAnular.Name = "tsbAnular";
             this.tsbAnular.Size = new System.Drawing.Size(62, 22);
             this.tsbAnular.Text = "Anular";
+            this.tsbAnular.Click += new System.EventHandler(this.tsbAnular_Click);
             // 
             // BodegaUI
             // 
