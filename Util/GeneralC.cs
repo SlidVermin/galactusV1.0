@@ -50,6 +50,37 @@ namespace Galactus
             }
 
         }
+        public static void llenarTablaConParametros(string query,
+                                                    DataTable listado,
+                                                    DataTable tablaResultado)
+        {
+           tablaResultado.Clear();
+            try
+            {
+                using (SqlCommand comando = new SqlCommand()) {
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.CommandText = query;
+                    comando.Connection = PrincipalUI.Cnxion;
+
+                    foreach (DataRow item in listado.Rows)
+                    {
+                    
+                        comando.Parameters.AddWithValue(item.Field<string>("parametro"), item.Field<object>("valor"));
+                    }
+
+                    using (SqlDataAdapter adaptador = new SqlDataAdapter(comando))
+                    {
+                        adaptador.Fill(tablaResultado);
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
         public static void validarComboUbicacion(ComboBox cbUbicacion,
                                                 ComboBox cbDeshabilitar)
         {
@@ -63,22 +94,23 @@ namespace Galactus
             }
         }
 
-        public static object castFromDbItemVacio( Object DbItem )
+        public static object castFromDbItemVacio(Object DbItem)
         {
             if (DbItem is DBNull)
             {
-              return  DbItem = "";
-            }else
+                return DbItem = "";
+            }
+            else
             {
                 return DbItem;
             }
         }
-      
+
         public static void calcularEdad(DateTime fechaNacimiento,
                                      ref string campoFecha)
         {
 
-            campoFecha = Convert.ToString(DateTime.Today.AddTicks(-fechaNacimiento.Ticks).Year );
+            campoFecha = Convert.ToString(DateTime.Today.AddTicks(-fechaNacimiento.Ticks).Year);
         }
 
         public static DataTable copiarNewDatatable(DataTable dtDatos,
@@ -89,7 +121,7 @@ namespace Galactus
             dt = dtDatos.Clone();
             DataRow[] filas;
             try
-               
+
             {
                 filas = dtDatos.Select(nombreCampo + "='" + codigoCampo + "'");
                 foreach (DataRow dw in filas)
@@ -97,7 +129,7 @@ namespace Galactus
                     dt.ImportRow(dw);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
@@ -376,17 +408,21 @@ namespace Galactus
                                               cargarInfoFila metodo,
                                               string Titulo,
                                               bool buscarConEnter,
-                                              List<string> listaColumnasOcultar = null)
+                                              List<string> listaColumnasOcultar = null,
+                                              DataTable itemsSeleccionados = null,
+                                              DataTable listadoParametros = null)
         {
             BusquedaGeneralUI formBusqueda = new BusquedaGeneralUI();
             var objBusqueda = formBusqueda.objBusqueda;
             objBusqueda.BuscarConEnter = buscarConEnter;
             objBusqueda.BusquedaPorCodigo = false;
-            formBusqueda.metodoPorFila = metodo;
             objBusqueda.parametros = parametros;
-            formBusqueda.Text = Titulo;
-            formBusqueda.listaColumnasOcultar = listaColumnasOcultar;
             objBusqueda.Query = query;
+            objBusqueda.itemsSelecionados = itemsSeleccionados;
+            objBusqueda.listadoParametros = listadoParametros;
+            formBusqueda.listaColumnasOcultar = listaColumnasOcultar;
+            formBusqueda.metodoPorFila = metodo;
+            formBusqueda.Text = Titulo;
             formBusqueda.ShowDialog();
         }
         public static void listarDocumentosGenerales(string query,
@@ -657,13 +693,13 @@ namespace Galactus
             {
                 tabPage.Controls.Clear();
             }
-            
+
             formContenido.TopLevel = false;
             formContenido.Dock = DockStyle.None;
             formContenido.FormBorderStyle = FormBorderStyle.None;
             tabPage.Controls.Add(formContenido);
             tabPage.Tag = formContenido;
-            tabPage.AutoScroll = true;                    
+            tabPage.AutoScroll = true;
             formContenido.Show();
         }
     }

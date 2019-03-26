@@ -28,10 +28,11 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica
             idOrden = ConsultasHistoriaClinica.NUEVO;
             indicacion.indicacion = string.Empty;
             medicamento.tblMedicamentos.Clear();
-        }
-        public void cargarOrdenClinica()
-        {
+            procedimiento.tblProcedimientos.Clear();
 
+            medicamento.tblMedicamentos.Rows.Add();
+            procedimiento.tblProcedimientos.Rows.Add();
         }
+      
     }
 }

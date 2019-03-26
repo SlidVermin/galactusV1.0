@@ -17,7 +17,10 @@ namespace Galactus.Entidades.General
         public bool BuscarConEnter { get; set; }
         public bool BusquedaPorCodigo { get; set; }
         public DataTable TablaResultados { get; set; }
+        public DataTable itemsSelecionados { get; set; }
+        public DataTable listadoParametros { get; set; }
         public List<string> parametros = new List<string>();
+
         public Busqueda()
         {
             this.query = "";

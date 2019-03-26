@@ -36,6 +36,7 @@ namespace Galactus.Util.Mensajes
 
         #region "Historia Clinica"
         public const string BUSQUEDA_ORDENES_MEDICAS = "Busqueda Ordenes";
+        public const string BUSQUEDA_PROCEDIMIENTOS = "Busqueda procedimientos";
         #endregion
 
 

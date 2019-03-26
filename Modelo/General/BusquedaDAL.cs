@@ -16,5 +16,12 @@ namespace Galactus.Modelo.General
             GeneralC.llenarTabla(query, parametros, tblTemp);
             return tblTemp;
         }
+        public static DataTable llenarResultadoConParametros(string query,
+                                                             DataTable listado)
+        {
+            DataTable tblTemp = new DataTable();
+            GeneralC.llenarTablaConParametros(query, listado, tblTemp);
+            return tblTemp;
+        }
     }
 }

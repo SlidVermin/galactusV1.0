@@ -35,6 +35,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             this.idAtencion = idAtencion;
             ordenClinica.idAtencion = idAtencion;
             indicaciones.indicacion = ordenClinica.indicacion;
+            procedimientos.idAtencion = idAtencion;
+            procedimientos.procedimientos = ordenClinica.procedimiento;
         }
         #endregion
 
@@ -51,6 +53,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             ordenClinica.nuevaOrden();
             GeneralC.formNuevo(this, tstMenuOrdenMedica, tsBtGuardar, tsBtCancelar);
             txtBCodigoOrden.ReadOnly = true;
+               ordenClinica.procedimiento.tblProcedimientos.Rows.Add();
+            procedimientos.enlazarDgv();
         }
         private void tsBtBuscar_Click(object sender, EventArgs e)
         {

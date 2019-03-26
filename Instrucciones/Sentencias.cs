@@ -124,6 +124,8 @@ namespace Galactus
         public const string ORDEN_CLINICA_CARGAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspOrdenMedicaCargar]";
         public const string ORDEN_CLINICA_ANULAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspOrdenMedicaAnular]";
 
+        public const string ORDEN_CLINICA_BUSCAR_PROCEDIMIENTOS= ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspOrdenMedicaBuscarProcedimientos]";
+
         public const String CREAR_INGRESO_CLINICO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspIngresoAdultoCrear";
         public const String CARGAR_DIAGNOSTICO_INGRESO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspIngresoAdultoDiagnosticoCargar";
         public const String CARGAR_INGRESO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspIngresoAdultoCargar";

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcedimientosUI));
             this.panel1 = new System.Windows.Forms.Panel();
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
@@ -39,6 +39,7 @@
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.justificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Agregar = new System.Windows.Forms.DataGridViewImageColumn();
             this.anulardiagevoN = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.GroupBox17.SuspendLayout();
@@ -54,7 +55,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 308);
+            this.panel1.Size = new System.Drawing.Size(907, 256);
             this.panel1.TabIndex = 1;
             // 
             // GroupBox17
@@ -65,7 +66,7 @@
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(12, 3);
             this.GroupBox17.Name = "GroupBox17";
-            this.GroupBox17.Size = new System.Drawing.Size(883, 293);
+            this.GroupBox17.Size = new System.Drawing.Size(883, 248);
             this.GroupBox17.TabIndex = 10092;
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Procedimientos";
@@ -105,6 +106,7 @@
             this.descripcion,
             this.cantidad,
             this.justificacion,
+            this.Agregar,
             this.anulardiagevoN});
             this.dgvProcedimientos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProcedimientos.Location = new System.Drawing.Point(3, 18);
@@ -112,8 +114,9 @@
             this.dgvProcedimientos.Name = "dgvProcedimientos";
             this.dgvProcedimientos.ReadOnly = true;
             this.dgvProcedimientos.RowHeadersVisible = false;
-            this.dgvProcedimientos.Size = new System.Drawing.Size(877, 272);
+            this.dgvProcedimientos.Size = new System.Drawing.Size(877, 227);
             this.dgvProcedimientos.TabIndex = 2;
+            this.dgvProcedimientos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellContentClick);
             // 
             // dataGridViewImageColumn1
             // 
@@ -125,17 +128,16 @@
             // 
             // descripcion
             // 
-            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.descripcion.HeaderText = "Descripción";
             this.descripcion.Name = "descripcion";
             this.descripcion.ReadOnly = true;
-            this.descripcion.Width = 107;
             // 
             // cantidad
             // 
             this.cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.cantidad.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.cantidad.DefaultCellStyle = dataGridViewCellStyle2;
             this.cantidad.HeaderText = "Cantidad";
             this.cantidad.Name = "cantidad";
             this.cantidad.ReadOnly = true;
@@ -147,6 +149,16 @@
             this.justificacion.Name = "justificacion";
             this.justificacion.ReadOnly = true;
             this.justificacion.Width = 112;
+            // 
+            // Agregar
+            // 
+            this.Agregar.HeaderText = "Agregar";
+            this.Agregar.Image = global::Galactus.Properties.Resources.search__1_;
+            this.Agregar.Name = "Agregar";
+            this.Agregar.ReadOnly = true;
+            this.Agregar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Agregar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Agregar.Width = 84;
             // 
             // anulardiagevoN
             // 
@@ -162,7 +174,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(907, 308);
+            this.ClientSize = new System.Drawing.Size(907, 256);
             this.Controls.Add(this.panel1);
             this.Name = "ProcedimientosUI";
             this.Text = "ProcedimientosUI";
@@ -187,6 +199,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn justificacion;
+        private System.Windows.Forms.DataGridViewImageColumn Agregar;
         private System.Windows.Forms.DataGridViewImageColumn anulardiagevoN;
     }
 }

@@ -20,6 +20,7 @@ namespace Galactus.VistaControlador.General
         internal GeneralC.cargarInfoFila metodoPorFila;
         internal List<string> listaColumnasOcultar;
 
+
         public BusquedaGeneralUI()
         {
             InitializeComponent();
@@ -65,7 +66,7 @@ namespace Galactus.VistaControlador.General
                 }
                 DialogResult = DialogResult.OK;
             }
-        }   
+        }
         void llenarTabla()
         {
             int cantidadParamatros = objBusqueda.parametros.Count - 1;
@@ -74,8 +75,19 @@ namespace Galactus.VistaControlador.General
                 objBusqueda.parametros.RemoveAt(cantidadParamatros);
                 objBusqueda.parametros.Add(txtBusqueda.Text);
             }
+            if (objBusqueda.itemsSelecionados != null)
+            {
+                if (!string.IsNullOrEmpty(txtBusqueda.Text))
+                {
+                    objBusqueda.listadoParametros.Rows[1][1] = txtBusqueda.Text;
+                }
+                objBusqueda.TablaResultados = BusquedaDAL.llenarResultadoConParametros(objBusqueda.Query, objBusqueda.listadoParametros);
+            }
+            else
+            {
+                objBusqueda.TablaResultados = BusquedaDAL.llenarResultado(objBusqueda.Query, objBusqueda.parametros);
+            }
 
-            objBusqueda.TablaResultados = BusquedaDAL.llenarResultado(objBusqueda.Query, objBusqueda.parametros);
             dgvBusqueda.DataSource = objBusqueda.TablaResultados;
             configurarDgv();
         }
