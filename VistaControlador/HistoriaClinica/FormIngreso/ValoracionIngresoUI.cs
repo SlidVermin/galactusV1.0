@@ -31,8 +31,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
         }
         private void ValoracionIngresoUI_Load(object sender, EventArgs e)
         {
-            
-            cargarDiagnosticos();
+
+            cargarDatos();
         }
 
         public void obtenerIdAtencion(int idAtencion)
@@ -40,11 +40,17 @@ namespace Galactus.VistaControlador.HistoriaClinica
             this.idAtencion = idAtencion;
         }
 
-        private void cargarDiagnosticos()
+        private void cargarDatos()
         {
             ingreso.IdAtencion = idAtencion;
+            ingreso.cargarDatosAtencion();
+            txtAutorizacion.Text = ingreso.numeroAutorizacion;
+            txtcama.Text = ingreso.cama;
+            txtcausaexterna.Text = ingreso.causaExterna;
+            txtviaingreso.Text = ingreso.viaIngreso;
+            txtinstitucion.Text = ingreso.institucion;
             ingreso.cargarDiagnostico();
-            dgvImpresionN.DataSource = ingreso.dtDiagnostico;
+            dgvRemision.DataSource = ingreso.dtDiagnostico;
         }
         
     }

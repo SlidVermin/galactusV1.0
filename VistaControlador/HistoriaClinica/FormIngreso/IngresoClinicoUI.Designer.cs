@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 330);
+            this.ClientSize = new System.Drawing.Size(1100, 335);
             this.Controls.Add(this.tsIngreso);
             this.Controls.Add(this.tcIngresoClinico);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

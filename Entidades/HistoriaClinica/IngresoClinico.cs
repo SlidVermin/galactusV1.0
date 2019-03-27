@@ -40,10 +40,29 @@ namespace Galactus.Entidades.HistoriaClinica
 
         public DataTable dtDiagnostico = new DataTable();
         public DataTable dtDatos = new DataTable();
-
+        public DataTable dtDatosAtencion = new DataTable();
+        public String numeroAutorizacion { get; set; }
+        public String cama { get; set; }
+        public String institucion { get; set; }
+        public String causaExterna { get; set; }
+        public String viaIngreso { get; set; }
         public void cargarDiagnostico()
         {
             IngresoClinicoDAL.cargarDiagnostico(this);
+        }
+        public void cargarDatosAtencion()
+        {
+            List<string> list = new List<string>();
+            list.Add(Convert.ToString(IdAtencion));
+            GeneralC.llenarTabla(Sentencias.CARGAR_DATOS_ATENCION, list, dtDatosAtencion);
+            if (dtDatosAtencion.Rows.Count > 0)
+            {
+                numeroAutorizacion = dtDatosAtencion.Rows[0].Field<String>("numAutorizacion");
+                cama = dtDatosAtencion.Rows[0].Field<String>("cama");
+                institucion = dtDatosAtencion.Rows[0].Field<String>("institucion");
+                causaExterna = dtDatosAtencion.Rows[0].Field<String>("causaExterna");
+                viaIngreso = dtDatosAtencion.Rows[0].Field<String>("viaIngreso");
+            }
         }
         public void cargarDatos()
         {
