@@ -284,6 +284,12 @@
     <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AnalisisUI.Designer.cs">
       <DependentUpon>AnalisisUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\FichaEnfermeriaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\FichaEnfermeriaUI.designer.cs">
+      <DependentUpon>FichaEnfermeriaUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\HistoriaClinicaUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -471,6 +477,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\AnalisisUI.resx">
       <DependentUpon>AnalisisUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\FichaEnfermeriaUI.resx">
+      <DependentUpon>FichaEnfermeriaUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\HistoriaClinicaUI.resx">
       <DependentUpon>HistoriaClinicaUI.cs</DependentUpon>

@@ -106,7 +106,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
                     formHistoriaClinica.ShowDialog();
                     break;
                 case ConstanteGeneral.MENU_ATENCION_ENFERMERIA:
-                    HistoriaEnfermeriaUI formHistoriaEnfermeria = new HistoriaEnfermeriaUI();
+                    FichaEnfermeriaUI formHistoriaEnfermeria = new FichaEnfermeriaUI();
                     formHistoriaEnfermeria.ShowDialog();
                     break;               
             }
