@@ -10,6 +10,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
     public partial class IngresoClinicoUI : Form
     {
         private int idAtencion;
+        IngresoClinico ingreso = new IngresoClinico();
         private ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();
         private AntecedentesIngresoUI antecedentesUI = new AntecedentesIngresoUI();
         private ExamenFisicoUI examenFisicoUI = new ExamenFisicoUI();
@@ -71,7 +72,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private IngresoClinico crearIngreso()
         {
-            IngresoClinico ingreso = new IngresoClinico();
+          
 
             ingreso.IdAtencion = idAtencion;
             ingreso.Peso = "80";
@@ -98,6 +99,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             ingreso.Analisis = analisisUI.txtAnalisis.Text;
             ingreso.Pronostico = analisisUI.txtPronostico.Text;
             ingreso.pielFaneras = examenFisicoUI.txtPielFaneras.Text;
+            alistarDt(valoracionUI.ingreso);
             /*ingreso.txtIdUsuario;
             ingreso.txtIdUsuarioOrigen;
             ingreso.txtFechaOrigen;
@@ -106,10 +108,21 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
             return ingreso;
         }
-
+        public void alistarDt(IngresoClinico ingreso)
+        {
+          this.ingreso.dtAlistar = ingreso.dtImpresion.Copy();
+          this.ingreso.dtAlistar.Columns.Remove("Código");
+          if(this.ingreso.dtAlistar.Rows.Count > 0)
+            {
+                this.ingreso.dtAlistar.Rows.RemoveAt(this.ingreso.dtAlistar.Rows.Count -1);
+                ingreso.dtImpresion.Rows.RemoveAt(ingreso.dtImpresion.Rows.Count - 1);
+            }
+        }
         private void tsbModificar_Click(object sender, EventArgs e)
         {
             GeneralC.fnModificarForm(this, tsIngreso, tsbGuardar, tsbCancelar);
+            valoracionUI.ingreso.dtImpresion.Rows.Add();
+            
         }
 
         private void tsbGuardar_Click(object sender, EventArgs e)

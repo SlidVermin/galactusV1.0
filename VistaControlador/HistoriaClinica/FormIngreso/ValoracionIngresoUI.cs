@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Galactus.Modelo.HistoriaClinica;
 using Galactus.Entidades.HistoriaClinica;
+using Galactus.Util.Mensajes;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
@@ -16,7 +17,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
     {
 
         
-        private IngresoClinico ingreso = new IngresoClinico();
+        public IngresoClinico ingreso = new IngresoClinico();
         private int idAtencion;
         
         public ValoracionIngresoUI()
@@ -31,7 +32,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         }
         private void ValoracionIngresoUI_Load(object sender, EventArgs e)
         {
-
+            establecerGridview();
             cargarDatos();
         }
 
@@ -44,6 +45,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
             ingreso.IdAtencion = idAtencion;
             ingreso.cargarDatosAtencion();
+            ingreso.cargarDiagnosticoImpresion();
             txtAutorizacion.Text = ingreso.numeroAutorizacion;
             txtcama.Text = ingreso.cama;
             txtcausaexterna.Text = ingreso.causaExterna;
@@ -52,6 +54,65 @@ namespace Galactus.VistaControlador.HistoriaClinica
             ingreso.cargarDiagnostico();
             dgvRemision.DataSource = ingreso.dtDiagnostico;
         }
-        
+
+        public void establecerGridview()
+        {
+            ingreso.establecerDt();
+
+            dgvImpresionN.Columns["dgId"].DataPropertyName = "Id";
+            dgvImpresionN.Columns["dgCodigo"].DataPropertyName = "Código";
+            dgvImpresionN.Columns["dgDescripcion"].DataPropertyName = "Descripcion";
+            dgvImpresionN.Columns["dgAgregar"].DataPropertyName = "Agregar";
+            dgvImpresionN.Columns["dgQuitar"].DataPropertyName = "Quitar";
+
+            dgvImpresionN.DataSource = ingreso.dtImpresion;
+        }
+        private void dgvImpresionN_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+        public void cargarDiagnostico(DataRow filas)
+        {
+            dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgId"].Value = filas.Field<int>("Id");
+            dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgCodigo"].Value = filas.Field<String>("Código cie");
+            dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgDescripcion"].Value = filas.Field<String>("Descripcion");
+        }
+
+        private void dgvImpresionN_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgAgregar"].Selected==true)
+            {
+                try
+                {
+                    List<string> parametros = new List<string>();
+
+                    GeneralC.buscarDevuelveFila(Sentencias.GENERAL_BUSCAR_DIAGNOSTICO,
+                                                       parametros,
+                                                       new GeneralC.cargarInfoFila(cargarDiagnostico),
+                                                       Mensajes.BUSQUEDA_PACIENTE, true);
+                    ingreso.dtImpresion.Rows.Add();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            if (dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgQuitar"].Selected == true
+                 && GeneralC.castFromDbItemVacio(dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgcodigo"].Value.ToString()) != "")
+            {
+                ingreso.dtImpresion.Rows.RemoveAt(e.RowIndex);
+
+            }
+        }
+
+        private void dgvImpresionN_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

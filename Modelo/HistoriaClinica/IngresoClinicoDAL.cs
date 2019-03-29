@@ -46,6 +46,7 @@ namespace Galactus.Modelo.HistoriaClinica
                     comando.Parameters.Add(new SqlParameter("@ResumenClinico", System.Data.SqlDbType.NVarChar)).Value = ingreso.resumenClinico;
                     comando.Parameters.Add(new SqlParameter("@PielFaneras", System.Data.SqlDbType.NVarChar)).Value = ingreso.pielFaneras;
                     comando.Parameters.Add(new SqlParameter("@FechaOrigen", System.Data.SqlDbType.DateTime)).Value = DateTime.Today;
+                    comando.Parameters.Add(new SqlParameter("@tblImpresion", System.Data.SqlDbType.Structured)).Value = ingreso.dtAlistar;
 
                     comando.ExecuteScalar();
                 }
@@ -67,6 +68,13 @@ namespace Galactus.Modelo.HistoriaClinica
             List<string> list = new List<string>();
             list.Add(Convert.ToString(ingreso.IdAtencion));
             GeneralC.llenarTabla(Sentencias.CARGAR_INGRESO, list, ingreso.dtDatos);
+        }
+
+        public static void cargarDiagnosticoImpresion(IngresoClinico ingreso)
+        {
+            List<string> list = new List<string>();
+            list.Add(Convert.ToString(ingreso.IdAtencion));
+            GeneralC.llenarTabla(Sentencias.CARGAR_DIAGNOSTICO_IMPRESION, list, ingreso.dtImpresion);
         }
     }
 }

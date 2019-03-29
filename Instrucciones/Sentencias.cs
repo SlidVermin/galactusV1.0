@@ -130,6 +130,7 @@ namespace Galactus
         public const String CARGAR_DIAGNOSTICO_INGRESO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspIngresoAdultoDiagnosticoCargar";
         public const String CARGAR_INGRESO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspIngresoAdultoCargar";
         public const String CARGAR_DATOS_ATENCION = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspDatosAtencion";
+        public const String CARGAR_DIAGNOSTICO_IMPRESION = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspIngresoAdultoImpresionCargar";
         #endregion
     }
 }

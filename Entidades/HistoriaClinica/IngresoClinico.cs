@@ -46,9 +46,19 @@ namespace Galactus.Entidades.HistoriaClinica
         public String institucion { get; set; }
         public String causaExterna { get; set; }
         public String viaIngreso { get; set; }
+        public DataTable dtImpresion = new DataTable();
+
+        public DataTable dtAlistar = new DataTable();
         public void cargarDiagnostico()
         {
             IngresoClinicoDAL.cargarDiagnostico(this);
+        }
+
+        public void establecerDt()
+        {
+            dtImpresion.Columns.Add("Id", typeof(String));
+            dtImpresion.Columns.Add("Código", typeof(String));
+            dtImpresion.Columns.Add("Descripcion", typeof(String));
         }
         public void cargarDatosAtencion()
         {
@@ -63,6 +73,11 @@ namespace Galactus.Entidades.HistoriaClinica
                 causaExterna = dtDatosAtencion.Rows[0].Field<String>("causaExterna");
                 viaIngreso = dtDatosAtencion.Rows[0].Field<String>("viaIngreso");
             }
+        }
+
+        public void cargarDiagnosticoImpresion()
+        {
+            IngresoClinicoDAL.cargarDiagnosticoImpresion(this);
         }
         public void cargarDatos()
         {

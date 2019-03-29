@@ -236,6 +236,36 @@
     <Compile Include="VistaControlador\General\BusquedaGeneralUI.Designer.cs">
       <DependentUpon>BusquedaGeneralUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\AnalisisUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\AnalisisUI.Designer.cs">
+      <DependentUpon>AnalisisUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\EvolucionMedicaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\EvolucionMedicaUI.Designer.cs">
+      <DependentUpon>EvolucionMedicaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\ExamenFisicoEvoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\ExamenFisicoEvoUI.Designer.cs">
+      <DependentUpon>ExamenFisicoEvoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\InterpretacionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\InterpretacionUI.Designer.cs">
+      <DependentUpon>InterpretacionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\ProblemasUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\ProblemasUI.Designer.cs">
+      <DependentUpon>ProblemasUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedenteRecienNacidoUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,6 +483,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\General\BusquedaGeneralUI.resx">
       <DependentUpon>BusquedaGeneralUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\EvolucionMedica\AnalisisUI.resx">
+      <DependentUpon>AnalisisUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\EvolucionMedica\EvolucionMedicaUI.resx">
+      <DependentUpon>EvolucionMedicaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\EvolucionMedica\ExamenFisicoEvoUI.resx">
+      <DependentUpon>ExamenFisicoEvoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\EvolucionMedica\InterpretacionUI.resx">
+      <DependentUpon>InterpretacionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\EvolucionMedica\ProblemasUI.resx">
+      <DependentUpon>ProblemasUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedenteRecienNacidoUI.resx">
       <DependentUpon>AntecedenteRecienNacidoUI.cs</DependentUpon>

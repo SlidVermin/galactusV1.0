@@ -1,6 +1,6 @@
-﻿namespace Galactus.VistaControlador.HistoriaClinica.FormIngreso
+﻿namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
 {
-    partial class ExamenFisicoUI
+    partial class ExamenFisicoEvoUI
     {
         /// <summary>
         /// Required designer variable.
@@ -76,10 +76,10 @@
             this.GroupBox26.Controls.Add(this.Label88);
             this.GroupBox26.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.GroupBox26.ForeColor = System.Drawing.Color.Black;
-            this.GroupBox26.Location = new System.Drawing.Point(6, 6);
+            this.GroupBox26.Location = new System.Drawing.Point(3, 6);
             this.GroupBox26.Name = "GroupBox26";
-            this.GroupBox26.Size = new System.Drawing.Size(959, 355);
-            this.GroupBox26.TabIndex = 10101;
+            this.GroupBox26.Size = new System.Drawing.Size(965, 355);
+            this.GroupBox26.TabIndex = 10102;
             this.GroupBox26.TabStop = false;
             // 
             // label1
@@ -100,7 +100,7 @@
             this.txtGenerales.Multiline = true;
             this.txtGenerales.Name = "txtGenerales";
             this.txtGenerales.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtGenerales.Size = new System.Drawing.Size(836, 41);
+            this.txtGenerales.Size = new System.Drawing.Size(844, 41);
             this.txtGenerales.TabIndex = 10077;
             // 
             // txtPielFaneras
@@ -110,7 +110,7 @@
             this.txtPielFaneras.Multiline = true;
             this.txtPielFaneras.Name = "txtPielFaneras";
             this.txtPielFaneras.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPielFaneras.Size = new System.Drawing.Size(345, 41);
+            this.txtPielFaneras.Size = new System.Drawing.Size(353, 41);
             this.txtPielFaneras.TabIndex = 10076;
             // 
             // Label160
@@ -131,7 +131,7 @@
             this.txtSistemaNervioso.Multiline = true;
             this.txtSistemaNervioso.Name = "txtSistemaNervioso";
             this.txtSistemaNervioso.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtSistemaNervioso.Size = new System.Drawing.Size(345, 41);
+            this.txtSistemaNervioso.Size = new System.Drawing.Size(353, 41);
             this.txtSistemaNervioso.TabIndex = 10072;
             // 
             // Label89
@@ -173,7 +173,7 @@
             this.txtGenitalUrinario.Multiline = true;
             this.txtGenitalUrinario.Name = "txtGenitalUrinario";
             this.txtGenitalUrinario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtGenitalUrinario.Size = new System.Drawing.Size(345, 41);
+            this.txtGenitalUrinario.Size = new System.Drawing.Size(353, 41);
             this.txtGenitalUrinario.TabIndex = 10068;
             // 
             // Label91
@@ -292,16 +292,15 @@
             this.Label88.TabIndex = 10057;
             this.Label88.Text = "Signos Vitales:";
             // 
-            // ExamenFisicoUI
+            // ExamenFisicoEvoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(969, 364);
+            this.ClientSize = new System.Drawing.Size(971, 365);
             this.Controls.Add(this.GroupBox26);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ExamenFisicoUI";
-            this.Text = "ExamenFisicoUI";
+            this.Name = "ExamenFisicoEvoUI";
+            this.Text = "ExamenFisicoEvoUI";
             this.GroupBox26.ResumeLayout(false);
             this.GroupBox26.PerformLayout();
             this.ResumeLayout(false);
@@ -311,6 +310,9 @@
         #endregion
 
         internal System.Windows.Forms.GroupBox GroupBox26;
+        internal System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.TextBox txtGenerales;
+        internal System.Windows.Forms.TextBox txtPielFaneras;
         internal System.Windows.Forms.Label Label160;
         internal System.Windows.Forms.TextBox txtSistemaNervioso;
         internal System.Windows.Forms.Label Label89;
@@ -328,8 +330,5 @@
         internal System.Windows.Forms.Label Label87;
         internal System.Windows.Forms.TextBox txtSignosVitales;
         internal System.Windows.Forms.Label Label88;
-        internal System.Windows.Forms.TextBox txtPielFaneras;
-        internal System.Windows.Forms.Label label1;
-        internal System.Windows.Forms.TextBox txtGenerales;
     }
 }

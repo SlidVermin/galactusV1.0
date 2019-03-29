@@ -69,7 +69,7 @@
             this.GroupBox4.ForeColor = System.Drawing.Color.Black;
             this.GroupBox4.Location = new System.Drawing.Point(8, 6);
             this.GroupBox4.Name = "GroupBox4";
-            this.GroupBox4.Size = new System.Drawing.Size(907, 466);
+            this.GroupBox4.Size = new System.Drawing.Size(958, 466);
             this.GroupBox4.TabIndex = 10087;
             this.GroupBox4.TabStop = false;
             // 
@@ -80,7 +80,7 @@
             this.txtAntecedentesAlergicos.Multiline = true;
             this.txtAntecedentesAlergicos.Name = "txtAntecedentesAlergicos";
             this.txtAntecedentesAlergicos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAntecedentesAlergicos.Size = new System.Drawing.Size(877, 44);
+            this.txtAntecedentesAlergicos.Size = new System.Drawing.Size(939, 44);
             this.txtAntecedentesAlergicos.TabIndex = 10067;
             // 
             // Label14
@@ -112,7 +112,7 @@
             this.txtAntecedentesToxicos.Multiline = true;
             this.txtAntecedentesToxicos.Name = "txtAntecedentesToxicos";
             this.txtAntecedentesToxicos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAntecedentesToxicos.Size = new System.Drawing.Size(877, 44);
+            this.txtAntecedentesToxicos.Size = new System.Drawing.Size(939, 44);
             this.txtAntecedentesToxicos.TabIndex = 10064;
             // 
             // Label15
@@ -144,7 +144,7 @@
             this.txtAntecedentesTransfusionales.Multiline = true;
             this.txtAntecedentesTransfusionales.Name = "txtAntecedentesTransfusionales";
             this.txtAntecedentesTransfusionales.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAntecedentesTransfusionales.Size = new System.Drawing.Size(877, 44);
+            this.txtAntecedentesTransfusionales.Size = new System.Drawing.Size(939, 44);
             this.txtAntecedentesTransfusionales.TabIndex = 10060;
             // 
             // Label13
@@ -165,7 +165,7 @@
             this.txtAntecedentesTraumaticos.Multiline = true;
             this.txtAntecedentesTraumaticos.Name = "txtAntecedentesTraumaticos";
             this.txtAntecedentesTraumaticos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAntecedentesTraumaticos.Size = new System.Drawing.Size(877, 44);
+            this.txtAntecedentesTraumaticos.Size = new System.Drawing.Size(939, 44);
             this.txtAntecedentesTraumaticos.TabIndex = 10058;
             // 
             // txtAntecedentesQuirurgicos
@@ -175,7 +175,7 @@
             this.txtAntecedentesQuirurgicos.Multiline = true;
             this.txtAntecedentesQuirurgicos.Name = "txtAntecedentesQuirurgicos";
             this.txtAntecedentesQuirurgicos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAntecedentesQuirurgicos.Size = new System.Drawing.Size(874, 44);
+            this.txtAntecedentesQuirurgicos.Size = new System.Drawing.Size(936, 44);
             this.txtAntecedentesQuirurgicos.TabIndex = 10056;
             // 
             // Label12
@@ -196,7 +196,7 @@
             this.txtAnteM.Multiline = true;
             this.txtAnteM.Name = "txtAnteM";
             this.txtAnteM.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAnteM.Size = new System.Drawing.Size(877, 39);
+            this.txtAnteM.Size = new System.Drawing.Size(939, 39);
             this.txtAnteM.TabIndex = 10054;
             // 
             // panel1
@@ -206,9 +206,9 @@
             this.panel1.Controls.Add(this.txtRevisionSistema);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtAntecedentesFamiliares);
-            this.panel1.Location = new System.Drawing.Point(7, 488);
+            this.panel1.Location = new System.Drawing.Point(7, 478);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 172);
+            this.panel1.Size = new System.Drawing.Size(959, 156);
             this.panel1.TabIndex = 10090;
             // 
             // label1
@@ -225,11 +225,11 @@
             // txtRevisionSistema
             // 
             this.txtRevisionSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtRevisionSistema.Location = new System.Drawing.Point(13, 109);
+            this.txtRevisionSistema.Location = new System.Drawing.Point(13, 100);
             this.txtRevisionSistema.Multiline = true;
             this.txtRevisionSistema.Name = "txtRevisionSistema";
             this.txtRevisionSistema.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtRevisionSistema.Size = new System.Drawing.Size(877, 44);
+            this.txtRevisionSistema.Size = new System.Drawing.Size(940, 44);
             this.txtRevisionSistema.TabIndex = 10093;
             // 
             // label2
@@ -237,7 +237,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(10, 90);
+            this.label2.Location = new System.Drawing.Point(10, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 17);
             this.label2.TabIndex = 10092;
@@ -250,7 +250,7 @@
             this.txtAntecedentesFamiliares.Multiline = true;
             this.txtAntecedentesFamiliares.Name = "txtAntecedentesFamiliares";
             this.txtAntecedentesFamiliares.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAntecedentesFamiliares.Size = new System.Drawing.Size(874, 44);
+            this.txtAntecedentesFamiliares.Size = new System.Drawing.Size(937, 44);
             this.txtAntecedentesFamiliares.TabIndex = 10091;
             // 
             // AntecedentesIngresoUI
@@ -258,9 +258,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(927, 689);
+            this.ClientSize = new System.Drawing.Size(969, 646);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.GroupBox4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AntecedentesIngresoUI";
             this.Text = "AntecedentesPersonalesUI";
             this.GroupBox4.ResumeLayout(false);

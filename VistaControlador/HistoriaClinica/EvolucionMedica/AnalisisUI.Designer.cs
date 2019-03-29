@@ -1,4 +1,4 @@
-﻿namespace Galactus.VistaControlador.HistoriaClinica.FormIngreso
+﻿namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
 {
     partial class AnalisisUI
     {
@@ -29,69 +29,65 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtAnalisis = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtPronostico = new System.Windows.Forms.TextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtAnalisis);
-            this.groupBox1.Location = new System.Drawing.Point(6, 7);
+            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(5, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(972, 146);
-            this.groupBox1.TabIndex = 10064;
+            this.groupBox1.Size = new System.Drawing.Size(972, 131);
+            this.groupBox1.TabIndex = 10095;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Analisis";
             // 
-            // txtAnalisis
+            // richTextBox1
             // 
-            this.txtAnalisis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtAnalisis.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtAnalisis.Location = new System.Drawing.Point(5, 15);
-            this.txtAnalisis.Multiline = true;
-            this.txtAnalisis.Name = "txtAnalisis";
-            this.txtAnalisis.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAnalisis.Size = new System.Drawing.Size(961, 125);
-            this.txtAnalisis.TabIndex = 10063;
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(3, 21);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(966, 107);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtPronostico);
-            this.groupBox2.Location = new System.Drawing.Point(6, 159);
+            this.groupBox2.Controls.Add(this.richTextBox2);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(5, 140);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(972, 141);
-            this.groupBox2.TabIndex = 10065;
+            this.groupBox2.Size = new System.Drawing.Size(972, 139);
+            this.groupBox2.TabIndex = 10096;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Pronostico";
+            this.groupBox2.Text = "Plan";
             // 
-            // txtPronostico
+            // richTextBox2
             // 
-            this.txtPronostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtPronostico.Location = new System.Drawing.Point(5, 15);
-            this.txtPronostico.Multiline = true;
-            this.txtPronostico.Name = "txtPronostico";
-            this.txtPronostico.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPronostico.Size = new System.Drawing.Size(961, 120);
-            this.txtPronostico.TabIndex = 10064;
+            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox2.Location = new System.Drawing.Point(3, 21);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(966, 115);
+            this.richTextBox2.TabIndex = 0;
+            this.richTextBox2.Text = "";
             // 
             // AnalisisUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(981, 307);
+            this.ClientSize = new System.Drawing.Size(984, 285);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AnalisisUI";
-            this.Text = "PronosticoUI";
+            this.Text = "AnalisisUI";
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -99,8 +95,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        internal System.Windows.Forms.TextBox txtAnalisis;
+        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        internal System.Windows.Forms.TextBox txtPronostico;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }

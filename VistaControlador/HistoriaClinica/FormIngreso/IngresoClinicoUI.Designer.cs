@@ -51,11 +51,11 @@
             this.tsbGuardar,
             this.tsbCancelar});
             this.tsIngreso.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.tsIngreso.Location = new System.Drawing.Point(9, 306);
-            this.tsIngreso.MaximumSize = new System.Drawing.Size(1050, 25);
-            this.tsIngreso.MinimumSize = new System.Drawing.Size(1050, 25);
+            this.tsIngreso.Location = new System.Drawing.Point(2, 332);
+            this.tsIngreso.MaximumSize = new System.Drawing.Size(1097, 25);
+            this.tsIngreso.MinimumSize = new System.Drawing.Size(1097, 25);
             this.tsIngreso.Name = "tsIngreso";
-            this.tsIngreso.Size = new System.Drawing.Size(1050, 25);
+            this.tsIngreso.Size = new System.Drawing.Size(1097, 25);
             this.tsIngreso.TabIndex = 53;
             this.tsIngreso.Text = "toolStrip2";
             // 
@@ -103,7 +103,7 @@
             this.tcIngresoClinico.Multiline = true;
             this.tcIngresoClinico.Name = "tcIngresoClinico";
             this.tcIngresoClinico.SelectedIndex = 0;
-            this.tcIngresoClinico.Size = new System.Drawing.Size(1100, 300);
+            this.tcIngresoClinico.Size = new System.Drawing.Size(1100, 326);
             this.tcIngresoClinico.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tcIngresoClinico.TabIndex = 4;
             // 
@@ -112,7 +112,7 @@
             this.tpValoracion.Location = new System.Drawing.Point(124, 4);
             this.tpValoracion.Name = "tpValoracion";
             this.tpValoracion.Padding = new System.Windows.Forms.Padding(3);
-            this.tpValoracion.Size = new System.Drawing.Size(972, 292);
+            this.tpValoracion.Size = new System.Drawing.Size(972, 318);
             this.tpValoracion.TabIndex = 0;
             this.tpValoracion.Text = "Valoracion";
             this.tpValoracion.UseVisualStyleBackColor = true;
@@ -149,10 +149,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 335);
+            this.ClientSize = new System.Drawing.Size(1100, 357);
             this.Controls.Add(this.tsIngreso);
             this.Controls.Add(this.tcIngresoClinico);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1100, 357);
+            this.MinimumSize = new System.Drawing.Size(1100, 357);
             this.Name = "IngresoClinicoUI";
             this.RightToLeftLayout = true;
             this.Text = "IngresoClinico";
