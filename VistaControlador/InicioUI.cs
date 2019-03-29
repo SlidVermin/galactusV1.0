@@ -19,12 +19,12 @@ namespace Galactus
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            pnlLogin.BackColor = Color.FromArgb(200, 107, 107, 107);
+            //pnlLogin.BackColor = Color.FromArgb(200, 107, 107, 107);
             lblUsuario.BackColor = Color.Transparent;
             lblContrasena.BackColor = Color.Transparent;
             lbSede.BackColor = Color.Transparent;
             btIngresar.BackColor = Color.FromArgb(180, 131, 173, 210);
-            btSalir.BackColor = Color.FromArgb(180, 131, 173, 210);
+            //btSalir.BackColor = Color.FromArgb(180, 131, 173, 210);
         }
 
         void iniciarSesion(string usuario, string pass)
@@ -80,6 +80,28 @@ namespace Galactus
         private void btSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btIngresar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btIngresar_Click_2(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "" || txtContrasena.Text == "")
+            {
+                MessageBox.Show("los campos marcados son obligatorios", "", MessageBoxButtons.OK);
+            }
+            else
+            {
+                iniciarSesion(txtUsuario.Text, txtContrasena.Text);
+            }
         }
     }
 }
