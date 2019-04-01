@@ -403,6 +403,66 @@ namespace Galactus
         {
             return text.Replace("'", "");
         }
+
+        public static void agregarRegistroDatagridView(subMetodo metodo,
+                                                       subMetodo verificarFila,
+                                                       subMetodo QuitarFila,
+                                                       DataGridView dgv,
+                                                       int indiceColumna
+                                                       )
+        {
+            
+            int columnaActual;
+            int filaActual;
+            bool filaVacia;
+            String nombreColumna;
+
+          
+            columnaActual = dgv.CurrentCell.ColumnIndex;
+            nombreColumna = dgv.Columns[columnaActual].HeaderText;
+            filaActual = dgv.CurrentCell.RowIndex;
+            filaVacia = (string.IsNullOrEmpty( dgv.Rows[filaActual].Cells[indiceColumna].Value.ToString())) ? true:false;
+
+            switch (nombreColumna)
+            {
+                case "Agregar":
+                    agregarRow(metodo,
+                          verificarFila,
+                          dgv,
+                          filaActual,
+                          columnaActual,
+                          filaVacia);
+                    break;
+                case "Quitar":
+                    if (!filaVacia)
+                    {
+                        QuitarFila.Invoke();
+                    }                   
+                    break;
+            }
+           
+          
+        }
+        public static void agregarRow(subMetodo metodo,
+                                      subMetodo verificarFila,
+                                      DataGridView dgv,
+                                      int filaActual,
+                                      int columnaActual,
+                                      bool filaVacia)
+        {
+            if (filaVacia == false)
+            {
+                filaActual += 1;
+            }
+            DataTable dt = new DataTable();
+            dt = dgv.DataSource as DataTable;
+            DataRow fila = dt.NewRow();
+            ((DataTable)(dgv).DataSource).Rows.InsertAt(fila, filaActual);
+            dgv.ClearSelection();
+            dgv.Rows[filaActual].Cells[columnaActual].Selected = true;
+            metodo.Invoke();
+            verificarFila.Invoke();
+        }
         public static void buscarDevuelveFila(string query,
                                               List<string> parametros,
                                               cargarInfoFila metodo,

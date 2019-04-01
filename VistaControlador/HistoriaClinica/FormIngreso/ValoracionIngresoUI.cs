@@ -76,33 +76,44 @@ namespace Galactus.VistaControlador.HistoriaClinica
             dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgId"].Value = filas.Field<int>("Id");
             dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgCodigo"].Value = filas.Field<String>("Código cie");
             dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgDescripcion"].Value = filas.Field<String>("Descripcion");
+           
         }
 
         private void dgvImpresionN_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgAgregar"].Selected==true)
+            if (dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgAgregar"].Selected==true || 
+                dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgQuitar"].Selected == true)
             {
                 try
                 {
-                    List<string> parametros = new List<string>();
-
-                    GeneralC.buscarDevuelveFila(Sentencias.GENERAL_BUSCAR_DIAGNOSTICO,
-                                                       parametros,
-                                                       new GeneralC.cargarInfoFila(cargarDiagnostico),
-                                                       Mensajes.BUSQUEDA_PACIENTE, true);
-                    ingreso.dtImpresion.Rows.Add();
+                    GeneralC.agregarRegistroDatagridView(buscarDiagnostico, verificarFila, quitarFila, dgvImpresionN, dgvImpresionN.Columns["dgcodigo"].Index);
+                   
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            if (dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgQuitar"].Selected == true
-                 && GeneralC.castFromDbItemVacio(dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgcodigo"].Value.ToString()) != "")
+            }   
+        }
+        public void quitarFila()
+        {
+            dgvImpresionN.Rows.RemoveAt(dgvImpresionN.CurrentCell.RowIndex);
+        }
+        public void verificarFila()
+        {
+            if (string.IsNullOrEmpty(dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgcodigo"].Value.ToString()))
             {
-                ingreso.dtImpresion.Rows.RemoveAt(e.RowIndex);
-
+                dgvImpresionN.Rows.RemoveAt(dgvImpresionN.CurrentCell.RowIndex);
             }
+        }
+        public void buscarDiagnostico()
+        {
+            List<string> parametros = new List<string>();
+
+            GeneralC.buscarDevuelveFila(Sentencias.GENERAL_BUSCAR_DIAGNOSTICO,
+                                               parametros,
+                                               new GeneralC.cargarInfoFila(cargarDiagnostico),
+                                               Mensajes.BUSQUEDA_PACIENTE, true);
         }
 
         private void dgvImpresionN_DataError(object sender, DataGridViewDataErrorEventArgs e)

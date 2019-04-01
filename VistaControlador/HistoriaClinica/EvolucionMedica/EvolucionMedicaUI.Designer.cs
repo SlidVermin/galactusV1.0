@@ -35,7 +35,7 @@
             this.txtBCodigoOrden = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tstPropiedadesOrdenMedica = new System.Windows.Forms.ToolStrip();
-            this.tstMenuOrdenMedica = new System.Windows.Forms.ToolStrip();
+            this.tstMenuEvolucion = new System.Windows.Forms.ToolStrip();
             this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsBtModificar = new System.Windows.Forms.ToolStripButton();
             this.tsBtGuardar = new System.Windows.Forms.ToolStripButton();
@@ -48,7 +48,7 @@
             this.tpInterpretacion = new System.Windows.Forms.TabPage();
             this.tpAnalisis = new System.Windows.Forms.TabPage();
             this.tstPropiedadesOrdenMedica.SuspendLayout();
-            this.tstMenuOrdenMedica.SuspendLayout();
+            this.tstMenuEvolucion.SuspendLayout();
             this.tcOrdenMedica.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,24 +102,24 @@
             this.tstPropiedadesOrdenMedica.Text = "toolStrip1";
             this.tstPropiedadesOrdenMedica.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tstPropiedadesOrdenMedica_ItemClicked);
             // 
-            // tstMenuOrdenMedica
+            // tstMenuEvolucion
             // 
-            this.tstMenuOrdenMedica.BackColor = System.Drawing.Color.White;
-            this.tstMenuOrdenMedica.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuOrdenMedica.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tstMenuEvolucion.BackColor = System.Drawing.Color.White;
+            this.tstMenuEvolucion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuEvolucion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsBtNuevo,
             this.tsBtModificar,
             this.tsBtGuardar,
             this.tsBtBuscar,
             this.tsBtAnular,
             this.tsBtCancelar});
-            this.tstMenuOrdenMedica.Location = new System.Drawing.Point(0, 332);
-            this.tstMenuOrdenMedica.MaximumSize = new System.Drawing.Size(1095, 25);
-            this.tstMenuOrdenMedica.MinimumSize = new System.Drawing.Size(1095, 25);
-            this.tstMenuOrdenMedica.Name = "tstMenuOrdenMedica";
-            this.tstMenuOrdenMedica.Size = new System.Drawing.Size(1095, 25);
-            this.tstMenuOrdenMedica.TabIndex = 61;
-            this.tstMenuOrdenMedica.Text = "toolStrip1";
+            this.tstMenuEvolucion.Location = new System.Drawing.Point(0, 332);
+            this.tstMenuEvolucion.MaximumSize = new System.Drawing.Size(1095, 25);
+            this.tstMenuEvolucion.MinimumSize = new System.Drawing.Size(1095, 25);
+            this.tstMenuEvolucion.Name = "tstMenuEvolucion";
+            this.tstMenuEvolucion.Size = new System.Drawing.Size(1095, 25);
+            this.tstMenuEvolucion.TabIndex = 61;
+            this.tstMenuEvolucion.Text = "toolStrip1";
             // 
             // tsBtNuevo
             // 
@@ -130,6 +130,7 @@
             this.tsBtNuevo.Name = "tsBtNuevo";
             this.tsBtNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsBtNuevo.Text = "Nuevo";
+            this.tsBtNuevo.Click += new System.EventHandler(this.tsBtNuevo_Click);
             // 
             // tsBtModificar
             // 
@@ -199,13 +200,13 @@
             // 
             // tpProblemas
             // 
+            this.tpProblemas.BackColor = System.Drawing.Color.Silver;
             this.tpProblemas.Location = new System.Drawing.Point(124, 4);
             this.tpProblemas.Name = "tpProblemas";
             this.tpProblemas.Padding = new System.Windows.Forms.Padding(3);
             this.tpProblemas.Size = new System.Drawing.Size(968, 297);
             this.tpProblemas.TabIndex = 0;
             this.tpProblemas.Text = "Problemas";
-            this.tpProblemas.UseVisualStyleBackColor = true;
             // 
             // tpExamenFisico
             // 
@@ -242,7 +243,7 @@
             this.ClientSize = new System.Drawing.Size(1100, 357);
             this.Controls.Add(this.mtxtFechaOrden);
             this.Controls.Add(this.tstPropiedadesOrdenMedica);
-            this.Controls.Add(this.tstMenuOrdenMedica);
+            this.Controls.Add(this.tstMenuEvolucion);
             this.Controls.Add(this.tcOrdenMedica);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1100, 357);
@@ -252,8 +253,8 @@
             this.Load += new System.EventHandler(this.EvolucionMedicaUI_Load);
             this.tstPropiedadesOrdenMedica.ResumeLayout(false);
             this.tstPropiedadesOrdenMedica.PerformLayout();
-            this.tstMenuOrdenMedica.ResumeLayout(false);
-            this.tstMenuOrdenMedica.PerformLayout();
+            this.tstMenuEvolucion.ResumeLayout(false);
+            this.tstMenuEvolucion.PerformLayout();
             this.tcOrdenMedica.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -277,7 +278,7 @@
         private System.Windows.Forms.ToolStripButton tsBtGuardar;
         private System.Windows.Forms.ToolStripButton tsBtModificar;
         private System.Windows.Forms.ToolStripButton tsBtNuevo;
-        private System.Windows.Forms.ToolStrip tstMenuOrdenMedica;
+        private System.Windows.Forms.ToolStrip tstMenuEvolucion;
         private System.Windows.Forms.TabPage tpInterpretacion;
         private Util.Controles.TabControlGalactus tcOrdenMedica;
     }

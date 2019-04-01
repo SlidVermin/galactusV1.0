@@ -78,6 +78,7 @@
     <Compile Include="Entidades\ConfiguracionGeneral\Usuario.cs" />
     <Compile Include="Entidades\General\Busqueda.cs" />
     <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
+    <Compile Include="Entidades\HistoriaClinica\Evolucion\Evolucion.cs" />
     <Compile Include="Entidades\HistoriaClinica\HistoriaClinicaPaciente.cs" />
     <Compile Include="Entidades\HistoriaClinica\IngresoClinico.cs" />
     <Compile Include="Entidades\HistoriaClinica\ListadoPaciente.cs" />
