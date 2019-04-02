@@ -36,7 +36,7 @@
             this.dgAgregar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgQuitar = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtSubjetivos = new System.Windows.Forms.RichTextBox();
             this.GroupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnostico)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -124,7 +124,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.txtSubjetivos);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(5, 168);
             this.groupBox1.Name = "groupBox1";
@@ -133,14 +133,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Subjetivos";
             // 
-            // richTextBox1
+            // txtSubjetivos
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 21);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(970, 97);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.txtSubjetivos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSubjetivos.Location = new System.Drawing.Point(3, 21);
+            this.txtSubjetivos.Name = "txtSubjetivos";
+            this.txtSubjetivos.Size = new System.Drawing.Size(970, 97);
+            this.txtSubjetivos.TabIndex = 0;
+            this.txtSubjetivos.Text = "";
             // 
             // ProblemasUI
             // 
@@ -172,6 +172,6 @@
         private System.Windows.Forms.DataGridViewImageColumn dgAgregar;
         private System.Windows.Forms.DataGridViewImageColumn dgQuitar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        internal System.Windows.Forms.RichTextBox txtSubjetivos;
     }
 }

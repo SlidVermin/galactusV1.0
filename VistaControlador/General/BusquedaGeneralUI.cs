@@ -69,12 +69,12 @@ namespace Galactus.VistaControlador.General
         }
         void llenarTabla()
         {
-            int cantidadParamatros = objBusqueda.parametros.Count - 1;
-            if (cantidadParamatros > -1)
-            {
-                objBusqueda.parametros.RemoveAt(cantidadParamatros);
-                objBusqueda.parametros.Add(txtBusqueda.Text);
-            }
+            //int cantidadParamatros = objBusqueda.parametros.Count -1;
+            //if (cantidadParamatros > -1)
+            //{
+            //    objBusqueda.parametros.RemoveAt(cantidadParamatros);
+            //    objBusqueda.parametros.Add(txtBusqueda.Text);
+            //}
             if (objBusqueda.itemsSelecionados != null)
             {
                 if (!string.IsNullOrEmpty(txtBusqueda.Text))

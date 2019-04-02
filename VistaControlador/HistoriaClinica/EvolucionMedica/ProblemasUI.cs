@@ -42,9 +42,14 @@ namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
             dgvDiagnostico.Rows[dgvDiagnostico.CurrentCell.RowIndex].Cells["dgId"].Value = filas.Field<int>("Id");
             dgvDiagnostico.Rows[dgvDiagnostico.CurrentCell.RowIndex].Cells["dgCodigo"].Value = filas.Field<String>("Código cie");
             dgvDiagnostico.Rows[dgvDiagnostico.CurrentCell.RowIndex].Cells["dgDescripcion"].Value = filas.Field<String>("Descripcion");
-            evolucionMedica.dtDiagnostico.Rows.Add();
+           
         }
 
+        public void obtenerDiagnosticoCargar(DataTable dtDiagnostico)
+        {
+            evolucionMedica.dtDiagnostico = dtDiagnostico.Copy();
+            dgvDiagnostico.DataSource = evolucionMedica.dtDiagnostico;
+        }
         private void dgvDiagnostico_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvDiagnostico.Rows[dgvDiagnostico.CurrentCell.RowIndex].Cells["dgAgregar"].Selected == true ||

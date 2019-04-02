@@ -271,6 +271,32 @@ namespace Galactus
             }
 
         }
+
+        public static DateTime obtenerFechaServidor()
+        {
+           
+            try
+            {
+                DateTime fechaServidor = new DateTime();
+                DataTable dtAlmacenar = new DataTable();
+
+                using (SqlDataAdapter da = new SqlDataAdapter("select getdate()", PrincipalUI.Cnxion))
+                {
+                    da.Fill(dtAlmacenar);
+                }
+                if (dtAlmacenar.Rows.Count > 0)
+                {
+                  fechaServidor = dtAlmacenar.Rows[0].Field<DateTime>(0);             
+                }
+                return  fechaServidor;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+                return DateTime.Now;
+            }
+            
+        }
         public static DataSet llenarDataset(string query,
                                             List<string> parametros)
         {

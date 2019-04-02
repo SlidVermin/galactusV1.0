@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtAnalisis = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.txtPlan = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.txtAnalisis);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(5, 5);
             this.groupBox1.Name = "groupBox1";
@@ -47,18 +47,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Analisis";
             // 
-            // richTextBox1
+            // txtAnalisis
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 21);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(966, 107);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.txtAnalisis.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtAnalisis.Location = new System.Drawing.Point(3, 21);
+            this.txtAnalisis.Name = "txtAnalisis";
+            this.txtAnalisis.Size = new System.Drawing.Size(966, 107);
+            this.txtAnalisis.TabIndex = 0;
+            this.txtAnalisis.Text = "";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.richTextBox2);
+            this.groupBox2.Controls.Add(this.txtPlan);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.groupBox2.Location = new System.Drawing.Point(5, 140);
             this.groupBox2.Name = "groupBox2";
@@ -67,14 +67,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Plan";
             // 
-            // richTextBox2
+            // txtPlan
             // 
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(3, 21);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(966, 115);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
+            this.txtPlan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPlan.Location = new System.Drawing.Point(3, 21);
+            this.txtPlan.Name = "txtPlan";
+            this.txtPlan.Size = new System.Drawing.Size(966, 115);
+            this.txtPlan.TabIndex = 0;
+            this.txtPlan.Text = "";
             // 
             // AnalisisUI
             // 
@@ -95,8 +95,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        internal System.Windows.Forms.RichTextBox txtAnalisis;
+        internal System.Windows.Forms.RichTextBox txtPlan;
     }
 }

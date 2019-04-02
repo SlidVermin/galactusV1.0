@@ -29,7 +29,7 @@ namespace Galactus.Util.Constantes
         public const String VALUE_VALOR = "IdDescripcionValor";
         public const String DISPLAY_VALOR = "Valor";
         public const String PREDETERMINADA = "-1";
-        
+        public const int PREDETERMINADO = -1;
 
         public const String VALUEMEMBER_PAIS = "IdPais";
         public const String DISPLAYMEMBER_PAIS = "Descripcion";

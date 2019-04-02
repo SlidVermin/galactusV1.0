@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvolucionMedicaUI));
-            this.mtxtFechaOrden = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtFechaEvolucion = new System.Windows.Forms.MaskedTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.txtBCodigoOrden = new System.Windows.Forms.ToolStripTextBox();
+            this.txtIdEvolucion = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.tstPropiedadesOrdenMedica = new System.Windows.Forms.ToolStrip();
             this.tstMenuEvolucion = new System.Windows.Forms.ToolStrip();
@@ -52,14 +52,15 @@
             this.tcOrdenMedica.SuspendLayout();
             this.SuspendLayout();
             // 
-            // mtxtFechaOrden
+            // mtxtFechaEvolucion
             // 
-            this.mtxtFechaOrden.Location = new System.Drawing.Point(307, 2);
-            this.mtxtFechaOrden.Mask = "00/00/0000 00:00";
-            this.mtxtFechaOrden.Name = "mtxtFechaOrden";
-            this.mtxtFechaOrden.Size = new System.Drawing.Size(100, 20);
-            this.mtxtFechaOrden.TabIndex = 63;
-            this.mtxtFechaOrden.ValidatingType = typeof(System.DateTime);
+            this.mtxtFechaEvolucion.Location = new System.Drawing.Point(307, 2);
+            this.mtxtFechaEvolucion.Mask = "00/00/0000 00:00";
+            this.mtxtFechaEvolucion.Name = "mtxtFechaEvolucion";
+            this.mtxtFechaEvolucion.ReadOnly = true;
+            this.mtxtFechaEvolucion.Size = new System.Drawing.Size(100, 20);
+            this.mtxtFechaEvolucion.TabIndex = 63;
+            this.mtxtFechaEvolucion.ValidatingType = typeof(System.DateTime);
             // 
             // toolStripLabel2
             // 
@@ -72,12 +73,13 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // txtBCodigoOrden
+            // txtIdEvolucion
             // 
-            this.txtBCodigoOrden.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBCodigoOrden.Name = "txtBCodigoOrden";
-            this.txtBCodigoOrden.Size = new System.Drawing.Size(100, 25);
-            this.txtBCodigoOrden.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIdEvolucion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdEvolucion.Name = "txtIdEvolucion";
+            this.txtIdEvolucion.ReadOnly = true;
+            this.txtIdEvolucion.Size = new System.Drawing.Size(100, 25);
+            this.txtIdEvolucion.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // toolStripLabel1
             // 
@@ -90,7 +92,7 @@
             this.tstPropiedadesOrdenMedica.BackColor = System.Drawing.Color.White;
             this.tstPropiedadesOrdenMedica.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.txtBCodigoOrden,
+            this.txtIdEvolucion,
             this.toolStripSeparator1,
             this.toolStripLabel2});
             this.tstPropiedadesOrdenMedica.Location = new System.Drawing.Point(0, 0);
@@ -141,6 +143,7 @@
             this.tsBtModificar.Name = "tsBtModificar";
             this.tsBtModificar.Size = new System.Drawing.Size(78, 22);
             this.tsBtModificar.Text = "Modificar";
+            this.tsBtModificar.Click += new System.EventHandler(this.tsBtModificar_Click);
             // 
             // tsBtGuardar
             // 
@@ -151,6 +154,7 @@
             this.tsBtGuardar.Name = "tsBtGuardar";
             this.tsBtGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsBtGuardar.Text = "Guardar";
+            this.tsBtGuardar.Click += new System.EventHandler(this.tsBtGuardar_Click);
             // 
             // tsBtBuscar
             // 
@@ -161,6 +165,7 @@
             this.tsBtBuscar.Name = "tsBtBuscar";
             this.tsBtBuscar.Size = new System.Drawing.Size(62, 22);
             this.tsBtBuscar.Text = "Buscar";
+            this.tsBtBuscar.Click += new System.EventHandler(this.tsBtBuscar_Click);
             // 
             // tsBtAnular
             // 
@@ -171,6 +176,7 @@
             this.tsBtAnular.Name = "tsBtAnular";
             this.tsBtAnular.Size = new System.Drawing.Size(62, 22);
             this.tsBtAnular.Text = "Anular";
+            this.tsBtAnular.Click += new System.EventHandler(this.tsBtAnular_Click);
             // 
             // tsBtCancelar
             // 
@@ -181,6 +187,7 @@
             this.tsBtCancelar.Name = "tsBtCancelar";
             this.tsBtCancelar.Size = new System.Drawing.Size(73, 22);
             this.tsBtCancelar.Text = "Cancelar";
+            this.tsBtCancelar.Click += new System.EventHandler(this.tsBtCancelar_Click);
             // 
             // tcOrdenMedica
             // 
@@ -241,7 +248,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 357);
-            this.Controls.Add(this.mtxtFechaOrden);
+            this.Controls.Add(this.mtxtFechaEvolucion);
             this.Controls.Add(this.tstPropiedadesOrdenMedica);
             this.Controls.Add(this.tstMenuEvolucion);
             this.Controls.Add(this.tcOrdenMedica);
@@ -266,10 +273,10 @@
         private System.Windows.Forms.TabPage tpProblemas;
         private System.Windows.Forms.TabPage tpExamenFisico;
         private System.Windows.Forms.TabPage tpAnalisis;
-        private System.Windows.Forms.MaskedTextBox mtxtFechaOrden;
+        private System.Windows.Forms.MaskedTextBox mtxtFechaEvolucion;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripTextBox txtBCodigoOrden;
+        private System.Windows.Forms.ToolStripTextBox txtIdEvolucion;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStrip tstPropiedadesOrdenMedica;
         private System.Windows.Forms.ToolStripButton tsBtCancelar;

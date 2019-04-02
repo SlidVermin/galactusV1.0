@@ -107,6 +107,7 @@
     <Compile Include="Modelo\Gestion\ProveedorDAL.cs" />
     <Compile Include="Modelo\Gestion\ClienteDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\EvolucionMedicaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\IngresoClinicoDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\OrdenClinicaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\HemodialisisDAL.cs" />
