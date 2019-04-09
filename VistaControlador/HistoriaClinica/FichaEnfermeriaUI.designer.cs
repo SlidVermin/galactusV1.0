@@ -57,8 +57,8 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.tpOrdenInsumo = new System.Windows.Forms.TabPage();
-            this.tpNotas = new System.Windows.Forms.TabPage();
+            this.tpFisioterapeutas = new System.Windows.Forms.TabPage();
+            this.tpEnfermeria = new System.Windows.Forms.TabPage();
             this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
             this.pnlInformacion.SuspendLayout();
             this.tpFormatos.SuspendLayout();
@@ -374,30 +374,30 @@
             this.toolStripButton6.Size = new System.Drawing.Size(73, 22);
             this.toolStripButton6.Text = "Cancelar";
             // 
-            // tpOrdenInsumo
+            // tpFisioterapeutas
             // 
-            this.tpOrdenInsumo.Location = new System.Drawing.Point(4, 29);
-            this.tpOrdenInsumo.Name = "tpOrdenInsumo";
-            this.tpOrdenInsumo.Size = new System.Drawing.Size(1289, 473);
-            this.tpOrdenInsumo.TabIndex = 3;
-            this.tpOrdenInsumo.Text = "Ordenes de Insumo";
-            this.tpOrdenInsumo.UseVisualStyleBackColor = true;
+            this.tpFisioterapeutas.Location = new System.Drawing.Point(4, 29);
+            this.tpFisioterapeutas.Name = "tpFisioterapeutas";
+            this.tpFisioterapeutas.Size = new System.Drawing.Size(1289, 473);
+            this.tpFisioterapeutas.TabIndex = 3;
+            this.tpFisioterapeutas.Text = "Fisioterapeutas";
+            this.tpFisioterapeutas.UseVisualStyleBackColor = true;
             // 
-            // tpNotas
+            // tpEnfermeria
             // 
-            this.tpNotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
-            this.tpNotas.Location = new System.Drawing.Point(4, 29);
-            this.tpNotas.Name = "tpNotas";
-            this.tpNotas.Padding = new System.Windows.Forms.Padding(3);
-            this.tpNotas.Size = new System.Drawing.Size(1289, 473);
-            this.tpNotas.TabIndex = 0;
-            this.tpNotas.Text = "Notas";
+            this.tpEnfermeria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.tpEnfermeria.Location = new System.Drawing.Point(4, 29);
+            this.tpEnfermeria.Name = "tpEnfermeria";
+            this.tpEnfermeria.Padding = new System.Windows.Forms.Padding(3);
+            this.tpEnfermeria.Size = new System.Drawing.Size(1289, 473);
+            this.tpEnfermeria.TabIndex = 0;
+            this.tpEnfermeria.Text = "Enfermeria";
             // 
             // tabHistoriaClinica
             // 
             this.tabHistoriaClinica.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabHistoriaClinica.Controls.Add(this.tpNotas);
-            this.tabHistoriaClinica.Controls.Add(this.tpOrdenInsumo);
+            this.tabHistoriaClinica.Controls.Add(this.tpEnfermeria);
+            this.tabHistoriaClinica.Controls.Add(this.tpFisioterapeutas);
             this.tabHistoriaClinica.Controls.Add(this.tpFormatos);
             this.tabHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabHistoriaClinica.Location = new System.Drawing.Point(4, 103);
@@ -416,6 +416,7 @@
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.pnlInformacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1340, 650);
             this.MinimumSize = new System.Drawing.Size(1320, 640);
             this.Name = "FichaEnfermeriaUI";
@@ -463,8 +464,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.TabPage tpOrdenInsumo;
-        private System.Windows.Forms.TabPage tpNotas;
+        private System.Windows.Forms.TabPage tpFisioterapeutas;
+        private System.Windows.Forms.TabPage tpEnfermeria;
         private System.Windows.Forms.TabControl tabHistoriaClinica;
     }
 }

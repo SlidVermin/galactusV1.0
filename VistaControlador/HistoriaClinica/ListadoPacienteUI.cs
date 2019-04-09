@@ -107,6 +107,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
                     break;
                 case ConstanteGeneral.MENU_ATENCION_ENFERMERIA:
                     FichaEnfermeriaUI formHistoriaEnfermeria = new FichaEnfermeriaUI();
+                    formHistoriaEnfermeria.obtenerDatosPaciente(listaPaciente, Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value));
                     formHistoriaEnfermeria.ShowDialog();
                     break;               
             }

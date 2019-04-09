@@ -5,6 +5,7 @@ using Galactus.Util.Mensajes;
 using Galactus.Entidades.HistoriaClinica;
 using Galactus.Entidades.HistoriaClinica.OrdenMedica;
 using Galactus.VistaControlador.HistoriaClinica.OrdenMedica;
+using Galactus.VistaControlador.HistoriaClinica.Enfermeria;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
@@ -12,12 +13,9 @@ namespace Galactus.VistaControlador.HistoriaClinica
     public partial class FichaEnfermeriaUI : Form
     {
         private int idAtencion;
-        private HistoriaClinicaPaciente historiaClinica = new HistoriaClinicaPaciente();
-        private OrdenMedicaUI OrdenClinica;
-        private IngresoClinicoUI ingreso;
-
-
-
+       
+        EnfermeriaUI Enfermeria;
+      
         public FichaEnfermeriaUI()
         {
             InitializeComponent();
@@ -35,11 +33,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
         {
-            ingreso = new IngresoClinicoUI(idAtencion);
-            OrdenClinica = new OrdenMedicaUI(idAtencion);
-            GeneralC.cargarFormularioEnPestana(tpNotas, ingreso);
-            GeneralC.cargarFormularioEnPestana(tpFormatos, OrdenClinica);
-
+            Enfermeria = new EnfermeriaUI();
+            GeneralC.cargarFormularioEnPestana(tpEnfermeria, Enfermeria);
         }
         public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso)
         {
@@ -52,7 +47,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 txtPaciente.Text = dtDatos.Rows[0].Field<String>("Paciente");
                 txtEdad.Text = Convert.ToString(dtDatos.Rows[0].Field<String>("Edad"));
                 tcHistoriaClinica.Text = dtDatos.Rows[0].Field<String>("EPS");
-                txtEstancia.Text = Convert.ToString(dtDatos.Rows[0].Field<int>("Estancia"));
+                txtEstancia.Text = Convert.ToString(dtDatos.Rows[0].Field<String>("Estancia"));
                 txtSexo.Text = dtDatos.Rows[0].Field<String>("Genero");
                 txtServicio.Text = dtDatos.Rows[0].Field<String>("Entorno");
                 txtfechaIngreso.Text = Convert.ToString(dtDatos.Rows[0].Field<DateTime>("Fecha ingreso"));
@@ -63,7 +58,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void tsBtNuevo_Click(object sender, EventArgs e)
         {
-            historiaClinica.orden.nuevaOrden();
+          
         }
 
         private void tsbGuardarIngreso_Click(object sender, EventArgs e)

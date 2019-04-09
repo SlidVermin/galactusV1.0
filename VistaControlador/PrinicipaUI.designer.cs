@@ -38,7 +38,7 @@
             // 
             // stsInformacionGeneral
             // 
-            this.stsInformacionGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
+            this.stsInformacionGeneral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.stsInformacionGeneral.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
             this.stsInformacionGeneral.Location = new System.Drawing.Point(0, 431);
