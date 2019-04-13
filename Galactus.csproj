@@ -119,6 +119,7 @@
     <Compile Include="Instrucciones\Sentencias.cs" />
     <Compile Include="Util\Constantes\ConstanteGeneral.cs" />
     <Compile Include="Util\Constantes\ConsultasHistoriaClinica.cs" />
+    <Compile Include="Util\ControlSignos.cs" />
     <Compile Include="Util\DigitoVerificacion.cs" />
     <Compile Include="Util\Funciones.cs" />
     <Compile Include="Util\GeneralC.cs" />
@@ -436,6 +437,12 @@
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\JustificacionAntibioticoUI.Designer.cs">
       <DependentUpon>JustificacionAntibioticoUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\SabanaEnfermeriaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\SabanaEnfermeriaUI.Designer.cs">
+      <DependentUpon>SabanaEnfermeriaUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\InicioUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -617,6 +624,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\JustificacionAntibioticoUI.resx">
       <DependentUpon>JustificacionAntibioticoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\SabanaEnfermeriaUI.resx">
+      <DependentUpon>SabanaEnfermeriaUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\InicioUI.resx">
       <DependentUpon>InicioUI.cs</DependentUpon>

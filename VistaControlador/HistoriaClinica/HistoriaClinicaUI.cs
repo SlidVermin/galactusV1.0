@@ -18,7 +18,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private OrdenMedicaUI OrdenClinica;
         private IngresoClinicoUI ingreso;
    
-
+  
 
         public HistoriaClinicaUI()
         {
