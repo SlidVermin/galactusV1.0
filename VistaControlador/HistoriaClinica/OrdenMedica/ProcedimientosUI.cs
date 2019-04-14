@@ -14,6 +14,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 {
     public partial class ProcedimientosUI : Form
     {
+        public bool edicion = false;
         public int idAtencion { get; set; }
         public OrdenClinicaProcedimiento procedimientos { get; set; }
         public ProcedimientosUI()
@@ -26,17 +27,17 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         }
         void inicializarForm()
         {
-            dgvProcedimientos.AutoGenerateColumns = false;
-            dgvProcedimientos.Columns["descripcion"].DataPropertyName = "descripcion";
-            dgvProcedimientos.Columns["cantidad"].DataPropertyName = "cantidad";
-            enlazarDgv();
         }
         public void enlazarDgv()
         {
             if (procedimientos != null)
             {
+                dgvProcedimientos.AutoGenerateColumns = false;
+                dgvProcedimientos.Columns["descripcion"].DataPropertyName = "descripcion";
+                dgvProcedimientos.Columns["cantidad"].DataPropertyName = "cantidad";
                 dgvProcedimientos.DataSource = procedimientos.tblProcedimientos;
             }
+          
         }
         void cargarProcedimiento(DataRow filaResultado)
         {
@@ -49,14 +50,11 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         }
         private void dgvProcedimientos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvProcedimientos.Columns["agregar"].Index == e.ColumnIndex)
+            if (dgvProcedimientos.Columns["agregar"].Index == e.ColumnIndex & edicion)
             {
                 try
                 {
                    List<string> parametros = new List<string>();
-                    //parametros.Add(idAtencion.ToString());
-                    //parametros.Add(string.Empty);
-
 
                     DataTable tablaParametros = new DataTable();
                     DataTable tablasSeleccionado = new DataTable();
@@ -67,7 +65,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     object[] myObjArray = { "@idAtencion", idAtencion  };
                     object[] myObjArray1 = { "@filtro", "" };
 
-                    
                     DataView view = new DataView(procedimientos.tblProcedimientos);
 
                     tablasSeleccionado = view.ToTable(true, new string[] { "idProcedimiento" }).Copy();

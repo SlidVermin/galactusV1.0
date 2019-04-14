@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 308);
+            this.panel1.Size = new System.Drawing.Size(907, 256);
             this.panel1.TabIndex = 2;
             // 
             // GroupBox17
@@ -68,7 +68,7 @@
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(12, 3);
             this.GroupBox17.Name = "GroupBox17";
-            this.GroupBox17.Size = new System.Drawing.Size(883, 293);
+            this.GroupBox17.Size = new System.Drawing.Size(883, 248);
             this.GroupBox17.TabIndex = 10092;
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Medicamentos";
@@ -97,7 +97,7 @@
             this.dgvMedicamentos.Name = "dgvMedicamentos";
             this.dgvMedicamentos.ReadOnly = true;
             this.dgvMedicamentos.RowHeadersVisible = false;
-            this.dgvMedicamentos.Size = new System.Drawing.Size(877, 272);
+            this.dgvMedicamentos.Size = new System.Drawing.Size(877, 227);
             this.dgvMedicamentos.TabIndex = 2;
             // 
             // dataGridViewImageColumn1
@@ -126,11 +126,10 @@
             // 
             // Descripcion
             // 
-            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 107;
             // 
             // concentracion
             // 
@@ -227,7 +226,7 @@
             // 
             this.Agregar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Agregar.HeaderText = "Agregar";
-            this.Agregar.Image = global::Galactus.Properties.Resources.add;
+            this.Agregar.Image = global::Galactus.Properties.Resources.search__1_;
             this.Agregar.Name = "Agregar";
             this.Agregar.ReadOnly = true;
             this.Agregar.Width = 65;
@@ -246,7 +245,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(907, 308);
+            this.ClientSize = new System.Drawing.Size(907, 256);
             this.Controls.Add(this.panel1);
             this.Name = "MedicamentosUI";
             this.Text = "MedicamentosUI";

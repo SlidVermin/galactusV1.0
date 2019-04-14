@@ -13,6 +13,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 {
     public partial class IndicacionesUI : Form
     {
+        public bool edicion = false;
         public OrdenClinicaIndicacion indicacion;
         public IndicacionesUI()
         {

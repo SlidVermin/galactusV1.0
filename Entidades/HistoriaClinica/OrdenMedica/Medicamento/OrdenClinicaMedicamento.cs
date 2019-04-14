@@ -15,8 +15,8 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica.Medicamentos
             tblMedicamentos = new DataTable();
             tblMedicamentos.Columns.Add("codigo",Type.GetType("System.Int32"));
             tblMedicamentos.Columns.Add("descripcion", Type.GetType("System.String"));
-            tblMedicamentos.Columns.Add("concentracion", Type.GetType("System.String"));
-            tblMedicamentos.Columns["concentracion"].DefaultValue = 0;
+            tblMedicamentos.Columns.Add("concentracion", Type.GetType("System.Double"));
+            tblMedicamentos.Columns["concentracion"].DefaultValue = 0.0;
         }
     }
 }

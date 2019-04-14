@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 {
@@ -24,6 +25,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         private IndicacionesUI indicaciones = new IndicacionesUI();
         private ProcedimientosUI procedimientos = new ProcedimientosUI();
         private MedicamentosUI medicamentos = new MedicamentosUI();
+        public int accionOrden;
         #region "Conctrutores"
         public OrdenMedicaUI()
         {
@@ -37,6 +39,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             indicaciones.indicacion = ordenClinica.indicacion;
             procedimientos.idAtencion = idAtencion;
             procedimientos.procedimientos = ordenClinica.procedimiento;
+            medicamentos.medicamentos = ordenClinica.medicamento;
         }
         #endregion
 
@@ -50,12 +53,27 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         #region "Botones"
         private void tsBtNuevo_Click(object sender, EventArgs e)
         {
-            ordenClinica.nuevaOrden();
+       
             GeneralC.formNuevo(this, tstMenuOrdenMedica, tsBtGuardar, tsBtCancelar);
+            ordenClinica.nuevaOrden();
             txtBCodigoOrden.ReadOnly = true;
-               ordenClinica.procedimiento.tblProcedimientos.Rows.Add();
             procedimientos.enlazarDgv();
+            medicamentos.enlazarDgv();
+            activarEdicion();           
         }
+        void activarEdicion()
+        {
+            indicaciones.edicion = true;
+            procedimientos.edicion = true;
+            medicamentos.edicion = true;
+        }
+        void desactivarEdicion()
+        {
+            indicaciones.edicion = false;
+            procedimientos.edicion = false;
+            medicamentos.edicion = false;
+        }
+
         private void tsBtBuscar_Click(object sender, EventArgs e)
         {
             try
@@ -78,6 +96,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         {
             GeneralC.fnModificarForm(this, tstMenuOrdenMedica, tsBtGuardar, tsBtCancelar);
             txtBCodigoOrden.ReadOnly = true;
+            activarEdicion();
         }
         private void tsBtGuardar_Click(object sender, EventArgs e)
         {
@@ -88,7 +107,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     crearOrden(ordenClinica);
                     OrdenClinicaDAL.guardarOrdenMedica(ordenClinica);
                     GeneralC.posGuardar(this, tstMenuOrdenMedica, tsBtNuevo, tsBtModificar, tsBtBuscar, tsBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
-
+                    desactivarEdicion();
                 }
                 catch (Exception ex)
                 {
@@ -109,7 +128,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     OrdenClinicaDAL.anularOrdenMedica(ordenClinica);
                     GeneralC.posAnular(this, tstMenuOrdenMedica, tsBtNuevo, tsBtBuscar, Mensajes.CONFIRMACION_ANULADO);
                     ordenClinica.nuevaOrden();
-
+                    desactivarEdicion();
                 }
                 catch (Exception ex)
                 {
@@ -139,6 +158,11 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             else if (String.IsNullOrWhiteSpace(ordenClinica.indicacion.indicacion))
             {
                 Mensajes.mensajeFaltaInformacion("Debe colocar Una indicacion!");
+                return false;
+            }
+            else if (ordenClinica.procedimiento.tblProcedimientos.Select("Cantidad = 0").Count() > 1)
+            {
+                Mensajes.mensajeFaltaInformacion("Debe colocar la cantidad correcta a cada procedimiento!");
                 return false;
             }
             else
@@ -171,6 +195,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 
         #endregion
 
-        
+
     }
 }

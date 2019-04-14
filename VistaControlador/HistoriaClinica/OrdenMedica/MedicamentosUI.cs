@@ -13,6 +13,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 {
     public partial class MedicamentosUI : Form
     {
+        public bool edicion = false;
         public OrdenClinicaMedicamento medicamentos { get; set; }
         public MedicamentosUI()
         {
@@ -25,16 +26,17 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         }
         void inicializarForm()
         {
-            dgvMedicamentos.Columns["Descripcion"].DataPropertyName = "descripcion";
-            dgvMedicamentos.Columns["concentracion"].DataPropertyName = "concentracion";
-            dgvMedicamentos.AutoGenerateColumns = false;
-            dgvMedicamentos.ReadOnly = true;
+           
+        }
+        public void enlazarDgv()
+        {
             if (medicamentos != null)
             {
-                medicamentos.tblMedicamentos.Rows.Add();
+                dgvMedicamentos.AutoGenerateColumns = false;
+                dgvMedicamentos.Columns["Descripcion"].DataPropertyName = "descripcion";
+                dgvMedicamentos.Columns["concentracion"].DataPropertyName = "concentracion";
                 dgvMedicamentos.DataSource = medicamentos.tblMedicamentos;
             }
-            
         }
     }
 }
