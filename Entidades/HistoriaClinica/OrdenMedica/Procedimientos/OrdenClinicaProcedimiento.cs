@@ -17,6 +17,7 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica.Procedimientos
             tblProcedimientos.Columns.Add("cups", Type.GetType("System.String"));
             tblProcedimientos.Columns.Add("Cantidad", Type.GetType("System.Int32"));
             tblProcedimientos.Columns.Add("descripcion", Type.GetType("System.String"));
+            tblProcedimientos.Columns.Add("Observacion", Type.GetType("System.String"));
             tblProcedimientos.Columns["Cantidad"].DefaultValue = 0;
         }
     }

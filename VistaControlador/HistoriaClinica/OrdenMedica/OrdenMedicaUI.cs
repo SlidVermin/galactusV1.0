@@ -96,6 +96,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         {
             GeneralC.fnModificarForm(this, tstMenuOrdenMedica, tsBtGuardar, tsBtCancelar);
             txtBCodigoOrden.ReadOnly = true;
+            ordenClinica.agregarFila();
             activarEdicion();
         }
         private void tsBtGuardar_Click(object sender, EventArgs e)
@@ -155,11 +156,11 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 Mensajes.mensajeFaltaInformacion("La fecha no es valida!");
                 return false;
             }
-            else if (String.IsNullOrWhiteSpace(ordenClinica.indicacion.indicacion))
-            {
-                Mensajes.mensajeFaltaInformacion("Debe colocar Una indicacion!");
-                return false;
-            }
+            //else if (String.IsNullOrWhiteSpace(ordenClinica.indicacion.indicacion))
+            //{
+            //    Mensajes.mensajeFaltaInformacion("Debe colocar Una indicacion!");
+            //    return false;
+            //}
             else if (ordenClinica.procedimiento.tblProcedimientos.Select("Cantidad = 0").Count() > 1)
             {
                 Mensajes.mensajeFaltaInformacion("Debe colocar la cantidad correcta a cada procedimiento!");
@@ -189,6 +190,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 indicaciones.indicacion = ordenClinica.indicacion;
                 indicaciones.visualizarIndicacionCargada();
 
+                procedimientos.procedimientos.tblProcedimientos.Clear();
+                procedimientos.procedimientos.tblProcedimientos = tablasResultados.Tables["Table1"].Copy();
+                procedimientos.enlazarDgv();
                 GeneralC.posBuscar(this, tstMenuOrdenMedica, tsBtNuevo, tsBtBuscar, tsBtModificar, tsBtAnular);
             }
         }

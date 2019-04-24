@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcedimientosUI));
             this.panel1 = new System.Windows.Forms.Panel();
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
@@ -108,7 +108,6 @@
             this.justificacion,
             this.Agregar,
             this.anulardiagevoN});
-            this.dgvProcedimientos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProcedimientos.Location = new System.Drawing.Point(3, 18);
             this.dgvProcedimientos.MultiSelect = false;
             this.dgvProcedimientos.Name = "dgvProcedimientos";
@@ -116,7 +115,10 @@
             this.dgvProcedimientos.RowHeadersVisible = false;
             this.dgvProcedimientos.Size = new System.Drawing.Size(877, 227);
             this.dgvProcedimientos.TabIndex = 2;
+            this.dgvProcedimientos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellClick);
             this.dgvProcedimientos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellContentClick);
+            this.dgvProcedimientos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellEndEdit);
+            this.dgvProcedimientos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellEnter);
             // 
             // dataGridViewImageColumn1
             // 
@@ -136,8 +138,9 @@
             // cantidad
             // 
             this.cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.cantidad.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.NullValue = "0";
+            this.cantidad.DefaultCellStyle = dataGridViewCellStyle1;
             this.cantidad.HeaderText = "Cantidad";
             this.cantidad.Name = "cantidad";
             this.cantidad.ReadOnly = true;

@@ -35,6 +35,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 dgvProcedimientos.AutoGenerateColumns = false;
                 dgvProcedimientos.Columns["descripcion"].DataPropertyName = "descripcion";
                 dgvProcedimientos.Columns["cantidad"].DataPropertyName = "cantidad";
+                dgvProcedimientos.Columns["justificacion"].DataPropertyName = "Observacion";
                 dgvProcedimientos.DataSource = procedimientos.tblProcedimientos;
             }
           
@@ -50,7 +51,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         }
         private void dgvProcedimientos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvProcedimientos.Columns["agregar"].Index == e.ColumnIndex & edicion)
+            if (dgvProcedimientos.Columns["agregar"].Index == e.ColumnIndex & edicion & e.RowIndex == dgvProcedimientos.Rows.Count-1)
             {
                 try
                 {
@@ -90,6 +91,47 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 }
             }
 
+        }
+
+        private void dgvProcedimientos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            habilitarCeldas(e, dgvProcedimientos, "cantidad");
+        }
+        private void dgvProcedimientos_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            habilitarCeldas(e, dgvProcedimientos, "cantidad");
+        }
+        void habilitarCeldas(DataGridViewCellEventArgs e, DataGridView dgv,string columna) {
+            dgvProcedimientos.ReadOnly = true;
+            if (dgvProcedimientos.Rows.Count > 0 && e.RowIndex >= 0)
+            {
+                dgvProcedimientos.ReadOnly = false;
+                if (e.ColumnIndex == dgv.Columns[columna].Index && edicion && desactvarUltimaFila(e.RowIndex))
+                {
+                    dgv.Rows[e.RowIndex].Cells[columna].ReadOnly = false;
+                }
+                else
+                {
+                    dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = true;
+                }
+            }
+            
+        }
+        bool desactvarUltimaFila(int filaActual)
+        {
+            if (filaActual < dgvProcedimientos.RowCount - 1)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void dgvProcedimientos_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (string.IsNullOrEmpty(dgvProcedimientos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()))
+            {
+                dgvProcedimientos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = 0;
+            }
         }
     }
 }

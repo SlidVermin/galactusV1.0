@@ -29,10 +29,13 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica
             indicacion.indicacion = string.Empty;
             medicamento.tblMedicamentos.Clear();
             procedimiento.tblProcedimientos.Clear();
+            agregarFila();
 
+            
+        }
+        public void agregarFila() {
             medicamento.tblMedicamentos.Rows.Add();
             procedimiento.tblProcedimientos.Rows.Add();
         }
-      
     }
 }
