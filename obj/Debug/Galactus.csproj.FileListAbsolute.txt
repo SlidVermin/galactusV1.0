@@ -110,3 +110,17 @@ C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Gala
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.Inventario.ProductoUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.PrincipalUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.csproj.GenerateResource.Cache
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.EnfermeriaUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.GlucometriasUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.HemoderivadosUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.InsumosUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.NotasUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.ParaclinicosUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EvolucionMedica.AnalisisUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EvolucionMedica.EvolucionMedicaUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EvolucionMedica.ExamenFisicoEvoUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EvolucionMedica.InterpretacionUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EvolucionMedica.ProblemasUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.FichaEnfermeriaUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.OrdenMedica.OrdenMedicaUI.resources
+C:\Adrian\Proyectos\Galactus\obj\Debug\Galactus.VistaControlador.HistoriaClinica.SabanaEnfermeriaUI.resources
