@@ -38,7 +38,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 dgvProcedimientos.Columns["justificacion"].DataPropertyName = "Observacion";
                 dgvProcedimientos.DataSource = procedimientos.tblProcedimientos;
             }
-          
+
         }
         void cargarProcedimiento(DataRow filaResultado)
         {
@@ -49,64 +49,74 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             filas[cantidad]["descripcion"] = filaResultado.Field<string>("Descripción");
             filas.Add();
         }
-        private void dgvProcedimientos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProcedimientos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvProcedimientos.Columns["agregar"].Index == e.ColumnIndex & edicion & e.RowIndex == dgvProcedimientos.Rows.Count-1)
+            if (verificarUbicacionCelda(e, dgvProcedimientos, "cantidad"))
             {
-                try
+                habilitarCeldas(e, dgvProcedimientos, "cantidad");
+            }
+            else if (edicion)
+            {
+                if (verificarUbicacionCelda(e, dgvProcedimientos, "anularProcedimiento") & e.RowIndex < dgvProcedimientos.Rows.Count - 1)
                 {
-                   List<string> parametros = new List<string>();
-
-                    DataTable tablaParametros = new DataTable();
-                    DataTable tablasSeleccionado = new DataTable();
-
-                    tablaParametros.Columns.Add("Parametro",Type.GetType("System.Object"));
-                    tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
-
-                    object[] myObjArray = { "@idAtencion", idAtencion  };
-                    object[] myObjArray1 = { "@filtro", "" };
-
-                    DataView view = new DataView(procedimientos.tblProcedimientos);
-
-                    tablasSeleccionado = view.ToTable(true, new string[] { "idProcedimiento" }).Copy();
-                    tablasSeleccionado.Columns.Add("valor");
-                    object[] myObjArray2 = { "@tabla", tablasSeleccionado };
-
-                    tablaParametros.Rows.Add(myObjArray);
-                    tablaParametros.Rows.Add(myObjArray1);
-                    tablaParametros.Rows.Add(myObjArray2);
-
-                    GeneralC.buscarDevuelveFila(Sentencias.ORDEN_CLINICA_BUSCAR_PROCEDIMIENTOS,
-                                                parametros,
-                                                new GeneralC.cargarInfoFila(cargarProcedimiento),
-                                                Mensajes.BUSQUEDA_PROCEDIMIENTOS,
-                                                true,
-                                                null,
-                                                tablasSeleccionado,
-                                                tablaParametros);
+                    if (MessageBox.Show("¿ Desea quitar el procedimiento ?", "", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        dgvProcedimientos.Rows.RemoveAt(e.RowIndex);
+                    }
                 }
-                catch (Exception ex)
+                else if (verificarUbicacionCelda(e, dgvProcedimientos, "agregar") & e.RowIndex == dgvProcedimientos.Rows.Count - 1)
                 {
-                    MessageBox.Show(ex.Message);
+                    try
+                    {
+                        List<string> parametros = new List<string>();
+
+                        DataTable tablaParametros = new DataTable();
+                        DataTable tablasSeleccionado = new DataTable();
+
+                        tablaParametros.Columns.Add("Parametro", Type.GetType("System.Object"));
+                        tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
+
+                        object[] myObjArray = { "@idAtencion", idAtencion };
+                        object[] myObjArray1 = { "@filtro", "" };
+
+                        DataView view = new DataView(procedimientos.tblProcedimientos);
+
+                        tablasSeleccionado = view.ToTable(true, new string[] { "idProcedimiento" }).Copy();
+                        tablasSeleccionado.Columns.Add("valor");
+                        object[] myObjArray2 = { "@tabla", tablasSeleccionado };
+
+                        tablaParametros.Rows.Add(myObjArray);
+                        tablaParametros.Rows.Add(myObjArray1);
+                        tablaParametros.Rows.Add(myObjArray2);
+
+                        GeneralC.buscarDevuelveFila(Sentencias.ORDEN_CLINICA_BUSCAR_PROCEDIMIENTOS,
+                                                    parametros,
+                                                    new GeneralC.cargarInfoFila(cargarProcedimiento),
+                                                    Mensajes.BUSQUEDA_PROCEDIMIENTOS,
+                                                    true,
+                                                    null,
+                                                    tablasSeleccionado,
+                                                    tablaParametros);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
 
-        }
-
-        private void dgvProcedimientos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            habilitarCeldas(e, dgvProcedimientos, "cantidad");
         }
         private void dgvProcedimientos_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             habilitarCeldas(e, dgvProcedimientos, "cantidad");
         }
-        void habilitarCeldas(DataGridViewCellEventArgs e, DataGridView dgv,string columna) {
+        void habilitarCeldas(DataGridViewCellEventArgs e, DataGridView dgv, string columna)
+        {
             dgvProcedimientos.ReadOnly = true;
             if (dgvProcedimientos.Rows.Count > 0 && e.RowIndex >= 0)
             {
                 dgvProcedimientos.ReadOnly = false;
-                if (e.ColumnIndex == dgv.Columns[columna].Index && edicion && desactvarUltimaFila(e.RowIndex))
+                if (verificarUbicacionCelda(e, dgv, columna) && edicion && desactvarUltimaFila(e.RowIndex))
                 {
                     dgv.Rows[e.RowIndex].Cells[columna].ReadOnly = false;
                 }
@@ -115,7 +125,11 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = true;
                 }
             }
-            
+
+        }
+        public bool verificarUbicacionCelda(DataGridViewCellEventArgs e, DataGridView dgv, string columna)
+        {
+            return e.ColumnIndex == dgv.Columns[columna].Index;
         }
         bool desactvarUltimaFila(int filaActual)
         {
