@@ -34,6 +34,8 @@ namespace Galactus.Util.Mensajes
         public const string BUSQUEDA_CONTRATO_EPS = "Busqueda contrato eps";
         public const string BUSQUEDA_AREA = "Busqueda area";
         public const string BUSCAR_EVOLUCION = "Busqueda de evoluciones medicas";
+        public const string BUSCAR_ORDEN = "Busqueda de orden medicas";
+        public const string BUQEDA_INSUMOS = "Busqueda insumos";
         #region "Historia Clinica"
         public const string BUSQUEDA_ORDENES_MEDICAS = "Busqueda Ordenes";
         public const string BUSQUEDA_PROCEDIMIENTOS = "Busqueda procedimientos";

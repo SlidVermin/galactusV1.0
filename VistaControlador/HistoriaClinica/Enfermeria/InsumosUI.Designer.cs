@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
-            this.dgvDiagnostico = new System.Windows.Forms.DataGridView();
-            this.dgId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvInsumos = new System.Windows.Forms.DataGridView();
             this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgAgregar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgQuitar = new System.Windows.Forms.DataGridViewImageColumn();
             this.GroupBox17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnostico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox17
             // 
-            this.GroupBox17.Controls.Add(this.dgvDiagnostico);
+            this.GroupBox17.Controls.Add(this.dgvInsumos);
             this.GroupBox17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 5);
@@ -51,42 +51,35 @@
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Insumos";
             // 
-            // dgvDiagnostico
+            // dgvInsumos
             // 
-            this.dgvDiagnostico.AllowUserToAddRows = false;
-            this.dgvDiagnostico.AllowUserToDeleteRows = false;
-            this.dgvDiagnostico.AllowUserToResizeColumns = false;
-            this.dgvDiagnostico.AllowUserToResizeRows = false;
-            this.dgvDiagnostico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvDiagnostico.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvDiagnostico.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvDiagnostico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDiagnostico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgId,
+            this.dgvInsumos.AllowUserToAddRows = false;
+            this.dgvInsumos.AllowUserToDeleteRows = false;
+            this.dgvInsumos.AllowUserToResizeColumns = false;
+            this.dgvInsumos.AllowUserToResizeRows = false;
+            this.dgvInsumos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvInsumos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvInsumos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvInsumos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInsumos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgCodigo,
             this.dgDescripcion,
+            this.dgCantidad,
             this.dgAgregar,
             this.dgQuitar});
-            this.dgvDiagnostico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDiagnostico.Location = new System.Drawing.Point(3, 21);
-            this.dgvDiagnostico.MultiSelect = false;
-            this.dgvDiagnostico.Name = "dgvDiagnostico";
-            this.dgvDiagnostico.ReadOnly = true;
-            this.dgvDiagnostico.RowHeadersVisible = false;
-            this.dgvDiagnostico.ShowCellErrors = false;
-            this.dgvDiagnostico.ShowCellToolTips = false;
-            this.dgvDiagnostico.ShowEditingIcon = false;
-            this.dgvDiagnostico.ShowRowErrors = false;
-            this.dgvDiagnostico.Size = new System.Drawing.Size(970, 250);
-            this.dgvDiagnostico.TabIndex = 2;
-            // 
-            // dgId
-            // 
-            this.dgId.HeaderText = "Id";
-            this.dgId.Name = "dgId";
-            this.dgId.ReadOnly = true;
-            this.dgId.Visible = false;
-            this.dgId.Width = 26;
+            this.dgvInsumos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvInsumos.Location = new System.Drawing.Point(3, 21);
+            this.dgvInsumos.MultiSelect = false;
+            this.dgvInsumos.Name = "dgvInsumos";
+            this.dgvInsumos.ReadOnly = true;
+            this.dgvInsumos.RowHeadersVisible = false;
+            this.dgvInsumos.ShowCellErrors = false;
+            this.dgvInsumos.ShowCellToolTips = false;
+            this.dgvInsumos.ShowEditingIcon = false;
+            this.dgvInsumos.ShowRowErrors = false;
+            this.dgvInsumos.Size = new System.Drawing.Size(970, 250);
+            this.dgvInsumos.TabIndex = 2;
+            this.dgvInsumos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInsumos_CellContentClick);
             // 
             // dgCodigo
             // 
@@ -97,10 +90,17 @@
             // 
             // dgDescripcion
             // 
+            this.dgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dgDescripcion.HeaderText = "Descripcion";
             this.dgDescripcion.Name = "dgDescripcion";
             this.dgDescripcion.ReadOnly = true;
-            this.dgDescripcion.Width = 105;
+            // 
+            // dgCantidad
+            // 
+            this.dgCantidad.HeaderText = "Cantidad";
+            this.dgCantidad.Name = "dgCantidad";
+            this.dgCantidad.ReadOnly = true;
+            this.dgCantidad.Width = 88;
             // 
             // dgAgregar
             // 
@@ -129,8 +129,9 @@
             this.MinimumSize = new System.Drawing.Size(986, 291);
             this.Name = "InsumosUI";
             this.Text = "InsumosUI";
+            this.Load += new System.EventHandler(this.InsumosUI_Load);
             this.GroupBox17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnostico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInsumos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,10 +139,10 @@
         #endregion
 
         internal System.Windows.Forms.GroupBox GroupBox17;
-        internal System.Windows.Forms.DataGridView dgvDiagnostico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgId;
+        internal System.Windows.Forms.DataGridView dgvInsumos;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgCantidad;
         private System.Windows.Forms.DataGridViewImageColumn dgAgregar;
         private System.Windows.Forms.DataGridViewImageColumn dgQuitar;
     }
