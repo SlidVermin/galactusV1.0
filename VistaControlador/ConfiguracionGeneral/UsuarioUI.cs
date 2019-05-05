@@ -166,5 +166,10 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             }
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -41,7 +41,7 @@ namespace Galactus.VistaControlador.Inventario
         }
         void cargarBodega(DataRow fila)
         {
-            txtBCodigo.Text = fila.Field<int>(0).ToString();
+            txtCodigo.Text = fila.Field<int>(0).ToString();
             txtDescripcion.Text = fila.Field<string>(1);
             GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular);
         }
@@ -53,14 +53,14 @@ namespace Galactus.VistaControlador.Inventario
             {
                 if (MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    bodega.idBodega = (txtBCodigo.Text.Equals(String.Empty) ? 0 : int.Parse(txtBCodigo.Text));
+                    bodega.idBodega = (txtCodigo.Text.Equals(String.Empty) ? 0 : int.Parse(txtCodigo.Text));
                     bodega.descripcion = txtDescripcion.Text;
 
                     try
                     {
                         BodegaDAL.guardar(bodega);
                         GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
-                        txtBCodigo.Text = bodega.idBodega.ToString();
+                        txtCodigo.Text = bodega.idBodega.ToString();
                     }
                     catch (Exception ex)
                     {

@@ -28,390 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.inconsistenciasGridView = new System.Windows.Forms.DataGridView();
-            this.codigoCIECOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quitarAnularCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label8 = new System.Windows.Forms.Label();
-            this.observacionText = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.infoInconsRB = new System.Windows.Forms.RadioButton();
-            this.usuarioInexistenteRB = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.registroText = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.ordenText = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tipoInformeAnexoText = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.epsText = new System.Windows.Forms.TextBox();
-            this.pacienteText = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.nSolicitudCodText = new System.Windows.Forms.TextBox();
-            this.NSolicitudText = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.NRegistroText = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tstModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inconsistenciasGridView)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.tstModificar = new System.Windows.Forms.ToolStripButton();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
+            this.txtEps = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtContador = new System.Windows.Forms.TextBox();
+            this.txtSolicitud = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPaciente = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtIdentificacion = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtAtencion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtObservacion = new System.Windows.Forms.RichTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbCiudad = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbDepartamento = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbPais = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btInstitucion = new System.Windows.Forms.Button();
+            this.txtInstitucion = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.tstMenuPatron.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "INFORME DE ATENCIÓN INICIAL DE URGENCIA";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.tstMenuPatron);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.observacionText);
-            this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 68);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(817, 448);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.inconsistenciasGridView);
-            this.groupBox3.Location = new System.Drawing.Point(6, 219);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(805, 145);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Información de posibles inconsistencias";
-            // 
-            // inconsistenciasGridView
-            // 
-            this.inconsistenciasGridView.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.inconsistenciasGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.inconsistenciasGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.inconsistenciasGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigoCIECOL,
-            this.descripcionDiagCol,
-            this.observacionDiagCol,
-            this.quitarAnularCol});
-            this.inconsistenciasGridView.GridColor = System.Drawing.Color.DarkGray;
-            this.inconsistenciasGridView.Location = new System.Drawing.Point(9, 19);
-            this.inconsistenciasGridView.MultiSelect = false;
-            this.inconsistenciasGridView.Name = "inconsistenciasGridView";
-            this.inconsistenciasGridView.ReadOnly = true;
-            this.inconsistenciasGridView.Size = new System.Drawing.Size(790, 120);
-            this.inconsistenciasGridView.TabIndex = 1;
-            // 
-            // codigoCIECOL
-            // 
-            this.codigoCIECOL.HeaderText = "Descripción";
-            this.codigoCIECOL.Name = "codigoCIECOL";
-            this.codigoCIECOL.ReadOnly = true;
-            this.codigoCIECOL.Width = 170;
-            // 
-            // descripcionDiagCol
-            // 
-            this.descripcionDiagCol.HeaderText = "Seleccionar";
-            this.descripcionDiagCol.Name = "descripcionDiagCol";
-            this.descripcionDiagCol.ReadOnly = true;
-            this.descripcionDiagCol.Width = 170;
-            // 
-            // observacionDiagCol
-            // 
-            this.observacionDiagCol.HeaderText = "Datos según documentos";
-            this.observacionDiagCol.Name = "observacionDiagCol";
-            this.observacionDiagCol.ReadOnly = true;
-            this.observacionDiagCol.Width = 230;
-            // 
-            // quitarAnularCol
-            // 
-            this.quitarAnularCol.HeaderText = "Datos base de datos";
-            this.quitarAnularCol.Name = "quitarAnularCol";
-            this.quitarAnularCol.ReadOnly = true;
-            this.quitarAnularCol.Width = 170;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(7, 367);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Observación";
-            // 
-            // observacionText
-            // 
-            this.observacionText.Location = new System.Drawing.Point(7, 383);
-            this.observacionText.Multiline = true;
-            this.observacionText.Name = "observacionText";
-            this.observacionText.Size = new System.Drawing.Size(817, 59);
-            this.observacionText.TabIndex = 5;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.infoInconsRB);
-            this.groupBox4.Controls.Add(this.usuarioInexistenteRB);
-            this.groupBox4.Location = new System.Drawing.Point(6, 153);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(805, 60);
-            this.groupBox4.TabIndex = 2;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Tipo servicio solicitado";
-            // 
-            // infoInconsRB
-            // 
-            this.infoInconsRB.AutoSize = true;
-            this.infoInconsRB.Location = new System.Drawing.Point(154, 28);
-            this.infoInconsRB.Name = "infoInconsRB";
-            this.infoInconsRB.Size = new System.Drawing.Size(145, 17);
-            this.infoInconsRB.TabIndex = 4;
-            this.infoInconsRB.TabStop = true;
-            this.infoInconsRB.Text = "Información inconsistente";
-            this.infoInconsRB.UseVisualStyleBackColor = true;
-            // 
-            // usuarioInexistenteRB
-            // 
-            this.usuarioInexistenteRB.AutoSize = true;
-            this.usuarioInexistenteRB.Location = new System.Drawing.Point(9, 28);
-            this.usuarioInexistenteRB.Name = "usuarioInexistenteRB";
-            this.usuarioInexistenteRB.Size = new System.Drawing.Size(114, 17);
-            this.usuarioInexistenteRB.TabIndex = 3;
-            this.usuarioInexistenteRB.TabStop = true;
-            this.usuarioInexistenteRB.Text = "Usuario inexistente";
-            this.usuarioInexistenteRB.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.registroText);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.ordenText);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.tipoInformeAnexoText);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.epsText);
-            this.groupBox2.Controls.Add(this.pacienteText);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.nSolicitudCodText);
-            this.groupBox2.Controls.Add(this.NSolicitudText);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.NRegistroText);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(6, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(805, 125);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos Básicos";
-            // 
-            // registroText
-            // 
-            this.registroText.Location = new System.Drawing.Point(545, 88);
-            this.registroText.Name = "registroText";
-            this.registroText.Size = new System.Drawing.Size(74, 20);
-            this.registroText.TabIndex = 17;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(490, 91);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 13);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Registro:";
-            // 
-            // ordenText
-            // 
-            this.ordenText.Location = new System.Drawing.Point(396, 88);
-            this.ordenText.Name = "ordenText";
-            this.ordenText.Size = new System.Drawing.Size(74, 20);
-            this.ordenText.TabIndex = 15;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(341, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Orden:";
-            // 
-            // tipoInformeAnexoText
-            // 
-            this.tipoInformeAnexoText.Location = new System.Drawing.Point(112, 88);
-            this.tipoInformeAnexoText.Name = "tipoInformeAnexoText";
-            this.tipoInformeAnexoText.Size = new System.Drawing.Size(177, 20);
-            this.tipoInformeAnexoText.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Tipo informe anexo:";
-            // 
-            // epsText
-            // 
-            this.epsText.Location = new System.Drawing.Point(396, 56);
-            this.epsText.Name = "epsText";
-            this.epsText.Size = new System.Drawing.Size(335, 20);
-            this.epsText.TabIndex = 11;
-            // 
-            // pacienteText
-            // 
-            this.pacienteText.Location = new System.Drawing.Point(396, 27);
-            this.pacienteText.Name = "pacienteText";
-            this.pacienteText.Size = new System.Drawing.Size(335, 20);
-            this.pacienteText.TabIndex = 10;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(341, 59);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Contrato:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(338, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Paciente:";
-            // 
-            // nSolicitudCodText
-            // 
-            this.nSolicitudCodText.Location = new System.Drawing.Point(260, 56);
-            this.nSolicitudCodText.Name = "nSolicitudCodText";
-            this.nSolicitudCodText.Size = new System.Drawing.Size(29, 20);
-            this.nSolicitudCodText.TabIndex = 7;
-            // 
-            // NSolicitudText
-            // 
-            this.NSolicitudText.Location = new System.Drawing.Point(112, 56);
-            this.NSolicitudText.Name = "NSolicitudText";
-            this.NSolicitudText.Size = new System.Drawing.Size(138, 20);
-            this.NSolicitudText.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "N° Solicitud";
-            // 
-            // NRegistroText
-            // 
-            this.NRegistroText.Location = new System.Drawing.Point(112, 27);
-            this.NRegistroText.Name = "NRegistroText";
-            this.NRegistroText.Size = new System.Drawing.Size(138, 20);
-            this.NRegistroText.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Identificación:";
-            // 
-            // tstMenuPatron
-            // 
-            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tstModificar,
-            this.tsbGuardar,
-            this.tsbBuscar,
-            this.tsbAnular,
-            this.tsbCancelar});
-            this.tstMenuPatron.Location = new System.Drawing.Point(3, 420);
-            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.Name = "tstMenuPatron";
-            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.TabIndex = 49;
-            this.tstMenuPatron.Text = "toolStrip1";
-            // 
-            // tsbNuevo
-            // 
-            this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
-            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tsbNuevo.Text = "Nuevo";
-            // 
-            // tstModificar
-            // 
-            this.tstModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tstModificar.Image = global::Galactus.Properties.Resources.bt_Editar;
-            this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstModificar.Name = "tstModificar";
-            this.tstModificar.Size = new System.Drawing.Size(57, 22);
-            this.tstModificar.Text = "Modificar";
-            // 
-            // tsbGuardar
-            // 
-            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tsbGuardar.Text = "Guardar";
-            // 
-            // tsbBuscar
-            // 
-            this.tsbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
-            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbBuscar.Name = "tsbBuscar";
-            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tsbBuscar.Text = "Buscar";
             // 
             // tsbAnular
             // 
@@ -423,6 +88,16 @@
             this.tsbAnular.Size = new System.Drawing.Size(62, 22);
             this.tsbAnular.Text = "Anular";
             // 
+            // tsbGuardar
+            // 
+            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
+            // 
             // tsbCancelar
             // 
             this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -433,26 +108,433 @@
             this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
             this.tsbCancelar.Text = "Cancelar";
             // 
+            // tstModificar
+            // 
+            this.tstModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tstModificar.Image = global::Galactus.Properties.Resources.bt_Editar;
+            this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstModificar.Name = "tstModificar";
+            this.tstModificar.Size = new System.Drawing.Size(78, 22);
+            this.tstModificar.Text = "Modificar";
+            // 
+            // tsbNuevo
+            // 
+            this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
+            // 
+            // tstMenuPatron
+            // 
+            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tstModificar,
+            this.tsbCancelar,
+            this.tsbGuardar,
+            this.tsbBuscar,
+            this.tsbAnular});
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 501);
+            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.Name = "tstMenuPatron";
+            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.TabIndex = 63;
+            this.tstMenuPatron.Text = "toolStrip1";
+            // 
+            // tsbBuscar
+            // 
+            this.tsbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscar.Text = "Buscar";
+            // 
+            // txtEps
+            // 
+            this.txtEps.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEps.Location = new System.Drawing.Point(396, 34);
+            this.txtEps.Name = "txtEps";
+            this.txtEps.Size = new System.Drawing.Size(505, 21);
+            this.txtEps.TabIndex = 53;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(9, 99);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 20);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Otros datos";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(9, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Datos principales";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txtEps);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.txtContador);
+            this.panel2.Controls.Add(this.txtSolicitud);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.txtPaciente);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.txtIdentificacion);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.txtAtencion);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtCodigo);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(13, 30);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(906, 64);
+            this.panel2.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(356, 36);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 15);
+            this.label8.TabIndex = 52;
+            this.label8.Text = "EPS:";
+            // 
+            // txtContador
+            // 
+            this.txtContador.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContador.Location = new System.Drawing.Point(263, 33);
+            this.txtContador.Name = "txtContador";
+            this.txtContador.Size = new System.Drawing.Size(73, 21);
+            this.txtContador.TabIndex = 51;
+            // 
+            // txtSolicitud
+            // 
+            this.txtSolicitud.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSolicitud.Location = new System.Drawing.Point(134, 33);
+            this.txtSolicitud.Name = "txtSolicitud";
+            this.txtSolicitud.Size = new System.Drawing.Size(123, 21);
+            this.txtSolicitud.TabIndex = 50;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(10, 37);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(121, 15);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Numero de solicitud:";
+            // 
+            // txtPaciente
+            // 
+            this.txtPaciente.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaciente.Location = new System.Drawing.Point(633, 3);
+            this.txtPaciente.Name = "txtPaciente";
+            this.txtPaciente.Size = new System.Drawing.Size(268, 21);
+            this.txtPaciente.TabIndex = 48;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(569, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 15);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "Paciente:";
+            // 
+            // txtIdentificacion
+            // 
+            this.txtIdentificacion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdentificacion.Location = new System.Drawing.Point(443, 3);
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Size = new System.Drawing.Size(121, 21);
+            this.txtIdentificacion.TabIndex = 46;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(356, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 15);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Identificación:";
+            // 
+            // txtAtencion
+            // 
+            this.txtAtencion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAtencion.Location = new System.Drawing.Point(254, 4);
+            this.txtAtencion.Name = "txtAtencion";
+            this.txtAtencion.Size = new System.Drawing.Size(82, 21);
+            this.txtAtencion.TabIndex = 44;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(192, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "Atencion:";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(102, 5);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(82, 21);
+            this.txtCodigo.TabIndex = 42;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(10, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 15);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Código anexo:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(15, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(934, 453);
+            this.panel1.TabIndex = 62;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.label15);
+            this.panel3.Controls.Add(this.txtInstitucion);
+            this.panel3.Controls.Add(this.btInstitucion);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.cbCiudad);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.cbDepartamento);
+            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.cbPais);
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Location = new System.Drawing.Point(13, 122);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(906, 66);
+            this.panel3.TabIndex = 7;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(928, 3);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(26, 24);
+            this.btnSalir.TabIndex = 61;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F);
+            this.label1.Location = new System.Drawing.Point(58, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(277, 18);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Informacion de atencion incial urgencia";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Galactus.Properties.Resources.curriculum__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 34);
+            this.pictureBox1.TabIndex = 59;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.txtObservacion);
+            this.panel5.Location = new System.Drawing.Point(13, 215);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(906, 228);
+            this.panel5.TabIndex = 10;
+            // 
+            // txtObservacion
+            // 
+            this.txtObservacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtObservacion.Location = new System.Drawing.Point(0, 0);
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.Size = new System.Drawing.Size(904, 226);
+            this.txtObservacion.TabIndex = 0;
+            this.txtObservacion.Text = "";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(15, 192);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 20);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Observación";
+            // 
+            // cbCiudad
+            // 
+            this.cbCiudad.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCiudad.FormattingEnabled = true;
+            this.cbCiudad.Location = new System.Drawing.Point(735, 2);
+            this.cbCiudad.Name = "cbCiudad";
+            this.cbCiudad.Size = new System.Drawing.Size(161, 23);
+            this.cbCiudad.TabIndex = 75;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(678, 6);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 15);
+            this.label10.TabIndex = 74;
+            this.label10.Text = "Ciudad:";
+            // 
+            // cbDepartamento
+            // 
+            this.cbDepartamento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDepartamento.FormattingEnabled = true;
+            this.cbDepartamento.Location = new System.Drawing.Point(413, 3);
+            this.cbDepartamento.Name = "cbDepartamento";
+            this.cbDepartamento.Size = new System.Drawing.Size(167, 23);
+            this.cbDepartamento.TabIndex = 73;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(320, 6);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 15);
+            this.label12.TabIndex = 72;
+            this.label12.Text = "Departamento:";
+            // 
+            // cbPais
+            // 
+            this.cbPais.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPais.FormattingEnabled = true;
+            this.cbPais.Location = new System.Drawing.Point(59, 3);
+            this.cbPais.Name = "cbPais";
+            this.cbPais.Size = new System.Drawing.Size(161, 23);
+            this.cbPais.TabIndex = 71;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(3, 7);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(35, 15);
+            this.label13.TabIndex = 70;
+            this.label13.Text = "País:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 36);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(63, 15);
+            this.label14.TabIndex = 76;
+            this.label14.Text = "Institución";
+            // 
+            // btInstitucion
+            // 
+            this.btInstitucion.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btInstitucion.Location = new System.Drawing.Point(557, 30);
+            this.btInstitucion.Name = "btInstitucion";
+            this.btInstitucion.Size = new System.Drawing.Size(24, 23);
+            this.btInstitucion.TabIndex = 86;
+            this.btInstitucion.UseVisualStyleBackColor = true;
+            // 
+            // txtInstitucion
+            // 
+            this.txtInstitucion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInstitucion.Location = new System.Drawing.Point(72, 31);
+            this.txtInstitucion.Name = "txtInstitucion";
+            this.txtInstitucion.Size = new System.Drawing.Size(479, 21);
+            this.txtInstitucion.TabIndex = 87;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(735, 30);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(161, 23);
+            this.comboBox1.TabIndex = 89;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(668, 34);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(63, 15);
+            this.label15.TabIndex = 88;
+            this.label15.Text = "Concepto:";
+            // 
             // Anexo2UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(848, 555);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(969, 526);
+            this.Controls.Add(this.tstMenuPatron);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(969, 526);
+            this.MinimumSize = new System.Drawing.Size(969, 526);
             this.Name = "Anexo2UI";
             this.Text = "Anexo2UI";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.inconsistenciasGridView)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Load += new System.EventHandler(this.Anexo2UI_Load);
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,41 +542,47 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton infoInconsRB;
-        private System.Windows.Forms.RadioButton usuarioInexistenteRB;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox epsText;
-        private System.Windows.Forms.TextBox pacienteText;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox nSolicitudCodText;
-        private System.Windows.Forms.TextBox NSolicitudText;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox NRegistroText;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox registroText;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox ordenText;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tipoInformeAnexoText;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox observacionText;
-        private System.Windows.Forms.DataGridView inconsistenciasGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoCIECOL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDiagCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observacionDiagCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quitarAnularCol;
-        private System.Windows.Forms.ToolStrip tstMenuPatron;
-        private System.Windows.Forms.ToolStripButton tsbNuevo;
-        private System.Windows.Forms.ToolStripButton tstModificar;
-        private System.Windows.Forms.ToolStripButton tsbGuardar;
-        private System.Windows.Forms.ToolStripButton tsbBuscar;
         private System.Windows.Forms.ToolStripButton tsbAnular;
+        private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbCancelar;
+        private System.Windows.Forms.ToolStripButton tstModificar;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStrip tstMenuPatron;
+        private System.Windows.Forms.ToolStripButton tsbBuscar;
+        private System.Windows.Forms.TextBox txtEps;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtContador;
+        private System.Windows.Forms.TextBox txtSolicitud;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtPaciente;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtIdentificacion;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtAtencion;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.RichTextBox txtObservacion;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbCiudad;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cbDepartamento;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cbPais;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtInstitucion;
+        private System.Windows.Forms.Button btInstitucion;
     }
 }

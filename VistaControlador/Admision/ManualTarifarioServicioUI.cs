@@ -200,5 +200,20 @@ namespace Galactus.VistaControlador.Admision
             tsbBuscarSoat.Enabled = true;
             tsbBuscarIss.Enabled = true;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtCodigoManual_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

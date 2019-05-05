@@ -21,5 +21,10 @@ namespace Galactus.VistaControlador.Admision
         {
 
         }
+
+        private void Anexo2UI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

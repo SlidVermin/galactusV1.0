@@ -46,5 +46,15 @@ namespace Galactus.VistaControlador.Gestion
         {
 
         }
+
+        private void tsbGuardar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlInformacion_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

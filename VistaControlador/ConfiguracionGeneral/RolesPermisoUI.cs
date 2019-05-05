@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Galactus.VistaControlador.HistoriaClinica
+namespace Galactus.VistaControlador.ConfiguracionGeneral
 {
-    public partial class SolicitudMedicamentoNoPosUI : Form
+    public partial class RolesPermisoUI : Form
     {
-        public SolicitudMedicamentoNoPosUI()
+        public RolesPermisoUI()
         {
             InitializeComponent();
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

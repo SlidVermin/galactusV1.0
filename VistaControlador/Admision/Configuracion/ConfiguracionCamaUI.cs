@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Galactus.VistaControlador.HistoriaClinica
+namespace Galactus.VistaControlador.Admision.Configuracion
 {
-    public partial class SolicitudMedicamentoNoPosUI : Form
+    public partial class ConfiguracionCamaUI : Form
     {
-        public SolicitudMedicamentoNoPosUI()
+        public ConfiguracionCamaUI()
         {
             InitializeComponent();
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
