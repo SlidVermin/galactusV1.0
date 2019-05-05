@@ -31,11 +31,11 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void cbPais_SelectedValueChanged(object sender, EventArgs e)
         {
-            GeneralC.llenarComboDependiente(cbPais, cbDepartamento, Sentencias.CARGAR_DEPARTAMENTO);
+            GeneralC.llenarComboDependiente(cmbPais, cmbDepartamento, Sentencias.CARGAR_DEPARTAMENTO);
         }
         private void cbDepartamento_SelectedValueChanged(object sender, EventArgs e)
         {
-            GeneralC.llenarComboDependiente(cbDepartamento, cbCiudad, Sentencias.CARGAR_MUNICIPIO);
+            GeneralC.llenarComboDependiente(cmbDepartamento, cmbCiudad, Sentencias.CARGAR_MUNICIPIO);
         }
         private void Textnit_TextChanged(object sender, EventArgs e)
         {
@@ -169,12 +169,10 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
                 txtNit.Text = empresa.nit;
                 txtNombre.Text = empresa.razonSocial;
-                txtCodigoHabilitacion.Text = empresa.codigoHabilitacion;
                 txtDireccion.Text = empresa.direccion;
                 txtTelefono.Text = empresa.telefono;
                 txtCelular.Text = empresa.celular;
                 txtMail.Text = empresa.email;
-                txtSigla.Text = empresa.sigla;
                 txtEncabezado.Text = empresa.encabezado;
                 txtPie.Text = empresa.pie;
                 picLogo.Image = null;
@@ -188,9 +186,9 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
                 txtIdentificacionRepresentante.Text = filaResultado.Field<string>("identificacion");
                 txtNombreResponsable.Text = filaResultado.Field<string>("nombreTercero");
-                cbPais.SelectedValue = filaResultado.Field<int>("IdPais");
-                cbDepartamento.SelectedValue = filaResultado.Field<int>("IdDepartamento");
-                cbCiudad.SelectedValue = empresa.ubicacion;
+                cmbPais.SelectedValue = filaResultado.Field<int>("IdPais");
+                cmbDepartamento.SelectedValue = filaResultado.Field<int>("IdDepartamento");
+                cmbCiudad.SelectedValue = empresa.ubicacion;
                 GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular);
             }
         }
@@ -199,7 +197,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 cbPais);
+                                 cmbPais);
         }
         bool validarForm()
         {
@@ -208,12 +206,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 GeneralC.mostrarMensajeInformacio("Debe ingresar el nit !", txtNit);
                 return false;
             }
-            else if (txtCodigoHabilitacion.Text.Equals(""))
-            {
-                GeneralC.mostrarMensajeInformacio("Debe ingresar el codigo de habilitación !", txtCodigoHabilitacion);
-                return false;
-            }
-            else if (txtNombre.Text.Equals(""))
+                        else if (txtNombre.Text.Equals(""))
             {
                 GeneralC.mostrarMensajeInformacio("Debe ingresar la razon social de la empresa !", txtNombre);
                 return false;
@@ -228,19 +221,19 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 GeneralC.mostrarMensajeInformacio("Debe ingresar algún contacto para la empresa !", txtTelefono);
                 return false;
             }
-            else if (cbPais.SelectedValue.Equals(Util.Constantes.ConstanteGeneral.PREDETERMINADA) || cbPais.SelectedValue == null)
+            else if (cmbPais.SelectedValue.Equals(Util.Constantes.ConstanteGeneral.PREDETERMINADA) || cmbPais.SelectedValue == null)
             {
-                GeneralC.mostrarMensajeInformacio("Debe escojer el pais !", cbPais);
+                GeneralC.mostrarMensajeInformacio("Debe escojer el pais !", cmbPais);
                 return false;
             }
-            else if (cbDepartamento.SelectedValue.Equals(Util.Constantes.ConstanteGeneral.PREDETERMINADA) || cbDepartamento.SelectedValue == null)
+            else if (cmbDepartamento.SelectedValue.Equals(Util.Constantes.ConstanteGeneral.PREDETERMINADA) || cmbDepartamento.SelectedValue == null)
             {
-                GeneralC.mostrarMensajeInformacio("Debe escojer el departamento !", cbDepartamento);
+                GeneralC.mostrarMensajeInformacio("Debe escojer el departamento !", cmbDepartamento);
                 return false;
             }
-            else if (cbCiudad.SelectedValue.Equals(Util.Constantes.ConstanteGeneral.PREDETERMINADA) || cbCiudad.SelectedValue == null)
+            else if (cmbCiudad.SelectedValue.Equals(Util.Constantes.ConstanteGeneral.PREDETERMINADA) || cmbCiudad.SelectedValue == null)
             {
-                GeneralC.mostrarMensajeInformacio("Debe escojer la municipio !", cbCiudad);
+                GeneralC.mostrarMensajeInformacio("Debe escojer la municipio !", cmbCiudad);
                 return false;
             }
             else if (txtIdentificacionRepresentante.Text.Equals(""))
@@ -257,13 +250,11 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             empresa.nit = txtNit.Text;
             empresa.razonSocial = txtNombre.Text;
-            empresa.codigoHabilitacion = txtCodigoHabilitacion.Text;
-            empresa.ubicacion = int.Parse(cbCiudad.SelectedValue.ToString());
+            empresa.ubicacion = int.Parse(cmbCiudad.SelectedValue.ToString());
             empresa.direccion = txtDireccion.Text;
             empresa.telefono = txtTelefono.Text;
             empresa.celular = txtCelular.Text;
             empresa.email = txtMail.Text;
-            empresa.sigla = txtSigla.Text;
             empresa.encabezado = txtEncabezado.Text;
             empresa.pie = txtPie.Text;
             if (picLogo.Image != null)

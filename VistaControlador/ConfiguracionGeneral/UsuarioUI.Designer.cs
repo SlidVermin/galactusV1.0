@@ -157,7 +157,7 @@
             this.tsbBuscarRol.Image = ((System.Drawing.Image)(resources.GetObject("tsbBuscarRol.Image")));
             this.tsbBuscarRol.Location = new System.Drawing.Point(302, 122);
             this.tsbBuscarRol.Name = "tsbBuscarRol";
-            this.tsbBuscarRol.Size = new System.Drawing.Size(34, 23);
+            this.tsbBuscarRol.Size = new System.Drawing.Size(26, 24);
             this.tsbBuscarRol.TabIndex = 5;
             this.tsbBuscarRol.UseVisualStyleBackColor = true;
             this.tsbBuscarRol.Click += new System.EventHandler(this.tsbBuscarRol_Click);
@@ -197,7 +197,7 @@
             this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tstModificar.Name = "tstModificar";
-            this.tstModificar.Size = new System.Drawing.Size(57, 22);
+            this.tstModificar.Size = new System.Drawing.Size(78, 22);
             this.tstModificar.Text = "Modificar";
             // 
             // tsbCancelar

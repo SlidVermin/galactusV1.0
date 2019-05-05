@@ -181,12 +181,6 @@
     <Compile Include="VistaControlador\Admision\PacienteUI.Designer.cs">
       <DependentUpon>PacienteUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\ConfiguracionGeneral\AreaServicioUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VistaControlador\ConfiguracionGeneral\AreaServicioUI.Designer.cs">
-      <DependentUpon>AreaServicioUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\ConfiguracionGeneralUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +192,12 @@
     </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\EmpresaUI.Designer.cs">
       <DependentUpon>EmpresaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\EntornoServicioUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\EntornoServicioUI.Designer.cs">
+      <DependentUpon>EntornoServicioUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\EquivalenciaUI.cs">
       <SubType>Form</SubType>
@@ -512,14 +512,14 @@
     <EmbeddedResource Include="VistaControlador\Admision\PacienteUI.resx">
       <DependentUpon>PacienteUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\AreaServicioUI.resx">
-      <DependentUpon>AreaServicioUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\ConfiguracionGeneralUI.resx">
       <DependentUpon>ConfiguracionGeneralUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\EmpresaUI.resx">
       <DependentUpon>EmpresaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\EntornoServicioUI.resx">
+      <DependentUpon>EntornoServicioUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\EquivalenciaUI.resx">
       <DependentUpon>EquivalenciaUI.cs</DependentUpon>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Galactus.VistaControlador.ConfiguracionGeneral
 {
-    public partial class AreaServicioUI : Form
+    public partial class EntornoServicioUI : Form
     {
-        public AreaServicioUI()
+        public EntornoServicioUI()
         {
             InitializeComponent();
         }
