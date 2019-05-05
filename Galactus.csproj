@@ -78,6 +78,7 @@
     <Compile Include="Entidades\ConfiguracionGeneral\Usuario.cs" />
     <Compile Include="Entidades\General\Busqueda.cs" />
     <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
+    <Compile Include="Entidades\HistoriaClinica\Enfermeria\EnfermeriaClinica.cs" />
     <Compile Include="Entidades\HistoriaClinica\Evolucion\Evolucion.cs" />
     <Compile Include="Entidades\HistoriaClinica\HistoriaClinicaPaciente.cs" />
     <Compile Include="Entidades\HistoriaClinica\IngresoClinico.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Modelo\Gestion\ProveedorDAL.cs" />
     <Compile Include="Modelo\Gestion\ClienteDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\Enfermeria\EnfermeriaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\EvolucionMedicaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\IngresoClinicoDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\OrdenClinicaDAL.cs" />
@@ -269,11 +271,11 @@
     <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\GlucometriasUI.Designer.cs">
       <DependentUpon>GlucometriasUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\HemoderivadosUI.cs">
+    <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\ProcedimientosUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\HemoderivadosUI.Designer.cs">
-      <DependentUpon>HemoderivadosUI.cs</DependentUpon>
+    <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\ProcedimientosUI.Designer.cs">
+      <DependentUpon>ProcedimientosUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\InsumosUI.cs">
       <SubType>Form</SubType>
@@ -562,8 +564,8 @@
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Enfermeria\GlucometriasUI.resx">
       <DependentUpon>GlucometriasUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Enfermeria\HemoderivadosUI.resx">
-      <DependentUpon>HemoderivadosUI.cs</DependentUpon>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Enfermeria\ProcedimientosUI.resx">
+      <DependentUpon>ProcedimientosUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Enfermeria\InsumosUI.resx">
       <DependentUpon>InsumosUI.cs</DependentUpon>

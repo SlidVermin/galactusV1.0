@@ -33,7 +33,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
         {
-            Enfermeria = new EnfermeriaUI();
+            Enfermeria = new EnfermeriaUI(idAtencion);
             GeneralC.cargarFormularioEnPestana(tpEnfermeria, Enfermeria);
         }
         public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso)

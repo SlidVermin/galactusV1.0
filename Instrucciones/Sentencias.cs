@@ -93,6 +93,8 @@ namespace Galactus
         public const String ATENCION_CARGAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionCargar";
         public const String ATENCION_PACIENTE_ATENCION = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionPacienteCargar";
         public const String ATENCION_ANULAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAtencionAnular";
+
+        
         #endregion
 
         #region Gestion
@@ -135,6 +137,16 @@ namespace Galactus
         public const String BUSCAR_EVOLUCION_MEDICA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEvolucionMedicaBuscar";
         public const String CARGAR_EVOLUCION_MEDICA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEvolucionMedicaCargar";
         public const String ANULAR_EVOLUCION_MEDICA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEvolucionMedicaAnular";
+
+        public const String BUSCAR_INSUMOS_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaBuscarInsumos";
+        public const String ENFERMERIA_INSUMOS_BUSCAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaInsumosBuscar";
+        public const String CARGAR_GLUCOMETRIAS_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaGlucometriaCargar";
+        public const String CREAR_GLUCOMETRIA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaGlucometriaCrear";
+        public const String CREAR_INSUMOS_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaInsumosCrear";
+        public const String CARGAR_INSUMOS_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaInsumosCargar";
+        public const String BUSCAR_ORDEN_MEDICA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaOrdenMedicaBuscar";
+        public const String CARGAR_PROCEDIMIENTOS_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaProcedimientosCargar";
+        public const String BUSCAR_ORDEN_MEDICA_GENERAL = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaProcedimientoOrdenMedicaBuscar";
         #endregion
     }
 }

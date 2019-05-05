@@ -31,6 +31,9 @@ namespace Galactus.Util.Constantes
         public const String PREDETERMINADA = "-1";
         public const int PREDETERMINADO = -1;
 
+        public const String ENFERMERIA_INSUMOS = "E";
+        public const String FISOTERAPEUTAS_INSUMOS = "F";
+
         public const String VALUEMEMBER_PAIS = "IdPais";
         public const String DISPLAYMEMBER_PAIS = "Descripcion";
 
@@ -47,7 +50,8 @@ namespace Galactus.Util.Constantes
         public const string ESQUEMA_HISTORIA_CLINICA = "[HistoriaClinica].";
 
         public const int ESTADO_INICIADO = 91;
-
+        public const string CODIGO_PROCEDIMIENTO_GLUCOMETRIA = "903883";
+        public const string CODIGO_PROCEDIMIENTO_GLUCOMETRIA_2 = "M19275";
         #region configuracion general
         public const int MARCA = 1;
         public const int PRESENTACION = 2;

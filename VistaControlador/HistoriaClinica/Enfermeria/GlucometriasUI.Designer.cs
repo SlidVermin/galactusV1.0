@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
-            this.dgvDiagnostico = new System.Windows.Forms.DataGridView();
+            this.dgvGlucometria = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgAgregar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgQuitar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgGlicemia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgInsulina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgResponsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupBox17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnostico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGlucometria)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBox17
             // 
-            this.GroupBox17.Controls.Add(this.dgvDiagnostico);
+            this.GroupBox17.Controls.Add(this.dgvGlucometria);
             this.GroupBox17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 8);
@@ -53,56 +57,37 @@
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Glucometrias";
             // 
-            // dgvDiagnostico
+            // dgvGlucometria
             // 
-            this.dgvDiagnostico.AllowUserToAddRows = false;
-            this.dgvDiagnostico.AllowUserToDeleteRows = false;
-            this.dgvDiagnostico.AllowUserToResizeColumns = false;
-            this.dgvDiagnostico.AllowUserToResizeRows = false;
-            this.dgvDiagnostico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvDiagnostico.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvDiagnostico.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvDiagnostico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDiagnostico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvGlucometria.AllowUserToAddRows = false;
+            this.dgvGlucometria.AllowUserToDeleteRows = false;
+            this.dgvGlucometria.AllowUserToResizeColumns = false;
+            this.dgvGlucometria.AllowUserToResizeRows = false;
+            this.dgvGlucometria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvGlucometria.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvGlucometria.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvGlucometria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGlucometria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgId,
             this.dgCodigo,
             this.dgDescripcion,
-            this.dgAgregar,
-            this.dgQuitar});
-            this.dgvDiagnostico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDiagnostico.Location = new System.Drawing.Point(3, 21);
-            this.dgvDiagnostico.MultiSelect = false;
-            this.dgvDiagnostico.Name = "dgvDiagnostico";
-            this.dgvDiagnostico.ReadOnly = true;
-            this.dgvDiagnostico.RowHeadersVisible = false;
-            this.dgvDiagnostico.ShowCellErrors = false;
-            this.dgvDiagnostico.ShowCellToolTips = false;
-            this.dgvDiagnostico.ShowEditingIcon = false;
-            this.dgvDiagnostico.ShowRowErrors = false;
-            this.dgvDiagnostico.Size = new System.Drawing.Size(970, 250);
-            this.dgvDiagnostico.TabIndex = 2;
-            // 
-            // dgId
-            // 
-            this.dgId.HeaderText = "Id";
-            this.dgId.Name = "dgId";
-            this.dgId.ReadOnly = true;
-            this.dgId.Visible = false;
-            this.dgId.Width = 22;
-            // 
-            // dgCodigo
-            // 
-            this.dgCodigo.HeaderText = "Código";
-            this.dgCodigo.Name = "dgCodigo";
-            this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 77;
-            // 
-            // dgDescripcion
-            // 
-            this.dgDescripcion.HeaderText = "Descripcion";
-            this.dgDescripcion.Name = "dgDescripcion";
-            this.dgDescripcion.ReadOnly = true;
-            this.dgDescripcion.Width = 105;
+            this.dgHora,
+            this.dgGlicemia,
+            this.dgInsulina,
+            this.dgResponsable,
+            this.dgUsuario});
+            this.dgvGlucometria.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvGlucometria.Location = new System.Drawing.Point(3, 21);
+            this.dgvGlucometria.MultiSelect = false;
+            this.dgvGlucometria.Name = "dgvGlucometria";
+            this.dgvGlucometria.ReadOnly = true;
+            this.dgvGlucometria.RowHeadersVisible = false;
+            this.dgvGlucometria.ShowCellErrors = false;
+            this.dgvGlucometria.ShowCellToolTips = false;
+            this.dgvGlucometria.ShowEditingIcon = false;
+            this.dgvGlucometria.ShowRowErrors = false;
+            this.dgvGlucometria.Size = new System.Drawing.Size(970, 250);
+            this.dgvGlucometria.TabIndex = 2;
             // 
             // dataGridViewImageColumn1
             // 
@@ -118,21 +103,68 @@
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Width = 41;
             // 
-            // dgAgregar
+            // dgId
             // 
-            this.dgAgregar.HeaderText = "Agregar";
-            this.dgAgregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
-            this.dgAgregar.Name = "dgAgregar";
-            this.dgAgregar.ReadOnly = true;
-            this.dgAgregar.Width = 63;
+            this.dgId.HeaderText = "Id";
+            this.dgId.Name = "dgId";
+            this.dgId.ReadOnly = true;
+            this.dgId.Visible = false;
+            this.dgId.Width = 26;
             // 
-            // dgQuitar
+            // dgCodigo
             // 
-            this.dgQuitar.HeaderText = "Quitar";
-            this.dgQuitar.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.dgQuitar.Name = "dgQuitar";
-            this.dgQuitar.ReadOnly = true;
-            this.dgQuitar.Width = 53;
+            this.dgCodigo.HeaderText = "Código";
+            this.dgCodigo.Name = "dgCodigo";
+            this.dgCodigo.ReadOnly = true;
+            this.dgCodigo.Width = 77;
+            // 
+            // dgDescripcion
+            // 
+            this.dgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgDescripcion.HeaderText = "Descripcion";
+            this.dgDescripcion.Name = "dgDescripcion";
+            this.dgDescripcion.ReadOnly = true;
+            // 
+            // dgHora
+            // 
+            dataGridViewCellStyle1.Format = "T";
+            dataGridViewCellStyle1.NullValue = "00:00:00";
+            this.dgHora.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgHora.HeaderText = "Hora";
+            this.dgHora.Name = "dgHora";
+            this.dgHora.ReadOnly = true;
+            this.dgHora.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgHora.Width = 63;
+            // 
+            // dgGlicemia
+            // 
+            this.dgGlicemia.HeaderText = "Glicemia";
+            this.dgGlicemia.Name = "dgGlicemia";
+            this.dgGlicemia.ReadOnly = true;
+            this.dgGlicemia.Width = 86;
+            // 
+            // dgInsulina
+            // 
+            this.dgInsulina.HeaderText = "Insulina";
+            this.dgInsulina.Name = "dgInsulina";
+            this.dgInsulina.ReadOnly = true;
+            this.dgInsulina.Width = 82;
+            // 
+            // dgResponsable
+            // 
+            this.dgResponsable.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgResponsable.HeaderText = "Responsable";
+            this.dgResponsable.Name = "dgResponsable";
+            this.dgResponsable.ReadOnly = true;
+            this.dgResponsable.Width = 180;
+            // 
+            // dgUsuario
+            // 
+            this.dgUsuario.HeaderText = "Usuario";
+            this.dgUsuario.Name = "dgUsuario";
+            this.dgUsuario.ReadOnly = true;
+            this.dgUsuario.Visible = false;
+            this.dgUsuario.Width = 80;
             // 
             // GlucometriasUI
             // 
@@ -145,8 +177,9 @@
             this.MinimumSize = new System.Drawing.Size(986, 291);
             this.Name = "GlucometriasUI";
             this.Text = "GlucometriasUI";
+            this.Load += new System.EventHandler(this.GlucometriasUI_Load);
             this.GroupBox17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnostico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGlucometria)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,13 +187,16 @@
         #endregion
 
         internal System.Windows.Forms.GroupBox GroupBox17;
-        internal System.Windows.Forms.DataGridView dgvDiagnostico;
+        internal System.Windows.Forms.DataGridView dgvGlucometria;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcion;
-        private System.Windows.Forms.DataGridViewImageColumn dgAgregar;
-        private System.Windows.Forms.DataGridViewImageColumn dgQuitar;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgHora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgGlicemia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgInsulina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgResponsable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgUsuario;
     }
 }

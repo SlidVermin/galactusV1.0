@@ -47,18 +47,6 @@ namespace Galactus.VistaControlador.Gestion
             tsbCancelar.Enabled = true;
         }
 
-        private void btModificar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(Mensajes.Modificar_FORM,Mensajes.NOMBRE_SOFT,MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes) {
-                GeneralC.deshabilitarBotones(ref tstMenuPatron);
-                GeneralC.habilitarControles(this);
-                GeneralC.deshabilitarControles(pnlInformacion);
-                desHabilitadoPermanentemente();
-                tsbGuardar.Enabled = true;
-                tsbCancelar.Enabled = true;
-            }
-        }
-
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.CANCELAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -251,6 +239,20 @@ namespace Galactus.VistaControlador.Gestion
             paramtro.Add("NombrePuc");
             paramtro.Add("NombreCIIU");
             return paramtro;
+        }
+
+        private void tsbModificar_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show(Mensajes.Modificar_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                GeneralC.deshabilitarBotones(ref tstMenuPatron);
+                GeneralC.habilitarControles(this);
+                GeneralC.deshabilitarControles(pnlInformacion);
+                desHabilitadoPermanentemente();
+                tsbGuardar.Enabled = true;
+                tsbCancelar.Enabled = true;
+            }
         }
     }
 }
