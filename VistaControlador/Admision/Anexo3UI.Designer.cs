@@ -33,223 +33,369 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.manejoIntegralText = new System.Windows.Forms.TextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.buscarEspOtrosBtn = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.apNoRB = new System.Windows.Forms.RadioButton();
-            this.apSiRB = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.serviciosGridView = new System.Windows.Forms.DataGridView();
+            this.txtManejoSegunDia = new System.Windows.Forms.TextBox();
+            this.txtJustificacion = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rbServicioElectivo = new System.Windows.Forms.RadioButton();
+            this.rbPosterior = new System.Windows.Forms.RadioButton();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtAtencion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtContrato = new System.Windows.Forms.TextBox();
+            this.txtPaciente = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtConsecutivo = new System.Windows.Forms.TextBox();
+            this.txtSolicitud = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtIdentificacion = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
+            this.label30 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label43 = new System.Windows.Forms.Label();
+            this.chkPrioritaria = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
             this.codigoCIECOL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observacionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quitarAnularCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diasCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quitarCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label8 = new System.Windows.Forms.Label();
-            this.justificacionClinicaText = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.servElectivosRB = new System.Windows.Forms.RadioButton();
-            this.posteriorRB = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.servicioActualText = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.registroText = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.epsText = new System.Windows.Forms.TextBox();
-            this.pacienteText = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.sexoText = new System.Windows.Forms.TextBox();
-            this.NSolicitudText = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.NRegistroText = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.pacientePB = new System.Windows.Forms.PictureBox();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tstModificar = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
-            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
-            this.groupBox1.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.serviciosGridView)).BeginInit();
+            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.groupBox4.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.tstMenuPatron.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.manejoIntegralText);
-            this.groupBox1.Controls.Add(this.groupBox6);
-            this.groupBox1.Controls.Add(this.groupBox5);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.justificacionClinicaText);
-            this.groupBox1.Controls.Add(this.groupBox4);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 55);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(829, 528);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 200);
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(11, 147);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(160, 13);
+            this.label10.Size = new System.Drawing.Size(155, 15);
             this.label10.TabIndex = 11;
-            this.label10.Text = "Manejo Integral Según Día";
+            this.label10.Text = "Manejo Integral Según Día:";
             // 
-            // manejoIntegralText
+            // txtManejoSegunDia
             // 
-            this.manejoIntegralText.Location = new System.Drawing.Point(12, 216);
-            this.manejoIntegralText.Multiline = true;
-            this.manejoIntegralText.Name = "manejoIntegralText";
-            this.manejoIntegralText.Size = new System.Drawing.Size(804, 59);
-            this.manejoIntegralText.TabIndex = 10;
+            this.txtManejoSegunDia.Location = new System.Drawing.Point(172, 145);
+            this.txtManejoSegunDia.Multiline = true;
+            this.txtManejoSegunDia.Name = "txtManejoSegunDia";
+            this.txtManejoSegunDia.Size = new System.Drawing.Size(794, 59);
+            this.txtManejoSegunDia.TabIndex = 10;
             // 
-            // groupBox6
+            // txtJustificacion
             // 
-            this.groupBox6.Controls.Add(this.buscarEspOtrosBtn);
-            this.groupBox6.Controls.Add(this.textBox3);
-            this.groupBox6.Controls.Add(this.label9);
-            this.groupBox6.Controls.Add(this.radioButton3);
-            this.groupBox6.Controls.Add(this.radioButton2);
-            this.groupBox6.Controls.Add(this.radioButton1);
-            this.groupBox6.Location = new System.Drawing.Point(316, 153);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(495, 35);
-            this.groupBox6.TabIndex = 9;
-            this.groupBox6.TabStop = false;
+            this.txtJustificacion.Location = new System.Drawing.Point(172, 210);
+            this.txtJustificacion.Multiline = true;
+            this.txtJustificacion.Name = "txtJustificacion";
+            this.txtJustificacion.Size = new System.Drawing.Size(794, 59);
+            this.txtJustificacion.TabIndex = 5;
             // 
-            // buscarEspOtrosBtn
+            // groupBox4
             // 
-            this.buscarEspOtrosBtn.Image = global::Galactus.Properties.Resources.search__1_;
-            this.buscarEspOtrosBtn.Location = new System.Drawing.Point(452, 8);
-            this.buscarEspOtrosBtn.Name = "buscarEspOtrosBtn";
-            this.buscarEspOtrosBtn.Size = new System.Drawing.Size(26, 24);
-            this.buscarEspOtrosBtn.TabIndex = 7;
-            this.buscarEspOtrosBtn.UseVisualStyleBackColor = true;
+            this.groupBox4.Controls.Add(this.rbServicioElectivo);
+            this.groupBox4.Controls.Add(this.rbPosterior);
+            this.groupBox4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(100, 92);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(217, 42);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Tipo servicio solicitado:";
             // 
-            // textBox3
+            // rbServicioElectivo
             // 
-            this.textBox3.Location = new System.Drawing.Point(332, 11);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(114, 20);
-            this.textBox3.TabIndex = 4;
+            this.rbServicioElectivo.AutoSize = true;
+            this.rbServicioElectivo.Location = new System.Drawing.Point(102, 16);
+            this.rbServicioElectivo.Name = "rbServicioElectivo";
+            this.rbServicioElectivo.Size = new System.Drawing.Size(103, 19);
+            this.rbServicioElectivo.TabIndex = 4;
+            this.rbServicioElectivo.TabStop = true;
+            this.rbServicioElectivo.Text = "Serv. Electivos";
+            this.rbServicioElectivo.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // rbPosterior
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(262, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "Trasladar A:";
+            this.rbPosterior.AutoSize = true;
+            this.rbPosterior.Location = new System.Drawing.Point(15, 17);
+            this.rbPosterior.Name = "rbPosterior";
+            this.rbPosterior.Size = new System.Drawing.Size(75, 19);
+            this.rbPosterior.TabIndex = 3;
+            this.rbPosterior.TabStop = true;
+            this.rbPosterior.Text = "Posterior";
+            this.rbPosterior.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // txtCodigo
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(182, 12);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(74, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "C. Externa";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.txtCodigo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(352, 11);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(74, 21);
+            this.txtCodigo.TabIndex = 19;
             // 
-            // radioButton2
+            // label1
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(108, 12);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(68, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Urgencia";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(296, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 15);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Código:";
             // 
-            // radioButton1
+            // txtAtencion
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 12);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(96, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Hospitalización";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.txtAtencion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAtencion.Location = new System.Drawing.Point(100, 11);
+            this.txtAtencion.Name = "txtAtencion";
+            this.txtAtencion.Size = new System.Drawing.Size(114, 21);
+            this.txtAtencion.TabIndex = 15;
             // 
-            // groupBox5
+            // label4
             // 
-            this.groupBox5.Controls.Add(this.apNoRB);
-            this.groupBox5.Controls.Add(this.apSiRB);
-            this.groupBox5.Location = new System.Drawing.Point(198, 153);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(110, 35);
-            this.groupBox5.TabIndex = 8;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Atención Prioritaria";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(36, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Atención:";
             // 
-            // apNoRB
+            // txtContrato
             // 
-            this.apNoRB.AutoSize = true;
-            this.apNoRB.Location = new System.Drawing.Point(47, 12);
-            this.apNoRB.Name = "apNoRB";
-            this.apNoRB.Size = new System.Drawing.Size(41, 17);
-            this.apNoRB.TabIndex = 1;
-            this.apNoRB.TabStop = true;
-            this.apNoRB.Text = "NO";
-            this.apNoRB.UseVisualStyleBackColor = true;
+            this.txtContrato.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContrato.Location = new System.Drawing.Point(352, 65);
+            this.txtContrato.Name = "txtContrato";
+            this.txtContrato.Size = new System.Drawing.Size(614, 21);
+            this.txtContrato.TabIndex = 11;
             // 
-            // apSiRB
+            // txtPaciente
             // 
-            this.apSiRB.AutoSize = true;
-            this.apSiRB.Location = new System.Drawing.Point(6, 12);
-            this.apSiRB.Name = "apSiRB";
-            this.apSiRB.Size = new System.Drawing.Size(35, 17);
-            this.apSiRB.TabIndex = 0;
-            this.apSiRB.TabStop = true;
-            this.apSiRB.Text = "SI";
-            this.apSiRB.UseVisualStyleBackColor = true;
+            this.txtPaciente.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaciente.Location = new System.Drawing.Point(352, 38);
+            this.txtPaciente.Name = "txtPaciente";
+            this.txtPaciente.Size = new System.Drawing.Size(603, 21);
+            this.txtPaciente.TabIndex = 10;
             // 
-            // groupBox3
+            // label7
             // 
-            this.groupBox3.Controls.Add(this.serviciosGridView);
-            this.groupBox3.Location = new System.Drawing.Point(12, 371);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(805, 145);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Información de posibles inconsistencias";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(289, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 15);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Contrato:";
             // 
-            // serviciosGridView
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(288, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 15);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Paciente:";
+            // 
+            // txtConsecutivo
+            // 
+            this.txtConsecutivo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConsecutivo.Location = new System.Drawing.Point(244, 65);
+            this.txtConsecutivo.Name = "txtConsecutivo";
+            this.txtConsecutivo.Size = new System.Drawing.Size(29, 21);
+            this.txtConsecutivo.TabIndex = 7;
+            // 
+            // txtSolicitud
+            // 
+            this.txtSolicitud.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSolicitud.Location = new System.Drawing.Point(100, 65);
+            this.txtSolicitud.Name = "txtSolicitud";
+            this.txtSolicitud.Size = new System.Drawing.Size(138, 21);
+            this.txtSolicitud.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(36, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Solicitud:";
+            // 
+            // txtIdentificacion
+            // 
+            this.txtIdentificacion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdentificacion.Location = new System.Drawing.Point(100, 38);
+            this.txtIdentificacion.Name = "txtIdentificacion";
+            this.txtIdentificacion.Size = new System.Drawing.Size(138, 21);
+            this.txtIdentificacion.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Identificación:";
+            // 
+            // tstMenuPatron
+            // 
+            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tstModificar,
+            this.tsbCancelar,
+            this.tsbGuardar,
+            this.tsbBuscar,
+            this.tsbAnular,
+            this.tstImprimir});
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 555);
+            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.Name = "tstMenuPatron";
+            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.TabIndex = 49;
+            this.tstMenuPatron.Text = "toolStrip1";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial", 12F);
+            this.label30.Location = new System.Drawing.Point(60, 15);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(217, 18);
+            this.label30.TabIndex = 50;
+            this.label30.Text = "Solicitud de servicio - Anexo 3";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label34);
+            this.panel1.Controls.Add(this.label33);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.label43);
+            this.panel1.Location = new System.Drawing.Point(23, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1009, 490);
+            this.panel1.TabIndex = 52;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(8, 325);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(137, 20);
+            this.label34.TabIndex = 48;
+            this.label34.Text = "Procedimientos.";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(7, 8);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(212, 20);
+            this.label33.TabIndex = 47;
+            this.label33.Text = "Información del paciente.";
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.txtManejoSegunDia);
+            this.panel6.Controls.Add(this.txtJustificacion);
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Controls.Add(this.chkPrioritaria);
+            this.panel6.Controls.Add(this.txtCodigo);
+            this.panel6.Controls.Add(this.txtIdentificacion);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.txtAtencion);
+            this.panel6.Controls.Add(this.groupBox4);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.txtSolicitud);
+            this.panel6.Controls.Add(this.txtConsecutivo);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.txtContrato);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Controls.Add(this.txtPaciente);
+            this.panel6.Location = new System.Drawing.Point(13, 31);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(983, 286);
+            this.panel6.TabIndex = 46;
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.dgvProcedimientos);
+            this.panel5.Location = new System.Drawing.Point(13, 348);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(983, 126);
+            this.panel5.TabIndex = 45;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(8, 246);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(0, 20);
+            this.label43.TabIndex = 40;
+            // 
+            // chkPrioritaria
+            // 
+            this.chkPrioritaria.AutoSize = true;
+            this.chkPrioritaria.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPrioritaria.Location = new System.Drawing.Point(355, 108);
+            this.chkPrioritaria.Name = "chkPrioritaria";
+            this.chkPrioritaria.Size = new System.Drawing.Size(135, 19);
+            this.chkPrioritaria.TabIndex = 56;
+            this.chkPrioritaria.Text = "Atención prioritaria?";
+            this.chkPrioritaria.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(53, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 15);
+            this.label5.TabIndex = 57;
+            this.label5.Text = "Justitifación clínica:";
+            // 
+            // dgvProcedimientos
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.serviciosGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.serviciosGridView.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProcedimientos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProcedimientos.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -257,9 +403,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.serviciosGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.serviciosGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.serviciosGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProcedimientos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProcedimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProcedimientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigoCIECOL,
             this.descripcionDiagCol,
             this.observacionDiagCol,
@@ -273,12 +419,13 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.serviciosGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.serviciosGridView.GridColor = System.Drawing.Color.DarkGray;
-            this.serviciosGridView.Location = new System.Drawing.Point(9, 19);
-            this.serviciosGridView.MultiSelect = false;
-            this.serviciosGridView.Name = "serviciosGridView";
-            this.serviciosGridView.ReadOnly = true;
+            this.dgvProcedimientos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProcedimientos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProcedimientos.GridColor = System.Drawing.Color.DarkGray;
+            this.dgvProcedimientos.Location = new System.Drawing.Point(0, 0);
+            this.dgvProcedimientos.MultiSelect = false;
+            this.dgvProcedimientos.Name = "dgvProcedimientos";
+            this.dgvProcedimientos.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -286,11 +433,11 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.serviciosGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvProcedimientos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.serviciosGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.serviciosGridView.Size = new System.Drawing.Size(790, 120);
-            this.serviciosGridView.TabIndex = 1;
+            this.dgvProcedimientos.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvProcedimientos.Size = new System.Drawing.Size(981, 124);
+            this.dgvProcedimientos.TabIndex = 2;
             // 
             // codigoCIECOL
             // 
@@ -329,249 +476,30 @@
             // 
             // quitarCol
             // 
-            this.quitarCol.HeaderText = "Quitar/Anular";
+            this.quitarCol.HeaderText = "Quitar";
             this.quitarCol.Name = "quitarCol";
             this.quitarCol.ReadOnly = true;
             // 
-            // label8
+            // btnSalir
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 290);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Justificación Clínica";
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(1027, 3);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(26, 24);
+            this.btnSalir.TabIndex = 53;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // justificacionClinicaText
+            // pacientePB
             // 
-            this.justificacionClinicaText.Location = new System.Drawing.Point(12, 306);
-            this.justificacionClinicaText.Multiline = true;
-            this.justificacionClinicaText.Name = "justificacionClinicaText";
-            this.justificacionClinicaText.Size = new System.Drawing.Size(804, 59);
-            this.justificacionClinicaText.TabIndex = 5;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.servElectivosRB);
-            this.groupBox4.Controls.Add(this.posteriorRB);
-            this.groupBox4.Location = new System.Drawing.Point(6, 153);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(186, 35);
-            this.groupBox4.TabIndex = 2;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Tipo servicio solicitado";
-            // 
-            // servElectivosRB
-            // 
-            this.servElectivosRB.AutoSize = true;
-            this.servElectivosRB.Location = new System.Drawing.Point(84, 12);
-            this.servElectivosRB.Name = "servElectivosRB";
-            this.servElectivosRB.Size = new System.Drawing.Size(96, 17);
-            this.servElectivosRB.TabIndex = 4;
-            this.servElectivosRB.TabStop = true;
-            this.servElectivosRB.Text = "Serv. Electivos";
-            this.servElectivosRB.UseVisualStyleBackColor = true;
-            // 
-            // posteriorRB
-            // 
-            this.posteriorRB.AutoSize = true;
-            this.posteriorRB.Location = new System.Drawing.Point(12, 12);
-            this.posteriorRB.Name = "posteriorRB";
-            this.posteriorRB.Size = new System.Drawing.Size(66, 17);
-            this.posteriorRB.TabIndex = 3;
-            this.posteriorRB.TabStop = true;
-            this.posteriorRB.Text = "Posterior";
-            this.posteriorRB.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.servicioActualText);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.registroText);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.epsText);
-            this.groupBox2.Controls.Add(this.pacienteText);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.sexoText);
-            this.groupBox2.Controls.Add(this.NSolicitudText);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.NRegistroText);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(6, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(805, 125);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos Básicos";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(712, 27);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(74, 20);
-            this.textBox2.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(667, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "Orden:";
-            // 
-            // servicioActualText
-            // 
-            this.servicioActualText.Location = new System.Drawing.Point(654, 88);
-            this.servicioActualText.Name = "servicioActualText";
-            this.servicioActualText.Size = new System.Drawing.Size(132, 20);
-            this.servicioActualText.TabIndex = 17;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(567, 91);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 13);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Servicio Actual:";
-            // 
-            // registroText
-            // 
-            this.registroText.Location = new System.Drawing.Point(396, 88);
-            this.registroText.Name = "registroText";
-            this.registroText.Size = new System.Drawing.Size(114, 20);
-            this.registroText.TabIndex = 15;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(341, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Registro:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(112, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
-            this.textBox1.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Tipo informe anexo:";
-            // 
-            // epsText
-            // 
-            this.epsText.Location = new System.Drawing.Point(396, 56);
-            this.epsText.Name = "epsText";
-            this.epsText.Size = new System.Drawing.Size(390, 20);
-            this.epsText.TabIndex = 11;
-            // 
-            // pacienteText
-            // 
-            this.pacienteText.Location = new System.Drawing.Point(396, 27);
-            this.pacienteText.Name = "pacienteText";
-            this.pacienteText.Size = new System.Drawing.Size(255, 20);
-            this.pacienteText.TabIndex = 10;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(341, 59);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Contrato:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(338, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Paciente:";
-            // 
-            // sexoText
-            // 
-            this.sexoText.Location = new System.Drawing.Point(260, 56);
-            this.sexoText.Name = "sexoText";
-            this.sexoText.Size = new System.Drawing.Size(29, 20);
-            this.sexoText.TabIndex = 7;
-            // 
-            // NSolicitudText
-            // 
-            this.NSolicitudText.Location = new System.Drawing.Point(112, 56);
-            this.NSolicitudText.Name = "NSolicitudText";
-            this.NSolicitudText.Size = new System.Drawing.Size(138, 20);
-            this.NSolicitudText.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "N° Solicitud";
-            // 
-            // NRegistroText
-            // 
-            this.NRegistroText.Location = new System.Drawing.Point(112, 27);
-            this.NRegistroText.Name = "NRegistroText";
-            this.NRegistroText.Size = new System.Drawing.Size(138, 20);
-            this.NRegistroText.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Identificación:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(21, 26);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(225, 13);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "ANEXO 3: SOLICITUD DE SERVICIOS";
-            // 
-            // tstMenuPatron
-            // 
-            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tstModificar,
-            this.tsbGuardar,
-            this.tsbBuscar,
-            this.tsbAnular,
-            this.tsbCancelar});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 600);
-            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.Name = "tstMenuPatron";
-            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.TabIndex = 49;
-            this.tstMenuPatron.Text = "toolStrip1";
+            this.pacientePB.Image = global::Galactus.Properties.Resources.user__1_;
+            this.pacientePB.Location = new System.Drawing.Point(25, 4);
+            this.pacientePB.Name = "pacientePB";
+            this.pacientePB.Size = new System.Drawing.Size(31, 31);
+            this.pacientePB.TabIndex = 51;
+            this.pacientePB.TabStop = false;
             // 
             // tsbNuevo
             // 
@@ -590,8 +518,18 @@
             this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tstModificar.Name = "tstModificar";
-            this.tstModificar.Size = new System.Drawing.Size(57, 22);
+            this.tstModificar.Size = new System.Drawing.Size(78, 22);
             this.tstModificar.Text = "Modificar";
+            // 
+            // tsbCancelar
+            // 
+            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
             // 
             // tsbGuardar
             // 
@@ -623,93 +561,68 @@
             this.tsbAnular.Size = new System.Drawing.Size(62, 22);
             this.tsbAnular.Text = "Anular";
             // 
-            // tsbCancelar
+            // tstImprimir
             // 
-            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsbCancelar.Text = "Cancelar";
+            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstImprimir.Name = "tstImprimir";
+            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tstImprimir.Text = "Imprimir";
+            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // Anexo3UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(854, 625);
+            this.ClientSize = new System.Drawing.Size(1059, 580);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.pacientePB);
             this.Controls.Add(this.tstMenuPatron);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1059, 580);
+            this.MinimumSize = new System.Drawing.Size(1059, 580);
             this.Name = "Anexo3UI";
             this.Text = "Anexo3UI";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.serviciosGridView)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView serviciosGridView;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox justificacionClinicaText;
+        private System.Windows.Forms.TextBox txtJustificacion;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton servElectivosRB;
-        private System.Windows.Forms.RadioButton posteriorRB;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox servicioActualText;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox registroText;
+        private System.Windows.Forms.RadioButton rbServicioElectivo;
+        private System.Windows.Forms.RadioButton rbPosterior;
+        private System.Windows.Forms.TextBox txtAtencion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox epsText;
-        private System.Windows.Forms.TextBox pacienteText;
+        private System.Windows.Forms.TextBox txtContrato;
+        private System.Windows.Forms.TextBox txtPaciente;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox sexoText;
-        private System.Windows.Forms.TextBox NSolicitudText;
+        private System.Windows.Forms.TextBox txtConsecutivo;
+        private System.Windows.Forms.TextBox txtSolicitud;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox NRegistroText;
+        private System.Windows.Forms.TextBox txtIdentificacion;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.RadioButton apNoRB;
-        private System.Windows.Forms.RadioButton apSiRB;
-        private System.Windows.Forms.Button buscarEspOtrosBtn;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox manejoIntegralText;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoCIECOL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDiagCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observacionDiagCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quitarAnularCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diasCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quitarCol;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtManejoSegunDia;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tstModificar;
@@ -717,5 +630,24 @@
         private System.Windows.Forms.ToolStripButton tsbBuscar;
         private System.Windows.Forms.ToolStripButton tsbAnular;
         private System.Windows.Forms.ToolStripButton tsbCancelar;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.PictureBox pacientePB;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox chkPrioritaria;
+        private System.Windows.Forms.DataGridView dgvProcedimientos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoCIECOL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDiagCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn observacionDiagCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quitarAnularCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diasCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quitarCol;
+        private System.Windows.Forms.ToolStripButton tstImprimir;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
