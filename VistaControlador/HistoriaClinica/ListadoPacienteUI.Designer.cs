@@ -68,7 +68,7 @@
             // 
             this.lbTitulo.AutoSize = true;
             this.lbTitulo.Font = new System.Drawing.Font("Arial", 12F);
-            this.lbTitulo.Location = new System.Drawing.Point(52, 16);
+            this.lbTitulo.Location = new System.Drawing.Point(60, 15);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(136, 18);
             this.lbTitulo.TabIndex = 31;
@@ -77,9 +77,10 @@
             // pacientePB
             // 
             this.pacientePB.Image = global::Galactus.Properties.Resources.user__1_;
-            this.pacientePB.Location = new System.Drawing.Point(12, 9);
+            this.pacientePB.Location = new System.Drawing.Point(25, 4);
             this.pacientePB.Name = "pacientePB";
-            this.pacientePB.Size = new System.Drawing.Size(35, 31);
+            this.pacientePB.Size = new System.Drawing.Size(31, 31);
+            this.pacientePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pacientePB.TabIndex = 32;
             this.pacientePB.TabStop = false;
             // 
@@ -88,9 +89,9 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(12, 46);
+            this.panel1.Location = new System.Drawing.Point(23, 43);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1296, 571);
+            this.panel1.Size = new System.Drawing.Size(1275, 571);
             this.panel1.TabIndex = 33;
             // 
             // groupBox1
@@ -99,10 +100,10 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F);
             this.groupBox1.Location = new System.Drawing.Point(7, 55);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1286, 505);
+            this.groupBox1.Size = new System.Drawing.Size(1262, 505);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Numero de paciente(200)";
+            this.groupBox1.Text = "Número de pacientes (200)";
             // 
             // dgvListaPaciente
             // 
@@ -133,7 +134,7 @@
             this.dgvListaPaciente.ShowCellToolTips = false;
             this.dgvListaPaciente.ShowEditingIcon = false;
             this.dgvListaPaciente.ShowRowErrors = false;
-            this.dgvListaPaciente.Size = new System.Drawing.Size(1280, 484);
+            this.dgvListaPaciente.Size = new System.Drawing.Size(1256, 484);
             this.dgvListaPaciente.TabIndex = 0;
             this.dgvListaPaciente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaPaciente_CellDoubleClick);
             // 
@@ -246,13 +247,13 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(7, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1283, 37);
+            this.panel2.Size = new System.Drawing.Size(1262, 37);
             this.panel2.TabIndex = 0;
             // 
             // btLimpiar
             // 
             this.btLimpiar.Image = global::Galactus.Properties.Resources.error__1_;
-            this.btLimpiar.Location = new System.Drawing.Point(921, 5);
+            this.btLimpiar.Location = new System.Drawing.Point(896, 5);
             this.btLimpiar.Name = "btLimpiar";
             this.btLimpiar.Size = new System.Drawing.Size(26, 24);
             this.btLimpiar.TabIndex = 47;
@@ -264,7 +265,7 @@
             // 
             this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.FormattingEnabled = true;
-            this.cbEstado.Location = new System.Drawing.Point(1074, 7);
+            this.cbEstado.Location = new System.Drawing.Point(1049, 7);
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(198, 21);
             this.cbEstado.TabIndex = 42;
@@ -274,7 +275,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label4.Location = new System.Drawing.Point(1011, 8);
+            this.label4.Location = new System.Drawing.Point(986, 8);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 16);
             this.label4.TabIndex = 41;
@@ -283,7 +284,7 @@
             // button1
             // 
             this.button1.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.button1.Location = new System.Drawing.Point(953, 5);
+            this.button1.Location = new System.Drawing.Point(928, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(26, 24);
             this.button1.TabIndex = 40;
@@ -292,7 +293,7 @@
             // 
             // txtArea
             // 
-            this.txtArea.Location = new System.Drawing.Point(685, 7);
+            this.txtArea.Location = new System.Drawing.Point(660, 7);
             this.txtArea.Name = "txtArea";
             this.txtArea.ReadOnly = true;
             this.txtArea.Size = new System.Drawing.Size(262, 20);
@@ -303,7 +304,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label3.Location = new System.Drawing.Point(642, 9);
+            this.label3.Location = new System.Drawing.Point(617, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 16);
             this.label3.TabIndex = 37;
@@ -361,7 +362,7 @@
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(1286, 5);
+            this.btnSalir.Location = new System.Drawing.Point(1286, 3);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(26, 24);
             this.btnSalir.TabIndex = 46;
@@ -373,6 +374,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1320, 629);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.panel1);

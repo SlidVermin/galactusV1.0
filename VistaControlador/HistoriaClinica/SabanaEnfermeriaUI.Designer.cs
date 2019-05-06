@@ -28,29 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbTitulo = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
-            this.tcHistoriaClinica = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtfechaIngreso = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtAdmision = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtEstancia = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtEdad = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtSexo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtServicio = new System.Windows.Forms.TextBox();
-            this.txtPaciente = new System.Windows.Forms.TextBox();
-            this.txtAtencion = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tabControlGalactus1 = new Galactus.Util.Controles.TabControlGalactus();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tstModificar = new System.Windows.Forms.ToolStripButton();
@@ -58,259 +38,72 @@
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
+            this.tpMedicamentos = new System.Windows.Forms.TabPage();
+            this.tpSignos = new System.Windows.Forms.TabPage();
+            this.dgvSabanaSignos = new System.Windows.Forms.DataGridView();
+            this.dgSabanaIdSigno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSabanaDescripcionSigno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno00 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno01 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno02 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno03 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno04 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno05 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno06 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno07 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno08 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno09 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgSigno23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabControlGalactus1 = new Galactus.Util.Controles.TabControlGalactus();
             this.pnlInformacion.SuspendLayout();
-            this.tabControlGalactus1.SuspendLayout();
             this.tstMenuPatron.SuspendLayout();
+            this.tpSignos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSabanaSignos)).BeginInit();
+            this.tabControlGalactus1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lbTitulo
-            // 
-            this.lbTitulo.AutoSize = true;
-            this.lbTitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitulo.Location = new System.Drawing.Point(35, 6);
-            this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(168, 21);
-            this.lbTitulo.TabIndex = 10;
-            this.lbTitulo.Text = "Sabana - Enfermeria.";
             // 
             // pnlInformacion
             // 
             this.pnlInformacion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlInformacion.Controls.Add(this.tcHistoriaClinica);
-            this.pnlInformacion.Controls.Add(this.label10);
-            this.pnlInformacion.Controls.Add(this.txtfechaIngreso);
-            this.pnlInformacion.Controls.Add(this.label8);
-            this.pnlInformacion.Controls.Add(this.txtAdmision);
-            this.pnlInformacion.Controls.Add(this.label7);
-            this.pnlInformacion.Controls.Add(this.txtEstancia);
-            this.pnlInformacion.Controls.Add(this.label6);
-            this.pnlInformacion.Controls.Add(this.txtEdad);
-            this.pnlInformacion.Controls.Add(this.label2);
-            this.pnlInformacion.Controls.Add(this.txtSexo);
-            this.pnlInformacion.Controls.Add(this.label4);
-            this.pnlInformacion.Controls.Add(this.label9);
-            this.pnlInformacion.Controls.Add(this.txtServicio);
-            this.pnlInformacion.Controls.Add(this.txtPaciente);
-            this.pnlInformacion.Controls.Add(this.txtAtencion);
-            this.pnlInformacion.Controls.Add(this.label3);
-            this.pnlInformacion.Controls.Add(this.label5);
-            this.pnlInformacion.Location = new System.Drawing.Point(4, 33);
+            this.pnlInformacion.Controls.Add(this.dateTimePicker1);
+            this.pnlInformacion.Controls.Add(this.label1);
+            this.pnlInformacion.Location = new System.Drawing.Point(5, 5);
             this.pnlInformacion.Name = "pnlInformacion";
-            this.pnlInformacion.Size = new System.Drawing.Size(1269, 59);
+            this.pnlInformacion.Size = new System.Drawing.Size(1244, 38);
             this.pnlInformacion.TabIndex = 9;
             // 
-            // tcHistoriaClinica
+            // dateTimePicker1
             // 
-            this.tcHistoriaClinica.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.tcHistoriaClinica.Location = new System.Drawing.Point(780, 28);
-            this.tcHistoriaClinica.Name = "tcHistoriaClinica";
-            this.tcHistoriaClinica.ReadOnly = true;
-            this.tcHistoriaClinica.Size = new System.Drawing.Size(482, 22);
-            this.tcHistoriaClinica.TabIndex = 56;
-            this.tcHistoriaClinica.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(125, 3);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(126, 21);
+            this.dateTimePicker1.TabIndex = 58;
             // 
-            // label10
+            // label1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(696, 30);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 17);
-            this.label10.TabIndex = 54;
-            this.label10.Text = "Contrato:";
-            // 
-            // txtfechaIngreso
-            // 
-            this.txtfechaIngreso.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtfechaIngreso.Location = new System.Drawing.Point(328, 29);
-            this.txtfechaIngreso.Name = "txtfechaIngreso";
-            this.txtfechaIngreso.ReadOnly = true;
-            this.txtfechaIngreso.Size = new System.Drawing.Size(145, 22);
-            this.txtfechaIngreso.TabIndex = 53;
-            this.txtfechaIngreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(230, 31);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 17);
-            this.label8.TabIndex = 52;
-            this.label8.Text = "Fecha ingreso:";
-            // 
-            // txtAdmision
-            // 
-            this.txtAdmision.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtAdmision.Location = new System.Drawing.Point(111, 30);
-            this.txtAdmision.Name = "txtAdmision";
-            this.txtAdmision.ReadOnly = true;
-            this.txtAdmision.Size = new System.Drawing.Size(109, 22);
-            this.txtAdmision.TabIndex = 51;
-            this.txtAdmision.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 17);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "Nº Admision:";
-            // 
-            // txtEstancia
-            // 
-            this.txtEstancia.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtEstancia.Location = new System.Drawing.Point(1079, 4);
-            this.txtEstancia.Name = "txtEstancia";
-            this.txtEstancia.ReadOnly = true;
-            this.txtEstancia.Size = new System.Drawing.Size(183, 22);
-            this.txtEstancia.TabIndex = 49;
-            this.txtEstancia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1010, 6);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 17);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "Estancia:";
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtEdad.Location = new System.Drawing.Point(780, 2);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.ReadOnly = true;
-            this.txtEdad.Size = new System.Drawing.Size(63, 22);
-            this.txtEdad.TabIndex = 47;
-            this.txtEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(732, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 17);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "Edad:";
-            // 
-            // txtSexo
-            // 
-            this.txtSexo.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtSexo.Location = new System.Drawing.Point(896, 3);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.ReadOnly = true;
-            this.txtSexo.Size = new System.Drawing.Size(107, 22);
-            this.txtSexo.TabIndex = 45;
-            this.txtSexo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(850, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 17);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Sexo:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(481, 31);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 17);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Servicio:";
-            // 
-            // txtServicio
-            // 
-            this.txtServicio.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtServicio.Location = new System.Drawing.Point(543, 28);
-            this.txtServicio.Name = "txtServicio";
-            this.txtServicio.ReadOnly = true;
-            this.txtServicio.Size = new System.Drawing.Size(137, 22);
-            this.txtServicio.TabIndex = 23;
-            this.txtServicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtPaciente
-            // 
-            this.txtPaciente.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtPaciente.Location = new System.Drawing.Point(328, 3);
-            this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.ReadOnly = true;
-            this.txtPaciente.Size = new System.Drawing.Size(392, 22);
-            this.txtPaciente.TabIndex = 22;
-            // 
-            // txtAtencion
-            // 
-            this.txtAtencion.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtAtencion.Location = new System.Drawing.Point(111, 4);
-            this.txtAtencion.Name = "txtAtencion";
-            this.txtAtencion.ReadOnly = true;
-            this.txtAtencion.Size = new System.Drawing.Size(109, 22);
-            this.txtAtencion.TabIndex = 19;
-            this.txtAtencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(230, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 17);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Paciente:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 8);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 17);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Nº Atención:";
-            // 
-            // tabControlGalactus1
-            // 
-            this.tabControlGalactus1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tabControlGalactus1.Controls.Add(this.tabPage1);
-            this.tabControlGalactus1.Controls.Add(this.tabPage2);
-            this.tabControlGalactus1.ItemSize = new System.Drawing.Size(30, 120);
-            this.tabControlGalactus1.Location = new System.Drawing.Point(4, 98);
-            this.tabControlGalactus1.Multiline = true;
-            this.tabControlGalactus1.Name = "tabControlGalactus1";
-            this.tabControlGalactus1.SelectedIndex = 0;
-            this.tabControlGalactus1.Size = new System.Drawing.Size(1269, 344);
-            this.tabControlGalactus1.TabIndex = 11;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(124, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1141, 336);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Signos Vitales";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(124, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1141, 336);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Valoración Neurologica.";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(65, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 17);
+            this.label1.TabIndex = 57;
+            this.label1.Text = "Fecha:";
             // 
             // tstMenuPatron
             // 
@@ -322,11 +115,11 @@
             this.tsbGuardar,
             this.tsbBuscar,
             this.tsbAnular});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 445);
-            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 426);
+            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1213, 29);
+            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1213, 29);
             this.tstMenuPatron.Name = "tstMenuPatron";
-            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.Size = new System.Drawing.Size(1213, 29);
             this.tstMenuPatron.TabIndex = 49;
             this.tstMenuPatron.Text = "toolStrip1";
             // 
@@ -337,7 +130,7 @@
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
             this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 26);
             this.tsbNuevo.Text = "Nuevo";
             // 
             // tstModificar
@@ -347,7 +140,7 @@
             this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tstModificar.Name = "tstModificar";
-            this.tstModificar.Size = new System.Drawing.Size(78, 22);
+            this.tstModificar.Size = new System.Drawing.Size(78, 26);
             this.tstModificar.Text = "Modificar";
             // 
             // tsbCancelar
@@ -357,7 +150,7 @@
             this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 26);
             this.tsbCancelar.Text = "Cancelar";
             // 
             // tsbGuardar
@@ -367,7 +160,7 @@
             this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 26);
             this.tsbGuardar.Text = "Guardar";
             // 
             // tsbBuscar
@@ -377,7 +170,7 @@
             this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tsbBuscar.Name = "tsbBuscar";
-            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscar.Size = new System.Drawing.Size(62, 26);
             this.tsbBuscar.Text = "Buscar";
             // 
             // tsbAnular
@@ -387,57 +180,348 @@
             this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tsbAnular.Name = "tsbAnular";
-            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnular.Size = new System.Drawing.Size(62, 26);
             this.tsbAnular.Text = "Anular";
+            // 
+            // tpMedicamentos
+            // 
+            this.tpMedicamentos.Location = new System.Drawing.Point(124, 4);
+            this.tpMedicamentos.Name = "tpMedicamentos";
+            this.tpMedicamentos.Padding = new System.Windows.Forms.Padding(3);
+            this.tpMedicamentos.Size = new System.Drawing.Size(1130, 369);
+            this.tpMedicamentos.TabIndex = 1;
+            this.tpMedicamentos.Text = "Aplicación de medicamentos";
+            this.tpMedicamentos.UseVisualStyleBackColor = true;
+            // 
+            // tpSignos
+            // 
+            this.tpSignos.Controls.Add(this.dgvSabanaSignos);
+            this.tpSignos.Location = new System.Drawing.Point(124, 4);
+            this.tpSignos.Name = "tpSignos";
+            this.tpSignos.Padding = new System.Windows.Forms.Padding(3);
+            this.tpSignos.Size = new System.Drawing.Size(1135, 369);
+            this.tpSignos.TabIndex = 0;
+            this.tpSignos.Text = "Signos vitales";
+            this.tpSignos.UseVisualStyleBackColor = true;
+            // 
+            // dgvSabanaSignos
+            // 
+            this.dgvSabanaSignos.AllowUserToAddRows = false;
+            this.dgvSabanaSignos.AllowUserToDeleteRows = false;
+            this.dgvSabanaSignos.AllowUserToResizeColumns = false;
+            this.dgvSabanaSignos.AllowUserToResizeRows = false;
+            this.dgvSabanaSignos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvSabanaSignos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvSabanaSignos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvSabanaSignos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSabanaSignos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgSabanaIdSigno,
+            this.dgSabanaDescripcionSigno,
+            this.dgSigno00,
+            this.dgSigno01,
+            this.dgSigno02,
+            this.dgSigno03,
+            this.dgSigno04,
+            this.dgSigno05,
+            this.dgSigno06,
+            this.dgSigno07,
+            this.dgSigno08,
+            this.dgSigno09,
+            this.dgSigno10,
+            this.dgSigno11,
+            this.dgSigno12,
+            this.dgSigno13,
+            this.dgSigno14,
+            this.dgSigno15,
+            this.dgSigno16,
+            this.dgSigno17,
+            this.dgSigno18,
+            this.dgSigno19,
+            this.dgSigno20,
+            this.dgSigno21,
+            this.dgSigno22,
+            this.dgSigno23});
+            this.dgvSabanaSignos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvSabanaSignos.Location = new System.Drawing.Point(3, 3);
+            this.dgvSabanaSignos.Name = "dgvSabanaSignos";
+            this.dgvSabanaSignos.RowHeadersVisible = false;
+            this.dgvSabanaSignos.Size = new System.Drawing.Size(1129, 363);
+            this.dgvSabanaSignos.TabIndex = 6;
+            // 
+            // dgSabanaIdSigno
+            // 
+            this.dgSabanaIdSigno.DataPropertyName = "idSigno";
+            this.dgSabanaIdSigno.HeaderText = "idSigno";
+            this.dgSabanaIdSigno.Name = "dgSabanaIdSigno";
+            this.dgSabanaIdSigno.Visible = false;
+            this.dgSabanaIdSigno.Width = 48;
+            // 
+            // dgSabanaDescripcionSigno
+            // 
+            this.dgSabanaDescripcionSigno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSabanaDescripcionSigno.DataPropertyName = "descripcion";
+            this.dgSabanaDescripcionSigno.HeaderText = "Descripción";
+            this.dgSabanaDescripcionSigno.Name = "dgSabanaDescripcionSigno";
+            this.dgSabanaDescripcionSigno.Width = 142;
+            // 
+            // dgSigno00
+            // 
+            this.dgSigno00.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno00.DataPropertyName = "0";
+            this.dgSigno00.HeaderText = "0";
+            this.dgSigno00.MaxInputLength = 5;
+            this.dgSigno00.Name = "dgSigno00";
+            this.dgSigno00.Width = 40;
+            // 
+            // dgSigno01
+            // 
+            this.dgSigno01.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno01.DataPropertyName = "1";
+            this.dgSigno01.HeaderText = "1";
+            this.dgSigno01.MaxInputLength = 5;
+            this.dgSigno01.Name = "dgSigno01";
+            this.dgSigno01.Width = 40;
+            // 
+            // dgSigno02
+            // 
+            this.dgSigno02.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno02.DataPropertyName = "2";
+            this.dgSigno02.HeaderText = "2";
+            this.dgSigno02.MaxInputLength = 5;
+            this.dgSigno02.Name = "dgSigno02";
+            this.dgSigno02.Width = 40;
+            // 
+            // dgSigno03
+            // 
+            this.dgSigno03.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno03.DataPropertyName = "3";
+            this.dgSigno03.HeaderText = "3";
+            this.dgSigno03.MaxInputLength = 5;
+            this.dgSigno03.Name = "dgSigno03";
+            this.dgSigno03.Width = 40;
+            // 
+            // dgSigno04
+            // 
+            this.dgSigno04.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno04.DataPropertyName = "4";
+            this.dgSigno04.HeaderText = "4";
+            this.dgSigno04.MaxInputLength = 5;
+            this.dgSigno04.Name = "dgSigno04";
+            this.dgSigno04.Width = 40;
+            // 
+            // dgSigno05
+            // 
+            this.dgSigno05.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno05.DataPropertyName = "5";
+            this.dgSigno05.HeaderText = "5";
+            this.dgSigno05.MaxInputLength = 5;
+            this.dgSigno05.Name = "dgSigno05";
+            this.dgSigno05.Width = 40;
+            // 
+            // dgSigno06
+            // 
+            this.dgSigno06.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno06.DataPropertyName = "6";
+            this.dgSigno06.HeaderText = "6";
+            this.dgSigno06.MaxInputLength = 5;
+            this.dgSigno06.Name = "dgSigno06";
+            this.dgSigno06.Width = 40;
+            // 
+            // dgSigno07
+            // 
+            this.dgSigno07.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno07.DataPropertyName = "7";
+            this.dgSigno07.HeaderText = "7";
+            this.dgSigno07.MaxInputLength = 5;
+            this.dgSigno07.Name = "dgSigno07";
+            this.dgSigno07.Width = 40;
+            // 
+            // dgSigno08
+            // 
+            this.dgSigno08.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno08.DataPropertyName = "8";
+            this.dgSigno08.HeaderText = "8";
+            this.dgSigno08.MaxInputLength = 5;
+            this.dgSigno08.Name = "dgSigno08";
+            this.dgSigno08.Width = 40;
+            // 
+            // dgSigno09
+            // 
+            this.dgSigno09.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno09.DataPropertyName = "9";
+            this.dgSigno09.HeaderText = "9";
+            this.dgSigno09.MaxInputLength = 5;
+            this.dgSigno09.Name = "dgSigno09";
+            this.dgSigno09.Width = 40;
+            // 
+            // dgSigno10
+            // 
+            this.dgSigno10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno10.DataPropertyName = "10";
+            this.dgSigno10.HeaderText = "10";
+            this.dgSigno10.MaxInputLength = 5;
+            this.dgSigno10.Name = "dgSigno10";
+            this.dgSigno10.Width = 41;
+            // 
+            // dgSigno11
+            // 
+            this.dgSigno11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno11.DataPropertyName = "11";
+            this.dgSigno11.HeaderText = "11";
+            this.dgSigno11.MaxInputLength = 5;
+            this.dgSigno11.Name = "dgSigno11";
+            this.dgSigno11.Width = 40;
+            // 
+            // dgSigno12
+            // 
+            this.dgSigno12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno12.DataPropertyName = "12";
+            this.dgSigno12.HeaderText = "12";
+            this.dgSigno12.MaxInputLength = 5;
+            this.dgSigno12.Name = "dgSigno12";
+            this.dgSigno12.Width = 41;
+            // 
+            // dgSigno13
+            // 
+            this.dgSigno13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno13.DataPropertyName = "13";
+            this.dgSigno13.HeaderText = "13";
+            this.dgSigno13.MaxInputLength = 5;
+            this.dgSigno13.Name = "dgSigno13";
+            this.dgSigno13.Width = 41;
+            // 
+            // dgSigno14
+            // 
+            this.dgSigno14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno14.DataPropertyName = "14";
+            this.dgSigno14.HeaderText = "14";
+            this.dgSigno14.MaxInputLength = 5;
+            this.dgSigno14.Name = "dgSigno14";
+            this.dgSigno14.Width = 40;
+            // 
+            // dgSigno15
+            // 
+            this.dgSigno15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno15.DataPropertyName = "15";
+            this.dgSigno15.HeaderText = "15";
+            this.dgSigno15.MaxInputLength = 5;
+            this.dgSigno15.Name = "dgSigno15";
+            this.dgSigno15.Width = 40;
+            // 
+            // dgSigno16
+            // 
+            this.dgSigno16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno16.DataPropertyName = "16";
+            this.dgSigno16.HeaderText = "16";
+            this.dgSigno16.MaxInputLength = 5;
+            this.dgSigno16.Name = "dgSigno16";
+            this.dgSigno16.Width = 40;
+            // 
+            // dgSigno17
+            // 
+            this.dgSigno17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno17.DataPropertyName = "17";
+            this.dgSigno17.HeaderText = "17";
+            this.dgSigno17.MaxInputLength = 5;
+            this.dgSigno17.Name = "dgSigno17";
+            this.dgSigno17.Width = 40;
+            // 
+            // dgSigno18
+            // 
+            this.dgSigno18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno18.DataPropertyName = "18";
+            this.dgSigno18.HeaderText = "18";
+            this.dgSigno18.MaxInputLength = 5;
+            this.dgSigno18.Name = "dgSigno18";
+            this.dgSigno18.Width = 40;
+            // 
+            // dgSigno19
+            // 
+            this.dgSigno19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno19.DataPropertyName = "19";
+            this.dgSigno19.HeaderText = "19";
+            this.dgSigno19.MaxInputLength = 5;
+            this.dgSigno19.Name = "dgSigno19";
+            this.dgSigno19.Width = 40;
+            // 
+            // dgSigno20
+            // 
+            this.dgSigno20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno20.DataPropertyName = "20";
+            this.dgSigno20.HeaderText = "20";
+            this.dgSigno20.MaxInputLength = 5;
+            this.dgSigno20.Name = "dgSigno20";
+            this.dgSigno20.Width = 40;
+            // 
+            // dgSigno21
+            // 
+            this.dgSigno21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno21.DataPropertyName = "21";
+            this.dgSigno21.HeaderText = "21";
+            this.dgSigno21.MaxInputLength = 5;
+            this.dgSigno21.Name = "dgSigno21";
+            this.dgSigno21.Width = 40;
+            // 
+            // dgSigno22
+            // 
+            this.dgSigno22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno22.DataPropertyName = "22";
+            this.dgSigno22.HeaderText = "22";
+            this.dgSigno22.MaxInputLength = 5;
+            this.dgSigno22.Name = "dgSigno22";
+            this.dgSigno22.Width = 40;
+            // 
+            // dgSigno23
+            // 
+            this.dgSigno23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgSigno23.DataPropertyName = "23";
+            this.dgSigno23.HeaderText = "23";
+            this.dgSigno23.MaxInputLength = 5;
+            this.dgSigno23.Name = "dgSigno23";
+            this.dgSigno23.Width = 40;
+            // 
+            // tabControlGalactus1
+            // 
+            this.tabControlGalactus1.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tabControlGalactus1.Controls.Add(this.tpSignos);
+            this.tabControlGalactus1.Controls.Add(this.tpMedicamentos);
+            this.tabControlGalactus1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlGalactus1.ItemSize = new System.Drawing.Size(30, 120);
+            this.tabControlGalactus1.Location = new System.Drawing.Point(3, 46);
+            this.tabControlGalactus1.Multiline = true;
+            this.tabControlGalactus1.Name = "tabControlGalactus1";
+            this.tabControlGalactus1.SelectedIndex = 0;
+            this.tabControlGalactus1.Size = new System.Drawing.Size(1263, 377);
+            this.tabControlGalactus1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControlGalactus1.TabIndex = 11;
             // 
             // SabanaEnfermeriaUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1278, 470);
+            this.ClientSize = new System.Drawing.Size(1269, 455);
             this.Controls.Add(this.tstMenuPatron);
             this.Controls.Add(this.tabControlGalactus1);
-            this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.pnlInformacion);
+            this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SabanaEnfermeriaUI";
             this.Text = "SabanaEnfermeriaUI";
             this.pnlInformacion.ResumeLayout(false);
             this.pnlInformacion.PerformLayout();
-            this.tabControlGalactus1.ResumeLayout(false);
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
+            this.tpSignos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSabanaSignos)).EndInit();
+            this.tabControlGalactus1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.Panel pnlInformacion;
-        private System.Windows.Forms.TextBox tcHistoriaClinica;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtfechaIngreso;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtAdmision;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtEstancia;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtEdad;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSexo;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtServicio;
-        private System.Windows.Forms.TextBox txtPaciente;
-        private System.Windows.Forms.TextBox txtAtencion;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private Util.Controles.TabControlGalactus tabControlGalactus1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tstModificar;
@@ -445,5 +529,37 @@
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbBuscar;
         private System.Windows.Forms.ToolStripButton tsbAnular;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tpMedicamentos;
+        private System.Windows.Forms.TabPage tpSignos;
+        public System.Windows.Forms.DataGridView dgvSabanaSignos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSabanaIdSigno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSabanaDescripcionSigno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno00;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno01;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno02;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno03;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno04;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno05;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno06;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno07;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno08;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno09;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgSigno23;
+        private Util.Controles.TabControlGalactus tabControlGalactus1;
     }
 }

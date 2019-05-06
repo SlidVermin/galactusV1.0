@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
             this.dgvGlucometria = new System.Windows.Forms.DataGridView();
             this.dgId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +52,7 @@
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 8);
             this.GroupBox17.Name = "GroupBox17";
-            this.GroupBox17.Size = new System.Drawing.Size(976, 274);
+            this.GroupBox17.Size = new System.Drawing.Size(955, 270);
             this.GroupBox17.TabIndex = 10097;
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Glucometrias";
@@ -86,7 +86,7 @@
             this.dgvGlucometria.ShowCellToolTips = false;
             this.dgvGlucometria.ShowEditingIcon = false;
             this.dgvGlucometria.ShowRowErrors = false;
-            this.dgvGlucometria.Size = new System.Drawing.Size(970, 254);
+            this.dgvGlucometria.Size = new System.Drawing.Size(949, 250);
             this.dgvGlucometria.TabIndex = 2;
             // 
             // dgId
@@ -113,9 +113,9 @@
             // 
             // dgHora
             // 
-            dataGridViewCellStyle1.Format = "T";
-            dataGridViewCellStyle1.NullValue = "00:00:00";
-            this.dgHora.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Format = "T";
+            dataGridViewCellStyle4.NullValue = "00:00:00";
+            this.dgHora.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgHora.HeaderText = "Hora";
             this.dgHora.Name = "dgHora";
             this.dgHora.ReadOnly = true;
@@ -170,11 +170,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 291);
+            this.ClientSize = new System.Drawing.Size(972, 280);
             this.Controls.Add(this.GroupBox17);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(986, 291);
-            this.MinimumSize = new System.Drawing.Size(986, 291);
+            this.MaximumSize = new System.Drawing.Size(972, 280);
+            this.MinimumSize = new System.Drawing.Size(972, 280);
             this.Name = "GlucometriasUI";
             this.Text = "GlucometriasUI";
             this.Load += new System.EventHandler(this.GlucometriasUI_Load);

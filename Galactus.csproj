@@ -319,6 +319,12 @@
     <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\EnfermeriaUI.Designer.cs">
       <DependentUpon>EnfermeriaUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Fisioterapia\FisioterapiaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Fisioterapia\FisioterapiaUI.Designer.cs">
+      <DependentUpon>FisioterapiaUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\GlucometriasUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,6 +360,12 @@
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\ParaclinicosUI.Designer.cs">
       <DependentUpon>ParaclinicosUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EstanciaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\EstanciaUI.Designer.cs">
+      <DependentUpon>EstanciaUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\AnalisisUI.cs">
       <SubType>Form</SubType>
@@ -657,6 +669,9 @@
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Enfermeria\EnfermeriaUI.resx">
       <DependentUpon>EnfermeriaUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Fisioterapia\FisioterapiaUI.resx">
+      <DependentUpon>FisioterapiaUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Enfermeria\GlucometriasUI.resx">
       <DependentUpon>GlucometriasUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -674,6 +689,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Enfermeria\ParaclinicosUI.resx">
       <DependentUpon>ParaclinicosUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\EstanciaUI.resx">
+      <DependentUpon>EstanciaUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\EvolucionMedica\AnalisisUI.resx">
       <DependentUpon>AnalisisUI.cs</DependentUpon>

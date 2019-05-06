@@ -7,20 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Galactus.VistaControlador.HistoriaClinica;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
-    public partial class SabanaEnfermeriaUI : Form
-
+    public partial class EstanciaUI : Form
     {
         private int idAtencion;
-        public SabanaEnfermeriaUI()
+        public EstanciaUI()
         {
             InitializeComponent();
-
         }
-        public SabanaEnfermeriaUI(int idAtencion) {
+
+        public EstanciaUI(int idAtencion)
+        {
             InitializeComponent();
             this.idAtencion = idAtencion;
         }

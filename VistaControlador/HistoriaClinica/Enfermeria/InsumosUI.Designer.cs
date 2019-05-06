@@ -46,7 +46,7 @@
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 5);
             this.GroupBox17.Name = "GroupBox17";
-            this.GroupBox17.Size = new System.Drawing.Size(976, 274);
+            this.GroupBox17.Size = new System.Drawing.Size(955, 272);
             this.GroupBox17.TabIndex = 10094;
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Insumos";
@@ -77,7 +77,7 @@
             this.dgvInsumos.ShowCellToolTips = false;
             this.dgvInsumos.ShowEditingIcon = false;
             this.dgvInsumos.ShowRowErrors = false;
-            this.dgvInsumos.Size = new System.Drawing.Size(970, 254);
+            this.dgvInsumos.Size = new System.Drawing.Size(949, 252);
             this.dgvInsumos.TabIndex = 2;
             this.dgvInsumos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInsumos_CellContentClick);
             // 
@@ -122,11 +122,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 291);
+            this.ClientSize = new System.Drawing.Size(972, 280);
             this.Controls.Add(this.GroupBox17);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(986, 291);
-            this.MinimumSize = new System.Drawing.Size(986, 291);
+            this.MaximumSize = new System.Drawing.Size(972, 280);
+            this.MinimumSize = new System.Drawing.Size(972, 280);
             this.Name = "InsumosUI";
             this.Text = "InsumosUI";
             this.Load += new System.EventHandler(this.InsumosUI_Load);

@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoriaClinicaUI));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlInformacion = new System.Windows.Forms.Panel();
             this.tcHistoriaClinica = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -57,36 +54,24 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tpOrdenMedica = new System.Windows.Forms.TabPage();
             this.tstMenuOrdenMedica = new System.Windows.Forms.ToolStrip();
+            this.tpEstancia = new System.Windows.Forms.TabPage();
+            this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
+            this.tpIngresoClinico = new System.Windows.Forms.TabPage();
+            this.tpEgreso = new System.Windows.Forms.TabPage();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.tpEstancia = new System.Windows.Forms.TabPage();
-            this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
-            this.tpIngresoClinico = new System.Windows.Forms.TabPage();
-            this.tpEgreso = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.gbEstancia = new System.Windows.Forms.GroupBox();
-            this.dgvEstancia = new System.Windows.Forms.DataGridView();
-            this.dgIdCodigoManualCUPSEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgExcluirEstancia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgFechaEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgCodigoCUPSEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgDescripcionEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgJustificacionEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgIdUsuarioCEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlInformacion.SuspendLayout();
             this.tbLaboratorios.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
             this.tstMenuOrdenMedica.SuspendLayout();
-            this.tpEstancia.SuspendLayout();
             this.tabHistoriaClinica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gbEstancia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstancia)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlInformacion
@@ -113,7 +98,7 @@
             this.pnlInformacion.Controls.Add(this.label5);
             this.pnlInformacion.Location = new System.Drawing.Point(11, 51);
             this.pnlInformacion.Name = "pnlInformacion";
-            this.pnlInformacion.Size = new System.Drawing.Size(1297, 59);
+            this.pnlInformacion.Size = new System.Drawing.Size(1290, 59);
             this.pnlInformacion.TabIndex = 2;
             // 
             // tcHistoriaClinica
@@ -130,7 +115,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(696, 30);
+            this.label10.Location = new System.Drawing.Point(712, 32);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 17);
             this.label10.TabIndex = 54;
@@ -170,7 +155,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 31);
+            this.label7.Location = new System.Drawing.Point(20, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 17);
             this.label7.TabIndex = 50;
@@ -279,7 +264,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(230, 8);
+            this.label3.Location = new System.Drawing.Point(263, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 16;
@@ -289,11 +274,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 8);
+            this.label5.Location = new System.Drawing.Point(44, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 17);
+            this.label5.Size = new System.Drawing.Size(61, 17);
             this.label5.TabIndex = 15;
-            this.label5.Text = "Nº Atención:";
+            this.label5.Text = "Atención:";
             // 
             // lbTitulo
             // 
@@ -362,6 +347,73 @@
             this.tstMenuOrdenMedica.TabIndex = 49;
             this.tstMenuOrdenMedica.Text = "toolStrip1";
             // 
+            // tpEstancia
+            // 
+            this.tpEstancia.Location = new System.Drawing.Point(4, 29);
+            this.tpEstancia.Name = "tpEstancia";
+            this.tpEstancia.Size = new System.Drawing.Size(1289, 468);
+            this.tpEstancia.TabIndex = 3;
+            this.tpEstancia.Text = "Estancia";
+            this.tpEstancia.UseVisualStyleBackColor = true;
+            // 
+            // tabHistoriaClinica
+            // 
+            this.tabHistoriaClinica.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabHistoriaClinica.Controls.Add(this.tpIngresoClinico);
+            this.tabHistoriaClinica.Controls.Add(this.tpEstancia);
+            this.tabHistoriaClinica.Controls.Add(this.tpOrdenMedica);
+            this.tabHistoriaClinica.Controls.Add(this.tbLaboratorios);
+            this.tabHistoriaClinica.Controls.Add(this.tpEvolucion);
+            this.tabHistoriaClinica.Controls.Add(this.tpEgreso);
+            this.tabHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabHistoriaClinica.Location = new System.Drawing.Point(11, 116);
+            this.tabHistoriaClinica.Name = "tabHistoriaClinica";
+            this.tabHistoriaClinica.SelectedIndex = 0;
+            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 501);
+            this.tabHistoriaClinica.TabIndex = 46;
+            // 
+            // tpIngresoClinico
+            // 
+            this.tpIngresoClinico.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpIngresoClinico.Location = new System.Drawing.Point(4, 29);
+            this.tpIngresoClinico.Name = "tpIngresoClinico";
+            this.tpIngresoClinico.Padding = new System.Windows.Forms.Padding(3);
+            this.tpIngresoClinico.Size = new System.Drawing.Size(1289, 468);
+            this.tpIngresoClinico.TabIndex = 0;
+            this.tpIngresoClinico.Text = "Ingreso Clinico";
+            // 
+            // tpEgreso
+            // 
+            this.tpEgreso.Location = new System.Drawing.Point(4, 29);
+            this.tpEgreso.Name = "tpEgreso";
+            this.tpEgreso.Padding = new System.Windows.Forms.Padding(3);
+            this.tpEgreso.Size = new System.Drawing.Size(1289, 468);
+            this.tpEgreso.TabIndex = 5;
+            this.tpEgreso.Text = "Egreso";
+            this.tpEgreso.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(1287, 4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(26, 24);
+            this.btnSalir.TabIndex = 61;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            // 
             // tsBtNuevo
             // 
             this.tsBtNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -424,176 +476,6 @@
             this.toolStripButton6.Size = new System.Drawing.Size(73, 22);
             this.toolStripButton6.Text = "Cancelar";
             // 
-            // tpEstancia
-            // 
-            this.tpEstancia.Controls.Add(this.gbEstancia);
-            this.tpEstancia.Location = new System.Drawing.Point(4, 29);
-            this.tpEstancia.Name = "tpEstancia";
-            this.tpEstancia.Size = new System.Drawing.Size(1289, 468);
-            this.tpEstancia.TabIndex = 3;
-            this.tpEstancia.Text = "Estancia";
-            this.tpEstancia.UseVisualStyleBackColor = true;
-            // 
-            // tabHistoriaClinica
-            // 
-            this.tabHistoriaClinica.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabHistoriaClinica.Controls.Add(this.tpIngresoClinico);
-            this.tabHistoriaClinica.Controls.Add(this.tpEstancia);
-            this.tabHistoriaClinica.Controls.Add(this.tpOrdenMedica);
-            this.tabHistoriaClinica.Controls.Add(this.tbLaboratorios);
-            this.tabHistoriaClinica.Controls.Add(this.tpEvolucion);
-            this.tabHistoriaClinica.Controls.Add(this.tpEgreso);
-            this.tabHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabHistoriaClinica.Location = new System.Drawing.Point(11, 116);
-            this.tabHistoriaClinica.Name = "tabHistoriaClinica";
-            this.tabHistoriaClinica.SelectedIndex = 0;
-            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 501);
-            this.tabHistoriaClinica.TabIndex = 46;
-            // 
-            // tpIngresoClinico
-            // 
-            this.tpIngresoClinico.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tpIngresoClinico.Location = new System.Drawing.Point(4, 29);
-            this.tpIngresoClinico.Name = "tpIngresoClinico";
-            this.tpIngresoClinico.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIngresoClinico.Size = new System.Drawing.Size(1289, 468);
-            this.tpIngresoClinico.TabIndex = 0;
-            this.tpIngresoClinico.Text = "Ingreso Clinico";
-            // 
-            // tpEgreso
-            // 
-            this.tpEgreso.Location = new System.Drawing.Point(4, 29);
-            this.tpEgreso.Name = "tpEgreso";
-            this.tpEgreso.Padding = new System.Windows.Forms.Padding(3);
-            this.tpEgreso.Size = new System.Drawing.Size(1289, 468);
-            this.tpEgreso.TabIndex = 5;
-            this.tpEgreso.Text = "Egreso";
-            this.tpEgreso.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 60;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(1287, 4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(26, 24);
-            this.btnSalir.TabIndex = 61;
-            this.btnSalir.Text = "X";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
-            // 
-            // gbEstancia
-            // 
-            this.gbEstancia.Controls.Add(this.dgvEstancia);
-            this.gbEstancia.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbEstancia.Location = new System.Drawing.Point(9, 14);
-            this.gbEstancia.Name = "gbEstancia";
-            this.gbEstancia.Size = new System.Drawing.Size(1271, 451);
-            this.gbEstancia.TabIndex = 4;
-            this.gbEstancia.TabStop = false;
-            this.gbEstancia.Text = "Listado de estancia por dia";
-            // 
-            // dgvEstancia
-            // 
-            this.dgvEstancia.AllowUserToAddRows = false;
-            this.dgvEstancia.AllowUserToDeleteRows = false;
-            this.dgvEstancia.AllowUserToResizeColumns = false;
-            this.dgvEstancia.AllowUserToResizeRows = false;
-            this.dgvEstancia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvEstancia.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvEstancia.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvEstancia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEstancia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvEstancia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstancia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgIdCodigoManualCUPSEstancia,
-            this.dgExcluirEstancia,
-            this.dgFechaEstancia,
-            this.dgCodigoCUPSEstancia,
-            this.dgDescripcionEstancia,
-            this.dgJustificacionEstancia,
-            this.dgIdUsuarioCEstancia});
-            this.dgvEstancia.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgvEstancia.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEstancia.Location = new System.Drawing.Point(3, 17);
-            this.dgvEstancia.MultiSelect = false;
-            this.dgvEstancia.Name = "dgvEstancia";
-            this.dgvEstancia.RowHeadersVisible = false;
-            this.dgvEstancia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvEstancia.Size = new System.Drawing.Size(1265, 431);
-            this.dgvEstancia.TabIndex = 15;
-            // 
-            // dgIdCodigoManualCUPSEstancia
-            // 
-            this.dgIdCodigoManualCUPSEstancia.HeaderText = "idCodigoManualCUPS";
-            this.dgIdCodigoManualCUPSEstancia.Name = "dgIdCodigoManualCUPSEstancia";
-            this.dgIdCodigoManualCUPSEstancia.Visible = false;
-            this.dgIdCodigoManualCUPSEstancia.Width = 142;
-            // 
-            // dgExcluirEstancia
-            // 
-            this.dgExcluirEstancia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgExcluirEstancia.HeaderText = "Excluir";
-            this.dgExcluirEstancia.Name = "dgExcluirEstancia";
-            this.dgExcluirEstancia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgExcluirEstancia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgExcluirEstancia.Width = 50;
-            // 
-            // dgFechaEstancia
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dgFechaEstancia.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgFechaEstancia.HeaderText = "Fecha";
-            this.dgFechaEstancia.Name = "dgFechaEstancia";
-            this.dgFechaEstancia.Width = 66;
-            // 
-            // dgCodigoCUPSEstancia
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgCodigoCUPSEstancia.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgCodigoCUPSEstancia.HeaderText = "Código";
-            this.dgCodigoCUPSEstancia.Name = "dgCodigoCUPSEstancia";
-            this.dgCodigoCUPSEstancia.Width = 72;
-            // 
-            // dgDescripcionEstancia
-            // 
-            this.dgDescripcionEstancia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgDescripcionEstancia.HeaderText = "Descripción";
-            this.dgDescripcionEstancia.Name = "dgDescripcionEstancia";
-            this.dgDescripcionEstancia.Width = 550;
-            // 
-            // dgJustificacionEstancia
-            // 
-            this.dgJustificacionEstancia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgJustificacionEstancia.HeaderText = "Justificación";
-            this.dgJustificacionEstancia.Name = "dgJustificacionEstancia";
-            // 
-            // dgIdUsuarioCEstancia
-            // 
-            this.dgIdUsuarioCEstancia.HeaderText = "idUsuarioC";
-            this.dgIdUsuarioCEstancia.Name = "dgIdUsuarioCEstancia";
-            this.dgIdUsuarioCEstancia.Visible = false;
-            this.dgIdUsuarioCEstancia.Width = 97;
-            // 
             // HistoriaClinicaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -620,11 +502,8 @@
             this.tpOrdenMedica.PerformLayout();
             this.tstMenuOrdenMedica.ResumeLayout(false);
             this.tstMenuOrdenMedica.PerformLayout();
-            this.tpEstancia.ResumeLayout(false);
             this.tabHistoriaClinica.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.gbEstancia.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEstancia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -668,14 +547,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TabPage tpEgreso;
-        internal System.Windows.Forms.GroupBox gbEstancia;
-        public System.Windows.Forms.DataGridView dgvEstancia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgIdCodigoManualCUPSEstancia;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dgExcluirEstancia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgFechaEstancia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigoCUPSEstancia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcionEstancia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgJustificacionEstancia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgIdUsuarioCEstancia;
     }
 }

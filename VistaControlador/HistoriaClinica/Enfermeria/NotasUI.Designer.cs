@@ -39,7 +39,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(4, 7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(978, 281);
+            this.groupBox1.Size = new System.Drawing.Size(956, 271);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nota";
@@ -49,7 +49,7 @@
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(3, 17);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(972, 261);
+            this.richTextBox1.Size = new System.Drawing.Size(950, 251);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -57,11 +57,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 291);
+            this.ClientSize = new System.Drawing.Size(972, 280);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(986, 291);
-            this.MinimumSize = new System.Drawing.Size(986, 291);
+            this.MaximumSize = new System.Drawing.Size(972, 280);
+            this.MinimumSize = new System.Drawing.Size(972, 280);
             this.Name = "NotasUI";
             this.Text = "NotasUI";
             this.groupBox1.ResumeLayout(false);

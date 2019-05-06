@@ -46,7 +46,7 @@
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 8);
             this.GroupBox17.Name = "GroupBox17";
-            this.GroupBox17.Size = new System.Drawing.Size(976, 274);
+            this.GroupBox17.Size = new System.Drawing.Size(963, 269);
             this.GroupBox17.TabIndex = 10095;
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Paraclinicos";
@@ -77,7 +77,7 @@
             this.dgvDiagnostico.ShowCellToolTips = false;
             this.dgvDiagnostico.ShowEditingIcon = false;
             this.dgvDiagnostico.ShowRowErrors = false;
-            this.dgvDiagnostico.Size = new System.Drawing.Size(970, 254);
+            this.dgvDiagnostico.Size = new System.Drawing.Size(957, 249);
             this.dgvDiagnostico.TabIndex = 2;
             // 
             // dgId
@@ -122,11 +122,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 291);
+            this.ClientSize = new System.Drawing.Size(972, 280);
             this.Controls.Add(this.GroupBox17);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(986, 291);
-            this.MinimumSize = new System.Drawing.Size(986, 291);
+            this.MaximumSize = new System.Drawing.Size(972, 280);
+            this.MinimumSize = new System.Drawing.Size(972, 280);
             this.Name = "ParaclinicosUI";
             this.Text = "ParaclinicosUI";
             this.GroupBox17.ResumeLayout(false);

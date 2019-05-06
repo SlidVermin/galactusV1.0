@@ -6,6 +6,7 @@ using Galactus.Entidades.HistoriaClinica;
 using Galactus.Entidades.HistoriaClinica.OrdenMedica;
 using Galactus.VistaControlador.HistoriaClinica.OrdenMedica;
 using Galactus.VistaControlador.HistoriaClinica.Enfermeria;
+using System.Collections.Generic;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
@@ -14,8 +15,10 @@ namespace Galactus.VistaControlador.HistoriaClinica
     {
         private int idAtencion;
        
-        EnfermeriaUI Enfermeria;
-      
+        private EnfermeriaUI enfermeria;
+        private FisioterapiaUI fisioterapia;
+        private SabanaEnfermeriaUI sabana;
+
         public FichaEnfermeriaUI()
         {
             InitializeComponent();
@@ -33,8 +36,12 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
         {
-            Enfermeria = new EnfermeriaUI(idAtencion);
-            GeneralC.cargarFormularioEnPestana(tpEnfermeria, Enfermeria);
+            enfermeria = new EnfermeriaUI(idAtencion);
+            fisioterapia = new FisioterapiaUI(idAtencion);
+            sabana = new SabanaEnfermeriaUI(idAtencion);
+            GeneralC.cargarFormularioEnPestana(tpEnfermeria, enfermeria);
+            GeneralC.cargarFormularioEnPestana(tpSabana, sabana);
+            GeneralC.cargarFormularioEnPestana(tpFisioterapeutas, fisioterapia);
         }
         public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso)
         {
@@ -53,6 +60,9 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 txtfechaIngreso.Text = Convert.ToString(dtDatos.Rows[0].Field<DateTime>("Fecha ingreso"));
 
                 idAtencion = int.Parse(txtAtencion.Text);
+
+               
+
             }
         }
 
@@ -69,6 +79,14 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(Mensajes.SALIR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Close();
+            }
         }
     }
 }

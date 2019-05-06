@@ -33,7 +33,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         }
         private void EnfermeriaUI_Load(object sender, EventArgs e)
         {
-            fecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
+            dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
             GeneralC.cargarFormularioEnPestana(tpInsumos, insumos);
             GeneralC.cargarFormularioEnPestana(tpNotas, notas);
             GeneralC.cargarFormularioEnPestana(tpParaclinicos, paraclinicos);
@@ -50,7 +50,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         {
             GeneralC.formNuevo(this, tstMenuEvolucion, tsBtGuardar, tsBtCancelar);
             opciones();
-            fecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
+            dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
             enfermeria.idInsumo = ConstanteGeneral.PREDETERMINADO;
         }
 
@@ -180,7 +180,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         {
             enfermeria.idAtencion = idAtencion;
             enfermeria.idInsumo = (txtcodigoOrdenMedica.Text.Equals(string.Empty) ? ConstanteGeneral.PREDETERMINADO : Convert.ToInt32(txtcodigoOrdenMedica.Text));
-            enfermeria.fecha = Convert.ToDateTime(fecha.Text);
+            enfermeria.fecha = Convert.ToDateTime(dtpFecha.Text);
         }
         public void guardarInsumos()
         {
@@ -261,7 +261,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
 
                     break;
                 case 3:
-                    fecha.Text = Convert.ToString(enfermeria.fechaProcedimiento);
+                    dtpFecha.Text = Convert.ToString(enfermeria.fechaProcedimiento);
                     tsBtNuevo.Visible = false;
                     break;
                 case 4:
@@ -287,7 +287,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         {
             GeneralC.fnCancelarForm(this, tstMenuEvolucion, tsBtNuevo, tsBtBuscar);
             enfermeria.idInsumo = ConstanteGeneral.PREDETERMINADO;
-            fecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
+            dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
         }
     }
 }
