@@ -88,7 +88,7 @@
             this.btlogo.BackColor = System.Drawing.Color.White;
             this.btlogo.ForeColor = System.Drawing.Color.Black;
             this.btlogo.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btlogo.Location = new System.Drawing.Point(803, 173);
+            this.btlogo.Location = new System.Drawing.Point(803, 182);
             this.btlogo.Name = "btlogo";
             this.btlogo.Size = new System.Drawing.Size(170, 24);
             this.btlogo.TabIndex = 22;
@@ -100,7 +100,7 @@
             // 
             this.picLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picLogo.Location = new System.Drawing.Point(803, 11);
+            this.picLogo.Location = new System.Drawing.Point(803, 20);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(170, 159);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,9 +110,9 @@
             // GroupBox7
             // 
             this.GroupBox7.Controls.Add(this.txtPie);
-            this.GroupBox7.Location = new System.Drawing.Point(5, 104);
+            this.GroupBox7.Location = new System.Drawing.Point(5, 118);
             this.GroupBox7.Name = "GroupBox7";
-            this.GroupBox7.Size = new System.Drawing.Size(792, 93);
+            this.GroupBox7.Size = new System.Drawing.Size(792, 95);
             this.GroupBox7.TabIndex = 1;
             this.GroupBox7.TabStop = false;
             this.GroupBox7.Text = "Pie de factura";
@@ -130,9 +130,9 @@
             // GroupBox6
             // 
             this.GroupBox6.Controls.Add(this.txtEncabezado);
-            this.GroupBox6.Location = new System.Drawing.Point(5, 5);
+            this.GroupBox6.Location = new System.Drawing.Point(5, 11);
             this.GroupBox6.Name = "GroupBox6";
-            this.GroupBox6.Size = new System.Drawing.Size(792, 93);
+            this.GroupBox6.Size = new System.Drawing.Size(792, 97);
             this.GroupBox6.TabIndex = 0;
             this.GroupBox6.TabStop = false;
             this.GroupBox6.Text = "Encabezado";
@@ -351,7 +351,7 @@
             this.tsbGuardar,
             this.tsbBuscar,
             this.tsbAnular});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 525);
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 555);
             this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.Name = "tstMenuPatron";
@@ -459,7 +459,7 @@
             this.panel1.Controls.Add(this.pnlInformacion);
             this.panel1.Location = new System.Drawing.Point(23, 43);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1015, 463);
+            this.panel1.Size = new System.Drawing.Size(1009, 490);
             this.panel1.TabIndex = 59;
             // 
             // panel2
@@ -474,7 +474,7 @@
             this.panel2.Controls.Add(this.picLogo);
             this.panel2.Location = new System.Drawing.Point(15, 238);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(984, 203);
+            this.panel2.Size = new System.Drawing.Size(978, 229);
             this.panel2.TabIndex = 23;
             // 
             // label5
@@ -529,7 +529,7 @@
             this.pnlInformacion.Controls.Add(this.cmbDepartamento);
             this.pnlInformacion.Location = new System.Drawing.Point(15, 46);
             this.pnlInformacion.Name = "pnlInformacion";
-            this.pnlInformacion.Size = new System.Drawing.Size(984, 150);
+            this.pnlInformacion.Size = new System.Drawing.Size(978, 150);
             this.pnlInformacion.TabIndex = 1;
             // 
             // tsbBuscarTercero
@@ -545,9 +545,9 @@
             // txtNombreResponsable
             // 
             this.txtNombreResponsable.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreResponsable.Location = new System.Drawing.Point(355, 116);
+            this.txtNombreResponsable.Location = new System.Drawing.Point(350, 116);
             this.txtNombreResponsable.Name = "txtNombreResponsable";
-            this.txtNombreResponsable.Size = new System.Drawing.Size(617, 21);
+            this.txtNombreResponsable.Size = new System.Drawing.Size(622, 21);
             this.txtNombreResponsable.TabIndex = 10002;
             // 
             // txtIdentificacionRepresentante
@@ -573,15 +573,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1059, 550);
+            this.ClientSize = new System.Drawing.Size(1059, 580);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tstMenuPatron);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1059, 550);
-            this.MinimumSize = new System.Drawing.Size(1059, 550);
+            this.MaximumSize = new System.Drawing.Size(1059, 580);
+            this.MinimumSize = new System.Drawing.Size(1059, 580);
             this.Name = "EmpresaUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Empresa";

@@ -63,180 +63,180 @@ namespace Galactus.VistaControlador
             GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                paisBox);
+                                cmbPaisDocumento);
             GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                               paisNacBox);
+                               cmbPaisNacimiento);
             GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                               paisResBox);
+                               cmbPaisResidencia);
             GeneralC.llenarCombo(Sentencias.CARGAR_TIPO_DOCUMENTOS, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                                Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                               tipoDocBox);
+                               cmbDocumento);
             GeneralC.llenarCombo(Sentencias.CARGAR_GENERO, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                                Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                               sexoBox);
+                               cmbSexo);
             GeneralC.llenarCombo(Sentencias.CARGAR_ESTADO_CIVIL, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                                Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                               estadoCivilBox);
+                               cmbEstadoCivil);
             GeneralC.llenarCombo(Sentencias.CARGAR_AFILIACION, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                              tipoAfiliacionBox);
+                              cmbAfiliacion);
             GeneralC.llenarCombo(Sentencias.CARGAR_ESTRATO_SOCIAL, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                              estratoBox);
+                              cmbEstrato);
             GeneralC.llenarCombo(Sentencias.CARGAR_REGIMEN, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                              regimenBox);
+                              cmbRegimen);
             GeneralC.llenarCombo(Sentencias.CARGAR_ZONA, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                              zonaBox);
+                              cmbZona);
             btnSalir.Enabled = true;
         }
 
         public void deshabilitarControles()
         {
-            departBox.Enabled = false;
-            muniBox.Enabled = false;
-            departNacBox.Enabled = false;
-            MuniNacBox.Enabled = false;
-            departResBox.Enabled = false;
-            ciudadResBox.Enabled = false;
+            cmbDepartamentoDoc.Enabled = false;
+            cmbCiudadDocumento.Enabled = false;
+            cmbDepartamentoNac.Enabled = false;
+            cmbCiudadNacimiento.Enabled = false;
+            cmbDepartamentoRes.Enabled = false;
+            cmbCiudadResidencia.Enabled = false;
         }
 
         private void departNacBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (departNacBox.SelectedIndex > 0)
+            if (cmbDepartamentoNac.SelectedIndex > 0)
             {
-                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + departNacBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + cmbDepartamentoNac.SelectedValue + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 MuniNacBox);
-                GeneralC.validarComboUbicacion(departNacBox, MuniNacBox);
+                                 cmbCiudadNacimiento);
+                GeneralC.validarComboUbicacion(cmbDepartamentoNac, cmbCiudadNacimiento);
             }
             else
             {
                 GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 MuniNacBox);
-                GeneralC.validarComboUbicacion(departNacBox, MuniNacBox);
+                                 cmbCiudadNacimiento);
+                GeneralC.validarComboUbicacion(cmbDepartamentoNac, cmbCiudadNacimiento);
             }
         }
 
         public bool validarForm()
         {
-            if(tipoDocBox.SelectedIndex == 0)
+            if(cmbDocumento.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione un tipo de documento !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                tipoDocBox.Focus();
+                cmbDocumento.Focus();
                 return false;
-            }else if (idText.Equals(string.Empty))
+            }else if (txtIdentificacion.Equals(string.Empty))
             {
                 MessageBox.Show("¡ Favor digite el numero del documento identidad !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                idText.Focus();
+                txtIdentificacion.Focus();
                 return false;
-            }else if (paisBox.SelectedIndex == 0)
+            }else if (cmbPaisDocumento.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el pais de expedición !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                paisBox.Focus();
+                cmbPaisDocumento.Focus();
                 return false;
-            }else if (departBox.SelectedIndex == 0)
+            }else if (cmbDepartamentoDoc.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el departamento de expedición !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                departBox.Focus();
+                cmbDepartamentoDoc.Focus();
                 return false;
-            }else if (muniBox.SelectedIndex == 0)
+            }else if (cmbCiudadDocumento.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el municipio de expedición !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                muniBox.Focus();
+                cmbCiudadDocumento.Focus();
                 return false;
-            }else if (pNombreText.Equals(string.Empty))
+            }else if (txtPrimerNombre.Equals(string.Empty))
             {
                 MessageBox.Show("¡ Favor digite el primer nombre !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                pNombreText.Focus();
+                txtPrimerNombre.Focus();
                 return false;
-            }else if (pApellidoText.Equals(string.Empty))
+            }else if (txtPrimerApellido.Equals(string.Empty))
             {
                 MessageBox.Show("¡ Favor digite el primer apellido !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                pApellidoText.Focus();
+                txtPrimerApellido.Focus();
                 return false;
-            }else if (sApellidoText.Equals(string.Empty))
+            }else if (txtSegundoApellido.Equals(string.Empty))
             {
                 MessageBox.Show("¡ Favor digite el segundo apellido !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                sApellidoText.Focus();
+                txtSegundoApellido.Focus();
                 return false;
-            }else if (sexoBox.SelectedIndex == 0)
+            }else if (cmbSexo.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el genero !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                sexoBox.Focus();
+                cmbSexo.Focus();
                 return false;
-            }else if (epsText.Equals(string.Empty))
+            }else if (txtEPS.Equals(string.Empty))
             {
                 MessageBox.Show("¡ Favor seleccione la EPS !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                epsText.Focus();
+                txtEPS.Focus();
                 return false;
-            }else if (paisNacBox.SelectedIndex == 0)
+            }else if (cmbPaisNacimiento.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el pais de nacimiento !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                paisNacBox.Focus();
+                cmbPaisNacimiento.Focus();
                 return false;
-            }else if (departNacBox.SelectedIndex == 0)
+            }else if (cmbDepartamentoNac.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el departamento de nacimiento !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                departNacBox.Focus();
+                cmbDepartamentoNac.Focus();
                 return false;
-            }else if (MuniNacBox.SelectedIndex == 0)
+            }else if (cmbCiudadNacimiento.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el municipio de nacimiento !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                MuniNacBox.Focus();
+                cmbCiudadNacimiento.Focus();
                 return false;
-            }else if (regimenBox.SelectedIndex == 0)
+            }else if (cmbRegimen.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el regimen !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                regimenBox.Focus();
+                cmbRegimen.Focus();
                 return false;
-            }else if (tipoAfiliacionBox.SelectedIndex == 0)
+            }else if (cmbAfiliacion.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el tipo de afiliación !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                tipoAfiliacionBox.Focus();
+                cmbAfiliacion.Focus();
                 return false;
-            }else if (estratoBox.SelectedIndex == 0)
+            }else if (cmbEstrato.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el estrato social !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                estratoBox.Focus();
+                cmbEstrato.Focus();
                 return false;
-            }else if (zonaBox.SelectedIndex == 0)
+            }else if (cmbZona.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione la zona !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                zonaBox.Focus();
+                cmbZona.Focus();
                 return false;
-            }else if (estadoCivilBox.SelectedIndex == 0)
+            }else if (cmbEstadoCivil.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el estado civil !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                estadoCivilBox.Focus();
+                cmbEstadoCivil.Focus();
                 return false;
-            }else if (paisResBox.SelectedIndex == 0)
+            }else if (cmbPaisResidencia.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el pais de residencia !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                paisResBox.Focus();
+                cmbPaisResidencia.Focus();
                 return false;
-            }else if (departResBox.SelectedIndex == 0)
+            }else if (cmbDepartamentoRes.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el departamento de residencia !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                departResBox.Focus();
+                cmbDepartamentoRes.Focus();
                 return false;
-            }else if (ciudadResBox.SelectedIndex == 0)
+            }else if (cmbCiudadResidencia.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el municipio de residencia !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                ciudadResBox.Focus();
+                cmbCiudadResidencia.Focus();
                 return false;
-            }else if (direccionResText.Equals(string.Empty))
+            }else if (txtDireccion.Equals(string.Empty))
             {
                 MessageBox.Show("¡ Favor digite la direccion de residencia !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                direccionResText.Focus();
+                txtDireccion.Focus();
                 return false;
             }else if (telResText.Equals(string.Empty))
             {
@@ -252,26 +252,26 @@ namespace Galactus.VistaControlador
 
         void asignarDatos()
         {
-            paciente.primeroNombre = pNombreText.Text;
-            paciente.segundoNombre = sNombreText.Text;
-            paciente.primerApellido = pApellidoText.Text;
-            paciente.segundoApellido = sApellidoText.Text;
-            paciente.tipoIdentificacion = (string)tipoDocBox.SelectedValue;
-            paciente.documentoIndentidad = idText.Text;
-            paciente.idMunicipioExpedicion = (string)muniBox.SelectedValue;
-            paciente.idMunicipioNacimiento = (string)MuniNacBox.SelectedValue;
-            paciente.idMunicipioResidencia = (string)ciudadResBox.SelectedValue;
-            paciente.correo = emailText.Text;
-            paciente.idGenero = (string)sexoBox.SelectedValue;
-            paciente.direccionResidencia = direccionResText.Text;
+            paciente.primeroNombre = txtPrimerNombre.Text;
+            paciente.segundoNombre = txtSegundoNombre.Text;
+            paciente.primerApellido = txtPrimerApellido.Text;
+            paciente.segundoApellido = txtSegundoApellido.Text;
+            paciente.tipoIdentificacion = (string)cmbDocumento.SelectedValue;
+            paciente.documentoIndentidad = txtIdentificacion.Text;
+            paciente.idMunicipioExpedicion = (string)cmbCiudadDocumento.SelectedValue;
+            paciente.idMunicipioNacimiento = (string)cmbCiudadNacimiento.SelectedValue;
+            paciente.idMunicipioResidencia = (string)cmbCiudadResidencia.SelectedValue;
+            paciente.correo = txtEmail.Text;
+            paciente.idGenero = (string)cmbSexo.SelectedValue;
+            paciente.direccionResidencia = txtDireccion.Text;
             paciente.telefono = telResText.Text;
             paciente.celular = celResText.Text;
-            paciente.fechaNacimiento = fechaNPicker.Value;
-            paciente.idRegimen = (string)regimenBox.SelectedValue;
-            paciente.idTipoAfiliacion = (string)tipoAfiliacionBox.SelectedValue;
-            paciente.idZonaUrbana = (string)zonaBox.SelectedValue;
-            paciente.idEstadoCivil = (string)estadoCivilBox.SelectedValue;
-            paciente.idestrato = (string)estratoBox.SelectedValue;
+            paciente.fechaNacimiento = dtpNacimiento.Value;
+            paciente.idRegimen = (string)cmbRegimen.SelectedValue;
+            paciente.idTipoAfiliacion = (string)cmbAfiliacion.SelectedValue;
+            paciente.idZonaUrbana = (string)cmbZona.SelectedValue;
+            paciente.idEstadoCivil = (string)cmbEstadoCivil.SelectedValue;
+            paciente.idestrato = (string)cmbEstrato.SelectedValue;
         }
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
@@ -286,7 +286,7 @@ namespace Galactus.VistaControlador
         public void cargarRegistro(DataRow fila)
         {
             paciente.idEps = fila.Field<int>("idEps");
-            epsText.Text = fila.Field<string>("Descripcion");
+            txtEPS.Text = fila.Field<string>("Descripcion");
         }
 
         private void tsbBuscar_Click(object sender, EventArgs e)
@@ -296,31 +296,31 @@ namespace Galactus.VistaControlador
         public void cargarPaciente(DataRow fila)
         {
             paciente.idPaciente = fila.Field<int>("idPaciente");
-            epsText.Text = fila.Field<string>("eps");
+            txtEPS.Text = fila.Field<string>("eps");
             paciente.cargarUbicaciones();
             paciente.cargarDatos();
-            tipoDocBox.SelectedValue = paciente.tipoIdentificacion;
-            idText.Text = Convert.ToString(paciente.documentoIndentidad);
-            GeneralC.cargarUbicacionGeografica(paciente.dtUbicacion, paciente.idMunicipioExpedicion, ref paisBox, ref departBox, ref muniBox);
-            GeneralC.cargarUbicacionGeografica(paciente.dtUbicacion, paciente.idMunicipioNacimiento, ref paisNacBox, ref departNacBox, ref MuniNacBox);
-            GeneralC.cargarUbicacionGeografica(paciente.dtUbicacion, paciente.idMunicipioResidencia, ref paisResBox, ref departResBox, ref ciudadResBox);
-            pNombreText.Text = paciente.primeroNombre;
-            sNombreText.Text = paciente.segundoNombre;
-            pApellidoText.Text = paciente.primerApellido;
-            sApellidoText.Text = paciente.segundoApellido;
-            sexoBox.SelectedValue = paciente.idGenero;
-            estratoBox.SelectedValue = paciente.idestrato;
-            zonaBox.SelectedValue = paciente.idZonaUrbana;
-            regimenBox.SelectedValue = paciente.idRegimen;
-            tipoAfiliacionBox.SelectedValue = paciente.idTipoAfiliacion;
-            estadoCivilBox.SelectedValue = paciente.idEstadoCivil;
-            direccionResText.Text = paciente.direccionResidencia;
+            cmbDocumento.SelectedValue = paciente.tipoIdentificacion;
+            txtIdentificacion.Text = Convert.ToString(paciente.documentoIndentidad);
+            GeneralC.cargarUbicacionGeografica(paciente.dtUbicacion, paciente.idMunicipioExpedicion, ref cmbPaisDocumento, ref cmbDepartamentoDoc, ref cmbCiudadDocumento);
+            GeneralC.cargarUbicacionGeografica(paciente.dtUbicacion, paciente.idMunicipioNacimiento, ref cmbPaisNacimiento, ref cmbDepartamentoNac, ref cmbCiudadNacimiento);
+            GeneralC.cargarUbicacionGeografica(paciente.dtUbicacion, paciente.idMunicipioResidencia, ref cmbPaisResidencia, ref cmbDepartamentoRes, ref cmbCiudadResidencia);
+            txtPrimerNombre.Text = paciente.primeroNombre;
+            txtSegundoNombre.Text = paciente.segundoNombre;
+            txtPrimerApellido.Text = paciente.primerApellido;
+            txtSegundoApellido.Text = paciente.segundoApellido;
+            cmbSexo.SelectedValue = paciente.idGenero;
+            cmbEstrato.SelectedValue = paciente.idestrato;
+            cmbZona.SelectedValue = paciente.idZonaUrbana;
+            cmbRegimen.SelectedValue = paciente.idRegimen;
+            cmbAfiliacion.SelectedValue = paciente.idTipoAfiliacion;
+            cmbEstadoCivil.SelectedValue = paciente.idEstadoCivil;
+            txtDireccion.Text = paciente.direccionResidencia;
             telResText.Text = paciente.telefono;
             celResText.Text = paciente.celular;
-            emailText.Text = paciente.correo;
-            fechaNPicker.Value = paciente.fechaNacimiento;
-            GeneralC.calcularEdad(fechaNPicker.Value, ref edad);
-            edadText.Text = edad;
+            txtEmail.Text = paciente.correo;
+            dtpNacimiento.Value = paciente.fechaNacimiento;
+            GeneralC.calcularEdad(dtpNacimiento.Value, ref edad);
+            txtEdad.Text = edad;
             tstModificar.Enabled = true;
             tsbAnular.Enabled = true;
             btnSalir.Enabled = true;
@@ -367,7 +367,7 @@ namespace Galactus.VistaControlador
             GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
             paciente.idPaciente = 0;
             btnSalir.Enabled = true;
-            fechaNPicker.ResetText();
+            dtpNacimiento.ResetText();
         }
 
         private void tstModificar_Click_1(object sender, EventArgs e)
@@ -380,19 +380,19 @@ namespace Galactus.VistaControlador
             GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
             deshabilitarControles();
             paciente.idPaciente = 0;
-            fechaNPicker.ResetText();
+            dtpNacimiento.ResetText();
         }
 
         private void paisBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (paisBox.SelectedIndex > 0)
+            if (cmbPaisDocumento.SelectedIndex > 0)
             {
 
-                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + paisBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + cmbPaisDocumento.SelectedValue + "",
                                     Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                     Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                    departBox);
-                GeneralC.validarComboUbicacion(paisBox, departBox);
+                                    cmbDepartamentoDoc);
+                GeneralC.validarComboUbicacion(cmbPaisDocumento, cmbDepartamentoDoc);
             }
             else
             {
@@ -400,49 +400,49 @@ namespace Galactus.VistaControlador
                 GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                    Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                    Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                   departBox);
-                GeneralC.validarComboUbicacion(paisBox, departBox);
+                                   cmbDepartamentoDoc);
+                GeneralC.validarComboUbicacion(cmbPaisDocumento, cmbDepartamentoDoc);
             }
         }
 
         private void departBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (departBox.SelectedIndex > 0)
+            if (cmbDepartamentoDoc.SelectedIndex > 0)
             {
 
-                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + departBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + cmbDepartamentoDoc.SelectedValue + "",
                                     Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                     Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                    muniBox);
-                GeneralC.validarComboUbicacion(departBox, muniBox);
+                                    cmbCiudadDocumento);
+                GeneralC.validarComboUbicacion(cmbDepartamentoDoc, cmbCiudadDocumento);
             }
             else
             {
                 GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                    Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                    Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                   muniBox);
-                GeneralC.validarComboUbicacion(departBox, muniBox);
+                                   cmbCiudadDocumento);
+                GeneralC.validarComboUbicacion(cmbDepartamentoDoc, cmbCiudadDocumento);
             }
         }
 
         private void paisNacBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (paisNacBox.SelectedIndex > 0)
+            if (cmbPaisNacimiento.SelectedIndex > 0)
             {
-                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + paisNacBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + cmbPaisNacimiento.SelectedValue + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 departNacBox);
-                GeneralC.validarComboUbicacion(paisNacBox, departNacBox);
+                                 cmbDepartamentoNac);
+                GeneralC.validarComboUbicacion(cmbPaisNacimiento, cmbDepartamentoNac);
             }
             else
             {
                 GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 departNacBox);
-                GeneralC.validarComboUbicacion(paisNacBox, departNacBox);
+                                 cmbDepartamentoNac);
+                GeneralC.validarComboUbicacion(cmbPaisNacimiento, cmbDepartamentoNac);
             }
         }
 
@@ -453,69 +453,69 @@ namespace Galactus.VistaControlador
 
         private void departNacBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (departNacBox.SelectedIndex > 0)
+            if (cmbDepartamentoNac.SelectedIndex > 0)
             {
-                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + departNacBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + cmbDepartamentoNac.SelectedValue + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 MuniNacBox);
-                GeneralC.validarComboUbicacion(departNacBox, MuniNacBox);
+                                 cmbCiudadNacimiento);
+                GeneralC.validarComboUbicacion(cmbDepartamentoNac, cmbCiudadNacimiento);
             }
             else
             {
                 GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 MuniNacBox);
-                GeneralC.validarComboUbicacion(departNacBox, MuniNacBox);
+                                 cmbCiudadNacimiento);
+                GeneralC.validarComboUbicacion(cmbDepartamentoNac, cmbCiudadNacimiento);
             }
         }
 
         private void paisResBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (paisResBox.SelectedIndex > 0)
+            if (cmbPaisResidencia.SelectedIndex > 0)
             {
-                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + paisResBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + cmbPaisResidencia.SelectedValue + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 departResBox);
-                GeneralC.validarComboUbicacion(paisResBox, departResBox);
+                                 cmbDepartamentoRes);
+                GeneralC.validarComboUbicacion(cmbPaisResidencia, cmbDepartamentoRes);
             }
             else
             {
                 GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 departResBox);
-                GeneralC.validarComboUbicacion(paisResBox, departResBox);
+                                 cmbDepartamentoRes);
+                GeneralC.validarComboUbicacion(cmbPaisResidencia, cmbDepartamentoRes);
             }
         }
         public void deshabilitarCombo()
         {
-            departBox.Enabled = false;
-            departNacBox.Enabled = false;
-            departResBox.Enabled = false;
-            muniBox.Enabled = false;
-            MuniNacBox.Enabled = false;
-            ciudadResBox.Enabled = false;
+            cmbDepartamentoDoc.Enabled = false;
+            cmbDepartamentoNac.Enabled = false;
+            cmbDepartamentoRes.Enabled = false;
+            cmbCiudadDocumento.Enabled = false;
+            cmbCiudadNacimiento.Enabled = false;
+            cmbCiudadResidencia.Enabled = false;
         }
         private void departResBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (departResBox.SelectedIndex > 0)
+            if (cmbDepartamentoRes.SelectedIndex > 0)
             {
-                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + departResBox.SelectedValue + "",
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + cmbDepartamentoRes.SelectedValue + "",
                                  Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                  Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 ciudadResBox);
-                GeneralC.validarComboUbicacion(departResBox, ciudadResBox);
+                                 cmbCiudadResidencia);
+                GeneralC.validarComboUbicacion(cmbDepartamentoRes, cmbCiudadResidencia);
             }
             else
             {
                 GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                ciudadResBox);
-                GeneralC.validarComboUbicacion(departResBox, ciudadResBox);
+                                cmbCiudadResidencia);
+                GeneralC.validarComboUbicacion(cmbDepartamentoRes, cmbCiudadResidencia);
             }
         }
 
@@ -580,8 +580,8 @@ namespace Galactus.VistaControlador
         private void fechaNPicker_Validating(object sender, CancelEventArgs e)
         {
 
-            GeneralC.calcularEdad(fechaNPicker.Value, ref edad);
-            edadText.Text = edad;
+            GeneralC.calcularEdad(dtpNacimiento.Value, ref edad);
+            txtEdad.Text = edad;
         }
 
     }

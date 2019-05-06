@@ -86,8 +86,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtClienteContrato = new System.Windows.Forms.TextBox();
             this.tctContrato = new System.Windows.Forms.TextBox();
-            this.txtEPS = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtAfiliacion = new System.Windows.Forms.TextBox();
@@ -103,6 +101,8 @@
             this.txtHClinica = new System.Windows.Forms.TextBox();
             this.Departamento = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtEPS = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -736,25 +736,6 @@
             this.tctContrato.Size = new System.Drawing.Size(140, 21);
             this.tctContrato.TabIndex = 17;
             // 
-            // txtEPS
-            // 
-            this.txtEPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEPS.Location = new System.Drawing.Point(74, 60);
-            this.txtEPS.Name = "txtEPS";
-            this.txtEPS.ReadOnly = true;
-            this.txtEPS.Size = new System.Drawing.Size(893, 21);
-            this.txtEPS.TabIndex = 9;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(34, 62);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 15);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "EPS:";
-            // 
             // label33
             // 
             this.label33.AutoSize = true;
@@ -916,6 +897,25 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "H. Clínica:";
             // 
+            // txtEPS
+            // 
+            this.txtEPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEPS.Location = new System.Drawing.Point(74, 60);
+            this.txtEPS.Name = "txtEPS";
+            this.txtEPS.ReadOnly = true;
+            this.txtEPS.Size = new System.Drawing.Size(893, 21);
+            this.txtEPS.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(34, 62);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 15);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "EPS:";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -941,7 +941,7 @@
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(869, 12);
+            this.btnSalir.Location = new System.Drawing.Point(1027, 3);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(26, 24);
             this.btnSalir.TabIndex = 45;
