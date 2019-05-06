@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoriaClinicaUI));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlInformacion = new System.Windows.Forms.Panel();
             this.tcHistoriaClinica = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -63,15 +66,27 @@
             this.tpEstancia = new System.Windows.Forms.TabPage();
             this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
             this.tpIngresoClinico = new System.Windows.Forms.TabPage();
+            this.tpEgreso = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.tpEgreso = new System.Windows.Forms.TabPage();
+            this.gbEstancia = new System.Windows.Forms.GroupBox();
+            this.dgvEstancia = new System.Windows.Forms.DataGridView();
+            this.dgIdCodigoManualCUPSEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgExcluirEstancia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgFechaEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgCodigoCUPSEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDescripcionEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgJustificacionEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgIdUsuarioCEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlInformacion.SuspendLayout();
             this.tbLaboratorios.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
             this.tstMenuOrdenMedica.SuspendLayout();
+            this.tpEstancia.SuspendLayout();
             this.tabHistoriaClinica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbEstancia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstancia)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlInformacion
@@ -411,6 +426,7 @@
             // 
             // tpEstancia
             // 
+            this.tpEstancia.Controls.Add(this.gbEstancia);
             this.tpEstancia.Location = new System.Drawing.Point(4, 29);
             this.tpEstancia.Name = "tpEstancia";
             this.tpEstancia.Size = new System.Drawing.Size(1289, 468);
@@ -444,6 +460,16 @@
             this.tpIngresoClinico.TabIndex = 0;
             this.tpIngresoClinico.Text = "Ingreso Clinico";
             // 
+            // tpEgreso
+            // 
+            this.tpEgreso.Location = new System.Drawing.Point(4, 29);
+            this.tpEgreso.Name = "tpEgreso";
+            this.tpEgreso.Padding = new System.Windows.Forms.Padding(3);
+            this.tpEgreso.Size = new System.Drawing.Size(1289, 468);
+            this.tpEgreso.TabIndex = 5;
+            this.tpEgreso.Text = "Egreso";
+            this.tpEgreso.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
@@ -466,15 +492,107 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
-            // tpEgreso
+            // gbEstancia
             // 
-            this.tpEgreso.Location = new System.Drawing.Point(4, 29);
-            this.tpEgreso.Name = "tpEgreso";
-            this.tpEgreso.Padding = new System.Windows.Forms.Padding(3);
-            this.tpEgreso.Size = new System.Drawing.Size(1289, 468);
-            this.tpEgreso.TabIndex = 5;
-            this.tpEgreso.Text = "Egreso";
-            this.tpEgreso.UseVisualStyleBackColor = true;
+            this.gbEstancia.Controls.Add(this.dgvEstancia);
+            this.gbEstancia.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbEstancia.Location = new System.Drawing.Point(9, 14);
+            this.gbEstancia.Name = "gbEstancia";
+            this.gbEstancia.Size = new System.Drawing.Size(1271, 451);
+            this.gbEstancia.TabIndex = 4;
+            this.gbEstancia.TabStop = false;
+            this.gbEstancia.Text = "Listado de estancia por dia";
+            // 
+            // dgvEstancia
+            // 
+            this.dgvEstancia.AllowUserToAddRows = false;
+            this.dgvEstancia.AllowUserToDeleteRows = false;
+            this.dgvEstancia.AllowUserToResizeColumns = false;
+            this.dgvEstancia.AllowUserToResizeRows = false;
+            this.dgvEstancia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvEstancia.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvEstancia.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvEstancia.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEstancia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvEstancia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstancia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgIdCodigoManualCUPSEstancia,
+            this.dgExcluirEstancia,
+            this.dgFechaEstancia,
+            this.dgCodigoCUPSEstancia,
+            this.dgDescripcionEstancia,
+            this.dgJustificacionEstancia,
+            this.dgIdUsuarioCEstancia});
+            this.dgvEstancia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgvEstancia.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEstancia.Location = new System.Drawing.Point(3, 17);
+            this.dgvEstancia.MultiSelect = false;
+            this.dgvEstancia.Name = "dgvEstancia";
+            this.dgvEstancia.RowHeadersVisible = false;
+            this.dgvEstancia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvEstancia.Size = new System.Drawing.Size(1265, 431);
+            this.dgvEstancia.TabIndex = 15;
+            // 
+            // dgIdCodigoManualCUPSEstancia
+            // 
+            this.dgIdCodigoManualCUPSEstancia.HeaderText = "idCodigoManualCUPS";
+            this.dgIdCodigoManualCUPSEstancia.Name = "dgIdCodigoManualCUPSEstancia";
+            this.dgIdCodigoManualCUPSEstancia.Visible = false;
+            this.dgIdCodigoManualCUPSEstancia.Width = 142;
+            // 
+            // dgExcluirEstancia
+            // 
+            this.dgExcluirEstancia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgExcluirEstancia.HeaderText = "Excluir";
+            this.dgExcluirEstancia.Name = "dgExcluirEstancia";
+            this.dgExcluirEstancia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgExcluirEstancia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgExcluirEstancia.Width = 50;
+            // 
+            // dgFechaEstancia
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dgFechaEstancia.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgFechaEstancia.HeaderText = "Fecha";
+            this.dgFechaEstancia.Name = "dgFechaEstancia";
+            this.dgFechaEstancia.Width = 66;
+            // 
+            // dgCodigoCUPSEstancia
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgCodigoCUPSEstancia.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgCodigoCUPSEstancia.HeaderText = "Código";
+            this.dgCodigoCUPSEstancia.Name = "dgCodigoCUPSEstancia";
+            this.dgCodigoCUPSEstancia.Width = 72;
+            // 
+            // dgDescripcionEstancia
+            // 
+            this.dgDescripcionEstancia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgDescripcionEstancia.HeaderText = "Descripción";
+            this.dgDescripcionEstancia.Name = "dgDescripcionEstancia";
+            this.dgDescripcionEstancia.Width = 550;
+            // 
+            // dgJustificacionEstancia
+            // 
+            this.dgJustificacionEstancia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgJustificacionEstancia.HeaderText = "Justificación";
+            this.dgJustificacionEstancia.Name = "dgJustificacionEstancia";
+            // 
+            // dgIdUsuarioCEstancia
+            // 
+            this.dgIdUsuarioCEstancia.HeaderText = "idUsuarioC";
+            this.dgIdUsuarioCEstancia.Name = "dgIdUsuarioCEstancia";
+            this.dgIdUsuarioCEstancia.Visible = false;
+            this.dgIdUsuarioCEstancia.Width = 97;
             // 
             // HistoriaClinicaUI
             // 
@@ -502,8 +620,11 @@
             this.tpOrdenMedica.PerformLayout();
             this.tstMenuOrdenMedica.ResumeLayout(false);
             this.tstMenuOrdenMedica.PerformLayout();
+            this.tpEstancia.ResumeLayout(false);
             this.tabHistoriaClinica.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbEstancia.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstancia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -547,5 +668,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TabPage tpEgreso;
+        internal System.Windows.Forms.GroupBox gbEstancia;
+        public System.Windows.Forms.DataGridView dgvEstancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgIdCodigoManualCUPSEstancia;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dgExcluirEstancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgFechaEstancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigoCUPSEstancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcionEstancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgJustificacionEstancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgIdUsuarioCEstancia;
     }
 }

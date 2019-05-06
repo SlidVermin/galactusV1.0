@@ -325,6 +325,12 @@
     <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\GlucometriasUI.Designer.cs">
       <DependentUpon>GlucometriasUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\PedidoFarmaciaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\PedidoFarmaciaUI.Designer.cs">
+      <DependentUpon>PedidoFarmaciaUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Enfermeria\ProcedimientosUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -653,6 +659,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Enfermeria\GlucometriasUI.resx">
       <DependentUpon>GlucometriasUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Enfermeria\PedidoFarmaciaUI.resx">
+      <DependentUpon>PedidoFarmaciaUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Enfermeria\ProcedimientosUI.resx">
       <DependentUpon>ProcedimientosUI.cs</DependentUpon>

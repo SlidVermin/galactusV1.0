@@ -63,7 +63,7 @@
             // 
             this.GroupBox17.BackColor = System.Drawing.Color.White;
             this.GroupBox17.Controls.Add(this.txtIndicaciones);
-            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(12, 3);
             this.GroupBox17.Name = "GroupBox17";

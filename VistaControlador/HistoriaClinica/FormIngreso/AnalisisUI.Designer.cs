@@ -39,42 +39,44 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtAnalisis);
-            this.groupBox1.Location = new System.Drawing.Point(6, 7);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(972, 146);
+            this.groupBox1.Size = new System.Drawing.Size(951, 146);
             this.groupBox1.TabIndex = 10064;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Analisis";
+            this.groupBox1.Text = "Análisis";
             // 
             // txtAnalisis
             // 
-            this.txtAnalisis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAnalisis.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnalisis.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtAnalisis.Location = new System.Drawing.Point(5, 15);
             this.txtAnalisis.Multiline = true;
             this.txtAnalisis.Name = "txtAnalisis";
             this.txtAnalisis.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAnalisis.Size = new System.Drawing.Size(961, 125);
+            this.txtAnalisis.Size = new System.Drawing.Size(940, 125);
             this.txtAnalisis.TabIndex = 10063;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtPronostico);
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(6, 159);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(972, 141);
+            this.groupBox2.Size = new System.Drawing.Size(951, 141);
             this.groupBox2.TabIndex = 10065;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Pronostico";
+            this.groupBox2.Text = "Pronóstico";
             // 
             // txtPronostico
             // 
-            this.txtPronostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtPronostico.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPronostico.Location = new System.Drawing.Point(5, 15);
             this.txtPronostico.Multiline = true;
             this.txtPronostico.Name = "txtPronostico";
             this.txtPronostico.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPronostico.Size = new System.Drawing.Size(961, 120);
+            this.txtPronostico.Size = new System.Drawing.Size(940, 120);
             this.txtPronostico.TabIndex = 10064;
             // 
             // AnalisisUI
@@ -82,7 +84,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(981, 307);
+            this.ClientSize = new System.Drawing.Size(969, 307);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

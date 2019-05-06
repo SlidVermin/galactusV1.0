@@ -75,13 +75,13 @@
             // gbResumenClinico
             // 
             this.gbResumenClinico.Controls.Add(this.txtResumenClinico);
-            this.gbResumenClinico.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbResumenClinico.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbResumenClinico.Location = new System.Drawing.Point(3, 189);
             this.gbResumenClinico.Name = "gbResumenClinico";
             this.gbResumenClinico.Size = new System.Drawing.Size(956, 121);
             this.gbResumenClinico.TabIndex = 10091;
             this.gbResumenClinico.TabStop = false;
-            this.gbResumenClinico.Text = "Resumen Clinico:";
+            this.gbResumenClinico.Text = "Resumen Clínico:";
             // 
             // txtResumenClinico
             // 
@@ -94,7 +94,7 @@
             // GroupBox17
             // 
             this.GroupBox17.Controls.Add(this.dgvImpresionN);
-            this.GroupBox17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(6, 316);
             this.GroupBox17.Name = "GroupBox17";
@@ -120,7 +120,7 @@
             this.dgAgregar,
             this.dgQuitar});
             this.dgvImpresionN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvImpresionN.Location = new System.Drawing.Point(3, 21);
+            this.dgvImpresionN.Location = new System.Drawing.Point(3, 17);
             this.dgvImpresionN.MultiSelect = false;
             this.dgvImpresionN.Name = "dgvImpresionN";
             this.dgvImpresionN.ReadOnly = true;
@@ -129,7 +129,7 @@
             this.dgvImpresionN.ShowCellToolTips = false;
             this.dgvImpresionN.ShowEditingIcon = false;
             this.dgvImpresionN.ShowRowErrors = false;
-            this.dgvImpresionN.Size = new System.Drawing.Size(947, 119);
+            this.dgvImpresionN.Size = new System.Drawing.Size(947, 123);
             this.dgvImpresionN.TabIndex = 2;
             this.dgvImpresionN.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvImpresionN_CellContentClick);
             this.dgvImpresionN.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvImpresionN_CellDoubleClick);
@@ -148,14 +148,14 @@
             this.dgCodigo.HeaderText = "Código";
             this.dgCodigo.Name = "dgCodigo";
             this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 77;
+            this.dgCodigo.Width = 72;
             // 
             // dgDescripcion
             // 
             this.dgDescripcion.HeaderText = "Descripcion";
             this.dgDescripcion.Name = "dgDescripcion";
             this.dgDescripcion.ReadOnly = true;
-            this.dgDescripcion.Width = 105;
+            this.dgDescripcion.Width = 98;
             // 
             // dgAgregar
             // 
@@ -163,7 +163,7 @@
             this.dgAgregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
             this.dgAgregar.Name = "dgAgregar";
             this.dgAgregar.ReadOnly = true;
-            this.dgAgregar.Width = 63;
+            this.dgAgregar.Width = 56;
             // 
             // dgQuitar
             // 
@@ -171,12 +171,12 @@
             this.dgQuitar.Image = global::Galactus.Properties.Resources.btn_anular;
             this.dgQuitar.Name = "dgQuitar";
             this.dgQuitar.ReadOnly = true;
-            this.dgQuitar.Width = 53;
+            this.dgQuitar.Width = 46;
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.txtcausaexterna);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtviaingreso);
@@ -302,7 +302,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvRemision);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(3, 65);
             this.groupBox2.Name = "groupBox2";
@@ -322,18 +322,18 @@
             this.dgvRemision.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvRemision.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRemision.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRemision.Location = new System.Drawing.Point(3, 21);
+            this.dgvRemision.Location = new System.Drawing.Point(3, 17);
             this.dgvRemision.MultiSelect = false;
             this.dgvRemision.Name = "dgvRemision";
             this.dgvRemision.ReadOnly = true;
             this.dgvRemision.RowHeadersVisible = false;
-            this.dgvRemision.Size = new System.Drawing.Size(950, 95);
+            this.dgvRemision.Size = new System.Drawing.Size(950, 99);
             this.dgvRemision.TabIndex = 2;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtMotivoIngreso);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(7, 466);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(952, 118);

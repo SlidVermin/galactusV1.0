@@ -36,7 +36,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(4, 7);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(978, 281);
@@ -47,9 +47,9 @@
             // richTextBox1
             // 
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 21);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 17);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(972, 257);
+            this.richTextBox1.Size = new System.Drawing.Size(972, 261);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 

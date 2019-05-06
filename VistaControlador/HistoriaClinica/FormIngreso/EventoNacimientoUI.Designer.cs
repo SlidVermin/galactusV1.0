@@ -64,20 +64,20 @@
             this.GroupBox21.Controls.Add(this.Label59);
             this.GroupBox21.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
             this.GroupBox21.ForeColor = System.Drawing.Color.Black;
-            this.GroupBox21.Location = new System.Drawing.Point(4, 7);
+            this.GroupBox21.Location = new System.Drawing.Point(8, 6);
             this.GroupBox21.Name = "GroupBox21";
-            this.GroupBox21.Size = new System.Drawing.Size(921, 402);
+            this.GroupBox21.Size = new System.Drawing.Size(958, 402);
             this.GroupBox21.TabIndex = 10095;
             this.GroupBox21.TabStop = false;
             // 
             // txtRmacionN
             // 
             this.txtRmacionN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtRmacionN.Location = new System.Drawing.Point(136, 185);
+            this.txtRmacionN.Location = new System.Drawing.Point(133, 185);
             this.txtRmacionN.Multiline = true;
             this.txtRmacionN.Name = "txtRmacionN";
             this.txtRmacionN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtRmacionN.Size = new System.Drawing.Size(775, 44);
+            this.txtRmacionN.Size = new System.Drawing.Size(819, 44);
             this.txtRmacionN.TabIndex = 10066;
             // 
             // Label60
@@ -85,7 +85,7 @@
             this.Label60.AutoSize = true;
             this.Label60.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Label60.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label60.Location = new System.Drawing.Point(14, 196);
+            this.Label60.Location = new System.Drawing.Point(8, 188);
             this.Label60.Name = "Label60";
             this.Label60.Size = new System.Drawing.Size(119, 16);
             this.Label60.TabIndex = 10065;
@@ -94,11 +94,11 @@
             // txtApgar2
             // 
             this.txtApgar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtApgar2.Location = new System.Drawing.Point(136, 350);
+            this.txtApgar2.Location = new System.Drawing.Point(133, 350);
             this.txtApgar2.Multiline = true;
             this.txtApgar2.Name = "txtApgar2";
             this.txtApgar2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtApgar2.Size = new System.Drawing.Size(775, 44);
+            this.txtApgar2.Size = new System.Drawing.Size(819, 44);
             this.txtApgar2.TabIndex = 10064;
             // 
             // Label54
@@ -106,7 +106,7 @@
             this.Label54.AutoSize = true;
             this.Label54.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Label54.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label54.Location = new System.Drawing.Point(14, 360);
+            this.Label54.Location = new System.Drawing.Point(70, 353);
             this.Label54.Name = "Label54";
             this.Label54.Size = new System.Drawing.Size(57, 16);
             this.Label54.TabIndex = 10063;
@@ -115,11 +115,11 @@
             // txtApgar1N
             // 
             this.txtApgar1N.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtApgar1N.Location = new System.Drawing.Point(139, 130);
+            this.txtApgar1N.Location = new System.Drawing.Point(133, 130);
             this.txtApgar1N.Multiline = true;
             this.txtApgar1N.Name = "txtApgar1N";
             this.txtApgar1N.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtApgar1N.Size = new System.Drawing.Size(772, 44);
+            this.txtApgar1N.Size = new System.Drawing.Size(819, 44);
             this.txtApgar1N.TabIndex = 10062;
             // 
             // Label55
@@ -127,7 +127,7 @@
             this.Label55.AutoSize = true;
             this.Label55.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Label55.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label55.Location = new System.Drawing.Point(14, 139);
+            this.Label55.Location = new System.Drawing.Point(70, 133);
             this.Label55.Name = "Label55";
             this.Label55.Size = new System.Drawing.Size(57, 16);
             this.Label55.TabIndex = 10061;
@@ -136,11 +136,11 @@
             // txtCaractLiquidoN
             // 
             this.txtCaractLiquidoN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtCaractLiquidoN.Location = new System.Drawing.Point(136, 295);
+            this.txtCaractLiquidoN.Location = new System.Drawing.Point(133, 295);
             this.txtCaractLiquidoN.Multiline = true;
             this.txtCaractLiquidoN.Name = "txtCaractLiquidoN";
             this.txtCaractLiquidoN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtCaractLiquidoN.Size = new System.Drawing.Size(775, 44);
+            this.txtCaractLiquidoN.Size = new System.Drawing.Size(819, 44);
             this.txtCaractLiquidoN.TabIndex = 10060;
             // 
             // Label56
@@ -148,7 +148,7 @@
             this.Label56.AutoSize = true;
             this.Label56.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Label56.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label56.Location = new System.Drawing.Point(14, 303);
+            this.Label56.Location = new System.Drawing.Point(21, 298);
             this.Label56.Name = "Label56";
             this.Label56.Size = new System.Drawing.Size(106, 16);
             this.Label56.TabIndex = 10059;
@@ -157,11 +157,11 @@
             // txtInduccionP
             // 
             this.txtInduccionP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtInduccionP.Location = new System.Drawing.Point(139, 75);
+            this.txtInduccionP.Location = new System.Drawing.Point(133, 75);
             this.txtInduccionP.Multiline = true;
             this.txtInduccionP.Name = "txtInduccionP";
             this.txtInduccionP.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtInduccionP.Size = new System.Drawing.Size(772, 44);
+            this.txtInduccionP.Size = new System.Drawing.Size(819, 44);
             this.txtInduccionP.TabIndex = 10058;
             // 
             // Label57
@@ -169,7 +169,7 @@
             this.Label57.AutoSize = true;
             this.Label57.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Label57.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label57.Location = new System.Drawing.Point(14, 82);
+            this.Label57.Location = new System.Drawing.Point(32, 78);
             this.Label57.Name = "Label57";
             this.Label57.Size = new System.Drawing.Size(95, 16);
             this.Label57.TabIndex = 10057;
@@ -178,11 +178,11 @@
             // txtTRupturaM
             // 
             this.txtTRupturaM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtTRupturaM.Location = new System.Drawing.Point(136, 240);
+            this.txtTRupturaM.Location = new System.Drawing.Point(133, 240);
             this.txtTRupturaM.Multiline = true;
             this.txtTRupturaM.Name = "txtTRupturaM";
             this.txtTRupturaM.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTRupturaM.Size = new System.Drawing.Size(775, 44);
+            this.txtTRupturaM.Size = new System.Drawing.Size(819, 44);
             this.txtTRupturaM.TabIndex = 10056;
             // 
             // Label58
@@ -190,7 +190,7 @@
             this.Label58.AutoSize = true;
             this.Label58.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Label58.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label58.Location = new System.Drawing.Point(14, 246);
+            this.Label58.Location = new System.Drawing.Point(5, 240);
             this.Label58.Name = "Label58";
             this.Label58.Size = new System.Drawing.Size(122, 16);
             this.Label58.TabIndex = 10055;
@@ -199,11 +199,11 @@
             // txtTipoParto
             // 
             this.txtTipoParto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtTipoParto.Location = new System.Drawing.Point(139, 20);
+            this.txtTipoParto.Location = new System.Drawing.Point(133, 20);
             this.txtTipoParto.Multiline = true;
             this.txtTipoParto.Name = "txtTipoParto";
             this.txtTipoParto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTipoParto.Size = new System.Drawing.Size(772, 44);
+            this.txtTipoParto.Size = new System.Drawing.Size(819, 44);
             this.txtTipoParto.TabIndex = 10054;
             // 
             // Label59
@@ -211,7 +211,7 @@
             this.Label59.AutoSize = true;
             this.Label59.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Label59.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label59.Location = new System.Drawing.Point(14, 25);
+            this.Label59.Location = new System.Drawing.Point(56, 23);
             this.Label59.Name = "Label59";
             this.Label59.Size = new System.Drawing.Size(71, 16);
             this.Label59.TabIndex = 10053;
@@ -222,8 +222,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(927, 413);
+            this.ClientSize = new System.Drawing.Size(969, 413);
             this.Controls.Add(this.GroupBox21);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EventoNacimientoUI";
             this.Text = "EventoNacimientoUI";
             this.GroupBox21.ResumeLayout(false);

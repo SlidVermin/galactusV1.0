@@ -35,12 +35,12 @@
             this.PanelJustificacionN = new System.Windows.Forms.Panel();
             this.txtJustificacion = new System.Windows.Forms.TextBox();
             this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.justificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Agregar = new System.Windows.Forms.DataGridViewImageColumn();
             this.anularProcedimiento = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.GroupBox17.SuspendLayout();
             this.PanelJustificacionN.SuspendLayout();
@@ -62,7 +62,7 @@
             // 
             this.GroupBox17.Controls.Add(this.PanelJustificacionN);
             this.GroupBox17.Controls.Add(this.dgvProcedimientos);
-            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(12, 3);
             this.GroupBox17.Name = "GroupBox17";
@@ -119,14 +119,6 @@
             this.dgvProcedimientos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellEndEdit);
             this.dgvProcedimientos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellEnter);
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn1.HeaderText = "Quitar";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 50;
-            // 
             // descripcion
             // 
             this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -143,14 +135,13 @@
             this.cantidad.HeaderText = "Cantidad";
             this.cantidad.Name = "cantidad";
             this.cantidad.ReadOnly = true;
-            this.cantidad.Width = 90;
+            this.cantidad.Width = 82;
             // 
             // justificacion
             // 
             this.justificacion.HeaderText = "Justificación";
             this.justificacion.Name = "justificacion";
             this.justificacion.ReadOnly = true;
-            this.justificacion.Width = 112;
             // 
             // Agregar
             // 
@@ -160,7 +151,7 @@
             this.Agregar.ReadOnly = true;
             this.Agregar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Agregar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Agregar.Width = 84;
+            this.Agregar.Width = 75;
             // 
             // anularProcedimiento
             // 
@@ -170,6 +161,14 @@
             this.anularProcedimiento.Name = "anularProcedimiento";
             this.anularProcedimiento.ReadOnly = true;
             this.anularProcedimiento.Width = 50;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.HeaderText = "Quitar";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 50;
             // 
             // ProcedimientosUI
             // 

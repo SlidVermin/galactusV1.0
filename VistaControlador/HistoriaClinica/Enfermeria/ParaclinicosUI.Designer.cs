@@ -42,7 +42,7 @@
             // GroupBox17
             // 
             this.GroupBox17.Controls.Add(this.dgvDiagnostico);
-            this.GroupBox17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 8);
             this.GroupBox17.Name = "GroupBox17";
@@ -68,7 +68,7 @@
             this.dgAgregar,
             this.dgQuitar});
             this.dgvDiagnostico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDiagnostico.Location = new System.Drawing.Point(3, 21);
+            this.dgvDiagnostico.Location = new System.Drawing.Point(3, 17);
             this.dgvDiagnostico.MultiSelect = false;
             this.dgvDiagnostico.Name = "dgvDiagnostico";
             this.dgvDiagnostico.ReadOnly = true;
@@ -77,7 +77,7 @@
             this.dgvDiagnostico.ShowCellToolTips = false;
             this.dgvDiagnostico.ShowEditingIcon = false;
             this.dgvDiagnostico.ShowRowErrors = false;
-            this.dgvDiagnostico.Size = new System.Drawing.Size(970, 250);
+            this.dgvDiagnostico.Size = new System.Drawing.Size(970, 254);
             this.dgvDiagnostico.TabIndex = 2;
             // 
             // dgId
@@ -93,14 +93,14 @@
             this.dgCodigo.HeaderText = "Código";
             this.dgCodigo.Name = "dgCodigo";
             this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 77;
+            this.dgCodigo.Width = 72;
             // 
             // dgDescripcion
             // 
             this.dgDescripcion.HeaderText = "Descripcion";
             this.dgDescripcion.Name = "dgDescripcion";
             this.dgDescripcion.ReadOnly = true;
-            this.dgDescripcion.Width = 105;
+            this.dgDescripcion.Width = 98;
             // 
             // dgAgregar
             // 
@@ -108,7 +108,7 @@
             this.dgAgregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
             this.dgAgregar.Name = "dgAgregar";
             this.dgAgregar.ReadOnly = true;
-            this.dgAgregar.Width = 63;
+            this.dgAgregar.Width = 56;
             // 
             // dgQuitar
             // 
@@ -116,7 +116,7 @@
             this.dgQuitar.Image = global::Galactus.Properties.Resources.btn_anular;
             this.dgQuitar.Name = "dgQuitar";
             this.dgQuitar.ReadOnly = true;
-            this.dgQuitar.Width = 53;
+            this.dgQuitar.Width = 46;
             // 
             // ParaclinicosUI
             // 

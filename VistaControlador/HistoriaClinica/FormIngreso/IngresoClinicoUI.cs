@@ -13,6 +13,9 @@ namespace Galactus.VistaControlador.HistoriaClinica
         IngresoClinico ingreso = new IngresoClinico();
         private ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();
         private AntecedentesIngresoUI antecedentesUI = new AntecedentesIngresoUI();
+        private AntecedentesMaternosUI antecedentesMaternosUI = new AntecedentesMaternosUI();
+        private AntecedenteRecienNacidoUI antecedenteRecienNacidoUI = new AntecedenteRecienNacidoUI();
+        private EventoNacimientoUI eventoNacimientoUI = new EventoNacimientoUI();
         private ExamenFisicoUI examenFisicoUI = new ExamenFisicoUI();
         private AnalisisUI analisisUI = new AnalisisUI();
         
@@ -33,6 +36,9 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
             GeneralC.cargarFormularioEnPestana(tpValoracion, valoracionUI);
             GeneralC.cargarFormularioEnPestana(tpAntecedentes, antecedentesUI);
+            GeneralC.cargarFormularioEnPestana(tpAntecedentesMaterno, antecedentesMaternosUI);
+            GeneralC.cargarFormularioEnPestana(tpAntecedentesNacimiento, eventoNacimientoUI);
+            GeneralC.cargarFormularioEnPestana(tpRecienNacido, antecedenteRecienNacidoUI);
             GeneralC.cargarFormularioEnPestana(tpExamenFisico, examenFisicoUI);
             GeneralC.cargarFormularioEnPestana(tpAnalisis, analisisUI);
 

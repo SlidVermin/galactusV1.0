@@ -42,7 +42,7 @@
             // GroupBox17
             // 
             this.GroupBox17.Controls.Add(this.dgvInsumos);
-            this.GroupBox17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 5);
             this.GroupBox17.Name = "GroupBox17";
@@ -68,7 +68,7 @@
             this.dgAgregar,
             this.dgQuitar});
             this.dgvInsumos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvInsumos.Location = new System.Drawing.Point(3, 21);
+            this.dgvInsumos.Location = new System.Drawing.Point(3, 17);
             this.dgvInsumos.MultiSelect = false;
             this.dgvInsumos.Name = "dgvInsumos";
             this.dgvInsumos.ReadOnly = true;
@@ -77,7 +77,7 @@
             this.dgvInsumos.ShowCellToolTips = false;
             this.dgvInsumos.ShowEditingIcon = false;
             this.dgvInsumos.ShowRowErrors = false;
-            this.dgvInsumos.Size = new System.Drawing.Size(970, 250);
+            this.dgvInsumos.Size = new System.Drawing.Size(970, 254);
             this.dgvInsumos.TabIndex = 2;
             this.dgvInsumos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInsumos_CellContentClick);
             // 
@@ -86,7 +86,7 @@
             this.dgCodigo.HeaderText = "Código";
             this.dgCodigo.Name = "dgCodigo";
             this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 77;
+            this.dgCodigo.Width = 72;
             // 
             // dgDescripcion
             // 
@@ -100,7 +100,7 @@
             this.dgCantidad.HeaderText = "Cantidad";
             this.dgCantidad.Name = "dgCantidad";
             this.dgCantidad.ReadOnly = true;
-            this.dgCantidad.Width = 88;
+            this.dgCantidad.Width = 82;
             // 
             // dgAgregar
             // 
@@ -108,7 +108,7 @@
             this.dgAgregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
             this.dgAgregar.Name = "dgAgregar";
             this.dgAgregar.ReadOnly = true;
-            this.dgAgregar.Width = 63;
+            this.dgAgregar.Width = 56;
             // 
             // dgQuitar
             // 
@@ -116,7 +116,7 @@
             this.dgQuitar.Image = global::Galactus.Properties.Resources.btn_anular;
             this.dgQuitar.Name = "dgQuitar";
             this.dgQuitar.ReadOnly = true;
-            this.dgQuitar.Width = 53;
+            this.dgQuitar.Width = 46;
             // 
             // InsumosUI
             // 

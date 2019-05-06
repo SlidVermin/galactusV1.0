@@ -30,13 +30,13 @@
         {
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
             this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgLista = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgFormato = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.GroupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +44,7 @@
             // GroupBox17
             // 
             this.GroupBox17.Controls.Add(this.dgvProcedimientos);
-            this.GroupBox17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 8);
             this.GroupBox17.Name = "GroupBox17";
@@ -70,7 +70,7 @@
             this.dgLista,
             this.dgFormato});
             this.dgvProcedimientos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProcedimientos.Location = new System.Drawing.Point(3, 21);
+            this.dgvProcedimientos.Location = new System.Drawing.Point(3, 17);
             this.dgvProcedimientos.MultiSelect = false;
             this.dgvProcedimientos.Name = "dgvProcedimientos";
             this.dgvProcedimientos.ReadOnly = true;
@@ -79,22 +79,8 @@
             this.dgvProcedimientos.ShowCellToolTips = false;
             this.dgvProcedimientos.ShowEditingIcon = false;
             this.dgvProcedimientos.ShowRowErrors = false;
-            this.dgvProcedimientos.Size = new System.Drawing.Size(970, 250);
+            this.dgvProcedimientos.Size = new System.Drawing.Size(970, 254);
             this.dgvProcedimientos.TabIndex = 2;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Agregar";
-            this.dataGridViewImageColumn1.Image = global::Galactus.Properties.Resources.farmacia_ico;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 50;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "Quitar";
-            this.dataGridViewImageColumn2.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 41;
             // 
             // dgId
             // 
@@ -109,7 +95,7 @@
             this.dgCodigo.HeaderText = "Código";
             this.dgCodigo.Name = "dgCodigo";
             this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 77;
+            this.dgCodigo.Width = 72;
             // 
             // dgDescripcion
             // 
@@ -123,7 +109,7 @@
             this.dgLista.HeaderText = "Lista";
             this.dgLista.Name = "dgLista";
             this.dgLista.ReadOnly = true;
-            this.dgLista.Width = 43;
+            this.dgLista.Width = 40;
             // 
             // dgFormato
             // 
@@ -131,7 +117,21 @@
             this.dgFormato.Name = "dgFormato";
             this.dgFormato.ReadOnly = true;
             this.dgFormato.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgFormato.Width = 66;
+            this.dgFormato.Width = 59;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Agregar";
+            this.dataGridViewImageColumn1.Image = global::Galactus.Properties.Resources.farmacia_ico;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Quitar";
+            this.dataGridViewImageColumn2.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 41;
             // 
             // ProcedimientosUI
             // 

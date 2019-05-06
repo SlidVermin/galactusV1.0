@@ -31,8 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
             this.dgvGlucometria = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +39,8 @@
             this.dgInsulina = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgResponsable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.GroupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGlucometria)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             // GroupBox17
             // 
             this.GroupBox17.Controls.Add(this.dgvGlucometria);
-            this.GroupBox17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 8);
             this.GroupBox17.Name = "GroupBox17";
@@ -77,7 +77,7 @@
             this.dgResponsable,
             this.dgUsuario});
             this.dgvGlucometria.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvGlucometria.Location = new System.Drawing.Point(3, 21);
+            this.dgvGlucometria.Location = new System.Drawing.Point(3, 17);
             this.dgvGlucometria.MultiSelect = false;
             this.dgvGlucometria.Name = "dgvGlucometria";
             this.dgvGlucometria.ReadOnly = true;
@@ -86,22 +86,8 @@
             this.dgvGlucometria.ShowCellToolTips = false;
             this.dgvGlucometria.ShowEditingIcon = false;
             this.dgvGlucometria.ShowRowErrors = false;
-            this.dgvGlucometria.Size = new System.Drawing.Size(970, 250);
+            this.dgvGlucometria.Size = new System.Drawing.Size(970, 254);
             this.dgvGlucometria.TabIndex = 2;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Agregar";
-            this.dataGridViewImageColumn1.Image = global::Galactus.Properties.Resources.farmacia_ico;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 50;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "Quitar";
-            this.dataGridViewImageColumn2.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 41;
             // 
             // dgId
             // 
@@ -116,7 +102,7 @@
             this.dgCodigo.HeaderText = "Código";
             this.dgCodigo.Name = "dgCodigo";
             this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 77;
+            this.dgCodigo.Width = 72;
             // 
             // dgDescripcion
             // 
@@ -134,21 +120,21 @@
             this.dgHora.Name = "dgHora";
             this.dgHora.ReadOnly = true;
             this.dgHora.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgHora.Width = 63;
+            this.dgHora.Width = 59;
             // 
             // dgGlicemia
             // 
             this.dgGlicemia.HeaderText = "Glicemia";
             this.dgGlicemia.Name = "dgGlicemia";
             this.dgGlicemia.ReadOnly = true;
-            this.dgGlicemia.Width = 86;
+            this.dgGlicemia.Width = 81;
             // 
             // dgInsulina
             // 
             this.dgInsulina.HeaderText = "Insulina";
             this.dgInsulina.Name = "dgInsulina";
             this.dgInsulina.ReadOnly = true;
-            this.dgInsulina.Width = 82;
+            this.dgInsulina.Width = 76;
             // 
             // dgResponsable
             // 
@@ -165,6 +151,20 @@
             this.dgUsuario.ReadOnly = true;
             this.dgUsuario.Visible = false;
             this.dgUsuario.Width = 80;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Agregar";
+            this.dataGridViewImageColumn1.Image = global::Galactus.Properties.Resources.farmacia_ico;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Quitar";
+            this.dataGridViewImageColumn2.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 41;
             // 
             // GlucometriasUI
             // 

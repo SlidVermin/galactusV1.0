@@ -35,9 +35,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
             this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.concentracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frecuencia = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -45,6 +42,9 @@
             this.Mezcla = new System.Windows.Forms.DataGridViewImageColumn();
             this.Agregar = new System.Windows.Forms.DataGridViewImageColumn();
             this.anulardiagevoN = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.GroupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).BeginInit();
@@ -64,7 +64,7 @@
             // GroupBox17
             // 
             this.GroupBox17.Controls.Add(this.dgvMedicamentos);
-            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(12, 3);
             this.GroupBox17.Name = "GroupBox17";
@@ -92,37 +92,13 @@
             this.Agregar,
             this.anulardiagevoN});
             this.dgvMedicamentos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMedicamentos.Location = new System.Drawing.Point(3, 18);
+            this.dgvMedicamentos.Location = new System.Drawing.Point(3, 17);
             this.dgvMedicamentos.MultiSelect = false;
             this.dgvMedicamentos.Name = "dgvMedicamentos";
             this.dgvMedicamentos.ReadOnly = true;
             this.dgvMedicamentos.RowHeadersVisible = false;
-            this.dgvMedicamentos.Size = new System.Drawing.Size(877, 227);
+            this.dgvMedicamentos.Size = new System.Drawing.Size(877, 228);
             this.dgvMedicamentos.TabIndex = 2;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn1.HeaderText = "Quitar";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewImageColumn1.Width = 50;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn2.HeaderText = "Agregar";
-            this.dataGridViewImageColumn2.Image = global::Galactus.Properties.Resources.add;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            // 
-            // dataGridViewImageColumn3
-            // 
-            this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn3.HeaderText = "Quitar";
-            this.dataGridViewImageColumn3.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn3.Image")));
-            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
             // 
             // Descripcion
             // 
@@ -139,7 +115,7 @@
             this.concentracion.HeaderText = "Concentración";
             this.concentracion.Name = "concentracion";
             this.concentracion.ReadOnly = true;
-            this.concentracion.Width = 125;
+            this.concentracion.Width = 112;
             // 
             // frecuencia
             // 
@@ -174,7 +150,7 @@
             "23"});
             this.frecuencia.Name = "frecuencia";
             this.frecuencia.ReadOnly = true;
-            this.frecuencia.Width = 85;
+            this.frecuencia.Width = 74;
             // 
             // inicio
             // 
@@ -209,7 +185,7 @@
             "23"});
             this.inicio.Name = "inicio";
             this.inicio.ReadOnly = true;
-            this.inicio.Width = 49;
+            this.inicio.Width = 42;
             // 
             // Mezcla
             // 
@@ -220,7 +196,7 @@
             this.Mezcla.ReadOnly = true;
             this.Mezcla.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Mezcla.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Mezcla.Width = 78;
+            this.Mezcla.Width = 69;
             // 
             // Agregar
             // 
@@ -229,7 +205,7 @@
             this.Agregar.Image = global::Galactus.Properties.Resources.search__1_;
             this.Agregar.Name = "Agregar";
             this.Agregar.ReadOnly = true;
-            this.Agregar.Width = 65;
+            this.Agregar.Width = 56;
             // 
             // anulardiagevoN
             // 
@@ -238,7 +214,31 @@
             this.anulardiagevoN.Image = ((System.Drawing.Image)(resources.GetObject("anulardiagevoN.Image")));
             this.anulardiagevoN.Name = "anulardiagevoN";
             this.anulardiagevoN.ReadOnly = true;
-            this.anulardiagevoN.Width = 53;
+            this.anulardiagevoN.Width = 46;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.HeaderText = "Quitar";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn2.HeaderText = "Agregar";
+            this.dataGridViewImageColumn2.Image = global::Galactus.Properties.Resources.add;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            // 
+            // dataGridViewImageColumn3
+            // 
+            this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn3.HeaderText = "Quitar";
+            this.dataGridViewImageColumn3.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn3.Image")));
+            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
             // 
             // MedicamentosUI
             // 
