@@ -187,10 +187,10 @@
     <Compile Include="VistaControlador\Admision\PacienteUI.Designer.cs">
       <DependentUpon>PacienteUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\Asistencial\RipsUI.cs">
+    <Compile Include="VistaControlador\Facturacion\RipsUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VistaControlador\Asistencial\RipsUI.Designer.cs">
+    <Compile Include="VistaControlador\Facturacion\RipsUI.Designer.cs">
       <DependentUpon>RipsUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\ConfiguracionCUPSUI.cs">
@@ -593,7 +593,7 @@
     <EmbeddedResource Include="VistaControlador\Admision\PacienteUI.resx">
       <DependentUpon>PacienteUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\Asistencial\RipsUI.resx">
+    <EmbeddedResource Include="VistaControlador\Facturacion\RipsUI.resx">
       <DependentUpon>RipsUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\ConfiguracionCUPSUI.resx">
