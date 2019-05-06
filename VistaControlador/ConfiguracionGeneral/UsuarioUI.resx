@@ -117,17 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tsbBuscarRol.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAAO9JREFUOE+dkj0KwkAQhaMWImLvD5YqnkGRNJ7A31aPoBcQCxsbS0VREMHCzhP6
-        PUgwLtns4sAHIfPm7ezOBME3cnxO4ApHOMEZ9tBM6FI/K/y9wwxklIx6ZDSymahAxS3HKTvyYZpGbc9d
-        LZLPwxMKplZ3Ntu2+S1IDMykHss32gjXplgv7hs1hBtTfPGtRtcHXeMnNGeNyiekbZhCLYkWxhVdBAeb
-        SEuiOWtUaaHiNzygZDMJSWjOumMHqtADta2TVaydyTTRkmjOK9jCEuI762Qvk6y3KJK8wTjqtpwltuXi
-        TqYIXv8YqEYmKh5+ANzoHo/r2jIvAAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="tstMenuPatron.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
