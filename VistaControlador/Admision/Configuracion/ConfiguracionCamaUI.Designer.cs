@@ -43,15 +43,15 @@
             this.tstModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCamas = new System.Windows.Forms.DataGridView();
+            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.tstMenuPatron.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCamas)).BeginInit();
+            this.tstMenuPatron.SuspendLayout();
             this.SuspendLayout();
             // 
             // btEntorno
@@ -103,7 +103,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(22, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,7 +114,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(57, 17);
+            this.label5.Location = new System.Drawing.Point(58, 14);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(178, 18);
             this.label5.TabIndex = 60;
@@ -125,7 +125,7 @@
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(765, 5);
+            this.btnSalir.Location = new System.Drawing.Point(765, 3);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(26, 24);
             this.btnSalir.TabIndex = 59;
@@ -194,31 +194,14 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(24, 44);
+            this.panel1.Location = new System.Drawing.Point(23, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(752, 365);
             this.panel1.TabIndex = 62;
-            // 
-            // tstMenuPatron
-            // 
-            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tstModificar,
-            this.tsbCancelar,
-            this.tsbGuardar,
-            this.tsbBuscar,
-            this.tsbAnular});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 425);
-            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.Name = "tstMenuPatron";
-            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.TabIndex = 58;
-            this.tstMenuPatron.Text = "toolStrip1";
             // 
             // groupBox1
             // 
@@ -240,10 +223,29 @@
             this.dgvCamas.Size = new System.Drawing.Size(707, 254);
             this.dgvCamas.TabIndex = 0;
             // 
+            // tstMenuPatron
+            // 
+            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tstModificar,
+            this.tsbCancelar,
+            this.tsbGuardar,
+            this.tsbBuscar,
+            this.tsbAnular});
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 425);
+            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.Name = "tstMenuPatron";
+            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.TabIndex = 58;
+            this.tstMenuPatron.Text = "toolStrip1";
+            // 
             // ConfiguracionCamaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
@@ -261,10 +263,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tstMenuPatron.ResumeLayout(false);
-            this.tstMenuPatron.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCamas)).EndInit();
+            this.tstMenuPatron.ResumeLayout(false);
+            this.tstMenuPatron.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -39,7 +39,6 @@ namespace Galactus.VistaControlador.Gestion
             GeneralC.deshabilitarBotones(ref tstMenuPatron);
             GeneralC.habilitarControles(this);
             GeneralC.deshabilitarControles(pnlInformacion);
-            desHabilitadoPermanentemente();
             GeneralC.limpiarControles(this);
             cliente.codigo = null;
             tsbBuscarNit.Enabled = true;
@@ -166,10 +165,6 @@ namespace Galactus.VistaControlador.Gestion
                 numEntrega.Value = dRows.Field<int>("Dia Entrega");
                 numPlazo.Value = dRows.Field<int>("Dia Plazo");
                 numDevolucion.Value = dRows.Field<int>("Dia Devolución");
-                txtCuentaPUC.Text = dRows.Field<string>("cuentaPuc");
-                txtPUC.Text = dRows.Field<string>("NombrePuc");
-                txtCuentaCIIU.Text = dRows.Field<string>("cuentaCIIU");
-                txtCIIU.Text = dRows.Field<string>("NombreCIIU");
                 cargarTercero(dRows);
             }
             catch (Exception ex) {
@@ -209,15 +204,8 @@ namespace Galactus.VistaControlador.Gestion
             cliente.diaPlazo = Convert.ToInt32(numPlazo.Value);
             cliente.diaEntrega = Convert.ToInt32(numEntrega.Value);
             cliente.diaDevolucion = Convert.ToInt32(numDevolucion.Value);
-            cliente.cuentaPuc = string.IsNullOrEmpty(txtCuentaPUC.Text) ? null : txtCuentaPUC.Text;
-            cliente.cuentaCIIU = string.IsNullOrEmpty(txtCuentaCIIU.Text) ? null : txtCuentaCIIU.Text;
         }
-        private void desHabilitadoPermanentemente() {
-            txtCuentaCIIU.ReadOnly = true;
-            txtCIIU.ReadOnly = true;
-            txtPUC.ReadOnly = true;
-            txtCuentaPUC.ReadOnly = true;
-        }
+      
         private void iniciarCombos() {
             List<string> parametro = new List<string>();
             string cadena;
@@ -249,10 +237,14 @@ namespace Galactus.VistaControlador.Gestion
                 GeneralC.deshabilitarBotones(ref tstMenuPatron);
                 GeneralC.habilitarControles(this);
                 GeneralC.deshabilitarControles(pnlInformacion);
-                desHabilitadoPermanentemente();
                 tsbGuardar.Enabled = true;
                 tsbCancelar.Enabled = true;
             }
+        }
+
+        private void pnlInformacion_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
