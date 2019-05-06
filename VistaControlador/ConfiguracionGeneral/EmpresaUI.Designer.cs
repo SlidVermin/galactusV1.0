@@ -110,6 +110,7 @@
             // GroupBox7
             // 
             this.GroupBox7.Controls.Add(this.txtPie);
+            this.GroupBox7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox7.Location = new System.Drawing.Point(5, 118);
             this.GroupBox7.Name = "GroupBox7";
             this.GroupBox7.Size = new System.Drawing.Size(792, 95);
@@ -130,6 +131,7 @@
             // GroupBox6
             // 
             this.GroupBox6.Controls.Add(this.txtEncabezado);
+            this.GroupBox6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox6.Location = new System.Drawing.Point(5, 11);
             this.GroupBox6.Name = "GroupBox6";
             this.GroupBox6.Size = new System.Drawing.Size(792, 97);

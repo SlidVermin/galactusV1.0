@@ -39,7 +39,6 @@ namespace Galactus.VistaControlador.Gestion
             GeneralC.deshabilitarBotones(ref tstMenuPatron);
             GeneralC.habilitarControles(this);
             GeneralC.deshabilitarControles(pnlInformacion);
-            desHabilitadoPermanentemente();
             GeneralC.limpiarControles(this);
             proveedor.codigo = null;
             tsbBuscarNit.Enabled = true;
@@ -54,7 +53,6 @@ namespace Galactus.VistaControlador.Gestion
                 GeneralC.habilitarControles(this);
                 GeneralC.deshabilitarControles(pnlInformacion);
                 validarFormaPago();
-                desHabilitadoPermanentemente();
                 tsbGuardar.Enabled = true;
                 tsbCancelar.Enabled = true;
             }
@@ -181,12 +179,12 @@ namespace Galactus.VistaControlador.Gestion
         private void validarFormaPago() {
             if (cbFormaPago.SelectedIndex > 1)
             {
-                GeneralC.habilitarControles(gbCuenta);        
+                GeneralC.habilitarControles(panel2);        
             }
             else
             {
-                GeneralC.deshabilitarControles(gbCuenta);
-                GeneralC.limpiarControles(gbCuenta);
+                GeneralC.deshabilitarControles(panel2);
+                GeneralC.limpiarControles(panel2);
             }
         }
 
@@ -196,7 +194,6 @@ namespace Galactus.VistaControlador.Gestion
             txtRazonSocial.Text = dRows.Field<string>("RazonSocial");
             txtDireccion.Text = dRows.Field<string>("Direccion");
             txtTelefono.Text = dRows.Field<string>("Telefono");
-            txtCelular.Text = dRows.Field<string>("Celular");
         }
 
         private void cargarproveedor(DataRow dRows) {
@@ -210,10 +207,6 @@ namespace Galactus.VistaControlador.Gestion
                 numPlazo.Value = dRows.Field<int>("Dia Plazo");
                 numDevolucion.Value = dRows.Field<int>("Dia Devolución");
                 numVencimiento.Value = dRows.Field<int>("DiaVencimiento");
-                txtCuentaPUC.Text = dRows.Field<string>("cuentaPuc");
-                txtPUC.Text = dRows.Field<string>("NombrePuc");
-                txtCuentaCIIU.Text = dRows.Field<string>("cuentaCIIU");
-                txtCIIU.Text = dRows.Field<string>("NombreCIIU");
                 cbBanco.SelectedValue = (dRows.Field<string>("IdBanco")== null ? ConstanteGeneral.PREDETERMINADA : dRows.Field<string>("IdBanco"));
                 cbTipoCuenta.SelectedValue =(dRows.Field<string>("IdTipoCuenta") == null ? ConstanteGeneral.PREDETERMINADA : dRows.Field<string>("IdTipoCuenta"));
                 txtIdentificacion.Text = dRows.Field<string>("Identificacion");
@@ -258,18 +251,10 @@ namespace Galactus.VistaControlador.Gestion
             proveedor.diaEntrega = Convert.ToInt32(numEntrega.Value);
             proveedor.diaDevolucion = Convert.ToInt32(numDevolucion.Value);
             proveedor.diaVencimiento = Convert.ToInt32(numVencimiento.Value);
-            proveedor.cuentaPuc = string.IsNullOrEmpty(txtCuentaPUC.Text) ? null : txtCuentaPUC.Text;
-            proveedor.cuentaCIIU = string.IsNullOrEmpty(txtCuentaCIIU.Text) ? null : txtCuentaCIIU.Text;
             proveedor.codigoBanco = cbBanco.SelectedValue.ToString() == ConstanteGeneral.PREDETERMINADA ? null : cbBanco.SelectedValue.ToString();
             proveedor.codigoTipoCuenta = cbTipoCuenta.SelectedValue.ToString() == ConstanteGeneral.PREDETERMINADA ? null : cbTipoCuenta.SelectedValue.ToString();
             proveedor.identidicacion = string.IsNullOrEmpty(txtIdentificacion.Text) ? null : txtIdentificacion.Text;
             proveedor.cuenta = string.IsNullOrEmpty(txtCuenta.Text) ? null : txtCuenta.Text;
-        }
-        private void desHabilitadoPermanentemente() {
-            txtCuentaCIIU.ReadOnly = true;
-            txtCIIU.ReadOnly = true;
-            txtPUC.ReadOnly = true;
-            txtCuentaPUC.ReadOnly = true;
         }
         private void iniciarCombos() {
             List<string> parametro = new List<string>();

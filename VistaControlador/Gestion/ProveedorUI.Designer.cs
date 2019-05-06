@@ -32,12 +32,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtCuenta = new System.Windows.Forms.TextBox();
             this.txtIdentificacion = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.cbBanco = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.cbTipoCuenta = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.cbTipoCuenta = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlCaracteristica = new System.Windows.Forms.Panel();
@@ -63,8 +63,6 @@
             this.pnlInformacion = new System.Windows.Forms.Panel();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCelular = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tsbBuscarNit = new System.Windows.Forms.Button();
@@ -142,6 +140,16 @@
             this.txtIdentificacion.Size = new System.Drawing.Size(255, 21);
             this.txtIdentificacion.TabIndex = 58;
             // 
+            // cbBanco
+            // 
+            this.cbBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBanco.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbBanco.FormattingEnabled = true;
+            this.cbBanco.Location = new System.Drawing.Point(125, 12);
+            this.cbBanco.Name = "cbBanco";
+            this.cbBanco.Size = new System.Drawing.Size(255, 23);
+            this.cbBanco.TabIndex = 54;
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -151,6 +159,16 @@
             this.label24.Size = new System.Drawing.Size(82, 15);
             this.label24.TabIndex = 57;
             this.label24.Text = "Identificación:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(17, 42);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(77, 15);
+            this.label23.TabIndex = 51;
+            this.label23.Text = "Tipo Cuenta:";
             // 
             // label25
             // 
@@ -162,26 +180,6 @@
             this.label25.TabIndex = 55;
             this.label25.Text = "Cuenta:";
             // 
-            // cbBanco
-            // 
-            this.cbBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBanco.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbBanco.FormattingEnabled = true;
-            this.cbBanco.Location = new System.Drawing.Point(125, 12);
-            this.cbBanco.Name = "cbBanco";
-            this.cbBanco.Size = new System.Drawing.Size(255, 23);
-            this.cbBanco.TabIndex = 54;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(17, 17);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(45, 15);
-            this.label22.TabIndex = 53;
-            this.label22.Text = "Banco:";
-            // 
             // cbTipoCuenta
             // 
             this.cbTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -192,15 +190,15 @@
             this.cbTipoCuenta.Size = new System.Drawing.Size(255, 23);
             this.cbTipoCuenta.TabIndex = 52;
             // 
-            // label23
+            // label22
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(17, 42);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(77, 15);
-            this.label23.TabIndex = 51;
-            this.label23.Text = "Tipo Cuenta:";
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(17, 17);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(45, 15);
+            this.label22.TabIndex = 53;
+            this.label22.Text = "Banco:";
             // 
             // label21
             // 
@@ -482,8 +480,6 @@
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlInformacion.Controls.Add(this.txtDireccion);
             this.pnlInformacion.Controls.Add(this.label5);
-            this.pnlInformacion.Controls.Add(this.txtCelular);
-            this.pnlInformacion.Controls.Add(this.label8);
             this.pnlInformacion.Controls.Add(this.txtTelefono);
             this.pnlInformacion.Controls.Add(this.label4);
             this.pnlInformacion.Controls.Add(this.tsbBuscarNit);
@@ -515,41 +511,23 @@
             this.label5.TabIndex = 47;
             this.label5.Text = "Dirección:";
             // 
-            // txtCelular
-            // 
-            this.txtCelular.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelular.Location = new System.Drawing.Point(678, 40);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(200, 21);
-            this.txtCelular.TabIndex = 46;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9F);
-            this.label8.Location = new System.Drawing.Point(623, 42);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 15);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "Celular:";
-            // 
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.Location = new System.Drawing.Point(453, 39);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(160, 21);
+            this.txtTelefono.Size = new System.Drawing.Size(425, 21);
             this.txtTelefono.TabIndex = 44;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9F);
-            this.label4.Location = new System.Drawing.Point(390, 42);
+            this.label4.Location = new System.Drawing.Point(383, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.Size = new System.Drawing.Size(64, 15);
             this.label4.TabIndex = 43;
-            this.label4.Text = "Telèfono:";
+            this.label4.Text = "Teléfonos:";
             // 
             // tsbBuscarNit
             // 
@@ -770,8 +748,6 @@
         private System.Windows.Forms.TextBox nitCodeText;
         private System.Windows.Forms.TextBox txtNit;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCelular;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDireccion;

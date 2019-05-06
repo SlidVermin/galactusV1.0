@@ -153,15 +153,14 @@ namespace Galactus.VistaControlador.Gestion
             txtRazonSocial.Text = dRows.Field<string>("RazonSocial");
             txtDireccion.Text = dRows.Field<string>("Direccion");
             txtTelefono.Text = dRows.Field<string>("Telefono");
-            txtCelular.Text = dRows.Field<string>("Celular");
         }
         private void cargarCliente(DataRow dRows) {
             try
             {
                 cliente.codigo = dRows.Field<int>("idCliente").ToString();
-                cbRegimen.SelectedValue = dRows.Field<int>("IdRegimen").ToString();
-                cbFormaPago.SelectedValue = dRows.Field<int>("IdFormaPago").ToString();
-                cbUbicacion.SelectedValue = dRows.Field<int>("idUbicacion").ToString();
+                cmbRegimen.SelectedValue = dRows.Field<int>("IdRegimen").ToString();
+                cmbFormaPago.SelectedValue = dRows.Field<int>("IdFormaPago").ToString();
+                cmbUbicacion.SelectedValue = dRows.Field<int>("idUbicacion").ToString();
                 numEntrega.Value = dRows.Field<int>("Dia Entrega");
                 numPlazo.Value = dRows.Field<int>("Dia Plazo");
                 numDevolucion.Value = dRows.Field<int>("Dia Devolución");
@@ -179,16 +178,16 @@ namespace Galactus.VistaControlador.Gestion
                 MessageBox.Show("¡ Favor seleccionar el tercero !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
-            else if (cbRegimen.SelectedIndex == 0) {
+            else if (cmbRegimen.SelectedIndex == 0) {
                 MessageBox.Show("¡ Favor seleccionar el regimen !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
-            else if (cbFormaPago.SelectedIndex == 0)
+            else if (cmbFormaPago.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccionar la forma de pago !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
-            else if (cbUbicacion.SelectedIndex == 0)
+            else if (cmbUbicacion.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccionar la ubicación !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
@@ -198,9 +197,9 @@ namespace Galactus.VistaControlador.Gestion
             }      
         }
         private void crearNuevoCliente() {
-            cliente.codigoFormaPago =Convert.ToInt32(cbFormaPago.SelectedValue);
-            cliente.codigoRegimen = Convert.ToInt32(cbRegimen.SelectedValue);
-            cliente.codigoUbicacion = Convert.ToInt32(cbUbicacion.SelectedValue);
+            cliente.codigoFormaPago =Convert.ToInt32(cmbFormaPago.SelectedValue);
+            cliente.codigoRegimen = Convert.ToInt32(cmbRegimen.SelectedValue);
+            cliente.codigoUbicacion = Convert.ToInt32(cmbUbicacion.SelectedValue);
             cliente.diaPlazo = Convert.ToInt32(numPlazo.Value);
             cliente.diaEntrega = Convert.ToInt32(numEntrega.Value);
             cliente.diaDevolucion = Convert.ToInt32(numDevolucion.Value);
@@ -211,9 +210,9 @@ namespace Galactus.VistaControlador.Gestion
             string cadena;
             parametro.Add(ConstanteGeneral.REGIMEN_SOCIO_ECONOMICO.ToString());
             cadena = GeneralC.obtenerParametros(parametro);
-            GeneralC.llenarCombo(Sentencias.PARAMETROS_CONSULTAR_DESCRIPCION + cadena, "Codigo", "Descripcion", cbRegimen);
-            GeneralC.llenarComboDatosDefinidor(cliente.llenarComboFormaPago(),"Codigo", "Descripcion", cbFormaPago);
-            GeneralC.llenarComboDatosDefinidor(cliente.llenarComboUbicacion(),"Codigo", "Descripcion", cbUbicacion);
+            GeneralC.llenarCombo(Sentencias.PARAMETROS_CONSULTAR_DESCRIPCION + cadena, "Codigo", "Descripcion", cmbRegimen);
+            GeneralC.llenarComboDatosDefinidor(cliente.llenarComboFormaPago(),"Codigo", "Descripcion", cmbFormaPago);
+            GeneralC.llenarComboDatosDefinidor(cliente.llenarComboUbicacion(),"Codigo", "Descripcion", cmbUbicacion);
         }
         private List<string> listaParametroOculto() {
             List<string>paramtro= new List<string>();

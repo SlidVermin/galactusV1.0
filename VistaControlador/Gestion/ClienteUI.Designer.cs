@@ -37,21 +37,19 @@
             this.numEntrega = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.numDevolucion = new System.Windows.Forms.NumericUpDown();
-            this.cbUbicacion = new System.Windows.Forms.ComboBox();
+            this.cmbUbicacion = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.cbFormaPago = new System.Windows.Forms.ComboBox();
+            this.cmbFormaPago = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.cbRegimen = new System.Windows.Forms.ComboBox();
+            this.cmbRegimen = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCelular = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tsbBuscarNit = new System.Windows.Forms.Button();
@@ -112,14 +110,14 @@
             this.pnlCaracteristica.Controls.Add(this.numEntrega);
             this.pnlCaracteristica.Controls.Add(this.label9);
             this.pnlCaracteristica.Controls.Add(this.numDevolucion);
-            this.pnlCaracteristica.Controls.Add(this.cbUbicacion);
+            this.pnlCaracteristica.Controls.Add(this.cmbUbicacion);
             this.pnlCaracteristica.Controls.Add(this.label17);
             this.pnlCaracteristica.Controls.Add(this.label16);
             this.pnlCaracteristica.Controls.Add(this.label15);
             this.pnlCaracteristica.Controls.Add(this.label14);
-            this.pnlCaracteristica.Controls.Add(this.cbFormaPago);
+            this.pnlCaracteristica.Controls.Add(this.cmbFormaPago);
             this.pnlCaracteristica.Controls.Add(this.label13);
-            this.pnlCaracteristica.Controls.Add(this.cbRegimen);
+            this.pnlCaracteristica.Controls.Add(this.cmbRegimen);
             this.pnlCaracteristica.Controls.Add(this.label12);
             this.pnlCaracteristica.Location = new System.Drawing.Point(15, 133);
             this.pnlCaracteristica.Name = "pnlCaracteristica";
@@ -213,15 +211,15 @@
             0,
             0});
             // 
-            // cbUbicacion
+            // cmbUbicacion
             // 
-            this.cbUbicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbUbicacion.Font = new System.Drawing.Font("Arial", 9F);
-            this.cbUbicacion.FormattingEnabled = true;
-            this.cbUbicacion.Location = new System.Drawing.Point(125, 40);
-            this.cbUbicacion.Name = "cbUbicacion";
-            this.cbUbicacion.Size = new System.Drawing.Size(229, 23);
-            this.cbUbicacion.TabIndex = 50;
+            this.cmbUbicacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbUbicacion.Font = new System.Drawing.Font("Arial", 9F);
+            this.cmbUbicacion.FormattingEnabled = true;
+            this.cmbUbicacion.Location = new System.Drawing.Point(125, 40);
+            this.cmbUbicacion.Name = "cmbUbicacion";
+            this.cmbUbicacion.Size = new System.Drawing.Size(229, 23);
+            this.cmbUbicacion.TabIndex = 50;
             // 
             // label17
             // 
@@ -263,15 +261,15 @@
             this.label14.TabIndex = 44;
             this.label14.Text = "Plazo:";
             // 
-            // cbFormaPago
+            // cmbFormaPago
             // 
-            this.cbFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbFormaPago.Font = new System.Drawing.Font("Arial", 9F);
-            this.cbFormaPago.FormattingEnabled = true;
-            this.cbFormaPago.Location = new System.Drawing.Point(125, 69);
-            this.cbFormaPago.Name = "cbFormaPago";
-            this.cbFormaPago.Size = new System.Drawing.Size(229, 23);
-            this.cbFormaPago.TabIndex = 43;
+            this.cmbFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFormaPago.Font = new System.Drawing.Font("Arial", 9F);
+            this.cmbFormaPago.FormattingEnabled = true;
+            this.cmbFormaPago.Location = new System.Drawing.Point(125, 69);
+            this.cmbFormaPago.Name = "cmbFormaPago";
+            this.cmbFormaPago.Size = new System.Drawing.Size(229, 23);
+            this.cmbFormaPago.TabIndex = 43;
             // 
             // label13
             // 
@@ -283,15 +281,15 @@
             this.label13.TabIndex = 42;
             this.label13.Text = "Forma de pago:";
             // 
-            // cbRegimen
+            // cmbRegimen
             // 
-            this.cbRegimen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbRegimen.Font = new System.Drawing.Font("Arial", 9F);
-            this.cbRegimen.FormattingEnabled = true;
-            this.cbRegimen.Location = new System.Drawing.Point(125, 10);
-            this.cbRegimen.Name = "cbRegimen";
-            this.cbRegimen.Size = new System.Drawing.Size(229, 23);
-            this.cbRegimen.TabIndex = 41;
+            this.cmbRegimen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRegimen.Font = new System.Drawing.Font("Arial", 9F);
+            this.cmbRegimen.FormattingEnabled = true;
+            this.cmbRegimen.Location = new System.Drawing.Point(125, 10);
+            this.cmbRegimen.Name = "cmbRegimen";
+            this.cmbRegimen.Size = new System.Drawing.Size(229, 23);
+            this.cmbRegimen.TabIndex = 41;
             // 
             // label12
             // 
@@ -319,8 +317,6 @@
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlInformacion.Controls.Add(this.txtDireccion);
             this.pnlInformacion.Controls.Add(this.label5);
-            this.pnlInformacion.Controls.Add(this.txtCelular);
-            this.pnlInformacion.Controls.Add(this.label8);
             this.pnlInformacion.Controls.Add(this.txtTelefono);
             this.pnlInformacion.Controls.Add(this.label4);
             this.pnlInformacion.Controls.Add(this.tsbBuscarNit);
@@ -353,30 +349,12 @@
             this.label5.TabIndex = 47;
             this.label5.Text = "Dirección:";
             // 
-            // txtCelular
-            // 
-            this.txtCelular.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelular.Location = new System.Drawing.Point(678, 40);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(195, 21);
-            this.txtCelular.TabIndex = 46;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(623, 42);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 15);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "Celular:";
-            // 
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(453, 39);
+            this.txtTelefono.Location = new System.Drawing.Point(460, 39);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(160, 21);
+            this.txtTelefono.Size = new System.Drawing.Size(414, 21);
             this.txtTelefono.TabIndex = 44;
             // 
             // label4
@@ -385,9 +363,9 @@
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(390, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.Size = new System.Drawing.Size(64, 15);
             this.label4.TabIndex = 43;
-            this.label4.Text = "Telèfono:";
+            this.label4.Text = "Teléfonos:";
             // 
             // tsbBuscarNit
             // 
@@ -403,16 +381,16 @@
             // txtRazonSocial
             // 
             this.txtRazonSocial.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRazonSocial.Location = new System.Drawing.Point(453, 9);
+            this.txtRazonSocial.Location = new System.Drawing.Point(460, 9);
             this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(421, 21);
+            this.txtRazonSocial.Size = new System.Drawing.Size(414, 21);
             this.txtRazonSocial.TabIndex = 41;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(366, 11);
+            this.label7.Location = new System.Drawing.Point(373, 11);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 15);
             this.label7.TabIndex = 40;
@@ -612,21 +590,19 @@
         private System.Windows.Forms.TextBox nitCodeText;
         private System.Windows.Forms.TextBox txtNit;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCelular;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbUbicacion;
+        private System.Windows.Forms.ComboBox cmbUbicacion;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox cbFormaPago;
+        private System.Windows.Forms.ComboBox cmbFormaPago;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cbRegimen;
+        private System.Windows.Forms.ComboBox cmbRegimen;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown numPlazo;
