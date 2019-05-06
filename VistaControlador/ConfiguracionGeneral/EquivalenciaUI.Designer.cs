@@ -35,15 +35,12 @@
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
-            this.gbInformacionATC = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbGrupoATC = new System.Windows.Forms.ComboBox();
             this.txtCodigoATC = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtDescripcionATC = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.gbPrincipal = new System.Windows.Forms.GroupBox();
-            this.gbDatosBasicos = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.numConce = new System.Windows.Forms.NumericUpDown();
             this.chkMedicamentoControl = new System.Windows.Forms.CheckBox();
@@ -57,7 +54,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.gbCaracteristicas = new System.Windows.Forms.GroupBox();
             this.tbcEquivalencia = new System.Windows.Forms.TabControl();
             this.tpCarcacteristicas = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -72,13 +68,16 @@
             this.Verificar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.pacientePB = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label43 = new System.Windows.Forms.Label();
             this.tstMenuPatron.SuspendLayout();
-            this.gbInformacionATC.SuspendLayout();
-            this.gbPrincipal.SuspendLayout();
-            this.gbDatosBasicos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numConce)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOsmolalidad)).BeginInit();
-            this.gbCaracteristicas.SuspendLayout();
             this.tbcEquivalencia.SuspendLayout();
             this.tpCarcacteristicas.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -87,6 +86,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVias)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tstMenuPatron
@@ -99,7 +101,7 @@
             this.tsbBuscar,
             this.tsbAnular,
             this.tsbCancelar});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 521);
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 559);
             this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.Name = "tstMenuPatron";
@@ -173,36 +175,20 @@
             this.tsbCancelar.Text = "Cancelar";
             this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
-            // gbInformacionATC
-            // 
-            this.gbInformacionATC.Controls.Add(this.label11);
-            this.gbInformacionATC.Controls.Add(this.cbGrupoATC);
-            this.gbInformacionATC.Controls.Add(this.txtCodigoATC);
-            this.gbInformacionATC.Controls.Add(this.label8);
-            this.gbInformacionATC.Controls.Add(this.txtDescripcionATC);
-            this.gbInformacionATC.Controls.Add(this.label10);
-            this.gbInformacionATC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbInformacionATC.Location = new System.Drawing.Point(514, 17);
-            this.gbInformacionATC.Name = "gbInformacionATC";
-            this.gbInformacionATC.Size = new System.Drawing.Size(451, 175);
-            this.gbInformacionATC.TabIndex = 47;
-            this.gbInformacionATC.TabStop = false;
-            this.gbInformacionATC.Text = "Informacion ATC";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(41, 104);
+            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(43, 146);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 13);
+            this.label11.Size = new System.Drawing.Size(68, 15);
             this.label11.TabIndex = 37;
-            this.label11.Text = "Grupo:";
+            this.label11.Text = "Grupo ATC:";
             // 
             // cbGrupoATC
             // 
             this.cbGrupoATC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGrupoATC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGrupoATC.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGrupoATC.FormattingEnabled = true;
             this.cbGrupoATC.Items.AddRange(new object[] {
             "---Seleccionar---",
@@ -213,113 +199,78 @@
             "E",
             "F",
             "#N/A"});
-            this.cbGrupoATC.Location = new System.Drawing.Point(86, 101);
+            this.cbGrupoATC.Location = new System.Drawing.Point(119, 143);
             this.cbGrupoATC.Name = "cbGrupoATC";
-            this.cbGrupoATC.Size = new System.Drawing.Size(100, 21);
+            this.cbGrupoATC.Size = new System.Drawing.Size(145, 23);
             this.cbGrupoATC.TabIndex = 2;
             // 
             // txtCodigoATC
             // 
-            this.txtCodigoATC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoATC.Location = new System.Drawing.Point(86, 49);
+            this.txtCodigoATC.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoATC.Location = new System.Drawing.Point(119, 117);
             this.txtCodigoATC.Name = "txtCodigoATC";
-            this.txtCodigoATC.Size = new System.Drawing.Size(145, 20);
+            this.txtCodigoATC.Size = new System.Drawing.Size(145, 21);
             this.txtCodigoATC.TabIndex = 0;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(34, 52);
+            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(37, 120);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 13);
+            this.label8.Size = new System.Drawing.Size(74, 15);
             this.label8.TabIndex = 33;
-            this.label8.Text = "Código: ";
+            this.label8.Text = "Código ATC:";
             // 
             // txtDescripcionATC
             // 
-            this.txtDescripcionATC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionATC.Location = new System.Drawing.Point(86, 75);
+            this.txtDescripcionATC.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcionATC.Location = new System.Drawing.Point(394, 117);
             this.txtDescripcionATC.Name = "txtDescripcionATC";
-            this.txtDescripcionATC.Size = new System.Drawing.Size(349, 20);
+            this.txtDescripcionATC.Size = new System.Drawing.Size(544, 21);
             this.txtDescripcionATC.TabIndex = 1;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(11, 78);
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(285, 120);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 13);
+            this.label10.Size = new System.Drawing.Size(103, 15);
             this.label10.TabIndex = 35;
-            this.label10.Text = "Descripción: ";
-            // 
-            // gbPrincipal
-            // 
-            this.gbPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gbPrincipal.Controls.Add(this.gbDatosBasicos);
-            this.gbPrincipal.Controls.Add(this.gbCaracteristicas);
-            this.gbPrincipal.Controls.Add(this.gbInformacionATC);
-            this.gbPrincipal.Location = new System.Drawing.Point(12, 6);
-            this.gbPrincipal.Name = "gbPrincipal";
-            this.gbPrincipal.Size = new System.Drawing.Size(971, 511);
-            this.gbPrincipal.TabIndex = 48;
-            this.gbPrincipal.TabStop = false;
-            // 
-            // gbDatosBasicos
-            // 
-            this.gbDatosBasicos.Controls.Add(this.label3);
-            this.gbDatosBasicos.Controls.Add(this.numConce);
-            this.gbDatosBasicos.Controls.Add(this.chkMedicamentoControl);
-            this.gbDatosBasicos.Controls.Add(this.chkPos);
-            this.gbDatosBasicos.Controls.Add(this.label4);
-            this.gbDatosBasicos.Controls.Add(this.numOsmolalidad);
-            this.gbDatosBasicos.Controls.Add(this.txtBUnidadMedida);
-            this.gbDatosBasicos.Controls.Add(this.tsbBuscarUnidades);
-            this.gbDatosBasicos.Controls.Add(this.label5);
-            this.gbDatosBasicos.Controls.Add(this.txtBCodigo);
-            this.gbDatosBasicos.Controls.Add(this.label1);
-            this.gbDatosBasicos.Controls.Add(this.txtDescripcion);
-            this.gbDatosBasicos.Controls.Add(this.label2);
-            this.gbDatosBasicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosBasicos.Location = new System.Drawing.Point(6, 16);
-            this.gbDatosBasicos.Name = "gbDatosBasicos";
-            this.gbDatosBasicos.Size = new System.Drawing.Size(490, 175);
-            this.gbDatosBasicos.TabIndex = 64;
-            this.gbDatosBasicos.TabStop = false;
-            this.gbDatosBasicos.Text = "Datos Basicos";
+            this.label10.Text = "Descripción ATC: ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 113);
+            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
+            this.label3.Size = new System.Drawing.Size(90, 15);
             this.label3.TabIndex = 75;
             this.label3.Text = "Concentración:";
             // 
             // numConce
             // 
             this.numConce.DecimalPlaces = 2;
-            this.numConce.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numConce.Location = new System.Drawing.Point(93, 110);
+            this.numConce.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numConce.Location = new System.Drawing.Point(119, 64);
             this.numConce.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.numConce.Name = "numConce";
-            this.numConce.Size = new System.Drawing.Size(90, 20);
+            this.numConce.Size = new System.Drawing.Size(163, 21);
             this.numConce.TabIndex = 69;
             // 
             // chkMedicamentoControl
             // 
             this.chkMedicamentoControl.AutoSize = true;
-            this.chkMedicamentoControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMedicamentoControl.Location = new System.Drawing.Point(335, 143);
+            this.chkMedicamentoControl.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMedicamentoControl.Location = new System.Drawing.Point(394, 93);
             this.chkMedicamentoControl.Name = "chkMedicamentoControl";
-            this.chkMedicamentoControl.Size = new System.Drawing.Size(140, 17);
+            this.chkMedicamentoControl.Size = new System.Drawing.Size(157, 19);
             this.chkMedicamentoControl.TabIndex = 65;
             this.chkMedicamentoControl.Text = "Medicamento de control";
             this.chkMedicamentoControl.UseVisualStyleBackColor = true;
@@ -327,10 +278,10 @@
             // chkPos
             // 
             this.chkPos.AutoSize = true;
-            this.chkPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPos.Location = new System.Drawing.Point(281, 143);
+            this.chkPos.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkPos.Location = new System.Drawing.Point(394, 65);
             this.chkPos.Name = "chkPos";
-            this.chkPos.Size = new System.Drawing.Size(48, 17);
+            this.chkPos.Size = new System.Drawing.Size(51, 19);
             this.chkPos.TabIndex = 64;
             this.chkPos.Text = "POS";
             this.chkPos.UseVisualStyleBackColor = true;
@@ -338,41 +289,41 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 143);
+            this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(30, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(81, 15);
             this.label4.TabIndex = 74;
             this.label4.Text = "Osmolalidad:";
             // 
             // numOsmolalidad
             // 
             this.numOsmolalidad.DecimalPlaces = 2;
-            this.numOsmolalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numOsmolalidad.Location = new System.Drawing.Point(93, 141);
+            this.numOsmolalidad.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numOsmolalidad.Location = new System.Drawing.Point(119, 90);
             this.numOsmolalidad.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.numOsmolalidad.Name = "numOsmolalidad";
-            this.numOsmolalidad.Size = new System.Drawing.Size(166, 20);
+            this.numOsmolalidad.Size = new System.Drawing.Size(163, 21);
             this.numOsmolalidad.TabIndex = 70;
             // 
             // txtBUnidadMedida
             // 
-            this.txtBUnidadMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBUnidadMedida.Location = new System.Drawing.Point(93, 84);
+            this.txtBUnidadMedida.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBUnidadMedida.Location = new System.Drawing.Point(119, 37);
             this.txtBUnidadMedida.Name = "txtBUnidadMedida";
-            this.txtBUnidadMedida.Size = new System.Drawing.Size(163, 20);
+            this.txtBUnidadMedida.Size = new System.Drawing.Size(163, 21);
             this.txtBUnidadMedida.TabIndex = 67;
             // 
             // tsbBuscarUnidades
             // 
             this.tsbBuscarUnidades.BackColor = System.Drawing.Color.White;
-            this.tsbBuscarUnidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbBuscarUnidades.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbBuscarUnidades.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.tsbBuscarUnidades.Location = new System.Drawing.Point(262, 82);
+            this.tsbBuscarUnidades.Location = new System.Drawing.Point(288, 36);
             this.tsbBuscarUnidades.Name = "tsbBuscarUnidades";
             this.tsbBuscarUnidades.Size = new System.Drawing.Size(22, 22);
             this.tsbBuscarUnidades.TabIndex = 68;
@@ -382,66 +333,57 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(43, 87);
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(61, 40);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.Size = new System.Drawing.Size(50, 15);
             this.label5.TabIndex = 73;
             this.label5.Text = "Unidad:";
             // 
             // txtBCodigo
             // 
-            this.txtBCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBCodigo.Location = new System.Drawing.Point(93, 32);
+            this.txtBCodigo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBCodigo.Location = new System.Drawing.Point(119, 10);
             this.txtBCodigo.Name = "txtBCodigo";
-            this.txtBCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtBCodigo.Size = new System.Drawing.Size(100, 21);
             this.txtBCodigo.TabIndex = 63;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(41, 35);
+            this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(58, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(53, 15);
             this.label1.TabIndex = 71;
             this.label1.Text = "Código: ";
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(93, 58);
+            this.txtDescripcion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(349, 10);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(353, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(589, 21);
             this.txtDescripcion.TabIndex = 66;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 62);
+            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(264, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(79, 15);
             this.label2.TabIndex = 72;
             this.label2.Text = "Descripción: ";
-            // 
-            // gbCaracteristicas
-            // 
-            this.gbCaracteristicas.Controls.Add(this.tbcEquivalencia);
-            this.gbCaracteristicas.Location = new System.Drawing.Point(6, 197);
-            this.gbCaracteristicas.Name = "gbCaracteristicas";
-            this.gbCaracteristicas.Size = new System.Drawing.Size(949, 312);
-            this.gbCaracteristicas.TabIndex = 63;
-            this.gbCaracteristicas.TabStop = false;
             // 
             // tbcEquivalencia
             // 
             this.tbcEquivalencia.Controls.Add(this.tpCarcacteristicas);
             this.tbcEquivalencia.Controls.Add(this.tabPage2);
-            this.tbcEquivalencia.Location = new System.Drawing.Point(10, 18);
+            this.tbcEquivalencia.Location = new System.Drawing.Point(3, 172);
             this.tbcEquivalencia.Name = "tbcEquivalencia";
             this.tbcEquivalencia.SelectedIndex = 0;
-            this.tbcEquivalencia.Size = new System.Drawing.Size(918, 291);
+            this.tbcEquivalencia.Size = new System.Drawing.Size(975, 256);
             this.tbcEquivalencia.TabIndex = 49;
             // 
             // tpCarcacteristicas
@@ -451,9 +393,9 @@
             this.tpCarcacteristicas.Location = new System.Drawing.Point(4, 22);
             this.tpCarcacteristicas.Name = "tpCarcacteristicas";
             this.tpCarcacteristicas.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCarcacteristicas.Size = new System.Drawing.Size(910, 265);
+            this.tpCarcacteristicas.Size = new System.Drawing.Size(967, 230);
             this.tpCarcacteristicas.TabIndex = 0;
-            this.tpCarcacteristicas.Text = "Caracteristicas";
+            this.tpCarcacteristicas.Text = "Características";
             this.tpCarcacteristicas.UseVisualStyleBackColor = true;
             // 
             // groupBox5
@@ -462,7 +404,7 @@
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(6, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(432, 250);
+            this.groupBox5.Size = new System.Drawing.Size(479, 218);
             this.groupBox5.TabIndex = 50;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Lineas";
@@ -484,7 +426,7 @@
             this.dgvLineas.Location = new System.Drawing.Point(3, 16);
             this.dgvLineas.Name = "dgvLineas";
             this.dgvLineas.RowHeadersVisible = false;
-            this.dgvLineas.Size = new System.Drawing.Size(426, 231);
+            this.dgvLineas.Size = new System.Drawing.Size(473, 199);
             this.dgvLineas.TabIndex = 0;
             // 
             // CódigoL
@@ -510,9 +452,9 @@
             // 
             this.groupBox3.Controls.Add(this.dgvVias);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(444, 6);
+            this.groupBox3.Location = new System.Drawing.Point(492, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(432, 250);
+            this.groupBox3.Size = new System.Drawing.Size(469, 218);
             this.groupBox3.TabIndex = 48;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Vias de administración";
@@ -534,7 +476,7 @@
             this.dgvVias.Location = new System.Drawing.Point(3, 16);
             this.dgvVias.Name = "dgvVias";
             this.dgvVias.RowHeadersVisible = false;
-            this.dgvVias.Size = new System.Drawing.Size(426, 231);
+            this.dgvVias.Size = new System.Drawing.Size(463, 199);
             this.dgvVias.TabIndex = 0;
             // 
             // Código
@@ -562,9 +504,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(910, 265);
+            this.tabPage2.Size = new System.Drawing.Size(967, 230);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Prductos Dependientes";
+            this.tabPage2.Text = "Productos Dependientes";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dgvProductos
@@ -579,8 +521,97 @@
             this.dgvProductos.Location = new System.Drawing.Point(3, 3);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersVisible = false;
-            this.dgvProductos.Size = new System.Drawing.Size(904, 259);
+            this.dgvProductos.Size = new System.Drawing.Size(961, 224);
             this.dgvProductos.TabIndex = 0;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(1027, 3);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(26, 24);
+            this.btnSalir.TabIndex = 57;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial", 12F);
+            this.label30.Location = new System.Drawing.Point(60, 15);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(97, 18);
+            this.label30.TabIndex = 54;
+            this.label30.Text = "Equivalencia";
+            // 
+            // pacientePB
+            // 
+            this.pacientePB.Image = global::Galactus.Properties.Resources.user__1_;
+            this.pacientePB.Location = new System.Drawing.Point(25, 4);
+            this.pacientePB.Name = "pacientePB";
+            this.pacientePB.Size = new System.Drawing.Size(31, 31);
+            this.pacientePB.TabIndex = 55;
+            this.pacientePB.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label33);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.label43);
+            this.panel1.Location = new System.Drawing.Point(23, 43);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1009, 490);
+            this.panel1.TabIndex = 56;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(7, 8);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(257, 20);
+            this.label33.TabIndex = 47;
+            this.label33.Text = "Información de la equivalencia.";
+            // 
+            // panel6
+            // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.tbcEquivalencia);
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Controls.Add(this.cbGrupoATC);
+            this.panel6.Controls.Add(this.txtBCodigo);
+            this.panel6.Controls.Add(this.txtCodigoATC);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.numConce);
+            this.panel6.Controls.Add(this.txtDescripcionATC);
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Controls.Add(this.chkMedicamentoControl);
+            this.panel6.Controls.Add(this.txtDescripcion);
+            this.panel6.Controls.Add(this.chkPos);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.numOsmolalidad);
+            this.panel6.Controls.Add(this.tsbBuscarUnidades);
+            this.panel6.Controls.Add(this.txtBUnidadMedida);
+            this.panel6.Location = new System.Drawing.Point(13, 31);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(983, 445);
+            this.panel6.TabIndex = 46;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(8, 246);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(0, 20);
+            this.label43.TabIndex = 40;
             // 
             // EquivalenciaUI
             // 
@@ -588,26 +619,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1009, 546);
-            this.Controls.Add(this.gbPrincipal);
+            this.ClientSize = new System.Drawing.Size(1059, 584);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.pacientePB);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tstMenuPatron);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MaximumSize = new System.Drawing.Size(1025, 584);
-            this.MinimumSize = new System.Drawing.Size(1025, 584);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1059, 584);
+            this.MinimumSize = new System.Drawing.Size(1059, 580);
             this.Name = "EquivalenciaUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Equivalencia";
             this.Load += new System.EventHandler(this.EquivalenciaUI_Load);
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
-            this.gbInformacionATC.ResumeLayout(false);
-            this.gbInformacionATC.PerformLayout();
-            this.gbPrincipal.ResumeLayout(false);
-            this.gbDatosBasicos.ResumeLayout(false);
-            this.gbDatosBasicos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numConce)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOsmolalidad)).EndInit();
-            this.gbCaracteristicas.ResumeLayout(false);
             this.tbcEquivalencia.ResumeLayout(false);
             this.tpCarcacteristicas.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -616,6 +645,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVias)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -629,15 +663,12 @@
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbBuscar;
         private System.Windows.Forms.ToolStripButton tsbAnular;
-        private System.Windows.Forms.GroupBox gbInformacionATC;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.ComboBox cbGrupoATC;
         private System.Windows.Forms.TextBox txtCodigoATC;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtDescripcionATC;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.GroupBox gbPrincipal;
-        private System.Windows.Forms.GroupBox gbCaracteristicas;
         private System.Windows.Forms.TabControl tbcEquivalencia;
         private System.Windows.Forms.TabPage tpCarcacteristicas;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -652,7 +683,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Verificar;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.GroupBox gbDatosBasicos;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.NumericUpDown numConce;
         private System.Windows.Forms.CheckBox chkMedicamentoControl;
@@ -666,5 +696,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.PictureBox pacientePB;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label43;
     }
 }

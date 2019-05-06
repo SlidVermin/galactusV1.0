@@ -93,7 +93,7 @@ namespace Galactus.VistaControlador.Admision.Configuracion
         private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-                ManualServicioDAL.AnularManual(cbListaManual.SelectedValue.ToString());
+                ManualServicioDAL.AnularManual(txtCodigo.Text);
                 GeneralC.deshabilitarBotones(ref tstMenuPatron);
                 GeneralC.deshabilitarControles(this);
                 GeneralC.limpiarControles(this);
@@ -102,7 +102,7 @@ namespace Galactus.VistaControlador.Admision.Configuracion
         }
         private void tabPestañas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tsbGuardar.Enabled == false & cbListaManual.SelectedIndex > 0 )
+            if (tsbGuardar.Enabled == false &&  !string.IsNullOrEmpty(txtCodigo.Text))
             {
                 return;
             }
@@ -143,7 +143,7 @@ namespace Galactus.VistaControlador.Admision.Configuracion
         private void cargarSOAT()
         {
             List<string> parametro = new List<string>();
-            parametro.Add(cbListaManual.SelectedValue.ToString());
+            parametro.Add(txtCodigo.Text);
             GeneralC.llenarTabla(Sentencias.MANUAL_SERVICIO_CONSULTAR_SOAT, parametro, objManual.dtSoat);
             navegarSoat.DataSource = objManual.dtSoat;
             dgvSoat.DataSource =navegarSoat.DataSource;
@@ -151,7 +151,7 @@ namespace Galactus.VistaControlador.Admision.Configuracion
         private void cargarISS()
         {
             List<string> parametro = new List<string>();
-            parametro.Add(cbListaManual.SelectedValue.ToString());
+            parametro.Add(txtCodigo.Text);
             GeneralC.llenarTabla(Sentencias.MANUAL_SERVICIO_CONSULTAR_ISS, parametro, objManual.dtISS);
             navegarIss.DataSource = objManual.dtISS;
             dgvIss.DataSource = navegarIss.DataSource;
@@ -159,7 +159,7 @@ namespace Galactus.VistaControlador.Admision.Configuracion
         private void cargarCUPS()
         {
             List<string> parametro = new List<string>();
-            parametro.Add(cbListaManual.SelectedValue.ToString());
+            parametro.Add(txtCodigo.Text);
             GeneralC.llenarTabla(Sentencias.MANUAL_SERVICIO_CONSULTAR_CUPS, parametro, objManual.dtCups);
             navegarCups.DataSource = objManual.dtCups;
             dgvCups.DataSource = navegarCups.DataSource;
@@ -167,8 +167,8 @@ namespace Galactus.VistaControlador.Admision.Configuracion
         private void cargarInformacion(DataRow dRows ){
             List <string> parametro = new List<string>();
 
-            cbListaManual.SelectedValue= dRows.GetParentRows("Codigo");
-            parametro.Add(cbListaManual.SelectedValue.ToString());
+            txtCodigo.Text = dRows.GetParentRows("Codigo").ToString();
+            parametro.Add(txtCodigo.Text);
 
             GeneralC.llenarTabla(Sentencias.MANUAL_SERVICIO_CARGAR_SOAT, parametro, objManual.dtSoat);
             GeneralC.llenarTabla(Sentencias.MANUAL_SERVICIO_CARGAR_ISS, parametro, objManual.dtISS);
@@ -188,5 +188,9 @@ namespace Galactus.VistaControlador.Admision.Configuracion
             tsbGuardar.Enabled = true;
         }
 
+        private void tsbBuscar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
