@@ -65,6 +65,7 @@
             this.tpIngresoClinico = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.tpEgreso = new System.Windows.Forms.TabPage();
             this.pnlInformacion.SuspendLayout();
             this.tbLaboratorios.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
@@ -294,7 +295,7 @@
             this.tpEvolucion.Location = new System.Drawing.Point(4, 29);
             this.tpEvolucion.Name = "tpEvolucion";
             this.tpEvolucion.Padding = new System.Windows.Forms.Padding(3);
-            this.tpEvolucion.Size = new System.Drawing.Size(1289, 473);
+            this.tpEvolucion.Size = new System.Drawing.Size(1289, 468);
             this.tpEvolucion.TabIndex = 2;
             this.tpEvolucion.Text = "Evoluciones";
             this.tpEvolucion.UseVisualStyleBackColor = true;
@@ -304,7 +305,7 @@
             this.tbLaboratorios.Controls.Add(this.panel3);
             this.tbLaboratorios.Location = new System.Drawing.Point(4, 29);
             this.tbLaboratorios.Name = "tbLaboratorios";
-            this.tbLaboratorios.Size = new System.Drawing.Size(1289, 473);
+            this.tbLaboratorios.Size = new System.Drawing.Size(1289, 468);
             this.tbLaboratorios.TabIndex = 4;
             this.tbLaboratorios.Text = "Laboratorios";
             this.tbLaboratorios.UseVisualStyleBackColor = true;
@@ -322,7 +323,7 @@
             this.tpOrdenMedica.Location = new System.Drawing.Point(4, 29);
             this.tpOrdenMedica.Name = "tpOrdenMedica";
             this.tpOrdenMedica.Padding = new System.Windows.Forms.Padding(3);
-            this.tpOrdenMedica.Size = new System.Drawing.Size(1289, 473);
+            this.tpOrdenMedica.Size = new System.Drawing.Size(1289, 468);
             this.tpOrdenMedica.TabIndex = 1;
             this.tpOrdenMedica.Text = "Orden Medica";
             this.tpOrdenMedica.UseVisualStyleBackColor = true;
@@ -338,7 +339,7 @@
             this.toolStripButton4,
             this.toolStripButton5,
             this.toolStripButton6});
-            this.tstMenuOrdenMedica.Location = new System.Drawing.Point(3, 445);
+            this.tstMenuOrdenMedica.Location = new System.Drawing.Point(3, 440);
             this.tstMenuOrdenMedica.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuOrdenMedica.MinimumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuOrdenMedica.Name = "tstMenuOrdenMedica";
@@ -412,7 +413,7 @@
             // 
             this.tpEstancia.Location = new System.Drawing.Point(4, 29);
             this.tpEstancia.Name = "tpEstancia";
-            this.tpEstancia.Size = new System.Drawing.Size(1289, 473);
+            this.tpEstancia.Size = new System.Drawing.Size(1289, 468);
             this.tpEstancia.TabIndex = 3;
             this.tpEstancia.Text = "Estancia";
             this.tpEstancia.UseVisualStyleBackColor = true;
@@ -425,6 +426,7 @@
             this.tabHistoriaClinica.Controls.Add(this.tpOrdenMedica);
             this.tabHistoriaClinica.Controls.Add(this.tbLaboratorios);
             this.tabHistoriaClinica.Controls.Add(this.tpEvolucion);
+            this.tabHistoriaClinica.Controls.Add(this.tpEgreso);
             this.tabHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabHistoriaClinica.Location = new System.Drawing.Point(11, 116);
             this.tabHistoriaClinica.Name = "tabHistoriaClinica";
@@ -463,6 +465,16 @@
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
+            // 
+            // tpEgreso
+            // 
+            this.tpEgreso.Location = new System.Drawing.Point(4, 29);
+            this.tpEgreso.Name = "tpEgreso";
+            this.tpEgreso.Padding = new System.Windows.Forms.Padding(3);
+            this.tpEgreso.Size = new System.Drawing.Size(1289, 468);
+            this.tpEgreso.TabIndex = 5;
+            this.tpEgreso.Text = "Egreso";
+            this.tpEgreso.UseVisualStyleBackColor = true;
             // 
             // HistoriaClinicaUI
             // 
@@ -534,5 +546,6 @@
         private System.Windows.Forms.TabPage tpIngresoClinico;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.TabPage tpEgreso;
     }
 }
