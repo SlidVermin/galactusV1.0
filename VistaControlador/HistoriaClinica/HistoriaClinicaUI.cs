@@ -78,5 +78,13 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
 
         }
+
+        private void btnSalir_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(Mensajes.SALIR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
     }
 }

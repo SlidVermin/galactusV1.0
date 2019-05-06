@@ -63,11 +63,14 @@
             this.tpEstancia = new System.Windows.Forms.TabPage();
             this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
             this.tpIngresoClinico = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.pnlInformacion.SuspendLayout();
             this.tbLaboratorios.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
             this.tstMenuOrdenMedica.SuspendLayout();
             this.tabHistoriaClinica.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlInformacion
@@ -92,7 +95,7 @@
             this.pnlInformacion.Controls.Add(this.txtAtencion);
             this.pnlInformacion.Controls.Add(this.label3);
             this.pnlInformacion.Controls.Add(this.label5);
-            this.pnlInformacion.Location = new System.Drawing.Point(4, 38);
+            this.pnlInformacion.Location = new System.Drawing.Point(11, 51);
             this.pnlInformacion.Name = "pnlInformacion";
             this.pnlInformacion.Size = new System.Drawing.Size(1297, 59);
             this.pnlInformacion.TabIndex = 2;
@@ -280,7 +283,7 @@
             // 
             this.lbTitulo.AutoSize = true;
             this.lbTitulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitulo.Location = new System.Drawing.Point(7, 10);
+            this.lbTitulo.Location = new System.Drawing.Point(47, 21);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(126, 21);
             this.lbTitulo.TabIndex = 8;
@@ -423,10 +426,10 @@
             this.tabHistoriaClinica.Controls.Add(this.tbLaboratorios);
             this.tabHistoriaClinica.Controls.Add(this.tpEvolucion);
             this.tabHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabHistoriaClinica.Location = new System.Drawing.Point(4, 103);
+            this.tabHistoriaClinica.Location = new System.Drawing.Point(11, 116);
             this.tabHistoriaClinica.Name = "tabHistoriaClinica";
             this.tabHistoriaClinica.SelectedIndex = 0;
-            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 506);
+            this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 501);
             this.tabHistoriaClinica.TabIndex = 46;
             // 
             // tpIngresoClinico
@@ -435,23 +438,47 @@
             this.tpIngresoClinico.Location = new System.Drawing.Point(4, 29);
             this.tpIngresoClinico.Name = "tpIngresoClinico";
             this.tpIngresoClinico.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIngresoClinico.Size = new System.Drawing.Size(1289, 473);
+            this.tpIngresoClinico.Size = new System.Drawing.Size(1289, 468);
             this.tpIngresoClinico.TabIndex = 0;
             this.tpIngresoClinico.Text = "Ingreso Clinico";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(1287, 4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(26, 24);
+            this.btnSalir.TabIndex = 61;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // HistoriaClinicaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1304, 611);
+            this.ClientSize = new System.Drawing.Size(1320, 629);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabHistoriaClinica);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.pnlInformacion);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1340, 650);
-            this.MinimumSize = new System.Drawing.Size(1320, 640);
+            this.MaximumSize = new System.Drawing.Size(1320, 629);
+            this.MinimumSize = new System.Drawing.Size(1320, 629);
             this.Name = "HistoriaClinicaUI";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -464,6 +491,7 @@
             this.tstMenuOrdenMedica.ResumeLayout(false);
             this.tstMenuOrdenMedica.PerformLayout();
             this.tabHistoriaClinica.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,5 +532,7 @@
         private System.Windows.Forms.TextBox txtAdmision;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tpIngresoClinico;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
