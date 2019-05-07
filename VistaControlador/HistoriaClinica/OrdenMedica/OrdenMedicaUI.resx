@@ -156,6 +156,18 @@
         TkSuQmCC
 </value>
   </data>
+  <data name="tsBtCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFzSURBVDhPjVDLqkFhGP0NlLHyFJQyVTIyNNpJycAzbDMh
+        KS+giPIUykjJK5ixmZkSyf2yTmud/n32GZ2zBvv7v+tea5nP5wOL1+ul+Hg8FJmz/36/FW2fMPzc73cl
+        Fuv1Gt1uF81mE/1+H6vVyl96Pp86bOwSLx4OB5TLZUSjURSLRXQ6HeWxWExxv99rlvCp8komk0E+n8du
+        t1OtVqvp4Ha7RaFQQC6Xw/F4VE9Ur9crRqMRUqnUbx1GbeF0OiGZTGI4HCo3FE6k02mMx2O9Cda5GNQ/
+        m80Qj8f1NtTVaDQ0VK1WRdO6GgqF1HNdF/P5HJfLRTWyMnSJ/CORiKLVfLvd0Gq1UK/X0W63MZ1ORTcc
+        DmtGIpbLpZzcbDay24J0rRQOTyYTJBIJ5b6ri8VC0S4GTSLO57PMGwwGP3+kqwSX7B8I5jSHS47jIJvN
+        qsbc9ztI0bKgIZVKRfpLpZI0Wvy52Ov14Hmecot/UQ1qJcVvAF8lHp+DXg1aOwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="tsBtBuscar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -175,18 +187,6 @@
         v0eqYPySi7XtFUGcNDjP84reaRqnaRLnnAqxhUMr43Ec4r3Xp40tMKtxnmed3nWdiqtZMY9eoEZMQCKE
         oMkWqNMEyqc+C88D4uBqjzRu26ba973EEOuvxi+Bcjig1dQSqYwxRt2LbUaOMbkZYVjXVZZlqcQB5GYc
         x7E6Tb4Pw9BeMaUkfd+Xn20vAmLUcs5XtzFa3lYF/1jkBwF6btVW5N48AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="tsBtCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFzSURBVDhPjVDLqkFhGP0NlLHyFJQyVTIyNNpJycAzbDMh
-        KS+giPIUykjJK5ixmZkSyf2yTmud/n32GZ2zBvv7v+tea5nP5wOL1+ul+Hg8FJmz/36/FW2fMPzc73cl
-        Fuv1Gt1uF81mE/1+H6vVyl96Pp86bOwSLx4OB5TLZUSjURSLRXQ6HeWxWExxv99rlvCp8komk0E+n8du
-        t1OtVqvp4Ha7RaFQQC6Xw/F4VE9Ur9crRqMRUqnUbx1GbeF0OiGZTGI4HCo3FE6k02mMx2O9Cda5GNQ/
-        m80Qj8f1NtTVaDQ0VK1WRdO6GgqF1HNdF/P5HJfLRTWyMnSJ/CORiKLVfLvd0Gq1UK/X0W63MZ1ORTcc
-        DmtGIpbLpZzcbDay24J0rRQOTyYTJBIJ5b6ri8VC0S4GTSLO57PMGwwGP3+kqwSX7B8I5jSHS47jIJvN
-        qsbc9ztI0bKgIZVKRfpLpZI0Wvy52Ov14Hmecot/UQ1qJcVvAF8lHp+DXg1aOwAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="tstPropiedadesOrdenMedica.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

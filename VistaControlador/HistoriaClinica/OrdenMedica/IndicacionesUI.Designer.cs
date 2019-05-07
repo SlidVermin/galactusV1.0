@@ -44,7 +44,7 @@
             this.txtIndicaciones.Multiline = true;
             this.txtIndicaciones.Name = "txtIndicaciones";
             this.txtIndicaciones.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtIndicaciones.Size = new System.Drawing.Size(871, 227);
+            this.txtIndicaciones.Size = new System.Drawing.Size(950, 249);
             this.txtIndicaciones.TabIndex = 0;
             this.txtIndicaciones.TextChanged += new System.EventHandler(this.txtIndicaciones_TextChanged);
             // 
@@ -53,10 +53,9 @@
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.GroupBox17);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 267);
+            this.panel1.Size = new System.Drawing.Size(983, 287);
             this.panel1.TabIndex = 2;
             // 
             // GroupBox17
@@ -67,7 +66,7 @@
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(12, 3);
             this.GroupBox17.Name = "GroupBox17";
-            this.GroupBox17.Size = new System.Drawing.Size(883, 254);
+            this.GroupBox17.Size = new System.Drawing.Size(962, 276);
             this.GroupBox17.TabIndex = 10092;
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Indicaciones";
@@ -77,8 +76,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(907, 267);
+            this.ClientSize = new System.Drawing.Size(986, 291);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(986, 291);
+            this.MinimumSize = new System.Drawing.Size(986, 291);
             this.Name = "IndicacionesUI";
             this.Text = "Indicaciones";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IndiceacionesUI_FormClosing);

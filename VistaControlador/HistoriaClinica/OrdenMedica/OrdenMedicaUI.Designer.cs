@@ -60,10 +60,10 @@
             this.tsBtNuevo,
             this.tsBtModificar,
             this.tsBtGuardar,
+            this.tsBtCancelar,
             this.tsBtBuscar,
-            this.tsBtAnular,
-            this.tsBtCancelar});
-            this.tstMenuOrdenMedica.Location = new System.Drawing.Point(0, 321);
+            this.tsBtAnular});
+            this.tstMenuOrdenMedica.Location = new System.Drawing.Point(0, 332);
             this.tstMenuOrdenMedica.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuOrdenMedica.MinimumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuOrdenMedica.Name = "tstMenuOrdenMedica";
@@ -198,7 +198,7 @@
             this.tcOrdenMedica.Multiline = true;
             this.tcOrdenMedica.Name = "tcOrdenMedica";
             this.tcOrdenMedica.SelectedIndex = 0;
-            this.tcOrdenMedica.Size = new System.Drawing.Size(1096, 283);
+            this.tcOrdenMedica.Size = new System.Drawing.Size(1096, 301);
             this.tcOrdenMedica.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tcOrdenMedica.TabIndex = 56;
             // 
@@ -207,7 +207,7 @@
             this.tpIndicaciones.Location = new System.Drawing.Point(124, 4);
             this.tpIndicaciones.Name = "tpIndicaciones";
             this.tpIndicaciones.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIndicaciones.Size = new System.Drawing.Size(968, 275);
+            this.tpIndicaciones.Size = new System.Drawing.Size(968, 293);
             this.tpIndicaciones.TabIndex = 0;
             this.tpIndicaciones.Text = "Indicaciones";
             this.tpIndicaciones.UseVisualStyleBackColor = true;
@@ -217,7 +217,7 @@
             this.tbProcedimientos.Location = new System.Drawing.Point(124, 4);
             this.tbProcedimientos.Name = "tbProcedimientos";
             this.tbProcedimientos.Padding = new System.Windows.Forms.Padding(3);
-            this.tbProcedimientos.Size = new System.Drawing.Size(968, 275);
+            this.tbProcedimientos.Size = new System.Drawing.Size(968, 293);
             this.tbProcedimientos.TabIndex = 1;
             this.tbProcedimientos.Text = "Procedimientos";
             this.tbProcedimientos.UseVisualStyleBackColor = true;
@@ -226,7 +226,7 @@
             // 
             this.tpMedicamentos.Location = new System.Drawing.Point(124, 4);
             this.tpMedicamentos.Name = "tpMedicamentos";
-            this.tpMedicamentos.Size = new System.Drawing.Size(968, 275);
+            this.tpMedicamentos.Size = new System.Drawing.Size(968, 293);
             this.tpMedicamentos.TabIndex = 2;
             this.tpMedicamentos.Text = "Medicamentos";
             this.tpMedicamentos.UseVisualStyleBackColor = true;
@@ -235,7 +235,7 @@
             // 
             this.tpAnalisisOrden.Location = new System.Drawing.Point(124, 4);
             this.tpAnalisisOrden.Name = "tpAnalisisOrden";
-            this.tpAnalisisOrden.Size = new System.Drawing.Size(968, 275);
+            this.tpAnalisisOrden.Size = new System.Drawing.Size(968, 293);
             this.tpAnalisisOrden.TabIndex = 3;
             this.tpAnalisisOrden.Text = "Analisis";
             this.tpAnalisisOrden.UseVisualStyleBackColor = true;
@@ -245,12 +245,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1100, 346);
+            this.ClientSize = new System.Drawing.Size(1100, 357);
             this.Controls.Add(this.mtxtFechaOrden);
             this.Controls.Add(this.tstPropiedadesOrdenMedica);
             this.Controls.Add(this.tstMenuOrdenMedica);
             this.Controls.Add(this.tcOrdenMedica);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1100, 357);
+            this.MinimumSize = new System.Drawing.Size(1100, 357);
             this.Name = "OrdenMedicaUI";
             this.Text = "OrdenMedicaUI";
             this.Load += new System.EventHandler(this.OrdenMedicaUI_Load);

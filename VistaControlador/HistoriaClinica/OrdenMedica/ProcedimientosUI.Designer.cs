@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcedimientosUI));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
             this.PanelJustificacionN = new System.Windows.Forms.Panel();
             this.txtJustificacion = new System.Windows.Forms.TextBox();
             this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.justificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Agregar = new System.Windows.Forms.DataGridViewImageColumn();
             this.anularProcedimiento = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.GroupBox17.SuspendLayout();
             this.PanelJustificacionN.SuspendLayout();
@@ -55,7 +55,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(907, 256);
+            this.panel1.Size = new System.Drawing.Size(986, 291);
             this.panel1.TabIndex = 1;
             // 
             // GroupBox17
@@ -66,7 +66,7 @@
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(12, 3);
             this.GroupBox17.Name = "GroupBox17";
-            this.GroupBox17.Size = new System.Drawing.Size(883, 248);
+            this.GroupBox17.Size = new System.Drawing.Size(962, 276);
             this.GroupBox17.TabIndex = 10092;
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Procedimientos";
@@ -108,16 +108,25 @@
             this.justificacion,
             this.Agregar,
             this.anularProcedimiento});
-            this.dgvProcedimientos.Location = new System.Drawing.Point(3, 18);
+            this.dgvProcedimientos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProcedimientos.Location = new System.Drawing.Point(3, 17);
             this.dgvProcedimientos.MultiSelect = false;
             this.dgvProcedimientos.Name = "dgvProcedimientos";
             this.dgvProcedimientos.ReadOnly = true;
             this.dgvProcedimientos.RowHeadersVisible = false;
-            this.dgvProcedimientos.Size = new System.Drawing.Size(877, 227);
+            this.dgvProcedimientos.Size = new System.Drawing.Size(956, 256);
             this.dgvProcedimientos.TabIndex = 2;
             this.dgvProcedimientos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellClick);
             this.dgvProcedimientos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellEndEdit);
             this.dgvProcedimientos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellEnter);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewImageColumn1.HeaderText = "Quitar";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 50;
             // 
             // descripcion
             // 
@@ -146,7 +155,7 @@
             // Agregar
             // 
             this.Agregar.HeaderText = "Agregar";
-            this.Agregar.Image = global::Galactus.Properties.Resources.search__1_;
+            this.Agregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
             this.Agregar.Name = "Agregar";
             this.Agregar.ReadOnly = true;
             this.Agregar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -157,26 +166,21 @@
             // 
             this.anularProcedimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.anularProcedimiento.HeaderText = "Quitar";
-            this.anularProcedimiento.Image = ((System.Drawing.Image)(resources.GetObject("anularProcedimiento.Image")));
+            this.anularProcedimiento.Image = global::Galactus.Properties.Resources.btn_anular;
             this.anularProcedimiento.Name = "anularProcedimiento";
             this.anularProcedimiento.ReadOnly = true;
             this.anularProcedimiento.Width = 50;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn1.HeaderText = "Quitar";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 50;
             // 
             // ProcedimientosUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(907, 256);
+            this.ClientSize = new System.Drawing.Size(986, 291);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(986, 291);
+            this.MinimumSize = new System.Drawing.Size(986, 291);
             this.Name = "ProcedimientosUI";
             this.Text = "ProcedimientosUI";
             this.Load += new System.EventHandler(this.ProcedimientosUI_Load);

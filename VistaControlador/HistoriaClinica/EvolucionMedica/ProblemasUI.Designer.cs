@@ -45,7 +45,7 @@
             // GroupBox17
             // 
             this.GroupBox17.Controls.Add(this.dgvDiagnostico);
-            this.GroupBox17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9F);
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 7);
             this.GroupBox17.Name = "GroupBox17";
@@ -71,7 +71,7 @@
             this.dgAgregar,
             this.dgQuitar});
             this.dgvDiagnostico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDiagnostico.Location = new System.Drawing.Point(3, 21);
+            this.dgvDiagnostico.Location = new System.Drawing.Point(3, 17);
             this.dgvDiagnostico.MultiSelect = false;
             this.dgvDiagnostico.Name = "dgvDiagnostico";
             this.dgvDiagnostico.ReadOnly = true;
@@ -80,7 +80,7 @@
             this.dgvDiagnostico.ShowCellToolTips = false;
             this.dgvDiagnostico.ShowEditingIcon = false;
             this.dgvDiagnostico.ShowRowErrors = false;
-            this.dgvDiagnostico.Size = new System.Drawing.Size(970, 132);
+            this.dgvDiagnostico.Size = new System.Drawing.Size(970, 136);
             this.dgvDiagnostico.TabIndex = 2;
             this.dgvDiagnostico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiagnostico_CellContentClick);
             // 
@@ -97,14 +97,14 @@
             this.dgCodigo.HeaderText = "Código";
             this.dgCodigo.Name = "dgCodigo";
             this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 77;
+            this.dgCodigo.Width = 72;
             // 
             // dgDescripcion
             // 
             this.dgDescripcion.HeaderText = "Descripcion";
             this.dgDescripcion.Name = "dgDescripcion";
             this.dgDescripcion.ReadOnly = true;
-            this.dgDescripcion.Width = 105;
+            this.dgDescripcion.Width = 98;
             // 
             // dgAgregar
             // 
@@ -112,7 +112,7 @@
             this.dgAgregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
             this.dgAgregar.Name = "dgAgregar";
             this.dgAgregar.ReadOnly = true;
-            this.dgAgregar.Width = 63;
+            this.dgAgregar.Width = 56;
             // 
             // dgQuitar
             // 
@@ -120,12 +120,12 @@
             this.dgQuitar.Image = global::Galactus.Properties.Resources.btn_anular;
             this.dgQuitar.Name = "dgQuitar";
             this.dgQuitar.ReadOnly = true;
-            this.dgQuitar.Width = 53;
+            this.dgQuitar.Width = 46;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtSubjetivos);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 9F);
             this.groupBox1.Location = new System.Drawing.Point(5, 168);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(976, 121);
@@ -136,9 +136,9 @@
             // txtSubjetivos
             // 
             this.txtSubjetivos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtSubjetivos.Location = new System.Drawing.Point(3, 21);
+            this.txtSubjetivos.Location = new System.Drawing.Point(3, 17);
             this.txtSubjetivos.Name = "txtSubjetivos";
-            this.txtSubjetivos.Size = new System.Drawing.Size(970, 97);
+            this.txtSubjetivos.Size = new System.Drawing.Size(970, 101);
             this.txtSubjetivos.TabIndex = 0;
             this.txtSubjetivos.Text = "";
             // 

@@ -39,7 +39,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtAnalisis);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 9F);
             this.groupBox1.Location = new System.Drawing.Point(5, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(972, 131);
@@ -50,16 +50,16 @@
             // txtAnalisis
             // 
             this.txtAnalisis.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAnalisis.Location = new System.Drawing.Point(3, 21);
+            this.txtAnalisis.Location = new System.Drawing.Point(3, 17);
             this.txtAnalisis.Name = "txtAnalisis";
-            this.txtAnalisis.Size = new System.Drawing.Size(966, 107);
+            this.txtAnalisis.Size = new System.Drawing.Size(966, 111);
             this.txtAnalisis.TabIndex = 0;
             this.txtAnalisis.Text = "";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtPlan);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 9F);
             this.groupBox2.Location = new System.Drawing.Point(5, 140);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(972, 139);
@@ -70,9 +70,9 @@
             // txtPlan
             // 
             this.txtPlan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtPlan.Location = new System.Drawing.Point(3, 21);
+            this.txtPlan.Location = new System.Drawing.Point(3, 17);
             this.txtPlan.Name = "txtPlan";
-            this.txtPlan.Size = new System.Drawing.Size(966, 115);
+            this.txtPlan.Size = new System.Drawing.Size(966, 119);
             this.txtPlan.TabIndex = 0;
             this.txtPlan.Text = "";
             // 

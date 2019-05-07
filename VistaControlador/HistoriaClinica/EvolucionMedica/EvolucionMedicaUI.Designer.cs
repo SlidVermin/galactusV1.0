@@ -112,9 +112,9 @@
             this.tsBtNuevo,
             this.tsBtModificar,
             this.tsBtGuardar,
+            this.tsBtCancelar,
             this.tsBtBuscar,
-            this.tsBtAnular,
-            this.tsBtCancelar});
+            this.tsBtAnular});
             this.tstMenuEvolucion.Location = new System.Drawing.Point(0, 332);
             this.tstMenuEvolucion.MaximumSize = new System.Drawing.Size(1095, 25);
             this.tstMenuEvolucion.MinimumSize = new System.Drawing.Size(1095, 25);

@@ -37,7 +37,7 @@
             // GroupBox17
             // 
             this.GroupBox17.Controls.Add(this.dgvImpresionN);
-            this.GroupBox17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox17.Font = new System.Drawing.Font("Arial", 9F);
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 4);
             this.GroupBox17.Name = "GroupBox17";
@@ -57,7 +57,7 @@
             this.dgvImpresionN.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvImpresionN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvImpresionN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvImpresionN.Location = new System.Drawing.Point(3, 21);
+            this.dgvImpresionN.Location = new System.Drawing.Point(3, 17);
             this.dgvImpresionN.MultiSelect = false;
             this.dgvImpresionN.Name = "dgvImpresionN";
             this.dgvImpresionN.ReadOnly = true;
@@ -66,7 +66,7 @@
             this.dgvImpresionN.ShowCellToolTips = false;
             this.dgvImpresionN.ShowEditingIcon = false;
             this.dgvImpresionN.ShowRowErrors = false;
-            this.dgvImpresionN.Size = new System.Drawing.Size(970, 249);
+            this.dgvImpresionN.Size = new System.Drawing.Size(970, 253);
             this.dgvImpresionN.TabIndex = 2;
             // 
             // InterpretacionUI
