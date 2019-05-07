@@ -88,9 +88,6 @@ namespace Galactus.VistaControlador.Admision
 
         public void habilitarControles()
         {
-            rbIniciado.Enabled = true;
-            rbAuditoria.Enabled = true;
-            rbPrefacturado.Enabled = true;
             cbVia.Enabled = true;
             cbCausaExterna.Enabled = true;
             cbInstitucion.Enabled = true;
@@ -99,7 +96,6 @@ namespace Galactus.VistaControlador.Admision
             cbArea.Enabled = true;
             Textautorizacion.Enabled = true;
             Textautorizacion.ReadOnly = false;
-            txtobservacion.Enabled = true;
             txtIdAdmision.Enabled = true;
             txtnombrePaciente.Enabled = true;
             txtFechaAdmision.Enabled = true;
@@ -148,7 +144,6 @@ namespace Galactus.VistaControlador.Admision
 
         public void habilitarNuevo()
         {
-            rbIniciado.Enabled = true;
             btPacienteAdmision.Enabled = true;
             tsbNuevo.Enabled = false;
             tsbGuardar.Enabled = true;
@@ -157,7 +152,7 @@ namespace Galactus.VistaControlador.Admision
             dgvDiagnostico.Enabled = true;
             GeneralC.limpiarControles(this);
             atencion.dtDiagnostico.Rows.Add();
-            rbIniciado.Checked = true;
+           
         }
 
         private void tstModificar_Click(object sender, EventArgs e)
@@ -169,7 +164,7 @@ namespace Galactus.VistaControlador.Admision
         {
             GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
             btnSalir.Enabled = true;
-            rbIniciado.Checked = true;
+            
         }
 
         public void limpiarContrles()
@@ -221,31 +216,9 @@ namespace Galactus.VistaControlador.Admision
            
         }
 
-        public void asignarAtencion()
-        {
-            if (rbIniciado.Checked)
-            {
-                atencion.idEstadoAtencion = Convert.ToInt16( rbIniciado.Tag);
-            }else if (rbCerrado.Checked)
-            {
-                atencion.idEstadoAtencion = Convert.ToInt16(rbCerrado.Tag);
-            }else if (rbReabrir.Checked)
-            {
-                atencion.idEstadoAtencion = Convert.ToInt16(rbReabrir.Tag);
-            }else if (rbAuditoria.Checked)
-            {
-                atencion.idEstadoAtencion = Convert.ToInt16(rbAuditoria.Tag);
-            }else if (rbFacturado.Checked)
-            {
-                atencion.idEstadoAtencion = Convert.ToInt16(rbFacturado.Tag);
-            }else if(rbPrefacturado.Checked)
-            {
-                atencion.idEstadoAtencion = Convert.ToInt16(rbPrefacturado.Tag);
-            }
-        }
         public void asignarDatos()
         {
-            asignarAtencion();
+           
             atencion.idAdmision = Convert.ToInt16( txtIdAdmision.Text);
             atencion.idArea = (String) cbArea.SelectedValue;
             atencion.idCama = (String)cbCama.SelectedValue;
@@ -253,7 +226,6 @@ namespace Galactus.VistaControlador.Admision
             atencion.idEntorno = (String)cbEntorno.SelectedValue;
             atencion.idInstitucion = (String)cbInstitucion.SelectedValue;
             atencion.idViaIngreso = (String)cbVia.SelectedValue;
-            atencion.observacion = txtobservacion.Text;
             atencion.fechaIngreso = fechaIngreso.Value;
             atencion.numeroAutorizacion = Textautorizacion.Text.Equals(string.Empty) ? 0 : Convert.ToInt16( Textautorizacion.Text);
         }
@@ -291,38 +263,15 @@ namespace Galactus.VistaControlador.Admision
             cbEntorno.SelectedValue = atencion.idEntorno;
             cbArea.SelectedValue = atencion.idArea;
             fechaIngreso.Value = atencion.fechaIngreso;
-            Textautorizacion.Text = (Convert.ToString( atencion.numeroAutorizacion));
-            txtobservacion.Text = atencion.observacion;
+            Textautorizacion.Text = (Convert.ToString( atencion.numeroAutorizacion)); 
             txtIdAdmision.Text = Convert.ToString( atencion.idAdmision);
             txtnombrePaciente.Text = atencion.nombrePaciente;
             txtFechaAdmision.Text = Convert.ToString( atencion.fechaAdmision);
             dgvDiagnostico.DataSource = atencion.dtDiagnostico;
-            establecerAtencion();
             tstModificar.Enabled = true;
             tsbAnular.Enabled = true;
         }
-        public void establecerAtencion()
-        {
-            if (atencion.idEstadoAtencion == 1)
-            {
-                rbIniciado.Checked = true;
-            }else if (atencion.idEstadoAtencion == 2)
-            {
-                rbCerrado.Checked = true;
-            }else if (atencion.idEstadoAtencion == 3)
-            {
-                rbReabrir.Checked = true;
-            }else if (atencion.idEstadoAtencion == 4)
-            {
-                rbFacturado.Checked = true;
-            }else if (atencion.idEstadoAtencion == 5)
-            {
-                rbAuditoria.Checked = true;
-            }else if (atencion.idEstadoAtencion == 6)
-            {
-                rbPrefacturado.Checked = true;
-            }
-        }
+       
 
         private void btnSalir_MouseHover(object sender, EventArgs e)
         {
@@ -352,7 +301,7 @@ namespace Galactus.VistaControlador.Admision
                     atencion.anular();
                     GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
                     btnSalir.Enabled = true;
-                    rbIniciado.Checked = true;
+                    
                 }
                 catch (Exception ex)
                 {
@@ -417,7 +366,7 @@ namespace Galactus.VistaControlador.Admision
         {
             GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
             btnSalir.Enabled = true;
-            rbIniciado.Checked = true;
+           
         }
 
         private void tsbGuardar_Click(object sender, EventArgs e)
@@ -466,7 +415,7 @@ namespace Galactus.VistaControlador.Admision
                     atencion.anular();
                     GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
                     btnSalir.Enabled = true;
-                    rbIniciado.Checked = true;
+                   
                 }
                 catch (Exception ex)
                 {
@@ -476,5 +425,9 @@ namespace Galactus.VistaControlador.Admision
             }
         }
 
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
