@@ -169,6 +169,12 @@
     <Compile Include="VistaControlador\Admision\Configuracion\ConfiguracionManualServicioUI.Designer.cs">
       <DependentUpon>ConfiguracionManualServicioUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\Admision\HistorialAtencionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Admision\HistorialAtencionUI.Designer.cs">
+      <DependentUpon>HistorialAtencionUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\Admision\IngresoUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -613,6 +619,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Admision\Configuracion\ConfiguracionCamaUI.resx">
       <DependentUpon>ConfiguracionCamaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Admision\HistorialAtencionUI.resx">
+      <DependentUpon>HistorialAtencionUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Admision\PacienteUI.resx">
       <DependentUpon>PacienteUI.cs</DependentUpon>
