@@ -499,6 +499,18 @@
     <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\ProcedimientosUI.Designer.cs">
       <DependentUpon>ProcedimientosUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Remision\Anexo9UI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Remision\Anexo9UI.Designer.cs">
+      <DependentUpon>Anexo9UI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Remision\RemisionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Remision\RemisionUI.Designer.cs">
+      <DependentUpon>RemisionUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\EcocardiogramaUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -770,6 +782,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\ProcedimientosUI.resx">
       <DependentUpon>ProcedimientosUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Remision\Anexo9UI.resx">
+      <DependentUpon>Anexo9UI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Remision\RemisionUI.resx">
+      <DependentUpon>RemisionUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\EcocardiogramaUI.resx">
       <DependentUpon>EcocardiogramaUI.cs</DependentUpon>

@@ -66,6 +66,7 @@
             this.tpEgreso = new System.Windows.Forms.TabPage();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tpRemision = new System.Windows.Forms.TabPage();
             this.pnlInformacion.SuspendLayout();
             this.tbLaboratorios.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
@@ -426,6 +427,7 @@
             this.tabHistoriaClinica.Controls.Add(this.tpOrdenMedica);
             this.tabHistoriaClinica.Controls.Add(this.tbLaboratorios);
             this.tabHistoriaClinica.Controls.Add(this.tpEvolucion);
+            this.tabHistoriaClinica.Controls.Add(this.tpRemision);
             this.tabHistoriaClinica.Controls.Add(this.tpEgreso);
             this.tabHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabHistoriaClinica.Location = new System.Drawing.Point(11, 116);
@@ -475,6 +477,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
+            // 
+            // tpRemision
+            // 
+            this.tpRemision.Location = new System.Drawing.Point(4, 29);
+            this.tpRemision.Name = "tpRemision";
+            this.tpRemision.Padding = new System.Windows.Forms.Padding(3);
+            this.tpRemision.Size = new System.Drawing.Size(1289, 468);
+            this.tpRemision.TabIndex = 6;
+            this.tpRemision.Text = "Remisión";
+            this.tpRemision.UseVisualStyleBackColor = true;
             // 
             // HistoriaClinicaUI
             // 
@@ -547,5 +559,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TabPage tpEgreso;
+        private System.Windows.Forms.TabPage tpRemision;
     }
 }

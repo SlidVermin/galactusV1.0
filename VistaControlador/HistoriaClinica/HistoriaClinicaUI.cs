@@ -6,6 +6,7 @@ using Galactus.Entidades.HistoriaClinica;
 using Galactus.Entidades.HistoriaClinica.OrdenMedica;
 using Galactus.VistaControlador.HistoriaClinica.OrdenMedica;
 using Galactus.VistaControlador.HistoriaClinica.EvolucionMedica;
+using Galactus.VistaControlador.HistoriaClinica.Remision;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
@@ -19,6 +20,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private IngresoClinicoUI ingreso;
         private EgresoUI egreso;
         private EstanciaUI  estancia;
+        private  RemisionUI remision;
 
         public HistoriaClinicaUI()
         {
@@ -42,11 +44,13 @@ namespace Galactus.VistaControlador.HistoriaClinica
             EvolucionMedica = new EvolucionMedicaUI(idAtencion);
             egreso = new EgresoUI (idAtencion);
             estancia = new EstanciaUI(idAtencion);
+            remision = new RemisionUI(idAtencion);
             GeneralC.cargarFormularioEnPestana(tpIngresoClinico, ingreso);
             GeneralC.cargarFormularioEnPestana(tpOrdenMedica, OrdenClinica);
             GeneralC.cargarFormularioEnPestana(tpEvolucion, EvolucionMedica);
             GeneralC.cargarFormularioEnPestana(tpEgreso, egreso);
             GeneralC.cargarFormularioEnPestana(tpEstancia , estancia);
+            GeneralC.cargarFormularioEnPestana(tpRemision, remision);
         }
         public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso)
         {
