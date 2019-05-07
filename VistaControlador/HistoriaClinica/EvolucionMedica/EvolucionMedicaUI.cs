@@ -19,7 +19,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
         private int idAtencion;
         Evolucion evolucionMedica = new Evolucion();
         private ProblemasUI problemas = new ProblemasUI();
-        private ExamenFisicoEvoUI examen = new ExamenFisicoEvoUI();
+        private ExamenFisicoUI examen = new ExamenFisicoUI();
         private InterpretacionUI interpretracion = new InterpretacionUI();
         private AnalisisUI analisis = new AnalisisUI();
         public EvolucionMedicaUI()
@@ -40,7 +40,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
         private void EvolucionMedicaUI_Load(object sender, EventArgs e)
         {
 
-            mtxtFechaEvolucion.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
+            dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
             GeneralC.cargarFormularioEnPestana(tpProblemas, problemas);
             GeneralC.cargarFormularioEnPestana(tpExamenFisico, examen);
             GeneralC.cargarFormularioEnPestana(tpInterpretacion, interpretracion);
@@ -58,7 +58,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
             GeneralC.formNuevo(this, tstMenuEvolucion, tsBtGuardar, tsBtCancelar);
             opciones();
             evolucionMedica.idEvolucion = ConstanteGeneral.PREDETERMINADO;
-            mtxtFechaEvolucion.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
+            dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
         }
 
         private void obtenerDatos()
@@ -77,7 +77,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
             evolucionMedica.CardioPulmonar = examen.txtCardioPulmonar.Text;
             evolucionMedica.Analisis = analisis.txtAnalisis.Text;
             evolucionMedica.Plan = analisis.txtPlan.Text;
-            evolucionMedica.fechaEvolucion = Convert.ToDateTime(mtxtFechaEvolucion.Text);
+            evolucionMedica.fechaEvolucion = dtpFecha.Value;
             alistarDt(problemas.evolucionMedica);
         }
         public void alistarDt(Evolucion evolucionMedica)
@@ -169,7 +169,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
         {
             GeneralC.fnCancelarForm(this, tstMenuEvolucion, tsBtNuevo, tsBtBuscar);
             evolucionMedica.idEvolucion = ConstanteGeneral.PREDETERMINADO;
-            mtxtFechaEvolucion.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
+            dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
         }
 
         private void tsBtAnular_Click(object sender, EventArgs e)
@@ -181,7 +181,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
                     evolucionMedica.borrar();
                     GeneralC.posAnular(this, tstMenuEvolucion, tsBtNuevo, tsBtBuscar, Mensajes.CONFIRMACION_ANULADO);
                     evolucionMedica.idEvolucion = ConstanteGeneral.PREDETERMINADO;
-                    mtxtFechaEvolucion.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
+                    dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
                 }
                 catch (Exception ex)
                 {

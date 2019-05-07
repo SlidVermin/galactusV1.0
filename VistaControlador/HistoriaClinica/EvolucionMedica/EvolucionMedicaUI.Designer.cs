@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EvolucionMedicaUI));
-            this.mtxtFechaEvolucion = new System.Windows.Forms.MaskedTextBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.txtIdEvolucion = new System.Windows.Forms.ToolStripTextBox();
@@ -39,28 +38,19 @@
             this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsBtModificar = new System.Windows.Forms.ToolStripButton();
             this.tsBtGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsBtCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsBtBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsBtAnular = new System.Windows.Forms.ToolStripButton();
-            this.tsBtCancelar = new System.Windows.Forms.ToolStripButton();
             this.tcOrdenMedica = new Galactus.Util.Controles.TabControlGalactus();
             this.tpProblemas = new System.Windows.Forms.TabPage();
             this.tpExamenFisico = new System.Windows.Forms.TabPage();
             this.tpInterpretacion = new System.Windows.Forms.TabPage();
             this.tpAnalisis = new System.Windows.Forms.TabPage();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.tstPropiedadesOrdenMedica.SuspendLayout();
             this.tstMenuEvolucion.SuspendLayout();
             this.tcOrdenMedica.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // mtxtFechaEvolucion
-            // 
-            this.mtxtFechaEvolucion.Location = new System.Drawing.Point(307, 2);
-            this.mtxtFechaEvolucion.Mask = "00/00/0000 00:00";
-            this.mtxtFechaEvolucion.Name = "mtxtFechaEvolucion";
-            this.mtxtFechaEvolucion.ReadOnly = true;
-            this.mtxtFechaEvolucion.Size = new System.Drawing.Size(100, 20);
-            this.mtxtFechaEvolucion.TabIndex = 63;
-            this.mtxtFechaEvolucion.ValidatingType = typeof(System.DateTime);
             // 
             // toolStripLabel2
             // 
@@ -156,6 +146,17 @@
             this.tsBtGuardar.Text = "Guardar";
             this.tsBtGuardar.Click += new System.EventHandler(this.tsBtGuardar_Click);
             // 
+            // tsBtCancelar
+            // 
+            this.tsBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsBtCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsBtCancelar.Image")));
+            this.tsBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsBtCancelar.Name = "tsBtCancelar";
+            this.tsBtCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsBtCancelar.Text = "Cancelar";
+            this.tsBtCancelar.Click += new System.EventHandler(this.tsBtCancelar_Click);
+            // 
             // tsBtBuscar
             // 
             this.tsBtBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,17 +179,6 @@
             this.tsBtAnular.Text = "Anular";
             this.tsBtAnular.Click += new System.EventHandler(this.tsBtAnular_Click);
             // 
-            // tsBtCancelar
-            // 
-            this.tsBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsBtCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsBtCancelar.Image")));
-            this.tsBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsBtCancelar.Name = "tsBtCancelar";
-            this.tsBtCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsBtCancelar.Text = "Cancelar";
-            this.tsBtCancelar.Click += new System.EventHandler(this.tsBtCancelar_Click);
-            // 
             // tcOrdenMedica
             // 
             this.tcOrdenMedica.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -207,7 +197,7 @@
             // 
             // tpProblemas
             // 
-            this.tpProblemas.BackColor = System.Drawing.Color.Silver;
+            this.tpProblemas.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpProblemas.Location = new System.Drawing.Point(124, 4);
             this.tpProblemas.Name = "tpProblemas";
             this.tpProblemas.Padding = new System.Windows.Forms.Padding(3);
@@ -243,12 +233,22 @@
             this.tpAnalisis.Text = "Analisis";
             this.tpAnalisis.UseVisualStyleBackColor = true;
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(321, 2);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(137, 21);
+            this.dtpFecha.TabIndex = 63;
+            // 
             // EvolucionMedicaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 357);
-            this.Controls.Add(this.mtxtFechaEvolucion);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.tstPropiedadesOrdenMedica);
             this.Controls.Add(this.tstMenuEvolucion);
             this.Controls.Add(this.tcOrdenMedica);
@@ -273,7 +273,6 @@
         private System.Windows.Forms.TabPage tpProblemas;
         private System.Windows.Forms.TabPage tpExamenFisico;
         private System.Windows.Forms.TabPage tpAnalisis;
-        private System.Windows.Forms.MaskedTextBox mtxtFechaEvolucion;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox txtIdEvolucion;
@@ -288,5 +287,6 @@
         private System.Windows.Forms.ToolStrip tstMenuEvolucion;
         private System.Windows.Forms.TabPage tpInterpretacion;
         private Util.Controles.TabControlGalactus tcOrdenMedica;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

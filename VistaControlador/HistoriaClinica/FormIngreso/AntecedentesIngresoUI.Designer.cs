@@ -29,7 +29,11 @@
         private void InitializeComponent()
         {
             this.GroupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtRevisionSistema = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtAntecedentesAlergicos = new System.Windows.Forms.TextBox();
+            this.txtAntecedentesFamiliares = new System.Windows.Forms.TextBox();
             this.Label14 = new System.Windows.Forms.Label();
             this.txtAntecedentesMedicos = new System.Windows.Forms.Label();
             this.txtAntecedentesToxicos = new System.Windows.Forms.TextBox();
@@ -41,16 +45,12 @@
             this.txtAntecedentesQuirurgicos = new System.Windows.Forms.TextBox();
             this.Label12 = new System.Windows.Forms.Label();
             this.txtAnteM = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtRevisionSistema = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtAntecedentesFamiliares = new System.Windows.Forms.TextBox();
             this.GroupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // GroupBox4
             // 
-            this.GroupBox4.BackColor = System.Drawing.Color.White;
+            this.GroupBox4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.GroupBox4.Controls.Add(this.txtRevisionSistema);
             this.GroupBox4.Controls.Add(this.label1);
             this.GroupBox4.Controls.Add(this.label2);
@@ -75,6 +75,38 @@
             this.GroupBox4.TabIndex = 10087;
             this.GroupBox4.TabStop = false;
             // 
+            // txtRevisionSistema
+            // 
+            this.txtRevisionSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtRevisionSistema.Location = new System.Drawing.Point(130, 390);
+            this.txtRevisionSistema.Multiline = true;
+            this.txtRevisionSistema.Name = "txtRevisionSistema";
+            this.txtRevisionSistema.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtRevisionSistema.Size = new System.Drawing.Size(819, 44);
+            this.txtRevisionSistema.TabIndex = 10093;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(50, 333);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.TabIndex = 10094;
+            this.label1.Text = "Familiares:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(12, 392);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 17);
+            this.label2.TabIndex = 10092;
+            this.label2.Text = "Revisión sistema:";
+            // 
             // txtAntecedentesAlergicos
             // 
             this.txtAntecedentesAlergicos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -84,6 +116,16 @@
             this.txtAntecedentesAlergicos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAntecedentesAlergicos.Size = new System.Drawing.Size(819, 44);
             this.txtAntecedentesAlergicos.TabIndex = 10067;
+            // 
+            // txtAntecedentesFamiliares
+            // 
+            this.txtAntecedentesFamiliares.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtAntecedentesFamiliares.Location = new System.Drawing.Point(130, 331);
+            this.txtAntecedentesFamiliares.Multiline = true;
+            this.txtAntecedentesFamiliares.Name = "txtAntecedentesFamiliares";
+            this.txtAntecedentesFamiliares.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtAntecedentesFamiliares.Size = new System.Drawing.Size(819, 44);
+            this.txtAntecedentesFamiliares.TabIndex = 10091;
             // 
             // Label14
             // 
@@ -201,53 +243,11 @@
             this.txtAnteM.Size = new System.Drawing.Size(819, 39);
             this.txtAnteM.TabIndex = 10054;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(50, 333);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
-            this.label1.TabIndex = 10094;
-            this.label1.Text = "Familiares:";
-            // 
-            // txtRevisionSistema
-            // 
-            this.txtRevisionSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtRevisionSistema.Location = new System.Drawing.Point(130, 390);
-            this.txtRevisionSistema.Multiline = true;
-            this.txtRevisionSistema.Name = "txtRevisionSistema";
-            this.txtRevisionSistema.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtRevisionSistema.Size = new System.Drawing.Size(819, 44);
-            this.txtRevisionSistema.TabIndex = 10093;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(12, 392);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 17);
-            this.label2.TabIndex = 10092;
-            this.label2.Text = "Revisión sistema:";
-            // 
-            // txtAntecedentesFamiliares
-            // 
-            this.txtAntecedentesFamiliares.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtAntecedentesFamiliares.Location = new System.Drawing.Point(130, 331);
-            this.txtAntecedentesFamiliares.Multiline = true;
-            this.txtAntecedentesFamiliares.Name = "txtAntecedentesFamiliares";
-            this.txtAntecedentesFamiliares.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtAntecedentesFamiliares.Size = new System.Drawing.Size(819, 44);
-            this.txtAntecedentesFamiliares.TabIndex = 10091;
-            // 
             // AntecedentesIngresoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(969, 472);
             this.Controls.Add(this.GroupBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

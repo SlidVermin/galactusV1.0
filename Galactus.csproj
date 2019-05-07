@@ -385,23 +385,11 @@
     <Compile Include="VistaControlador\HistoriaClinica\EstanciaUI.Designer.cs">
       <DependentUpon>EstanciaUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\AnalisisUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\AnalisisUI.Designer.cs">
-      <DependentUpon>AnalisisUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\EvolucionMedicaUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\EvolucionMedicaUI.Designer.cs">
       <DependentUpon>EvolucionMedicaUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\ExamenFisicoEvoUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\ExamenFisicoEvoUI.Designer.cs">
-      <DependentUpon>ExamenFisicoEvoUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\InterpretacionUI.cs">
       <SubType>Form</SubType>
@@ -732,14 +720,8 @@
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\EstanciaUI.resx">
       <DependentUpon>EstanciaUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\HistoriaClinica\EvolucionMedica\AnalisisUI.resx">
-      <DependentUpon>AnalisisUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\EvolucionMedica\EvolucionMedicaUI.resx">
       <DependentUpon>EvolucionMedicaUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\HistoriaClinica\EvolucionMedica\ExamenFisicoEvoUI.resx">
-      <DependentUpon>ExamenFisicoEvoUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\EvolucionMedica\InterpretacionUI.resx">
       <DependentUpon>InterpretacionUI.cs</DependentUpon>

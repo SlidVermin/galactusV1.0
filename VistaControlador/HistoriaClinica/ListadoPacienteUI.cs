@@ -54,14 +54,14 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         public void dibujarGridView()
         {
-            for (int i = 0; i < dgvListaPaciente.Rows.Count; i++)
-            {
-                dgvListaPaciente.Rows[i].Cells["dgAtencion"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
-                dgvListaPaciente.Rows[i].Cells["dgAdmision"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
+            //for (int i = 0; i < dgvListaPaciente.Rows.Count; i++)
+            //{
+            //    dgvListaPaciente.Rows[i].Cells["dgAtencion"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
+            //    dgvListaPaciente.Rows[i].Cells["dgAdmision"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
 
-                dgvListaPaciente.Rows[i].Cells["dgArea"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
-                dgvListaPaciente.Rows[i].Cells["dgEntorno"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
-            }
+            //    dgvListaPaciente.Rows[i].Cells["dgArea"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
+            //    dgvListaPaciente.Rows[i].Cells["dgEntorno"].Style.BackColor = Color.FromArgb(Convert.ToInt32(dgvListaPaciente.Rows[i].Cells["dgColor"].Value));
+            //}
         }
         public void cargar()
         {           

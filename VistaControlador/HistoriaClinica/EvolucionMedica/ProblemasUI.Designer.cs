@@ -49,7 +49,7 @@
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 7);
             this.GroupBox17.Name = "GroupBox17";
-            this.GroupBox17.Size = new System.Drawing.Size(976, 156);
+            this.GroupBox17.Size = new System.Drawing.Size(952, 156);
             this.GroupBox17.TabIndex = 10093;
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Diagnósticos:";
@@ -80,7 +80,7 @@
             this.dgvDiagnostico.ShowCellToolTips = false;
             this.dgvDiagnostico.ShowEditingIcon = false;
             this.dgvDiagnostico.ShowRowErrors = false;
-            this.dgvDiagnostico.Size = new System.Drawing.Size(970, 136);
+            this.dgvDiagnostico.Size = new System.Drawing.Size(946, 136);
             this.dgvDiagnostico.TabIndex = 2;
             this.dgvDiagnostico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiagnostico_CellContentClick);
             // 
@@ -128,7 +128,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9F);
             this.groupBox1.Location = new System.Drawing.Point(5, 168);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(976, 121);
+            this.groupBox1.Size = new System.Drawing.Size(952, 111);
             this.groupBox1.TabIndex = 10094;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Subjetivos";
@@ -138,7 +138,7 @@
             this.txtSubjetivos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSubjetivos.Location = new System.Drawing.Point(3, 17);
             this.txtSubjetivos.Name = "txtSubjetivos";
-            this.txtSubjetivos.Size = new System.Drawing.Size(970, 101);
+            this.txtSubjetivos.Size = new System.Drawing.Size(946, 91);
             this.txtSubjetivos.TabIndex = 0;
             this.txtSubjetivos.Text = "";
             // 
@@ -146,12 +146,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 291);
+            this.ClientSize = new System.Drawing.Size(969, 291);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.GroupBox17);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(986, 291);
-            this.MinimumSize = new System.Drawing.Size(986, 291);
+            this.MaximumSize = new System.Drawing.Size(969, 291);
+            this.MinimumSize = new System.Drawing.Size(969, 291);
             this.Name = "ProblemasUI";
             this.Text = "ProblemasUI";
             this.Load += new System.EventHandler(this.ProblemasUI_Load);

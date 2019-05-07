@@ -39,13 +39,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btEPS = new System.Windows.Forms.Button();
-            this.txtEPS = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cbReferencia = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btEntorno = new System.Windows.Forms.Button();
-            this.txtEntorno = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dtHasta = new System.Windows.Forms.Label();
@@ -76,7 +74,7 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pnlInformacion);
-            this.panel1.Location = new System.Drawing.Point(23, 41);
+            this.panel1.Location = new System.Drawing.Point(23, 43);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(925, 445);
             this.panel1.TabIndex = 61;
@@ -128,13 +126,11 @@
             this.pnlInformacion.Controls.Add(this.label6);
             this.pnlInformacion.Controls.Add(this.textBox2);
             this.pnlInformacion.Controls.Add(this.btEPS);
-            this.pnlInformacion.Controls.Add(this.txtEPS);
             this.pnlInformacion.Controls.Add(this.label5);
             this.pnlInformacion.Controls.Add(this.cbReferencia);
             this.pnlInformacion.Controls.Add(this.label17);
             this.pnlInformacion.Controls.Add(this.textBox1);
             this.pnlInformacion.Controls.Add(this.btEntorno);
-            this.pnlInformacion.Controls.Add(this.txtEntorno);
             this.pnlInformacion.Controls.Add(this.label4);
             this.pnlInformacion.Controls.Add(this.dateTimePicker1);
             this.pnlInformacion.Controls.Add(this.dtHasta);
@@ -148,7 +144,7 @@
             // btFiltro
             // 
             this.btFiltro.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btFiltro.Location = new System.Drawing.Point(673, 56);
+            this.btFiltro.Location = new System.Drawing.Point(669, 56);
             this.btFiltro.Name = "btFiltro";
             this.btFiltro.Size = new System.Drawing.Size(24, 23);
             this.btFiltro.TabIndex = 98;
@@ -157,7 +153,7 @@
             // txtFiltro
             // 
             this.txtFiltro.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltro.Location = new System.Drawing.Point(73, 57);
+            this.txtFiltro.Location = new System.Drawing.Point(68, 57);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(594, 21);
             this.txtFiltro.TabIndex = 97;
@@ -166,7 +162,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(30, 60);
+            this.label6.Location = new System.Drawing.Point(24, 60);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(37, 15);
             this.label6.TabIndex = 96;
@@ -175,87 +171,71 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(551, 30);
+            this.textBox2.Location = new System.Drawing.Point(476, 30);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(344, 21);
+            this.textBox2.Size = new System.Drawing.Size(375, 21);
             this.textBox2.TabIndex = 93;
             // 
             // btEPS
             // 
             this.btEPS.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btEPS.Location = new System.Drawing.Point(521, 29);
+            this.btEPS.Location = new System.Drawing.Point(857, 29);
             this.btEPS.Name = "btEPS";
             this.btEPS.Size = new System.Drawing.Size(24, 23);
             this.btEPS.TabIndex = 92;
             this.btEPS.UseVisualStyleBackColor = true;
             // 
-            // txtEPS
-            // 
-            this.txtEPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEPS.Location = new System.Drawing.Point(416, 30);
-            this.txtEPS.Name = "txtEPS";
-            this.txtEPS.Size = new System.Drawing.Size(102, 21);
-            this.txtEPS.TabIndex = 91;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(378, 33);
+            this.label5.Location = new System.Drawing.Point(419, 33);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 15);
+            this.label5.Size = new System.Drawing.Size(49, 15);
             this.label5.TabIndex = 90;
-            this.label5.Text = "EPS:";
+            this.label5.Text = "Cliente:";
             // 
             // cbReferencia
             // 
             this.cbReferencia.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbReferencia.FormattingEnabled = true;
-            this.cbReferencia.Location = new System.Drawing.Point(73, 30);
+            this.cbReferencia.Location = new System.Drawing.Point(68, 30);
             this.cbReferencia.Name = "cbReferencia";
-            this.cbReferencia.Size = new System.Drawing.Size(271, 23);
+            this.cbReferencia.Size = new System.Drawing.Size(297, 23);
             this.cbReferencia.TabIndex = 89;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(6, 34);
+            this.label17.Location = new System.Drawing.Point(12, 34);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(63, 15);
+            this.label17.Size = new System.Drawing.Size(49, 15);
             this.label17.TabIndex = 88;
-            this.label17.Text = "Opciones:";
+            this.label17.Text = "Opción:";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(551, 4);
+            this.textBox1.Location = new System.Drawing.Point(476, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(344, 21);
+            this.textBox1.Size = new System.Drawing.Size(375, 21);
             this.textBox1.TabIndex = 87;
             // 
             // btEntorno
             // 
             this.btEntorno.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btEntorno.Location = new System.Drawing.Point(521, 3);
+            this.btEntorno.Location = new System.Drawing.Point(857, 3);
             this.btEntorno.Name = "btEntorno";
             this.btEntorno.Size = new System.Drawing.Size(24, 23);
             this.btEntorno.TabIndex = 86;
             this.btEntorno.UseVisualStyleBackColor = true;
             // 
-            // txtEntorno
-            // 
-            this.txtEntorno.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEntorno.Location = new System.Drawing.Point(416, 4);
-            this.txtEntorno.Name = "txtEntorno";
-            this.txtEntorno.Size = new System.Drawing.Size(102, 21);
-            this.txtEntorno.TabIndex = 80;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(360, 7);
+            this.label4.Location = new System.Drawing.Point(415, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 15);
             this.label4.TabIndex = 79;
@@ -264,7 +244,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(226, 4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(247, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(118, 20);
             this.dateTimePicker1.TabIndex = 78;
@@ -273,7 +253,7 @@
             // 
             this.dtHasta.AutoSize = true;
             this.dtHasta.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtHasta.Location = new System.Drawing.Point(178, 6);
+            this.dtHasta.Location = new System.Drawing.Point(198, 6);
             this.dtHasta.Name = "dtHasta";
             this.dtHasta.Size = new System.Drawing.Size(43, 15);
             this.dtHasta.TabIndex = 77;
@@ -282,7 +262,7 @@
             // dtDesde
             // 
             this.dtDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDesde.Location = new System.Drawing.Point(55, 4);
+            this.dtDesde.Location = new System.Drawing.Point(67, 4);
             this.dtDesde.Name = "dtDesde";
             this.dtDesde.Size = new System.Drawing.Size(118, 20);
             this.dtDesde.TabIndex = 76;
@@ -291,7 +271,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(5, 7);
+            this.label10.Location = new System.Drawing.Point(14, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 15);
             this.label10.TabIndex = 75;
@@ -302,7 +282,7 @@
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(938, 2);
+            this.btnSalir.Location = new System.Drawing.Point(938, 3);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(26, 24);
             this.btnSalir.TabIndex = 60;
@@ -313,7 +293,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(58, 13);
+            this.label1.Location = new System.Drawing.Point(60, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 18);
             this.label1.TabIndex = 58;
@@ -321,7 +301,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(25, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -455,7 +435,6 @@
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbBuscar;
         private System.Windows.Forms.ToolStripButton tsbAnular;
-        private System.Windows.Forms.TextBox txtEntorno;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btEntorno;
@@ -467,7 +446,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btEPS;
-        private System.Windows.Forms.TextBox txtEPS;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbReferencia;
         private System.Windows.Forms.Label label17;

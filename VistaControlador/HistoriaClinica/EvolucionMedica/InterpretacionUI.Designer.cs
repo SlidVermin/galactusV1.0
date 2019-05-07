@@ -41,7 +41,7 @@
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
             this.GroupBox17.Location = new System.Drawing.Point(5, 4);
             this.GroupBox17.Name = "GroupBox17";
-            this.GroupBox17.Size = new System.Drawing.Size(976, 273);
+            this.GroupBox17.Size = new System.Drawing.Size(958, 273);
             this.GroupBox17.TabIndex = 10094;
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Interpretación";
@@ -66,14 +66,14 @@
             this.dgvImpresionN.ShowCellToolTips = false;
             this.dgvImpresionN.ShowEditingIcon = false;
             this.dgvImpresionN.ShowRowErrors = false;
-            this.dgvImpresionN.Size = new System.Drawing.Size(970, 253);
+            this.dgvImpresionN.Size = new System.Drawing.Size(952, 253);
             this.dgvImpresionN.TabIndex = 2;
             // 
             // InterpretacionUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 284);
+            this.ClientSize = new System.Drawing.Size(969, 284);
             this.Controls.Add(this.GroupBox17);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InterpretacionUI";

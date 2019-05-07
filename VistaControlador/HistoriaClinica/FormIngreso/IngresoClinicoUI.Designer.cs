@@ -31,8 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IngresoClinicoUI));
             this.tsIngreso = new System.Windows.Forms.ToolStrip();
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.tcIngresoClinico = new Galactus.Util.Controles.TabControlGalactus();
             this.tpValoracion = new System.Windows.Forms.TabPage();
             this.tpAntecedentes = new System.Windows.Forms.TabPage();
@@ -41,7 +42,6 @@
             this.tpRecienNacido = new System.Windows.Forms.TabPage();
             this.tpExamenFisico = new System.Windows.Forms.TabPage();
             this.tpAnalisis = new System.Windows.Forms.TabPage();
-            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.tsIngreso.SuspendLayout();
             this.tcIngresoClinico.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +75,16 @@
             this.tsbModificar.Text = "Modificar";
             this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
+            // tsbCancelar
+            // 
+            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelar.Image")));
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
+            // 
             // tsbGuardar
             // 
             this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,15 +96,15 @@
             this.tsbGuardar.Text = "Guardar";
             this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
-            // tsbCancelar
+            // tstImprimir
             // 
-            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelar.Image")));
-            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsbCancelar.Text = "Cancelar";
+            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstImprimir.Name = "tstImprimir";
+            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tstImprimir.Text = "Imprimir";
+            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // tcIngresoClinico
             // 
@@ -117,13 +127,13 @@
             // 
             // tpValoracion
             // 
+            this.tpValoracion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpValoracion.Location = new System.Drawing.Point(124, 4);
             this.tpValoracion.Name = "tpValoracion";
             this.tpValoracion.Padding = new System.Windows.Forms.Padding(3);
             this.tpValoracion.Size = new System.Drawing.Size(972, 318);
             this.tpValoracion.TabIndex = 0;
             this.tpValoracion.Text = "Valoración";
-            this.tpValoracion.UseVisualStyleBackColor = true;
             // 
             // tpAntecedentes
             // 
@@ -182,16 +192,6 @@
             this.tpAnalisis.TabIndex = 3;
             this.tpAnalisis.Text = "Análisis";
             this.tpAnalisis.UseVisualStyleBackColor = true;
-            // 
-            // tstImprimir
-            // 
-            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
-            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstImprimir.Name = "tstImprimir";
-            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
-            this.tstImprimir.Text = "Imprimir";
-            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // IngresoClinicoUI
             // 

@@ -141,27 +141,12 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         #region "Metodos y Funciones"
         void crearOrden(OrdenClinica ordenClinica)
         {
-            ordenClinica.fechaOrden = DateTime.Parse(mtxtFechaOrden.Text);
+            ordenClinica.fechaOrden = DateTime.Parse(dtpFecha.Text);
         }
         bool validarDatos()
         {
 
-            if (!mtxtFechaOrden.MaskCompleted)
-            {
-                Mensajes.mensajeFaltaInformacion("Debe colocar la fecha completa!");
-                return false;
-            }
-            else if (!Funciones.fechaValida(mtxtFechaOrden.Text))
-            {
-                Mensajes.mensajeFaltaInformacion("La fecha no es valida!");
-                return false;
-            }
-            //else if (String.IsNullOrWhiteSpace(ordenClinica.indicacion.indicacion))
-            //{
-            //    Mensajes.mensajeFaltaInformacion("Debe colocar Una indicacion!");
-            //    return false;
-            //}
-            else if (ordenClinica.procedimiento.tblProcedimientos.Select("Cantidad = 0").Count() > 1)
+            if (ordenClinica.procedimiento.tblProcedimientos.Select("Cantidad = 0").Count() > 1)
             {
                 Mensajes.mensajeFaltaInformacion("Debe colocar la cantidad correcta a cada procedimiento!");
                 return false;
@@ -177,7 +162,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             {
                 ordenClinica.idOrden = filaResultado.Field<int>("Código Orden");
                 txtBCodigoOrden.Text = ordenClinica.idOrden.ToString();
-                mtxtFechaOrden.Text = filaResultado.Field<DateTime>("Fecha").ToString();
+                dtpFecha.Text = filaResultado.Field<DateTime>("Fecha").ToString();
 
                 DataSet tablasResultados = new DataSet();
                 List<string> Parametros = new List<string>();

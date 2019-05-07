@@ -32,8 +32,11 @@
             this.txtAnalisis = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtPronostico = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtPlan = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -79,12 +82,34 @@
             this.txtPronostico.Size = new System.Drawing.Size(940, 120);
             this.txtPronostico.TabIndex = 10064;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txtPlan);
+            this.groupBox3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(6, 306);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(951, 121);
+            this.groupBox3.TabIndex = 10066;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Plan";
+            // 
+            // txtPlan
+            // 
+            this.txtPlan.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlan.Location = new System.Drawing.Point(5, 15);
+            this.txtPlan.Multiline = true;
+            this.txtPlan.Name = "txtPlan";
+            this.txtPlan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPlan.Size = new System.Drawing.Size(940, 100);
+            this.txtPlan.TabIndex = 10064;
+            // 
             // AnalisisUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(969, 307);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(969, 425);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -94,6 +119,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -104,5 +131,7 @@
         internal System.Windows.Forms.TextBox txtAnalisis;
         private System.Windows.Forms.GroupBox groupBox2;
         internal System.Windows.Forms.TextBox txtPronostico;
+        private System.Windows.Forms.GroupBox groupBox3;
+        internal System.Windows.Forms.TextBox txtPlan;
     }
 }

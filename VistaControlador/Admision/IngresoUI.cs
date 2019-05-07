@@ -429,5 +429,10 @@ namespace Galactus.VistaControlador.Admision
         {
 
         }
+
+        private void dgvDiagnostico_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
