@@ -38,6 +38,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvUsuario = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lsvProcesos = new System.Windows.Forms.ListView();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtActivo = new System.Windows.Forms.TextBox();
@@ -47,17 +51,13 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lsvProcesos = new System.Windows.Forms.ListView();
-            this.dgvUsuario = new System.Windows.Forms.DataGridView();
             this.tstMenuPatron.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlInformacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tstMenuPatron
@@ -175,6 +175,46 @@
             this.pnlInformacion.Size = new System.Drawing.Size(724, 293);
             this.pnlInformacion.TabIndex = 1;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvUsuario);
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.groupBox2.Location = new System.Drawing.Point(11, 90);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(307, 198);
+            this.groupBox2.TabIndex = 50;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Usuario con este rol";
+            // 
+            // dgvUsuario
+            // 
+            this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvUsuario.Location = new System.Drawing.Point(3, 18);
+            this.dgvUsuario.Name = "dgvUsuario";
+            this.dgvUsuario.Size = new System.Drawing.Size(301, 177);
+            this.dgvUsuario.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lsvProcesos);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(324, 8);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(395, 280);
+            this.groupBox1.TabIndex = 49;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Lista de procesos";
+            // 
+            // lsvProcesos
+            // 
+            this.lsvProcesos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lsvProcesos.Location = new System.Drawing.Point(3, 18);
+            this.lsvProcesos.Name = "lsvProcesos";
+            this.lsvProcesos.Size = new System.Drawing.Size(389, 259);
+            this.lsvProcesos.TabIndex = 0;
+            this.lsvProcesos.UseCompatibleStateImageBehavior = false;
+            // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,50 +300,11 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Roles y permiso";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lsvProcesos);
-            this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(324, 8);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(395, 280);
-            this.groupBox1.TabIndex = 49;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lista de procesos";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dgvUsuario);
-            this.groupBox2.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.groupBox2.Location = new System.Drawing.Point(11, 90);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(307, 198);
-            this.groupBox2.TabIndex = 50;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Usuario con este rol";
-            // 
-            // lsvProcesos
-            // 
-            this.lsvProcesos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lsvProcesos.Location = new System.Drawing.Point(3, 18);
-            this.lsvProcesos.Name = "lsvProcesos";
-            this.lsvProcesos.Size = new System.Drawing.Size(389, 259);
-            this.lsvProcesos.TabIndex = 0;
-            this.lsvProcesos.UseCompatibleStateImageBehavior = false;
-            // 
-            // dgvUsuario
-            // 
-            this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUsuario.Location = new System.Drawing.Point(3, 18);
-            this.dgvUsuario.Name = "dgvUsuario";
-            this.dgvUsuario.Size = new System.Drawing.Size(301, 177);
-            this.dgvUsuario.TabIndex = 0;
-            // 
             // RolesPermisoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tstMenuPatron);
             this.Controls.Add(this.panel1);
@@ -323,10 +324,10 @@
             this.panel1.PerformLayout();
             this.pnlInformacion.ResumeLayout(false);
             this.pnlInformacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
