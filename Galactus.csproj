@@ -187,6 +187,12 @@
     <Compile Include="VistaControlador\Admision\PacienteUI.Designer.cs">
       <DependentUpon>PacienteUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\ConfiguracionExamenLaboratorioUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\ConfiguracionExamenLaboratorioUI.Designer.cs">
+      <DependentUpon>ConfiguracionExamenLaboratorioUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\Facturacion\RipsUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,12 @@
     </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\UsuarioUI.Designer.cs">
       <DependentUpon>UsuarioUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\Facturacion\SeguimientoFacturacionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\Facturacion\SeguimientoFacturacionUI.Designer.cs">
+      <DependentUpon>SeguimientoFacturacionUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\Farmacia\ConsolidadoPedidoUI.cs">
       <SubType>Form</SubType>
@@ -517,6 +529,18 @@
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\InformeQuirurgicoUI.Designer.cs">
       <DependentUpon>InformeQuirurgicoUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\InterconsultasUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\InterconsultasUI.Designer.cs">
+      <DependentUpon>InterconsultasUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\ResultadoLaboratorioUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\ResultadoLaboratorioUI.Designer.cs">
+      <DependentUpon>ResultadoLaboratorioUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\TransfusionSanguineaUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -593,6 +617,9 @@
     <EmbeddedResource Include="VistaControlador\Admision\PacienteUI.resx">
       <DependentUpon>PacienteUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\ConfiguracionExamenLaboratorioUI.resx">
+      <DependentUpon>ConfiguracionExamenLaboratorioUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Facturacion\RipsUI.resx">
       <DependentUpon>RipsUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -628,6 +655,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Facturacion\FacturaUI.resx">
       <DependentUpon>FacturaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\Facturacion\SeguimientoFacturacionUI.resx">
+      <DependentUpon>SeguimientoFacturacionUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Farmacia\ConsolidadoPedidoUI.resx">
       <DependentUpon>ConsolidadoPedidoUI.cs</DependentUpon>
@@ -764,6 +794,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\InformeQuirurgicoUI.resx">
       <DependentUpon>InformeQuirurgicoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\InterconsultasUI.resx">
+      <DependentUpon>InterconsultasUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\ResultadoLaboratorioUI.resx">
+      <DependentUpon>ResultadoLaboratorioUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\TransfusionSanguineaUI.resx">
       <DependentUpon>TransfusionSanguineaUI.cs</DependentUpon>

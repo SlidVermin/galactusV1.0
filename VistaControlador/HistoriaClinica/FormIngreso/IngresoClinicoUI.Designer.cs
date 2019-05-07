@@ -41,6 +41,7 @@
             this.tpRecienNacido = new System.Windows.Forms.TabPage();
             this.tpExamenFisico = new System.Windows.Forms.TabPage();
             this.tpAnalisis = new System.Windows.Forms.TabPage();
+            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.tsIngreso.SuspendLayout();
             this.tcIngresoClinico.SuspendLayout();
             this.SuspendLayout();
@@ -51,8 +52,9 @@
             this.tsIngreso.Dock = System.Windows.Forms.DockStyle.None;
             this.tsIngreso.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbModificar,
+            this.tsbCancelar,
             this.tsbGuardar,
-            this.tsbCancelar});
+            this.tstImprimir});
             this.tsIngreso.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.tsIngreso.Location = new System.Drawing.Point(2, 332);
             this.tsIngreso.MaximumSize = new System.Drawing.Size(1097, 25);
@@ -181,6 +183,16 @@
             this.tpAnalisis.Text = "Análisis";
             this.tpAnalisis.UseVisualStyleBackColor = true;
             // 
+            // tstImprimir
+            // 
+            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstImprimir.Name = "tstImprimir";
+            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tstImprimir.Text = "Imprimir";
+            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
             // IngresoClinicoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,5 +229,6 @@
         private System.Windows.Forms.TabPage tpAntecedentesMaterno;
         private System.Windows.Forms.TabPage tpAntecedentesNacimiento;
         private System.Windows.Forms.TabPage tpRecienNacido;
+        private System.Windows.Forms.ToolStripButton tstImprimir;
     }
 }

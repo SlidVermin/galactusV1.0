@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -50,74 +50,73 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
-            this.pacientePB = new System.Windows.Forms.PictureBox();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabControlGalactus1 = new Galactus.Util.Controles.TabControlGalactus();
+            this.tpAgrupacion = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbGrupoCUPS = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.dgvProcedimientosAsignados = new System.Windows.Forms.DataGridView();
+            this.dqQuitarCUPS = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFiltroAsignadosCUPS = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvProcedimientosSinGrupo = new System.Windows.Forms.DataGridView();
+            this.dgAsignarCUPS = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFiltroSinGrupoCUPS = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tpTransfusion = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.cmbFiltroTransfusionAsignado = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dgvTransfusionAsignado = new System.Windows.Forms.DataGridView();
+            this.dgQuitarTransfusion = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgCodigoTransfusion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFiltroTransfusionAsignado = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.dgvTransfusionSinGrupo = new System.Windows.Forms.DataGridView();
+            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgCodigoTransfusionSInAginar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFiltroTransfusionSinGrupo = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.pacientePB = new System.Windows.Forms.PictureBox();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tstModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
-            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label43 = new System.Windows.Forms.Label();
-            this.tabControlGalactus1 = new Galactus.Util.Controles.TabControlGalactus();
-            this.tpAgrupacion = new System.Windows.Forms.TabPage();
-            this.tpTransfusion = new System.Windows.Forms.TabPage();
-            this.label33 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtFiltroSinGrupoCUPS = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btBuscarSinGrupoCUPS = new System.Windows.Forms.Button();
-            this.dgvProcedimientosSinGrupo = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvProcedimientosAsignados = new System.Windows.Forms.DataGridView();
             this.btBuscarAsignadosCUPS = new System.Windows.Forms.Button();
-            this.txtFiltroAsignadosCUPS = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbGrupoCUPS = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.cmbFiltroTransfusionAsignado = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dgvTransfusionAsignado = new System.Windows.Forms.DataGridView();
+            this.btBuscarSinGrupoCUPS = new System.Windows.Forms.Button();
             this.btTransfusionAsignado = new System.Windows.Forms.Button();
-            this.txtFiltroTransfusionAsignado = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.dgvTransfusionSinGrupo = new System.Windows.Forms.DataGridView();
             this.btTransfusionSinGrupo = new System.Windows.Forms.Button();
-            this.txtFiltroTransfusionSinGrupo = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dgQuitarTransfusion = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dgCodigoTransfusion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dgCodigoTransfusionSInAginar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgAsignarCUPS = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dqQuitarCUPS = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.tstMenuPatron.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControlGalactus1.SuspendLayout();
             this.tpAgrupacion.SuspendLayout();
-            this.tpTransfusion.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientosSinGrupo)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientosAsignados)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientosSinGrupo)).BeginInit();
+            this.tpTransfusion.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransfusionAsignado)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransfusionSinGrupo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -142,15 +141,6 @@
             this.label30.TabIndex = 55;
             this.label30.Text = "Configuración CUPS - Grupos";
             // 
-            // pacientePB
-            // 
-            this.pacientePB.Image = global::Galactus.Properties.Resources.user__1_;
-            this.pacientePB.Location = new System.Drawing.Point(25, 4);
-            this.pacientePB.Name = "pacientePB";
-            this.pacientePB.Size = new System.Drawing.Size(31, 31);
-            this.pacientePB.TabIndex = 56;
-            this.pacientePB.TabStop = false;
-            // 
             // tstMenuPatron
             // 
             this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -160,8 +150,7 @@
             this.tsbCancelar,
             this.tsbGuardar,
             this.tsbBuscar,
-            this.tsbAnular,
-            this.tstImprimir});
+            this.tsbAnular});
             this.tstMenuPatron.Location = new System.Drawing.Point(0, 555);
             this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
@@ -169,76 +158,6 @@
             this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.TabIndex = 54;
             this.tstMenuPatron.Text = "toolStrip1";
-            // 
-            // tsbNuevo
-            // 
-            this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
-            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tsbNuevo.Text = "Nuevo";
-            // 
-            // tstModificar
-            // 
-            this.tstModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tstModificar.Image = global::Galactus.Properties.Resources.bt_Editar;
-            this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstModificar.Name = "tstModificar";
-            this.tstModificar.Size = new System.Drawing.Size(78, 22);
-            this.tstModificar.Text = "Modificar";
-            // 
-            // tsbCancelar
-            // 
-            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsbCancelar.Text = "Cancelar";
-            // 
-            // tsbGuardar
-            // 
-            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tsbGuardar.Text = "Guardar";
-            // 
-            // tsbBuscar
-            // 
-            this.tsbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
-            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbBuscar.Name = "tsbBuscar";
-            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tsbBuscar.Text = "Buscar";
-            // 
-            // tsbAnular
-            // 
-            this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbAnular.Name = "tsbAnular";
-            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
-            this.tsbAnular.Text = "Anular";
-            // 
-            // tstImprimir
-            // 
-            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
-            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstImprimir.Name = "tstImprimir";
-            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
-            this.tstImprimir.Text = "Imprimir";
-            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // panel1
             // 
@@ -249,15 +168,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1009, 490);
             this.panel1.TabIndex = 57;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(8, 246);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(0, 20);
-            this.label43.TabIndex = 40;
             // 
             // tabControlGalactus1
             // 
@@ -287,116 +197,6 @@
             this.tpAgrupacion.Text = "Agrupación CUPS";
             this.tpAgrupacion.UseVisualStyleBackColor = true;
             // 
-            // tpTransfusion
-            // 
-            this.tpTransfusion.Controls.Add(this.label3);
-            this.tpTransfusion.Controls.Add(this.panel4);
-            this.tpTransfusion.Controls.Add(this.label7);
-            this.tpTransfusion.Controls.Add(this.panel5);
-            this.tpTransfusion.Location = new System.Drawing.Point(124, 4);
-            this.tpTransfusion.Name = "tpTransfusion";
-            this.tpTransfusion.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTransfusion.Size = new System.Drawing.Size(875, 476);
-            this.tpTransfusion.TabIndex = 1;
-            this.tpTransfusion.Text = "Transfusión sanguínea";
-            this.tpTransfusion.UseVisualStyleBackColor = true;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(4, 5);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(86, 20);
-            this.label33.TabIndex = 50;
-            this.label33.Text = "Sin grupo";
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.dgvProcedimientosSinGrupo);
-            this.panel2.Controls.Add(this.btBuscarSinGrupoCUPS);
-            this.panel2.Controls.Add(this.txtFiltroSinGrupoCUPS);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(8, 28);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(861, 205);
-            this.panel2.TabIndex = 49;
-            // 
-            // txtFiltroSinGrupoCUPS
-            // 
-            this.txtFiltroSinGrupoCUPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltroSinGrupoCUPS.Location = new System.Drawing.Point(54, 8);
-            this.txtFiltroSinGrupoCUPS.Name = "txtFiltroSinGrupoCUPS";
-            this.txtFiltroSinGrupoCUPS.ReadOnly = true;
-            this.txtFiltroSinGrupoCUPS.Size = new System.Drawing.Size(315, 21);
-            this.txtFiltroSinGrupoCUPS.TabIndex = 25;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 15);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Filtro:";
-            // 
-            // btBuscarSinGrupoCUPS
-            // 
-            this.btBuscarSinGrupoCUPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBuscarSinGrupoCUPS.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarSinGrupoCUPS.Location = new System.Drawing.Point(375, 6);
-            this.btBuscarSinGrupoCUPS.Name = "btBuscarSinGrupoCUPS";
-            this.btBuscarSinGrupoCUPS.Size = new System.Drawing.Size(26, 24);
-            this.btBuscarSinGrupoCUPS.TabIndex = 28;
-            this.btBuscarSinGrupoCUPS.UseVisualStyleBackColor = true;
-            // 
-            // dgvProcedimientosSinGrupo
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvProcedimientosSinGrupo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvProcedimientosSinGrupo.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProcedimientosSinGrupo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvProcedimientosSinGrupo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProcedimientosSinGrupo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgAsignarCUPS,
-            this.dgCodigo,
-            this.descripcionDiagCol});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProcedimientosSinGrupo.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvProcedimientosSinGrupo.GridColor = System.Drawing.Color.DarkGray;
-            this.dgvProcedimientosSinGrupo.Location = new System.Drawing.Point(3, 36);
-            this.dgvProcedimientosSinGrupo.MultiSelect = false;
-            this.dgvProcedimientosSinGrupo.Name = "dgvProcedimientosSinGrupo";
-            this.dgvProcedimientosSinGrupo.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProcedimientosSinGrupo.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvProcedimientosSinGrupo.RowHeadersVisible = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvProcedimientosSinGrupo.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgvProcedimientosSinGrupo.Size = new System.Drawing.Size(853, 164);
-            this.dgvProcedimientosSinGrupo.TabIndex = 29;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -420,6 +220,26 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(861, 205);
             this.panel3.TabIndex = 51;
+            // 
+            // cmbGrupoCUPS
+            // 
+            this.cmbGrupoCUPS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGrupoCUPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbGrupoCUPS.FormattingEnabled = true;
+            this.cmbGrupoCUPS.Location = new System.Drawing.Point(503, 6);
+            this.cmbGrupoCUPS.Name = "cmbGrupoCUPS";
+            this.cmbGrupoCUPS.Size = new System.Drawing.Size(258, 23);
+            this.cmbGrupoCUPS.TabIndex = 31;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(453, 11);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(44, 15);
+            this.label18.TabIndex = 30;
+            this.label18.Text = "Grupo:";
             // 
             // dgvProcedimientosAsignados
             // 
@@ -466,15 +286,30 @@
             this.dgvProcedimientosAsignados.Size = new System.Drawing.Size(853, 164);
             this.dgvProcedimientosAsignados.TabIndex = 29;
             // 
-            // btBuscarAsignadosCUPS
+            // dqQuitarCUPS
             // 
-            this.btBuscarAsignadosCUPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBuscarAsignadosCUPS.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarAsignadosCUPS.Location = new System.Drawing.Point(375, 6);
-            this.btBuscarAsignadosCUPS.Name = "btBuscarAsignadosCUPS";
-            this.btBuscarAsignadosCUPS.Size = new System.Drawing.Size(26, 24);
-            this.btBuscarAsignadosCUPS.TabIndex = 28;
-            this.btBuscarAsignadosCUPS.UseVisualStyleBackColor = true;
+            this.dqQuitarCUPS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dqQuitarCUPS.HeaderText = "Quitar";
+            this.dqQuitarCUPS.Name = "dqQuitarCUPS";
+            this.dqQuitarCUPS.ReadOnly = true;
+            this.dqQuitarCUPS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dqQuitarCUPS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dqQuitarCUPS.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descripción Servicio";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // txtFiltroAsignadosCUPS
             // 
@@ -495,25 +330,130 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Filtro:";
             // 
-            // cmbGrupoCUPS
+            // label33
             // 
-            this.cmbGrupoCUPS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbGrupoCUPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbGrupoCUPS.FormattingEnabled = true;
-            this.cmbGrupoCUPS.Location = new System.Drawing.Point(503, 6);
-            this.cmbGrupoCUPS.Name = "cmbGrupoCUPS";
-            this.cmbGrupoCUPS.Size = new System.Drawing.Size(258, 23);
-            this.cmbGrupoCUPS.TabIndex = 31;
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(4, 5);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(86, 20);
+            this.label33.TabIndex = 50;
+            this.label33.Text = "Sin grupo";
             // 
-            // label18
+            // panel2
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(453, 11);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(44, 15);
-            this.label18.TabIndex = 30;
-            this.label18.Text = "Grupo:";
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.dgvProcedimientosSinGrupo);
+            this.panel2.Controls.Add(this.btBuscarSinGrupoCUPS);
+            this.panel2.Controls.Add(this.txtFiltroSinGrupoCUPS);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Location = new System.Drawing.Point(8, 28);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(861, 205);
+            this.panel2.TabIndex = 49;
+            // 
+            // dgvProcedimientosSinGrupo
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvProcedimientosSinGrupo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvProcedimientosSinGrupo.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProcedimientosSinGrupo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvProcedimientosSinGrupo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProcedimientosSinGrupo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgAsignarCUPS,
+            this.dgCodigo,
+            this.descripcionDiagCol});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProcedimientosSinGrupo.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvProcedimientosSinGrupo.GridColor = System.Drawing.Color.DarkGray;
+            this.dgvProcedimientosSinGrupo.Location = new System.Drawing.Point(3, 36);
+            this.dgvProcedimientosSinGrupo.MultiSelect = false;
+            this.dgvProcedimientosSinGrupo.Name = "dgvProcedimientosSinGrupo";
+            this.dgvProcedimientosSinGrupo.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProcedimientosSinGrupo.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvProcedimientosSinGrupo.RowHeadersVisible = false;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvProcedimientosSinGrupo.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvProcedimientosSinGrupo.Size = new System.Drawing.Size(853, 164);
+            this.dgvProcedimientosSinGrupo.TabIndex = 29;
+            // 
+            // dgAsignarCUPS
+            // 
+            this.dgAsignarCUPS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgAsignarCUPS.HeaderText = "Asignar";
+            this.dgAsignarCUPS.Name = "dgAsignarCUPS";
+            this.dgAsignarCUPS.ReadOnly = true;
+            this.dgAsignarCUPS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgAsignarCUPS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgAsignarCUPS.Width = 70;
+            // 
+            // dgCodigo
+            // 
+            this.dgCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgCodigo.HeaderText = "Código";
+            this.dgCodigo.Name = "dgCodigo";
+            this.dgCodigo.ReadOnly = true;
+            this.dgCodigo.Width = 80;
+            // 
+            // descripcionDiagCol
+            // 
+            this.descripcionDiagCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcionDiagCol.HeaderText = "Descripción Servicio";
+            this.descripcionDiagCol.Name = "descripcionDiagCol";
+            this.descripcionDiagCol.ReadOnly = true;
+            // 
+            // txtFiltroSinGrupoCUPS
+            // 
+            this.txtFiltroSinGrupoCUPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltroSinGrupoCUPS.Location = new System.Drawing.Point(54, 8);
+            this.txtFiltroSinGrupoCUPS.Name = "txtFiltroSinGrupoCUPS";
+            this.txtFiltroSinGrupoCUPS.ReadOnly = true;
+            this.txtFiltroSinGrupoCUPS.Size = new System.Drawing.Size(315, 21);
+            this.txtFiltroSinGrupoCUPS.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 15);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Filtro:";
+            // 
+            // tpTransfusion
+            // 
+            this.tpTransfusion.Controls.Add(this.label3);
+            this.tpTransfusion.Controls.Add(this.panel4);
+            this.tpTransfusion.Controls.Add(this.label7);
+            this.tpTransfusion.Controls.Add(this.panel5);
+            this.tpTransfusion.Location = new System.Drawing.Point(124, 4);
+            this.tpTransfusion.Name = "tpTransfusion";
+            this.tpTransfusion.Padding = new System.Windows.Forms.Padding(3);
+            this.tpTransfusion.Size = new System.Drawing.Size(875, 476);
+            this.tpTransfusion.TabIndex = 1;
+            this.tpTransfusion.Text = "Transfusión sanguínea";
+            this.tpTransfusion.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -604,15 +544,30 @@
             this.dgvTransfusionAsignado.Size = new System.Drawing.Size(853, 164);
             this.dgvTransfusionAsignado.TabIndex = 29;
             // 
-            // btTransfusionAsignado
+            // dgQuitarTransfusion
             // 
-            this.btTransfusionAsignado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTransfusionAsignado.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btTransfusionAsignado.Location = new System.Drawing.Point(375, 6);
-            this.btTransfusionAsignado.Name = "btTransfusionAsignado";
-            this.btTransfusionAsignado.Size = new System.Drawing.Size(26, 24);
-            this.btTransfusionAsignado.TabIndex = 28;
-            this.btTransfusionAsignado.UseVisualStyleBackColor = true;
+            this.dgQuitarTransfusion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgQuitarTransfusion.HeaderText = "Quitar";
+            this.dgQuitarTransfusion.Name = "dgQuitarTransfusion";
+            this.dgQuitarTransfusion.ReadOnly = true;
+            this.dgQuitarTransfusion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgQuitarTransfusion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgQuitarTransfusion.Width = 70;
+            // 
+            // dgCodigoTransfusion
+            // 
+            this.dgCodigoTransfusion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgCodigoTransfusion.HeaderText = "Código";
+            this.dgCodigoTransfusion.Name = "dgCodigoTransfusion";
+            this.dgCodigoTransfusion.ReadOnly = true;
+            this.dgCodigoTransfusion.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Descripción Servicio";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // txtFiltroTransfusionAsignado
             // 
@@ -700,60 +655,6 @@
             this.dgvTransfusionSinGrupo.Size = new System.Drawing.Size(853, 164);
             this.dgvTransfusionSinGrupo.TabIndex = 29;
             // 
-            // btTransfusionSinGrupo
-            // 
-            this.btTransfusionSinGrupo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTransfusionSinGrupo.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btTransfusionSinGrupo.Location = new System.Drawing.Point(375, 6);
-            this.btTransfusionSinGrupo.Name = "btTransfusionSinGrupo";
-            this.btTransfusionSinGrupo.Size = new System.Drawing.Size(26, 24);
-            this.btTransfusionSinGrupo.TabIndex = 28;
-            this.btTransfusionSinGrupo.UseVisualStyleBackColor = true;
-            // 
-            // txtFiltroTransfusionSinGrupo
-            // 
-            this.txtFiltroTransfusionSinGrupo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltroTransfusionSinGrupo.Location = new System.Drawing.Point(54, 8);
-            this.txtFiltroTransfusionSinGrupo.Name = "txtFiltroTransfusionSinGrupo";
-            this.txtFiltroTransfusionSinGrupo.ReadOnly = true;
-            this.txtFiltroTransfusionSinGrupo.Size = new System.Drawing.Size(315, 21);
-            this.txtFiltroTransfusionSinGrupo.TabIndex = 25;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 15);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Filtro:";
-            // 
-            // dgQuitarTransfusion
-            // 
-            this.dgQuitarTransfusion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgQuitarTransfusion.HeaderText = "Quitar";
-            this.dgQuitarTransfusion.Name = "dgQuitarTransfusion";
-            this.dgQuitarTransfusion.ReadOnly = true;
-            this.dgQuitarTransfusion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgQuitarTransfusion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgQuitarTransfusion.Width = 70;
-            // 
-            // dgCodigoTransfusion
-            // 
-            this.dgCodigoTransfusion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgCodigoTransfusion.HeaderText = "Código";
-            this.dgCodigoTransfusion.Name = "dgCodigoTransfusion";
-            this.dgCodigoTransfusion.ReadOnly = true;
-            this.dgCodigoTransfusion.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Descripción Servicio";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
             // dataGridViewButtonColumn2
             // 
             this.dataGridViewButtonColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -779,55 +680,142 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // dgAsignarCUPS
+            // txtFiltroTransfusionSinGrupo
             // 
-            this.dgAsignarCUPS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgAsignarCUPS.HeaderText = "Asignar";
-            this.dgAsignarCUPS.Name = "dgAsignarCUPS";
-            this.dgAsignarCUPS.ReadOnly = true;
-            this.dgAsignarCUPS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgAsignarCUPS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgAsignarCUPS.Width = 70;
+            this.txtFiltroTransfusionSinGrupo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltroTransfusionSinGrupo.Location = new System.Drawing.Point(54, 8);
+            this.txtFiltroTransfusionSinGrupo.Name = "txtFiltroTransfusionSinGrupo";
+            this.txtFiltroTransfusionSinGrupo.ReadOnly = true;
+            this.txtFiltroTransfusionSinGrupo.Size = new System.Drawing.Size(315, 21);
+            this.txtFiltroTransfusionSinGrupo.TabIndex = 25;
             // 
-            // dgCodigo
+            // label8
             // 
-            this.dgCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgCodigo.HeaderText = "Código";
-            this.dgCodigo.Name = "dgCodigo";
-            this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 80;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(11, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 15);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Filtro:";
             // 
-            // descripcionDiagCol
+            // label43
             // 
-            this.descripcionDiagCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripcionDiagCol.HeaderText = "Descripción Servicio";
-            this.descripcionDiagCol.Name = "descripcionDiagCol";
-            this.descripcionDiagCol.ReadOnly = true;
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(8, 246);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(0, 20);
+            this.label43.TabIndex = 40;
             // 
-            // dqQuitarCUPS
+            // pacientePB
             // 
-            this.dqQuitarCUPS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dqQuitarCUPS.HeaderText = "Quitar";
-            this.dqQuitarCUPS.Name = "dqQuitarCUPS";
-            this.dqQuitarCUPS.ReadOnly = true;
-            this.dqQuitarCUPS.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dqQuitarCUPS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dqQuitarCUPS.Width = 70;
+            this.pacientePB.Image = global::Galactus.Properties.Resources.user__1_;
+            this.pacientePB.Location = new System.Drawing.Point(25, 4);
+            this.pacientePB.Name = "pacientePB";
+            this.pacientePB.Size = new System.Drawing.Size(31, 31);
+            this.pacientePB.TabIndex = 56;
+            this.pacientePB.TabStop = false;
             // 
-            // dataGridViewTextBoxColumn1
+            // tsbNuevo
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 80;
+            this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
             // 
-            // dataGridViewTextBoxColumn2
+            // tstModificar
             // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripción Servicio";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.tstModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tstModificar.Image = global::Galactus.Properties.Resources.bt_Editar;
+            this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstModificar.Name = "tstModificar";
+            this.tstModificar.Size = new System.Drawing.Size(78, 22);
+            this.tstModificar.Text = "Modificar";
+            // 
+            // tsbCancelar
+            // 
+            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
+            // 
+            // tsbGuardar
+            // 
+            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
+            // 
+            // tsbBuscar
+            // 
+            this.tsbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscar.Text = "Buscar";
+            // 
+            // tsbAnular
+            // 
+            this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbAnular.Name = "tsbAnular";
+            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnular.Text = "Anular";
+            // 
+            // btBuscarAsignadosCUPS
+            // 
+            this.btBuscarAsignadosCUPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscarAsignadosCUPS.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarAsignadosCUPS.Location = new System.Drawing.Point(375, 6);
+            this.btBuscarAsignadosCUPS.Name = "btBuscarAsignadosCUPS";
+            this.btBuscarAsignadosCUPS.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarAsignadosCUPS.TabIndex = 28;
+            this.btBuscarAsignadosCUPS.UseVisualStyleBackColor = true;
+            // 
+            // btBuscarSinGrupoCUPS
+            // 
+            this.btBuscarSinGrupoCUPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscarSinGrupoCUPS.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarSinGrupoCUPS.Location = new System.Drawing.Point(375, 6);
+            this.btBuscarSinGrupoCUPS.Name = "btBuscarSinGrupoCUPS";
+            this.btBuscarSinGrupoCUPS.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarSinGrupoCUPS.TabIndex = 28;
+            this.btBuscarSinGrupoCUPS.UseVisualStyleBackColor = true;
+            // 
+            // btTransfusionAsignado
+            // 
+            this.btTransfusionAsignado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTransfusionAsignado.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btTransfusionAsignado.Location = new System.Drawing.Point(375, 6);
+            this.btTransfusionAsignado.Name = "btTransfusionAsignado";
+            this.btTransfusionAsignado.Size = new System.Drawing.Size(26, 24);
+            this.btTransfusionAsignado.TabIndex = 28;
+            this.btTransfusionAsignado.UseVisualStyleBackColor = true;
+            // 
+            // btTransfusionSinGrupo
+            // 
+            this.btTransfusionSinGrupo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTransfusionSinGrupo.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btTransfusionSinGrupo.Location = new System.Drawing.Point(375, 6);
+            this.btTransfusionSinGrupo.Name = "btTransfusionSinGrupo";
+            this.btTransfusionSinGrupo.Size = new System.Drawing.Size(26, 24);
+            this.btTransfusionSinGrupo.TabIndex = 28;
+            this.btTransfusionSinGrupo.UseVisualStyleBackColor = true;
             // 
             // ConfiguracionCUPSUI
             // 
@@ -844,7 +832,6 @@
             this.MinimumSize = new System.Drawing.Size(1059, 580);
             this.Name = "ConfiguracionCUPSUI";
             this.Text = "ConfiguracionCUPSUI";
-            ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).EndInit();
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -852,20 +839,21 @@
             this.tabControlGalactus1.ResumeLayout(false);
             this.tpAgrupacion.ResumeLayout(false);
             this.tpAgrupacion.PerformLayout();
-            this.tpTransfusion.ResumeLayout(false);
-            this.tpTransfusion.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientosSinGrupo)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientosAsignados)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientosSinGrupo)).EndInit();
+            this.tpTransfusion.ResumeLayout(false);
+            this.tpTransfusion.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransfusionAsignado)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransfusionSinGrupo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -883,7 +871,6 @@
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbBuscar;
         private System.Windows.Forms.ToolStripButton tsbAnular;
-        private System.Windows.Forms.ToolStripButton tstImprimir;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label43;
         private Util.Controles.TabControlGalactus tabControlGalactus1;

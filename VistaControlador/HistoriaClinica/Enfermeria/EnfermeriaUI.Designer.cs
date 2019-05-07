@@ -50,6 +50,7 @@
             this.tpProcedimientos = new System.Windows.Forms.TabPage();
             this.tpGlucometria = new System.Windows.Forms.TabPage();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.tstPropiedadesOrdenMedica.SuspendLayout();
             this.tstMenuEvolucion.SuspendLayout();
             this.tcEnfermeria.SuspendLayout();
@@ -103,10 +104,11 @@
             this.tstMenuEvolucion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsBtNuevo,
             this.tsBtModificar,
+            this.tsBtCancelar,
             this.tsBtGuardar,
             this.tsBtBuscar,
             this.tsBtAnular,
-            this.tsBtCancelar});
+            this.tstImprimir});
             this.tstMenuEvolucion.Location = new System.Drawing.Point(0, 320);
             this.tstMenuEvolucion.MaximumSize = new System.Drawing.Size(1095, 25);
             this.tstMenuEvolucion.MinimumSize = new System.Drawing.Size(1095, 25);
@@ -272,6 +274,16 @@
             this.dtpFecha.Size = new System.Drawing.Size(90, 20);
             this.dtpFecha.TabIndex = 68;
             // 
+            // tstImprimir
+            // 
+            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstImprimir.Name = "tstImprimir";
+            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tstImprimir.Text = "Imprimir";
+            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
             // EnfermeriaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,5 +334,6 @@
         private System.Windows.Forms.TabPage tpGlucometrias;
         private System.Windows.Forms.TabPage tpGlucometria;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.ToolStripButton tstImprimir;
     }
 }

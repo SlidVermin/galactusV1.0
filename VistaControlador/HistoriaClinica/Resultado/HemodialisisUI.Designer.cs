@@ -37,6 +37,8 @@
             this.txtNota = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.txtProcedimiento = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodigoAdministradora = new System.Windows.Forms.TextBox();
@@ -63,8 +65,7 @@
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tsbBuscarNit = new System.Windows.Forms.Button();
-            this.txtProcedimiento = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlCaracteristica.SuspendLayout();
@@ -144,7 +145,7 @@
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
             this.txtNota.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNota.Size = new System.Drawing.Size(889, 170);
+            this.txtNota.Size = new System.Drawing.Size(889, 142);
             this.txtNota.TabIndex = 39;
             // 
             // label2
@@ -183,6 +184,25 @@
             this.pnlInformacion.Name = "pnlInformacion";
             this.pnlInformacion.Size = new System.Drawing.Size(897, 113);
             this.pnlInformacion.TabIndex = 1;
+            // 
+            // txtProcedimiento
+            // 
+            this.txtProcedimiento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProcedimiento.Location = new System.Drawing.Point(384, 81);
+            this.txtProcedimiento.Name = "txtProcedimiento";
+            this.txtProcedimiento.Size = new System.Drawing.Size(481, 21);
+            this.txtProcedimiento.TabIndex = 47;
+            this.txtProcedimiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(285, 84);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 15);
+            this.label11.TabIndex = 46;
+            this.label11.Text = "Procedimiento:";
             // 
             // dtFecha
             // 
@@ -358,7 +378,8 @@
             this.tsbCancelar,
             this.tsbGuardar,
             this.tsbBuscar,
-            this.tsbAnular});
+            this.tsbAnular,
+            this.tstImprimir});
             this.tstMenuPatron.Location = new System.Drawing.Point(0, 555);
             this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
@@ -447,24 +468,15 @@
             this.tsbBuscarNit.UseVisualStyleBackColor = true;
             this.tsbBuscarNit.Click += new System.EventHandler(this.tsbBuscarNit_Click);
             // 
-            // txtProcedimiento
+            // tstImprimir
             // 
-            this.txtProcedimiento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProcedimiento.Location = new System.Drawing.Point(384, 81);
-            this.txtProcedimiento.Name = "txtProcedimiento";
-            this.txtProcedimiento.Size = new System.Drawing.Size(481, 21);
-            this.txtProcedimiento.TabIndex = 47;
-            this.txtProcedimiento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(285, 84);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 15);
-            this.label11.TabIndex = 46;
-            this.label11.Text = "Procedimiento:";
+            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstImprimir.Name = "tstImprimir";
+            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tstImprimir.Text = "Imprimir";
+            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // HemodialisisUI
             // 
@@ -537,5 +549,6 @@
         private System.Windows.Forms.ToolStripButton tsbAnular;
         private System.Windows.Forms.TextBox txtProcedimiento;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ToolStripButton tstImprimir;
     }
 }

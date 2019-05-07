@@ -73,6 +73,7 @@
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
+            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.admisionesPB)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -469,8 +470,9 @@
             this.tsbCancelar,
             this.tsbGuardar,
             this.tsbBuscar,
-            this.tsbAnular});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 660);
+            this.tsbAnular,
+            this.tstImprimir});
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 661);
             this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.Name = "tstMenuPatron";
@@ -495,7 +497,7 @@
             this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
             this.tstModificar.Name = "tstModificar";
-            this.tstModificar.Size = new System.Drawing.Size(57, 22);
+            this.tstModificar.Size = new System.Drawing.Size(78, 22);
             this.tstModificar.Text = "Modificar";
             // 
             // tsbCancelar
@@ -538,12 +540,22 @@
             this.tsbAnular.Size = new System.Drawing.Size(62, 22);
             this.tsbAnular.Text = "Anular";
             // 
+            // tstImprimir
+            // 
+            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstImprimir.Name = "tstImprimir";
+            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tstImprimir.Text = "Imprimir";
+            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
             // JustificacionAntibioticoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(907, 685);
+            this.ClientSize = new System.Drawing.Size(907, 686);
             this.Controls.Add(this.tstMenuPatron);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.admisionesPB);
@@ -618,5 +630,6 @@
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbBuscar;
         private System.Windows.Forms.ToolStripButton tsbAnular;
+        private System.Windows.Forms.ToolStripButton tstImprimir;
     }
 }

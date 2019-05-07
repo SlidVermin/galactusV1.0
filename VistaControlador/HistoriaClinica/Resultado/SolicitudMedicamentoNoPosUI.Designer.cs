@@ -116,6 +116,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtAtencion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.tstMenuPatron.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -146,7 +147,8 @@
             this.tsbCancelar,
             this.tsbGuardar,
             this.tsbBuscar,
-            this.tsbAnular});
+            this.tsbAnular,
+            this.tstImprimir});
             this.tstMenuPatron.Location = new System.Drawing.Point(0, 629);
             this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
@@ -1029,6 +1031,16 @@
             this.label3.TabIndex = 41;
             this.label3.Text = "Atencion:";
             // 
+            // tstImprimir
+            // 
+            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstImprimir.Name = "tstImprimir";
+            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tstImprimir.Text = "Imprimir";
+            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
             // SolicitudMedicamentoNoPosUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1161,5 +1173,6 @@
         internal System.Windows.Forms.Label label29;
         private System.Windows.Forms.CheckBox chkPreinscripcion;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ToolStripButton tstImprimir;
     }
 }
