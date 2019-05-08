@@ -122,7 +122,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Configuracion
                 configuracionProcedimientoMedico.tipo = filaResultado.Field<string>("tipoItem");
 
                 txtBNombreCliente.Text = filaResultado.Field<string>("nombreCliente");
-                txtBCodigo.Text = configuracionProcedimientoMedico.idConfiguracion.ToString();
+                //txtBCodigo.Text = configuracionProcedimientoMedico.idConfiguracion.ToString();
                 txtBNombreProcedimiento.Text = configuracionProcedimientoMedico.descripcionItem;
 
                 //GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar, btnModificar, tsbAnular);

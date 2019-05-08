@@ -108,13 +108,13 @@ namespace Galactus.VistaControlador.HistoriaClinica
             dgvDiagnostico.DataSource = objJustificacionAnt.dtPatologia;
         }
         public void cargarDatosPaciente(DataRow dRows) {
-            txtRegistro.Text = dRows.GetParentRows("Registro").ToString();
-            txtRegistro.Text = dRows.GetParentRows("Identificacion").ToString();
-            txtRegistro.Text = dRows.GetParentRows("OrdenMedica").ToString();
-            txtRegistro.Text = dRows.GetParentRows("Paciente").ToString();
-            txtRegistro.Text = dRows.GetParentRows("Servicio").ToString();
-            txtRegistro.Text = dRows.GetParentRows("CodAdmin").ToString();
-            txtRegistro.Text = dRows.GetParentRows("Administradora").ToString();
+            //txtRegistro.Text = dRows.GetParentRows("Registro").ToString();
+            //txtRegistro.Text = dRows.GetParentRows("Identificacion").ToString();
+            //txtRegistro.Text = dRows.GetParentRows("OrdenMedica").ToString();
+            //txtRegistro.Text = dRows.GetParentRows("Paciente").ToString();
+            //txtRegistro.Text = dRows.GetParentRows("Servicio").ToString();
+            //txtRegistro.Text = dRows.GetParentRows("CodAdmin").ToString();
+            //txtRegistro.Text = dRows.GetParentRows("Administradora").ToString();
             cargarPatologia(Convert.ToUInt16(dRows.GetParentRows("Registro")));
 
         }
