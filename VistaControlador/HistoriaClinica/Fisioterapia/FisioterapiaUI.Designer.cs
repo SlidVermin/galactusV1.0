@@ -34,7 +34,7 @@
             this.txtcodigoOrdenMedica = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.tstMenuEvolucion = new System.Windows.Forms.ToolStrip();
+            this.tstMenu = new System.Windows.Forms.ToolStrip();
             this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsBtModificar = new System.Windows.Forms.ToolStripButton();
             this.tsBtCancelar = new System.Windows.Forms.ToolStripButton();
@@ -48,7 +48,7 @@
             this.tpOxigeno = new System.Windows.Forms.TabPage();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.tstPropiedadesOrdenMedica.SuspendLayout();
-            this.tstMenuEvolucion.SuspendLayout();
+            this.tstMenu.SuspendLayout();
             this.tcEnfermeria.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,11 +93,11 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(41, 22);
             this.toolStripLabel2.Text = "Fecha:";
             // 
-            // tstMenuEvolucion
+            // tstMenu
             // 
-            this.tstMenuEvolucion.BackColor = System.Drawing.Color.White;
-            this.tstMenuEvolucion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuEvolucion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tstMenu.BackColor = System.Drawing.Color.White;
+            this.tstMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsBtNuevo,
             this.tsBtModificar,
             this.tsBtCancelar,
@@ -105,13 +105,13 @@
             this.tsBtBuscar,
             this.tsBtAnular,
             this.tstImprimir});
-            this.tstMenuEvolucion.Location = new System.Drawing.Point(0, 320);
-            this.tstMenuEvolucion.MaximumSize = new System.Drawing.Size(1095, 25);
-            this.tstMenuEvolucion.MinimumSize = new System.Drawing.Size(1095, 25);
-            this.tstMenuEvolucion.Name = "tstMenuEvolucion";
-            this.tstMenuEvolucion.Size = new System.Drawing.Size(1095, 25);
-            this.tstMenuEvolucion.TabIndex = 67;
-            this.tstMenuEvolucion.Text = "toolStrip1";
+            this.tstMenu.Location = new System.Drawing.Point(0, 320);
+            this.tstMenu.MaximumSize = new System.Drawing.Size(1095, 25);
+            this.tstMenu.MinimumSize = new System.Drawing.Size(1095, 25);
+            this.tstMenu.Name = "tstMenu";
+            this.tstMenu.Size = new System.Drawing.Size(1095, 25);
+            this.tstMenu.TabIndex = 67;
+            this.tstMenu.Text = "toolStrip1";
             // 
             // tsBtNuevo
             // 
@@ -122,6 +122,7 @@
             this.tsBtNuevo.Name = "tsBtNuevo";
             this.tsBtNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsBtNuevo.Text = "Nuevo";
+            this.tsBtNuevo.Click += new System.EventHandler(this.tsBtNuevo_Click);
             // 
             // tsBtModificar
             // 
@@ -245,7 +246,7 @@
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.tcEnfermeria);
             this.Controls.Add(this.tstPropiedadesOrdenMedica);
-            this.Controls.Add(this.tstMenuEvolucion);
+            this.Controls.Add(this.tstMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1090, 345);
             this.MinimumSize = new System.Drawing.Size(1090, 345);
@@ -254,8 +255,8 @@
             this.Load += new System.EventHandler(this.FisioterapiaUI_Load);
             this.tstPropiedadesOrdenMedica.ResumeLayout(false);
             this.tstPropiedadesOrdenMedica.PerformLayout();
-            this.tstMenuEvolucion.ResumeLayout(false);
-            this.tstMenuEvolucion.PerformLayout();
+            this.tstMenu.ResumeLayout(false);
+            this.tstMenu.PerformLayout();
             this.tcEnfermeria.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -269,7 +270,7 @@
         private System.Windows.Forms.ToolStripTextBox txtcodigoOrdenMedica;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStrip tstMenuEvolucion;
+        private System.Windows.Forms.ToolStrip tstMenu;
         private System.Windows.Forms.ToolStripButton tsBtNuevo;
         private System.Windows.Forms.ToolStripButton tsBtModificar;
         private System.Windows.Forms.ToolStripButton tsBtGuardar;

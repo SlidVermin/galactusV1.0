@@ -37,6 +37,7 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
         public void establecerDT()
         {
             dtInsumos = new DataTable();
+            dtInsumos.Columns.Add("Id", typeof(int));
             dtInsumos.Columns.Add("Código", typeof(int));
             dtInsumos.Columns.Add("Descripcion", typeof(String));
             dtInsumos.Columns.Add("Cantidad", typeof(String));
@@ -94,6 +95,7 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
         {
             dtInsumos = new DataTable();
             List<string> lista = new List<string>();
+            lista.Add(Convert.ToString(Auditoria));
             lista.Add(Convert.ToString(idOrdenMedica));
             GeneralC.llenarTabla(Sentencias.CARGAR_PROCEDIMIENTOS_ENFERMERIA, lista, dtProcedimientos);
             if (dtProcedimientos.Rows.Count > 0)

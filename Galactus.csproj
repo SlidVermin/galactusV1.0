@@ -80,6 +80,7 @@
     <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
     <Compile Include="Entidades\HistoriaClinica\Enfermeria\EnfermeriaClinica.cs" />
     <Compile Include="Entidades\HistoriaClinica\Evolucion\Evolucion.cs" />
+    <Compile Include="Entidades\HistoriaClinica\Fisioterapeuta\Fisioterapeutas.cs" />
     <Compile Include="Entidades\HistoriaClinica\HistoriaClinicaPaciente.cs" />
     <Compile Include="Entidades\HistoriaClinica\IngresoClinico.cs" />
     <Compile Include="Entidades\HistoriaClinica\ListadoPaciente.cs" />

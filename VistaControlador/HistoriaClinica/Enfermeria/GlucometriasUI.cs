@@ -26,6 +26,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
 
         public void establecerDatagridview()
         {
+            dgvGlucometria.Columns["dgId"].DataPropertyName = "Id";
             dgvGlucometria.Columns["dgCodigo"].DataPropertyName = "Código";
             dgvGlucometria.Columns["dgDescripcion"].DataPropertyName = "Descripcion";
             dgvGlucometria.Columns["dgHora"].DataPropertyName = "Hora";

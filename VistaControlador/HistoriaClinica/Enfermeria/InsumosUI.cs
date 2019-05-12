@@ -28,7 +28,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         public void establecerGridview()
         {
             enfermeria.establecerDT();
-
+            dgvInsumos.Columns["dgId"].DataPropertyName = "Id";
             dgvInsumos.Columns["dgCodigo"].DataPropertyName = "Código";
             dgvInsumos.Columns["dgDescripcion"].DataPropertyName = "Descripcion";
             dgvInsumos.Columns["dgCantidad"].DataPropertyName = "Cantidad";

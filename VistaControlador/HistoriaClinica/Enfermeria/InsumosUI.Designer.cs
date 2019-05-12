@@ -30,6 +30,7 @@
         {
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
             this.dgvInsumos = new System.Windows.Forms.DataGridView();
+            this.dgId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +63,7 @@
             this.dgvInsumos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvInsumos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInsumos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgId,
             this.dgCodigo,
             this.dgDescripcion,
             this.dgCantidad,
@@ -80,6 +82,14 @@
             this.dgvInsumos.Size = new System.Drawing.Size(949, 252);
             this.dgvInsumos.TabIndex = 2;
             this.dgvInsumos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInsumos_CellContentClick);
+            // 
+            // dgId
+            // 
+            this.dgId.HeaderText = "Id";
+            this.dgId.Name = "dgId";
+            this.dgId.ReadOnly = true;
+            this.dgId.Visible = false;
+            this.dgId.Width = 23;
             // 
             // dgCodigo
             // 
@@ -140,6 +150,7 @@
 
         internal System.Windows.Forms.GroupBox GroupBox17;
         internal System.Windows.Forms.DataGridView dgvInsumos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgCantidad;

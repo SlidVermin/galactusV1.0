@@ -380,6 +380,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
             enfermeria.procedimientoAprobado = false;
             enfermeria.insumoAprovado = false;
             enfermeria.glucometriaAprobado = false;
+            enfermeria.notaAprobado = false;
         }
         private void tsBtCancelar_Click(object sender, EventArgs e)
         {
