@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnfermeriaUI));
             this.tstPropiedadesOrdenMedica = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.txtcodigoOrdenMedica = new System.Windows.Forms.ToolStripTextBox();
+            this.txtCodigo = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.tstMenuEvolucion = new System.Windows.Forms.ToolStrip();
+            this.tstMenu = new System.Windows.Forms.ToolStrip();
             this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsBtModificar = new System.Windows.Forms.ToolStripButton();
             this.tsBtCancelar = new System.Windows.Forms.ToolStripButton();
@@ -44,15 +44,15 @@
             this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.mtxtFechaEvolucion = new System.Windows.Forms.MaskedTextBox();
             this.tpGlucometrias = new System.Windows.Forms.TabPage();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.tcEnfermeria = new Galactus.Util.Controles.TabControlGalactus();
             this.tpInsumos = new System.Windows.Forms.TabPage();
             this.tpNotas = new System.Windows.Forms.TabPage();
             this.tpParaclinicos = new System.Windows.Forms.TabPage();
             this.tpProcedimientos = new System.Windows.Forms.TabPage();
             this.tpGlucometria = new System.Windows.Forms.TabPage();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.tstPropiedadesOrdenMedica.SuspendLayout();
-            this.tstMenuEvolucion.SuspendLayout();
+            this.tstMenu.SuspendLayout();
             this.tcEnfermeria.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@
             this.tstPropiedadesOrdenMedica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tstPropiedadesOrdenMedica.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.txtcodigoOrdenMedica,
+            this.txtCodigo,
             this.toolStripSeparator1,
             this.toolStripLabel2});
             this.tstPropiedadesOrdenMedica.Location = new System.Drawing.Point(0, 0);
@@ -78,13 +78,13 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(49, 22);
             this.toolStripLabel1.Text = "Código:";
             // 
-            // txtcodigoOrdenMedica
+            // txtCodigo
             // 
-            this.txtcodigoOrdenMedica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtcodigoOrdenMedica.Name = "txtcodigoOrdenMedica";
-            this.txtcodigoOrdenMedica.ReadOnly = true;
-            this.txtcodigoOrdenMedica.Size = new System.Drawing.Size(100, 25);
-            this.txtcodigoOrdenMedica.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
+            this.txtCodigo.Size = new System.Drawing.Size(100, 25);
+            this.txtCodigo.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // toolStripSeparator1
             // 
@@ -97,25 +97,25 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(41, 22);
             this.toolStripLabel2.Text = "Fecha:";
             // 
-            // tstMenuEvolucion
+            // tstMenu
             // 
-            this.tstMenuEvolucion.BackColor = System.Drawing.Color.White;
-            this.tstMenuEvolucion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuEvolucion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tstMenu.BackColor = System.Drawing.Color.White;
+            this.tstMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsBtNuevo,
             this.tsBtModificar,
-            this.tsBtCancelar,
             this.tsBtGuardar,
+            this.tsBtCancelar,
             this.tsBtBuscar,
             this.tsBtAnular,
             this.tstImprimir});
-            this.tstMenuEvolucion.Location = new System.Drawing.Point(0, 320);
-            this.tstMenuEvolucion.MaximumSize = new System.Drawing.Size(1095, 25);
-            this.tstMenuEvolucion.MinimumSize = new System.Drawing.Size(1095, 25);
-            this.tstMenuEvolucion.Name = "tstMenuEvolucion";
-            this.tstMenuEvolucion.Size = new System.Drawing.Size(1095, 25);
-            this.tstMenuEvolucion.TabIndex = 65;
-            this.tstMenuEvolucion.Text = "toolStrip1";
+            this.tstMenu.Location = new System.Drawing.Point(0, 320);
+            this.tstMenu.MaximumSize = new System.Drawing.Size(1095, 25);
+            this.tstMenu.MinimumSize = new System.Drawing.Size(1095, 25);
+            this.tstMenu.Name = "tstMenu";
+            this.tstMenu.Size = new System.Drawing.Size(1095, 25);
+            this.tstMenu.TabIndex = 65;
+            this.tstMenu.Text = "toolStrip1";
             // 
             // tsBtNuevo
             // 
@@ -211,6 +211,16 @@
             this.tpGlucometrias.Text = "Glucometrias";
             this.tpGlucometrias.UseVisualStyleBackColor = true;
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(215, 2);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(137, 21);
+            this.dtpFecha.TabIndex = 68;
+            // 
             // tcEnfermeria
             // 
             this.tcEnfermeria.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -276,16 +286,6 @@
             this.tpGlucometria.TabIndex = 4;
             this.tpGlucometria.Text = "Glucometrias";
             // 
-            // dtpFecha
-            // 
-            this.dtpFecha.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtpFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha.Location = new System.Drawing.Point(215, 2);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(137, 21);
-            this.dtpFecha.TabIndex = 68;
-            // 
             // EnfermeriaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,7 +294,7 @@
             this.ClientSize = new System.Drawing.Size(1090, 345);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.tstPropiedadesOrdenMedica);
-            this.Controls.Add(this.tstMenuEvolucion);
+            this.Controls.Add(this.tstMenu);
             this.Controls.Add(this.mtxtFechaEvolucion);
             this.Controls.Add(this.tcEnfermeria);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -305,8 +305,8 @@
             this.Load += new System.EventHandler(this.EnfermeriaUI_Load);
             this.tstPropiedadesOrdenMedica.ResumeLayout(false);
             this.tstPropiedadesOrdenMedica.PerformLayout();
-            this.tstMenuEvolucion.ResumeLayout(false);
-            this.tstMenuEvolucion.PerformLayout();
+            this.tstMenu.ResumeLayout(false);
+            this.tstMenu.PerformLayout();
             this.tcEnfermeria.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -326,10 +326,10 @@
         private System.Windows.Forms.ToolStripButton tsBtNuevo;
         private System.Windows.Forms.ToolStrip tstPropiedadesOrdenMedica;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripTextBox txtcodigoOrdenMedica;
+        private System.Windows.Forms.ToolStripTextBox txtCodigo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStrip tstMenuEvolucion;
+        private System.Windows.Forms.ToolStrip tstMenu;
         private System.Windows.Forms.MaskedTextBox mtxtFechaEvolucion;
         private System.Windows.Forms.TabPage tpParaclinicos;
         private Util.Controles.TabControlGalactus tcEnfermeria;

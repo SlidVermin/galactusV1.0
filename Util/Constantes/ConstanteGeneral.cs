@@ -68,7 +68,7 @@ namespace Galactus.Util.Constantes
         public const int VIA_INGRESO = 18;
         public const int CAUSA_EXTERNA = 19;
         public const int INSTITUCIÓN = 20;
-        public const int ESTADO_ATENCION = 21;
+        public const int ESTADO_ATENCION = 39;
         #endregion
         #region Menu
         public const string MENU_ATENCION_MEDICA = "27";

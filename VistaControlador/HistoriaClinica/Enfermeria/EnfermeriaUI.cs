@@ -33,12 +33,15 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         }
         private void EnfermeriaUI_Load(object sender, EventArgs e)
         {
-            dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
+          
             GeneralC.cargarFormularioEnPestana(tpInsumos, insumos);
             GeneralC.cargarFormularioEnPestana(tpNotas, notas);
             GeneralC.cargarFormularioEnPestana(tpParaclinicos, paraclinicos);
             GeneralC.cargarFormularioEnPestana(tpProcedimientos, procedimientos);
             GeneralC.cargarFormularioEnPestana(tpGlucometria, glucometrias);
+            GeneralC.posCargadoForm(this, tstMenu, tsBtNuevo, tsBtBuscar);
+            enfermeria.idInsumo = ConstanteGeneral.PREDETERMINADO;
+            enfermeria.idNota = ConstanteGeneral.PREDETERMINADO;
         }
 
         private void opciones()
@@ -48,7 +51,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         }
         private void tsBtNuevo_Click(object sender, EventArgs e)
         {
-            GeneralC.formNuevo(this, tstMenuEvolucion, tsBtGuardar, tsBtCancelar);
+            GeneralC.formNuevo(this, tstMenu, tsBtGuardar, tsBtCancelar);
             opciones();
             dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
             enfermeria.idInsumo = ConstanteGeneral.PREDETERMINADO;
@@ -62,13 +65,13 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
                     buscarInsumos();
                     break;
                 case 1:
-
+                    buscarNotas();
                     break;
                 case 2:
 
                     break;
                 case 3:
-                    buscarOrdenMedica();
+                    buscarOrdenMedicaGeneral();
                     break;
                 case 4:
                     buscarOrdenMedica();
@@ -81,8 +84,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
             {
                 List<string> parametros = new List<string>();
                 parametros.Add(Convert.ToString(idAtencion));
-                parametros.Add(ConstanteGeneral.CODIGO_PROCEDIMIENTO_GLUCOMETRIA);
-                parametros.Add(ConstanteGeneral.CODIGO_PROCEDIMIENTO_GLUCOMETRIA_2);
                 GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_ORDEN_MEDICA_ENFERMERIA,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarDatos),
@@ -109,6 +110,30 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
                 MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        public void buscarNotas()
+        {
+            try
+            {
+                List<string> parametros = new List<string>();
+                parametros.Add(Convert.ToString(enfermeria.Auditoria));
+                parametros.Add(Convert.ToString(idAtencion));
+                GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_NOTA_ENFERMERIA,
+                                                   parametros,
+                                                   new GeneralC.cargarInfoFila(cargarNotas),
+                                                   Mensajes.BUSCAR_ORDEN, true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        public void cargarNotas(DataRow resultados)
+        {
+            enfermeria.idNota = resultados.Field<int>("Código nota");
+            enfermeria.cargarNotas();
+            notas.txtNotas.Text = enfermeria.nota;
+            dtpFecha.Value = enfermeria.fechaNota;
+        }
         public void buscarOrdenMedicaGeneral()
         {
             try
@@ -132,10 +157,11 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         public void cargarDatos(DataRow resultados)
         {
             enfermeria.idOrdenMedica = resultados.Field<int>("Código orden");
+            
             switch (tcEnfermeria.SelectedIndex)
             {
                 case 1:
-
+                  
                     break;
                 case 2:
 
@@ -143,11 +169,15 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
                 case 3:
                     enfermeria.fechaProcedimiento = resultados.Field<DateTime>("Fecha orden");
                     enfermeria.cargarProcedimientos();
+                    tsBtModificar.Enabled = true;
                     procedimientos.dgvProcedimientos.DataSource = enfermeria.dtProcedimientos;
+                    txtCodigo.Text =Convert.ToString(resultados.Field<int>("Código orden"));
                     break;
                 case 4:
                     enfermeria.cargarGlucometria();
+                    tsBtModificar.Enabled = true;
                     glucometrias.dgvGlucometria.DataSource = enfermeria.dtGlucometria;
+                    txtCodigo.Text = Convert.ToString(resultados.Field<int>("Código orden"));
                     habilitarCamposDatagridview();
                     break;
             }
@@ -157,11 +187,13 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         public void cargarInsumos(DataRow resultados)
         {
             enfermeria.establecerDT();
-            txtcodigoOrdenMedica.Text =Convert.ToString(resultados.Field<int>("Código insumo"));
+            txtCodigo.Text =Convert.ToString(resultados.Field<int>("Código insumo"));
             enfermeria.idInsumo = resultados.Field<int>("Código insumo");
             enfermeria.cargarInsumos();
+            dtpFecha.Value = enfermeria.fechaInsumo;
             insumos.dgvInsumos.DataSource = enfermeria.dtInsumos;
             insumos.enfermeria = enfermeria;
+            tsBtModificar.Enabled = true;
         }
         public bool validarInsumos()
         {
@@ -178,8 +210,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
 
         public void obtenerDatos()
         {
+            enfermeria.Auditoria = false;
             enfermeria.idAtencion = idAtencion;
-            enfermeria.idInsumo = (txtcodigoOrdenMedica.Text.Equals(string.Empty) ? ConstanteGeneral.PREDETERMINADO : Convert.ToInt32(txtcodigoOrdenMedica.Text));
+            enfermeria.idInsumo = (txtCodigo.Text.Equals(string.Empty) ? ConstanteGeneral.PREDETERMINADO : Convert.ToInt32(txtCodigo.Text));
             enfermeria.fecha = Convert.ToDateTime(dtpFecha.Text);
         }
         public void guardarInsumos()
@@ -190,7 +223,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
                 {
                     obtenerDatos();
                     enfermeria.guardarInsumos();
-                    GeneralC.posGuardar(this, tstMenuEvolucion, tsBtNuevo, tsBtBuscar, tsBtModificar, tsBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenu, tsBtNuevo, tsBtBuscar, tsBtModificar, tsBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                 }
                 catch (Exception ex)
                 {
@@ -207,14 +240,40 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         {
             return true;
         }
+        public void obtenerDatosNotas()
+        {
+            enfermeria.Auditoria = false;
+            enfermeria.nota = notas.txtNotas.Text;
+            enfermeria.idAtencion = idAtencion;
+            enfermeria.fechaNota = dtpFecha.Value;
+        }
+        public void guardarNotas()
+        {
+            if (validarGlucometria() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    obtenerDatosNotas();
+                    enfermeria.guardarNota();
+                    GeneralC.posGuardar(this, tstMenu, tsBtNuevo, tsBtBuscar, tsBtModificar, tsBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    txtCodigo.Text = Convert.ToString(enfermeria.idNota);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+        
         public void guardarGlucometria()
         {
             if (validarGlucometria() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
+                    enfermeria.Auditoria = false;
                     enfermeria.guardarGlucometria();
-                    GeneralC.posGuardar(this, tstMenuEvolucion, tsBtNuevo, tsBtBuscar, tsBtModificar, tsBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    GeneralC.posGuardar(this, tstMenu, tsBtNuevo, tsBtBuscar, tsBtModificar, tsBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     cargarGlucometriaGuardar();
                 }
                 catch (Exception ex)
@@ -232,13 +291,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
                     guardarInsumos();
                     break;
                 case 1:
-                   
-                    break;
-                case 2:
-
-                    break;
-                case 3:
-
+                    guardarNotas();
                     break;
                 case 4:
                     guardarGlucometria();
@@ -251,22 +304,61 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
             switch (tcEnfermeria.SelectedIndex)
             {
                 case 0:
-                    txtcodigoOrdenMedica.Text = Convert.ToString(enfermeria.idInsumo);
                     tsBtNuevo.Visible = true;
+                    if (enfermeria.insumoAprovado)
+                    {
+                        txtCodigo.Text = Convert.ToString(enfermeria.idInsumo);
+                        dtpFecha.Value = enfermeria.fechaInsumo;
+                    }else
+                    {
+                        txtCodigo.Clear();
+                        enfermeria.idInsumo = ConstanteGeneral.PREDETERMINADO;
+                    }
                     break;
                 case 1:
-
+                    tsBtNuevo.Visible = true;
+                    if (enfermeria.notaAprobado)
+                    {
+                        txtCodigo.Text = Convert.ToString(enfermeria.idNota);
+                        dtpFecha.Value = enfermeria.fechaNota;
+                    }
+                    else
+                    {
+                        txtCodigo.Clear();
+                        enfermeria.idNota = ConstanteGeneral.PREDETERMINADO;
+                    }
                     break;
                 case 2:
-
+                    tsBtNuevo.Visible = false;
+                    tsBtAnular.Enabled = false;
                     break;
                 case 3:
-                    dtpFecha.Text = Convert.ToString(enfermeria.fechaProcedimiento);
                     tsBtNuevo.Visible = false;
+                    if (enfermeria.procedimientoAprobado)
+                    {
+                        txtCodigo.Text = Convert.ToString(enfermeria.idOrdenMedica);
+                        tsBtModificar.Enabled = true;
+                        tsBtAnular.Enabled = false;
+                    }
+                    else
+                    {
+                        txtCodigo.Clear();
+                        tsBtAnular.Enabled = false;
+                    }
                     break;
                 case 4:
-                    txtcodigoOrdenMedica.Text = Convert.ToString(enfermeria.idOrdenMedica);
                     tsBtNuevo.Visible = false;
+                    if (enfermeria.glucometriaAprobado)
+                    {
+                        txtCodigo.Text = Convert.ToString(enfermeria.idOrdenMedica);
+                        tsBtModificar.Enabled = true;
+                        tsBtAnular.Enabled = false;
+                    }
+                    else
+                    {                 
+                        txtCodigo.Clear();
+                        tsBtAnular.Enabled = false;
+                    }
                     break;
             }
         }
@@ -283,10 +375,19 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
             opciones();
         }
 
+        public void restablecerAprobados()
+        {
+            enfermeria.procedimientoAprobado = false;
+            enfermeria.insumoAprovado = false;
+            enfermeria.glucometriaAprobado = false;
+        }
         private void tsBtCancelar_Click(object sender, EventArgs e)
         {
-            GeneralC.fnCancelarForm(this, tstMenuEvolucion, tsBtNuevo, tsBtBuscar);
+            GeneralC.fnCancelarForm(this, tstMenu, tsBtNuevo, tsBtBuscar);
             enfermeria.idInsumo = ConstanteGeneral.PREDETERMINADO;
+            enfermeria.idNota = ConstanteGeneral.PREDETERMINADO;
+            txtCodigo.Clear();
+            restablecerAprobados();
             dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
         }
     }

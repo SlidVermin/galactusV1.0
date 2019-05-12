@@ -19,6 +19,17 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
         public int idInsumo { set; get; }
         public int idAtencion { set; get; }
         public DateTime fecha { set; get; }
+        public int idNota { set; get; }
+        public String nota { set; get; }
+        public Boolean insumoAprovado { set; get; }
+        public Boolean procedimientoAprobado { set; get; }
+        public Boolean glucometriaAprobado { set; get; }
+        public Boolean notaAprobado { set; get; }
+        public DateTime fechaInsumo { set; get; }
+        public DateTime fechaNota { set; get; }
+        public Boolean Auditoria { set; get; }
+        public DataSet dsInsumos = new DataSet();
+        public DataTable dtNotas = new DataTable();
         public DateTime fechaProcedimiento { set; get; }
         public DataTable dtProcedimientos = new DataTable();
         public DataTable dtGlucometriaCopia = new DataTable();
@@ -41,6 +52,11 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
         {
             prepararGlucometriaDT();
             EnfermeriaDAL.guardarGlucometria(this);
+        }
+
+        public void guardarNota()
+        {
+            EnfermeriaDAL.guardarNota(this);
         }
         public void prepararGlucometriaDT()
         {
@@ -80,21 +96,60 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
             List<string> lista = new List<string>();
             lista.Add(Convert.ToString(idOrdenMedica));
             GeneralC.llenarTabla(Sentencias.CARGAR_PROCEDIMIENTOS_ENFERMERIA, lista, dtProcedimientos);
+            if (dtProcedimientos.Rows.Count > 0)
+            {
+                procedimientoAprobado = true;
+            }
         }
         public void cargarInsumos()
-        {
-           
+        {          
             List<string> lista = new List<string>();
             lista.Add(Convert.ToString(idInsumo));
-            GeneralC.llenarTabla(Sentencias.CARGAR_INSUMOS_ENFERMERIA, lista, dtInsumos);
+            lista.Add(Convert.ToString(ConstanteGeneral.ENFERMERIA_INSUMOS));
+           
+            dsInsumos = GeneralC.llenarDataset(Sentencias.CARGAR_INSUMOS_ENFERMERIA, lista);
+            DataTableCollection dt = dsInsumos.Tables;
+            if (dt["table"].Rows.Count > 0)
+            {
+                fechaInsumo = dt["table"].Rows[0].Field<DateTime>("fecha");
+                insumoAprovado = true;
+            }
+            if (dt["table1"].Rows.Count > 0)
+            {
+                dt["table1"].AcceptChanges();
+                dtInsumos = dt["table1"].Copy();
+                valorDefecto();
+            }
+        }
+      public void valorDefecto()
+        {
+            dtInsumos.Columns["Cantidad"].DefaultValue = 0;
+        }
+        public void cargarNotas()
+        {
+            List<string> lista = new List<string>();
+            lista.Add(Convert.ToString(Auditoria));
+            lista.Add(Convert.ToString(idNota));
+            lista.Add(Convert.ToString(ConstanteGeneral.ENFERMERIA_INSUMOS));
+            GeneralC.llenarTabla(Sentencias.CARGAR_NOTA_ENFERMERIA, lista, dtNotas);
+            if (dtNotas.Rows.Count > 0)
+            {
+                nota = dtNotas.Rows[0].Field<String>("nota");
+                fechaNota= dtNotas.Rows[0].Field<DateTime>("fecha");
+                notaAprobado = true;
+            }
         }
         public void cargarGlucometria()
         {
             List<string> lista = new List<string>();
+            lista.Add(Convert.ToString(Auditoria));
             lista.Add(Convert.ToString(idOrdenMedica));
-            lista.Add(ConstanteGeneral.CODIGO_PROCEDIMIENTO_GLUCOMETRIA);
-            lista.Add(ConstanteGeneral.CODIGO_PROCEDIMIENTO_GLUCOMETRIA_2);
+         
             GeneralC.llenarTabla(Sentencias.CARGAR_GLUCOMETRIAS_ENFERMERIA, lista, dtGlucometria);
+            if (dtGlucometria.Rows.Count >0)
+            {
+                glucometriaAprobado = true;
+            }
         }
     }
 }

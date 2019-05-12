@@ -68,7 +68,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         public void buscarInsumos()
         {
             List<string> parametros = new List<string>();
-            parametros.Add(ConstanteGeneral.ENFERMERIA_INSUMOS);
             GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_INSUMOS_ENFERMERIA,
                                                parametros,
                                                new GeneralC.cargarInfoFila(cargarInsumos),

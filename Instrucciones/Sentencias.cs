@@ -147,6 +147,9 @@ namespace Galactus
         public const String BUSCAR_ORDEN_MEDICA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaOrdenMedicaBuscar";
         public const String CARGAR_PROCEDIMIENTOS_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaProcedimientosCargar";
         public const String BUSCAR_ORDEN_MEDICA_GENERAL = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaProcedimientoOrdenMedicaBuscar";
+        public const String CREAR_NOTA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaNotaCrear";
+        public const String BUSCAR_NOTA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaNotaBuscar";
+        public const String CARGAR_NOTA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaNotaCargar";
         #endregion
     }
 }
