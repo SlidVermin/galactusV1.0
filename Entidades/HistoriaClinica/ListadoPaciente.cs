@@ -13,6 +13,7 @@ namespace Galactus.Entidades.HistoriaClinica
     {
       public  DataTable dtPaciente = new DataTable();
         public String idMenu { get; set; }
+        public bool auditoria { get; set; }
         public int idEntorno { get; set; }
         public int idArea { get; set; }
         public int idEstadoAtencion { get; set; }
@@ -20,7 +21,9 @@ namespace Galactus.Entidades.HistoriaClinica
      
         public void listarPacientes()
         {
+            auditoria = false;
             List<String> param = new List<string>();
+            param.Add(Convert.ToString(auditoria));
             param.Add(Convert.ToString(idArea));
             param.Add(Convert.ToString(idEntorno));
             param.Add(Convert.ToString(idEstadoAtencion));

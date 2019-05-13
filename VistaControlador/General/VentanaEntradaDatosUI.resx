@@ -117,7 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="tstMenuPatron.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="tstMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tsBtGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADJSURBVDhPnZJBDoQgDEVx5xHgRO71GJhwA3Tv/dSzoKGT
+        3wSmak0mQ2ICtK//12Loz2U0LueslsN9iV1AGdDI4zj4GnmqogaFEMh7rytu20b7vtdgKQDIWkuIl1UV
+        IT+OIyes61otSUj2frGKHvq+J+ccw2+Q2uN5ngy3bfuwJ3uvisZ8xaGMHyF7AiRzOBvSTdMQgLcZppSe
+        IGDY67qOpmniL8ZY9zgjNgzDc46ouCxLheZ5voCIlQfAtu/DLlalZW3/81u99/4BXUW8Cb8d/YAAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="tsBtCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF9SURBVDhPhVG7igJBEBwDwVjwKxQEU0GMDI1EBDHwGzQT
+        FRH2B4QVBb9CMBLEXzDzlZkqivhaXeuuWnpuL7nrYGd6uqu7qta8329ovF4vuXqeJydz1n3fl1PrrBl+
+        Ho+HBfOy2WzQ6/XQbrfR7/exWq0s6Pl8ymCjIE48Ho+oVCqIRqMolUpwHEfyWCwm5+FwsAuMUuWUTCaD
+        fD6P/X4vDY1GQyjudjsUi0XkcjmcTiepCdXb7YbRaIRUKvVbh5GyxPl8RjKZxHA4/AApnJFOpzEej20j
+        3803MKh/NpshHo9/gNTVarWkqV6vC011NRQKSa1Wq2E+n+N6vYJvdNfQJfKPRCJyqub7/Y5Op4Nms4lu
+        t4vpdCp0w+Gw9IiI5XIpTm63W3CQBumqFDZPJhMkEokPVd2wWCzkQYHBn833y+Ui5g0Gg5+NdFVBukFz
+        mkNQoVBANpuVwcyt30GKyoKGVKtV0V8ul0Wjxr9A13WxXq8tgBdrzl9Ug1pJUeMLJR6fg/LdXxcAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
 </root>

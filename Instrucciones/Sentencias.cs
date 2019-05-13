@@ -126,7 +126,9 @@ namespace Galactus
         public const string ORDEN_CLINICA_CARGAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspOrdenMedicaCargar]";
         public const string ORDEN_CLINICA_ANULAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspOrdenMedicaAnular]";
 
-        public const string ORDEN_CLINICA_BUSCAR_PROCEDIMIENTOS= ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspOrdenMedicaBuscarProcedimientos]";
+        public const string ORDEN_CLINICA_BUSCAR_PROCEDIMIENTOS= ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspListaCUPSBuscar]";
+        public const string ORDEN_CLINICA_BUSCAR_ESTANCIAS = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspListaCUPSEstanciaBuscar]";
+        
 
         public const String CREAR_INGRESO_CLINICO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspIngresoAdultoCrear";
         public const String CARGAR_DIAGNOSTICO_INGRESO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspIngresoAdultoDiagnosticoCargar";
@@ -147,6 +149,8 @@ namespace Galactus
         public const String BUSCAR_ORDEN_MEDICA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaOrdenMedicaBuscar";
         public const String CARGAR_PROCEDIMIENTOS_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaProcedimientosCargar";
         public const String BUSCAR_ORDEN_MEDICA_GENERAL = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaProcedimientoOrdenMedicaBuscar";
+        public const String CARGAR_ESTANCIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEstanciaCargar";
+        public const String CREAR_ESTANCIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEstanciaCrear";        
         public const String CREAR_NOTA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaNotaCrear";
         public const String BUSCAR_NOTA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaNotaBuscar";
         public const String CARGAR_NOTA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaNotaCargar";

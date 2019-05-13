@@ -1,4 +1,5 @@
 ﻿
+using Galactus.Util;
 using Galactus.Util.Constantes;
 using Galactus.Util.Mensajes;
 using Galactus.VistaControlador.General;
@@ -135,6 +136,14 @@ namespace Galactus
             }
             return dt;
         }
+        public static bool valorExiste(string nombreColumnaDT, string valor, DataTable dtOrigen) {
+            if (dtOrigen.Select(nombreColumnaDT + "='" + valor + "'").Count() > 0)
+            {
+                Mensajes.mensajeAdvertencia(Mensajes.VALOR_EXISTENTE);
+                return true;
+            }
+            return false;
+    }
         public static void cargarUbicacionGeografica(DataTable dtUbicaciones,
                                                      String idMunicipio,
                                                      ref ComboBox comboPais,
@@ -429,6 +438,23 @@ namespace Galactus
         {
             return text.Replace("'", "");
         }
+        public static bool validarDetalleVacio(DataTable dtOrigen, string nombreColumna, bool quitarUltimaFila)
+        {
+            string filtro = string.Concat("[", nombreColumna, "]='' or [", nombreColumna, "] is null");
+            DataView trasformador = new DataView(dtOrigen, filtro, "", DataViewRowState.CurrentRows);
+            DataTable dtDetalle = new DataTable();
+            dtDetalle = trasformador.ToTable("tabla", true, nombreColumna);
+            if (quitarUltimaFila) {
+                dtDetalle.Rows.RemoveAt(dtDetalle.Rows.Count - 1); 
+            }
+            if (dtDetalle.Select().Count() > 0) {
+                Mensajes.mensajePorDefectoFaltaInformacion();
+                return false;
+            }else
+            {
+                return true;
+            }
+        }
 
         public static void agregarRegistroDatagridView(subMetodo metodo,
                                                        subMetodo verificarFila,
@@ -510,6 +536,27 @@ namespace Galactus
             formBusqueda.metodoPorFila = metodo;
             formBusqueda.Text = Titulo;
             formBusqueda.ShowDialog();
+        }
+        public static void abrirVentanaEntradaDatos(ref DataGridView dgv,
+                                      string nombreTituloColumna,
+                                      string nombreColumnaDescripcion,
+                                      bool habilitarEscrito)
+        {
+            string nombreColumnaDgv;
+            nombreColumnaDgv = dgv.Columns[dgv.CurrentCell.ColumnIndex].HeaderText.ToString();
+            if (nombreTituloColumna == nombreColumnaDgv &&
+                dgv.CurrentCell.RowIndex >= 0 &&
+                !string.IsNullOrEmpty(dgv.Rows[dgv.CurrentCell.RowIndex].Cells[nombreColumnaDescripcion].Value.ToString()))
+            {
+                VentanaEntradaDatos.modificarTexto(nombreTituloColumna,
+                                              ref dgv,
+                                              true,
+                                              true,
+                                              habilitarEscrito);
+                dgv.EndEdit();
+                ((DataTable)dgv.DataSource).AcceptChanges();
+
+            }
         }
         public static void listarDocumentosGenerales(string query,
                                                      List<string> parametros,

@@ -43,7 +43,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             OrdenClinica = new OrdenMedicaUI(idAtencion);
             EvolucionMedica = new EvolucionMedicaUI(idAtencion);
             egreso = new EgresoUI (idAtencion);
-            estancia = new EstanciaUI(idAtencion);
+            estancia = new EstanciaUI(idAtencion,false);
             remision = new RemisionUI(idAtencion);
             GeneralC.cargarFormularioEnPestana(tpIngresoClinico, ingreso);
             GeneralC.cargarFormularioEnPestana(tpOrdenMedica, OrdenClinica);

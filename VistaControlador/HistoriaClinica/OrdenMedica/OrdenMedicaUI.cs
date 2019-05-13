@@ -148,7 +148,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 
             if (ordenClinica.procedimiento.tblProcedimientos.Select("Cantidad = 0").Count() > 1)
             {
-                Mensajes.mensajeFaltaInformacion("Debe colocar la cantidad correcta a cada procedimiento!");
+                Mensajes.mensajeAdvertencia(Mensajes.CANTIDAD_INVALIDA);
                 return false;
             }
             else

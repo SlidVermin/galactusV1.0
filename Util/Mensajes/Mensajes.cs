@@ -17,7 +17,9 @@ namespace Galactus.Util.Mensajes
         public const string SALIR_FORM = "¿ Desea salir ?";
         public const string CONFIRMACION_GUARDADO = "Registro Guardado !";
         public const string CONFIRMACION_ANULADO = "Registro anulado !";
-
+        public const string INFORMACION_REQUERIA = "Falta información !";
+        public const string VALOR_EXISTENTE = "Este valor ya existe !";
+        public const string CANTIDAD_INVALIDA = "Debe colocar una cantidad válida !";
 
         #region Titulos
         public const string BUSQUEDA_BODEGA = "Busqueda de Bodega";
@@ -36,24 +38,42 @@ namespace Galactus.Util.Mensajes
         public const string BUSCAR_EVOLUCION = "Busqueda de evoluciones medicas";
         public const string BUSCAR_ORDEN = "Busqueda de orden medicas";
         public const string BUQEDA_INSUMOS = "Busqueda insumos";
+
         #region "Historia Clinica"
         public const string BUSQUEDA_ORDENES_MEDICAS = "Busqueda Ordenes";
         public const string BUSQUEDA_PROCEDIMIENTOS = "Busqueda procedimientos";
+        public const string BUSQUEDA_ESTANCIAS = "Busqueda estancias";
         #endregion
 
 
         #endregion
-        public static void mensajeFaltaInformacion(string mensaje)
+        public static void mensajeAdvertencia(string mensaje)
         {
             MessageBox.Show(mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
+        public static void mensajeInformacion(string mensaje)
+        {
+            MessageBox.Show(mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        public static void mensajePorDefectoFaltaInformacion()
+        {
+            MessageBox.Show(INFORMACION_REQUERIA, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+        public static void mensajeError(Exception  ex)
+        {
+            MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error );
+        }
+        public static bool preguntaSiNo(string msgPregunta)
+        {
+            return MessageBox.Show(msgPregunta, NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+        }
         public static bool preguntaGuardar()
         {
-            return MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+            return preguntaSiNo(GUARDAR_FORM);
         }
         public static bool preguntaAnular()
         {
-            return MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+            return preguntaSiNo(ANULAR_FORM);
         }
     }
 }

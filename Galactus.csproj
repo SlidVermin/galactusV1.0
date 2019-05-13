@@ -79,6 +79,7 @@
     <Compile Include="Entidades\General\Busqueda.cs" />
     <Compile Include="Entidades\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedico.cs" />
     <Compile Include="Entidades\HistoriaClinica\Enfermeria\EnfermeriaClinica.cs" />
+    <Compile Include="Entidades\HistoriaClinica\Estancia.cs" />
     <Compile Include="Entidades\HistoriaClinica\Evolucion\Evolucion.cs" />
     <Compile Include="Entidades\HistoriaClinica\Fisioterapeuta\Fisioterapeutas.cs" />
     <Compile Include="Entidades\HistoriaClinica\HistoriaClinicaPaciente.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Modelo\Gestion\ClienteDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Configuracion\ConfiguracionProcedimientoMedicoDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Enfermeria\EnfermeriaDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\EstanciaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\EvolucionMedicaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\IngresoClinicoDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\OrdenClinicaDAL.cs" />
@@ -134,6 +136,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Util\Titulos.cs" />
+    <Compile Include="Util\VentanaEntradaDatos.cs" />
     <Compile Include="VistaControlador\Admision\AdmisionUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +292,12 @@
     </Compile>
     <Compile Include="VistaControlador\Farmacia\EntregaMedicamentoUI.Designer.cs">
       <DependentUpon>EntregaMedicamentoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\General\VentanaEntradaDatosUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\General\VentanaEntradaDatosUI.Designer.cs">
+      <DependentUpon>VentanaEntradaDatosUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\Gestion\ProveedorUI.cs">
       <SubType>Form</SubType>
@@ -671,6 +680,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Farmacia\EntregaMedicamentoUI.resx">
       <DependentUpon>EntregaMedicamentoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\General\VentanaEntradaDatosUI.resx">
+      <DependentUpon>VentanaEntradaDatosUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Gestion\ContratoUI.resx">
       <DependentUpon>ContratoUI.cs</DependentUpon>
