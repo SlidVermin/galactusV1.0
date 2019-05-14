@@ -24,7 +24,7 @@ namespace Galactus.Modelo.HistoriaClinica.Enfermeria
                     comando.Parameters.Add(new SqlParameter("@Auditoria", SqlDbType.Int)).Value = enfermeria.Auditoria;
                     comando.Parameters.Add(new SqlParameter("@idOrden", SqlDbType.Int)).Value = enfermeria.idInsumo;
                     comando.Parameters.Add(new SqlParameter("@idAtencion", SqlDbType.Int)).Value = enfermeria.idAtencion;
-                    comando.Parameters.Add(new SqlParameter("@Tipo", SqlDbType.NVarChar)).Value = ConstanteGeneral.ENFERMERIA_INSUMOS;
+                    comando.Parameters.Add(new SqlParameter("@Tipo", SqlDbType.NVarChar)).Value = enfermeria.tipo;
                     comando.Parameters.Add(new SqlParameter("@fecha", SqlDbType.DateTime)).Value = enfermeria.fecha;
                     comando.Parameters.Add(new SqlParameter("@idUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
                     comando.Parameters.Add(new SqlParameter("@tblInsumos", SqlDbType.Structured)).Value = enfermeria.dtInsumosCopia;
@@ -35,6 +35,7 @@ namespace Galactus.Modelo.HistoriaClinica.Enfermeria
                 throw ex;
             }
         }
+      
         public static void guardarGlucometria(EnfermeriaClinica enfermeria)
         {
             try
@@ -68,7 +69,7 @@ namespace Galactus.Modelo.HistoriaClinica.Enfermeria
                     comando.Parameters.Add(new SqlParameter("@Auditoria", SqlDbType.Bit)).Value = enfermeria.Auditoria;
                     comando.Parameters.Add(new SqlParameter("@idNota", SqlDbType.Int)).Value = enfermeria.idNota;
                     comando.Parameters.Add(new SqlParameter("@idAtencion", SqlDbType.Int)).Value = enfermeria.idAtencion;
-                    comando.Parameters.Add(new SqlParameter("@TipoNota", SqlDbType.NVarChar)).Value = ConstanteGeneral.ENFERMERIA_INSUMOS;
+                    comando.Parameters.Add(new SqlParameter("@TipoNota", SqlDbType.NVarChar)).Value = enfermeria.tipo;
                     comando.Parameters.Add(new SqlParameter("@fecha", SqlDbType.DateTime)).Value = enfermeria.fechaNota;
                     comando.Parameters.Add(new SqlParameter("@Nota", SqlDbType.NVarChar)).Value = enfermeria.nota;
                     comando.Parameters.Add(new SqlParameter("@idUsuarioOrigen", SqlDbType.Int)).Value = Sesion.IdUsuario;
@@ -80,5 +81,6 @@ namespace Galactus.Modelo.HistoriaClinica.Enfermeria
                 throw ex;
             }
         }
+       
     }
 }

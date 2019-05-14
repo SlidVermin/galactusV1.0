@@ -37,11 +37,10 @@
             this.tstMenu = new System.Windows.Forms.ToolStrip();
             this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsBtModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsBtCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsBtGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsBtCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsBtBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsBtAnular = new System.Windows.Forms.ToolStripButton();
-            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.mtxtFechaEvolucion = new System.Windows.Forms.MaskedTextBox();
             this.tpGlucometrias = new System.Windows.Forms.TabPage();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -107,8 +106,7 @@
             this.tsBtGuardar,
             this.tsBtCancelar,
             this.tsBtBuscar,
-            this.tsBtAnular,
-            this.tstImprimir});
+            this.tsBtAnular});
             this.tstMenu.Location = new System.Drawing.Point(0, 320);
             this.tstMenu.MaximumSize = new System.Drawing.Size(1095, 25);
             this.tstMenu.MinimumSize = new System.Drawing.Size(1095, 25);
@@ -139,17 +137,6 @@
             this.tsBtModificar.Text = "Modificar";
             this.tsBtModificar.Click += new System.EventHandler(this.tsBtModificar_Click);
             // 
-            // tsBtCancelar
-            // 
-            this.tsBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsBtCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsBtCancelar.Image")));
-            this.tsBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsBtCancelar.Name = "tsBtCancelar";
-            this.tsBtCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsBtCancelar.Text = "Cancelar";
-            this.tsBtCancelar.Click += new System.EventHandler(this.tsBtCancelar_Click);
-            // 
             // tsBtGuardar
             // 
             this.tsBtGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -160,6 +147,17 @@
             this.tsBtGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsBtGuardar.Text = "Guardar";
             this.tsBtGuardar.Click += new System.EventHandler(this.tsBtGuardar_Click);
+            // 
+            // tsBtCancelar
+            // 
+            this.tsBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsBtCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsBtCancelar.Image")));
+            this.tsBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsBtCancelar.Name = "tsBtCancelar";
+            this.tsBtCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsBtCancelar.Text = "Cancelar";
+            this.tsBtCancelar.Click += new System.EventHandler(this.tsBtCancelar_Click);
             // 
             // tsBtBuscar
             // 
@@ -181,16 +179,6 @@
             this.tsBtAnular.Name = "tsBtAnular";
             this.tsBtAnular.Size = new System.Drawing.Size(62, 22);
             this.tsBtAnular.Text = "Anular";
-            // 
-            // tstImprimir
-            // 
-            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
-            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstImprimir.Name = "tstImprimir";
-            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
-            this.tstImprimir.Text = "Imprimir";
-            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // mtxtFechaEvolucion
             // 
@@ -238,6 +226,7 @@
             this.tcEnfermeria.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tcEnfermeria.TabIndex = 64;
             this.tcEnfermeria.SelectedIndexChanged += new System.EventHandler(this.tcEnfermeria_SelectedIndexChanged);
+            this.tcEnfermeria.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tcEnfermeria_Selecting);
             // 
             // tpInsumos
             // 
@@ -335,7 +324,6 @@
         private Util.Controles.TabControlGalactus tcEnfermeria;
         private System.Windows.Forms.TabPage tpGlucometrias;
         private System.Windows.Forms.TabPage tpGlucometria;
-        private System.Windows.Forms.ToolStripButton tstImprimir;
         private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

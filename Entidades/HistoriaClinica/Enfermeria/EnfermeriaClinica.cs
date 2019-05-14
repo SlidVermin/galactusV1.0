@@ -16,6 +16,7 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
         public DataTable dtGlucometria = new DataTable();
         public DataTable  dtInsumosCopia = new DataTable();
         public int idOrdenMedica { set; get; }
+        public String tipo { set; get; }
         public int idInsumo { set; get; }
         public int idAtencion { set; get; }
         public DateTime fecha { set; get; }
@@ -38,7 +39,7 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
         {
             dtInsumos = new DataTable();
             dtInsumos.Columns.Add("Id", typeof(int));
-            dtInsumos.Columns.Add("Código", typeof(int));
+            dtInsumos.Columns.Add("Código", typeof(String));
             dtInsumos.Columns.Add("Descripcion", typeof(String));
             dtInsumos.Columns.Add("Cantidad", typeof(String));
             dtInsumos.Columns["Cantidad"].DefaultValue = 0;
@@ -59,22 +60,31 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
         {
             EnfermeriaDAL.guardarNota(this);
         }
+       public void columnasGlucometria()
+        {
+            dtGlucometriaCopia.Columns.Add("Hora", typeof(TimeSpan));
+            dtGlucometriaCopia.Columns.Add("Glicemia", typeof(String));
+            dtGlucometriaCopia.Columns.Add("Insulina", typeof(String));
+            dtGlucometriaCopia.Columns.Add("Usuario", typeof(int));
+        }
         public void prepararGlucometriaDT()
         {
+            DataTable dt = new DataTable();
             dtGlucometria.AcceptChanges();
-            dtGlucometriaCopia = dtGlucometria.Copy();
-            dtGlucometriaCopia.Columns.Remove("Código");
-            dtGlucometriaCopia.Columns.Remove("Descripcion");
-            dtGlucometriaCopia.Columns.Remove("Responsable");
-
-            for (int i = 0; i < dtGlucometriaCopia.Rows.Count ; i++)
+            dt = dtGlucometria.Copy();
+            dt.Columns.Remove("Código");
+            dt.Columns.Remove("Id");
+            dt.Columns.Remove("Descripcion");
+            dt.Columns.Remove("Responsable");
+            dtGlucometriaCopia.Clear();
+            dtGlucometriaCopia.Reset();
+            columnasGlucometria();
+            for (int i = 0; i < dt.Rows.Count ; i++)
             {
-                if(dtGlucometriaCopia.Rows[i].Field<String>("Glicemia").ToString() != String.Empty)
+                if(dt.Rows[i].Field<String>("Glicemia").ToString() != String.Empty)
                 {
-                    dtGlucometriaCopia.Rows[i]["Usuario"] = Sesion.IdUsuario;
-                }else
-                {
-                    dtGlucometriaCopia.Rows.RemoveAt(dtGlucometriaCopia.Rows.Count -1);
+                    dt.Rows[i]["Usuario"] = Sesion.IdUsuario;
+                    dtGlucometriaCopia.ImportRow(dt.Rows[i]);
                 }
             }
 
@@ -84,6 +94,7 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
             dtInsumos.AcceptChanges();
             dtInsumosCopia = dtInsumos.Copy();
             dtInsumosCopia.Columns.Remove("Descripcion");
+            dtInsumosCopia.Columns.Remove("Código");
             if (dtInsumosCopia.Rows.Count > 0)
             {
                 dtInsumosCopia.Rows.RemoveAt(dtInsumosCopia.Rows.Count - 1);
@@ -93,7 +104,6 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
 
         public void cargarProcedimientos()
         {
-            dtInsumos = new DataTable();
             List<string> lista = new List<string>();
             lista.Add(Convert.ToString(Auditoria));
             lista.Add(Convert.ToString(idOrdenMedica));
@@ -107,7 +117,7 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
         {          
             List<string> lista = new List<string>();
             lista.Add(Convert.ToString(idInsumo));
-            lista.Add(Convert.ToString(ConstanteGeneral.ENFERMERIA_INSUMOS));
+            lista.Add(Convert.ToString(tipo));
            
             dsInsumos = GeneralC.llenarDataset(Sentencias.CARGAR_INSUMOS_ENFERMERIA, lista);
             DataTableCollection dt = dsInsumos.Tables;
@@ -132,7 +142,7 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
             List<string> lista = new List<string>();
             lista.Add(Convert.ToString(Auditoria));
             lista.Add(Convert.ToString(idNota));
-            lista.Add(Convert.ToString(ConstanteGeneral.ENFERMERIA_INSUMOS));
+            lista.Add(Convert.ToString(tipo));
             GeneralC.llenarTabla(Sentencias.CARGAR_NOTA_ENFERMERIA, lista, dtNotas);
             if (dtNotas.Rows.Count > 0)
             {

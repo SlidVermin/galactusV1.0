@@ -75,7 +75,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         }
         public void cargarInsumos(DataRow filas)
         {
-            dgvInsumos.Rows[dgvInsumos.CurrentCell.RowIndex].Cells["dgCodigo"].Value = filas.Field<int>("Código");
+            dgvInsumos.Rows[dgvInsumos.CurrentCell.RowIndex].Cells["dgId"].Value = filas.Field<int>("Id");
+            dgvInsumos.Rows[dgvInsumos.CurrentCell.RowIndex].Cells["dgCodigo"].Value = filas.Field<String>("Código");
             dgvInsumos.Rows[dgvInsumos.CurrentCell.RowIndex].Cells["dgDescripcion"].Value = filas.Field<String>("Descripción");
 
         }

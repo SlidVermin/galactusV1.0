@@ -31,25 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FisioterapiaUI));
             this.tstPropiedadesOrdenMedica = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.txtcodigoOrdenMedica = new System.Windows.Forms.ToolStripTextBox();
+            this.txtCodigo = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.tstMenu = new System.Windows.Forms.ToolStrip();
             this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsBtModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsBtCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsBtGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsBtCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsBtBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsBtAnular = new System.Windows.Forms.ToolStripButton();
-            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
-            this.tcEnfermeria = new Galactus.Util.Controles.TabControlGalactus();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.tcFisio = new Galactus.Util.Controles.TabControlGalactus();
             this.tpInsumos = new System.Windows.Forms.TabPage();
             this.tpNotas = new System.Windows.Forms.TabPage();
             this.tpOxigeno = new System.Windows.Forms.TabPage();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.tstPropiedadesOrdenMedica.SuspendLayout();
             this.tstMenu.SuspendLayout();
-            this.tcEnfermeria.SuspendLayout();
+            this.tcFisio.SuspendLayout();
             this.SuspendLayout();
             // 
             // tstPropiedadesOrdenMedica
@@ -57,7 +56,7 @@
             this.tstPropiedadesOrdenMedica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tstPropiedadesOrdenMedica.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.txtcodigoOrdenMedica,
+            this.txtCodigo,
             this.toolStripSeparator1,
             this.toolStripLabel2});
             this.tstPropiedadesOrdenMedica.Location = new System.Drawing.Point(0, 0);
@@ -74,13 +73,13 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(49, 22);
             this.toolStripLabel1.Text = "Código:";
             // 
-            // txtcodigoOrdenMedica
+            // txtCodigo
             // 
-            this.txtcodigoOrdenMedica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtcodigoOrdenMedica.Name = "txtcodigoOrdenMedica";
-            this.txtcodigoOrdenMedica.ReadOnly = true;
-            this.txtcodigoOrdenMedica.Size = new System.Drawing.Size(100, 25);
-            this.txtcodigoOrdenMedica.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
+            this.txtCodigo.Size = new System.Drawing.Size(100, 25);
+            this.txtCodigo.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // toolStripSeparator1
             // 
@@ -100,11 +99,10 @@
             this.tstMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsBtNuevo,
             this.tsBtModificar,
-            this.tsBtCancelar,
             this.tsBtGuardar,
+            this.tsBtCancelar,
             this.tsBtBuscar,
-            this.tsBtAnular,
-            this.tstImprimir});
+            this.tsBtAnular});
             this.tstMenu.Location = new System.Drawing.Point(0, 320);
             this.tstMenu.MaximumSize = new System.Drawing.Size(1095, 25);
             this.tstMenu.MinimumSize = new System.Drawing.Size(1095, 25);
@@ -133,16 +131,7 @@
             this.tsBtModificar.Name = "tsBtModificar";
             this.tsBtModificar.Size = new System.Drawing.Size(78, 22);
             this.tsBtModificar.Text = "Modificar";
-            // 
-            // tsBtCancelar
-            // 
-            this.tsBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsBtCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsBtCancelar.Image")));
-            this.tsBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsBtCancelar.Name = "tsBtCancelar";
-            this.tsBtCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsBtCancelar.Text = "Cancelar";
+            this.tsBtModificar.Click += new System.EventHandler(this.tsBtModificar_Click);
             // 
             // tsBtGuardar
             // 
@@ -153,6 +142,18 @@
             this.tsBtGuardar.Name = "tsBtGuardar";
             this.tsBtGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsBtGuardar.Text = "Guardar";
+            this.tsBtGuardar.Click += new System.EventHandler(this.tsBtGuardar_Click);
+            // 
+            // tsBtCancelar
+            // 
+            this.tsBtCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsBtCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsBtCancelar.Image")));
+            this.tsBtCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsBtCancelar.Name = "tsBtCancelar";
+            this.tsBtCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsBtCancelar.Text = "Cancelar";
+            this.tsBtCancelar.Click += new System.EventHandler(this.tsBtCancelar_Click);
             // 
             // tsBtBuscar
             // 
@@ -163,6 +164,7 @@
             this.tsBtBuscar.Name = "tsBtBuscar";
             this.tsBtBuscar.Size = new System.Drawing.Size(62, 22);
             this.tsBtBuscar.Text = "Buscar";
+            this.tsBtBuscar.Click += new System.EventHandler(this.tsBtBuscar_Click);
             // 
             // tsBtAnular
             // 
@@ -174,30 +176,32 @@
             this.tsBtAnular.Size = new System.Drawing.Size(62, 22);
             this.tsBtAnular.Text = "Anular";
             // 
-            // tstImprimir
+            // dtpFecha
             // 
-            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
-            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstImprimir.Name = "tstImprimir";
-            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
-            this.tstImprimir.Text = "Imprimir";
-            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.dtpFecha.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(213, 1);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(137, 21);
+            this.dtpFecha.TabIndex = 70;
             // 
-            // tcEnfermeria
+            // tcFisio
             // 
-            this.tcEnfermeria.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tcEnfermeria.Controls.Add(this.tpInsumos);
-            this.tcEnfermeria.Controls.Add(this.tpNotas);
-            this.tcEnfermeria.Controls.Add(this.tpOxigeno);
-            this.tcEnfermeria.ItemSize = new System.Drawing.Size(30, 120);
-            this.tcEnfermeria.Location = new System.Drawing.Point(4, 28);
-            this.tcEnfermeria.Multiline = true;
-            this.tcEnfermeria.Name = "tcEnfermeria";
-            this.tcEnfermeria.SelectedIndex = 0;
-            this.tcEnfermeria.Size = new System.Drawing.Size(1082, 289);
-            this.tcEnfermeria.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tcEnfermeria.TabIndex = 69;
+            this.tcFisio.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tcFisio.Controls.Add(this.tpInsumos);
+            this.tcFisio.Controls.Add(this.tpNotas);
+            this.tcFisio.Controls.Add(this.tpOxigeno);
+            this.tcFisio.ItemSize = new System.Drawing.Size(30, 120);
+            this.tcFisio.Location = new System.Drawing.Point(4, 28);
+            this.tcFisio.Multiline = true;
+            this.tcFisio.Name = "tcFisio";
+            this.tcFisio.SelectedIndex = 0;
+            this.tcFisio.Size = new System.Drawing.Size(1082, 289);
+            this.tcFisio.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tcFisio.TabIndex = 69;
+            this.tcFisio.SelectedIndexChanged += new System.EventHandler(this.tcEnfermeria_SelectedIndexChanged);
+            this.tcFisio.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tcFisio_Selecting);
             // 
             // tpInsumos
             // 
@@ -228,23 +232,13 @@
             this.tpOxigeno.TabIndex = 3;
             this.tpOxigeno.Text = "Hoja de oxigeno";
             // 
-            // dtpFecha
-            // 
-            this.dtpFecha.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtpFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha.Location = new System.Drawing.Point(213, 1);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(137, 21);
-            this.dtpFecha.TabIndex = 70;
-            // 
             // FisioterapiaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1090, 345);
             this.Controls.Add(this.dtpFecha);
-            this.Controls.Add(this.tcEnfermeria);
+            this.Controls.Add(this.tcFisio);
             this.Controls.Add(this.tstPropiedadesOrdenMedica);
             this.Controls.Add(this.tstMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -257,7 +251,7 @@
             this.tstPropiedadesOrdenMedica.PerformLayout();
             this.tstMenu.ResumeLayout(false);
             this.tstMenu.PerformLayout();
-            this.tcEnfermeria.ResumeLayout(false);
+            this.tcFisio.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,7 +261,7 @@
 
         private System.Windows.Forms.ToolStrip tstPropiedadesOrdenMedica;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripTextBox txtcodigoOrdenMedica;
+        private System.Windows.Forms.ToolStripTextBox txtCodigo;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStrip tstMenu;
@@ -277,11 +271,10 @@
         private System.Windows.Forms.ToolStripButton tsBtBuscar;
         private System.Windows.Forms.ToolStripButton tsBtAnular;
         private System.Windows.Forms.ToolStripButton tsBtCancelar;
-        private Util.Controles.TabControlGalactus tcEnfermeria;
+        private Util.Controles.TabControlGalactus tcFisio;
         private System.Windows.Forms.TabPage tpInsumos;
         private System.Windows.Forms.TabPage tpNotas;
         private System.Windows.Forms.TabPage tpOxigeno;
-        private System.Windows.Forms.ToolStripButton tstImprimir;
         private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

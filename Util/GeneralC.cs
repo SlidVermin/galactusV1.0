@@ -438,7 +438,31 @@ namespace Galactus
                     habilitarControles(item);
             }
         }
+        public static void habilitarControlesTabPage(TabPage elemento)
+        {
+            foreach (Control item in elemento.Controls)
+            {
+                if ((((item is TextBox || item is ToolStripTextBox) && !item.Name.Contains("txtB")) || (item is RichTextBox) || (item is MaskedTextBox) || (item is DataGridView)) && !(item.Name.ToString().ToLower().Contains(ConstanteGeneral.TEXTBOX_CODIGO)))
+                    item.Enabled = true;
+                else if ((item is CheckBox) || (item is RadioButton) || (item is ComboBox) || (item is Button) || (item is TreeView) || (item is DateTimePicker) || (item is NumericUpDown))
+                    item.Enabled = true;
+                else if ((item is GroupBox) || (item.HasChildren))
+                    habilitarControles(item);
+            }
+        }
         public static void deshabilitarControles(Control elemento)
+        {
+            foreach (Control item in elemento.Controls)
+            {
+                if ((item is TextBox) & item.Name != "txtFiltro" || (item is RichTextBox) || (item is MaskedTextBox) || (item is DataGridView))
+                    item.Enabled = false;
+                else if ((item is CheckBox) || (item is RadioButton) || (item is ComboBox) || ((item is Button) & !item.Name.ToString().ToLower().Contains(ConstanteGeneral.BOTON_OPCION)) || (item is TreeView) || (item is DateTimePicker) || (item is NumericUpDown))
+                    item.Enabled = false;
+                else if ((item is GroupBox) || (item.HasChildren))
+                    deshabilitarControles(item);
+            }
+        }
+        public static void deshabilitarControlesTabPage(TabPage elemento)
         {
             foreach (Control item in elemento.Controls)
             {
