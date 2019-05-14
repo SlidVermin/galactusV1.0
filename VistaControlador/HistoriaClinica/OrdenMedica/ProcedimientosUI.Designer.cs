@@ -32,25 +32,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
-            this.PanelJustificacionN = new System.Windows.Forms.Panel();
-            this.txtJustificacion = new System.Windows.Forms.TextBox();
             this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Agregar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.anularProcedimiento = new System.Windows.Forms.DataGridViewImageColumn();
+            this.cups = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.justificacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Agregar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.anularProcedimiento = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.GroupBox17.SuspendLayout();
-            this.PanelJustificacionN.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.GroupBox17);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -60,7 +58,6 @@
             // 
             // GroupBox17
             // 
-            this.GroupBox17.Controls.Add(this.PanelJustificacionN);
             this.GroupBox17.Controls.Add(this.dgvProcedimientos);
             this.GroupBox17.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GroupBox17.ForeColor = System.Drawing.Color.Black;
@@ -70,27 +67,6 @@
             this.GroupBox17.TabIndex = 10092;
             this.GroupBox17.TabStop = false;
             this.GroupBox17.Text = "Procedimientos";
-            // 
-            // PanelJustificacionN
-            // 
-            this.PanelJustificacionN.BackColor = System.Drawing.Color.OldLace;
-            this.PanelJustificacionN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanelJustificacionN.Controls.Add(this.txtJustificacion);
-            this.PanelJustificacionN.Location = new System.Drawing.Point(346, 21);
-            this.PanelJustificacionN.Name = "PanelJustificacionN";
-            this.PanelJustificacionN.Size = new System.Drawing.Size(464, 204);
-            this.PanelJustificacionN.TabIndex = 10085;
-            this.PanelJustificacionN.Visible = false;
-            // 
-            // txtJustificacion
-            // 
-            this.txtJustificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtJustificacion.Location = new System.Drawing.Point(4, 3);
-            this.txtJustificacion.Multiline = true;
-            this.txtJustificacion.Name = "txtJustificacion";
-            this.txtJustificacion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtJustificacion.Size = new System.Drawing.Size(455, 196);
-            this.txtJustificacion.TabIndex = 10065;
             // 
             // dgvProcedimientos
             // 
@@ -103,11 +79,12 @@
             this.dgvProcedimientos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvProcedimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProcedimientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Agregar,
+            this.anularProcedimiento,
+            this.cups,
             this.descripcion,
             this.cantidad,
-            this.justificacion,
-            this.Agregar,
-            this.anularProcedimiento});
+            this.justificacion});
             this.dgvProcedimientos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvProcedimientos.Location = new System.Drawing.Point(3, 17);
             this.dgvProcedimientos.MultiSelect = false;
@@ -127,6 +104,33 @@
             this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 50;
+            // 
+            // Agregar
+            // 
+            this.Agregar.HeaderText = "Agregar";
+            this.Agregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
+            this.Agregar.Name = "Agregar";
+            this.Agregar.ReadOnly = true;
+            this.Agregar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Agregar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Agregar.Width = 75;
+            // 
+            // anularProcedimiento
+            // 
+            this.anularProcedimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.anularProcedimiento.HeaderText = "Quitar";
+            this.anularProcedimiento.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.anularProcedimiento.Name = "anularProcedimiento";
+            this.anularProcedimiento.ReadOnly = true;
+            this.anularProcedimiento.Width = 50;
+            // 
+            // cups
+            // 
+            this.cups.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.cups.HeaderText = "Código";
+            this.cups.Name = "cups";
+            this.cups.ReadOnly = true;
+            this.cups.Width = 75;
             // 
             // descripcion
             // 
@@ -148,28 +152,11 @@
             // 
             // justificacion
             // 
+            this.justificacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.justificacion.HeaderText = "Justificación";
             this.justificacion.Name = "justificacion";
             this.justificacion.ReadOnly = true;
-            // 
-            // Agregar
-            // 
-            this.Agregar.HeaderText = "Agregar";
-            this.Agregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
-            this.Agregar.Name = "Agregar";
-            this.Agregar.ReadOnly = true;
-            this.Agregar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Agregar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Agregar.Width = 75;
-            // 
-            // anularProcedimiento
-            // 
-            this.anularProcedimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.anularProcedimiento.HeaderText = "Quitar";
-            this.anularProcedimiento.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.anularProcedimiento.Name = "anularProcedimiento";
-            this.anularProcedimiento.ReadOnly = true;
-            this.anularProcedimiento.Width = 50;
+            this.justificacion.Width = 250;
             // 
             // ProcedimientosUI
             // 
@@ -186,8 +173,6 @@
             this.Load += new System.EventHandler(this.ProcedimientosUI_Load);
             this.panel1.ResumeLayout(false);
             this.GroupBox17.ResumeLayout(false);
-            this.PanelJustificacionN.ResumeLayout(false);
-            this.PanelJustificacionN.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).EndInit();
             this.ResumeLayout(false);
 
@@ -199,12 +184,11 @@
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.GroupBox GroupBox17;
         internal System.Windows.Forms.DataGridView dgvProcedimientos;
-        internal System.Windows.Forms.Panel PanelJustificacionN;
-        internal System.Windows.Forms.TextBox txtJustificacion;
+        private System.Windows.Forms.DataGridViewImageColumn Agregar;
+        private System.Windows.Forms.DataGridViewImageColumn anularProcedimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cups;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn justificacion;
-        private System.Windows.Forms.DataGridViewImageColumn Agregar;
-        private System.Windows.Forms.DataGridViewImageColumn anularProcedimiento;
     }
 }

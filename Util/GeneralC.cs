@@ -136,6 +136,30 @@ namespace Galactus
             }
             return dt;
         }
+        public static DataTable copiarTablaCondicional(DataTable dtOrigen, String condicion)
+        {
+            DataTable dtResultado = new DataTable();
+            try
+            {
+
+                dtResultado = dtOrigen.Clone();
+                condicion = condicion.Replace("'%", "'<<>>");
+                condicion = condicion.Replace("%'", "<<>>'");
+                condicion = condicion.Replace("%", "");
+                condicion = condicion.Replace("'<<>>", "'%");
+                condicion = condicion.Replace("<<>>'", "%'");
+                DataRow[] filas = dtOrigen.Select(condicion);
+                foreach (DataRow row in filas)
+                {
+                    dtResultado.ImportRow(row);
+                }
+            }
+            catch (Exception ex)
+            {
+                Mensajes.mensajeError(ex);
+            }
+            return dtResultado;
+        }
         public static bool valorExiste(string nombreColumnaDT, string valor, DataTable dtOrigen) {
             if (dtOrigen.Select(nombreColumnaDT + "='" + valor + "'").Count() > 0)
             {

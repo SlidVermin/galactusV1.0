@@ -33,6 +33,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             if (procedimientos != null)
             {
                 dgvProcedimientos.AutoGenerateColumns = false;
+                dgvProcedimientos.Columns["cups"].DataPropertyName = "cups";
                 dgvProcedimientos.Columns["descripcion"].DataPropertyName = "descripcion";
                 dgvProcedimientos.Columns["cantidad"].DataPropertyName = "cantidad";
                 dgvProcedimientos.Columns["justificacion"].DataPropertyName = "Observacion";
@@ -44,9 +45,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         {
             DataRowCollection filas = procedimientos.tblProcedimientos.Rows;
             int cantidad = filas.Count - 1;
-            filas[cantidad]["idProcedimiento"] = filaResultado.Field<int>("IdProcedimiento");
-            filas[cantidad]["cups"] = filaResultado.Field<string>("Cups");
+            filas[cantidad]["idProcedimiento"] = filaResultado.Field<int>("ID");
+            filas[cantidad]["cups"] = filaResultado.Field<string>("Código");
             filas[cantidad]["descripcion"] = filaResultado.Field<string>("Descripción");
+            filas[cantidad]["cantidad"] = 0;
             filas.Add();
         }
         private void dgvProcedimientos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -69,21 +71,22 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     try
                     {
                         List<string> parametros = new List<string>();
-
+                       
                         DataTable tablaParametros = new DataTable();
                         DataTable tablasSeleccionado = new DataTable();
 
                         tablaParametros.Columns.Add("Parametro", Type.GetType("System.Object"));
                         tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
 
-                        object[] myObjArray = { "@idAtencion", idAtencion };
-                        object[] myObjArray1 = { "@filtro", "" };
+                        object[] myObjArray = { "@pIdAtencion", idAtencion };
+                        object[] myObjArray1 = { "@pFiltro", "" };
 
                         DataView view = new DataView(procedimientos.tblProcedimientos);
 
                         tablasSeleccionado = view.ToTable(true, new string[] { "idProcedimiento" }).Copy();
                         tablasSeleccionado.Columns.Add("valor");
-                        object[] myObjArray2 = { "@tabla", tablasSeleccionado };
+                        tablasSeleccionado.Rows.RemoveAt(tablasSeleccionado.Rows.Count - 1); 
+                        object[] myObjArray2 = { "@pTblSeleccionados", tablasSeleccionado };
 
                         tablaParametros.Rows.Add(myObjArray);
                         tablaParametros.Rows.Add(myObjArray1);

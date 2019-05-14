@@ -11,30 +11,31 @@ using System.Windows.Forms;
 
 namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 {
-    public partial class MedicamentosUI : Form
+    public partial class InfusionImpregnacionUI : Form
     {
         public bool edicion = false;
         public int idAtencion { get; set; }
         public OrdenClinicaMedicamento medicamentos { get; set; }
-        public MedicamentosUI()
+        public InfusionImpregnacionUI()
         {
             InitializeComponent();
         }
 
-        private void MedicamentosUI_Load(object sender, EventArgs e)
+        private void InfusionImpregnacionUI_Load(object sender, EventArgs e)
         {
             inicializarForm();
         }
+
         void inicializarForm()
         {
-            enlazarDgv();
+          
         }
         public void enlazarDgv()
         {
             if (medicamentos != null)
             {
-                dgvOrdenMedicamentos.AutoGenerateColumns = false;
-                dgvOrdenMedicamentos.DataSource = medicamentos.tblMedicamentos;
+                dgvOrdenInfusionImpregnacion.AutoGenerateColumns = false;
+                dgvOrdenInfusionImpregnacion.DataSource = medicamentos.tblInfusionImpregnacion;
             }
         }
     }

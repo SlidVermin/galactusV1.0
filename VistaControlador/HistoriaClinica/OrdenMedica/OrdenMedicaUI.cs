@@ -21,33 +21,44 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
     {
 
         private int idAtencion;
+        private bool auditoria;
         private OrdenClinica ordenClinica = new OrdenClinica();
-        private IndicacionesUI indicaciones = new IndicacionesUI();
-        private ProcedimientosUI procedimientos = new ProcedimientosUI();
-        private MedicamentosUI medicamentos = new MedicamentosUI();
+        private IndicacionesUI indicacionesUI = new IndicacionesUI();
+        private OxigenoUI oxigenoUI = new OxigenoUI();
+        private ProcedimientosUI procedimientosUI = new ProcedimientosUI();
+        private MedicamentosUI medicamentosUI = new MedicamentosUI();
+        private InfusionImpregnacionUI infusionImpregnacionUI = new InfusionImpregnacionUI();
         public int accionOrden;
         #region "Conctrutores"
         public OrdenMedicaUI()
         {
             InitializeComponent();
         }
-        public OrdenMedicaUI(int idAtencion)
+        public OrdenMedicaUI(int idAtencion, bool auditoria)
         {
             InitializeComponent();
             this.idAtencion = idAtencion;
             ordenClinica.idAtencion = idAtencion;
-            indicaciones.indicacion = ordenClinica.indicacion;
-            procedimientos.idAtencion = idAtencion;
-            procedimientos.procedimientos = ordenClinica.procedimiento;
-            medicamentos.medicamentos = ordenClinica.medicamento;
+            ordenClinica.auditoria = auditoria;
+            indicacionesUI.indicacion = ordenClinica.indicacion;
+            procedimientosUI.idAtencion = idAtencion;
+            procedimientosUI.procedimientos = ordenClinica.procedimiento;
+            medicamentosUI.idAtencion = idAtencion;
+            medicamentosUI.medicamentos = ordenClinica.medicamento;
+            infusionImpregnacionUI.idAtencion = idAtencion;
+            infusionImpregnacionUI.medicamentos = ordenClinica.medicamento;
+            oxigenoUI.idAtencion = idAtencion;
+            oxigenoUI.oxigeno = ordenClinica.oxigeno;
         }
         #endregion
 
         private void OrdenMedicaUI_Load(object sender, EventArgs e)
         {
-            GeneralC.cargarFormularioEnPestana(tpIndicaciones, indicaciones);
-            GeneralC.cargarFormularioEnPestana(tbProcedimientos, procedimientos);
-            GeneralC.cargarFormularioEnPestana(tpMedicamentos, medicamentos);
+            GeneralC.cargarFormularioEnPestana(tpIndicaciones, indicacionesUI);
+            GeneralC.cargarFormularioEnPestana(tpOxigeno, oxigenoUI);
+            GeneralC.cargarFormularioEnPestana(tbProcedimientos, procedimientosUI);
+            GeneralC.cargarFormularioEnPestana(tpMedicamentos, medicamentosUI);
+            GeneralC.cargarFormularioEnPestana(tpInfusionImpregnacion, infusionImpregnacionUI);
             GeneralC.posCargadoForm(this, tstMenuOrdenMedica, tsBtNuevo, tsBtBuscar);
         }
         #region "Botones"
@@ -57,21 +68,27 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             GeneralC.formNuevo(this, tstMenuOrdenMedica, tsBtGuardar, tsBtCancelar);
             ordenClinica.nuevaOrden();
             txtBCodigoOrden.ReadOnly = true;
-            procedimientos.enlazarDgv();
-            medicamentos.enlazarDgv();
+            procedimientosUI.enlazarDgv();
+            oxigenoUI.enlazarDgv();
+            medicamentosUI.enlazarDgv();
+            infusionImpregnacionUI.enlazarDgv();
             activarEdicion();           
         }
         void activarEdicion()
         {
-            indicaciones.edicion = true;
-            procedimientos.edicion = true;
-            medicamentos.edicion = true;
+            indicacionesUI.edicion = true;
+            procedimientosUI.edicion = true;
+            oxigenoUI.edicion = true;
+            infusionImpregnacionUI.edicion = true;
+            medicamentosUI.edicion = true;
         }
         void desactivarEdicion()
         {
-            indicaciones.edicion = false;
-            procedimientos.edicion = false;
-            medicamentos.edicion = false;
+            indicacionesUI.edicion = false;
+            procedimientosUI.edicion = false;
+            medicamentosUI.edicion = false;
+            oxigenoUI.edicion = false;
+            infusionImpregnacionUI.edicion = false;
         }
 
         private void tsBtBuscar_Click(object sender, EventArgs e)
@@ -79,6 +96,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             try
             {
                 List<string> parametros = new List<string>();
+                parametros.Add(ordenClinica.auditoria.ToString());
                 parametros.Add(ordenClinica.idAtencion.ToString());
                 parametros.Add(string.Empty);
                 GeneralC.buscarDevuelveFila(Sentencias.ORDEN_CLINICA_BUSCAR,
@@ -146,7 +164,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         bool validarDatos()
         {
 
-            if (ordenClinica.procedimiento.tblProcedimientos.Select("Cantidad = 0").Count() > 1)
+            if (ordenClinica.procedimiento.tblProcedimientos.Select("Cantidad = 0").Count() > 1 ||
+                ordenClinica.medicamento.tblMedicamentos.Select("Dosis = 0").Count() > 1 ||
+                ordenClinica.medicamento.tblInfusionImpregnacion.Select("Dosis = 0").Count() > 1)
             {
                 Mensajes.mensajeAdvertencia(Mensajes.CANTIDAD_INVALIDA);
                 return false;
@@ -166,18 +186,41 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 
                 DataSet tablasResultados = new DataSet();
                 List<string> Parametros = new List<string>();
+                Parametros.Add(ordenClinica.auditoria.ToString());
                 Parametros.Add(ordenClinica.idOrden.ToString());
                 tablasResultados = GeneralC.llenarDataset(Sentencias.ORDEN_CLINICA_CARGAR, Parametros);
                 if (tablasResultados.Tables.Count > 0)
                 {
                     ordenClinica.indicacion.indicacion = tablasResultados.Tables[0].Rows[0].Field<string>(0);
                 }
-                indicaciones.indicacion = ordenClinica.indicacion;
-                indicaciones.visualizarIndicacionCargada();
+                indicacionesUI.indicacion = ordenClinica.indicacion;
+                indicacionesUI.visualizarIndicacionCargada();
 
-                procedimientos.procedimientos.tblProcedimientos.Clear();
-                procedimientos.procedimientos.tblProcedimientos = tablasResultados.Tables["Table1"].Copy();
-                procedimientos.enlazarDgv();
+                oxigenoUI.oxigeno.tblOxigeno.Clear();
+                oxigenoUI.oxigeno.tblOxigeno = tablasResultados.Tables["Table1"].Copy();
+                oxigenoUI.enlazarDgv();
+
+                medicamentosUI.medicamentos.tblMedicamentos.Clear();
+                medicamentosUI.medicamentos.tblMedicamentos = GeneralC.copiarTablaCondicional(tablasResultados.Tables["Table2"].Copy(), "tipoMedicamento='M'");
+                medicamentosUI.medicamentos.tblMedicamentos.Columns.Remove("cc/hora");
+                medicamentosUI.medicamentos.tblMedicamentos.Columns.Remove("idEquivalenciaDisolvente");
+                medicamentosUI.medicamentos.tblMedicamentos.Columns.Remove("Disolvente");
+                medicamentosUI.medicamentos.tblMedicamentos.Columns.Remove("Cantidad");
+                medicamentosUI.medicamentos.tblMedicamentos.Columns.Remove("Tipo");
+                medicamentosUI.medicamentos.tblMedicamentos.Columns.Remove("Acepta disolvente");
+                medicamentosUI.enlazarDgv();
+
+                infusionImpregnacionUI.medicamentos.tblInfusionImpregnacion = GeneralC.copiarTablaCondicional(tablasResultados.Tables["Table2"].Copy(), "tipoMedicamento in ('In','Im')");
+                infusionImpregnacionUI.medicamentos.tblMezcla = tablasResultados.Tables["Table3"].Copy();
+                infusionImpregnacionUI.medicamentos.tblInfusionImpregnacion.Columns.Remove("idViaAdmon");
+                infusionImpregnacionUI.medicamentos.tblInfusionImpregnacion.Columns.Remove("Via admin.");
+                infusionImpregnacionUI.medicamentos.tblInfusionImpregnacion.Columns.Remove("Horario");
+                infusionImpregnacionUI.medicamentos.tblInfusionImpregnacion.Columns.Add("Mezcla");
+                infusionImpregnacionUI.enlazarDgv();
+
+                procedimientosUI.procedimientos.tblProcedimientos.Clear();
+                procedimientosUI.procedimientos.tblProcedimientos = tablasResultados.Tables["Table4"].Copy();
+                procedimientosUI.enlazarDgv();
                 GeneralC.posBuscar(this, tstMenuOrdenMedica, tsBtNuevo, tsBtBuscar, tsBtModificar, tsBtAnular);
             }
         }

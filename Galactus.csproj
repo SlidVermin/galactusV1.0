@@ -88,6 +88,7 @@
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Indicacion\OrdenClinicaIndicacion.cs" />
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Medicamento\OrdenClinicaMedicamento.cs" />
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\OrdenClinica.cs" />
+    <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Oxigeno\OrdenClinicaOxigeno.cs" />
     <Compile Include="Entidades\HistoriaClinica\OrdenMedica\Procedimientos\OrdenClinicaProcedimiento.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\Hemodialisis.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\InformeQuirurgico.cs" />
@@ -491,6 +492,12 @@
     <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\IndicacionesUI.Designer.cs">
       <DependentUpon>IndicacionesUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\InfusionImpregnacionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\InfusionImpregnacionUI.Designer.cs">
+      <DependentUpon>InfusionImpregnacionUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\MedicamentosUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -502,6 +509,12 @@
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\OrdenMedicaUI.Designer.cs">
       <DependentUpon>OrdenMedicaUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\OxigenoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\OxigenoUI.Designer.cs">
+      <DependentUpon>OxigenoUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\OrdenMedica\ProcedimientosUI.cs">
       <SubType>Form</SubType>
@@ -787,11 +800,17 @@
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\IndicacionesUI.resx">
       <DependentUpon>IndicacionesUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\InfusionImpregnacionUI.resx">
+      <DependentUpon>InfusionImpregnacionUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\MedicamentosUI.resx">
       <DependentUpon>MedicamentosUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\OrdenMedicaUI.resx">
       <DependentUpon>OrdenMedicaUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\OxigenoUI.resx">
+      <DependentUpon>OxigenoUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\OrdenMedica\ProcedimientosUI.resx">
       <DependentUpon>ProcedimientosUI.cs</DependentUpon>

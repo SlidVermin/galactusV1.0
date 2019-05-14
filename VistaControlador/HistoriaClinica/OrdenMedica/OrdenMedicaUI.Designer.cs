@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdenMedicaUI));
             this.tstMenuOrdenMedica = new System.Windows.Forms.ToolStrip();
-            this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tsBtModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsBtGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tsBtCancelar = new System.Windows.Forms.ToolStripButton();
-            this.tsBtBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tsBtAnular = new System.Windows.Forms.ToolStripButton();
             this.tstPropiedadesOrdenMedica = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.txtBCodigoOrden = new System.Windows.Forms.ToolStripTextBox();
@@ -45,8 +39,15 @@
             this.tpIndicaciones = new System.Windows.Forms.TabPage();
             this.tbProcedimientos = new System.Windows.Forms.TabPage();
             this.tpMedicamentos = new System.Windows.Forms.TabPage();
-            this.tpAnalisisOrden = new System.Windows.Forms.TabPage();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.tpOxigeno = new System.Windows.Forms.TabPage();
+            this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tsBtModificar = new System.Windows.Forms.ToolStripButton();
+            this.tsBtGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsBtCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tsBtBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tsBtAnular = new System.Windows.Forms.ToolStripButton();
+            this.tpInfusionImpregnacion = new System.Windows.Forms.TabPage();
             this.tstMenuOrdenMedica.SuspendLayout();
             this.tstPropiedadesOrdenMedica.SuspendLayout();
             this.tcOrdenMedica.SuspendLayout();
@@ -70,6 +71,112 @@
             this.tstMenuOrdenMedica.Size = new System.Drawing.Size(1040, 25);
             this.tstMenuOrdenMedica.TabIndex = 57;
             this.tstMenuOrdenMedica.Text = "toolStrip1";
+            // 
+            // tstPropiedadesOrdenMedica
+            // 
+            this.tstPropiedadesOrdenMedica.BackColor = System.Drawing.Color.White;
+            this.tstPropiedadesOrdenMedica.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.txtBCodigoOrden,
+            this.toolStripSeparator1,
+            this.toolStripLabel2});
+            this.tstPropiedadesOrdenMedica.Location = new System.Drawing.Point(0, 0);
+            this.tstPropiedadesOrdenMedica.MaximumSize = new System.Drawing.Size(1040, 25);
+            this.tstPropiedadesOrdenMedica.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstPropiedadesOrdenMedica.Name = "tstPropiedadesOrdenMedica";
+            this.tstPropiedadesOrdenMedica.Size = new System.Drawing.Size(1040, 25);
+            this.tstPropiedadesOrdenMedica.TabIndex = 58;
+            this.tstPropiedadesOrdenMedica.Text = "toolStrip1";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(85, 22);
+            this.toolStripLabel1.Text = "Código Orden:";
+            // 
+            // txtBCodigoOrden
+            // 
+            this.txtBCodigoOrden.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBCodigoOrden.Name = "txtBCodigoOrden";
+            this.txtBCodigoOrden.Size = new System.Drawing.Size(100, 25);
+            this.txtBCodigoOrden.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(77, 22);
+            this.toolStripLabel2.Text = "Fecha Orden:";
+            // 
+            // tcOrdenMedica
+            // 
+            this.tcOrdenMedica.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tcOrdenMedica.Controls.Add(this.tpIndicaciones);
+            this.tcOrdenMedica.Controls.Add(this.tpOxigeno);
+            this.tcOrdenMedica.Controls.Add(this.tbProcedimientos);
+            this.tcOrdenMedica.Controls.Add(this.tpMedicamentos);
+            this.tcOrdenMedica.Controls.Add(this.tpInfusionImpregnacion);
+            this.tcOrdenMedica.ItemSize = new System.Drawing.Size(30, 120);
+            this.tcOrdenMedica.Location = new System.Drawing.Point(2, 28);
+            this.tcOrdenMedica.Multiline = true;
+            this.tcOrdenMedica.Name = "tcOrdenMedica";
+            this.tcOrdenMedica.SelectedIndex = 0;
+            this.tcOrdenMedica.Size = new System.Drawing.Size(1096, 301);
+            this.tcOrdenMedica.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tcOrdenMedica.TabIndex = 56;
+            // 
+            // tpIndicaciones
+            // 
+            this.tpIndicaciones.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpIndicaciones.Location = new System.Drawing.Point(124, 4);
+            this.tpIndicaciones.Name = "tpIndicaciones";
+            this.tpIndicaciones.Padding = new System.Windows.Forms.Padding(3);
+            this.tpIndicaciones.Size = new System.Drawing.Size(968, 293);
+            this.tpIndicaciones.TabIndex = 0;
+            this.tpIndicaciones.Text = "Indicaciones";
+            // 
+            // tbProcedimientos
+            // 
+            this.tbProcedimientos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbProcedimientos.Location = new System.Drawing.Point(124, 4);
+            this.tbProcedimientos.Name = "tbProcedimientos";
+            this.tbProcedimientos.Padding = new System.Windows.Forms.Padding(3);
+            this.tbProcedimientos.Size = new System.Drawing.Size(968, 293);
+            this.tbProcedimientos.TabIndex = 1;
+            this.tbProcedimientos.Text = "Procedimientos";
+            // 
+            // tpMedicamentos
+            // 
+            this.tpMedicamentos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpMedicamentos.Location = new System.Drawing.Point(124, 4);
+            this.tpMedicamentos.Name = "tpMedicamentos";
+            this.tpMedicamentos.Size = new System.Drawing.Size(968, 293);
+            this.tpMedicamentos.TabIndex = 2;
+            this.tpMedicamentos.Text = "Medicamentos";
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(286, 2);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(137, 21);
+            this.dtpFecha.TabIndex = 59;
+            // 
+            // tpOxigeno
+            // 
+            this.tpOxigeno.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpOxigeno.Location = new System.Drawing.Point(124, 4);
+            this.tpOxigeno.Name = "tpOxigeno";
+            this.tpOxigeno.Padding = new System.Windows.Forms.Padding(3);
+            this.tpOxigeno.Size = new System.Drawing.Size(968, 293);
+            this.tpOxigeno.TabIndex = 4;
+            this.tpOxigeno.Text = "Oxígeno";
             // 
             // tsBtNuevo
             // 
@@ -137,109 +244,15 @@
             this.tsBtAnular.Text = "Anular";
             this.tsBtAnular.Click += new System.EventHandler(this.tsBtAnular_Click);
             // 
-            // tstPropiedadesOrdenMedica
+            // tpInfusionImpregnacion
             // 
-            this.tstPropiedadesOrdenMedica.BackColor = System.Drawing.Color.White;
-            this.tstPropiedadesOrdenMedica.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.txtBCodigoOrden,
-            this.toolStripSeparator1,
-            this.toolStripLabel2});
-            this.tstPropiedadesOrdenMedica.Location = new System.Drawing.Point(0, 0);
-            this.tstPropiedadesOrdenMedica.MaximumSize = new System.Drawing.Size(1040, 25);
-            this.tstPropiedadesOrdenMedica.MinimumSize = new System.Drawing.Size(1040, 25);
-            this.tstPropiedadesOrdenMedica.Name = "tstPropiedadesOrdenMedica";
-            this.tstPropiedadesOrdenMedica.Size = new System.Drawing.Size(1040, 25);
-            this.tstPropiedadesOrdenMedica.TabIndex = 58;
-            this.tstPropiedadesOrdenMedica.Text = "toolStrip1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(85, 22);
-            this.toolStripLabel1.Text = "Código Orden:";
-            // 
-            // txtBCodigoOrden
-            // 
-            this.txtBCodigoOrden.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBCodigoOrden.Name = "txtBCodigoOrden";
-            this.txtBCodigoOrden.Size = new System.Drawing.Size(100, 25);
-            this.txtBCodigoOrden.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(77, 22);
-            this.toolStripLabel2.Text = "Fecha Orden:";
-            // 
-            // tcOrdenMedica
-            // 
-            this.tcOrdenMedica.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tcOrdenMedica.Controls.Add(this.tpIndicaciones);
-            this.tcOrdenMedica.Controls.Add(this.tbProcedimientos);
-            this.tcOrdenMedica.Controls.Add(this.tpMedicamentos);
-            this.tcOrdenMedica.Controls.Add(this.tpAnalisisOrden);
-            this.tcOrdenMedica.ItemSize = new System.Drawing.Size(30, 120);
-            this.tcOrdenMedica.Location = new System.Drawing.Point(2, 28);
-            this.tcOrdenMedica.Multiline = true;
-            this.tcOrdenMedica.Name = "tcOrdenMedica";
-            this.tcOrdenMedica.SelectedIndex = 0;
-            this.tcOrdenMedica.Size = new System.Drawing.Size(1096, 301);
-            this.tcOrdenMedica.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tcOrdenMedica.TabIndex = 56;
-            // 
-            // tpIndicaciones
-            // 
-            this.tpIndicaciones.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tpIndicaciones.Location = new System.Drawing.Point(124, 4);
-            this.tpIndicaciones.Name = "tpIndicaciones";
-            this.tpIndicaciones.Padding = new System.Windows.Forms.Padding(3);
-            this.tpIndicaciones.Size = new System.Drawing.Size(968, 293);
-            this.tpIndicaciones.TabIndex = 0;
-            this.tpIndicaciones.Text = "Indicaciones";
-            // 
-            // tbProcedimientos
-            // 
-            this.tbProcedimientos.Location = new System.Drawing.Point(124, 4);
-            this.tbProcedimientos.Name = "tbProcedimientos";
-            this.tbProcedimientos.Padding = new System.Windows.Forms.Padding(3);
-            this.tbProcedimientos.Size = new System.Drawing.Size(968, 293);
-            this.tbProcedimientos.TabIndex = 1;
-            this.tbProcedimientos.Text = "Procedimientos";
-            this.tbProcedimientos.UseVisualStyleBackColor = true;
-            // 
-            // tpMedicamentos
-            // 
-            this.tpMedicamentos.Location = new System.Drawing.Point(124, 4);
-            this.tpMedicamentos.Name = "tpMedicamentos";
-            this.tpMedicamentos.Size = new System.Drawing.Size(968, 293);
-            this.tpMedicamentos.TabIndex = 2;
-            this.tpMedicamentos.Text = "Medicamentos";
-            this.tpMedicamentos.UseVisualStyleBackColor = true;
-            // 
-            // tpAnalisisOrden
-            // 
-            this.tpAnalisisOrden.Location = new System.Drawing.Point(124, 4);
-            this.tpAnalisisOrden.Name = "tpAnalisisOrden";
-            this.tpAnalisisOrden.Size = new System.Drawing.Size(968, 293);
-            this.tpAnalisisOrden.TabIndex = 3;
-            this.tpAnalisisOrden.Text = "Analisis";
-            this.tpAnalisisOrden.UseVisualStyleBackColor = true;
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtpFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha.Location = new System.Drawing.Point(286, 2);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(137, 21);
-            this.dtpFecha.TabIndex = 59;
+            this.tpInfusionImpregnacion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpInfusionImpregnacion.Location = new System.Drawing.Point(124, 4);
+            this.tpInfusionImpregnacion.Name = "tpInfusionImpregnacion";
+            this.tpInfusionImpregnacion.Padding = new System.Windows.Forms.Padding(3);
+            this.tpInfusionImpregnacion.Size = new System.Drawing.Size(968, 293);
+            this.tpInfusionImpregnacion.TabIndex = 5;
+            this.tpInfusionImpregnacion.Text = "Infusión e impregnación";
             // 
             // OrdenMedicaUI
             // 
@@ -272,7 +285,6 @@
         private System.Windows.Forms.TabPage tpIndicaciones;
         private System.Windows.Forms.TabPage tbProcedimientos;
         private System.Windows.Forms.TabPage tpMedicamentos;
-        private System.Windows.Forms.TabPage tpAnalisisOrden;
         private System.Windows.Forms.ToolStrip tstMenuOrdenMedica;
         private System.Windows.Forms.ToolStripButton tsBtNuevo;
         private System.Windows.Forms.ToolStripButton tsBtModificar;
@@ -286,5 +298,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.TabPage tpOxigeno;
+        private System.Windows.Forms.TabPage tpInfusionImpregnacion;
     }
 }

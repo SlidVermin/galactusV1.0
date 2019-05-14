@@ -40,7 +40,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
         {
             ingreso = new IngresoClinicoUI(idAtencion);
-            OrdenClinica = new OrdenMedicaUI(idAtencion);
+            OrdenClinica = new OrdenMedicaUI(idAtencion,false);
             EvolucionMedica = new EvolucionMedicaUI(idAtencion);
             egreso = new EgresoUI (idAtencion);
             estancia = new EstanciaUI(idAtencion,false);
