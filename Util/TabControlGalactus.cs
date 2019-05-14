@@ -9,7 +9,7 @@ namespace Galactus.Util.Controles
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw | ControlStyles.UserPaint, true);
             DoubleBuffered = true;
             SizeMode = TabSizeMode.Normal;
-            ItemSize = new Size(30, 120);
+            ItemSize = new Size(120, 120);
         }
 
         protected override void CreateHandle()

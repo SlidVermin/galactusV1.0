@@ -74,13 +74,10 @@ C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Gala
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.General.BusquedaGeneralUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.EnfermeriaUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.GlucometriasUI.resources
-C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.HemoderivadosUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.InsumosUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.NotasUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.ParaclinicosUI.resources
-C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EvolucionMedica.AnalisisUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EvolucionMedica.EvolucionMedicaUI.resources
-C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EvolucionMedica.ExamenFisicoEvoUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EvolucionMedica.InterpretacionUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EvolucionMedica.ProblemasUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.FormIngreso.AntecedenteRecienNacidoUI.resources
@@ -273,3 +270,28 @@ D:\Gaia - el caballero feroz 2019\obj\Debug\Galactus.VistaControlador.HistoriaCl
 D:\Gaia - el caballero feroz 2019\obj\Debug\Galactus.VistaControlador.ConfiguracionGeneral.ConfiguracionExamenLaboratorioUI.resources
 D:\Gaia - el caballero feroz 2019\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Resultado.InterconsultasUI.resources
 D:\Gaia - el caballero feroz 2019\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Resultado.ResultadoLaboratorioUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.Admision.Configuracion.ConfiguracionCamaUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.Admision.HistorialAtencionUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.ConfiguracionGeneral.ConfiguracionExamenLaboratorioUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.Asistencial.RipsUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.ConfiguracionGeneral.ConfiguracionCUPSUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.ConfiguracionGeneral.EntornoServicioUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.ConfiguracionGeneral.ListaPrecioMedicamentoUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.ConfiguracionGeneral.PuntoServicioUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.ConfiguracionGeneral.ResolucionEmpresaUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.ConfiguracionGeneral.RolesPermisoUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.FacturaUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.Facturacion.SeguimientoFacturacionUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.Farmacia.ConsolidadoPedidoUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.Farmacia.DevolucionMedicamentoUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.Farmacia.EntregaMedicamentoUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EgresoUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.FisioterapiaUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.PedidoFarmaciaUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Enfermeria.ProcedimientosUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.EstanciaUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Remision.Anexo9UI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Remision.RemisionUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Resultado.EcocardiogramaUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Resultado.InterconsultasUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Resultado.ResultadoLaboratorioUI.resources

@@ -51,7 +51,6 @@
             this.lbTitulo = new System.Windows.Forms.Label();
             this.tpEvolucion = new System.Windows.Forms.TabPage();
             this.tbLaboratorios = new System.Windows.Forms.TabPage();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tpOrdenMedica = new System.Windows.Forms.TabPage();
             this.tstMenuOrdenMedica = new System.Windows.Forms.ToolStrip();
             this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
@@ -63,12 +62,11 @@
             this.tpEstancia = new System.Windows.Forms.TabPage();
             this.tabHistoriaClinica = new System.Windows.Forms.TabControl();
             this.tpIngresoClinico = new System.Windows.Forms.TabPage();
+            this.tpRemision = new System.Windows.Forms.TabPage();
             this.tpEgreso = new System.Windows.Forms.TabPage();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tpRemision = new System.Windows.Forms.TabPage();
             this.pnlInformacion.SuspendLayout();
-            this.tbLaboratorios.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
             this.tstMenuOrdenMedica.SuspendLayout();
             this.tabHistoriaClinica.SuspendLayout();
@@ -303,20 +301,12 @@
             // 
             // tbLaboratorios
             // 
-            this.tbLaboratorios.Controls.Add(this.panel3);
             this.tbLaboratorios.Location = new System.Drawing.Point(4, 29);
             this.tbLaboratorios.Name = "tbLaboratorios";
             this.tbLaboratorios.Size = new System.Drawing.Size(1289, 468);
             this.tbLaboratorios.TabIndex = 4;
             this.tbLaboratorios.Text = "Laboratorios";
             this.tbLaboratorios.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(203, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1044, 438);
-            this.panel3.TabIndex = 4;
             // 
             // tpOrdenMedica
             // 
@@ -446,6 +436,16 @@
             this.tpIngresoClinico.TabIndex = 0;
             this.tpIngresoClinico.Text = "Ingreso Clinico";
             // 
+            // tpRemision
+            // 
+            this.tpRemision.Location = new System.Drawing.Point(4, 29);
+            this.tpRemision.Name = "tpRemision";
+            this.tpRemision.Padding = new System.Windows.Forms.Padding(3);
+            this.tpRemision.Size = new System.Drawing.Size(1289, 468);
+            this.tpRemision.TabIndex = 6;
+            this.tpRemision.Text = "Remisión";
+            this.tpRemision.UseVisualStyleBackColor = true;
+            // 
             // tpEgreso
             // 
             this.tpEgreso.Location = new System.Drawing.Point(4, 29);
@@ -478,16 +478,6 @@
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
             // 
-            // tpRemision
-            // 
-            this.tpRemision.Location = new System.Drawing.Point(4, 29);
-            this.tpRemision.Name = "tpRemision";
-            this.tpRemision.Padding = new System.Windows.Forms.Padding(3);
-            this.tpRemision.Size = new System.Drawing.Size(1289, 468);
-            this.tpRemision.TabIndex = 6;
-            this.tpRemision.Text = "Remisión";
-            this.tpRemision.UseVisualStyleBackColor = true;
-            // 
             // HistoriaClinicaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,7 +499,6 @@
             this.Load += new System.EventHandler(this.HistoriaClinicaUI_Load);
             this.pnlInformacion.ResumeLayout(false);
             this.pnlInformacion.PerformLayout();
-            this.tbLaboratorios.ResumeLayout(false);
             this.tpOrdenMedica.ResumeLayout(false);
             this.tpOrdenMedica.PerformLayout();
             this.tstMenuOrdenMedica.ResumeLayout(false);
@@ -538,7 +527,6 @@
         private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.TabPage tpEvolucion;
         private System.Windows.Forms.TabPage tbLaboratorios;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabPage tpOrdenMedica;
         private System.Windows.Forms.TabPage tpEstancia;
         private System.Windows.Forms.TabControl tabHistoriaClinica;

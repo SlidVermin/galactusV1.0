@@ -21,6 +21,7 @@ namespace Galactus.Util
         public const string TITULO_BUSCAR_PACIENTE = "Busqueda de paciente";
         public const string TITULO_BUSCAR_HEMODIALISIS = "Busqueda de hemodialisis";
         public const string TITULO_BUSCAR_INFORME_QX = "Busqueda de informe Quirurgico";
+        public const string TITULO_BUSCAR_RESULTADO_LAB = "Busqueda de resultado laboratorio";
 
 
     }

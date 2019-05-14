@@ -4,50 +4,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using Galactus.Util;
 
 namespace Galactus.Util
 {
     class ControlSignos
     {
-        public void cargarPrametroSabana(string nombre,int codigo,Panel panelControl) {
+        public static void cargarPrametroSabana(string nombre,int codigo,Panel panelControl) {
             if (panelControl.Controls.Count == 0) {
-                panelControl.Controls.Add(crearDatagridViewSignos(nombre));
+                panelControl.Controls.Add(crearDatagridViewSignos(nombre,codigo));
             }
         }
-        private DataGridView crearDatagridViewSignos(string nombre) {
+        private static DataGridView crearDatagridViewSignos(string nombre,int codigo) {
             DataGridView dtw = new DataGridView();
-            dtw.Columns.Add("dgCodigo","Codigo");
-            dtw.Columns.Add("dgDescripcion", "Descripción");
-            dtw.Columns.Add("dg00", "00");
-            dtw.Columns.Add("dg01", "01");
-            dtw.Columns.Add("dg02", "02");
-            dtw.Columns.Add("dg03", "03");
-            dtw.Columns.Add("dg04", "04");
-            dtw.Columns.Add("dg05", "05");
-            dtw.Columns.Add("dg06", "06");
-            dtw.Columns.Add("dg07", "07");
-            dtw.Columns.Add("dg08", "08");
-            dtw.Columns.Add("dg09", "09");
-            dtw.Columns.Add("dg10", "10");
-            dtw.Columns.Add("dg11", "11");
-            dtw.Columns.Add("dg12", "12");
-            dtw.Columns.Add("dg13", "13");
-            dtw.Columns.Add("dg14", "14");
-            dtw.Columns.Add("dg15", "15");
-            dtw.Columns.Add("dg16", "16");
-            dtw.Columns.Add("dg17", "17");
-            dtw.Columns.Add("dg18", "18");
-            dtw.Columns.Add("dg19", "19");
-            dtw.Columns.Add("dg20", "20");
-            dtw.Columns.Add("dg21", "21");
-            dtw.Columns.Add("dg22", "22");
-            dtw.Columns.Add("dg23", "23");
             dtw.Dock = DockStyle.Fill;
-            styloDatagridview(dtw);
+            dtw.DataSource = cargarParametrosBD(codigo);
+            styloDatagridview(ref dtw);
             return dtw;
         }
-        private void styloDatagridview(DataGridView dtw) {
-           
+        private static void styloDatagridview(ref DataGridView dtw) {
+            dtw.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtw.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dtw.AllowUserToOrderColumns = false;
+            dtw.AllowUserToAddRows = false;
+            dtw.AllowUserToDeleteRows = false;
+            dtw.BackgroundColor = System.Drawing.Color.White;
+            dtw.AllowUserToResizeRows = false;
+            dtw.AllowUserToResizeColumns = false;
+            if (dtw.Columns.Count > 0) {
+                dtw.Columns[0].Visible = false;
+                dtw.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+        }
+
+        private static DataTable cargarParametrosBD(int codigo) {
+            List<string> parametro = new List<string>();
+            DataTable dt = new DataTable();
+            parametro.Add(codigo.ToString());
+            GeneralC.llenarTabla(Sentencias.PARAMETROS_CONSULTAR_DESCRIPCION_SABANA, parametro, dt);
+            return dt;
         }
     }
 }

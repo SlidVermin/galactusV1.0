@@ -42,7 +42,7 @@ namespace Galactus
         public const String PARAMETROS_CARGAR_DOCUMENTOS = ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametrosCargarDocumentos]";
         public const String PARAMETROS_LISTAR_DOCUMENTOS = ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametrosBuscarDocumentos]";
         public const string PARAMETROS_CONSULTAR_DESCRIPCION = ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametroDescripcion]";
-
+        public const string PARAMETROS_CONSULTAR_DESCRIPCION_SABANA = ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametroDescripcionSabana]";
         public const String GENERAL_CONFIGURACION_PROCEDIMIENTOS_MEDICOS_BUSCAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspConfiguracionProcedimientosMedicosBuscar]";
        
         //public const String PARAMETROS_LISTAR_DOCUMENTOS = ConstanteGeneral.ESQUEMA_PARAMETRO + "[uspParametrosBuscarDocumentos]";
@@ -120,6 +120,11 @@ namespace Galactus
         public const string BUSCAR_INFORME_QX = "";
         public const string ANULAR_INFORME_QX = "";
         public const string CREAR_INFORME_QX = "";
+
+        public const string BUSCAR_PACIENTE_RESULTADO_LAB = "";
+        public const string BUSCAR_RESULTADO_LAB = "";
+        public const string ANULAR_RESULTADO_LAB = "";
+        public const string CREAR_RESULTADO_LAB = "";
 
         public const string ORDEN_CLINICA_CREAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspOrdenMedicaCrear]";
         public const string ORDEN_CLINICA_BUSCAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspOrdenMedicaBuscar]";
