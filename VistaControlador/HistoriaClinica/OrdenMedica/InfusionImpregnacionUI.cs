@@ -14,7 +14,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
     public partial class InfusionImpregnacionUI : Form
     {
         public bool edicion = false;
+        public bool auditoria { get; set; }
         public int idAtencion { get; set; }
+        public DateTime fecha { get; set; }
         public OrdenClinicaMedicamento medicamentos { get; set; }
         public InfusionImpregnacionUI()
         {

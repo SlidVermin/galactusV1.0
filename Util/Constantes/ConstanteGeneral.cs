@@ -50,8 +50,30 @@ namespace Galactus.Util.Constantes
         public const string ESQUEMA_HISTORIA_CLINICA = "[HistoriaClinica].";
 
         public const int ESTADO_INICIADO = 91;
-        public const string CODIGO_PROCEDIMIENTO_GLUCOMETRIA = "903883";
-        public const string CODIGO_PROCEDIMIENTO_GLUCOMETRIA_2 = "M19275";
+
+        public const string POR_DEFINIR = "Por definir";
+        public const string MEZCLA = "Mezcla";
+        public const string CODIGO_AZUL = "Cód. Azul";
+        public const string AHORA = "Ahora";
+        public const string RAZON_NECESARIA = "Razón nec.";
+        public const string MEDICAMENTO = "M";
+        public const string INFUSION = "In";
+        public const string IMPREGNACION = "Im";
+        public const string HORARIO_MEDICAMENTO_POR_DEFINIR = "200";
+        public const string HORARIO_MEDICAMENTO_CODIGO_AZUL = "100";
+        public const string HORARIO_MEDICAMENTO_AHORA = "101";
+        public const string HORARIO_MEDICAMENTO_RAZON_NECESARIA = "102";
+        public const string TIPO_EQUIVALENCIA = "E";
+        public const string TIPO_OXIGENO = "O";
+        public const string TIPO_CUPS = "C";
+        public const string SABANA_SIN_APLICAR = "X";
+        public const string SABANA_SUSPENDIDO = "S";
+        public const string SABANA_MODIFICADO = "M";
+        public const string SABANA_ID_SIN_APLICAR = "0";
+        public const string SABANA_ID_SUSPENDIDO = "-100";
+        public const string SABANA_ID_MODIFICADO = "-200";
+    
+
         #region configuracion general
         public const int MARCA = 1;
         public const int PRESENTACION = 2;

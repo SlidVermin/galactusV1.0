@@ -133,6 +133,11 @@ namespace Galactus
 
         public const string ORDEN_CLINICA_BUSCAR_PROCEDIMIENTOS= ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspListaCUPSBuscar]";
         public const string ORDEN_CLINICA_BUSCAR_ESTANCIAS = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspListaCUPSEstanciaBuscar]";
+        public const string ORDEN_CLINICA_BUSCAR_OXIGENO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspListaOxigenoBuscar]";
+        public const string ORDEN_CLINICA_BUSCAR_MEDICAMENTOS = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspMedicamentoAtencionBuscar]";
+        public const string ORDEN_CLINICA_BUSCAR_INFUSION_IMPREGNACION = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspInfusionImpregnacionAtencionBuscar]";
+        public const string ORDEN_CLINICA_BUSCAR_MEZCLA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspMezclaAtencionBuscar]";
+        public const string ORDEN_CLINICA_BUSCAR_DISOLVENTE = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspDisolventeAtencionBuscar]";
         
 
         public const String CREAR_INGRESO_CLINICO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspIngresoAdultoCrear";

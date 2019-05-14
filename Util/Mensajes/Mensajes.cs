@@ -13,7 +13,7 @@ namespace Galactus.Util.Mensajes
         public const string Modificar_FORM = "¿ Desea Modificar el registro ?";
         public const string CANCELAR_FORM = "¿ Desea cancelar ?";
         public const string GUARDAR_FORM = "¿ Desea guardar ?";
-        public const string ANULAR_FORM = "¿ Desea anular ?";
+        public const string ANULAR_FORM = "¿ Desea borrar ?";
         public const string SALIR_FORM = "¿ Desea salir ?";
         public const string CONFIRMACION_GUARDADO = "Registro Guardado !";
         public const string CONFIRMACION_ANULADO = "Registro anulado !";

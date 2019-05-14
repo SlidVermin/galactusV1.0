@@ -1,4 +1,5 @@
 ﻿using Galactus.Entidades.HistoriaClinica.OrdenMedica.Oxigeno;
+using Galactus.Util.Mensajes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,87 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 dgvOrdenOxigeno.AutoGenerateColumns = false;
                 dgvOrdenOxigeno.DataSource = oxigeno.tblOxigeno;
             }
+        }
+        void cargarOxigeno(DataRow filaResultado)
+        {
+            dgvOrdenOxigeno.Rows[dgvOrdenOxigeno.CurrentCell.RowIndex].Cells["dgIdOxigenoOrden"].Value = filaResultado.Field<Int32>("Código");
+            dgvOrdenOxigeno.Rows[dgvOrdenOxigeno.CurrentCell.RowIndex].Cells["dgDescripcionOrdenOxigeno"].Value = filaResultado.Field<string>("Descripción");
+        }
+        private void dgvOrdenOxigeno_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (edicion)
+            {
+                if (GeneralC.verificarUbicacionCelda(e, dgvOrdenOxigeno, "quitar") & e.RowIndex > -1)
+                {
+                    bool filaVacia;
+                    int filaActual;
+                    filaActual = dgvOrdenOxigeno.CurrentCell.RowIndex;
+
+                    filaVacia = ((dgvOrdenOxigeno.Rows[filaActual].Cells[2].Value == null) ||
+                    string.IsNullOrEmpty(dgvOrdenOxigeno.Rows[filaActual].Cells[2].Value.ToString())) ? true : false;
+
+                    if (!filaVacia && Mensajes.preguntaAnular())
+                    {
+                        dgvOrdenOxigeno.Rows[filaActual].Cells["dgIdOxigenoOrden"].Value = DBNull.Value;
+                        dgvOrdenOxigeno.Rows[filaActual].Cells["dgDescripcionOrdenOxigeno"].Value = DBNull.Value;
+                        dgvOrdenOxigeno.Rows[filaActual].Cells["dgObservacionOxigeno"].Value = DBNull.Value;
+                        dgvOrdenOxigeno.Rows[filaActual].Cells["dgSuspenderOxigenoOrden"].Value = false;
+
+                    }
+                }
+                else if (GeneralC.verificarUbicacionCelda(e, dgvOrdenOxigeno, "agregar") & e.RowIndex >-1)
+                {
+                    try
+                    {
+                        List<string> parametros = new List<string>();
+
+                        DataTable tablaParametros = new DataTable();
+                        DataTable tablasSeleccionado = new DataTable();
+
+                        tablaParametros.Columns.Add("Parametro", Type.GetType("System.Object"));
+                        tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
+
+                        object[] myObjArray = { "@pIdAtencion", idAtencion };
+                        object[] myObjArray1 = { "@pFiltro", "" };
+
+                        DataView view = new DataView(oxigeno.tblOxigeno);
+
+                        tablasSeleccionado = view.ToTable(true, new string[] { "idOxigeno" }).Copy();
+                        tablasSeleccionado.Rows.RemoveAt(tablasSeleccionado.Rows.Count - 1);
+                        object[] myObjArray2 = { "@pTblSeleccionados", tablasSeleccionado };
+
+                        tablaParametros.Rows.Add(myObjArray);
+                        tablaParametros.Rows.Add(myObjArray1);
+                        tablaParametros.Rows.Add(myObjArray2);
+
+                        GeneralC.buscarDevuelveFila(Sentencias.ORDEN_CLINICA_BUSCAR_OXIGENO,
+                                                    parametros,
+                                                    new GeneralC.cargarInfoFila(cargarOxigeno),
+                                                    Mensajes.BUSQUEDA_PROCEDIMIENTOS,
+                                                    true,
+                                                    null,
+                                                    tablasSeleccionado,
+                                                    tablaParametros);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                abrirObservacion();
+            }
+        }
+        private void abrirObservacion()
+        {
+            GeneralC.abrirVentanaEntradaDatos(ref dgvOrdenOxigeno,
+                                              "Observación",
+                                              "dgDescripcionOrdenOxigeno",
+                                              edicion);
+        }
+
+        private void dgvOrdenOxigeno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            abrirObservacion();
         }
     }
 }

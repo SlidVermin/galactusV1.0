@@ -53,20 +53,21 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         }
         private void dgvProcedimientos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (verificarUbicacionCelda(e, dgvProcedimientos, "cantidad"))
+            dgvProcedimientos.ReadOnly = true;
+            if (GeneralC.verificarUbicacionCelda(e, dgvProcedimientos, "cantidad"))
             {
-                habilitarCeldas(e, dgvProcedimientos, "cantidad");
+                GeneralC.habilitarCeldas(e, dgvProcedimientos, "cantidad", edicion);
             }
             else if (edicion)
             {
-                if (verificarUbicacionCelda(e, dgvProcedimientos, "anularProcedimiento") & e.RowIndex < dgvProcedimientos.Rows.Count - 1)
+                if (GeneralC.verificarUbicacionCelda(e, dgvProcedimientos, "quitar") & e.RowIndex < dgvProcedimientos.Rows.Count - 1)
                 {
-                    if (MessageBox.Show("¿ Desea quitar el procedimiento ?", "", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (Mensajes.preguntaAnular())
                     {
                         dgvProcedimientos.Rows.RemoveAt(e.RowIndex);
                     }
                 }
-                else if (verificarUbicacionCelda(e, dgvProcedimientos, "agregar") & e.RowIndex == dgvProcedimientos.Rows.Count - 1)
+                else if (GeneralC.verificarUbicacionCelda(e, dgvProcedimientos, "agregar") & e.RowIndex == dgvProcedimientos.Rows.Count - 1)
                 {
                     try
                     {
@@ -103,52 +104,43 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        Mensajes.mensajeError(ex);
                     }
                 }
             }
-
+            abrirObservacion();
+        }
+        private void abrirObservacion()
+        {
+            GeneralC.abrirVentanaEntradaDatos(ref dgvProcedimientos,
+                                              "Justificación",
+                                              "cups",
+                                              edicion);
         }
         private void dgvProcedimientos_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            habilitarCeldas(e, dgvProcedimientos, "cantidad");
+           GeneralC.habilitarCeldas(e, dgvProcedimientos, "cantidad",edicion);
         }
-        void habilitarCeldas(DataGridViewCellEventArgs e, DataGridView dgv, string columna)
-        {
-            dgvProcedimientos.ReadOnly = true;
-            if (dgvProcedimientos.Rows.Count > 0 && e.RowIndex >= 0)
-            {
-                dgvProcedimientos.ReadOnly = false;
-                if (verificarUbicacionCelda(e, dgv, columna) && edicion && desactvarUltimaFila(e.RowIndex))
-                {
-                    dgv.Rows[e.RowIndex].Cells[columna].ReadOnly = false;
-                }
-                else
-                {
-                    dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = true;
-                }
-            }
-
-        }
-        public bool verificarUbicacionCelda(DataGridViewCellEventArgs e, DataGridView dgv, string columna)
-        {
-            return e.ColumnIndex == dgv.Columns[columna].Index;
-        }
-        bool desactvarUltimaFila(int filaActual)
-        {
-            if (filaActual < dgvProcedimientos.RowCount - 1)
-            {
-                return true;
-            }
-            return false;
-        }
-
+        
+        
+        
         private void dgvProcedimientos_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (string.IsNullOrEmpty(dgvProcedimientos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()))
             {
                 dgvProcedimientos.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = 0;
             }
+        }
+
+        private void dgvProcedimientos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            abrirObservacion();
+        }
+
+        private void dgvProcedimientos_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            dgvProcedimientos.CancelEdit();
+            Mensajes.mensajeInformacion(Mensajes.CANTIDAD_INVALIDA);
         }
     }
 }

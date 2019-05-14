@@ -21,7 +21,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
     {
 
         private int idAtencion;
-        private bool auditoria;
         private OrdenClinica ordenClinica = new OrdenClinica();
         private IndicacionesUI indicacionesUI = new IndicacionesUI();
         private OxigenoUI oxigenoUI = new OxigenoUI();
@@ -44,8 +43,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             procedimientosUI.idAtencion = idAtencion;
             procedimientosUI.procedimientos = ordenClinica.procedimiento;
             medicamentosUI.idAtencion = idAtencion;
+            medicamentosUI.auditoria = auditoria;
             medicamentosUI.medicamentos = ordenClinica.medicamento;
             infusionImpregnacionUI.idAtencion = idAtencion;
+            infusionImpregnacionUI.auditoria = auditoria;
             infusionImpregnacionUI.medicamentos = ordenClinica.medicamento;
             oxigenoUI.idAtencion = idAtencion;
             oxigenoUI.oxigeno = ordenClinica.oxigeno;
@@ -67,6 +68,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
        
             GeneralC.formNuevo(this, tstMenuOrdenMedica, tsBtGuardar, tsBtCancelar);
             ordenClinica.nuevaOrden();
+            crearOrden(ordenClinica);
             txtBCodigoOrden.ReadOnly = true;
             procedimientosUI.enlazarDgv();
             oxigenoUI.enlazarDgv();
@@ -124,6 +126,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 try
                 {
                     crearOrden(ordenClinica);
+                    ordenClinica.oxigeno.prepararDT();
+                    ordenClinica.medicamento.prepararDT();
                     OrdenClinicaDAL.guardarOrdenMedica(ordenClinica);
                     GeneralC.posGuardar(this, tstMenuOrdenMedica, tsBtNuevo, tsBtModificar, tsBtBuscar, tsBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     desactivarEdicion();
@@ -145,6 +149,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 try
                 {
                     OrdenClinicaDAL.anularOrdenMedica(ordenClinica);
+                    
                     GeneralC.posAnular(this, tstMenuOrdenMedica, tsBtNuevo, tsBtBuscar, Mensajes.CONFIRMACION_ANULADO);
                     ordenClinica.nuevaOrden();
                     desactivarEdicion();
@@ -160,6 +165,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         void crearOrden(OrdenClinica ordenClinica)
         {
             ordenClinica.fechaOrden = DateTime.Parse(dtpFecha.Text);
+            medicamentosUI.fecha = ordenClinica.fechaOrden;
+            infusionImpregnacionUI.fecha = ordenClinica.fechaOrden;
         }
         bool validarDatos()
         {
@@ -208,7 +215,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 medicamentosUI.medicamentos.tblMedicamentos.Columns.Remove("Cantidad");
                 medicamentosUI.medicamentos.tblMedicamentos.Columns.Remove("Tipo");
                 medicamentosUI.medicamentos.tblMedicamentos.Columns.Remove("Acepta disolvente");
-                medicamentosUI.enlazarDgv();
+                medicamentosUI.medicamentos.homologarHorario();                
 
                 infusionImpregnacionUI.medicamentos.tblInfusionImpregnacion = GeneralC.copiarTablaCondicional(tablasResultados.Tables["Table2"].Copy(), "tipoMedicamento in ('In','Im')");
                 infusionImpregnacionUI.medicamentos.tblMezcla = tablasResultados.Tables["Table3"].Copy();
@@ -216,6 +223,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 infusionImpregnacionUI.medicamentos.tblInfusionImpregnacion.Columns.Remove("Via admin.");
                 infusionImpregnacionUI.medicamentos.tblInfusionImpregnacion.Columns.Remove("Horario");
                 infusionImpregnacionUI.medicamentos.tblInfusionImpregnacion.Columns.Add("Mezcla");
+
+                medicamentosUI.enlazarDgv();
                 infusionImpregnacionUI.enlazarDgv();
 
                 procedimientosUI.procedimientos.tblProcedimientos.Clear();

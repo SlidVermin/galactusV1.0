@@ -35,7 +35,7 @@
             this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Agregar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.anularProcedimiento = new System.Windows.Forms.DataGridViewImageColumn();
+            this.quitar = new System.Windows.Forms.DataGridViewImageColumn();
             this.cups = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,7 +80,7 @@
             this.dgvProcedimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProcedimientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Agregar,
-            this.anularProcedimiento,
+            this.quitar,
             this.cups,
             this.descripcion,
             this.cantidad,
@@ -96,6 +96,8 @@
             this.dgvProcedimientos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellClick);
             this.dgvProcedimientos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellEndEdit);
             this.dgvProcedimientos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellEnter);
+            this.dgvProcedimientos.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvProcedimientos_DataError);
+            this.dgvProcedimientos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvProcedimientos_KeyPress);
             // 
             // dataGridViewImageColumn1
             // 
@@ -115,14 +117,14 @@
             this.Agregar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Agregar.Width = 75;
             // 
-            // anularProcedimiento
+            // quitar
             // 
-            this.anularProcedimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.anularProcedimiento.HeaderText = "Quitar";
-            this.anularProcedimiento.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.anularProcedimiento.Name = "anularProcedimiento";
-            this.anularProcedimiento.ReadOnly = true;
-            this.anularProcedimiento.Width = 50;
+            this.quitar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.quitar.HeaderText = "Quitar";
+            this.quitar.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.quitar.Name = "quitar";
+            this.quitar.ReadOnly = true;
+            this.quitar.Width = 50;
             // 
             // cups
             // 
@@ -130,6 +132,7 @@
             this.cups.HeaderText = "Código";
             this.cups.Name = "cups";
             this.cups.ReadOnly = true;
+            this.cups.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.cups.Width = 75;
             // 
             // descripcion
@@ -138,17 +141,20 @@
             this.descripcion.HeaderText = "Descripción";
             this.descripcion.Name = "descripcion";
             this.descripcion.ReadOnly = true;
+            this.descripcion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // cantidad
             // 
             this.cantidad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Format = "N0";
             dataGridViewCellStyle1.NullValue = "0";
             this.cantidad.DefaultCellStyle = dataGridViewCellStyle1;
             this.cantidad.HeaderText = "Cantidad";
             this.cantidad.Name = "cantidad";
             this.cantidad.ReadOnly = true;
-            this.cantidad.Width = 82;
+            this.cantidad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.cantidad.Width = 63;
             // 
             // justificacion
             // 
@@ -156,6 +162,7 @@
             this.justificacion.HeaderText = "Justificación";
             this.justificacion.Name = "justificacion";
             this.justificacion.ReadOnly = true;
+            this.justificacion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.justificacion.Width = 250;
             // 
             // ProcedimientosUI
@@ -185,7 +192,7 @@
         internal System.Windows.Forms.GroupBox GroupBox17;
         internal System.Windows.Forms.DataGridView dgvProcedimientos;
         private System.Windows.Forms.DataGridViewImageColumn Agregar;
-        private System.Windows.Forms.DataGridViewImageColumn anularProcedimiento;
+        private System.Windows.Forms.DataGridViewImageColumn quitar;
         private System.Windows.Forms.DataGridViewTextBoxColumn cups;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;

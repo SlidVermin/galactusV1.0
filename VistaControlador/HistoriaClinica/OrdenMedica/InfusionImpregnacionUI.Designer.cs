@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.GroupBox63 = new System.Windows.Forms.GroupBox();
             this.dgvOrdenInfusionImpregnacion = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.agregar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.quitar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgIdMedicamentoOrdenINIM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgDescripcionTipoOrdenINIM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgIdEquivalenciaOrdenINIM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +55,7 @@
             this.dgHoraInicialOrdenINIM = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dgMezclaOrdenINIM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgDiasTratamientoOrdenINIM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgSuspenderOrdenINIM = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Suspender = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgAceptaDisolventeOrdenINIM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupBox63.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenInfusionImpregnacion)).BeginInit();
@@ -97,18 +97,18 @@
             this.dgvOrdenInfusionImpregnacion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvOrdenInfusionImpregnacion.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvOrdenInfusionImpregnacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrdenInfusionImpregnacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrdenInfusionImpregnacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrdenInfusionImpregnacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrdenInfusionImpregnacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn3,
-            this.dataGridViewImageColumn4,
+            this.agregar,
+            this.quitar,
             this.dgIdMedicamentoOrdenINIM,
             this.dgDescripcionTipoOrdenINIM,
             this.dgIdEquivalenciaOrdenINIM,
@@ -123,38 +123,42 @@
             this.dgHoraInicialOrdenINIM,
             this.dgMezclaOrdenINIM,
             this.dgDiasTratamientoOrdenINIM,
-            this.dgSuspenderOrdenINIM,
+            this.Suspender,
             this.dgAceptaDisolventeOrdenINIM});
             this.dgvOrdenInfusionImpregnacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvOrdenInfusionImpregnacion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOrdenInfusionImpregnacion.Location = new System.Drawing.Point(3, 17);
             this.dgvOrdenInfusionImpregnacion.MultiSelect = false;
             this.dgvOrdenInfusionImpregnacion.Name = "dgvOrdenInfusionImpregnacion";
+            this.dgvOrdenInfusionImpregnacion.ReadOnly = true;
             this.dgvOrdenInfusionImpregnacion.RowHeadersVisible = false;
             this.dgvOrdenInfusionImpregnacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvOrdenInfusionImpregnacion.Size = new System.Drawing.Size(956, 265);
             this.dgvOrdenInfusionImpregnacion.TabIndex = 15;
             // 
-            // dataGridViewImageColumn3
+            // agregar
             // 
-            this.dataGridViewImageColumn3.HeaderText = "Agregar";
-            this.dataGridViewImageColumn3.Image = global::Galactus.Properties.Resources.farmacia_ico;
-            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
-            this.dataGridViewImageColumn3.Width = 56;
+            this.agregar.HeaderText = "Agregar";
+            this.agregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
+            this.agregar.Name = "agregar";
+            this.agregar.ReadOnly = true;
+            this.agregar.Width = 56;
             // 
-            // dataGridViewImageColumn4
+            // quitar
             // 
-            this.dataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewImageColumn4.HeaderText = "Quitar";
-            this.dataGridViewImageColumn4.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
-            this.dataGridViewImageColumn4.Width = 46;
+            this.quitar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.quitar.HeaderText = "Quitar";
+            this.quitar.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.quitar.Name = "quitar";
+            this.quitar.ReadOnly = true;
+            this.quitar.Width = 46;
             // 
             // dgIdMedicamentoOrdenINIM
             // 
             this.dgIdMedicamentoOrdenINIM.DataPropertyName = "idMedicamento";
             this.dgIdMedicamentoOrdenINIM.HeaderText = "idMedicamento";
             this.dgIdMedicamentoOrdenINIM.Name = "dgIdMedicamentoOrdenINIM";
+            this.dgIdMedicamentoOrdenINIM.ReadOnly = true;
             this.dgIdMedicamentoOrdenINIM.Visible = false;
             this.dgIdMedicamentoOrdenINIM.Width = 116;
             // 
@@ -163,13 +167,16 @@
             this.dgDescripcionTipoOrdenINIM.DataPropertyName = "Tipo";
             this.dgDescripcionTipoOrdenINIM.HeaderText = "Tipo";
             this.dgDescripcionTipoOrdenINIM.Name = "dgDescripcionTipoOrdenINIM";
-            this.dgDescripcionTipoOrdenINIM.Width = 56;
+            this.dgDescripcionTipoOrdenINIM.ReadOnly = true;
+            this.dgDescripcionTipoOrdenINIM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgDescripcionTipoOrdenINIM.Width = 37;
             // 
             // dgIdEquivalenciaOrdenINIM
             // 
             this.dgIdEquivalenciaOrdenINIM.DataPropertyName = "idEquivalencia";
             this.dgIdEquivalenciaOrdenINIM.HeaderText = "idEquivalencia";
             this.dgIdEquivalenciaOrdenINIM.Name = "dgIdEquivalenciaOrdenINIM";
+            this.dgIdEquivalenciaOrdenINIM.ReadOnly = true;
             this.dgIdEquivalenciaOrdenINIM.Visible = false;
             this.dgIdEquivalenciaOrdenINIM.Width = 112;
             // 
@@ -178,52 +185,63 @@
             this.dgDescripcionOrdenINIM.DataPropertyName = "Descripción";
             this.dgDescripcionOrdenINIM.HeaderText = "Descripción";
             this.dgDescripcionOrdenINIM.Name = "dgDescripcionOrdenINIM";
-            this.dgDescripcionOrdenINIM.Width = 98;
+            this.dgDescripcionOrdenINIM.ReadOnly = true;
+            this.dgDescripcionOrdenINIM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgDescripcionOrdenINIM.Width = 79;
             // 
             // dgTipoOrdenINIM
             // 
             this.dgTipoOrdenINIM.DataPropertyName = "tipoMedicamento";
             this.dgTipoOrdenINIM.HeaderText = "tipoMedicamento";
             this.dgTipoOrdenINIM.Name = "dgTipoOrdenINIM";
+            this.dgTipoOrdenINIM.ReadOnly = true;
+            this.dgTipoOrdenINIM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dgTipoOrdenINIM.Visible = false;
-            this.dgTipoOrdenINIM.Width = 126;
+            this.dgTipoOrdenINIM.Width = 107;
             // 
             // dgDosisOrdenINIM
             // 
             this.dgDosisOrdenINIM.DataPropertyName = "Dosis";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Format = "N2";
-            dataGridViewCellStyle9.NullValue = "0";
-            this.dgDosisOrdenINIM.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = "0";
+            this.dgDosisOrdenINIM.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgDosisOrdenINIM.HeaderText = "Dosis";
             this.dgDosisOrdenINIM.Name = "dgDosisOrdenINIM";
-            this.dgDosisOrdenINIM.Width = 65;
+            this.dgDosisOrdenINIM.ReadOnly = true;
+            this.dgDosisOrdenINIM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgDosisOrdenINIM.Width = 46;
             // 
             // dgUnidadOrdenINIM
             // 
             this.dgUnidadOrdenINIM.DataPropertyName = "Unidad";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgUnidadOrdenINIM.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgUnidadOrdenINIM.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgUnidadOrdenINIM.HeaderText = "Unidad";
             this.dgUnidadOrdenINIM.Name = "dgUnidadOrdenINIM";
-            this.dgUnidadOrdenINIM.Width = 72;
+            this.dgUnidadOrdenINIM.ReadOnly = true;
+            this.dgUnidadOrdenINIM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgUnidadOrdenINIM.Width = 53;
             // 
             // dgVelocidadOrdenINIM
             // 
             this.dgVelocidadOrdenINIM.DataPropertyName = "cc/hora";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.Format = "N2";
-            dataGridViewCellStyle11.NullValue = "0";
-            this.dgVelocidadOrdenINIM.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.dgVelocidadOrdenINIM.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgVelocidadOrdenINIM.HeaderText = "cc/hora";
             this.dgVelocidadOrdenINIM.Name = "dgVelocidadOrdenINIM";
-            this.dgVelocidadOrdenINIM.Width = 72;
+            this.dgVelocidadOrdenINIM.ReadOnly = true;
+            this.dgVelocidadOrdenINIM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgVelocidadOrdenINIM.Width = 53;
             // 
             // dgIdEquivalenciaDisolventeOrdenINIM
             // 
             this.dgIdEquivalenciaDisolventeOrdenINIM.DataPropertyName = "idEquivalenciaDisolvente";
             this.dgIdEquivalenciaDisolventeOrdenINIM.HeaderText = "idEquivalenciaDosilvente";
             this.dgIdEquivalenciaDisolventeOrdenINIM.Name = "dgIdEquivalenciaDisolventeOrdenINIM";
+            this.dgIdEquivalenciaDisolventeOrdenINIM.ReadOnly = true;
             this.dgIdEquivalenciaDisolventeOrdenINIM.Visible = false;
             this.dgIdEquivalenciaDisolventeOrdenINIM.Width = 170;
             // 
@@ -232,18 +250,22 @@
             this.dgDescripcionDisolventeOrdenINIM.DataPropertyName = "Disolvente";
             this.dgDescripcionDisolventeOrdenINIM.HeaderText = "Disolvente";
             this.dgDescripcionDisolventeOrdenINIM.Name = "dgDescripcionDisolventeOrdenINIM";
-            this.dgDescripcionDisolventeOrdenINIM.Width = 90;
+            this.dgDescripcionDisolventeOrdenINIM.ReadOnly = true;
+            this.dgDescripcionDisolventeOrdenINIM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgDescripcionDisolventeOrdenINIM.Width = 71;
             // 
             // dgCantidadDisolventeOrdenINIM
             // 
             this.dgCantidadDisolventeOrdenINIM.DataPropertyName = "Cantidad";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Format = "N0";
-            dataGridViewCellStyle12.NullValue = "0";
-            this.dgCantidadDisolventeOrdenINIM.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "N0";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.dgCantidadDisolventeOrdenINIM.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgCantidadDisolventeOrdenINIM.HeaderText = "Cantidad";
             this.dgCantidadDisolventeOrdenINIM.Name = "dgCantidadDisolventeOrdenINIM";
-            this.dgCantidadDisolventeOrdenINIM.Width = 82;
+            this.dgCantidadDisolventeOrdenINIM.ReadOnly = true;
+            this.dgCantidadDisolventeOrdenINIM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgCantidadDisolventeOrdenINIM.Width = 63;
             // 
             // dgHoraInicialOrdenINIM
             // 
@@ -276,42 +298,49 @@
             "22",
             "23"});
             this.dgHoraInicialOrdenINIM.Name = "dgHoraInicialOrdenINIM";
+            this.dgHoraInicialOrdenINIM.ReadOnly = true;
             this.dgHoraInicialOrdenINIM.Width = 75;
             // 
             // dgMezclaOrdenINIM
             // 
             this.dgMezclaOrdenINIM.DataPropertyName = "Mezcla";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgMezclaOrdenINIM.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgMezclaOrdenINIM.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgMezclaOrdenINIM.HeaderText = "Mezcla";
             this.dgMezclaOrdenINIM.Name = "dgMezclaOrdenINIM";
+            this.dgMezclaOrdenINIM.ReadOnly = true;
             this.dgMezclaOrdenINIM.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgMezclaOrdenINIM.Width = 69;
+            this.dgMezclaOrdenINIM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgMezclaOrdenINIM.Width = 50;
             // 
             // dgDiasTratamientoOrdenINIM
             // 
             this.dgDiasTratamientoOrdenINIM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgDiasTratamientoOrdenINIM.DataPropertyName = "Dias Tto";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgDiasTratamientoOrdenINIM.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgDiasTratamientoOrdenINIM.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgDiasTratamientoOrdenINIM.HeaderText = "Dias Tto";
             this.dgDiasTratamientoOrdenINIM.Name = "dgDiasTratamientoOrdenINIM";
+            this.dgDiasTratamientoOrdenINIM.ReadOnly = true;
+            this.dgDiasTratamientoOrdenINIM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dgDiasTratamientoOrdenINIM.Width = 70;
             // 
-            // dgSuspenderOrdenINIM
+            // Suspender
             // 
-            this.dgSuspenderOrdenINIM.DataPropertyName = "Suspender";
-            this.dgSuspenderOrdenINIM.HeaderText = "Suspender";
-            this.dgSuspenderOrdenINIM.Name = "dgSuspenderOrdenINIM";
-            this.dgSuspenderOrdenINIM.Width = 74;
+            this.Suspender.DataPropertyName = "Suspender";
+            this.Suspender.HeaderText = "Suspender";
+            this.Suspender.Name = "Suspender";
+            this.Suspender.ReadOnly = true;
+            this.Suspender.Width = 74;
             // 
             // dgAceptaDisolventeOrdenINIM
             // 
             this.dgAceptaDisolventeOrdenINIM.DataPropertyName = "Acepta disolvente";
             this.dgAceptaDisolventeOrdenINIM.HeaderText = "Acepta disolvente";
             this.dgAceptaDisolventeOrdenINIM.Name = "dgAceptaDisolventeOrdenINIM";
+            this.dgAceptaDisolventeOrdenINIM.ReadOnly = true;
             this.dgAceptaDisolventeOrdenINIM.Visible = false;
-            this.dgAceptaDisolventeOrdenINIM.Width = 117;
+            this.dgAceptaDisolventeOrdenINIM.Width = 128;
             // 
             // InfusionImpregnacionUI
             // 
@@ -338,8 +367,8 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         internal System.Windows.Forms.GroupBox GroupBox63;
         public System.Windows.Forms.DataGridView dgvOrdenInfusionImpregnacion;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
+        private System.Windows.Forms.DataGridViewImageColumn agregar;
+        private System.Windows.Forms.DataGridViewImageColumn quitar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgIdMedicamentoOrdenINIM;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcionTipoOrdenINIM;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgIdEquivalenciaOrdenINIM;
@@ -354,7 +383,7 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn dgHoraInicialOrdenINIM;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgMezclaOrdenINIM;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDiasTratamientoOrdenINIM;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dgSuspenderOrdenINIM;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Suspender;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgAceptaDisolventeOrdenINIM;
     }
 }

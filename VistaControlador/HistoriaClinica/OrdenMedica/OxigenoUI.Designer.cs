@@ -31,15 +31,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GroupBox17 = new System.Windows.Forms.GroupBox();
             this.dgvOrdenOxigeno = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.agregar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgQuitar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.quitar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgIdOxigenoOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgDescripcionOrdenOxigeno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgSuspenderOxigenoOrden = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgObservacionOxigeno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.GroupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrdenOxigeno)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +77,7 @@
             this.dgvOrdenOxigeno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrdenOxigeno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.agregar,
-            this.dgQuitar,
+            this.quitar,
             this.dgIdOxigenoOrden,
             this.dgDescripcionOrdenOxigeno,
             this.dgSuspenderOxigenoOrden,
@@ -87,10 +87,67 @@
             this.dgvOrdenOxigeno.Location = new System.Drawing.Point(3, 17);
             this.dgvOrdenOxigeno.MultiSelect = false;
             this.dgvOrdenOxigeno.Name = "dgvOrdenOxigeno";
+            this.dgvOrdenOxigeno.ReadOnly = true;
             this.dgvOrdenOxigeno.RowHeadersVisible = false;
             this.dgvOrdenOxigeno.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvOrdenOxigeno.Size = new System.Drawing.Size(956, 134);
             this.dgvOrdenOxigeno.TabIndex = 15;
+            this.dgvOrdenOxigeno.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrdenOxigeno_CellClick);
+            this.dgvOrdenOxigeno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvOrdenOxigeno_KeyPress);
+            // 
+            // agregar
+            // 
+            this.agregar.HeaderText = "Agregar";
+            this.agregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
+            this.agregar.Name = "agregar";
+            this.agregar.ReadOnly = true;
+            this.agregar.Width = 56;
+            // 
+            // quitar
+            // 
+            this.quitar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.quitar.HeaderText = "Quitar";
+            this.quitar.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.quitar.Name = "quitar";
+            this.quitar.ReadOnly = true;
+            this.quitar.Width = 46;
+            // 
+            // dgIdOxigenoOrden
+            // 
+            this.dgIdOxigenoOrden.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgIdOxigenoOrden.DataPropertyName = "idOxigeno";
+            this.dgIdOxigenoOrden.HeaderText = "idOxigeno";
+            this.dgIdOxigenoOrden.Name = "dgIdOxigenoOrden";
+            this.dgIdOxigenoOrden.ReadOnly = true;
+            this.dgIdOxigenoOrden.Visible = false;
+            this.dgIdOxigenoOrden.Width = 609;
+            // 
+            // dgDescripcionOrdenOxigeno
+            // 
+            this.dgDescripcionOrdenOxigeno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgDescripcionOrdenOxigeno.DataPropertyName = "Descripción";
+            this.dgDescripcionOrdenOxigeno.HeaderText = "Descripción";
+            this.dgDescripcionOrdenOxigeno.Name = "dgDescripcionOrdenOxigeno";
+            this.dgDescripcionOrdenOxigeno.ReadOnly = true;
+            this.dgDescripcionOrdenOxigeno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dgSuspenderOxigenoOrden
+            // 
+            this.dgSuspenderOxigenoOrden.DataPropertyName = "Suspender";
+            this.dgSuspenderOxigenoOrden.HeaderText = "Suspender";
+            this.dgSuspenderOxigenoOrden.Name = "dgSuspenderOxigenoOrden";
+            this.dgSuspenderOxigenoOrden.ReadOnly = true;
+            this.dgSuspenderOxigenoOrden.Width = 74;
+            // 
+            // dgObservacionOxigeno
+            // 
+            this.dgObservacionOxigeno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgObservacionOxigeno.DataPropertyName = "Observación";
+            this.dgObservacionOxigeno.HeaderText = "Observación";
+            this.dgObservacionOxigeno.Name = "dgObservacionOxigeno";
+            this.dgObservacionOxigeno.ReadOnly = true;
+            this.dgObservacionOxigeno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgObservacionOxigeno.Width = 250;
             // 
             // dataGridViewImageColumn1
             // 
@@ -114,52 +171,6 @@
             this.dataGridViewImageColumn3.HeaderText = "Quitar";
             this.dataGridViewImageColumn3.Image = global::Galactus.Properties.Resources.btn_anular;
             this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
-            // 
-            // agregar
-            // 
-            this.agregar.HeaderText = "Agregar";
-            this.agregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
-            this.agregar.Name = "agregar";
-            this.agregar.Width = 56;
-            // 
-            // dgQuitar
-            // 
-            this.dgQuitar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgQuitar.HeaderText = "Quitar";
-            this.dgQuitar.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.dgQuitar.Name = "dgQuitar";
-            this.dgQuitar.Width = 46;
-            // 
-            // dgIdOxigenoOrden
-            // 
-            this.dgIdOxigenoOrden.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgIdOxigenoOrden.DataPropertyName = "idOxigeno";
-            this.dgIdOxigenoOrden.HeaderText = "idOxigeno";
-            this.dgIdOxigenoOrden.Name = "dgIdOxigenoOrden";
-            this.dgIdOxigenoOrden.Visible = false;
-            this.dgIdOxigenoOrden.Width = 609;
-            // 
-            // dgDescripcionOrdenOxigeno
-            // 
-            this.dgDescripcionOrdenOxigeno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgDescripcionOrdenOxigeno.DataPropertyName = "Descripción";
-            this.dgDescripcionOrdenOxigeno.HeaderText = "Descripción";
-            this.dgDescripcionOrdenOxigeno.Name = "dgDescripcionOrdenOxigeno";
-            // 
-            // dgSuspenderOxigenoOrden
-            // 
-            this.dgSuspenderOxigenoOrden.DataPropertyName = "Suspender";
-            this.dgSuspenderOxigenoOrden.HeaderText = "Suspender";
-            this.dgSuspenderOxigenoOrden.Name = "dgSuspenderOxigenoOrden";
-            this.dgSuspenderOxigenoOrden.Width = 74;
-            // 
-            // dgObservacionOxigeno
-            // 
-            this.dgObservacionOxigeno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgObservacionOxigeno.DataPropertyName = "Observación";
-            this.dgObservacionOxigeno.HeaderText = "Observación";
-            this.dgObservacionOxigeno.Name = "dgObservacionOxigeno";
-            this.dgObservacionOxigeno.Width = 250;
             // 
             // OxigenoUI
             // 
@@ -187,7 +198,7 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
         private System.Windows.Forms.DataGridViewImageColumn agregar;
-        private System.Windows.Forms.DataGridViewImageColumn dgQuitar;
+        private System.Windows.Forms.DataGridViewImageColumn quitar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgIdOxigenoOrden;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcionOrdenOxigeno;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgSuspenderOxigenoOrden;
