@@ -61,5 +61,10 @@ namespace Galactus.VistaControlador.General
             textoActual = txtTexto.Text;
             DialogResult = DialogResult.OK;
         }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -63,6 +63,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             filas[cantidad]["idMedicamento"] = medicamentos.obtenerConsecutivo();
             filas.Add();
             dgvOrdenInfusionImpregnacion.EndEdit();
+            dgvOrdenInfusionImpregnacion.Columns["idMedicamento"].Visible = false;
         }
         void cargarDisolvente(DataRow filaResultado)
         {
@@ -171,6 +172,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     {
                         if (Mensajes.preguntaAnular())
                         {
+                            medicamentos.quitarMezcla(int.Parse(dgvOrdenInfusionImpregnacion.Rows[dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex].Cells["IdMedicamento"].Value.ToString()));
                             dgvOrdenInfusionImpregnacion.Rows.RemoveAt(e.RowIndex);
                         }
                     }
@@ -178,13 +180,46 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     {
                         agregarTipoInfusionImpregnacion();
                     }
-                    else if (GeneralC.verificarUbicacionCelda(e, dgvOrdenInfusionImpregnacion, "Disolvente") & e.RowIndex != dgvOrdenInfusionImpregnacion.Rows.Count - 1)
+                    else if (GeneralC.verificarUbicacionCelda(e, dgvOrdenInfusionImpregnacion, "Disolvente") &
+                             e.RowIndex != dgvOrdenInfusionImpregnacion.Rows.Count - 1 &
+                             dgvOrdenInfusionImpregnacion.Rows[e.RowIndex].Cells["Disolvente"].Value.ToString() == ConstanteGeneral.POR_DEFINIR)
                     {
                         agregarDisolvente();
+                    
+                    
                     }
+                }
+                else if (GeneralC.verificarUbicacionCelda(e, dgvOrdenInfusionImpregnacion, "Mezcla") &
+                             (dgvOrdenInfusionImpregnacion.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == ConstanteGeneral.POR_DEFINIR ||
+                              dgvOrdenInfusionImpregnacion.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == ConstanteGeneral.MEZCLA))
+                {
+                    GeneralC.abrirMezcla(dgvOrdenInfusionImpregnacion,ref medicamentos.tblMezcla,edicion, idAtencion, fecha,auditoria);
+                        verificarMezcla();
                 }
             }
         }
+        public void verificarMezcla()
+        {
+            int i;
+            for (i = 0;i< dgvOrdenInfusionImpregnacion.RowCount; i++)
+            {
+                if (! string.IsNullOrEmpty(dgvOrdenInfusionImpregnacion.Rows[i].Cells["IdMedicamento"].Value.ToString()) &&
+                    medicamentos.tblMezcla.Select("idMedicamento=" + dgvOrdenInfusionImpregnacion.Rows[i].Cells["IdMedicamento"].Value).Count() > 0)
+                {
+                    dgvOrdenInfusionImpregnacion.Rows[i].Cells["Mezcla"].Style.BackColor = Color.LightGreen;
+                    dgvOrdenInfusionImpregnacion.Rows[i].Cells["Mezcla"].Value = ConstanteGeneral.MEZCLA;
+                }else
+                {
+                    if (dgvOrdenInfusionImpregnacion.Rows[i].Cells["Mezcla"].Value.ToString() == ConstanteGeneral.MEZCLA) {
+                        dgvOrdenInfusionImpregnacion.Rows[i].Cells["Mezcla"].Value = ConstanteGeneral.POR_DEFINIR;
+                    }
+                    dgvOrdenInfusionImpregnacion.Rows[i].Cells["Mezcla"].Style.BackColor = dgvOrdenInfusionImpregnacion.Rows[i].Cells["Descripcion"].Style.BackColor;
+                }
+                
+            }
+            dgvOrdenInfusionImpregnacion.Columns["idMedicamento"].Visible = false;
+        }
+        
         public void agregarTipoInfusionImpregnacion()
         {
             List<string> parametros = new List<string>();
@@ -214,7 +249,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         }
         private void dgvOrdenInfusionImpregnacion_KeyDown(object sender, KeyEventArgs e)
         {
-            if (edicion && e.KeyCode == Keys.Delete)
+            if (edicion && e.KeyCode == Keys.Delete && dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex  >= 0)
             {
                 bool filaVacia;
                 int filaActual;
@@ -223,8 +258,13 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 filaVacia = ((dgvOrdenInfusionImpregnacion.Rows[filaActual].Cells["idMedicamento"].Value == null) ||
                 string.IsNullOrEmpty(dgvOrdenInfusionImpregnacion.Rows[filaActual].Cells["idMedicamento"].Value.ToString())) ? true : false;
 
-                dgvOrdenInfusionImpregnacion.Rows[filaActual].Cells["idEquivalenciaDisolvente"].Value = DBNull.Value;
-                dgvOrdenInfusionImpregnacion.Rows[filaActual].Cells["idDisolvente"].Value = DBNull.Value;
+                if (!filaVacia)
+                {
+                    dgvOrdenInfusionImpregnacion.Rows[filaActual].Cells["idEquivalenciaDisolvente"].Value = DBNull.Value;
+                    dgvOrdenInfusionImpregnacion.Rows[filaActual].Cells["Disolvente"].Value = ConstanteGeneral.POR_DEFINIR;
+                    dgvOrdenInfusionImpregnacion.Rows[filaActual].Cells["dgCantidadDisolventeOrdenINIM"].Value = 0;
+                }
+                
             }
         }
     }

@@ -27,12 +27,18 @@ namespace Galactus.Modelo.HistoriaClinica
                         comando.CommandType = System.Data.CommandType.StoredProcedure;
                     
                         comando.CommandText = Sentencias.ORDEN_CLINICA_CREAR;
-                        comando.Parameters.Add(new SqlParameter("@idOrdenMedica", System.Data.SqlDbType.Int)).Value = OrdenClinica.idOrden;
-                        comando.Parameters.Add(new SqlParameter("@idAtencion", System.Data.SqlDbType.Int)).Value = OrdenClinica.idAtencion;
-                        comando.Parameters.Add(new SqlParameter("@FechaOrden", System.Data.SqlDbType.DateTime)).Value = OrdenClinica.fechaOrden;
-                        comando.Parameters.Add(new SqlParameter("@observacion", System.Data.SqlDbType.NVarChar)).Value = OrdenClinica.indicacion.indicacion;
-                        comando.Parameters.Add(new SqlParameter("@IdUsuarioOrigen", System.Data.SqlDbType.Int)).Value = Sesion.IdUsuario;
-                        comando.Parameters.Add(new SqlParameter("@tablaProcedimientos", System.Data.SqlDbType.Structured)).Value = tblProcedimientos;
+                        comando.Parameters.Add(new SqlParameter("@pAuditoria", System.Data.SqlDbType.Bit)).Value = OrdenClinica.auditoria;
+                        comando.Parameters.Add(new SqlParameter("@pIdOrdenMedica", System.Data.SqlDbType.Int)).Value = OrdenClinica.idOrden;
+                        comando.Parameters.Add(new SqlParameter("@pIdAtencion", System.Data.SqlDbType.Int)).Value = OrdenClinica.idAtencion;
+                        comando.Parameters.Add(new SqlParameter("@pFechaOrden", System.Data.SqlDbType.DateTime)).Value = OrdenClinica.fechaOrden;
+                        comando.Parameters.Add(new SqlParameter("@pObservacion", System.Data.SqlDbType.NVarChar)).Value = OrdenClinica.indicacion.indicacion;
+                        comando.Parameters.Add(new SqlParameter("@pIdUsuarioOrigen", System.Data.SqlDbType.Int)).Value = Sesion.IdUsuario;
+                        comando.Parameters.Add(new SqlParameter("@pIdUsuarioOrigenFisio", System.Data.SqlDbType.Int)).Value = Sesion.IdUsuario;
+                        comando.Parameters.Add(new SqlParameter("@pTblOxigeno", System.Data.SqlDbType.Structured)).Value = OrdenClinica.oxigeno.dtCambiosOxigeno;
+                        comando.Parameters.Add(new SqlParameter("@pTblMedicamento", System.Data.SqlDbType.Structured)).Value = OrdenClinica.medicamento.dtCambiosMedicamento;
+                        comando.Parameters.Add(new SqlParameter("@pTblInfusionImpregnacion", System.Data.SqlDbType.Structured)).Value = OrdenClinica.medicamento.dtCambiosInfusionImpregnacion;
+                        comando.Parameters.Add(new SqlParameter("@pTblMezcla", System.Data.SqlDbType.Structured)).Value = OrdenClinica.medicamento.dtCambiosMezcla;
+                        comando.Parameters.Add(new SqlParameter("@pTblCUPS", System.Data.SqlDbType.Structured)).Value = tblProcedimientos;
                         OrdenClinica.idOrden = (int)comando.ExecuteScalar();
                         try {
                             trans.Commit();

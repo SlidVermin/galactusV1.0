@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaEntradaDatosUI));
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtTexto = new System.Windows.Forms.TextBox();
             this.tstMenu = new System.Windows.Forms.ToolStrip();
+            this.txtTexto = new System.Windows.Forms.TextBox();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.tsBtGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsBtCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.GroupBox1.SuspendLayout();
             this.tstMenu.SuspendLayout();
             this.SuspendLayout();
@@ -49,18 +49,7 @@
             this.GroupBox1.Size = new System.Drawing.Size(643, 288);
             this.GroupBox1.TabIndex = 1;
             this.GroupBox1.TabStop = false;
-            // 
-            // txtTexto
-            // 
-            this.txtTexto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTexto.Location = new System.Drawing.Point(6, 19);
-            this.txtTexto.Multiline = true;
-            this.txtTexto.Name = "txtTexto";
-            this.txtTexto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTexto.Size = new System.Drawing.Size(631, 238);
-            this.txtTexto.TabIndex = 0;
+            this.GroupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // tstMenu
             // 
@@ -76,6 +65,31 @@
             this.tstMenu.Size = new System.Drawing.Size(1095, 25);
             this.tstMenu.TabIndex = 66;
             this.tstMenu.Text = "toolStrip1";
+            // 
+            // txtTexto
+            // 
+            this.txtTexto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTexto.Location = new System.Drawing.Point(6, 19);
+            this.txtTexto.Multiline = true;
+            this.txtTexto.Name = "txtTexto";
+            this.txtTexto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTexto.Size = new System.Drawing.Size(631, 238);
+            this.txtTexto.TabIndex = 0;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(623, 2);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(26, 24);
+            this.btnSalir.TabIndex = 67;
+            this.btnSalir.Text = "X";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // tsBtGuardar
             // 
@@ -98,19 +112,6 @@
             this.tsBtCancelar.Size = new System.Drawing.Size(73, 22);
             this.tsBtCancelar.Text = "Cancelar";
             this.tsBtCancelar.Click += new System.EventHandler(this.tsBtCancelar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(623, 2);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(26, 24);
-            this.btnSalir.TabIndex = 67;
-            this.btnSalir.Text = "X";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // VentanaEntradaDatosUI
             // 

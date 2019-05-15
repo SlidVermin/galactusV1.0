@@ -41,8 +41,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         }
         private void dgvOrdenOxigeno_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            GeneralC.deshabilitarColumnas(dgvOrdenOxigeno);
             if (edicion)
             {
+                dgvOrdenOxigeno.Columns["dgSuspenderOxigenoOrden"].ReadOnly = false;
                 if (GeneralC.verificarUbicacionCelda(e, dgvOrdenOxigeno, "quitar") & e.RowIndex > -1)
                 {
                     bool filaVacia;

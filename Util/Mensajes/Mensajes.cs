@@ -20,6 +20,7 @@ namespace Galactus.Util.Mensajes
         public const string INFORMACION_REQUERIA = "Falta información !";
         public const string VALOR_EXISTENTE = "Este valor ya existe !";
         public const string CANTIDAD_INVALIDA = "Debe colocar una cantidad válida !";
+        public const string VALOR_INCORRECTO = "Por favor corrija la información !";
 
         #region Titulos
         public const string BUSQUEDA_BODEGA = "Busqueda de Bodega";

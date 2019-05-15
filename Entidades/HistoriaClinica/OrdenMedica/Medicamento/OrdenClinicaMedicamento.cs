@@ -13,7 +13,7 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica.Medicamentos
         public DataTable tblMedicamentos { get; set; }
 
         public DataTable tblInfusionImpregnacion { get; set; }
-        public DataTable tblMezcla { get; set; }
+        public DataTable tblMezcla;
 
         public DataTable dtCambiosMedicamento = new DataTable();
         public DataTable dtCambiosInfusionImpregnacion = new DataTable();
@@ -110,6 +110,9 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica.Medicamentos
             dtCambiosInfusionImpregnacion = tblInfusionImpregnacion.Copy();
             dtCambiosMezcla = tblMezcla.Copy();
 
+            dtCambiosMedicamento.Rows.RemoveAt(dtCambiosMedicamento.Rows.Count - 1);
+            dtCambiosInfusionImpregnacion.Rows.RemoveAt(dtCambiosInfusionImpregnacion.Rows.Count - 1);
+
             dtCambiosMedicamento.Columns.Remove("Descripción");
             dtCambiosMedicamento.Columns.Remove("Via admin.");
             dtCambiosMedicamento.Columns.Remove("Unidad");
@@ -166,7 +169,20 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica.Medicamentos
             }
         }
 
-
+        public void quitarMezcla(int idMedicamento)
+        {
+            int i;
+            for (i=0;i<tblMezcla.Rows.Count;i++)
+            {
+                if (int.Parse(tblMezcla.Rows[i]["idMedicamento"].ToString())  == idMedicamento)
+                {
+                    tblMezcla.Rows[i].Delete();
+                }
+                
+            }
+            tblMezcla.AcceptChanges();
+        }
+       
 
         public int obtenerConsecutivo()
         {

@@ -3,6 +3,7 @@ using Galactus.Util;
 using Galactus.Util.Constantes;
 using Galactus.Util.Mensajes;
 using Galactus.VistaControlador.General;
+using Galactus.VistaControlador.HistoriaClinica.OrdenMedica;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -68,6 +69,19 @@ namespace Galactus
             }
             return false;
         }
+        public static void abrirMezcla(DataGridView dgv,ref DataTable dtMezcla ,bool edicion, int idAtencion , DateTime fecha, bool auditoria)
+        {
+            string codigo;
+            codigo = (((DataTable)dgv.DataSource).Rows[dgv.CurrentCell.RowIndex]["idMedicamento"].ToString());
+            if (!string.IsNullOrEmpty(codigo))
+            {
+                MezclaUI mezcla = new MezclaUI();
+                mezcla.obtenerDatos(ref dtMezcla,int.Parse(codigo), idAtencion, fecha, auditoria);
+                mezcla.obtenerEstado(edicion);
+                mezcla.ShowDialog();
+            }
+        }
+       
 
         public static bool verificarUbicacionCelda(DataGridViewCellEventArgs e, DataGridView dgv, string columna)
         {
@@ -416,8 +430,16 @@ namespace Galactus
         {
             foreach (Control item in elemento.Controls)
             {
-                if ((((item is TextBox || item is ToolStripTextBox) && !item.Name.Contains("txtB")) || (item is RichTextBox) || (item is MaskedTextBox) || (item is DataGridView)) && !(item.Name.ToString().ToLower().Contains(ConstanteGeneral.TEXTBOX_CODIGO)))
-                    item.Enabled = true;
+                if (item is TextBox ) 
+                    ((TextBox)item).ReadOnly = true;
+                else if (item is ToolStripTextBox && !item.Name.Contains("txtB"))
+                    (item).Enabled  = false;
+                else if (item is RichTextBox)
+                    ((RichTextBox)item).ReadOnly = true;
+                else if (item is MaskedTextBox)
+                    ((MaskedTextBox)item).ReadOnly = true;
+                else if (item is DataGridView)
+                    ((DataGridView)item).ReadOnly = true;
                 else if ((item is CheckBox) || (item is RadioButton) || (item is ComboBox) || (item is Button) || (item is TreeView) || (item is DateTimePicker) || (item is NumericUpDown))
                     item.Enabled = true;
                 else if ((item is GroupBox) || (item.HasChildren))
@@ -440,8 +462,16 @@ namespace Galactus
         {
             foreach (Control item in elemento.Controls)
             {
-                if ((item is TextBox) & item.Name != "txtFiltro" || (item is RichTextBox) || (item is MaskedTextBox) || (item is DataGridView))
-                    item.Enabled = false;
+                if ((item is TextBox) & item.Name != "txtFiltro") 
+                    ((TextBox)item).ReadOnly = true;
+                else if (item is ToolStripTextBox && !item.Name.Contains("txtB"))
+                    (item).Enabled = true;
+                else if (item is RichTextBox)
+                    ((RichTextBox)item).ReadOnly = true;
+                else if (item is MaskedTextBox)
+                    ((MaskedTextBox)item).ReadOnly = true;
+                else if (item is DataGridView)
+                    ((DataGridView)item).ReadOnly = true;
                 else if ((item is CheckBox) || (item is RadioButton) || (item is ComboBox) || ((item is Button) & !item.Name.ToString().ToLower().Contains(ConstanteGeneral.BOTON_OPCION)) || (item is TreeView) || (item is DateTimePicker) || (item is NumericUpDown))
                     item.Enabled = false;
                 else if ((item is GroupBox) || (item.HasChildren))
@@ -513,7 +543,7 @@ namespace Galactus
             string filtro = string.Concat("[", nombreColumna, "]='' or [", nombreColumna, "] is null");
             DataView trasformador = new DataView(dtOrigen, filtro, "", DataViewRowState.CurrentRows);
             DataTable dtDetalle = new DataTable();
-            dtDetalle = trasformador.ToTable("tabla", true, nombreColumna);
+            dtDetalle = trasformador.ToTable("tabla", false, nombreColumna);
             if (quitarUltimaFila) {
                 dtDetalle.Rows.RemoveAt(dtDetalle.Rows.Count - 1); 
             }
@@ -525,7 +555,46 @@ namespace Galactus
                 return true;
             }
         }
-
+        public static bool validarCantidad(DataTable dtOrigen, string nombreColumna, bool quitarUltimaFila, string msgAdicional ="")
+        {
+            string filtro = string.Concat("[", nombreColumna, "]=0 or [", nombreColumna, "] is null");
+            DataView trasformador = new DataView(dtOrigen, filtro, "", DataViewRowState.CurrentRows);
+            DataTable dtDetalle = new DataTable();
+            dtDetalle = trasformador.ToTable("tabla", false, nombreColumna);
+            if (quitarUltimaFila)
+            {
+                dtDetalle.Rows.RemoveAt(dtDetalle.Rows.Count - 1);
+            }
+            if (dtDetalle.Select().Count() > 0)
+            {
+                Mensajes.mensajeInformacion(Mensajes.CANTIDAD_INVALIDA + msgAdicional);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        public static bool validarSeleccion(DataTable dtOrigen, string nombreColumna, bool quitarUltimaFila, string msgAdicional = "")
+        {
+            string filtro = string.Concat("[", nombreColumna, "]='Por definir' or [", nombreColumna, "] is null");
+            DataView trasformador = new DataView(dtOrigen, filtro, "", DataViewRowState.CurrentRows);
+            DataTable dtDetalle = new DataTable();
+            dtDetalle = trasformador.ToTable("tabla", false, nombreColumna);
+            if (quitarUltimaFila)
+            {
+                dtDetalle.Rows.RemoveAt(dtDetalle.Rows.Count - 1);
+            }
+            if (dtDetalle.Select().Count() > 0)
+            {
+                Mensajes.mensajeInformacion(Mensajes.VALOR_INCORRECTO + msgAdicional);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
         public static void agregarRegistroDatagridView(subMetodo metodo,
                                                        subMetodo verificarFila,
                                                        subMetodo QuitarFila,

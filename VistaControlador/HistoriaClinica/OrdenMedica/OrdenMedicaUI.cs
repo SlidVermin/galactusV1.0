@@ -121,6 +121,14 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         }
         private void tsBtGuardar_Click(object sender, EventArgs e)
         {
+            oxigenoUI.dgvOrdenOxigeno.EndEdit();
+            ordenClinica.oxigeno.tblOxigeno.AcceptChanges();
+            procedimientosUI.dgvProcedimientos.EndEdit();
+            ordenClinica.procedimiento.tblProcedimientos.AcceptChanges();
+            medicamentosUI.dgvOrdenMedicamentos.EndEdit();
+            ordenClinica.medicamento.tblMedicamentos.AcceptChanges();
+            infusionImpregnacionUI.dgvOrdenInfusionImpregnacion.EndEdit();
+            ordenClinica.medicamento.tblInfusionImpregnacion.AcceptChanges();
             if (validarDatos() && Mensajes.preguntaGuardar())
             {
                 try
@@ -131,13 +139,16 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     OrdenClinicaDAL.guardarOrdenMedica(ordenClinica);
                     GeneralC.posGuardar(this, tstMenuOrdenMedica, tsBtNuevo, tsBtModificar, tsBtBuscar, tsBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     desactivarEdicion();
+                    ordenClinica.medicamento.tblMedicamentos.Rows.RemoveAt(ordenClinica.medicamento.tblMedicamentos.Rows.Count - 1);
+                    ordenClinica.medicamento.tblInfusionImpregnacion.Rows.RemoveAt(ordenClinica.medicamento.tblInfusionImpregnacion.Rows.Count - 1);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    Mensajes.mensajeError(ex);
                 }
             }
         }
+
         private void tsBtCancelar_Click(object sender, EventArgs e)
         {
             GeneralC.fnCancelarForm(this, tstMenuOrdenMedica, tsBtNuevo, tsBtBuscar);
@@ -171,11 +182,24 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         bool validarDatos()
         {
 
-            if (ordenClinica.procedimiento.tblProcedimientos.Select("Cantidad = 0").Count() > 1 ||
-                ordenClinica.medicamento.tblMedicamentos.Select("Dosis = 0").Count() > 1 ||
-                ordenClinica.medicamento.tblInfusionImpregnacion.Select("Dosis = 0").Count() > 1)
+            return (GeneralC.validarSeleccion(ordenClinica.medicamento.tblMedicamentos, "Via admin.", true, " - Via admin. ") &&
+                    GeneralC.validarCantidad(ordenClinica.procedimiento.tblProcedimientos, "Cantidad", true, " - Procedimientos") &&
+                    GeneralC.validarCantidad(ordenClinica.medicamento.tblMedicamentos, "Dosis", true, " - Dosis Medicamentos") &&
+                    GeneralC.validarSeleccion(ordenClinica.medicamento.tblMedicamentos, "Horario", true, " - Horario ") &&
+                    GeneralC.validarCantidad(ordenClinica.medicamento.tblInfusionImpregnacion, "Dosis", true, " - Dosis infusión o impregnación") &&
+                    GeneralC.validarCantidad(ordenClinica.medicamento.tblInfusionImpregnacion, "cc/hora", true, " - cc/hora") &&
+                    validarOxigeno() &&
+                    validarDisolvente());
+        }
+        private bool validarOxigeno()
+        {
+            DataTable dtOxigeno;
+            dtOxigeno = GeneralC.copiarTablaCondicional(ordenClinica.oxigeno.tblOxigeno, "idOxigeno is not null");
+            
+            if (GeneralC.copiarTablaCondicional(dtOxigeno, "[Suspender]=False or [Suspender] is null").Select().Count() > 1 ||
+                GeneralC.copiarTablaCondicional(dtOxigeno, "[Suspender]=True ").Select().Count() > 1)
             {
-                Mensajes.mensajeAdvertencia(Mensajes.CANTIDAD_INVALIDA);
+                Mensajes.mensajeInformacion(Mensajes.VALOR_INCORRECTO + " - Oxígeno");
                 return false;
             }
             else
@@ -183,6 +207,25 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 return true;
             }
         }
+
+        private bool validarDisolvente()
+        {
+            DataTable dtImpregnacion;
+            dtImpregnacion = GeneralC.copiarTablaCondicional(ordenClinica.medicamento.tblInfusionImpregnacion, "tipoMedicamento='" + ConstanteGeneral.IMPREGNACION + "'");
+
+            if (GeneralC.copiarTablaCondicional(dtImpregnacion, "(Disolvente<>'" + ConstanteGeneral.POR_DEFINIR + "' and ([Cantidad] = 0 or[Cantidad] is null)) ").Select().Count() > 0 ||
+                GeneralC.copiarTablaCondicional(dtImpregnacion, "(Disolvente='" + ConstanteGeneral.POR_DEFINIR + "' and [Cantidad] > 0 and[Cantidad] is not null)").Select().Count() > 0)
+            {
+                Mensajes.mensajeInformacion(Mensajes.VALOR_INCORRECTO + " - Disolvente impregnación");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+      
         void cargarOrdenClinica(DataRow filaResultado)
         {
             if (filaResultado != null)
@@ -230,12 +273,17 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 procedimientosUI.procedimientos.tblProcedimientos.Clear();
                 procedimientosUI.procedimientos.tblProcedimientos = tablasResultados.Tables["Table4"].Copy();
                 procedimientosUI.enlazarDgv();
+                infusionImpregnacionUI.verificarMezcla();
                 GeneralC.posBuscar(this, tstMenuOrdenMedica, tsBtNuevo, tsBtBuscar, tsBtModificar, tsBtAnular);
             }
         }
 
+
         #endregion
 
-
+        private void tcOrdenMedica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            infusionImpregnacionUI.verificarMezcla();
+        }
     }
 }

@@ -55,7 +55,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             filas[cantidad]["Via admin."] = ConstanteGeneral.POR_DEFINIR;
             filas[cantidad]["idMedicamento"] = medicamentos.obtenerConsecutivo();
             filas.Add();
-            
+            dgvOrdenMedicamentos.Columns["idMedicamento"].Visible = false;
         }
         void cargarVia(DataRow filaResultado)
         {
@@ -73,7 +73,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 if (edicion)
                 {
                     dgvOrdenMedicamentos.Columns["Dosis"].ReadOnly = false;
-                    
+                    dgvOrdenMedicamentos.Columns["Horario"].ReadOnly = false;
+                    dgvOrdenMedicamentos.Columns["HoraInicial"].ReadOnly = false;
                     if (GeneralC.verificarUbicacionCelda(e, dgvOrdenMedicamentos, "quitar") & e.RowIndex < dgvOrdenMedicamentos.Rows.Count - 1)
                     {
                         if (Mensajes.preguntaAnular())
