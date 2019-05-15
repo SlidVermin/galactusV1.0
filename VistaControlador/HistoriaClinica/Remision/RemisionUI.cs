@@ -14,15 +14,17 @@ namespace Galactus.VistaControlador.HistoriaClinica.Remision
     public partial class RemisionUI : Form
     {
         private int idAtencion;
+        private bool auditoria;
         private Anexo9UI anexo9 = new Anexo9UI();
         public RemisionUI()
         {
             InitializeComponent();
         }
-        public RemisionUI(int idAtencion)
+        public RemisionUI(int idAtencion,bool auditoria)
         {
             InitializeComponent();
             this.idAtencion = idAtencion;
+            this.auditoria = auditoria;
         }
         private void tstPropiedadesOrdenMedica_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {

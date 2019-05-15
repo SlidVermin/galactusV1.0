@@ -16,6 +16,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
     public partial class EnfermeriaUI : Form
     {
         private int idAtencion;
+        private bool auditoria;
         private EnfermeriaClinica enfermeria = new EnfermeriaClinica();
         InsumosUI insumos = new InsumosUI();
         NotasUI notas = new NotasUI();
@@ -26,10 +27,11 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         {
             InitializeComponent();
         }
-        public EnfermeriaUI(int idAtencion)
+        public EnfermeriaUI(int idAtencion, bool auditoria)
         {
             InitializeComponent();
             this.idAtencion = idAtencion;
+            this.auditoria = auditoria;
         }
         private void EnfermeriaUI_Load(object sender, EventArgs e)
         {
@@ -230,7 +232,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         public void obtenerDatos()
         {
             enfermeria.tipo = ConstanteGeneral.ENFERMERIA_INSUMOS;
-            enfermeria.Auditoria = false;
+            enfermeria.Auditoria = auditoria;
             enfermeria.idAtencion = idAtencion;
             enfermeria.idInsumo = (txtCodigo.Text.Equals(string.Empty) ? ConstanteGeneral.PREDETERMINADO : Convert.ToInt32(txtCodigo.Text));
             enfermeria.fecha = Convert.ToDateTime(dtpFecha.Text);
@@ -270,7 +272,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         public void obtenerDatosNotas()
         {
             enfermeria.tipo = ConstanteGeneral.ENFERMERIA_INSUMOS;
-            enfermeria.Auditoria = false;
+            enfermeria.Auditoria = auditoria;
             enfermeria.nota = notas.txtNotas.Text;
             enfermeria.idAtencion = idAtencion;
             enfermeria.fechaNota = dtpFecha.Value;
@@ -301,7 +303,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
             {
                 try
                 {
-                    enfermeria.Auditoria = false;
+                    enfermeria.Auditoria = auditoria;
                     enfermeria.guardarGlucometria();
                     GeneralC.posGuardar(this, tstMenu, tsBtNuevo, tsBtBuscar, tsBtModificar, tsBtAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     cargarGlucometriaGuardar();

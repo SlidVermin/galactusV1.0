@@ -17,6 +17,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
     public partial class EvolucionMedicaUI : Form
     {
         private int idAtencion;
+        private bool auditoria;
         Evolucion evolucionMedica = new Evolucion();
         private ProblemasUI problemas = new ProblemasUI();
         private ExamenFisicoUI examen = new ExamenFisicoUI();
@@ -27,10 +28,11 @@ namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
             InitializeComponent();
         }
 
-        public EvolucionMedicaUI(int idAtencion)
+        public EvolucionMedicaUI(int idAtencion, bool auditoria)
         {
             InitializeComponent();
             this.idAtencion = idAtencion;
+            this.auditoria = auditoria;
         }
         private void tstPropiedadesOrdenMedica_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {

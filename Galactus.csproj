@@ -416,6 +416,12 @@
     <Compile Include="VistaControlador\HistoriaClinica\EvolucionMedica\ProblemasUI.Designer.cs">
       <DependentUpon>ProblemasUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Fisioterapia\HojaOxigenoUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Fisioterapia\HojaOxigenoUI.Designer.cs">
+      <DependentUpon>HojaOxigenoUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedenteRecienNacidoUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -768,6 +774,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\EvolucionMedica\ProblemasUI.resx">
       <DependentUpon>ProblemasUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Fisioterapia\HojaOxigenoUI.resx">
+      <DependentUpon>HojaOxigenoUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\FormIngreso\AntecedenteRecienNacidoUI.resx">
       <DependentUpon>AntecedenteRecienNacidoUI.cs</DependentUpon>

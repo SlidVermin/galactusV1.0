@@ -123,10 +123,10 @@
             // txtfechaIngreso
             // 
             this.txtfechaIngreso.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtfechaIngreso.Location = new System.Drawing.Point(328, 29);
+            this.txtfechaIngreso.Location = new System.Drawing.Point(279, 29);
             this.txtfechaIngreso.Name = "txtfechaIngreso";
             this.txtfechaIngreso.ReadOnly = true;
-            this.txtfechaIngreso.Size = new System.Drawing.Size(145, 22);
+            this.txtfechaIngreso.Size = new System.Drawing.Size(174, 22);
             this.txtfechaIngreso.TabIndex = 53;
             this.txtfechaIngreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -134,19 +134,19 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(230, 31);
+            this.label8.Location = new System.Drawing.Point(220, 31);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 17);
+            this.label8.Size = new System.Drawing.Size(55, 17);
             this.label8.TabIndex = 52;
-            this.label8.Text = "Fecha ingreso:";
+            this.label8.Text = "Ingreso:";
             // 
             // txtAdmision
             // 
             this.txtAdmision.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtAdmision.Location = new System.Drawing.Point(111, 30);
+            this.txtAdmision.Location = new System.Drawing.Point(100, 30);
             this.txtAdmision.Name = "txtAdmision";
             this.txtAdmision.ReadOnly = true;
-            this.txtAdmision.Size = new System.Drawing.Size(109, 22);
+            this.txtAdmision.Size = new System.Drawing.Size(99, 22);
             this.txtAdmision.TabIndex = 51;
             this.txtAdmision.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -154,7 +154,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 31);
+            this.label7.Location = new System.Drawing.Point(9, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 17);
             this.label7.TabIndex = 50;
@@ -163,10 +163,10 @@
             // txtEstancia
             // 
             this.txtEstancia.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtEstancia.Location = new System.Drawing.Point(1079, 4);
+            this.txtEstancia.Location = new System.Drawing.Point(1120, 4);
             this.txtEstancia.Name = "txtEstancia";
             this.txtEstancia.ReadOnly = true;
-            this.txtEstancia.Size = new System.Drawing.Size(204, 22);
+            this.txtEstancia.Size = new System.Drawing.Size(163, 22);
             this.txtEstancia.TabIndex = 49;
             this.txtEstancia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -174,7 +174,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1010, 6);
+            this.label6.Location = new System.Drawing.Point(1058, 6);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 48;
@@ -186,7 +186,7 @@
             this.txtEdad.Location = new System.Drawing.Point(780, 2);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.ReadOnly = true;
-            this.txtEdad.Size = new System.Drawing.Size(63, 22);
+            this.txtEdad.Size = new System.Drawing.Size(95, 22);
             this.txtEdad.TabIndex = 47;
             this.txtEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -203,10 +203,10 @@
             // txtSexo
             // 
             this.txtSexo.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtSexo.Location = new System.Drawing.Point(896, 3);
+            this.txtSexo.Location = new System.Drawing.Point(923, 3);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.ReadOnly = true;
-            this.txtSexo.Size = new System.Drawing.Size(107, 22);
+            this.txtSexo.Size = new System.Drawing.Size(129, 22);
             this.txtSexo.TabIndex = 45;
             this.txtSexo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -214,7 +214,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(850, 5);
+            this.label4.Location = new System.Drawing.Point(881, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 17);
             this.label4.TabIndex = 44;
@@ -236,26 +236,26 @@
             this.txtServicio.Location = new System.Drawing.Point(543, 28);
             this.txtServicio.Name = "txtServicio";
             this.txtServicio.ReadOnly = true;
-            this.txtServicio.Size = new System.Drawing.Size(137, 22);
+            this.txtServicio.Size = new System.Drawing.Size(167, 22);
             this.txtServicio.TabIndex = 23;
             this.txtServicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPaciente
             // 
             this.txtPaciente.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtPaciente.Location = new System.Drawing.Point(328, 3);
+            this.txtPaciente.Location = new System.Drawing.Point(279, 3);
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.ReadOnly = true;
-            this.txtPaciente.Size = new System.Drawing.Size(392, 22);
+            this.txtPaciente.Size = new System.Drawing.Size(431, 22);
             this.txtPaciente.TabIndex = 22;
             // 
             // txtAtencion
             // 
             this.txtAtencion.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtAtencion.Location = new System.Drawing.Point(111, 4);
+            this.txtAtencion.Location = new System.Drawing.Point(100, 4);
             this.txtAtencion.Name = "txtAtencion";
             this.txtAtencion.ReadOnly = true;
-            this.txtAtencion.Size = new System.Drawing.Size(109, 22);
+            this.txtAtencion.Size = new System.Drawing.Size(99, 22);
             this.txtAtencion.TabIndex = 19;
             this.txtAtencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -263,7 +263,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(263, 8);
+            this.label3.Location = new System.Drawing.Point(216, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 16;
@@ -273,7 +273,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(44, 8);
+            this.label5.Location = new System.Drawing.Point(33, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 17);
             this.label5.TabIndex = 15;

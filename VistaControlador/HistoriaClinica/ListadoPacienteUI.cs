@@ -17,6 +17,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
     public partial class ListadoPacienteUI : Form
     {
         ListadoPaciente listaPaciente = new ListadoPaciente();
+        private bool auditoria;
         public ListadoPacienteUI()
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void ListadoPaciente_Load(object sender, EventArgs e)
         {
+            auditoria = false; //esto está quemado para pruebas, siempre será HC
             listaPaciente.idMenu = Tag.ToString();
             switch (listaPaciente.idMenu)
             {
@@ -102,12 +104,12 @@ namespace Galactus.VistaControlador.HistoriaClinica
             {
                 case ConstanteGeneral.MENU_ATENCION_MEDICA:
                     HistoriaClinicaUI formHistoriaClinica = new HistoriaClinicaUI();
-                    formHistoriaClinica.obtenerDatosPaciente(listaPaciente,Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value));
+                    formHistoriaClinica.obtenerDatosPaciente(listaPaciente,Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value), auditoria);
                     formHistoriaClinica.ShowDialog();
                     break;
                 case ConstanteGeneral.MENU_ATENCION_ENFERMERIA:
                     FichaEnfermeriaUI formHistoriaEnfermeria = new FichaEnfermeriaUI();
-                    formHistoriaEnfermeria.obtenerDatosPaciente(listaPaciente, Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value));
+                    formHistoriaEnfermeria.obtenerDatosPaciente(listaPaciente, Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value), auditoria);
                     formHistoriaEnfermeria.ShowDialog();
                     break;               
             }

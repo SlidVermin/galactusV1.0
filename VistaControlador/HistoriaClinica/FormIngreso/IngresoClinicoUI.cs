@@ -10,6 +10,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
     public partial class IngresoClinicoUI : Form
     {
         private int idAtencion;
+        private bool auditoria;
         IngresoClinico ingreso = new IngresoClinico();
         private ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();
         private AntecedentesIngresoUI antecedentesUI = new AntecedentesIngresoUI();
@@ -24,10 +25,11 @@ namespace Galactus.VistaControlador.HistoriaClinica
             InitializeComponent();
         }
 
-        public IngresoClinicoUI(int idAtencion)
+        public IngresoClinicoUI(int idAtencion,bool auditoria)
         {
             InitializeComponent();
             this.idAtencion = idAtencion;
+            this.auditoria = auditoria;
         }
 
         private void IngresoClinicoUI_Load(object sender, EventArgs e)

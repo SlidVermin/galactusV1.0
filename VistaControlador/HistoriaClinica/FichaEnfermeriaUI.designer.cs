@@ -52,6 +52,7 @@
             this.tpEnfermeria = new System.Windows.Forms.TabPage();
             this.tabEnfermeria = new System.Windows.Forms.TabControl();
             this.tpSabana = new System.Windows.Forms.TabPage();
+            this.tpOxigeno = new System.Windows.Forms.TabPage();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTitulo = new System.Windows.Forms.Label();
@@ -268,22 +269,22 @@
             // 
             // tpFormatos
             // 
+            this.tpFormatos.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpFormatos.Location = new System.Drawing.Point(4, 29);
             this.tpFormatos.Name = "tpFormatos";
             this.tpFormatos.Padding = new System.Windows.Forms.Padding(3);
             this.tpFormatos.Size = new System.Drawing.Size(1275, 460);
             this.tpFormatos.TabIndex = 1;
             this.tpFormatos.Text = "Formatos";
-            this.tpFormatos.UseVisualStyleBackColor = true;
             // 
             // tpFisioterapeutas
             // 
+            this.tpFisioterapeutas.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpFisioterapeutas.Location = new System.Drawing.Point(4, 29);
             this.tpFisioterapeutas.Name = "tpFisioterapeutas";
             this.tpFisioterapeutas.Size = new System.Drawing.Size(1275, 460);
             this.tpFisioterapeutas.TabIndex = 3;
             this.tpFisioterapeutas.Text = "Fisioterapeutas";
-            this.tpFisioterapeutas.UseVisualStyleBackColor = true;
             // 
             // tpEnfermeria
             // 
@@ -302,6 +303,7 @@
             this.tabEnfermeria.Controls.Add(this.tpEnfermeria);
             this.tabEnfermeria.Controls.Add(this.tpSabana);
             this.tabEnfermeria.Controls.Add(this.tpFisioterapeutas);
+            this.tabEnfermeria.Controls.Add(this.tpOxigeno);
             this.tabEnfermeria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabEnfermeria.Location = new System.Drawing.Point(12, 116);
             this.tabEnfermeria.Name = "tabEnfermeria";
@@ -311,13 +313,24 @@
             // 
             // tpSabana
             // 
+            this.tpSabana.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpSabana.Location = new System.Drawing.Point(4, 29);
             this.tpSabana.Name = "tpSabana";
             this.tpSabana.Padding = new System.Windows.Forms.Padding(3);
             this.tpSabana.Size = new System.Drawing.Size(1275, 460);
             this.tpSabana.TabIndex = 4;
             this.tpSabana.Text = "Aplicación de medicamentos";
-            this.tpSabana.UseVisualStyleBackColor = true;
+            // 
+            // tpOxigeno
+            // 
+            this.tpOxigeno.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpOxigeno.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tpOxigeno.Location = new System.Drawing.Point(4, 29);
+            this.tpOxigeno.Name = "tpOxigeno";
+            this.tpOxigeno.Padding = new System.Windows.Forms.Padding(3);
+            this.tpOxigeno.Size = new System.Drawing.Size(1275, 460);
+            this.tpOxigeno.TabIndex = 5;
+            this.tpOxigeno.Text = "Hoja de oxígeno";
             // 
             // btnSalir
             // 
@@ -407,5 +420,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.TabPage tpSabana;
+        private System.Windows.Forms.TabPage tpOxigeno;
     }
 }

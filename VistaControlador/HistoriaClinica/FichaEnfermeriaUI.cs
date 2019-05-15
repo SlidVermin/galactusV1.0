@@ -7,6 +7,7 @@ using Galactus.Entidades.HistoriaClinica.OrdenMedica;
 using Galactus.VistaControlador.HistoriaClinica.OrdenMedica;
 using Galactus.VistaControlador.HistoriaClinica.Enfermeria;
 using System.Collections.Generic;
+using Galactus.VistaControlador.HistoriaClinica.Fisioterapia;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
@@ -14,11 +15,11 @@ namespace Galactus.VistaControlador.HistoriaClinica
     public partial class FichaEnfermeriaUI : Form
     {
         private int idAtencion;
-       
+        private bool auditoria;
         private EnfermeriaUI enfermeria;
         private FisioterapiaUI fisioterapia;
         private SabanaEnfermeriaUI sabana;
-
+        private HojaOxigenoUI oxigeno;
         public FichaEnfermeriaUI()
         {
             InitializeComponent();
@@ -36,14 +37,16 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
         {
-            enfermeria = new EnfermeriaUI(idAtencion);
-            fisioterapia = new FisioterapiaUI(idAtencion);
-            sabana = new SabanaEnfermeriaUI(idAtencion);
+            enfermeria = new EnfermeriaUI(idAtencion, auditoria);
+            fisioterapia = new FisioterapiaUI(idAtencion, auditoria);
+            sabana = new SabanaEnfermeriaUI(idAtencion, auditoria);
+            oxigeno = new HojaOxigenoUI(idAtencion,auditoria);
             GeneralC.cargarFormularioEnPestana(tpEnfermeria, enfermeria);
             GeneralC.cargarFormularioEnPestana(tpSabana, sabana);
             GeneralC.cargarFormularioEnPestana(tpFisioterapeutas, fisioterapia);
+            GeneralC.cargarFormularioEnPestana(tpOxigeno, oxigeno);
         }
-        public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso)
+        public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso, bool auditoria)
         {
             DataTable dtDatos = new DataTable();
             dtDatos = GeneralC.copiarNewDatatable(listaPaciente.dtPaciente, "Atencion", idIngreso);
@@ -60,8 +63,9 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 txtfechaIngreso.Text = Convert.ToString(dtDatos.Rows[0].Field<DateTime>("Fecha ingreso"));
 
                 idAtencion = int.Parse(txtAtencion.Text);
+                this.auditoria = auditoria;
 
-               
+
 
             }
         }

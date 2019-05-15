@@ -13,15 +13,17 @@ namespace Galactus.VistaControlador.HistoriaClinica
     public partial class EgresoUI : Form
     {
         private int idAtencion;
+        private bool auditoria;
         public EgresoUI()
         {
             InitializeComponent();
         }
 
-        public EgresoUI(int idAtencion)
+        public EgresoUI(int idAtencion,bool auditoria)
         {
             InitializeComponent();
             this.idAtencion = idAtencion;
+            this.auditoria = auditoria;
         }
     }
 }

@@ -15,14 +15,16 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
     {
         private int idAtencion;
+        private bool auditoria;
         public SabanaEnfermeriaUI()
         {
             InitializeComponent();
 
         }
-        public SabanaEnfermeriaUI(int idAtencion) {
+        public SabanaEnfermeriaUI(int idAtencion , bool auditoria) {
             InitializeComponent();
             this.idAtencion = idAtencion;
+            this.auditoria = auditoria;
         }
     }
 }

@@ -83,6 +83,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             oxigenoUI.edicion = true;
             infusionImpregnacionUI.edicion = true;
             medicamentosUI.edicion = true;
+            indicacionesUI.txtIndicaciones.ReadOnly = false;
         }
         void desactivarEdicion()
         {
@@ -141,6 +142,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     desactivarEdicion();
                     ordenClinica.medicamento.tblMedicamentos.Rows.RemoveAt(ordenClinica.medicamento.tblMedicamentos.Rows.Count - 1);
                     ordenClinica.medicamento.tblInfusionImpregnacion.Rows.RemoveAt(ordenClinica.medicamento.tblInfusionImpregnacion.Rows.Count - 1);
+                    ordenClinica.procedimiento.tblProcedimientos.Rows.RemoveAt(ordenClinica.procedimiento.tblProcedimientos.Rows.Count - 1);
                 }
                 catch (Exception ex)
                 {

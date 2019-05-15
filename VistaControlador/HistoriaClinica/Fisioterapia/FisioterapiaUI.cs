@@ -11,6 +11,7 @@ using Galactus.Entidades.HistoriaClinica.Fisioterapeuta;
 using Galactus.Entidades.HistoriaClinica.Enfermeria;
 using Galactus.Util.Constantes;
 using Galactus.Util.Mensajes;
+using Galactus.VistaControlador.HistoriaClinica.Fisioterapia;
 
 namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
 {
@@ -18,6 +19,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
     {
         EnfermeriaClinica enfermeria = new EnfermeriaClinica();
         private int idAtencion;
+        private bool auditoria;
         Fisioterapeutas fisio = new Fisioterapeutas();
         InsumosUI insumos = new InsumosUI();
         NotasUI notas = new NotasUI();
@@ -25,10 +27,11 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         {
             InitializeComponent();
         }
-        public FisioterapiaUI(int idAtencion)
+        public FisioterapiaUI(int idAtencion, bool auditoria)
         {
             InitializeComponent();
             this.idAtencion = idAtencion;
+            this.auditoria = auditoria;
         }
 
         private void FisioterapiaUI_Load(object sender, EventArgs e)
@@ -69,11 +72,13 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
             dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
             
         }
+      
 
         public void obtenerDatos()
         {
             enfermeria.idInsumo = (txtCodigo.Text.Equals(String.Empty) ? ConstanteGeneral.PREDETERMINADO : Convert.ToInt32(txtCodigo.Text));
             enfermeria.tipo = ConstanteGeneral.FISOTERAPEUTAS_INSUMOS;
+            enfermeria.Auditoria = auditoria;
             enfermeria.fecha = dtpFecha.Value;
             enfermeria.idAtencion = idAtencion;
             enfermeria.nota = notas.txtNotas.Text;
@@ -117,7 +122,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
         public void obtenerDatosNotas()
         {
             enfermeria.tipo = ConstanteGeneral.FISOTERAPEUTAS_INSUMOS;
-            enfermeria.Auditoria = false;
+            enfermeria.Auditoria = auditoria;
             enfermeria.nota = notas.txtNotas.Text;
             enfermeria.idAtencion = idAtencion;
             enfermeria.fechaNota = dtpFecha.Value;

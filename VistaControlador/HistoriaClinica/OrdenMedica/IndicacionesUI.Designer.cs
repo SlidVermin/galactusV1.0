@@ -93,9 +93,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtIndicaciones;
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.GroupBox GroupBox17;
+        public System.Windows.Forms.TextBox txtIndicaciones;
     }
 }
