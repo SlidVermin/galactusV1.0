@@ -42,10 +42,9 @@
             this.tsBtBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsBtAnular = new System.Windows.Forms.ToolStripButton();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.tcFisio = new Galactus.Util.Controles.TabControlGalactus();
-            this.tpInsumos = new System.Windows.Forms.TabPage();
             this.tpNotas = new System.Windows.Forms.TabPage();
-            this.tpOxigeno = new System.Windows.Forms.TabPage();
+            this.tpInsumos = new System.Windows.Forms.TabPage();
+            this.tcFisio = new Galactus.Util.Controles.TabControlGalactus();
             this.tstPropiedadesOrdenMedica.SuspendLayout();
             this.tstMenu.SuspendLayout();
             this.tcFisio.SuspendLayout();
@@ -186,22 +185,15 @@
             this.dtpFecha.Size = new System.Drawing.Size(137, 21);
             this.dtpFecha.TabIndex = 70;
             // 
-            // tcFisio
+            // tpNotas
             // 
-            this.tcFisio.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.tcFisio.Controls.Add(this.tpInsumos);
-            this.tcFisio.Controls.Add(this.tpNotas);
-            this.tcFisio.Controls.Add(this.tpOxigeno);
-            this.tcFisio.ItemSize = new System.Drawing.Size(30, 120);
-            this.tcFisio.Location = new System.Drawing.Point(4, 28);
-            this.tcFisio.Multiline = true;
-            this.tcFisio.Name = "tcFisio";
-            this.tcFisio.SelectedIndex = 0;
-            this.tcFisio.Size = new System.Drawing.Size(1082, 289);
-            this.tcFisio.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tcFisio.TabIndex = 69;
-            this.tcFisio.SelectedIndexChanged += new System.EventHandler(this.tcEnfermeria_SelectedIndexChanged);
-            this.tcFisio.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tcFisio_Selecting);
+            this.tpNotas.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpNotas.Location = new System.Drawing.Point(124, 4);
+            this.tpNotas.Name = "tpNotas";
+            this.tpNotas.Padding = new System.Windows.Forms.Padding(3);
+            this.tpNotas.Size = new System.Drawing.Size(954, 281);
+            this.tpNotas.TabIndex = 1;
+            this.tpNotas.Text = "Notas";
             // 
             // tpInsumos
             // 
@@ -213,24 +205,21 @@
             this.tpInsumos.TabIndex = 0;
             this.tpInsumos.Text = "Insumos";
             // 
-            // tpNotas
+            // tcFisio
             // 
-            this.tpNotas.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tpNotas.Location = new System.Drawing.Point(124, 4);
-            this.tpNotas.Name = "tpNotas";
-            this.tpNotas.Padding = new System.Windows.Forms.Padding(3);
-            this.tpNotas.Size = new System.Drawing.Size(954, 281);
-            this.tpNotas.TabIndex = 1;
-            this.tpNotas.Text = "Notas";
-            // 
-            // tpOxigeno
-            // 
-            this.tpOxigeno.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tpOxigeno.Location = new System.Drawing.Point(124, 4);
-            this.tpOxigeno.Name = "tpOxigeno";
-            this.tpOxigeno.Size = new System.Drawing.Size(954, 281);
-            this.tpOxigeno.TabIndex = 3;
-            this.tpOxigeno.Text = "Hoja de oxigeno";
+            this.tcFisio.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tcFisio.Controls.Add(this.tpInsumos);
+            this.tcFisio.Controls.Add(this.tpNotas);
+            this.tcFisio.ItemSize = new System.Drawing.Size(30, 120);
+            this.tcFisio.Location = new System.Drawing.Point(4, 28);
+            this.tcFisio.Multiline = true;
+            this.tcFisio.Name = "tcFisio";
+            this.tcFisio.SelectedIndex = 0;
+            this.tcFisio.Size = new System.Drawing.Size(1082, 289);
+            this.tcFisio.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tcFisio.TabIndex = 69;
+            this.tcFisio.SelectedIndexChanged += new System.EventHandler(this.tcEnfermeria_SelectedIndexChanged);
+            this.tcFisio.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tcFisio_Selecting);
             // 
             // FisioterapiaUI
             // 
@@ -271,10 +260,9 @@
         private System.Windows.Forms.ToolStripButton tsBtBuscar;
         private System.Windows.Forms.ToolStripButton tsBtAnular;
         private System.Windows.Forms.ToolStripButton tsBtCancelar;
-        private Util.Controles.TabControlGalactus tcFisio;
-        private System.Windows.Forms.TabPage tpInsumos;
-        private System.Windows.Forms.TabPage tpNotas;
-        private System.Windows.Forms.TabPage tpOxigeno;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.TabPage tpNotas;
+        private System.Windows.Forms.TabPage tpInsumos;
+        private Util.Controles.TabControlGalactus tcFisio;
     }
 }
