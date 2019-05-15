@@ -134,6 +134,7 @@ namespace Galactus
         public const string ORDEN_CLINICA_BUSCAR_PROCEDIMIENTOS= ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspListaCUPSBuscar]";
         public const string ORDEN_CLINICA_BUSCAR_ESTANCIAS = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspListaCUPSEstanciaBuscar]";
         public const string ORDEN_CLINICA_BUSCAR_OXIGENO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspListaOxigenoBuscar]";
+        public const string ORDEN_CLINICA_BUSCAR_MEDICAMENTOS_VIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspMedicamentoViaBuscar]";
         public const string ORDEN_CLINICA_BUSCAR_MEDICAMENTOS = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspMedicamentoAtencionBuscar]";
         public const string ORDEN_CLINICA_BUSCAR_INFUSION_IMPREGNACION = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspInfusionImpregnacionAtencionBuscar]";
         public const string ORDEN_CLINICA_BUSCAR_MEZCLA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspMezclaAtencionBuscar]";
@@ -164,6 +165,8 @@ namespace Galactus
         public const String CREAR_NOTA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaNotaCrear";
         public const String BUSCAR_NOTA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaNotaBuscar";
         public const String CARGAR_NOTA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaNotaCargar";
+
+        public const String BUSCAR_TIPO_MEDICAMENTO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspTipoMedicamentoBuscar";
         #endregion
     }
 }

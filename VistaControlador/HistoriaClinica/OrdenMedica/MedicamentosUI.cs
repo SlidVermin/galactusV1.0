@@ -57,30 +57,23 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             filas.Add();
             
         }
+        void cargarVia(DataRow filaResultado)
+        {
+            int fila = dgvOrdenMedicamentos.CurrentCell.RowIndex;
+            medicamentos.tblMedicamentos.Rows[fila]["idViaAdmon"] = filaResultado.Field<int>("Código");
+            medicamentos.tblMedicamentos.Rows[fila]["Via admin."] = filaResultado.Field<string>("Descripción");
+
+        }
         private void dgvOrdenMedicamentos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
             if (e.RowIndex >= 0)
             {
-                dgvOrdenMedicamentos.ReadOnly = true;
-                if (GeneralC.verificarUbicacionCelda(e, dgvOrdenMedicamentos, "Dosis"))
+                GeneralC.deshabilitarColumnas(dgvOrdenMedicamentos);
+                if (edicion)
                 {
-                    GeneralC.habilitarCeldas(e, dgvOrdenMedicamentos, "Dosis", edicion);
-                }
-                else if (GeneralC.verificarUbicacionCelda(e, dgvOrdenMedicamentos, "Horario"))
-                {
-                    GeneralC.habilitarCeldas(e, dgvOrdenMedicamentos, "Horario", edicion);
-                }
-                else if (GeneralC.verificarUbicacionCelda(e, dgvOrdenMedicamentos, "HoraInicial"))
-                {
-                    GeneralC.habilitarCeldas(e, dgvOrdenMedicamentos, "HoraInicial", edicion);
-                }
-                else if (GeneralC.verificarUbicacionCelda(e, dgvOrdenMedicamentos, "Suspender"))
-                {
-                    GeneralC.habilitarCeldas(e, dgvOrdenMedicamentos, "Suspender", edicion);
-                }
-                else if (edicion)
-                {
+                    dgvOrdenMedicamentos.Columns["Dosis"].ReadOnly = false;
+                    
                     if (GeneralC.verificarUbicacionCelda(e, dgvOrdenMedicamentos, "quitar") & e.RowIndex < dgvOrdenMedicamentos.Rows.Count - 1)
                     {
                         if (Mensajes.preguntaAnular())
@@ -90,51 +83,92 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     }
                     else if (GeneralC.verificarUbicacionCelda(e, dgvOrdenMedicamentos, "agregar") & e.RowIndex == dgvOrdenMedicamentos.Rows.Count - 1)
                     {
-                        try
-                        {
-                            List<string> parametros = new List<string>();
-
-                            DataTable tablaParametros = new DataTable();
-                            DataTable tablasSeleccionado = new DataTable();
-
-                            tablaParametros.Columns.Add("Parametro", Type.GetType("System.Object"));
-                            tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
-
-                            object[] myObjArray = { "@pAuditoria", auditoria };
-                            object[] myObjArray1 = { "@pIdAtencion", idAtencion };
-                            object[] myObjArray2 = { "@pFechaOrden", fecha };
-                            object[] myObjArray3 = { "@pFiltro", "" };
-
-                            DataView view = new DataView(medicamentos.tblMedicamentos);
-
-                            tablasSeleccionado = view.ToTable(true, new string[] { "idMedicamento" }).Copy();
-                            tablasSeleccionado.Rows.RemoveAt(tablasSeleccionado.Rows.Count - 1);
-                            object[] myObjArray4 = { "@pTblSeleccionados", tablasSeleccionado };
-
-                            tablaParametros.Rows.Add(myObjArray);
-                            tablaParametros.Rows.Add(myObjArray1);
-                            tablaParametros.Rows.Add(myObjArray2);
-                            tablaParametros.Rows.Add(myObjArray3);
-                            tablaParametros.Rows.Add(myObjArray4);
-
-                            GeneralC.buscarDevuelveFila(Sentencias.ORDEN_CLINICA_BUSCAR_MEDICAMENTOS,
-                                                        parametros,
-                                                        new GeneralC.cargarInfoFila(cargarMedicamento),
-                                                        Mensajes.BUSQUEDA_EQUIVALENCIA,
-                                                        true,
-                                                        null,
-                                                        tablasSeleccionado,
-                                                        tablaParametros);
-                        }
-                        catch (Exception ex)
-                        {
-                            Mensajes.mensajeError(ex);
-                        }
+                        agregarMedicamento();
+                    }
+                    else if (GeneralC.verificarUbicacionCelda(e, dgvOrdenMedicamentos, "viaAdmin") & e.RowIndex != dgvOrdenMedicamentos.Rows.Count - 1)
+                    {
+                        agregarVia();
                     }
                 }
             }
         }
+       
+        
 
+
+        void agregarMedicamento() {
+            try
+            {
+                List<string> parametros = new List<string>();
+
+                DataTable tablaParametros = new DataTable();
+                DataTable tablasSeleccionado = new DataTable();
+
+                tablaParametros.Columns.Add("Parametro", Type.GetType("System.Object"));
+                tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
+
+                object[] myObjArray = { "@pAuditoria", auditoria };
+                object[] myObjArray1 = { "@pIdAtencion", idAtencion };
+                object[] myObjArray2 = { "@pFechaOrden", fecha };
+                object[] myObjArray3 = { "@pFiltro", "" };
+
+                DataView view = new DataView(medicamentos.tblMedicamentos);
+
+                tablasSeleccionado = view.ToTable(true, new string[] { "idMedicamento" }).Copy();
+                tablasSeleccionado.Rows.RemoveAt(tablasSeleccionado.Rows.Count - 1);
+                object[] myObjArray4 = { "@pTblSeleccionados", tablasSeleccionado };
+
+                tablaParametros.Rows.Add(myObjArray);
+                tablaParametros.Rows.Add(myObjArray1);
+                tablaParametros.Rows.Add(myObjArray2);
+                tablaParametros.Rows.Add(myObjArray3);
+                tablaParametros.Rows.Add(myObjArray4);
+
+                GeneralC.buscarDevuelveFila(Sentencias.ORDEN_CLINICA_BUSCAR_MEDICAMENTOS,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(cargarMedicamento),
+                                            Mensajes.BUSQUEDA_EQUIVALENCIA,
+                                            true,
+                                            null,
+                                            tablasSeleccionado,
+                                            tablaParametros);
+            }
+            catch (Exception ex)
+            {
+                Mensajes.mensajeError(ex);
+            }
+        }
+        void agregarVia()
+        {
+            try
+            {
+                List<string> parametros = new List<string>();
+
+                DataTable tablaParametros = new DataTable();
+                DataTable tablasSeleccionado = new DataTable();
+                int idEquivalencia;
+                idEquivalencia = (int)dgvOrdenMedicamentos.Rows[dgvOrdenMedicamentos.CurrentCell.RowIndex].Cells["idEquivalencia"].Value;
+                tablaParametros.Columns.Add("Parametro", Type.GetType("System.Object"));
+                tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
+
+                object[] myObjArray = { "@pIdEquivalencia", idEquivalencia };
+
+                tablaParametros.Rows.Add(myObjArray);
+
+                GeneralC.buscarDevuelveFila(Sentencias.ORDEN_CLINICA_BUSCAR_MEDICAMENTOS_VIA,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(cargarVia),
+                                            Mensajes.BUSQUEDA_VIA,
+                                            true,
+                                            null,
+                                            tablasSeleccionado,
+                                            tablaParametros);
+            }
+            catch (Exception ex)
+            {
+                Mensajes.mensajeError(ex);
+            }
+        }
         private void dgvOrdenMedicamentos_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             dgvOrdenMedicamentos.CancelEdit();

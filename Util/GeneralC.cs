@@ -51,28 +51,14 @@ namespace Galactus
             }
 
         }
-        public static void habilitarCeldas(DataGridViewCellEventArgs e, DataGridView dgv, string columna, bool edicion)
+        public static void deshabilitarColumnas(DataGridView dgv)
         {
             int i;
             dgv.ReadOnly = false;
-            for (i=0;i< dgv.Rows.Count;i++)
+            for (i=0;i< dgv.Columns.Count;i++)
             {
-                dgv.Columns[i].ReadOnly = false;
+                dgv.Columns[i].ReadOnly = true;
             }
-            if (e.RowIndex >= 0){
-                if (verificarUbicacionCelda(e, dgv, columna) && edicion && desactvarUltimaFila(dgv, e.RowIndex))
-                {
-                    dgv.Columns[columna].ReadOnly = false;
-                    dgv.Rows[e.RowIndex].Cells[columna].ReadOnly = false;
-                }
-                else
-                {
-                    dgv.Rows[e.RowIndex].Cells[e.ColumnIndex].ReadOnly = true;
-                }
-            }
-            
-
-
         }
         public static bool desactvarUltimaFila(DataGridView dgv, int filaActual)
         {

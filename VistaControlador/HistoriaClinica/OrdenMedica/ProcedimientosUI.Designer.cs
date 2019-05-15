@@ -95,7 +95,6 @@
             this.dgvProcedimientos.TabIndex = 2;
             this.dgvProcedimientos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellClick);
             this.dgvProcedimientos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellEndEdit);
-            this.dgvProcedimientos.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProcedimientos_CellEnter);
             this.dgvProcedimientos.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvProcedimientos_DataError);
             this.dgvProcedimientos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvProcedimientos_KeyPress);
             // 

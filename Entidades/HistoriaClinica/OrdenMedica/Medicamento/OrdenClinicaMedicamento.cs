@@ -47,6 +47,7 @@ namespace Galactus.Entidades.HistoriaClinica.OrdenMedica.Medicamentos
             tblInfusionImpregnacion.Columns["Dosis"].DefaultValue = 0.0;
             tblInfusionImpregnacion.Columns.Add("Unidad", Type.GetType("System.String"));
             tblInfusionImpregnacion.Columns.Add("cc/hora", Type.GetType("System.Double"));
+            tblInfusionImpregnacion.Columns["cc/hora"].DefaultValue = 0.0;
             tblInfusionImpregnacion.Columns.Add("idEquivalenciaDisolvente", Type.GetType("System.Int32"));
             tblInfusionImpregnacion.Columns.Add("Disolvente", Type.GetType("System.String"));
             tblInfusionImpregnacion.Columns.Add("Cantidad", Type.GetType("System.Int32"));

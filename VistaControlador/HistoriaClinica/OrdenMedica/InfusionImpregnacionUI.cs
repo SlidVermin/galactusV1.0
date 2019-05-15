@@ -1,4 +1,6 @@
 ﻿using Galactus.Entidades.HistoriaClinica.OrdenMedica.Medicamentos;
+using Galactus.Util.Constantes;
+using Galactus.Util.Mensajes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +40,191 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             {
                 dgvOrdenInfusionImpregnacion.AutoGenerateColumns = false;
                 dgvOrdenInfusionImpregnacion.DataSource = medicamentos.tblInfusionImpregnacion;
+            }
+        }
+        void cargarMedicamento(DataRow filaResultado)
+        {
+            DataRowCollection filas = medicamentos.tblInfusionImpregnacion.Rows;
+            int cantidad = filas.Count - 1;
+            filas[cantidad]["idEquivalencia"] = filaResultado.Field<int>("ID");
+            filas[cantidad]["Descripción"] = filaResultado.Field<string>("Descripción");
+            filas[cantidad]["Unidad"] = filaResultado.Field<string>("Unidad");
+            filas[cantidad]["Dosis"] = 0;
+            filas[cantidad]["cc/hora"] = 0;
+            filas[cantidad]["Hora inicial"] = ConstanteGeneral.POR_DEFINIR;
+            filas[cantidad]["Acepta disolvente"] = filaResultado.Field<bool>("Acepta disolvente");
+            if (filaResultado.Field<bool>("Acepta disolvente")){
+                filas[cantidad]["Disolvente"] = ConstanteGeneral.POR_DEFINIR;
+            }
+            if (filas[cantidad]["TipoMedicamento"].ToString() == ConstanteGeneral.INFUSION)
+            {
+                filas[cantidad]["Mezcla"] = ConstanteGeneral.POR_DEFINIR;               
+            }
+            filas[cantidad]["idMedicamento"] = medicamentos.obtenerConsecutivo();
+            filas.Add();
+            dgvOrdenInfusionImpregnacion.EndEdit();
+        }
+        void cargarDisolvente(DataRow filaResultado)
+        {
+            int fila = dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex;
+            medicamentos.tblInfusionImpregnacion.Rows[fila]["idEquivalenciaDisolvente"] = filaResultado.Field<int>("ID");
+            medicamentos.tblInfusionImpregnacion.Rows[fila]["Disolvente"] = filaResultado.Field<string>("Descripción");
+
+        }
+
+        private void dgvOrdenInfusionImpregnacion_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            dgvOrdenInfusionImpregnacion.CancelEdit();
+            Mensajes.mensajeInformacion(Mensajes.CANTIDAD_INVALIDA);
+        }
+        void agregarMedicamento()
+        {
+            try
+            {
+                List<string> parametros = new List<string>();
+                DataTable tablasSeleccionado = new DataTable();
+                DataTable tablaParametros = new DataTable();
+
+                tablaParametros.Columns.Add("Parametro", Type.GetType("System.Object"));
+                tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
+
+                object[] myObjArray = { "@pAuditoria", auditoria };
+                object[] myObjArray1 = { "@pIdAtencion", idAtencion };
+                object[] myObjArray2 = { "@pFechaOrden", fecha.Date };
+                object[] myObjArray3 = { "@pFiltro", "" };
+
+                
+                tablaParametros.Rows.Add(myObjArray);
+                tablaParametros.Rows.Add(myObjArray1);
+                tablaParametros.Rows.Add(myObjArray2);
+                tablaParametros.Rows.Add(myObjArray3);
+
+                GeneralC.buscarDevuelveFila(Sentencias.ORDEN_CLINICA_BUSCAR_INFUSION_IMPREGNACION,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(cargarMedicamento),
+                                            Mensajes.BUSQUEDA_EQUIVALENCIA,
+                                            true,
+                                            null,
+                                            tablasSeleccionado,
+                                            tablaParametros);
+            }
+            catch (Exception ex)
+            {
+                Mensajes.mensajeError(ex);
+            }
+        }
+        void agregarDisolvente()
+        {
+            try
+            {
+                List<string> parametros = new List<string>();
+
+                DataTable tablaParametros = new DataTable();
+                DataTable tablasSeleccionado = new DataTable();
+                int idEquivalencia;
+                idEquivalencia = (int)dgvOrdenInfusionImpregnacion.Rows[dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex].Cells["idEquivalencia"].Value;
+                tablaParametros.Columns.Add("Parametro", Type.GetType("System.Object"));
+                tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
+
+                object[] myObjArray = { "@pAuditoria", auditoria };
+                object[] myObjArray1 = { "@pIdAtencion", idAtencion };
+                object[] myObjArray2 = { "@pFechaOrden", fecha };
+                object[] myObjArray3 = { "@pFiltro", "" };
+
+                tablaParametros.Rows.Add(myObjArray);
+                tablaParametros.Rows.Add(myObjArray1);
+                tablaParametros.Rows.Add(myObjArray2);
+                tablaParametros.Rows.Add(myObjArray3);
+
+                GeneralC.buscarDevuelveFila(Sentencias.ORDEN_CLINICA_BUSCAR_DISOLVENTE,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(cargarDisolvente),
+                                            Mensajes.BUSQUEDA_EQUIVALENCIA,
+                                            true,
+                                            null,
+                                            tablasSeleccionado,
+                                            tablaParametros);
+            }
+            catch (Exception ex)
+            {
+                Mensajes.mensajeError(ex);
+            }
+        }
+        private void dgvOrdenInfusionImpregnacion_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+
+                GeneralC.deshabilitarColumnas(dgvOrdenInfusionImpregnacion);
+                if (edicion)
+                {
+                    dgvOrdenInfusionImpregnacion.Columns["Dosis"].ReadOnly = false;
+                    dgvOrdenInfusionImpregnacion.Columns["Suspender"].ReadOnly = false;
+                    dgvOrdenInfusionImpregnacion.Columns["Horainicial"].ReadOnly = false;
+                    dgvOrdenInfusionImpregnacion.Columns["cchora"].ReadOnly = false;
+                    int fila = dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex;
+                    if (!string.IsNullOrEmpty(medicamentos.tblInfusionImpregnacion.Rows[fila]["idEquivalenciaDisolvente"].ToString()))
+                    {
+                        dgvOrdenInfusionImpregnacion.Columns["dgCantidadDisolventeOrdenINIM"].ReadOnly = false;
+                    }
+                    if (GeneralC.verificarUbicacionCelda(e, dgvOrdenInfusionImpregnacion, "quitar") & e.RowIndex < dgvOrdenInfusionImpregnacion.Rows.Count - 1)
+                    {
+                        if (Mensajes.preguntaAnular())
+                        {
+                            dgvOrdenInfusionImpregnacion.Rows.RemoveAt(e.RowIndex);
+                        }
+                    }
+                    else if (GeneralC.verificarUbicacionCelda(e, dgvOrdenInfusionImpregnacion, "agregar") & e.RowIndex == dgvOrdenInfusionImpregnacion.Rows.Count - 1)
+                    {
+                        agregarTipoInfusionImpregnacion();
+                    }
+                    else if (GeneralC.verificarUbicacionCelda(e, dgvOrdenInfusionImpregnacion, "Disolvente") & e.RowIndex != dgvOrdenInfusionImpregnacion.Rows.Count - 1)
+                    {
+                        agregarDisolvente();
+                    }
+                }
+            }
+        }
+        public void agregarTipoInfusionImpregnacion()
+        {
+            List<string> parametros = new List<string>();
+            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_TIPO_MEDICAMENTO,
+                                               parametros,
+                                               new GeneralC.cargarInfoFila(cargarTipoInfusionImpregnacion),
+                                               Mensajes.BUSQUEDA_EQUIVALENCIA, true);
+            if (string.IsNullOrEmpty(dgvOrdenInfusionImpregnacion.Rows[dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex].Cells["Descripcion"].Value.ToString()))
+            {
+                if (dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex == dgvOrdenInfusionImpregnacion.RowCount - 1)
+                {
+                    dgvOrdenInfusionImpregnacion.Rows[dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex].Cells["Tipo"].Value = DBNull.Value;
+                }
+                else
+                {
+                    dgvOrdenInfusionImpregnacion.Rows.RemoveAt(dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex);
+                }
+                
+            }
+        }
+       
+    public void cargarTipoInfusionImpregnacion(DataRow filaResultado)
+        {
+            dgvOrdenInfusionImpregnacion.Rows[dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex].Cells["tipoMedicamento"].Value = filaResultado.Field<string>("Código");
+            dgvOrdenInfusionImpregnacion.Rows[dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex].Cells["Tipo"].Value = filaResultado.Field<string>("Descripción");
+            agregarMedicamento();
+        }
+        private void dgvOrdenInfusionImpregnacion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (edicion && e.KeyCode == Keys.Delete)
+            {
+                bool filaVacia;
+                int filaActual;
+                filaActual = dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex;
+
+                filaVacia = ((dgvOrdenInfusionImpregnacion.Rows[filaActual].Cells["idMedicamento"].Value == null) ||
+                string.IsNullOrEmpty(dgvOrdenInfusionImpregnacion.Rows[filaActual].Cells["idMedicamento"].Value.ToString())) ? true : false;
+
+                dgvOrdenInfusionImpregnacion.Rows[filaActual].Cells["idEquivalenciaDisolvente"].Value = DBNull.Value;
+                dgvOrdenInfusionImpregnacion.Rows[filaActual].Cells["idDisolvente"].Value = DBNull.Value;
             }
         }
     }
