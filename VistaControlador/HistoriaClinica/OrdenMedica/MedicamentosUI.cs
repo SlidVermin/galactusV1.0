@@ -75,6 +75,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     dgvOrdenMedicamentos.Columns["Dosis"].ReadOnly = false;
                     dgvOrdenMedicamentos.Columns["Horario"].ReadOnly = false;
                     dgvOrdenMedicamentos.Columns["HoraInicial"].ReadOnly = false;
+                    dgvOrdenMedicamentos.Columns["Suspender"].ReadOnly = false;
                     if (GeneralC.verificarUbicacionCelda(e, dgvOrdenMedicamentos, "quitar") & e.RowIndex < dgvOrdenMedicamentos.Rows.Count - 1)
                     {
                         if (Mensajes.preguntaAnular())

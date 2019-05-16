@@ -52,6 +52,11 @@ namespace Galactus
             }
 
         }
+        public static Boolean IsNumeric(string valor)
+        {
+            double result;
+            return double.TryParse(valor, out result);
+        }
         public static void deshabilitarColumnas(DataGridView dgv)
         {
             int i;
@@ -59,6 +64,15 @@ namespace Galactus
             for (i=0;i< dgv.Columns.Count;i++)
             {
                 dgv.Columns[i].ReadOnly = true;
+            }
+        }
+        public static void habilitarColumnas(DataGridView dgv)
+        {
+            int i;
+            dgv.ReadOnly = false;
+            for (i = 0; i < dgv.Columns.Count; i++)
+            {
+                dgv.Columns[i].ReadOnly = false;
             }
         }
         public static bool desactvarUltimaFila(DataGridView dgv, int filaActual)

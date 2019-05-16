@@ -16,6 +16,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
     {
         private int idAtencion;
         private bool auditoria;
+        private DateTime fechaEgreso;
         private EnfermeriaUI enfermeria;
         private FisioterapiaUI fisioterapia;
         private SabanaEnfermeriaUI sabana;
@@ -39,7 +40,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
             enfermeria = new EnfermeriaUI(idAtencion, auditoria);
             fisioterapia = new FisioterapiaUI(idAtencion, auditoria);
-            sabana = new SabanaEnfermeriaUI(idAtencion, auditoria);
+            sabana = new SabanaEnfermeriaUI(idAtencion, auditoria,DateTime.Parse(txtfechaIngreso.Text), fechaEgreso);
             oxigeno = new HojaOxigenoUI(idAtencion,auditoria);
             GeneralC.cargarFormularioEnPestana(tpEnfermeria, enfermeria);
             GeneralC.cargarFormularioEnPestana(tpSabana, sabana);
@@ -56,12 +57,12 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 txtAdmision.Text = Convert.ToString(dtDatos.Rows[0].Field<int>("Admision"));
                 txtPaciente.Text = dtDatos.Rows[0].Field<String>("Paciente");
                 txtEdad.Text = Convert.ToString(dtDatos.Rows[0].Field<String>("Edad"));
-                tcHistoriaClinica.Text = dtDatos.Rows[0].Field<String>("EPS");
+                tcHistoriaClinica.Text = dtDatos.Rows[0].Field<String>("Cliente");
                 txtEstancia.Text = Convert.ToString(dtDatos.Rows[0].Field<String>("Estancia"));
                 txtSexo.Text = dtDatos.Rows[0].Field<String>("Genero");
                 txtServicio.Text = dtDatos.Rows[0].Field<String>("Entorno");
                 txtfechaIngreso.Text = Convert.ToString(dtDatos.Rows[0].Field<DateTime>("Fecha ingreso"));
-
+                fechaEgreso = (dtDatos.Rows[0].Field<DateTime>("Fecha egreso"));
                 idAtencion = int.Parse(txtAtencion.Text);
                 this.auditoria = auditoria;
 

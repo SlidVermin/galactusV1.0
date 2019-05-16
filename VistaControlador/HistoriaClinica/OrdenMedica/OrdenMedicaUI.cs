@@ -143,6 +143,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     ordenClinica.medicamento.tblMedicamentos.Rows.RemoveAt(ordenClinica.medicamento.tblMedicamentos.Rows.Count - 1);
                     ordenClinica.medicamento.tblInfusionImpregnacion.Rows.RemoveAt(ordenClinica.medicamento.tblInfusionImpregnacion.Rows.Count - 1);
                     ordenClinica.procedimiento.tblProcedimientos.Rows.RemoveAt(ordenClinica.procedimiento.tblProcedimientos.Rows.Count - 1);
+                    medicamentosUI.dgvOrdenMedicamentos.Columns["idMedicamento"].Visible = false;
+                    infusionImpregnacionUI.dgvOrdenInfusionImpregnacion.Columns["idMedicamento"].Visible = false;
+                    txtBCodigoOrden.Text = Convert.ToString(ordenClinica.idOrden);
                 }
                 catch (Exception ex)
                 {

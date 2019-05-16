@@ -48,6 +48,7 @@
             this.tpMedicamentos = new System.Windows.Forms.TabPage();
             this.tpInfusionImpregnacion = new System.Windows.Forms.TabPage();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.tsBtImprimir = new System.Windows.Forms.ToolStripButton();
             this.tstMenuOrdenMedica.SuspendLayout();
             this.tstPropiedadesOrdenMedica.SuspendLayout();
             this.tcOrdenMedica.SuspendLayout();
@@ -63,7 +64,8 @@
             this.tsBtGuardar,
             this.tsBtCancelar,
             this.tsBtBuscar,
-            this.tsBtAnular});
+            this.tsBtAnular,
+            this.tsBtImprimir});
             this.tstMenuOrdenMedica.Location = new System.Drawing.Point(0, 332);
             this.tstMenuOrdenMedica.MaximumSize = new System.Drawing.Size(1040, 25);
             this.tstMenuOrdenMedica.MinimumSize = new System.Drawing.Size(1040, 25);
@@ -255,6 +257,16 @@
             this.dtpFecha.Size = new System.Drawing.Size(137, 21);
             this.dtpFecha.TabIndex = 59;
             // 
+            // tsBtImprimir
+            // 
+            this.tsBtImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tsBtImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBtImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsBtImprimir.Name = "tsBtImprimir";
+            this.tsBtImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tsBtImprimir.Text = "Imprimir";
+            this.tsBtImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
             // OrdenMedicaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,5 +313,6 @@
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.TabPage tpOxigeno;
         private System.Windows.Forms.TabPage tpInfusionImpregnacion;
+        private System.Windows.Forms.ToolStripButton tsBtImprimir;
     }
 }

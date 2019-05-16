@@ -83,10 +83,10 @@ namespace Galactus.VistaControlador.HistoriaClinica
             dgvListaPaciente.Columns["dgEstancia"].DataPropertyName = "Estancia";
             dgvListaPaciente.Columns["dgEdad"].DataPropertyName = "Edad";
             dgvListaPaciente.Columns["dgGenero"].DataPropertyName = "Genero";
-            dgvListaPaciente.Columns["dgEps"].DataPropertyName = "EPS";
+            dgvListaPaciente.Columns["dgCliente"].DataPropertyName = "Cliente";
             dgvListaPaciente.Columns["dgColor"].DataPropertyName = "Color";
+            dgvListaPaciente.Columns["dgEgreso"].DataPropertyName = "Fecha egreso";
 
-           
             cargar();
             
         }

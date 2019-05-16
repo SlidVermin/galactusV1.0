@@ -112,7 +112,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(712, 32);
+            this.label10.Location = new System.Drawing.Point(712, 31);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 17);
             this.label10.TabIndex = 54;
@@ -121,7 +121,7 @@
             // txtfechaIngreso
             // 
             this.txtfechaIngreso.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtfechaIngreso.Location = new System.Drawing.Point(257, 29);
+            this.txtfechaIngreso.Location = new System.Drawing.Point(257, 28);
             this.txtfechaIngreso.Name = "txtfechaIngreso";
             this.txtfechaIngreso.ReadOnly = true;
             this.txtfechaIngreso.Size = new System.Drawing.Size(174, 22);
@@ -141,7 +141,7 @@
             // txtAdmision
             // 
             this.txtAdmision.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtAdmision.Location = new System.Drawing.Point(100, 30);
+            this.txtAdmision.Location = new System.Drawing.Point(100, 28);
             this.txtAdmision.Name = "txtAdmision";
             this.txtAdmision.ReadOnly = true;
             this.txtAdmision.Size = new System.Drawing.Size(80, 22);
@@ -172,7 +172,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1058, 6);
+            this.label6.Location = new System.Drawing.Point(1058, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 48;
@@ -181,7 +181,7 @@
             // txtEdad
             // 
             this.txtEdad.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtEdad.Location = new System.Drawing.Point(780, 2);
+            this.txtEdad.Location = new System.Drawing.Point(780, 4);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.ReadOnly = true;
             this.txtEdad.Size = new System.Drawing.Size(95, 22);
@@ -192,7 +192,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(732, 4);
+            this.label2.Location = new System.Drawing.Point(732, 7);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 46;
@@ -201,7 +201,7 @@
             // txtSexo
             // 
             this.txtSexo.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtSexo.Location = new System.Drawing.Point(923, 3);
+            this.txtSexo.Location = new System.Drawing.Point(923, 4);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.ReadOnly = true;
             this.txtSexo.Size = new System.Drawing.Size(129, 22);
@@ -212,7 +212,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(881, 5);
+            this.label4.Location = new System.Drawing.Point(881, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 17);
             this.label4.TabIndex = 44;
@@ -231,7 +231,7 @@
             // txtPaciente
             // 
             this.txtPaciente.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtPaciente.Location = new System.Drawing.Point(257, 3);
+            this.txtPaciente.Location = new System.Drawing.Point(257, 4);
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.ReadOnly = true;
             this.txtPaciente.Size = new System.Drawing.Size(453, 22);
@@ -251,7 +251,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(194, 8);
+            this.label3.Location = new System.Drawing.Point(194, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 16;
@@ -261,7 +261,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(33, 8);
+            this.label5.Location = new System.Drawing.Point(33, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 17);
             this.label5.TabIndex = 15;
