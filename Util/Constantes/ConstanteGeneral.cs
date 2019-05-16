@@ -48,6 +48,7 @@ namespace Galactus.Util.Constantes
         public const string ESQUEMA_TERCERO = "[Tercero].";
         public const string ESQUEMA_CLIENTE = "[Cliente].";
         public const string ESQUEMA_HISTORIA_CLINICA = "[HistoriaClinica].";
+        public const string ESQUEMA_LABORATORIO = "[Laboratorio].";
 
         public const int ESTADO_INICIADO = 91;
 

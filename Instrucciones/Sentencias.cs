@@ -121,7 +121,7 @@ namespace Galactus
         public const string ANULAR_INFORME_QX = "";
         public const string CREAR_INFORME_QX = "";
 
-        public const string BUSCAR_PACIENTE_RESULTADO_LAB = "";
+        public const string BUSCAR_PACIENTE_RESULTADO_LAB = ConstanteGeneral.ESQUEMA_LABORATORIO + "[uspPacienteSolicitudExamenBuscar]";
         public const string BUSCAR_RESULTADO_LAB = "";
         public const string ANULAR_RESULTADO_LAB = "";
         public const string CREAR_RESULTADO_LAB = "";

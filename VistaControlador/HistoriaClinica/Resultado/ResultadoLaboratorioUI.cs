@@ -142,6 +142,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             txtIdentificacion.Text = dRows.Field<string>("identificacion").ToString();
             txtServicio.Text = dRows.Field<string>("servicio").ToString();
             txtOrdenMedica.Text = dRows.Field<string>("ordenMedica").ToString();
+            txtProcedimiento.Text = dRows.Field<string>("Descripcion").ToString();
             txtCodigoAdministradora.Text = dRows.Field<int>("codigoAdministracion").ToString();
             txtAdministradora.Text = dRows.Field<string>("administracion").ToString();
         }
