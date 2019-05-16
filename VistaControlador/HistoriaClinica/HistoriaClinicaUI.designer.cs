@@ -42,7 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtSexo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtServicio = new System.Windows.Forms.TextBox();
             this.txtPaciente = new System.Windows.Forms.TextBox();
             this.txtAtencion = new System.Windows.Forms.TextBox();
@@ -89,7 +88,6 @@
             this.pnlInformacion.Controls.Add(this.label2);
             this.pnlInformacion.Controls.Add(this.txtSexo);
             this.pnlInformacion.Controls.Add(this.label4);
-            this.pnlInformacion.Controls.Add(this.label9);
             this.pnlInformacion.Controls.Add(this.txtServicio);
             this.pnlInformacion.Controls.Add(this.txtPaciente);
             this.pnlInformacion.Controls.Add(this.txtAtencion);
@@ -123,7 +121,7 @@
             // txtfechaIngreso
             // 
             this.txtfechaIngreso.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtfechaIngreso.Location = new System.Drawing.Point(279, 29);
+            this.txtfechaIngreso.Location = new System.Drawing.Point(257, 29);
             this.txtfechaIngreso.Name = "txtfechaIngreso";
             this.txtfechaIngreso.ReadOnly = true;
             this.txtfechaIngreso.Size = new System.Drawing.Size(174, 22);
@@ -134,7 +132,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(220, 31);
+            this.label8.Location = new System.Drawing.Point(198, 31);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 17);
             this.label8.TabIndex = 52;
@@ -146,7 +144,7 @@
             this.txtAdmision.Location = new System.Drawing.Point(100, 30);
             this.txtAdmision.Name = "txtAdmision";
             this.txtAdmision.ReadOnly = true;
-            this.txtAdmision.Size = new System.Drawing.Size(99, 22);
+            this.txtAdmision.Size = new System.Drawing.Size(80, 22);
             this.txtAdmision.TabIndex = 51;
             this.txtAdmision.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -220,33 +218,23 @@
             this.label4.TabIndex = 44;
             this.label4.Text = "Sexo:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(481, 31);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 17);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Servicio:";
-            // 
             // txtServicio
             // 
             this.txtServicio.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtServicio.Location = new System.Drawing.Point(543, 28);
+            this.txtServicio.Location = new System.Drawing.Point(437, 28);
             this.txtServicio.Name = "txtServicio";
             this.txtServicio.ReadOnly = true;
-            this.txtServicio.Size = new System.Drawing.Size(167, 22);
+            this.txtServicio.Size = new System.Drawing.Size(273, 22);
             this.txtServicio.TabIndex = 23;
             this.txtServicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtPaciente
             // 
             this.txtPaciente.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtPaciente.Location = new System.Drawing.Point(279, 3);
+            this.txtPaciente.Location = new System.Drawing.Point(257, 3);
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.ReadOnly = true;
-            this.txtPaciente.Size = new System.Drawing.Size(431, 22);
+            this.txtPaciente.Size = new System.Drawing.Size(453, 22);
             this.txtPaciente.TabIndex = 22;
             // 
             // txtAtencion
@@ -255,7 +243,7 @@
             this.txtAtencion.Location = new System.Drawing.Point(100, 4);
             this.txtAtencion.Name = "txtAtencion";
             this.txtAtencion.ReadOnly = true;
-            this.txtAtencion.Size = new System.Drawing.Size(99, 22);
+            this.txtAtencion.Size = new System.Drawing.Size(80, 22);
             this.txtAtencion.TabIndex = 19;
             this.txtAtencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -263,7 +251,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(216, 8);
+            this.label3.Location = new System.Drawing.Point(194, 8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 16;
@@ -513,7 +501,6 @@
         #endregion
         private System.Windows.Forms.Panel pnlInformacion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtServicio;
         private System.Windows.Forms.TextBox txtPaciente;
         private System.Windows.Forms.TextBox txtAtencion;
