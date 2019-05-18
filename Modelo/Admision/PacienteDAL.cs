@@ -31,8 +31,8 @@ namespace Galactus.Modelo.Admision
                     comando.Parameters.Add(new SqlParameter("@IdMunicipioResidencia", System.Data.SqlDbType.Int)).Value = paciente.idMunicipioResidencia;
                     comando.Parameters.Add(new SqlParameter("@IdMunicipioNacimiento", System.Data.SqlDbType.Int)).Value = paciente.idMunicipioNacimiento;
                     comando.Parameters.Add(new SqlParameter("@Direccion", System.Data.SqlDbType.NVarChar)).Value = paciente.direccionResidencia;
-                    comando.Parameters.Add(new SqlParameter("@Telefono", System.Data.SqlDbType.Int)).Value = paciente.telefono;
-                    comando.Parameters.Add(new SqlParameter("@Celular", System.Data.SqlDbType.Int)).Value = paciente.celular;
+                    comando.Parameters.Add(new SqlParameter("@Telefono", System.Data.SqlDbType.NVarChar)).Value = paciente.telefono;
+                    comando.Parameters.Add(new SqlParameter("@Celular", System.Data.SqlDbType.NVarChar)).Value = paciente.celular;
                     comando.Parameters.Add(new SqlParameter("@IdEps", System.Data.SqlDbType.Int)).Value = paciente.idEps;
                     comando.Parameters.Add(new SqlParameter("@FechaNacimiento", System.Data.SqlDbType.Date)).Value = paciente.fechaNacimiento;
                     comando.Parameters.Add(new SqlParameter("@Correo", System.Data.SqlDbType.NVarChar)).Value = paciente.correo;

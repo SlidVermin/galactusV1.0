@@ -73,7 +73,20 @@ namespace Galactus.Util.Constantes
         public const string SABANA_ID_SIN_APLICAR = "0";
         public const string SABANA_ID_SUSPENDIDO = "-100";
         public const string SABANA_ID_MODIFICADO = "-200";
-    
+        
+        public enum PARAMETRO_PACIENTE
+        {
+            REGIMEN = 51,
+            ZONA = 53,
+            AFILIACION = 46,
+            CLASESOCIAL=47,
+            ESTADOCIVIL=49,
+            DOCUMENTOS = 29,
+            GENERO = 69
+        }
+
+        
+
 
         #region configuracion general
         public const int MARCA = 1;

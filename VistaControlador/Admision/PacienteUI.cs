@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Galactus.Entidades.Admision;
 using Galactus.Util.Mensajes;
 using Galactus.Modelo.Admision;
+using Galactus.Util.Constantes;
 
 namespace Galactus.VistaControlador
 {
@@ -59,7 +60,8 @@ namespace Galactus.VistaControlador
 
         private void PacienteUI_Load(object sender, EventArgs e)
         {
-            GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
+            establecerParametros();
+           
             GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
@@ -72,30 +74,41 @@ namespace Galactus.VistaControlador
                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                cmbPaisResidencia);
-            GeneralC.llenarCombo(Sentencias.CARGAR_TIPO_DOCUMENTOS, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
-                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                               cmbDocumento);
-            GeneralC.llenarCombo(Sentencias.CARGAR_GENERO, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
-                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                               cmbSexo);
-            GeneralC.llenarCombo(Sentencias.CARGAR_ESTADO_CIVIL, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
-                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                               cmbEstadoCivil);
-            GeneralC.llenarCombo(Sentencias.CARGAR_AFILIACION, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
-                              Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                              cmbAfiliacion);
-            GeneralC.llenarCombo(Sentencias.CARGAR_ESTRATO_SOCIAL, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
-                              Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                              cmbEstrato);
-            GeneralC.llenarCombo(Sentencias.CARGAR_REGIMEN, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
-                              Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                              cmbRegimen);
-            GeneralC.llenarCombo(Sentencias.CARGAR_ZONA, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
-                              Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                              cmbZona);
-            btnSalir.Enabled = true;
+                       btnSalir.Enabled = true;
+            cargarCombosDatatable(paciente.dtResultado,(int) ConstanteGeneral.PARAMETRO_PACIENTE.AFILIACION,cmbAfiliacion);
+            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.ZONA, cmbZona);
+            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.REGIMEN, cmbRegimen);
+            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.CLASESOCIAL, cmbEstrato);
+            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.ESTADOCIVIL, cmbEstadoCivil);
+            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.GENERO, cmbSexo);
+            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.DOCUMENTOS, cmbDocumento);
+            GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
         }
-
+        public void cargarCombosDatatable(DataTable dt, Int32 idParametro,ComboBox combo)
+        {
+            DataTable dtC = new DataTable();
+            DataRow [] filas;
+            dtC = dt.Clone();
+            filas = dt.Select("idParametro=" + idParametro);
+            foreach(DataRow fila in filas)
+            {
+                dtC.ImportRow(fila);
+            }
+            dtC.Columns.Remove("idParametro");
+            GeneralC.llenarComboDatosDefinidor(dtC, ConstanteGeneral.VALUEMEMBER, ConstanteGeneral.DISPLAYMEMBER, combo);
+        }
+        public void establecerParametros()
+        {
+            paciente.establecerColumnas();
+            paciente.dtParametro.Rows.Add(ConstanteGeneral.PARAMETRO_PACIENTE.AFILIACION);
+            paciente.dtParametro.Rows.Add(ConstanteGeneral.PARAMETRO_PACIENTE.ZONA);
+            paciente.dtParametro.Rows.Add(ConstanteGeneral.PARAMETRO_PACIENTE.REGIMEN);
+            paciente.dtParametro.Rows.Add(ConstanteGeneral.PARAMETRO_PACIENTE.CLASESOCIAL);
+            paciente.dtParametro.Rows.Add(ConstanteGeneral.PARAMETRO_PACIENTE.ESTADOCIVIL);
+            paciente.dtParametro.Rows.Add(ConstanteGeneral.PARAMETRO_PACIENTE.DOCUMENTOS);
+            paciente.dtParametro.Rows.Add(ConstanteGeneral.PARAMETRO_PACIENTE.GENERO);
+            paciente.cargarParametros();
+        }
         public void deshabilitarControles()
         {
             cmbDepartamentoDoc.Enabled = false;
@@ -178,7 +191,14 @@ namespace Galactus.VistaControlador
                 MessageBox.Show("¡ Favor seleccione la EPS !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtEPS.Focus();
                 return false;
-            }else if (cmbPaisNacimiento.SelectedIndex == 0)
+             
+            }else if (txtEdad.Equals(string.Empty))
+            {
+                MessageBox.Show("¡ Por favor seleccionar la edad del paciente !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                dtpNacimiento.Focus();
+                return false;
+            }
+            else if (cmbPaisNacimiento.SelectedIndex == 0)
             {
                 MessageBox.Show("¡ Favor seleccione el pais de nacimiento !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 cmbPaisNacimiento.Focus();
@@ -238,10 +258,10 @@ namespace Galactus.VistaControlador
                 MessageBox.Show("¡ Favor digite la direccion de residencia !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtDireccion.Focus();
                 return false;
-            }else if (telResText.Equals(string.Empty))
+            }else if (txtTelefono.Equals(string.Empty))
             {
                 MessageBox.Show("¡ Favor digite el numero de telefono !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                telResText.Focus();
+                txtTelefono.Focus();
                 return false;
             }
             else
@@ -256,22 +276,22 @@ namespace Galactus.VistaControlador
             paciente.segundoNombre = txtSegundoNombre.Text;
             paciente.primerApellido = txtPrimerApellido.Text;
             paciente.segundoApellido = txtSegundoApellido.Text;
-            paciente.tipoIdentificacion = (string)cmbDocumento.SelectedValue;
+            paciente.tipoIdentificacion = Convert.ToString( cmbDocumento.SelectedValue);
             paciente.documentoIndentidad = txtIdentificacion.Text;
-            paciente.idMunicipioExpedicion = (string)cmbCiudadDocumento.SelectedValue;
-            paciente.idMunicipioNacimiento = (string)cmbCiudadNacimiento.SelectedValue;
-            paciente.idMunicipioResidencia = (string)cmbCiudadResidencia.SelectedValue;
+            paciente.idMunicipioExpedicion = Convert.ToString( cmbCiudadDocumento.SelectedValue);
+            paciente.idMunicipioNacimiento = Convert.ToString( cmbCiudadNacimiento.SelectedValue);
+            paciente.idMunicipioResidencia = Convert.ToString( cmbCiudadResidencia.SelectedValue);
             paciente.correo = txtEmail.Text;
-            paciente.idGenero = (string)cmbSexo.SelectedValue;
+            paciente.idGenero = Convert.ToString( cmbSexo.SelectedValue);
             paciente.direccionResidencia = txtDireccion.Text;
-            paciente.telefono = telResText.Text;
-            paciente.celular = celResText.Text;
+            paciente.telefono = txtTelefono.Text;
+            paciente.celular = txtCelular.Text;
             paciente.fechaNacimiento = dtpNacimiento.Value;
-            paciente.idRegimen = (string)cmbRegimen.SelectedValue;
-            paciente.idTipoAfiliacion = (string)cmbAfiliacion.SelectedValue;
-            paciente.idZonaUrbana = (string)cmbZona.SelectedValue;
-            paciente.idEstadoCivil = (string)cmbEstadoCivil.SelectedValue;
-            paciente.idestrato = (string)cmbEstrato.SelectedValue;
+            paciente.idRegimen = Convert.ToString( cmbRegimen.SelectedValue);
+            paciente.idTipoAfiliacion = Convert.ToString( cmbAfiliacion.SelectedValue);
+            paciente.idZonaUrbana = Convert.ToString( cmbZona.SelectedValue);
+            paciente.idEstadoCivil = Convert.ToString( cmbEstadoCivil.SelectedValue);
+            paciente.idestrato = Convert.ToString( cmbEstrato.SelectedValue);
         }
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
@@ -315,11 +335,11 @@ namespace Galactus.VistaControlador
             cmbAfiliacion.SelectedValue = paciente.idTipoAfiliacion;
             cmbEstadoCivil.SelectedValue = paciente.idEstadoCivil;
             txtDireccion.Text = paciente.direccionResidencia;
-            telResText.Text = paciente.telefono;
-            celResText.Text = paciente.celular;
+            txtTelefono.Text = paciente.telefono;
+            txtCelular.Text = paciente.celular;
             txtEmail.Text = paciente.correo;
             dtpNacimiento.Value = paciente.fechaNacimiento;
-            GeneralC.calcularEdad(dtpNacimiento.Value, ref edad);
+            GeneralC.calcularEdad(dtpNacimiento, ref edad);
             txtEdad.Text = edad;
             tstModificar.Enabled = true;
             tsbAnular.Enabled = true;
@@ -329,50 +349,22 @@ namespace Galactus.VistaControlador
 
        private void tsbGuardar_Click_1(object sender, EventArgs e)
         {
-            if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                try
-                {
-                    asignarDatos();
-                    PacienteDAL.guardar(paciente);
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
+           
         }
 
         private void tsbBuscar_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                List<string> parametros = new List<string>();
-
-                GeneralC.buscarDevuelveFila(Sentencias.PACIENTE_BUSCAR,
-                                                   parametros,
-                                                   new GeneralC.cargarInfoFila(cargarPaciente),
-                                                   Mensajes.BUSQUEDA_PACIENTE, true);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+           
         }
 
         private void tsbCancelar_Click_1(object sender, EventArgs e)
         {
-            GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
-            paciente.idPaciente = 0;
-            btnSalir.Enabled = true;
-            dtpNacimiento.ResetText();
+           
         }
 
         private void tstModificar_Click_1(object sender, EventArgs e)
         {
-            GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+           
         }
 
         private void tsbNuevo_Click_1(object sender, EventArgs e)
@@ -539,20 +531,7 @@ namespace Galactus.VistaControlador
 
         private void tsbAnular_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                try
-                {
-                    paciente.eliminar();
-                    GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
-                    btnSalir.Enabled = true;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
-            }
+            
         }
 
         private void buscarEpsBtn_Click_2(object sender, EventArgs e)
@@ -580,9 +559,94 @@ namespace Galactus.VistaControlador
         private void fechaNPicker_Validating(object sender, CancelEventArgs e)
         {
 
-            GeneralC.calcularEdad(dtpNacimiento.Value, ref edad);
+            GeneralC.calcularEdad(dtpNacimiento, ref edad);
             txtEdad.Text = edad;
         }
 
+        private void tsbNuevo_Click(object sender, EventArgs e)
+        {
+            GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+            deshabilitarControles();
+            paciente.idPaciente = 0;
+            dtpNacimiento.ResetText();
+            habilitarControles();
+        }
+        public void habilitarControles()
+        {
+            txtPrimerNombre.ReadOnly = false;
+            txtPrimerApellido.ReadOnly = false;
+            txtSegundoApellido.ReadOnly = false;
+            txtSegundoNombre.ReadOnly = false;
+            txtEmail.ReadOnly = false;
+            txtDireccion.ReadOnly = false;
+            txtIdentificacion.ReadOnly = false;
+            txtTelefono.ReadOnly = false;
+            txtCelular.ReadOnly = false;
+        }
+        private void tsbGuardar_Click_2(object sender, EventArgs e)
+        {
+            if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    asignarDatos();
+                    PacienteDAL.guardar(paciente);
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void tsbCancelar_Click(object sender, EventArgs e)
+        {
+            GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
+            paciente.idPaciente = 0;
+            btnSalir.Enabled = true;
+            dtpNacimiento.ResetText();
+        }
+
+        private void tstModificar_Click(object sender, EventArgs e)
+        {
+            GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+        }
+
+        private void tsbBuscar_Click_2(object sender, EventArgs e)
+        {
+            try
+            {
+                List<string> parametros = new List<string>();
+
+                GeneralC.buscarDevuelveFila(Sentencias.PACIENTE_BUSCAR,
+                                                   parametros,
+                                                   new GeneralC.cargarInfoFila(cargarPaciente),
+                                                   Mensajes.BUSQUEDA_PACIENTE, true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void tsbAnular_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    paciente.eliminar();
+                    GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    btnSalir.Enabled = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+        }
     }
 }

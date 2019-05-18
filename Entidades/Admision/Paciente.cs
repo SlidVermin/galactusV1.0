@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Galactus.Modelo.Admision;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Galactus.Entidades.Admision
 {
@@ -39,8 +41,23 @@ namespace Galactus.Entidades.Admision
         public int edad { get; set; }
         public DataTable dtDatos = new DataTable();
         public DataTable dtUbicacion = new DataTable();
+        public DataTable dtParametro = new DataTable();
+        public DataTable dtResultado = new DataTable();
         #endregion
 
+        public void establecerColumnas()
+        {
+            dtParametro.Columns.Add("idParametro", typeof(Int32));
+        }
+        public void cargarParametros()
+        {
+            SqlParameter sqlParam = new SqlParameter();
+            List<SqlParameter> param = new List<SqlParameter>();
+            sqlParam = new SqlParameter("@tblParametro", SqlDbType.Structured);
+            sqlParam.Value = dtParametro;
+            param.Add(sqlParam);
+            GeneralC.llenarTablaParameter(Sentencias.PACIENTE_PARAMETROS_CARGAR, param, dtResultado);
+        }
         public void cargarDatos()
         {
             List<string> paramas = new List<string>();

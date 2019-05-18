@@ -52,6 +52,41 @@ namespace Galactus
             }
 
         }
+        public static void llenarTablaParameter(string query,
+                                      List<SqlParameter> parametros,
+                                      DataTable tablaResultado)
+        {
+            tablaResultado.Clear();
+            try
+            {
+               using(SqlCommand comando = new SqlCommand())
+                {
+                    comando.Connection = PrincipalUI.Cnxion;
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.CommandText = query;
+                    if(parametros != null)
+                    {
+                        foreach(SqlParameter param in parametros)
+                        {
+                            SqlParameter sqlParametros = new SqlParameter();
+                            sqlParametros = new SqlParameter(param.ParameterName, param.DbType);
+                            sqlParametros.Value = param.Value;
+                            comando.Parameters.Add(sqlParametros);
+                        }
+                    }
+                using (SqlDataAdapter adaptar = new SqlDataAdapter(comando))
+                 {
+                        adaptar.Fill(tablaResultado);
+                 }
+             }
+               
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
         public static Boolean IsNumeric(string valor)
         {
             double result;
@@ -157,11 +192,12 @@ namespace Galactus
             }
         }
 
-        public static void calcularEdad(DateTime fechaNacimiento,
+        public static void calcularEdad(DateTimePicker fechaNacimiento,
                                      ref string campoFecha)
         {
-
-            campoFecha = Convert.ToString(DateTime.Today.AddTicks(-fechaNacimiento.Ticks).Year);
+            int edad;
+            edad = DateTime.Now.Year - fechaNacimiento.Value.Year;
+            campoFecha = Convert.ToString(edad);                
         }
 
         public static DataTable copiarNewDatatable(DataTable dtDatos,

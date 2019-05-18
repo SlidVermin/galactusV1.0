@@ -68,6 +68,7 @@ namespace Galactus
         public const String PACIENTE_CARGAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspPacienteCargar";
         public const String UBICACION_GEOGRAFICA = ConstanteGeneral.ESQUEMA_ADMISION + "uspUbicacionGeografica";
         public const String PACIENTE_ANULAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspPacienteAnular";
+        public const String PACIENTE_PARAMETROS_CARGAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspPacienteParametros";
 
         public const String ADMISION_PACIENTE_CARGAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionPacienteCargar";
         public const String ADMISION_PACIENTE_BUSCAR = ConstanteGeneral.ESQUEMA_ADMISION + "uspAdmisionPacienteBuscar";
