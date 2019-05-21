@@ -42,7 +42,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvResultados = new System.Windows.Forms.DataGridView();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lbTitulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -67,6 +67,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tstMenuPatron.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -205,13 +207,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.lbTitulo);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pnlInformacion);
             this.panel1.Location = new System.Drawing.Point(23, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(925, 497);
+            this.panel1.Size = new System.Drawing.Size(925, 501);
             this.panel1.TabIndex = 49;
             // 
             // panel2
@@ -221,7 +225,7 @@
             this.panel2.Controls.Add(this.dgvResultados);
             this.panel2.Location = new System.Drawing.Point(15, 207);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(897, 282);
+            this.panel2.Size = new System.Drawing.Size(897, 200);
             this.panel2.TabIndex = 6;
             // 
             // dgvResultados
@@ -238,18 +242,18 @@
             this.dgvResultados.Location = new System.Drawing.Point(0, 0);
             this.dgvResultados.Name = "dgvResultados";
             this.dgvResultados.RowHeadersVisible = false;
-            this.dgvResultados.Size = new System.Drawing.Size(895, 280);
+            this.dgvResultados.Size = new System.Drawing.Size(895, 198);
             this.dgvResultados.TabIndex = 4;
             // 
-            // label21
+            // lbTitulo
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(11, 184);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(100, 20);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Resultados";
+            this.lbTitulo.AutoSize = true;
+            this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.Location = new System.Drawing.Point(18, 184);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(100, 20);
+            this.lbTitulo.TabIndex = 5;
+            this.lbTitulo.Text = "Resultados";
             // 
             // label2
             // 
@@ -504,6 +508,26 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Atención:";
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(16, 431);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox1.Size = new System.Drawing.Size(896, 67);
+            this.textBox1.TabIndex = 10138;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(19, 410);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(108, 20);
+            this.label13.TabIndex = 10139;
+            this.label13.Text = "Observación";
+            // 
             // ResultadoLaboratorioUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -549,7 +573,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlInformacion;
         private System.Windows.Forms.TextBox txtProcedimiento;
@@ -576,5 +600,7 @@
         internal System.Windows.Forms.DateTimePicker dtpMuestra;
         public System.Windows.Forms.DataGridView dgvResultados;
         private System.Windows.Forms.ToolStripButton tstImprimir;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

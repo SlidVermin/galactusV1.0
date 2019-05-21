@@ -295,3 +295,8 @@ C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Gala
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Resultado.EcocardiogramaUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Resultado.InterconsultasUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Resultado.ResultadoLaboratorioUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.General.VentanaEntradaDatosUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.Fisioterapia.HojaOxigenoUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.OrdenMedica.InfusionImpregnacionUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.OrdenMedica.MezclaUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.OrdenMedica.OxigenoUI.resources

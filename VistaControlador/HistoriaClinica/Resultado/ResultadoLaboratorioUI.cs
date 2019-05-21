@@ -111,12 +111,14 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void tsbBuscarNit_Click(object sender, EventArgs e)
         {
             List<string> parametro = new List<string>();
+            parametro.Add(resultadoLab.auditoria.ToString());
             parametro.Add(string.Empty);
             GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_PACIENTE_RESULTADO_LAB,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarInformacionAtencion),
                                     Titulos.TITULO_BUSCAR_PACIENTE,
-                                    true);
+                                    true,
+                                    listaParametroOculto());
         }
         private void habilitarControles() {
             dtpMuestra.Enabled = true;
@@ -130,9 +132,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
         private void validarGrilla() { 
             dgvResultados.Columns[0].DataPropertyName="Codigo";
-            dgvResultados.Columns[1].DataPropertyName="Descripcion";
-            dgvResultados.Columns[2].DataPropertyName="Resultado";
-            dgvResultados.Columns[3].DataPropertyName="Referencia";
+            dgvResultados.Columns[1].DataPropertyName = "Parametro";
+            dgvResultados.Columns[2].DataPropertyName="Descripcion";
+            dgvResultados.Columns[3].DataPropertyName="Resultado";
+            dgvResultados.Columns[4].DataPropertyName="Referencia";
             dgvResultados.DataSource = resultadoLab.dtResultado;
         }
         private void cargarInformacionAtencion(DataRow dRows)
@@ -140,15 +143,38 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             txtAtencion.Text = dRows.Field<int>("idAtencion").ToString();
             txtPaciente.Text = dRows.Field<string>("paciente").ToString();
             txtIdentificacion.Text = dRows.Field<string>("identificacion").ToString();
-            txtServicio.Text = dRows.Field<string>("servicio").ToString();
-            txtOrdenMedica.Text = dRows.Field<string>("ordenMedica").ToString();
-            txtProcedimiento.Text = dRows.Field<string>("Descripcion").ToString();
-            txtCodigoAdministradora.Text = dRows.Field<int>("codigoAdministracion").ToString();
-            txtAdministradora.Text = dRows.Field<string>("administracion").ToString();
+            txtServicio.Text = dRows.Field<string>("Entorno").ToString();
+            txtOrdenMedica.Text = dRows.Field<string>("IdOrdenMedica").ToString();
+            txtProcedimiento.Text = dRows.Field<string>("procedimiento").ToString();
+            txtCodigoAdministradora.Text = dRows.Field<int>("IdContrato").ToString();
+            txtAdministradora.Text = dRows.Field<string>("Nombre").ToString();
+            resultadoLab.codigoGenero = dRows.Field<int>("IdGenero");
+            lbTitulo.Text = dRows.Field<string>("nombreExamen").ToString();
         }
 
         private void cargarInformacion(DataRow dRows) {
 
+        }
+
+        private List<string> listaParametroOculto()
+        {
+            List<string> paramtro = new List<string>();
+            paramtro.Add("idAtencion");
+            paramtro.Add("IdContrato");
+            paramtro.Add("Nombre");
+            paramtro.Add("FechaAdmision");
+            paramtro.Add("IdOrdenMedica");
+            paramtro.Add("IdGenero");
+            paramtro.Add("nombreExamen");
+            return paramtro;
+        }
+        private void cargarParametrosLaboratorio() {
+            List<string> paramtro = new List<string>();
+            paramtro.Add(resultadoLab.codigoSolicitud.ToString());
+            paramtro.Add(resultadoLab.auditoria.ToString());
+            paramtro.Add(resultadoLab.codigoGenero.ToString());
+            GeneralC.llenarTabla(Sentencias.CARGAR_RESULTADO_LAB, paramtro, resultadoLab.dtResultado);
+            dgvResultados.DataSource = resultadoLab.dtResultado;
         }
     }
 }
