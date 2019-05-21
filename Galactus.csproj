@@ -574,11 +574,23 @@
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\InterconsultasUI.Designer.cs">
       <DependentUpon>InterconsultasUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\ResultadoOrdenMedicaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\ResultadoOrdenMedicaUI.Designer.cs">
+      <DependentUpon>ResultadoOrdenMedicaUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\ResultadoLaboratorioUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\ResultadoLaboratorioUI.Designer.cs">
       <DependentUpon>ResultadoLaboratorioUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\ResultadoOrdenMedica\LaboratorioUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\Resultado\ResultadoOrdenMedica\LaboratorioUI.Designer.cs">
+      <DependentUpon>LaboratorioUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\TransfusionSanguineaUI.cs">
       <SubType>Form</SubType>
@@ -855,8 +867,14 @@
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\InterconsultasUI.resx">
       <DependentUpon>InterconsultasUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\ResultadoOrdenMedicaUI.resx">
+      <DependentUpon>ResultadoOrdenMedicaUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\ResultadoLaboratorioUI.resx">
       <DependentUpon>ResultadoLaboratorioUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\ResultadoOrdenMedica\LaboratorioUI.resx">
+      <DependentUpon>LaboratorioUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\TransfusionSanguineaUI.resx">
       <DependentUpon>TransfusionSanguineaUI.cs</DependentUpon>

@@ -19,6 +19,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private HistoriaClinicaPaciente historiaClinica = new HistoriaClinicaPaciente();
         private EvolucionMedicaUI EvolucionMedica;
         private OrdenMedicaUI OrdenClinica;
+        private ResultadoOrdenMedicaUI resulOrdenMedica;
         private IngresoClinicoUI ingreso;
         private EgresoUI egreso;
         private EstanciaUI  estancia;
@@ -41,18 +42,23 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
         {
+
             ingreso = new IngresoClinicoUI(idAtencion, auditoria);
             OrdenClinica = new OrdenMedicaUI(idAtencion, auditoria);
             EvolucionMedica = new EvolucionMedicaUI(idAtencion, auditoria);
+            resulOrdenMedica = new ResultadoOrdenMedicaUI(idAtencion,auditoria);
             egreso = new EgresoUI (idAtencion, auditoria);
             estancia = new EstanciaUI(idAtencion, auditoria);
             remision = new RemisionUI(idAtencion, auditoria);
+
             GeneralC.cargarFormularioEnPestana(tpIngresoClinico, ingreso);
             GeneralC.cargarFormularioEnPestana(tpOrdenMedica, OrdenClinica);
+            GeneralC.cargarFormularioEnPestana(tpLaboratorios,resulOrdenMedica);
             GeneralC.cargarFormularioEnPestana(tpEvolucion, EvolucionMedica);
             GeneralC.cargarFormularioEnPestana(tpEgreso, egreso);
             GeneralC.cargarFormularioEnPestana(tpEstancia , estancia);
             GeneralC.cargarFormularioEnPestana(tpRemision, remision);
+
         }
         public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso,bool vAuditoria)
         {

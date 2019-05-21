@@ -49,7 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.tpEvolucion = new System.Windows.Forms.TabPage();
-            this.tbLaboratorios = new System.Windows.Forms.TabPage();
+            this.tpLaboratorios = new System.Windows.Forms.TabPage();
             this.tpOrdenMedica = new System.Windows.Forms.TabPage();
             this.tstMenuOrdenMedica = new System.Windows.Forms.ToolStrip();
             this.tsBtNuevo = new System.Windows.Forms.ToolStripButton();
@@ -287,14 +287,14 @@
             this.tpEvolucion.Text = "Evoluciones";
             this.tpEvolucion.UseVisualStyleBackColor = true;
             // 
-            // tbLaboratorios
+            // tpLaboratorios
             // 
-            this.tbLaboratorios.Location = new System.Drawing.Point(4, 29);
-            this.tbLaboratorios.Name = "tbLaboratorios";
-            this.tbLaboratorios.Size = new System.Drawing.Size(1289, 468);
-            this.tbLaboratorios.TabIndex = 4;
-            this.tbLaboratorios.Text = "Laboratorios";
-            this.tbLaboratorios.UseVisualStyleBackColor = true;
+            this.tpLaboratorios.Location = new System.Drawing.Point(4, 29);
+            this.tpLaboratorios.Name = "tpLaboratorios";
+            this.tpLaboratorios.Size = new System.Drawing.Size(1289, 468);
+            this.tpLaboratorios.TabIndex = 4;
+            this.tpLaboratorios.Text = "Resultados";
+            this.tpLaboratorios.UseVisualStyleBackColor = true;
             // 
             // tpOrdenMedica
             // 
@@ -403,7 +403,7 @@
             this.tabHistoriaClinica.Controls.Add(this.tpIngresoClinico);
             this.tabHistoriaClinica.Controls.Add(this.tpEstancia);
             this.tabHistoriaClinica.Controls.Add(this.tpOrdenMedica);
-            this.tabHistoriaClinica.Controls.Add(this.tbLaboratorios);
+            this.tabHistoriaClinica.Controls.Add(this.tpLaboratorios);
             this.tabHistoriaClinica.Controls.Add(this.tpEvolucion);
             this.tabHistoriaClinica.Controls.Add(this.tpRemision);
             this.tabHistoriaClinica.Controls.Add(this.tpEgreso);
@@ -513,7 +513,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.TabPage tpEvolucion;
-        private System.Windows.Forms.TabPage tbLaboratorios;
+        private System.Windows.Forms.TabPage tpLaboratorios;
         private System.Windows.Forms.TabPage tpOrdenMedica;
         private System.Windows.Forms.TabPage tpEstancia;
         private System.Windows.Forms.TabControl tabHistoriaClinica;
