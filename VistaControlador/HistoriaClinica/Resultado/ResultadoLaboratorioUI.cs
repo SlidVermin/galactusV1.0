@@ -16,31 +16,23 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 {
     public partial class ResultadoLaboratorioUI : Form
     {
-        private ResultadoLaboratorio resultadoLab;
-        public ResultadoLaboratorioUI()
+        private ResultadoLaboratorio resultadoLab = new ResultadoLaboratorio();
+        private int idProcedimiento;
+
+        public ResultadoLaboratorioUI(int idSolicitud,int idProcedimiento, int auditoria)
         {
             InitializeComponent();
+            resultadoLab.codigoSolicitud = idSolicitud;
+            this.idProcedimiento = idProcedimiento;
+            resultadoLab.auditoria = auditoria;
         }
 
         private void ResultadoLaboratorioUI_Load(object sender, EventArgs e)
         {
-            resultadoLab = new ResultadoLaboratorio();
             validarGrilla();
-            GeneralC.deshabilitarBotones(ref tstMenuPatron);
-            GeneralC.deshabilitarControles(this);
-            tsbNuevo.Enabled = true;
-            tsbBuscar.Enabled = true;
         }
 
-        private void tsbNuevo_Click(object sender, EventArgs e)
-        {
-            GeneralC.deshabilitarBotones(ref tstMenuPatron);
-            GeneralC.limpiarControles(this);
-            habilitarControles();
-            tsbBuscarNit.Enabled = true;
-            tsbGuardar.Enabled = true;
-            tsbCancelar.Enabled = true;
-        }
+
         private void tstModificar_Click(object sender, EventArgs e)
         {
             if (Mensajes.preguntaSiNo(Mensajes.Modificar_FORM)== true) {
@@ -54,11 +46,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
             if (Mensajes.preguntaSiNo(Mensajes.CANCELAR_FORM) == true) {
-                GeneralC.deshabilitarBotones(ref tstMenuPatron);
-                GeneralC.deshabilitarControles(this);
-                GeneralC.limpiarControles(this);
-                tsbBuscar.Enabled = true;
-                tsbNuevo.Enabled = true;
+          
             }
         }
 
@@ -81,44 +69,19 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             }
         }
 
-        private void tsbBuscar_Click(object sender, EventArgs e)
-        {
-            List<string> parametro = new List<string>();
-            parametro.Add(string.Empty);
-            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_RESULTADO_LAB,
-                                    parametro,
-                                    new GeneralC.cargarInfoFila(cargarInformacion),
-                                    Titulos.TITULO_BUSCAR_RESULTADO_LAB,
-                                    true);
-        }
+
 
         private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (Mensajes.preguntaAnular() == true) {
                 ResultadoLaboratorioDAL.anularResulatdoLab(resultadoLab.codigoResultado);
-                GeneralC.limpiarControles(this);
-                GeneralC.deshabilitarBotones(ref tstMenuPatron);
-                GeneralC.deshabilitarControles(this);
-                tsbNuevo.Enabled = true;
-                tsbBuscar.Enabled = true;
+
             }
         }
 
         private void tstImprimir_Click(object sender, EventArgs e)
         {
 
-        }
-        private void tsbBuscarNit_Click(object sender, EventArgs e)
-        {
-            List<string> parametro = new List<string>();
-            parametro.Add(resultadoLab.auditoria.ToString());
-            parametro.Add(string.Empty);
-            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_PACIENTE_RESULTADO_LAB,
-                                    parametro,
-                                    new GeneralC.cargarInfoFila(cargarInformacionAtencion),
-                                    Titulos.TITULO_BUSCAR_PACIENTE,
-                                    true,
-                                    listaParametroOculto());
         }
         private void habilitarControles() {
             dtpMuestra.Enabled = true;
@@ -138,8 +101,17 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             dgvResultados.Columns[4].DataPropertyName="Referencia";
             dgvResultados.DataSource = resultadoLab.dtResultado;
         }
-        private void cargarInformacionAtencion(DataRow dRows)
+        public void cargarInformacionADatos()
         {
+            List<string> paramtro = new List<string>();
+            DataRow dRows;
+            DataTable dtDatos = new DataTable();
+            paramtro.Add(resultadoLab.auditoria.ToString());
+            paramtro.Add(resultadoLab.codigoSolicitud.ToString());
+            paramtro.Add(idProcedimiento.ToString());
+            GeneralC.llenarTabla(Sentencias.BUSCAR_PACIENTE_RESULTADO_LAB, paramtro, dtDatos);
+            dRows = dtDatos.Rows[0];
+
             txtAtencion.Text = dRows.Field<int>("idAtencion").ToString();
             txtPaciente.Text = dRows.Field<string>("paciente").ToString();
             txtIdentificacion.Text = dRows.Field<string>("identificacion").ToString();
@@ -150,29 +122,15 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             txtAdministradora.Text = dRows.Field<string>("Nombre").ToString();
             resultadoLab.codigoGenero = dRows.Field<int>("IdGenero");
             lbTitulo.Text = dRows.Field<string>("nombreExamen").ToString();
+            cargarParametrosLaboratorio();
         }
 
-        private void cargarInformacion(DataRow dRows) {
-
-        }
-
-        private List<string> listaParametroOculto()
-        {
-            List<string> paramtro = new List<string>();
-            paramtro.Add("idAtencion");
-            paramtro.Add("IdContrato");
-            paramtro.Add("Nombre");
-            paramtro.Add("FechaAdmision");
-            paramtro.Add("IdOrdenMedica");
-            paramtro.Add("IdGenero");
-            paramtro.Add("nombreExamen");
-            return paramtro;
-        }
         private void cargarParametrosLaboratorio() {
             List<string> paramtro = new List<string>();
             paramtro.Add(resultadoLab.codigoSolicitud.ToString());
             paramtro.Add(resultadoLab.auditoria.ToString());
             paramtro.Add(resultadoLab.codigoGenero.ToString());
+            paramtro.Add(idProcedimiento.ToString());
             GeneralC.llenarTabla(Sentencias.CARGAR_RESULTADO_LAB, paramtro, resultadoLab.dtResultado);
             dgvResultados.DataSource = resultadoLab.dtResultado;
         }

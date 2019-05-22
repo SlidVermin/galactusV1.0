@@ -18,7 +18,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
     public partial class LaboratorioUI : Form
     {
         private int idAtencion;
-        private int Auditoria;
+        private int auditoria;
         private ResultadoOrdenMedica resultadoLaboratorio = new ResultadoOrdenMedica();
         public ResultadoOrdenMedicaUI resulOrdenMedica;
  
@@ -26,7 +26,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         {
             InitializeComponent();
             this.idAtencion = idAtencion;
-            this.Auditoria = Auditoria;
+            this.auditoria = Auditoria;
         }
 
         private void LaboratorioUI_Load(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 
         private void cargarExamenesLaboratorio() {
             List<string> paramtro = new List<string>();
-            paramtro.Add(Auditoria.ToString());
+            paramtro.Add(auditoria.ToString());
             paramtro.Add(idAtencion.ToString());  
             GeneralC.llenarTabla(Sentencias.LISTAR_RESULTADO_LABORATORIO, paramtro, resultadoLaboratorio.dtResultado);
             dgvResultadoLaboratorio.DataSource = resultadoLaboratorio.dtResultado;
@@ -67,9 +67,16 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         private void dgvResultadoLaboratorio_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ResultadoLaboratorioUI resultadoLaboratorio;
+            int idSolicitud;
+            int idProcedimiento;
+
             if (e.ColumnIndex == 3)
             {
-                resultadoLaboratorio = new ResultadoLaboratorioUI();
+
+                idSolicitud = Convert.ToInt32(dgvResultadoLaboratorio.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Cells["dgIdSolicitud"].Value);
+                idProcedimiento= Convert.ToInt32(dgvResultadoLaboratorio.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Cells["dgIdProcedimiento"].Value);
+
+                resultadoLaboratorio = new ResultadoLaboratorioUI(idSolicitud, idProcedimiento, auditoria);
                 resultadoLaboratorio.ShowDialog();
             }
         }
