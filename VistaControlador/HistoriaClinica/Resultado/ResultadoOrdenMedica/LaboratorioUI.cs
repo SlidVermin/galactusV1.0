@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Galactus.Entidades.HistoriaClinica.Resultado;
 using Galactus.Util.Constantes;
 using Galactus.VistaControlador.HistoriaClinica.Resultado;
+using System.Resources;
 
 namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 {
@@ -63,7 +64,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 }
             }
         }
-
         private void dgvResultadoLaboratorio_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ResultadoLaboratorioUI resultadoLaboratorio;
@@ -77,6 +77,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         {
             if (resultadoLaboratorio.dtResultado.Rows.Count > 0) {
                 resulOrdenMedica.txtBCodigoOrden.Text = resultadoLaboratorio.dtResultado.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Field<int>("idOrdenMedica").ToString();
+                resulOrdenMedica.dtpFecha.Value = resultadoLaboratorio.dtResultado.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Field<DateTime>("Fecha");
             }
         }
     }
