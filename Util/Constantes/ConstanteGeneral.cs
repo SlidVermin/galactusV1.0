@@ -15,6 +15,8 @@ namespace Galactus.Util.Constantes
         public const String FORMULARIO_LOGO = "";
         public const String LINEA_TITULO = "";
 
+        public const int ESTADO_LISTO = 1;
+
         public const int SIN_VALOR_NUMERICO = 0;
 
         public const int METODO_CUPS = 1;

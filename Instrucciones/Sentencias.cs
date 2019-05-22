@@ -171,6 +171,8 @@ namespace Galactus
         public const String CARGAR_NOTA_ENFERMERIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspEnfermeriaNotaCargar";
 
         public const String BUSCAR_TIPO_MEDICAMENTO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspTipoMedicamentoBuscar";
+
+        public const string LISTAR_RESULTADO_LABORATORIO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspResultadoLaboratorioListar]";
         #endregion
     }
 }

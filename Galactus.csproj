@@ -95,6 +95,7 @@
     <Compile Include="Entidades\HistoriaClinica\Resultado\InformeQuirurgico.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\JustificacionAntibiotico.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\ResultadoLaboratorio.cs" />
+    <Compile Include="Entidades\HistoriaClinica\Resultado\ResultadoOrdenMedica.cs" />
     <Compile Include="Entidades\Inventario\Bodega.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Producto.cs" />
     <Compile Include="Entidades\Inventario\Cliente.cs" />

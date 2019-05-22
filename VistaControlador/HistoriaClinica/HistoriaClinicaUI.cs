@@ -46,7 +46,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             ingreso = new IngresoClinicoUI(idAtencion, auditoria);
             OrdenClinica = new OrdenMedicaUI(idAtencion, auditoria);
             EvolucionMedica = new EvolucionMedicaUI(idAtencion, auditoria);
-            resulOrdenMedica = new ResultadoOrdenMedicaUI(idAtencion,auditoria);
+            resulOrdenMedica = new ResultadoOrdenMedicaUI(idAtencion,Convert.ToInt32(auditoria));
             egreso = new EgresoUI (idAtencion, auditoria);
             estancia = new EstanciaUI(idAtencion, auditoria);
             remision = new RemisionUI(idAtencion, auditoria);

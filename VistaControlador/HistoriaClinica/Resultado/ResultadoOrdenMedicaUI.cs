@@ -20,11 +20,11 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
     public partial class ResultadoOrdenMedicaUI : Form
     {
         private int idAtencion;
-        private bool auditoria;
+        private int auditoria;
         private LaboratorioUI laboratorio;
 
 
-        public ResultadoOrdenMedicaUI(int idAtencion, bool auditoria)
+        public ResultadoOrdenMedicaUI(int idAtencion, int auditoria)
         {
             InitializeComponent();
 
@@ -35,9 +35,11 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 
         private void ResultadoOrdenMedicaUI_Load(object sender, EventArgs e)
         {
+            GeneralC.deshabilitarControles(this);
             dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
-            GeneralC.cargarFormularioEnPestana(tpLaboratorio,laboratorio);
-            laboratorio = new LaboratorioUI();
+            laboratorio = new LaboratorioUI(idAtencion,auditoria);
+            laboratorio.resulOrdenMedica = this;
+            GeneralC.cargarFormularioEnPestana(tpLaboratorio,laboratorio);      
         }
     }
 }

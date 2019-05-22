@@ -141,9 +141,9 @@
         private System.Windows.Forms.TabPage tpLaboratorio;
         private System.Windows.Forms.ToolStrip tstPropiedadesOrdenMedica;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripTextBox txtBCodigoOrden;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.DateTimePicker dtpFecha;
+        public System.Windows.Forms.ToolStripTextBox txtBCodigoOrden;
+        public System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }
