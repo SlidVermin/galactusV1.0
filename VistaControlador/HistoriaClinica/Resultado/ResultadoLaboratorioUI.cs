@@ -11,6 +11,7 @@ using Galactus.Entidades.HistoriaClinica.Resultado;
 using Galactus.Modelo.HistoriaClinica.Resultado;
 using Galactus.Util.Mensajes;
 using Galactus.Util;
+using Galactus.Util.Constantes;
 
 namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 {
@@ -45,19 +46,28 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
-            if (dtpMuestra.Value.Date == dtpResultado.Value.Date)
+            if (dtpMuestra.Value.Date >= dtpResultado.Value.Date)
             {
-                Mensajes.mensajeAdvertencia("La fecha de muestra, no puede ser igual a la fecha de resultado");
+                Mensajes.mensajeAdvertencia("La fecha de muestra, no puede ser igual o mayor a la fecha de resultado");
             }
             else
             {
                 if (Mensajes.preguntaGuardar() == true)
                 {
-                    ResultadoLaboratorioDAL.guardarResultadoLab(resultadoLab);
-                    GeneralC.habilitarBotones(ref tstMenuPatron);
-                    GeneralC.deshabilitarControles(this);
-                    tsbGuardar.Enabled = false;
-                    Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_GUARDADO);
+                    try {
+                        cargarResultadoLab();
+                        ResultadoLaboratorioDAL.guardarResultadoLab(resultadoLab);
+                        GeneralC.habilitarBotones(ref tstMenuPatron);
+                        GeneralC.deshabilitarControles(this);
+                        tsbGuardar.Enabled = false;
+                        tsbCancelar.Enabled = false;
+                        btnSalir.Enabled = true;
+                        Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_GUARDADO);
+                    }
+                    catch (Exception ex)
+                    {
+                        Mensajes.mensajeError(ex);
+                    }
                 }
             }
         }
@@ -78,9 +88,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             dtpResultado.Enabled = true;
             dgvResultados.ReadOnly = false;
             txtObservacion.ReadOnly = false;
-            dgvResultados.Columns[2].ReadOnly = true;
-            dgvResultados.Columns[3].ReadOnly = false;
-            dgvResultados.Columns[4].ReadOnly = true;
+            dgvResultados.Columns["dgCodigo"].ReadOnly = true;
+            dgvResultados.Columns["dgDescripcion"].ReadOnly = true;
+            dgvResultados.Columns["dgResultado"].ReadOnly = false;
+            dgvResultados.Columns["dgReferencia"].ReadOnly = true;
         }
 
         private void validarGrilla() { 
@@ -129,19 +140,29 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             else
             {
                 habilitarControles();
+                resultadoLab.codigoResultado = ConstanteGeneral.PREDETERMINADO;
                 tsbGuardar.Enabled = true;
                 tsbCancelar.Enabled = true;
             }         
         }
         private void cargarParametrosLaboratorio() {
             List<string> paramtro = new List<string>();
+
             paramtro.Add(resultadoLab.auditoria.ToString());
             paramtro.Add(resultadoLab.codigoSolicitud.ToString()); 
             paramtro.Add(resultadoLab.codigoGenero.ToString());
             paramtro.Add(idProcedimiento.ToString());
+
             GeneralC.llenarTabla(Sentencias.CARGAR_RESULTADO_LAB, paramtro, resultadoLab.dtResultado);
             dgvResultados.DataSource = resultadoLab.dtResultado;
+
         }
+        private void cargarResultadoLab() {
+            resultadoLab.fechaMuestra = dtpMuestra.Value;
+            resultadoLab.fechaResultado = dtpResultado.Value;
+            resultadoLab.observacion = txtObservacion.Text;
+        }
+
         #region btnSalir      
         private void btnSalir_Click(object sender, EventArgs e)
         {

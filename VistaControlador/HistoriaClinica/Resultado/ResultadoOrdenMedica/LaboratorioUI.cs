@@ -42,7 +42,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             paramtro.Add(idAtencion.ToString());  
             GeneralC.llenarTabla(Sentencias.LISTAR_RESULTADO_LABORATORIO, paramtro, resultadoLaboratorio.dtResultado);
             dgvResultadoLaboratorio.DataSource = resultadoLaboratorio.dtResultado;
-            estadoRegistro();
         }
 
         private void validarGrilla() {
@@ -53,14 +52,14 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             dgvResultadoLaboratorio.AutoGenerateColumns = false;
         }
 
-        private void estadoRegistro() {
+        public void estadoRegistro() {
             if (resultadoLaboratorio.dtResultado.Rows.Count > 0) {
                 for (int posicion = 0; posicion <= resultadoLaboratorio.dtResultado.Rows.Count - 1; posicion++) {
                     if (resultadoLaboratorio.dtResultado.Rows[posicion].Field<int>("Estado") == ConstanteGeneral.ESTADO_LISTO) {
-                        dgvResultadoLaboratorio.Rows[posicion].Cells["dgLectura"].Value = Properties.Resources.Actions_file_close_icon;
+                        dgvResultadoLaboratorio.Rows[posicion].Cells["dgLectura"].Value = global::Galactus.Properties.Resources.Actions_file_close_icon ;
                     }
                     else {
-                        dgvResultadoLaboratorio.Rows[posicion].Cells["dgLectura"].Value = Properties.Resources.checked__1_;
+                        dgvResultadoLaboratorio.Rows[posicion].Cells["dgLectura"].Value =global::Galactus.Properties.Resources.checked__1_;
                     }
                 }
             }

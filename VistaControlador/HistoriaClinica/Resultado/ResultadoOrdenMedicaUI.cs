@@ -39,7 +39,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
             laboratorio = new LaboratorioUI(idAtencion,auditoria);
             laboratorio.resulOrdenMedica = this;
-            GeneralC.cargarFormularioEnPestana(tpLaboratorio,laboratorio);      
+            GeneralC.cargarFormularioEnPestana(tpLaboratorio,laboratorio);
+            laboratorio.estadoRegistro();    
         }
     }
 }
