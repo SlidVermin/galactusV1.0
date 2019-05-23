@@ -52,7 +52,7 @@ namespace Galactus.Util.Constantes
         public const string ESQUEMA_HISTORIA_CLINICA = "[HistoriaClinica].";
         public const string ESQUEMA_LABORATORIO = "[Laboratorio].";
 
-        public const int ESTADO_INICIADO = 91;
+        public const int ESTADO_INICIADO = 4219;
 
         public const string POR_DEFINIR = "Por definir";
         public const string MEZCLA = "Mezcla";
@@ -100,12 +100,12 @@ namespace Galactus.Util.Constantes
         public const int UNIDADES_DE_MEDIDA = 7;
         public const int REGIMEN_SOCIO_ECONOMICO = 13;
         public const int BANCO = 14;
-        public const int TRIAGE = 15;
-        public const int ESPECIALIDAD = 16;
-        public const int CAMA = 17;
-        public const int VIA_INGRESO = 18;
-        public const int CAUSA_EXTERNA = 19;
-        public const int INSTITUCIÓN = 20;
+        public const int TRIAGE = 71;
+        public const int ESPECIALIDAD = 48;
+        public const int CAMA = 72;
+        public const int VIA_INGRESO = 52;
+        public const int CAUSA_EXTERNA = 37;
+        public const int INSTITUCIÓN = 43;
         public const int ESTADO_ATENCION = 39;
         #endregion
         #region Menu

@@ -31,8 +31,7 @@ namespace Galactus.Modelo.Admision
                     comando.Parameters.Add(new SqlParameter("@FechaIngreso", System.Data.SqlDbType.Date)).Value = atencion.fechaIngreso;
                     comando.Parameters.Add(new SqlParameter("@NumeroAutorizacion", System.Data.SqlDbType.Int)).Value = atencion.numeroAutorizacion;
                     comando.Parameters.Add(new SqlParameter("@idEstadoAtencion", System.Data.SqlDbType.Int)).Value = atencion.idEstadoAtencion;
-                    comando.Parameters.Add(new SqlParameter("@tblDiagnostico", System.Data.SqlDbType.Structured)).Value = atencion.dtDiagnostico;
-                    comando.Parameters.Add(new SqlParameter("@observacion", System.Data.SqlDbType.NVarChar)).Value = atencion.observacion;
+                    comando.Parameters.Add(new SqlParameter("@tblDiagnostico", System.Data.SqlDbType.Structured)).Value = atencion.dtCambio;
                     atencion.idAtencion = (int)comando.ExecuteScalar();
                 }
             }

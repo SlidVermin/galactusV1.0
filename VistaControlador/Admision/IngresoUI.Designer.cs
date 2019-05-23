@@ -28,43 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dgvDiagnostico = new System.Windows.Forms.DataGridView();
-            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgQuitar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgAgregar = new System.Windows.Forms.DataGridViewImageColumn();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ndValor = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.cbArea = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.cbCama = new System.Windows.Forms.ComboBox();
-            this.cbEntorno = new System.Windows.Forms.ComboBox();
-            this.Label20 = new System.Windows.Forms.Label();
-            this.Textautorizacion = new System.Windows.Forms.TextBox();
             this.Label15 = new System.Windows.Forms.Label();
-            this.Label16 = new System.Windows.Forms.Label();
-            this.cbInstitucion = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbCausaExterna = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cbVia = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
+            this.cbArea = new System.Windows.Forms.ComboBox();
+            this.cbEntorno = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Label16 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.fechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.txtFechaAdmision = new System.Windows.Forms.TextBox();
+            this.Label20 = new System.Windows.Forms.Label();
             this.btPacienteAdmision = new System.Windows.Forms.Button();
+            this.Textautorizacion = new System.Windows.Forms.TextBox();
             this.txtnombrePaciente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbCausaExterna = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtIdAdmision = new System.Windows.Forms.TextBox();
+            this.cbInstitucion = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbVia = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -76,16 +72,20 @@
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgvDiagnostico = new System.Windows.Forms.DataGridView();
+            this.dgId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgAgregar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgQuitar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnostico)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ndValor)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.tstMenuPatron.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnostico)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -109,69 +109,6 @@
             this.panel5.Size = new System.Drawing.Size(903, 127);
             this.panel5.TabIndex = 55;
             // 
-            // dgvDiagnostico
-            // 
-            this.dgvDiagnostico.AllowUserToAddRows = false;
-            this.dgvDiagnostico.AllowUserToDeleteRows = false;
-            this.dgvDiagnostico.AllowUserToResizeColumns = false;
-            this.dgvDiagnostico.AllowUserToResizeRows = false;
-            this.dgvDiagnostico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDiagnostico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgCodigo,
-            this.dgDescripcion,
-            this.dgQuitar,
-            this.dgAgregar});
-            this.dgvDiagnostico.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDiagnostico.Location = new System.Drawing.Point(0, 0);
-            this.dgvDiagnostico.Name = "dgvDiagnostico";
-            this.dgvDiagnostico.ReadOnly = true;
-            this.dgvDiagnostico.RowHeadersVisible = false;
-            this.dgvDiagnostico.ShowCellErrors = false;
-            this.dgvDiagnostico.ShowCellToolTips = false;
-            this.dgvDiagnostico.ShowEditingIcon = false;
-            this.dgvDiagnostico.ShowRowErrors = false;
-            this.dgvDiagnostico.Size = new System.Drawing.Size(901, 125);
-            this.dgvDiagnostico.TabIndex = 0;
-            this.dgvDiagnostico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiagnostico_CellContentClick);
-            this.dgvDiagnostico.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiagnostico_CellDoubleClick);
-            // 
-            // dgCodigo
-            // 
-            this.dgCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgCodigo.HeaderText = "Código";
-            this.dgCodigo.Name = "dgCodigo";
-            this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 65;
-            // 
-            // dgDescripcion
-            // 
-            this.dgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgDescripcion.HeaderText = "Descripcion";
-            this.dgDescripcion.Name = "dgDescripcion";
-            this.dgDescripcion.ReadOnly = true;
-            // 
-            // dgQuitar
-            // 
-            this.dgQuitar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.NullValue = "System.Drawing.Image";
-            this.dgQuitar.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgQuitar.HeaderText = "Quitar";
-            this.dgQuitar.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.dgQuitar.Name = "dgQuitar";
-            this.dgQuitar.ReadOnly = true;
-            this.dgQuitar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgQuitar.Width = 41;
-            // 
-            // dgAgregar
-            // 
-            this.dgAgregar.HeaderText = "Agregar";
-            this.dgAgregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
-            this.dgAgregar.Name = "dgAgregar";
-            this.dgAgregar.ReadOnly = true;
-            this.dgAgregar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgAgregar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -181,6 +118,40 @@
             this.label10.Size = new System.Drawing.Size(201, 20);
             this.label10.TabIndex = 54;
             this.label10.Text = "Diagnóstico de remisión";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.cbCama);
+            this.panel2.Controls.Add(this.Label15);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.cbArea);
+            this.panel2.Controls.Add(this.cbEntorno);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.Label16);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.fechaIngreso);
+            this.panel2.Controls.Add(this.txtFechaAdmision);
+            this.panel2.Controls.Add(this.Label20);
+            this.panel2.Controls.Add(this.btPacienteAdmision);
+            this.panel2.Controls.Add(this.Textautorizacion);
+            this.panel2.Controls.Add(this.txtnombrePaciente);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.cbCausaExterna);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.txtIdAdmision);
+            this.panel2.Controls.Add(this.cbInstitucion);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.cbVia);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(13, 31);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(900, 249);
+            this.panel2.TabIndex = 49;
             // 
             // panel3
             // 
@@ -221,25 +192,16 @@
             this.checkBox1.Text = "Atención FURIPS";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // cbArea
+            // label11
             // 
-            this.cbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbArea.FormattingEnabled = true;
-            this.cbArea.Location = new System.Drawing.Point(115, 169);
-            this.cbArea.Name = "cbArea";
-            this.cbArea.Size = new System.Drawing.Size(350, 21);
-            this.cbArea.TabIndex = 60025;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(73, 170);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 15);
-            this.label9.TabIndex = 60024;
-            this.label9.Text = "Área:";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 9F);
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(59, 63);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 15);
+            this.label11.TabIndex = 60029;
+            this.label11.Text = "Estado:";
             // 
             // cbCama
             // 
@@ -249,35 +211,6 @@
             this.cbCama.Name = "cbCama";
             this.cbCama.Size = new System.Drawing.Size(350, 21);
             this.cbCama.TabIndex = 60023;
-            // 
-            // cbEntorno
-            // 
-            this.cbEntorno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEntorno.FormattingEnabled = true;
-            this.cbEntorno.Location = new System.Drawing.Point(115, 195);
-            this.cbEntorno.Name = "cbEntorno";
-            this.cbEntorno.Size = new System.Drawing.Size(350, 21);
-            this.cbEntorno.TabIndex = 60022;
-            // 
-            // Label20
-            // 
-            this.Label20.AutoSize = true;
-            this.Label20.Font = new System.Drawing.Font("Arial", 9F);
-            this.Label20.ForeColor = System.Drawing.Color.Black;
-            this.Label20.Location = new System.Drawing.Point(503, 36);
-            this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(76, 15);
-            this.Label20.TabIndex = 60021;
-            this.Label20.Text = "Autorización:";
-            // 
-            // Textautorizacion
-            // 
-            this.Textautorizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Textautorizacion.Location = new System.Drawing.Point(585, 32);
-            this.Textautorizacion.Name = "Textautorizacion";
-            this.Textautorizacion.ReadOnly = true;
-            this.Textautorizacion.Size = new System.Drawing.Size(299, 21);
-            this.Textautorizacion.TabIndex = 60018;
             // 
             // Label15
             // 
@@ -290,6 +223,46 @@
             this.Label15.TabIndex = 60020;
             this.Label15.Text = "Cama:";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(233, 36);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(89, 15);
+            this.label12.TabIndex = 60027;
+            this.label12.Text = "Fecha ingreso:";
+            // 
+            // cbArea
+            // 
+            this.cbArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbArea.FormattingEnabled = true;
+            this.cbArea.Location = new System.Drawing.Point(115, 169);
+            this.cbArea.Name = "cbArea";
+            this.cbArea.Size = new System.Drawing.Size(350, 21);
+            this.cbArea.TabIndex = 60025;
+            // 
+            // cbEntorno
+            // 
+            this.cbEntorno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEntorno.FormattingEnabled = true;
+            this.cbEntorno.Location = new System.Drawing.Point(115, 195);
+            this.cbEntorno.Name = "cbEntorno";
+            this.cbEntorno.Size = new System.Drawing.Size(350, 21);
+            this.cbEntorno.TabIndex = 60022;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(73, 170);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 15);
+            this.label9.TabIndex = 60024;
+            this.label9.Text = "Área:";
+            // 
             // Label16
             // 
             this.Label16.AutoSize = true;
@@ -301,107 +274,14 @@
             this.Label16.TabIndex = 60019;
             this.Label16.Text = "Entorno:";
             // 
-            // cbInstitucion
+            // textBox1
             // 
-            this.cbInstitucion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbInstitucion.FormattingEnabled = true;
-            this.cbInstitucion.Location = new System.Drawing.Point(115, 116);
-            this.cbInstitucion.Name = "cbInstitucion";
-            this.cbInstitucion.Size = new System.Drawing.Size(769, 21);
-            this.cbInstitucion.TabIndex = 30;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label8.Location = new System.Drawing.Point(37, 116);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 16);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Institución:";
-            // 
-            // cbCausaExterna
-            // 
-            this.cbCausaExterna.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCausaExterna.FormattingEnabled = true;
-            this.cbCausaExterna.Location = new System.Drawing.Point(115, 142);
-            this.cbCausaExterna.Name = "cbCausaExterna";
-            this.cbCausaExterna.Size = new System.Drawing.Size(769, 21);
-            this.cbCausaExterna.TabIndex = 28;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label7.Location = new System.Drawing.Point(12, 143);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 16);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Causa externa:";
-            // 
-            // cbVia
-            // 
-            this.cbVia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbVia.FormattingEnabled = true;
-            this.cbVia.Location = new System.Drawing.Point(115, 89);
-            this.cbVia.Name = "cbVia";
-            this.cbVia.Size = new System.Drawing.Size(769, 21);
-            this.cbVia.TabIndex = 26;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label6.Location = new System.Drawing.Point(13, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 16);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Via de ingreso:";
-            // 
-            // panel2
-            // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.cbCama);
-            this.panel2.Controls.Add(this.Label15);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.cbArea);
-            this.panel2.Controls.Add(this.cbEntorno);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.Label16);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.fechaIngreso);
-            this.panel2.Controls.Add(this.txtFechaAdmision);
-            this.panel2.Controls.Add(this.Label20);
-            this.panel2.Controls.Add(this.btPacienteAdmision);
-            this.panel2.Controls.Add(this.Textautorizacion);
-            this.panel2.Controls.Add(this.txtnombrePaciente);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.cbCausaExterna);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.txtIdAdmision);
-            this.panel2.Controls.Add(this.cbInstitucion);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.cbVia);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(13, 31);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(900, 249);
-            this.panel2.TabIndex = 49;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(233, 36);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(89, 15);
-            this.label12.TabIndex = 60027;
-            this.label12.Text = "Fecha ingreso:";
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(115, 60);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(350, 21);
+            this.textBox1.TabIndex = 60028;
             // 
             // label3
             // 
@@ -432,6 +312,17 @@
             this.txtFechaAdmision.Size = new System.Drawing.Size(112, 21);
             this.txtFechaAdmision.TabIndex = 34;
             // 
+            // Label20
+            // 
+            this.Label20.AutoSize = true;
+            this.Label20.Font = new System.Drawing.Font("Arial", 9F);
+            this.Label20.ForeColor = System.Drawing.Color.Black;
+            this.Label20.Location = new System.Drawing.Point(503, 36);
+            this.Label20.Name = "Label20";
+            this.Label20.Size = new System.Drawing.Size(76, 15);
+            this.Label20.TabIndex = 60021;
+            this.Label20.Text = "Autorización:";
+            // 
             // btPacienteAdmision
             // 
             this.btPacienteAdmision.Image = global::Galactus.Properties.Resources.btn_lupa;
@@ -441,6 +332,15 @@
             this.btPacienteAdmision.TabIndex = 33;
             this.btPacienteAdmision.UseVisualStyleBackColor = true;
             this.btPacienteAdmision.Click += new System.EventHandler(this.btPacienteAdmision_Click);
+            // 
+            // Textautorizacion
+            // 
+            this.Textautorizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Textautorizacion.Location = new System.Drawing.Point(585, 32);
+            this.Textautorizacion.Name = "Textautorizacion";
+            this.Textautorizacion.ReadOnly = true;
+            this.Textautorizacion.Size = new System.Drawing.Size(299, 21);
+            this.Textautorizacion.TabIndex = 60018;
             // 
             // txtnombrePaciente
             // 
@@ -470,6 +370,25 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Atención:";
             // 
+            // cbCausaExterna
+            // 
+            this.cbCausaExterna.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCausaExterna.FormattingEnabled = true;
+            this.cbCausaExterna.Location = new System.Drawing.Point(115, 142);
+            this.cbCausaExterna.Name = "cbCausaExterna";
+            this.cbCausaExterna.Size = new System.Drawing.Size(769, 21);
+            this.cbCausaExterna.TabIndex = 28;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label7.Location = new System.Drawing.Point(12, 143);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 16);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Causa externa:";
+            // 
             // txtIdAdmision
             // 
             this.txtIdAdmision.Location = new System.Drawing.Point(115, 6);
@@ -477,6 +396,44 @@
             this.txtIdAdmision.ReadOnly = true;
             this.txtIdAdmision.Size = new System.Drawing.Size(112, 20);
             this.txtIdAdmision.TabIndex = 0;
+            // 
+            // cbInstitucion
+            // 
+            this.cbInstitucion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInstitucion.FormattingEnabled = true;
+            this.cbInstitucion.Location = new System.Drawing.Point(115, 116);
+            this.cbInstitucion.Name = "cbInstitucion";
+            this.cbInstitucion.Size = new System.Drawing.Size(769, 21);
+            this.cbInstitucion.TabIndex = 30;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label8.Location = new System.Drawing.Point(37, 116);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(71, 16);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Institución:";
+            // 
+            // cbVia
+            // 
+            this.cbVia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVia.FormattingEnabled = true;
+            this.cbVia.Location = new System.Drawing.Point(115, 89);
+            this.cbVia.Name = "cbVia";
+            this.cbVia.Size = new System.Drawing.Size(769, 21);
+            this.cbVia.TabIndex = 26;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label6.Location = new System.Drawing.Point(13, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 16);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Via de ingreso:";
             // 
             // label33
             // 
@@ -604,25 +561,73 @@
             this.tsbAnular.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.tsbAnular.Click += new System.EventHandler(this.tsbAnular_Click_2);
             // 
-            // label11
+            // dgvDiagnostico
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9F);
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(59, 63);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 15);
-            this.label11.TabIndex = 60029;
-            this.label11.Text = "Estado:";
+            this.dgvDiagnostico.AllowUserToAddRows = false;
+            this.dgvDiagnostico.AllowUserToDeleteRows = false;
+            this.dgvDiagnostico.AllowUserToResizeColumns = false;
+            this.dgvDiagnostico.AllowUserToResizeRows = false;
+            this.dgvDiagnostico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDiagnostico.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDiagnostico.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvDiagnostico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiagnostico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgId,
+            this.dgCodigo,
+            this.dgDescripcion,
+            this.dgAgregar,
+            this.dgQuitar});
+            this.dgvDiagnostico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDiagnostico.Location = new System.Drawing.Point(0, 0);
+            this.dgvDiagnostico.MultiSelect = false;
+            this.dgvDiagnostico.Name = "dgvDiagnostico";
+            this.dgvDiagnostico.ReadOnly = true;
+            this.dgvDiagnostico.RowHeadersVisible = false;
+            this.dgvDiagnostico.ShowCellErrors = false;
+            this.dgvDiagnostico.ShowCellToolTips = false;
+            this.dgvDiagnostico.ShowEditingIcon = false;
+            this.dgvDiagnostico.ShowRowErrors = false;
+            this.dgvDiagnostico.Size = new System.Drawing.Size(901, 125);
+            this.dgvDiagnostico.TabIndex = 3;
+            this.dgvDiagnostico.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiagnostico_CellContentClick_1);
             // 
-            // textBox1
+            // dgId
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(115, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(350, 21);
-            this.textBox1.TabIndex = 60028;
+            this.dgId.HeaderText = "Id";
+            this.dgId.Name = "dgId";
+            this.dgId.ReadOnly = true;
+            this.dgId.Visible = false;
+            this.dgId.Width = 22;
+            // 
+            // dgCodigo
+            // 
+            this.dgCodigo.HeaderText = "Código";
+            this.dgCodigo.Name = "dgCodigo";
+            this.dgCodigo.ReadOnly = true;
+            this.dgCodigo.Width = 65;
+            // 
+            // dgDescripcion
+            // 
+            this.dgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgDescripcion.HeaderText = "Descripcion";
+            this.dgDescripcion.Name = "dgDescripcion";
+            this.dgDescripcion.ReadOnly = true;
+            // 
+            // dgAgregar
+            // 
+            this.dgAgregar.HeaderText = "Agregar";
+            this.dgAgregar.Image = global::Galactus.Properties.Resources.farmacia_ico;
+            this.dgAgregar.Name = "dgAgregar";
+            this.dgAgregar.ReadOnly = true;
+            this.dgAgregar.Width = 50;
+            // 
+            // dgQuitar
+            // 
+            this.dgQuitar.HeaderText = "Quitar";
+            this.dgQuitar.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.dgQuitar.Name = "dgQuitar";
+            this.dgQuitar.ReadOnly = true;
+            this.dgQuitar.Width = 41;
             // 
             // IngresoUI
             // 
@@ -645,15 +650,15 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnostico)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ndValor)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).EndInit();
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnostico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -675,7 +680,6 @@
         private System.Windows.Forms.Button btPacienteAdmision;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridView dgvDiagnostico;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbArea;
         public System.Windows.Forms.Label label9;
@@ -703,11 +707,13 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.NumericUpDown ndValor;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcion;
-        private System.Windows.Forms.DataGridViewImageColumn dgQuitar;
-        private System.Windows.Forms.DataGridViewImageColumn dgAgregar;
         public System.Windows.Forms.Label label11;
         public System.Windows.Forms.TextBox textBox1;
+        internal System.Windows.Forms.DataGridView dgvDiagnostico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcion;
+        private System.Windows.Forms.DataGridViewImageColumn dgAgregar;
+        private System.Windows.Forms.DataGridViewImageColumn dgQuitar;
     }
 }

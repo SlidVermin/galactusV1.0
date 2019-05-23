@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Galactus.Util.Mensajes;
 using Galactus.Modelo.Admision;
 using Galactus.Entidades.Admision;
+using Galactus.Util.Constantes;
 
 namespace Galactus.VistaControlador.Admision
 {
@@ -65,6 +66,7 @@ namespace Galactus.VistaControlador.Admision
 
         private void AdmisionUI_Load(object sender, EventArgs e)
         {
+            establecerParametros();
             GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
             GeneralC.llenarCombo(Sentencias.CARGAR_TIPO_DOCUMENTOS, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
                                Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
@@ -84,7 +86,28 @@ namespace Galactus.VistaControlador.Admision
                               Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                               Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                               cmbTriage);
+            cargarCombosDatatable(admision.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.DOCUMENTOS, cmbTipoDocumento);
+            cargarCombosDatatable(admision.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.DOCUMENTOS, cmbTipoDocumentoResponsable);
             btnSalir.Enabled = true;
+        }
+        public void establecerParametros()
+        {
+            admision.establecerColumnas();
+            admision.dtParametro.Rows.Add(ConstanteGeneral.PARAMETRO_PACIENTE.DOCUMENTOS);
+            admision.cargarParametros();
+        }
+        public void cargarCombosDatatable(DataTable dt, Int32 idParametro, ComboBox combo)
+        {
+            DataTable dtC = new DataTable();
+            DataRow[] filas;
+            dtC = dt.Clone();
+            filas = dt.Select("idParametro=" + idParametro);
+            foreach (DataRow fila in filas)
+            {
+                dtC.ImportRow(fila);
+            }
+            dtC.Columns.Remove("idParametro");
+            GeneralC.llenarComboDatosDefinidor(dtC, ConstanteGeneral.VALUEMEMBER, ConstanteGeneral.DISPLAYMEMBER, combo);
         }
         #region zonaGeografica
 

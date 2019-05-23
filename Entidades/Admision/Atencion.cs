@@ -26,12 +26,14 @@ namespace Galactus.Entidades.Admision
         public DateTime fechaAdmision { get; set; }
         public string nombrePaciente { get; set; }
         public DataTable dtDiagnostico = new DataTable();
+        public DataTable dtCambio = new DataTable();
 
 
         public DataSet dsDatos = new DataSet();
             public void establecerDt()
         {
-            dtDiagnostico.Columns.Add("Código cie", typeof(String));
+            dtDiagnostico.Columns.Add("Id", typeof(String));
+            dtDiagnostico.Columns.Add("Código", typeof(String));
             dtDiagnostico.Columns.Add("Descripcion", typeof(String));
         }
 
@@ -83,8 +85,21 @@ namespace Galactus.Entidades.Admision
                 fechaAdmision = dt.Rows[0].Field<DateTime>("fechaadmision");
             }
         }
+        public void prepararDt()
+        {
+            dtDiagnostico.AcceptChanges();
+            dtCambio = dtDiagnostico.Copy();
+
+            dtCambio.Columns.Remove("Código");
+
+            if (dtCambio.Rows.Count > 0)
+            {
+                dtCambio.Rows.RemoveAt(dtCambio.Rows.Count - 1);
+            }
+        }
         public void guardar()
         {
+            prepararDt();
             AtencionDAL.guardar(this);
         }
     } 

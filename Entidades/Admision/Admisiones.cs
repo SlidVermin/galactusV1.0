@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Galactus.Modelo.Admision;
+using System.Data;
+using System.Data.SqlClient;
+
 namespace Galactus.Entidades.Admision
 {
     class Admisiones
@@ -43,12 +46,25 @@ namespace Galactus.Entidades.Admision
         public string contacto { get; set; }
         public string especialidad { get; set; }
         public DataTable dtUbicacion = new DataTable();
-
+        public DataTable dtParametro = new DataTable();
+        public DataTable dtResultado = new DataTable();
         public void guardar()
         {
             AdmisionDAL.guardar(this);
         }
-
+        public void establecerColumnas()
+        {
+            dtParametro.Columns.Add("idParametro", typeof(Int32));
+        }
+        public void cargarParametros()
+        {
+            SqlParameter sqlParam = new SqlParameter();
+            List<SqlParameter> param = new List<SqlParameter>();
+            sqlParam = new SqlParameter("@tblParametro", SqlDbType.Structured);
+            sqlParam.Value = dtParametro;
+            param.Add(sqlParam);
+            GeneralC.llenarTablaParameter(Sentencias.PACIENTE_PARAMETROS_CARGAR, param, dtResultado);
+        }
         public void anular()
         {
             AdmisionDAL.eliminar(this);

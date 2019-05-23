@@ -74,7 +74,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         public void cargarDiagnostico(DataRow filas)
         {
             dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgId"].Value = filas.Field<int>("Id");
-            dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgCodigo"].Value = filas.Field<String>("Código cie");
+            dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgCodigo"].Value = filas.Field<String>("Código");
             dgvImpresionN.Rows[dgvImpresionN.CurrentCell.RowIndex].Cells["dgDescripcion"].Value = filas.Field<String>("Descripcion");
            
         }
