@@ -39,9 +39,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtObservacion = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvResultados = new System.Windows.Forms.DataGridView();
+            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgParametro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgResultado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgReferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
@@ -66,11 +71,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgParametro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgResultado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgReferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tstMenuPatron.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -162,6 +162,7 @@
             this.btnSalir.TabIndex = 52;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pictureBox1
             // 
@@ -186,7 +187,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtObservacion);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lbTitulo);
             this.panel1.Controls.Add(this.label2);
@@ -206,15 +207,15 @@
             this.label13.TabIndex = 10139;
             this.label13.Text = "Observación";
             // 
-            // textBox1
+            // txtObservacion
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(16, 431);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(896, 67);
-            this.textBox1.TabIndex = 10138;
+            this.txtObservacion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacion.Location = new System.Drawing.Point(16, 431);
+            this.txtObservacion.Multiline = true;
+            this.txtObservacion.Name = "txtObservacion";
+            this.txtObservacion.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtObservacion.Size = new System.Drawing.Size(896, 67);
+            this.txtObservacion.TabIndex = 10138;
             // 
             // panel2
             // 
@@ -248,6 +249,41 @@
             this.dgvResultados.RowHeadersVisible = false;
             this.dgvResultados.Size = new System.Drawing.Size(895, 198);
             this.dgvResultados.TabIndex = 4;
+            // 
+            // dgCodigo
+            // 
+            this.dgCodigo.HeaderText = "Codigo";
+            this.dgCodigo.Name = "dgCodigo";
+            this.dgCodigo.Visible = false;
+            this.dgCodigo.Width = 46;
+            // 
+            // dgParametro
+            // 
+            this.dgParametro.HeaderText = "Parametro";
+            this.dgParametro.Name = "dgParametro";
+            this.dgParametro.Visible = false;
+            this.dgParametro.Width = 61;
+            // 
+            // dgDescripcion
+            // 
+            this.dgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgDescripcion.HeaderText = "Descripción";
+            this.dgDescripcion.Name = "dgDescripcion";
+            this.dgDescripcion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dgResultado
+            // 
+            this.dgResultado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgResultado.HeaderText = "Resultado";
+            this.dgResultado.Name = "dgResultado";
+            this.dgResultado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dgReferencia
+            // 
+            this.dgReferencia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgReferencia.HeaderText = "Referencia";
+            this.dgReferencia.Name = "dgReferencia";
+            this.dgReferencia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // lbTitulo
             // 
@@ -500,41 +536,6 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Atención:";
             // 
-            // dgCodigo
-            // 
-            this.dgCodigo.HeaderText = "Codigo";
-            this.dgCodigo.Name = "dgCodigo";
-            this.dgCodigo.Visible = false;
-            this.dgCodigo.Width = 46;
-            // 
-            // dgParametro
-            // 
-            this.dgParametro.HeaderText = "Parametro";
-            this.dgParametro.Name = "dgParametro";
-            this.dgParametro.Visible = false;
-            this.dgParametro.Width = 61;
-            // 
-            // dgDescripcion
-            // 
-            this.dgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgDescripcion.HeaderText = "Descripción";
-            this.dgDescripcion.Name = "dgDescripcion";
-            this.dgDescripcion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dgResultado
-            // 
-            this.dgResultado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgResultado.HeaderText = "Resultado";
-            this.dgResultado.Name = "dgResultado";
-            this.dgResultado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dgReferencia
-            // 
-            this.dgReferencia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgReferencia.HeaderText = "Referencia";
-            this.dgReferencia.Name = "dgReferencia";
-            this.dgReferencia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // ResultadoLaboratorioUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -550,8 +551,8 @@
             this.MaximumSize = new System.Drawing.Size(969, 580);
             this.MinimumSize = new System.Drawing.Size(969, 580);
             this.Name = "ResultadoLaboratorioUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResultadoLaboratorioUI";
-            this.Load += new System.EventHandler(this.ResultadoLaboratorioUI_Load);
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -605,7 +606,7 @@
         public System.Windows.Forms.DataGridView dgvResultados;
         private System.Windows.Forms.ToolStripButton tstImprimir;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtObservacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgParametro;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcion;

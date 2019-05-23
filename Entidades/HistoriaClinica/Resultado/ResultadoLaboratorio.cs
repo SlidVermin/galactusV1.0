@@ -14,6 +14,7 @@ namespace Galactus.Entidades.HistoriaClinica.Resultado
           public  int codigoAtencion {get; set; }
           public int codigoGenero { get; set; }
           public int auditoria { get; set; }
+          public bool estadoRegistro { get; set; }
           public string observacion { get; set; }
           public DateTime fechaResultado { get; set; }
           public DateTime fechaMuestra { get; set; }

@@ -12,6 +12,7 @@ using Galactus.Entidades.HistoriaClinica.Resultado;
 using Galactus.Util.Constantes;
 using Galactus.VistaControlador.HistoriaClinica.Resultado;
 using System.Resources;
+using Galactus.VistaControlador;
 
 namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 {
@@ -75,8 +76,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 
                 idSolicitud = Convert.ToInt32(dgvResultadoLaboratorio.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Cells["dgIdSolicitud"].Value);
                 idProcedimiento= Convert.ToInt32(dgvResultadoLaboratorio.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Cells["dgIdProcedimiento"].Value);
-
                 resultadoLaboratorio = new ResultadoLaboratorioUI(idSolicitud, idProcedimiento, auditoria);
+                resultadoLaboratorio.cargarInformacionADatos();
                 resultadoLaboratorio.ShowDialog();
             }
         }

@@ -26,13 +26,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             this.idProcedimiento = idProcedimiento;
             resultadoLab.auditoria = auditoria;
         }
-
-        private void ResultadoLaboratorioUI_Load(object sender, EventArgs e)
-        {
-            validarGrilla();
-        }
-
-
         private void tstModificar_Click(object sender, EventArgs e)
         {
             if (Mensajes.preguntaSiNo(Mensajes.Modificar_FORM)== true) {
@@ -46,7 +39,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
             if (Mensajes.preguntaSiNo(Mensajes.CANCELAR_FORM) == true) {
-          
+                cargarInformacionADatos();
             }
         }
 
@@ -68,9 +61,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 }
             }
         }
-
-
-
         private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (Mensajes.preguntaAnular() == true) {
@@ -87,19 +77,20 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             dtpMuestra.Enabled = true;
             dtpResultado.Enabled = true;
             dgvResultados.ReadOnly = false;
-            dgvResultados.Columns[0].Visible = false;
-            dgvResultados.Columns[1].ReadOnly = true;
-            dgvResultados.Columns[2].ReadOnly = false;
-            dgvResultados.Columns[3].ReadOnly = true;
+            txtObservacion.ReadOnly = false;
+            dgvResultados.Columns[2].ReadOnly = true;
+            dgvResultados.Columns[3].ReadOnly = false;
+            dgvResultados.Columns[4].ReadOnly = true;
         }
 
         private void validarGrilla() { 
-            dgvResultados.Columns[0].DataPropertyName="Codigo";
-            dgvResultados.Columns[1].DataPropertyName = "Parametro";
-            dgvResultados.Columns[2].DataPropertyName="Descripcion";
-            dgvResultados.Columns[3].DataPropertyName="Resultado";
-            dgvResultados.Columns[4].DataPropertyName="Referencia";
+            dgvResultados.Columns["dgCodigo"].DataPropertyName="Codigo";
+            dgvResultados.Columns["dgParametro"].DataPropertyName = "Parametro";
+            dgvResultados.Columns["dgDescripcion"].DataPropertyName="Descripcion";
+            dgvResultados.Columns["dgResultado"].DataPropertyName="Resultado";
+            dgvResultados.Columns["dgReferencia"].DataPropertyName="Referencia";
             dgvResultados.DataSource = resultadoLab.dtResultado;
+            dgvResultados.AutoGenerateColumns = false;
         }
         public void cargarInformacionADatos()
         {
@@ -114,25 +105,52 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
             txtAtencion.Text = dRows.Field<int>("idAtencion").ToString();
             txtPaciente.Text = dRows.Field<string>("paciente").ToString();
-            txtIdentificacion.Text = dRows.Field<string>("identificacion").ToString();
+            txtIdentificacion.Text = dRows.Field<string>("Documento").ToString();
             txtServicio.Text = dRows.Field<string>("Entorno").ToString();
-            txtOrdenMedica.Text = dRows.Field<string>("IdOrdenMedica").ToString();
+            txtOrdenMedica.Text = dRows.Field<int>("IdOrdenMedica").ToString();
             txtProcedimiento.Text = dRows.Field<string>("procedimiento").ToString();
             txtCodigoAdministradora.Text = dRows.Field<int>("IdContrato").ToString();
             txtAdministradora.Text = dRows.Field<string>("Nombre").ToString();
             resultadoLab.codigoGenero = dRows.Field<int>("IdGenero");
+            resultadoLab.estadoRegistro = dRows.Field<bool>("EstadoRegistro");
             lbTitulo.Text = dRows.Field<string>("nombreExamen").ToString();
+            validarGrilla();
             cargarParametrosLaboratorio();
-        }
 
+            GeneralC.deshabilitarControles(this);
+            GeneralC.deshabilitarBotones(ref tstMenuPatron);
+            btnSalir.Enabled = true;
+
+            if (resultadoLab.estadoRegistro == true) {
+                tstModificar.Enabled = true;
+                tstImprimir.Enabled = true;
+                tsbAnular.Enabled = true;               
+            }
+            else
+            {
+                habilitarControles();
+                tsbGuardar.Enabled = true;
+                tsbCancelar.Enabled = true;
+            }         
+        }
         private void cargarParametrosLaboratorio() {
             List<string> paramtro = new List<string>();
-            paramtro.Add(resultadoLab.codigoSolicitud.ToString());
             paramtro.Add(resultadoLab.auditoria.ToString());
+            paramtro.Add(resultadoLab.codigoSolicitud.ToString()); 
             paramtro.Add(resultadoLab.codigoGenero.ToString());
             paramtro.Add(idProcedimiento.ToString());
             GeneralC.llenarTabla(Sentencias.CARGAR_RESULTADO_LAB, paramtro, resultadoLab.dtResultado);
             dgvResultados.DataSource = resultadoLab.dtResultado;
         }
+        #region btnSalir      
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(Mensajes.SALIR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+        #endregion
+
     }
 }
