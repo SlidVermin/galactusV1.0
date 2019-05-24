@@ -1084,6 +1084,7 @@
     <None Include="Resources\infusion16.png" />
     <Content Include="Resources\laboratorio-ico.png" />
     <None Include="Resources\opciondelete.png" />
+    <None Include="Resources\pdf24.png" />
     <Content Include="Resources\seguridad-ico.png" />
     <None Include="Resources\principal-fondo.jpg" />
     <None Include="Resources\login-btIngresar-fondo.jpg" />

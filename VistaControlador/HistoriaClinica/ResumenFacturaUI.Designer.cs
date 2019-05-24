@@ -58,6 +58,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.button1 = new System.Windows.Forms.Button();
             this.tcResumen = new Galactus.Util.Controles.TabControlGalactus();
             this.tpResumen = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -111,6 +112,19 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Image = global::Galactus.Properties.Resources.pdf24;
+            this.button1.Location = new System.Drawing.Point(8, 94);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 32);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Exportar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // tcResumen
             // 
@@ -670,6 +684,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1100, 357);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tcResumen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1100, 357);
@@ -735,5 +750,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn202;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgPrecioConsolidado;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgTotalDetalle;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -513,6 +513,16 @@ namespace Galactus.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pdf24 {
+            get {
+                object obj = ResourceManager.GetObject("pdf24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pencil_icon {
             get {
                 object obj = ResourceManager.GetObject("pencil-icon", resourceCulture);
