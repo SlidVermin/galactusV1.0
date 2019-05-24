@@ -65,6 +65,7 @@
             this.tpEgreso = new System.Windows.Forms.TabPage();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tpResumen = new System.Windows.Forms.TabPage();
             this.pnlInformacion.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
             this.tstMenuOrdenMedica.SuspendLayout();
@@ -279,25 +280,26 @@
             // 
             // tpEvolucion
             // 
+            this.tpEvolucion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpEvolucion.Location = new System.Drawing.Point(4, 29);
             this.tpEvolucion.Name = "tpEvolucion";
             this.tpEvolucion.Padding = new System.Windows.Forms.Padding(3);
             this.tpEvolucion.Size = new System.Drawing.Size(1289, 468);
             this.tpEvolucion.TabIndex = 2;
             this.tpEvolucion.Text = "Evoluciones";
-            this.tpEvolucion.UseVisualStyleBackColor = true;
             // 
             // tpLaboratorios
             // 
+            this.tpLaboratorios.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpLaboratorios.Location = new System.Drawing.Point(4, 29);
             this.tpLaboratorios.Name = "tpLaboratorios";
             this.tpLaboratorios.Size = new System.Drawing.Size(1289, 468);
             this.tpLaboratorios.TabIndex = 4;
             this.tpLaboratorios.Text = "Resultados";
-            this.tpLaboratorios.UseVisualStyleBackColor = true;
             // 
             // tpOrdenMedica
             // 
+            this.tpOrdenMedica.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpOrdenMedica.Controls.Add(this.tstMenuOrdenMedica);
             this.tpOrdenMedica.Location = new System.Drawing.Point(4, 29);
             this.tpOrdenMedica.Name = "tpOrdenMedica";
@@ -305,7 +307,6 @@
             this.tpOrdenMedica.Size = new System.Drawing.Size(1289, 468);
             this.tpOrdenMedica.TabIndex = 1;
             this.tpOrdenMedica.Text = "Orden Medica";
-            this.tpOrdenMedica.UseVisualStyleBackColor = true;
             // 
             // tstMenuOrdenMedica
             // 
@@ -390,12 +391,12 @@
             // 
             // tpEstancia
             // 
+            this.tpEstancia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpEstancia.Location = new System.Drawing.Point(4, 29);
             this.tpEstancia.Name = "tpEstancia";
             this.tpEstancia.Size = new System.Drawing.Size(1289, 468);
             this.tpEstancia.TabIndex = 3;
             this.tpEstancia.Text = "Estancia";
-            this.tpEstancia.UseVisualStyleBackColor = true;
             // 
             // tabHistoriaClinica
             // 
@@ -407,6 +408,7 @@
             this.tabHistoriaClinica.Controls.Add(this.tpEvolucion);
             this.tabHistoriaClinica.Controls.Add(this.tpRemision);
             this.tabHistoriaClinica.Controls.Add(this.tpEgreso);
+            this.tabHistoriaClinica.Controls.Add(this.tpResumen);
             this.tabHistoriaClinica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabHistoriaClinica.Location = new System.Drawing.Point(11, 116);
             this.tabHistoriaClinica.Name = "tabHistoriaClinica";
@@ -426,23 +428,23 @@
             // 
             // tpRemision
             // 
+            this.tpRemision.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpRemision.Location = new System.Drawing.Point(4, 29);
             this.tpRemision.Name = "tpRemision";
             this.tpRemision.Padding = new System.Windows.Forms.Padding(3);
             this.tpRemision.Size = new System.Drawing.Size(1289, 468);
             this.tpRemision.TabIndex = 6;
             this.tpRemision.Text = "Remisión";
-            this.tpRemision.UseVisualStyleBackColor = true;
             // 
             // tpEgreso
             // 
+            this.tpEgreso.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpEgreso.Location = new System.Drawing.Point(4, 29);
             this.tpEgreso.Name = "tpEgreso";
             this.tpEgreso.Padding = new System.Windows.Forms.Padding(3);
             this.tpEgreso.Size = new System.Drawing.Size(1289, 468);
             this.tpEgreso.TabIndex = 5;
             this.tpEgreso.Text = "Egreso";
-            this.tpEgreso.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
@@ -465,6 +467,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
+            // 
+            // tpResumen
+            // 
+            this.tpResumen.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpResumen.Location = new System.Drawing.Point(4, 29);
+            this.tpResumen.Name = "tpResumen";
+            this.tpResumen.Padding = new System.Windows.Forms.Padding(3);
+            this.tpResumen.Size = new System.Drawing.Size(1289, 468);
+            this.tpResumen.TabIndex = 7;
+            this.tpResumen.Text = "Resumen factura";
             // 
             // HistoriaClinicaUI
             // 
@@ -535,5 +547,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TabPage tpEgreso;
         private System.Windows.Forms.TabPage tpRemision;
+        private System.Windows.Forms.TabPage tpResumen;
     }
 }

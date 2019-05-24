@@ -611,6 +611,12 @@
     <Compile Include="VistaControlador\HistoriaClinica\Resultado\JustificacionAntibioticoUI.Designer.cs">
       <DependentUpon>JustificacionAntibioticoUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\ResumenFacturaUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\HistoriaClinica\ResumenFacturaUI.Designer.cs">
+      <DependentUpon>ResumenFacturaUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="VistaControlador\HistoriaClinica\SabanaEnfermeriaUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -885,6 +891,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\Resultado\JustificacionAntibioticoUI.resx">
       <DependentUpon>JustificacionAntibioticoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\HistoriaClinica\ResumenFacturaUI.resx">
+      <DependentUpon>ResumenFacturaUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\SabanaEnfermeriaUI.resx">
       <DependentUpon>SabanaEnfermeriaUI.cs</DependentUpon>
