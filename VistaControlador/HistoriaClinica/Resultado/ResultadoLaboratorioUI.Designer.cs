@@ -84,8 +84,8 @@
             this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tstModificar,
-            this.tsbCancelar,
             this.tsbGuardar,
+            this.tsbCancelar,
             this.tsbAnular,
             this.tstImprimir});
             this.tstMenuPatron.Location = new System.Drawing.Point(0, 555);

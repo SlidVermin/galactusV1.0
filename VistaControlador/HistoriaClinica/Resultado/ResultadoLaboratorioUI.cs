@@ -125,6 +125,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             resultadoLab.codigoGenero = dRows.Field<int>("IdGenero");
             resultadoLab.estadoRegistro = dRows.Field<bool>("EstadoRegistro");
             lbTitulo.Text = dRows.Field<string>("nombreExamen").ToString();
+            txtObservacion.Text = dRows.Field<string>("Observacion").ToString();
+            dtpMuestra.Value = dRows.Field<DateTime>("FechaMuestra");
+            dtpResultado.Value = dRows.Field<DateTime>("FechaResultado");
             validarGrilla();
             cargarParametrosLaboratorio();
 
