@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.Reflection;
 using System.Collections;
 using System.Globalization;
+using Galactus.VistaControlador.HistoriaClinica;
 
 namespace Galactus
 {
@@ -190,6 +191,12 @@ namespace Galactus
         private void PrincipalUI_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void toolStripStatusLabel_Click(object sender, EventArgs e)
+        {
+            SolicitudMedicamentoNoPosUI solicitud = new SolicitudMedicamentoNoPosUI();
+            solicitud.ShowDialog();
         }
     }
 }

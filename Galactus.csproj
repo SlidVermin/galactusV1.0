@@ -94,6 +94,7 @@
     <Compile Include="Entidades\HistoriaClinica\Resultado\Hemodialisis.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\InformeQuirurgico.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\JustificacionAntibiotico.cs" />
+    <Compile Include="Entidades\HistoriaClinica\Resultado\MedicamentosNoPos.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\ResultadoLaboratorio.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\ResultadoOrdenMedica.cs" />
     <Compile Include="Entidades\Inventario\Bodega.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Modelo\HistoriaClinica\OrdenClinicaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\HemodialisisDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\InformeQuirurgicoDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\Resultado\MedicamentoNoPosDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\ResultadoLaboratorioDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\SabanaDAL.cs" />
     <Compile Include="Modelo\Inventario\BodegaDAL.cs" />

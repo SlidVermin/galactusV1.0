@@ -67,6 +67,13 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
             dtGlucometriaCopia.Columns.Add("Insulina", typeof(String));
             dtGlucometriaCopia.Columns.Add("Usuario", typeof(int));
         }
+        public void columnasInsumos()
+        {
+            dtInsumosCopia.Columns.Add("id", typeof(int));
+            dtInsumosCopia.Columns.Add("cantidad", typeof(int));
+            dtInsumosCopia.Columns.Add("idUsuario", typeof(int));
+           
+        }
         public void prepararGlucometriaDT()
         {
             DataTable dt = new DataTable();
@@ -91,13 +98,25 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
         }
         public void prepararInsumoDT()
         {
+            DataTable dt = new DataTable();
             dtInsumos.AcceptChanges();
-            dtInsumosCopia = dtInsumos.Copy();
-            dtInsumosCopia.Columns.Remove("Descripcion");
-            dtInsumosCopia.Columns.Remove("Código");
+            dt = dtInsumos.Copy();
+            dt.Columns.Remove("Descripcion");
+            dt.Columns.Remove("Código");
+            dt.Columns.Add("idUsuario");
+            dtInsumosCopia.Clear();
+            dtInsumosCopia.Reset();
+            columnasInsumos();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if ( dt.Rows[i]["id"].ToString() != string.Empty)
+                {
+                    dt.Rows[i]["idUsuario"] = Sesion.IdUsuario;
+                    dtInsumosCopia.ImportRow(dt.Rows[i]);
+                }
+            }
             if (dtInsumosCopia.Rows.Count > 0)
             {
-                dtInsumosCopia.Rows.RemoveAt(dtInsumosCopia.Rows.Count - 1);
                 dtInsumos.Rows.RemoveAt(dtInsumos.Rows.Count - 1);
             }
         }

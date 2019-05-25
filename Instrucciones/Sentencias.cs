@@ -173,5 +173,8 @@ namespace Galactus
 
         public const string LISTAR_RESULTADO_LABORATORIO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspResultadoLaboratorioListar]";
         #endregion
+        #region Formatos
+        public const string BUSCAR_ORDEN_MEDICAMENTO_NOPOS = ConstanteGeneral.ESQUEMA_FORMATO + "uspMedicamentoNoPosOrdenBuscar";
+        #endregion
     }
 }
