@@ -37,7 +37,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
         }
 
 
-        public static Boolean anularResulatdoLab(int codigo)
+        public static Boolean anularResulatdoLab(int codigo,int auditoria)
         {
             Boolean resultado = false;
             try
@@ -47,7 +47,8 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Sentencias.ANULAR_RESULTADO_LAB;
-                    sentencia.Parameters.Add(new SqlParameter("@IdInfQuirurgico", SqlDbType.Int)).Value = codigo;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdResultado", SqlDbType.Int)).Value = codigo;
+                    sentencia.Parameters.Add(new SqlParameter("@Auditoria", SqlDbType.Int)).Value = auditoria;
                     sentencia.ExecuteNonQuery();
                     resultado = true;
                 }

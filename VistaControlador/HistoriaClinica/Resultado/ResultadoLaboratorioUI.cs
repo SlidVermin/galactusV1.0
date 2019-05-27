@@ -74,8 +74,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void tsbAnular_Click(object sender, EventArgs e)
         {
             if (Mensajes.preguntaAnular() == true) {
-                ResultadoLaboratorioDAL.anularResulatdoLab(resultadoLab.codigoResultado);
-
+                if (ResultadoLaboratorioDAL.anularResulatdoLab(resultadoLab.codigoResultado, resultadoLab.auditoria) == true) {
+                    cargarInformacionADatos();
+                    Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_ANULADO);
+                }
             }
         }
 
@@ -162,6 +164,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             paramtro.Add(resultadoLab.codigoSolicitud.ToString()); 
             paramtro.Add(resultadoLab.codigoGenero.ToString());
             paramtro.Add(idProcedimiento.ToString());
+            paramtro.Add(Convert.ToUInt32(resultadoLab.estadoRegistro).ToString());
 
             GeneralC.llenarTabla(Sentencias.CARGAR_RESULTADO_LAB, paramtro, resultadoLab.dtResultado);
             dgvResultados.DataSource = resultadoLab.dtResultado;

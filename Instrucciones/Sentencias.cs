@@ -124,7 +124,7 @@ namespace Galactus
 
         public const string BUSCAR_PACIENTE_RESULTADO_LAB = ConstanteGeneral.ESQUEMA_LABORATORIO + "[uspPacienteSolicitudExamenBuscar]";
         public const string CARGAR_RESULTADO_LAB = ConstanteGeneral.ESQUEMA_LABORATORIO + "[uspPacienteSolicitudExamenCargar]";
-        public const string ANULAR_RESULTADO_LAB = "";
+        public const string ANULAR_RESULTADO_LAB = ConstanteGeneral.ESQUEMA_LABORATORIO + "[uspResultadoExamenAnulado]";
         public const string CREAR_RESULTADO_LAB = ConstanteGeneral.ESQUEMA_LABORATORIO +"[uspResultadoExamenCrear]";
 
         public const string ORDEN_CLINICA_CREAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspOrdenMedicaCrear]";
