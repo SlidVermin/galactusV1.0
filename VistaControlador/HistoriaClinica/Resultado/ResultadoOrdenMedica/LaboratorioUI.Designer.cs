@@ -35,9 +35,6 @@
             this.dgIdProcedimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgDescripcionProcedimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgLectura = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.GroupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultadoLaboratorio)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +87,7 @@
             this.dgvResultadoLaboratorio.TabIndex = 15;
             this.dgvResultadoLaboratorio.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResultadoLaboratorio_CellClick);
             this.dgvResultadoLaboratorio.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResultadoLaboratorio_CellDoubleClick);
+            this.dgvResultadoLaboratorio.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvResultadoLaboratorio_CellFormatting);
             // 
             // dgIdSolicitud
             // 
@@ -120,35 +118,13 @@
             // 
             // dgLectura
             // 
+            this.dgLectura.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgLectura.HeaderText = "Lectura";
+            this.dgLectura.Image = global::Galactus.Properties.Resources.Actions_file_close_icon;
             this.dgLectura.Name = "dgLectura";
             this.dgLectura.ReadOnly = true;
-            this.dgLectura.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgLectura.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgLectura.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgLectura.Width = 73;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn1.HeaderText = "Mezcla";
-            this.dataGridViewImageColumn1.Image = global::Galactus.Properties.Resources.infusion16;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn2.HeaderText = "Agregar";
-            this.dataGridViewImageColumn2.Image = global::Galactus.Properties.Resources.farmacia_ico;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            // 
-            // dataGridViewImageColumn3
-            // 
-            this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn3.HeaderText = "Quitar";
-            this.dataGridViewImageColumn3.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
             // 
             // LaboratorioUI
             // 
@@ -172,9 +148,6 @@
 
         internal System.Windows.Forms.GroupBox GroupBox17;
         public System.Windows.Forms.DataGridView dgvResultadoLaboratorio;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgIdSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgIdProcedimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcionProcedimiento;

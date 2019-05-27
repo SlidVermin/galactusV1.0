@@ -22,7 +22,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         private int auditoria;
         private ResultadoOrdenMedica resultadoLaboratorio = new ResultadoOrdenMedica();
         public ResultadoOrdenMedicaUI resulOrdenMedica;
- 
+        private int contador;
+
         public LaboratorioUI(int idAtencion, int Auditoria)
         {
             InitializeComponent();
@@ -51,19 +52,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             dgvResultadoLaboratorio.Columns["dgLectura"].DisplayIndex = 3;
             dgvResultadoLaboratorio.AutoGenerateColumns = false;
         }
-
-        public void estadoRegistro() {
-            if (resultadoLaboratorio.dtResultado.Rows.Count > 0) {
-                for (int posicion = 0; posicion <= resultadoLaboratorio.dtResultado.Rows.Count - 1; posicion++) {
-                    if (resultadoLaboratorio.dtResultado.Rows[posicion].Field<int>("Estado") == ConstanteGeneral.ESTADO_LISTO) {
-                        dgvResultadoLaboratorio.Rows[posicion].Cells["dgLectura"].Value = global::Galactus.Properties.Resources.Actions_file_close_icon ;
-                    }
-                    else {
-                        dgvResultadoLaboratorio.Rows[posicion].Cells["dgLectura"].Value =global::Galactus.Properties.Resources.checked__1_;
-                    }
-                }
-            }
-        }
         private void dgvResultadoLaboratorio_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ResultadoLaboratorioUI resultadoLaboratorio;
@@ -85,6 +73,19 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             if (resultadoLaboratorio.dtResultado.Rows.Count > 0) {
                 resulOrdenMedica.txtBCodigoOrden.Text = resultadoLaboratorio.dtResultado.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Field<int>("idOrdenMedica").ToString();
                 resulOrdenMedica.dtpFecha.Value = resultadoLaboratorio.dtResultado.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Field<DateTime>("Fecha");
+            }
+        }
+        private void dgvResultadoLaboratorio_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (contador <= resultadoLaboratorio.dtResultado.Rows.Count-1) {
+                if (resultadoLaboratorio.dtResultado.Rows.Count > 0)
+                {
+                    if (resultadoLaboratorio.dtResultado.Rows[e.RowIndex].Field<int>("Estado") == ConstanteGeneral.ESTADO_LISTO)
+                    {
+                        dgvResultadoLaboratorio.Rows[e.RowIndex].Cells["dgLectura"].Value = global::Galactus.Properties.Resources.checked__1_;
+                    }
+                    contador++;
+                }
             }
         }
     }
