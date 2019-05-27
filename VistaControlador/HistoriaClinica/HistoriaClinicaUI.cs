@@ -105,5 +105,13 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 Close();
             }
         }
+
+        private void tabHistoriaClinica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabHistoriaClinica.SelectedTab.Name == tpResumen .Name)
+            {
+                resumen.cargar(); 
+            }
+        }
     }
 }

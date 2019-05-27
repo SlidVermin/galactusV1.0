@@ -26,7 +26,19 @@ namespace Galactus.VistaControlador.HistoriaClinica
         }
         private void ResumenFacturaUI_Load(object sender, EventArgs e)
         {
-
+            
+        }
+        public void cargar()
+        {
+            DataSet tablasResultados = new DataSet();
+            List<string> Parametros = new List<string>();
+            Parametros.Add(auditoria.ToString());
+            Parametros.Add(idAtencion.ToString());
+            tablasResultados = GeneralC.llenarDataset(Sentencias.RESUMEN_FACTURA_CARGAR, Parametros);
+            dgvDetalle.DataSource = tablasResultados.Tables["table"];
+            dgvAgrupado.DataSource = tablasResultados.Tables["table1"];
+            dgvResumenDiario.DataSource = tablasResultados.Tables["table2"];
+            dgvConsolidado.DataSource = tablasResultados.Tables["table3"];
         }
     }
 }

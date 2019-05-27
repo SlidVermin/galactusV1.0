@@ -64,6 +64,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvAgrupado = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -184,6 +185,7 @@
             this.dgvAgrupado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAgrupado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
+            this.Id,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
@@ -194,6 +196,7 @@
             this.dgvAgrupado.Location = new System.Drawing.Point(3, 16);
             this.dgvAgrupado.MultiSelect = false;
             this.dgvAgrupado.Name = "dgvAgrupado";
+            this.dgvAgrupado.ReadOnly = true;
             this.dgvAgrupado.RowHeadersVisible = false;
             this.dgvAgrupado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvAgrupado.Size = new System.Drawing.Size(950, 218);
@@ -202,33 +205,45 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "grupo";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "tipo";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.NullValue = null;
             this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn1.HeaderText = "Grupo";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 120;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            this.Id.Width = 43;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "codigo";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Código";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.NullValue = null;
             this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn2.HeaderText = "Código";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "descripcion";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "descripción";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.NullValue = null;
             this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn3.HeaderText = "Descripción";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -240,6 +255,7 @@
             this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn4.HeaderText = "Cantidad";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Width = 90;
             // 
             // dataGridViewTextBoxColumn5
@@ -252,6 +268,7 @@
             this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Width = 122;
             // 
             // dataGridViewTextBoxColumn8
@@ -264,6 +281,7 @@
             this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn8.HeaderText = "Total";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Width = 130;
             // 
             // GroupBox2
@@ -309,6 +327,7 @@
             this.dgvConsolidado.Location = new System.Drawing.Point(3, 16);
             this.dgvConsolidado.MultiSelect = false;
             this.dgvConsolidado.Name = "dgvConsolidado";
+            this.dgvConsolidado.ReadOnly = true;
             this.dgvConsolidado.RowHeadersVisible = false;
             this.dgvConsolidado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvConsolidado.Size = new System.Drawing.Size(950, 70);
@@ -324,6 +343,7 @@
             this.DataGridViewTextBoxColumn195.DefaultCellStyle = dataGridViewCellStyle9;
             this.DataGridViewTextBoxColumn195.HeaderText = "Promedio dia";
             this.DataGridViewTextBoxColumn195.Name = "DataGridViewTextBoxColumn195";
+            this.DataGridViewTextBoxColumn195.ReadOnly = true;
             // 
             // DataGridViewTextBoxColumn196
             // 
@@ -335,6 +355,7 @@
             this.DataGridViewTextBoxColumn196.DefaultCellStyle = dataGridViewCellStyle10;
             this.DataGridViewTextBoxColumn196.HeaderText = "Oxígeno";
             this.DataGridViewTextBoxColumn196.Name = "DataGridViewTextBoxColumn196";
+            this.DataGridViewTextBoxColumn196.ReadOnly = true;
             this.DataGridViewTextBoxColumn196.Width = 134;
             // 
             // DataGridViewTextBoxColumn198
@@ -347,6 +368,7 @@
             this.DataGridViewTextBoxColumn198.DefaultCellStyle = dataGridViewCellStyle11;
             this.DataGridViewTextBoxColumn198.HeaderText = "Medicamento";
             this.DataGridViewTextBoxColumn198.Name = "DataGridViewTextBoxColumn198";
+            this.DataGridViewTextBoxColumn198.ReadOnly = true;
             this.DataGridViewTextBoxColumn198.Width = 134;
             // 
             // DataGridViewTextBoxColumn199
@@ -359,6 +381,7 @@
             this.DataGridViewTextBoxColumn199.DefaultCellStyle = dataGridViewCellStyle12;
             this.DataGridViewTextBoxColumn199.HeaderText = "Insumo enfermeria";
             this.DataGridViewTextBoxColumn199.Name = "DataGridViewTextBoxColumn199";
+            this.DataGridViewTextBoxColumn199.ReadOnly = true;
             this.DataGridViewTextBoxColumn199.Width = 134;
             // 
             // DataGridViewTextBoxColumn207
@@ -371,6 +394,7 @@
             this.DataGridViewTextBoxColumn207.DefaultCellStyle = dataGridViewCellStyle13;
             this.DataGridViewTextBoxColumn207.HeaderText = "Insumo fisioterapia";
             this.DataGridViewTextBoxColumn207.Name = "DataGridViewTextBoxColumn207";
+            this.DataGridViewTextBoxColumn207.ReadOnly = true;
             this.DataGridViewTextBoxColumn207.Width = 134;
             // 
             // DataGridViewTextBoxColumn208
@@ -383,6 +407,7 @@
             this.DataGridViewTextBoxColumn208.DefaultCellStyle = dataGridViewCellStyle14;
             this.DataGridViewTextBoxColumn208.HeaderText = "Estancia";
             this.DataGridViewTextBoxColumn208.Name = "DataGridViewTextBoxColumn208";
+            this.DataGridViewTextBoxColumn208.ReadOnly = true;
             this.DataGridViewTextBoxColumn208.Width = 134;
             // 
             // DataGridViewTextBoxColumn210
@@ -395,6 +420,7 @@
             this.DataGridViewTextBoxColumn210.DefaultCellStyle = dataGridViewCellStyle15;
             this.DataGridViewTextBoxColumn210.HeaderText = "Procedimiento";
             this.DataGridViewTextBoxColumn210.Name = "DataGridViewTextBoxColumn210";
+            this.DataGridViewTextBoxColumn210.ReadOnly = true;
             this.DataGridViewTextBoxColumn210.Width = 134;
             // 
             // DataGridViewTextBoxColumn211
@@ -407,6 +433,7 @@
             this.DataGridViewTextBoxColumn211.DefaultCellStyle = dataGridViewCellStyle16;
             this.DataGridViewTextBoxColumn211.HeaderText = "Total";
             this.DataGridViewTextBoxColumn211.Name = "DataGridViewTextBoxColumn211";
+            this.DataGridViewTextBoxColumn211.ReadOnly = true;
             this.DataGridViewTextBoxColumn211.Width = 144;
             // 
             // tpDiario
@@ -463,6 +490,7 @@
             this.dgvResumenDiario.Location = new System.Drawing.Point(3, 16);
             this.dgvResumenDiario.MultiSelect = false;
             this.dgvResumenDiario.Name = "dgvResumenDiario";
+            this.dgvResumenDiario.ReadOnly = true;
             this.dgvResumenDiario.RowHeadersVisible = false;
             this.dgvResumenDiario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvResumenDiario.Size = new System.Drawing.Size(950, 310);
@@ -471,13 +499,14 @@
             // DataGridViewTextBoxColumn200
             // 
             this.DataGridViewTextBoxColumn200.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DataGridViewTextBoxColumn200.DataPropertyName = "fechaOrden";
+            this.DataGridViewTextBoxColumn200.DataPropertyName = "fecha";
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle18.Format = "d";
             dataGridViewCellStyle18.NullValue = null;
             this.DataGridViewTextBoxColumn200.DefaultCellStyle = dataGridViewCellStyle18;
             this.DataGridViewTextBoxColumn200.HeaderText = "Fecha";
             this.DataGridViewTextBoxColumn200.Name = "DataGridViewTextBoxColumn200";
+            this.DataGridViewTextBoxColumn200.ReadOnly = true;
             // 
             // DataGridViewTextBoxColumn203
             // 
@@ -489,6 +518,7 @@
             this.DataGridViewTextBoxColumn203.DefaultCellStyle = dataGridViewCellStyle19;
             this.DataGridViewTextBoxColumn203.HeaderText = "Oxígeno";
             this.DataGridViewTextBoxColumn203.Name = "DataGridViewTextBoxColumn203";
+            this.DataGridViewTextBoxColumn203.ReadOnly = true;
             this.DataGridViewTextBoxColumn203.Width = 134;
             // 
             // DataGridViewTextBoxColumn205
@@ -501,6 +531,7 @@
             this.DataGridViewTextBoxColumn205.DefaultCellStyle = dataGridViewCellStyle20;
             this.DataGridViewTextBoxColumn205.HeaderText = "Medicamento";
             this.DataGridViewTextBoxColumn205.Name = "DataGridViewTextBoxColumn205";
+            this.DataGridViewTextBoxColumn205.ReadOnly = true;
             this.DataGridViewTextBoxColumn205.Width = 134;
             // 
             // DataGridViewTextBoxColumn206
@@ -513,6 +544,7 @@
             this.DataGridViewTextBoxColumn206.DefaultCellStyle = dataGridViewCellStyle21;
             this.DataGridViewTextBoxColumn206.HeaderText = "Insumo enfermeria";
             this.DataGridViewTextBoxColumn206.Name = "DataGridViewTextBoxColumn206";
+            this.DataGridViewTextBoxColumn206.ReadOnly = true;
             this.DataGridViewTextBoxColumn206.Width = 134;
             // 
             // dgvInsumofisioDetalle
@@ -525,6 +557,7 @@
             this.dgvInsumofisioDetalle.DefaultCellStyle = dataGridViewCellStyle22;
             this.dgvInsumofisioDetalle.HeaderText = "Insumo fisioterapia";
             this.dgvInsumofisioDetalle.Name = "dgvInsumofisioDetalle";
+            this.dgvInsumofisioDetalle.ReadOnly = true;
             this.dgvInsumofisioDetalle.Width = 134;
             // 
             // dgEstanciaDetalle
@@ -537,6 +570,7 @@
             this.dgEstanciaDetalle.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgEstanciaDetalle.HeaderText = "Estancia";
             this.dgEstanciaDetalle.Name = "dgEstanciaDetalle";
+            this.dgEstanciaDetalle.ReadOnly = true;
             this.dgEstanciaDetalle.Width = 134;
             // 
             // dgProcedimientoDetalle
@@ -549,6 +583,7 @@
             this.dgProcedimientoDetalle.DefaultCellStyle = dataGridViewCellStyle24;
             this.dgProcedimientoDetalle.HeaderText = "Procedimiento";
             this.dgProcedimientoDetalle.Name = "dgProcedimientoDetalle";
+            this.dgProcedimientoDetalle.ReadOnly = true;
             this.dgProcedimientoDetalle.Width = 134;
             // 
             // dgvTotalDia
@@ -561,6 +596,7 @@
             this.dgvTotalDia.DefaultCellStyle = dataGridViewCellStyle25;
             this.dgvTotalDia.HeaderText = "Total dia";
             this.dgvTotalDia.Name = "dgvTotalDia";
+            this.dgvTotalDia.ReadOnly = true;
             this.dgvTotalDia.Width = 144;
             // 
             // tpDetalle
@@ -615,6 +651,7 @@
             this.dgvDetalle.Location = new System.Drawing.Point(3, 16);
             this.dgvDetalle.MultiSelect = false;
             this.dgvDetalle.Name = "dgvDetalle";
+            this.dgvDetalle.ReadOnly = true;
             this.dgvDetalle.RowHeadersVisible = false;
             this.dgvDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvDetalle.Size = new System.Drawing.Size(950, 310);
@@ -628,13 +665,15 @@
             this.dgTipoConsolidado.DefaultCellStyle = dataGridViewCellStyle27;
             this.dgTipoConsolidado.HeaderText = "Grupo";
             this.dgTipoConsolidado.Name = "dgTipoConsolidado";
+            this.dgTipoConsolidado.ReadOnly = true;
             // 
             // dgFechaOrdenConsolidado
             // 
             this.dgFechaOrdenConsolidado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgFechaOrdenConsolidado.DataPropertyName = "fechaOrden";
+            this.dgFechaOrdenConsolidado.DataPropertyName = "fecha";
             this.dgFechaOrdenConsolidado.HeaderText = "Fecha de orden";
             this.dgFechaOrdenConsolidado.Name = "dgFechaOrdenConsolidado";
+            this.dgFechaOrdenConsolidado.ReadOnly = true;
             this.dgFechaOrdenConsolidado.Width = 140;
             // 
             // DataGridViewTextBoxColumn201
@@ -643,6 +682,7 @@
             this.DataGridViewTextBoxColumn201.DataPropertyName = "descripcion";
             this.DataGridViewTextBoxColumn201.HeaderText = "Descripción";
             this.DataGridViewTextBoxColumn201.Name = "DataGridViewTextBoxColumn201";
+            this.DataGridViewTextBoxColumn201.ReadOnly = true;
             // 
             // DataGridViewTextBoxColumn202
             // 
@@ -652,6 +692,7 @@
             this.DataGridViewTextBoxColumn202.DefaultCellStyle = dataGridViewCellStyle28;
             this.DataGridViewTextBoxColumn202.HeaderText = "Cantidad";
             this.DataGridViewTextBoxColumn202.Name = "DataGridViewTextBoxColumn202";
+            this.DataGridViewTextBoxColumn202.ReadOnly = true;
             this.DataGridViewTextBoxColumn202.Width = 70;
             // 
             // dgPrecioConsolidado
@@ -664,6 +705,7 @@
             this.dgPrecioConsolidado.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgPrecioConsolidado.HeaderText = "Precio";
             this.dgPrecioConsolidado.Name = "dgPrecioConsolidado";
+            this.dgPrecioConsolidado.ReadOnly = true;
             this.dgPrecioConsolidado.Width = 120;
             // 
             // dgTotalDetalle
@@ -676,6 +718,7 @@
             this.dgTotalDetalle.DefaultCellStyle = dataGridViewCellStyle30;
             this.dgTotalDetalle.HeaderText = "Total";
             this.dgTotalDetalle.Name = "dgTotalDetalle";
+            this.dgTotalDetalle.ReadOnly = true;
             this.dgTotalDetalle.Width = 120;
             // 
             // ResumenFacturaUI
@@ -718,12 +761,6 @@
         private System.Windows.Forms.TabPage tpDetalle;
         internal System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.DataGridView dgvAgrupado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         internal System.Windows.Forms.GroupBox groupBox3;
         public System.Windows.Forms.DataGridView dgvResumenDiario;
         internal System.Windows.Forms.GroupBox groupBox4;
@@ -736,6 +773,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn208;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn210;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn211;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn200;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn203;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn205;
@@ -750,6 +788,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn202;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgPrecioConsolidado;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgTotalDetalle;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

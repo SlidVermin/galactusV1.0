@@ -63,9 +63,9 @@
             this.tpIngresoClinico = new System.Windows.Forms.TabPage();
             this.tpRemision = new System.Windows.Forms.TabPage();
             this.tpEgreso = new System.Windows.Forms.TabPage();
+            this.tpResumen = new System.Windows.Forms.TabPage();
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tpResumen = new System.Windows.Forms.TabPage();
             this.pnlInformacion.SuspendLayout();
             this.tpOrdenMedica.SuspendLayout();
             this.tstMenuOrdenMedica.SuspendLayout();
@@ -415,6 +415,7 @@
             this.tabHistoriaClinica.SelectedIndex = 0;
             this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 501);
             this.tabHistoriaClinica.TabIndex = 46;
+            this.tabHistoriaClinica.SelectedIndexChanged += new System.EventHandler(this.tabHistoriaClinica_SelectedIndexChanged);
             // 
             // tpIngresoClinico
             // 
@@ -446,6 +447,16 @@
             this.tpEgreso.TabIndex = 5;
             this.tpEgreso.Text = "Egreso";
             // 
+            // tpResumen
+            // 
+            this.tpResumen.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpResumen.Location = new System.Drawing.Point(4, 29);
+            this.tpResumen.Name = "tpResumen";
+            this.tpResumen.Padding = new System.Windows.Forms.Padding(3);
+            this.tpResumen.Size = new System.Drawing.Size(1289, 468);
+            this.tpResumen.TabIndex = 7;
+            this.tpResumen.Text = "Resumen factura";
+            // 
             // btnSalir
             // 
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -467,16 +478,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 60;
             this.pictureBox1.TabStop = false;
-            // 
-            // tpResumen
-            // 
-            this.tpResumen.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tpResumen.Location = new System.Drawing.Point(4, 29);
-            this.tpResumen.Name = "tpResumen";
-            this.tpResumen.Padding = new System.Windows.Forms.Padding(3);
-            this.tpResumen.Size = new System.Drawing.Size(1289, 468);
-            this.tpResumen.TabIndex = 7;
-            this.tpResumen.Text = "Resumen factura";
             // 
             // HistoriaClinicaUI
             // 
