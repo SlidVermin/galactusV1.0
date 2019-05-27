@@ -111,42 +111,49 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             paramtro.Add(resultadoLab.auditoria.ToString());
             paramtro.Add(resultadoLab.codigoSolicitud.ToString());
             paramtro.Add(idProcedimiento.ToString());
-            GeneralC.llenarTabla(Sentencias.BUSCAR_PACIENTE_RESULTADO_LAB, paramtro, dtDatos);
-            dRows = dtDatos.Rows[0];
+            try {
+                GeneralC.llenarTabla(Sentencias.BUSCAR_PACIENTE_RESULTADO_LAB, paramtro, dtDatos);
+                dRows = dtDatos.Rows[0];
 
-            txtAtencion.Text = dRows.Field<int>("idAtencion").ToString();
-            txtPaciente.Text = dRows.Field<string>("paciente").ToString();
-            txtIdentificacion.Text = dRows.Field<string>("Documento").ToString();
-            txtServicio.Text = dRows.Field<string>("Entorno").ToString();
-            txtOrdenMedica.Text = dRows.Field<int>("IdOrdenMedica").ToString();
-            txtProcedimiento.Text = dRows.Field<string>("procedimiento").ToString();
-            txtCodigoAdministradora.Text = dRows.Field<int>("IdContrato").ToString();
-            txtAdministradora.Text = dRows.Field<string>("Nombre").ToString();
-            resultadoLab.codigoGenero = dRows.Field<int>("IdGenero");
-            resultadoLab.estadoRegistro = dRows.Field<bool>("EstadoRegistro");
-            lbTitulo.Text = dRows.Field<string>("nombreExamen").ToString();
-            txtObservacion.Text = dRows.Field<string>("Observacion").ToString();
-            dtpMuestra.Value = dRows.Field<DateTime>("FechaMuestra");
-            dtpResultado.Value = dRows.Field<DateTime>("FechaResultado");
-            validarGrilla();
-            cargarParametrosLaboratorio();
+                txtAtencion.Text = dRows.Field<int>("idAtencion").ToString();
+                txtPaciente.Text = dRows.Field<string>("paciente").ToString();
+                txtIdentificacion.Text = dRows.Field<string>("Documento").ToString();
+                txtServicio.Text = dRows.Field<string>("Entorno").ToString();
+                txtOrdenMedica.Text = dRows.Field<int>("IdOrdenMedica").ToString();
+                txtProcedimiento.Text = dRows.Field<string>("procedimiento").ToString();
+                txtCodigoAdministradora.Text = dRows.Field<int>("IdContrato").ToString();
+                txtAdministradora.Text = dRows.Field<string>("Nombre").ToString();
+                resultadoLab.codigoGenero = dRows.Field<int>("IdGenero");
+                resultadoLab.estadoRegistro = dRows.Field<bool>("EstadoRegistro");
+                lbTitulo.Text = dRows.Field<string>("nombreExamen").ToString();
+                txtObservacion.Text = dRows.Field<string>("Observacion").ToString();
+                dtpMuestra.Value = dRows.Field<DateTime>("FechaMuestra");
+                dtpResultado.Value = dRows.Field<DateTime>("FechaResultado");
 
-            GeneralC.deshabilitarControles(this);
-            GeneralC.deshabilitarBotones(ref tstMenuPatron);
-            btnSalir.Enabled = true;
+                validarGrilla();
+                cargarParametrosLaboratorio();
 
-            if (resultadoLab.estadoRegistro == true) {
-                tstModificar.Enabled = true;
-                tstImprimir.Enabled = true;
-                tsbAnular.Enabled = true;               
+                GeneralC.deshabilitarControles(this);
+                GeneralC.deshabilitarBotones(ref tstMenuPatron);
+                btnSalir.Enabled = true;
+
+                if (resultadoLab.estadoRegistro == true) {
+                    resultadoLab.codigoResultado = dRows.Field<int>("idResultado");
+                    tstModificar.Enabled = true;
+                    tstImprimir.Enabled = true;
+                    tsbAnular.Enabled = true;
+                }
+                else
+                {
+                    habilitarControles();
+                    resultadoLab.codigoResultado = ConstanteGeneral.PREDETERMINADO;
+                    tsbGuardar.Enabled = true;
+                    tsbCancelar.Enabled = true;
+                }
             }
-            else
-            {
-                habilitarControles();
-                resultadoLab.codigoResultado = ConstanteGeneral.PREDETERMINADO;
-                tsbGuardar.Enabled = true;
-                tsbCancelar.Enabled = true;
-            }         
+            catch (Exception ex) {
+                Mensajes.mensajeError(ex);
+            }    
         }
         private void cargarParametrosLaboratorio() {
             List<string> paramtro = new List<string>();
@@ -158,6 +165,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
             GeneralC.llenarTabla(Sentencias.CARGAR_RESULTADO_LAB, paramtro, resultadoLab.dtResultado);
             dgvResultados.DataSource = resultadoLab.dtResultado;
+            dgvResultados.Columns["dgCodigo"].Visible = false;
 
         }
         private void cargarResultadoLab() {
