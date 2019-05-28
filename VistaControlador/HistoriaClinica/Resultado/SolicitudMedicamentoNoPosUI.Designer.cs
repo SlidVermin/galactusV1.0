@@ -32,8 +32,8 @@
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tstModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.tstImprimir = new System.Windows.Forms.ToolStripButton();
@@ -42,6 +42,11 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtfechaSolicitud = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtEntorno = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btBuscarOrden = new System.Windows.Forms.Button();
             this.txtArea = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtCausaExterna = new System.Windows.Forms.TextBox();
@@ -52,8 +57,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtInstitucion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtViaIngreso = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtEstancia = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCama = new System.Windows.Forms.TextBox();
@@ -66,7 +69,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtAtencion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btBuscarOrden = new System.Windows.Forms.Button();
             this.tabPestañas = new Galactus.Util.Controles.TabControlGalactus();
             this.tabDatosI = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -99,6 +101,11 @@
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvDiagnostico = new System.Windows.Forms.DataGridView();
+            this.dgId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgIdEvolucion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgAsignar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtMedicamentoNOPOS = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tabDatosII = new System.Windows.Forms.TabPage();
@@ -107,17 +114,26 @@
             this.txtExiste = new System.Windows.Forms.RichTextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtReacciones = new System.Windows.Forms.RichTextBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.chkPosibilidad = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtPeligro = new System.Windows.Forms.RichTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtPrecauciones = new System.Windows.Forms.RichTextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.chkTecnologia = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.chkTecnologiaSalud = new System.Windows.Forms.CheckBox();
             this.label29 = new System.Windows.Forms.Label();
             this.chkPreinscripcion = new System.Windows.Forms.CheckBox();
             this.label28 = new System.Windows.Forms.Label();
+            this.tabDatoslll = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.dtFechaComite = new System.Windows.Forms.DateTimePicker();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtDecision = new System.Windows.Forms.RichTextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txtEncabezado = new System.Windows.Forms.RichTextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dgvIntegrante = new System.Windows.Forms.DataGridView();
             this.tstMenuPatron.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -137,6 +153,11 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.tabDatoslll.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntegrante)).BeginInit();
             this.SuspendLayout();
             // 
             // tstMenuPatron
@@ -160,6 +181,7 @@
             // 
             // tsbNuevo
             // 
+            this.tsbNuevo.Enabled = false;
             this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
@@ -167,6 +189,8 @@
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Visible = false;
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tstModificar
             // 
@@ -177,16 +201,7 @@
             this.tstModificar.Name = "tstModificar";
             this.tstModificar.Size = new System.Drawing.Size(78, 22);
             this.tstModificar.Text = "Modificar";
-            // 
-            // tsbCancelar
-            // 
-            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsbCancelar.Text = "Cancelar";
+            this.tstModificar.Click += new System.EventHandler(this.tstModificar_Click);
             // 
             // tsbGuardar
             // 
@@ -197,6 +212,18 @@
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
+            // 
+            // tsbCancelar
+            // 
+            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
             // tsbBuscar
             // 
@@ -207,6 +234,7 @@
             this.tsbBuscar.Name = "tsbBuscar";
             this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
             this.tsbBuscar.Text = "Buscar";
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
             // 
             // tsbAnular
             // 
@@ -274,6 +302,10 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txtfechaSolicitud);
+            this.panel2.Controls.Add(this.label30);
+            this.panel2.Controls.Add(this.txtEntorno);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.btBuscarOrden);
             this.panel2.Controls.Add(this.txtArea);
             this.panel2.Controls.Add(this.label14);
@@ -285,8 +317,6 @@
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.txtInstitucion);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.txtViaIngreso);
-            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtEstancia);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.txtCama);
@@ -304,37 +334,87 @@
             this.panel2.Size = new System.Drawing.Size(1101, 90);
             this.panel2.TabIndex = 0;
             // 
+            // txtfechaSolicitud
+            // 
+            this.txtfechaSolicitud.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfechaSolicitud.Location = new System.Drawing.Point(528, 60);
+            this.txtfechaSolicitud.Name = "txtfechaSolicitud";
+            this.txtfechaSolicitud.ReadOnly = true;
+            this.txtfechaSolicitud.Size = new System.Drawing.Size(119, 21);
+            this.txtfechaSolicitud.TabIndex = 91;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(432, 63);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(93, 15);
+            this.label30.TabIndex = 90;
+            this.label30.Text = "Fecha solicitud:";
+            // 
+            // txtEntorno
+            // 
+            this.txtEntorno.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEntorno.Location = new System.Drawing.Point(930, 58);
+            this.txtEntorno.Name = "txtEntorno";
+            this.txtEntorno.ReadOnly = true;
+            this.txtEntorno.Size = new System.Drawing.Size(161, 21);
+            this.txtEntorno.TabIndex = 89;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(653, 63);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 15);
+            this.label6.TabIndex = 88;
+            this.label6.Text = "Area:";
+            // 
+            // btBuscarOrden
+            // 
+            this.btBuscarOrden.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarOrden.Location = new System.Drawing.Point(907, 3);
+            this.btBuscarOrden.Name = "btBuscarOrden";
+            this.btBuscarOrden.Size = new System.Drawing.Size(24, 23);
+            this.btBuscarOrden.TabIndex = 87;
+            this.btBuscarOrden.UseVisualStyleBackColor = true;
+            this.btBuscarOrden.Click += new System.EventHandler(this.btBuscarOrden_Click);
+            // 
             // txtArea
             // 
             this.txtArea.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtArea.Location = new System.Drawing.Point(829, 58);
+            this.txtArea.Location = new System.Drawing.Point(692, 60);
             this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(262, 21);
+            this.txtArea.ReadOnly = true;
+            this.txtArea.Size = new System.Drawing.Size(167, 21);
             this.txtArea.TabIndex = 66;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(773, 61);
+            this.label14.Location = new System.Drawing.Point(871, 62);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(50, 15);
+            this.label14.Size = new System.Drawing.Size(53, 15);
             this.label14.TabIndex = 65;
-            this.label14.Text = "Entorno";
+            this.label14.Text = "Entorno:";
             // 
             // txtCausaExterna
             // 
             this.txtCausaExterna.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCausaExterna.Location = new System.Drawing.Point(528, 58);
+            this.txtCausaExterna.Location = new System.Drawing.Point(528, 33);
             this.txtCausaExterna.Name = "txtCausaExterna";
-            this.txtCausaExterna.Size = new System.Drawing.Size(232, 21);
+            this.txtCausaExterna.ReadOnly = true;
+            this.txtCausaExterna.Size = new System.Drawing.Size(204, 21);
             this.txtCausaExterna.TabIndex = 64;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(432, 61);
+            this.label13.Location = new System.Drawing.Point(432, 36);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(90, 15);
             this.label13.TabIndex = 63;
@@ -345,6 +425,7 @@
             this.txtFechaAdmision.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFechaAdmision.Location = new System.Drawing.Point(304, 58);
             this.txtFechaAdmision.Name = "txtFechaAdmision";
+            this.txtFechaAdmision.ReadOnly = true;
             this.txtFechaAdmision.Size = new System.Drawing.Size(122, 21);
             this.txtFechaAdmision.TabIndex = 62;
             // 
@@ -363,6 +444,7 @@
             this.txtEstado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstado.Location = new System.Drawing.Point(68, 58);
             this.txtEstado.Name = "txtEstado";
+            this.txtEstado.ReadOnly = true;
             this.txtEstado.Size = new System.Drawing.Size(122, 21);
             this.txtEstado.TabIndex = 60;
             // 
@@ -381,6 +463,7 @@
             this.txtInstitucion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInstitucion.Location = new System.Drawing.Point(813, 31);
             this.txtInstitucion.Name = "txtInstitucion";
+            this.txtInstitucion.ReadOnly = true;
             this.txtInstitucion.Size = new System.Drawing.Size(278, 21);
             this.txtInstitucion.TabIndex = 58;
             // 
@@ -395,29 +478,12 @@
             this.label10.Text = "Institucion:";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // txtViaIngreso
-            // 
-            this.txtViaIngreso.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtViaIngreso.Location = new System.Drawing.Point(528, 31);
-            this.txtViaIngreso.Name = "txtViaIngreso";
-            this.txtViaIngreso.Size = new System.Drawing.Size(206, 21);
-            this.txtViaIngreso.TabIndex = 56;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(450, 34);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 15);
-            this.label9.TabIndex = 55;
-            this.label9.Text = "Via ingreso:";
-            // 
             // txtEstancia
             // 
             this.txtEstancia.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEstancia.Location = new System.Drawing.Point(304, 31);
             this.txtEstancia.Name = "txtEstancia";
+            this.txtEstancia.ReadOnly = true;
             this.txtEstancia.Size = new System.Drawing.Size(122, 21);
             this.txtEstancia.TabIndex = 54;
             // 
@@ -436,6 +502,7 @@
             this.txtCama.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCama.Location = new System.Drawing.Point(68, 31);
             this.txtCama.Name = "txtCama";
+            this.txtCama.ReadOnly = true;
             this.txtCama.Size = new System.Drawing.Size(122, 21);
             this.txtCama.TabIndex = 52;
             // 
@@ -454,6 +521,7 @@
             this.txtEdad.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEdad.Location = new System.Drawing.Point(974, 4);
             this.txtEdad.Name = "txtEdad";
+            this.txtEdad.ReadOnly = true;
             this.txtEdad.Size = new System.Drawing.Size(117, 21);
             this.txtEdad.TabIndex = 48;
             // 
@@ -472,6 +540,7 @@
             this.txtPaciente.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPaciente.Location = new System.Drawing.Point(528, 4);
             this.txtPaciente.Name = "txtPaciente";
+            this.txtPaciente.ReadOnly = true;
             this.txtPaciente.Size = new System.Drawing.Size(376, 21);
             this.txtPaciente.TabIndex = 46;
             // 
@@ -490,6 +559,7 @@
             this.txtHistoriaClinica.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHistoriaClinica.Location = new System.Drawing.Point(304, 4);
             this.txtHistoriaClinica.Name = "txtHistoriaClinica";
+            this.txtHistoriaClinica.ReadOnly = true;
             this.txtHistoriaClinica.Size = new System.Drawing.Size(122, 21);
             this.txtHistoriaClinica.TabIndex = 44;
             // 
@@ -508,6 +578,7 @@
             this.txtAtencion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAtencion.Location = new System.Drawing.Point(68, 4);
             this.txtAtencion.Name = "txtAtencion";
+            this.txtAtencion.ReadOnly = true;
             this.txtAtencion.Size = new System.Drawing.Size(122, 21);
             this.txtAtencion.TabIndex = 42;
             // 
@@ -521,21 +592,12 @@
             this.label3.TabIndex = 41;
             this.label3.Text = "Atencion:";
             // 
-            // btBuscarOrden
-            // 
-            this.btBuscarOrden.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarOrden.Location = new System.Drawing.Point(907, 3);
-            this.btBuscarOrden.Name = "btBuscarOrden";
-            this.btBuscarOrden.Size = new System.Drawing.Size(24, 23);
-            this.btBuscarOrden.TabIndex = 87;
-            this.btBuscarOrden.UseVisualStyleBackColor = true;
-            this.btBuscarOrden.Click += new System.EventHandler(this.btBuscarOrden_Click);
-            // 
             // tabPestañas
             // 
             this.tabPestañas.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabPestañas.Controls.Add(this.tabDatosI);
             this.tabPestañas.Controls.Add(this.tabDatosII);
+            this.tabPestañas.Controls.Add(this.tabDatoslll);
             this.tabPestañas.ItemSize = new System.Drawing.Size(30, 120);
             this.tabPestañas.Location = new System.Drawing.Point(7, 103);
             this.tabPestañas.Multiline = true;
@@ -749,6 +811,7 @@
             // 
             this.txtRazonSuspender.Location = new System.Drawing.Point(142, 29);
             this.txtRazonSuspender.Name = "txtRazonSuspender";
+            this.txtRazonSuspender.ReadOnly = true;
             this.txtRazonSuspender.Size = new System.Drawing.Size(331, 43);
             this.txtRazonSuspender.TabIndex = 87;
             this.txtRazonSuspender.Text = "";
@@ -765,18 +828,21 @@
             // 
             // btMedicamento
             // 
+            this.btMedicamento.Enabled = false;
             this.btMedicamento.Image = global::Galactus.Properties.Resources.btn_lupa;
             this.btMedicamento.Location = new System.Drawing.Point(918, 1);
             this.btMedicamento.Name = "btMedicamento";
             this.btMedicamento.Size = new System.Drawing.Size(24, 23);
             this.btMedicamento.TabIndex = 86;
             this.btMedicamento.UseVisualStyleBackColor = true;
+            this.btMedicamento.Click += new System.EventHandler(this.btMedicamento_Click);
             // 
             // txtMedicamento
             // 
             this.txtMedicamento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedicamento.Location = new System.Drawing.Point(374, 2);
             this.txtMedicamento.Name = "txtMedicamento";
+            this.txtMedicamento.ReadOnly = true;
             this.txtMedicamento.Size = new System.Drawing.Size(538, 21);
             this.txtMedicamento.TabIndex = 55;
             // 
@@ -790,6 +856,7 @@
             this.chkExisteMedicamento.TabIndex = 50;
             this.chkExisteMedicamento.Text = "Existe otro medicamento dentro del pos que se halla utilizado";
             this.chkExisteMedicamento.UseVisualStyleBackColor = true;
+            this.chkExisteMedicamento.CheckedChanged += new System.EventHandler(this.chkExisteMedicamento_CheckedChanged);
             // 
             // label18
             // 
@@ -850,18 +917,70 @@
             // 
             // dgvDiagnostico
             // 
+            this.dgvDiagnostico.AllowUserToAddRows = false;
+            this.dgvDiagnostico.AllowUserToDeleteRows = false;
+            this.dgvDiagnostico.AllowUserToResizeColumns = false;
+            this.dgvDiagnostico.AllowUserToResizeRows = false;
             this.dgvDiagnostico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiagnostico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgId,
+            this.dgIdEvolucion,
+            this.dgCodigo,
+            this.dgDescripcion,
+            this.dgAsignar});
             this.dgvDiagnostico.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDiagnostico.Location = new System.Drawing.Point(3, 17);
             this.dgvDiagnostico.Name = "dgvDiagnostico";
+            this.dgvDiagnostico.ReadOnly = true;
+            this.dgvDiagnostico.RowHeadersVisible = false;
+            this.dgvDiagnostico.ShowCellErrors = false;
+            this.dgvDiagnostico.ShowCellToolTips = false;
+            this.dgvDiagnostico.ShowEditingIcon = false;
+            this.dgvDiagnostico.ShowRowErrors = false;
             this.dgvDiagnostico.Size = new System.Drawing.Size(454, 175);
             this.dgvDiagnostico.TabIndex = 46;
+            this.dgvDiagnostico.TabStop = false;
+            // 
+            // dgId
+            // 
+            this.dgId.HeaderText = "Id";
+            this.dgId.Name = "dgId";
+            this.dgId.ReadOnly = true;
+            this.dgId.Visible = false;
+            // 
+            // dgIdEvolucion
+            // 
+            this.dgIdEvolucion.HeaderText = "IdEvolucion";
+            this.dgIdEvolucion.Name = "dgIdEvolucion";
+            this.dgIdEvolucion.ReadOnly = true;
+            this.dgIdEvolucion.Visible = false;
+            // 
+            // dgCodigo
+            // 
+            this.dgCodigo.HeaderText = "Código";
+            this.dgCodigo.Name = "dgCodigo";
+            this.dgCodigo.ReadOnly = true;
+            // 
+            // dgDescripcion
+            // 
+            this.dgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgDescripcion.HeaderText = "Descripcion";
+            this.dgDescripcion.Name = "dgDescripcion";
+            this.dgDescripcion.ReadOnly = true;
+            // 
+            // dgAsignar
+            // 
+            this.dgAsignar.HeaderText = "Asignar";
+            this.dgAsignar.Name = "dgAsignar";
+            this.dgAsignar.ReadOnly = true;
+            this.dgAsignar.Width = 65;
             // 
             // txtMedicamentoNOPOS
             // 
             this.txtMedicamentoNOPOS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedicamentoNOPOS.Location = new System.Drawing.Point(158, 4);
             this.txtMedicamentoNOPOS.Name = "txtMedicamentoNOPOS";
+            this.txtMedicamentoNOPOS.ReadOnly = true;
             this.txtMedicamentoNOPOS.Size = new System.Drawing.Size(331, 21);
             this.txtMedicamentoNOPOS.TabIndex = 44;
             // 
@@ -891,7 +1010,7 @@
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.groupBox4);
             this.panel6.Controls.Add(this.groupBox5);
-            this.panel6.Controls.Add(this.checkBox4);
+            this.panel6.Controls.Add(this.chkPosibilidad);
             this.panel6.Controls.Add(this.groupBox3);
             this.panel6.Controls.Add(this.groupBox2);
             this.panel6.Controls.Add(this.panel7);
@@ -941,16 +1060,16 @@
             this.txtReacciones.TabIndex = 0;
             this.txtReacciones.Text = "";
             // 
-            // checkBox4
+            // chkPosibilidad
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Arial", 9F);
-            this.checkBox4.Location = new System.Drawing.Point(15, 238);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(273, 19);
-            this.checkBox4.TabIndex = 54;
-            this.checkBox4.Text = "Existe posiblidad terapeutica  dentro del POS";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkPosibilidad.AutoSize = true;
+            this.chkPosibilidad.Font = new System.Drawing.Font("Arial", 9F);
+            this.chkPosibilidad.Location = new System.Drawing.Point(15, 238);
+            this.chkPosibilidad.Name = "chkPosibilidad";
+            this.chkPosibilidad.Size = new System.Drawing.Size(273, 19);
+            this.chkPosibilidad.TabIndex = 54;
+            this.chkPosibilidad.Text = "Existe posiblidad terapeutica  dentro del POS";
+            this.chkPosibilidad.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -997,7 +1116,7 @@
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.chkTecnologia);
-            this.panel7.Controls.Add(this.checkBox3);
+            this.panel7.Controls.Add(this.chkTecnologiaSalud);
             this.panel7.Controls.Add(this.label29);
             this.panel7.Controls.Add(this.chkPreinscripcion);
             this.panel7.Location = new System.Drawing.Point(9, 29);
@@ -1015,15 +1134,15 @@
             this.chkTecnologia.Text = "La tecnologia en la salud  NO POS tiene un fin cosmometico o suntuario, se encuen" +
     "tra en fase de experimentación, tiene que ser prestado en el exterior?";
             // 
-            // checkBox3
+            // chkTecnologiaSalud
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Arial", 9F);
-            this.checkBox3.Location = new System.Drawing.Point(5, 66);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 50;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkTecnologiaSalud.AutoSize = true;
+            this.chkTecnologiaSalud.Font = new System.Drawing.Font("Arial", 9F);
+            this.chkTecnologiaSalud.Location = new System.Drawing.Point(5, 66);
+            this.chkTecnologiaSalud.Name = "chkTecnologiaSalud";
+            this.chkTecnologiaSalud.Size = new System.Drawing.Size(15, 14);
+            this.chkTecnologiaSalud.TabIndex = 50;
+            this.chkTecnologiaSalud.UseVisualStyleBackColor = true;
             // 
             // label29
             // 
@@ -1054,6 +1173,108 @@
             this.label28.TabIndex = 50;
             this.label28.Text = "Verificación de criterio de evaluacion y autorización";
             // 
+            // tabDatoslll
+            // 
+            this.tabDatoslll.Controls.Add(this.label9);
+            this.tabDatoslll.Controls.Add(this.dtFechaComite);
+            this.tabDatoslll.Controls.Add(this.groupBox7);
+            this.tabDatoslll.Controls.Add(this.groupBox8);
+            this.tabDatoslll.Controls.Add(this.groupBox6);
+            this.tabDatoslll.Location = new System.Drawing.Point(124, 4);
+            this.tabDatoslll.Name = "tabDatoslll";
+            this.tabDatoslll.Size = new System.Drawing.Size(977, 445);
+            this.tabDatoslll.TabIndex = 2;
+            this.tabDatoslll.Text = "Comite tecnico cientifico(lll)";
+            this.tabDatoslll.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 12);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 15);
+            this.label9.TabIndex = 89;
+            this.label9.Text = "Fecha:";
+            // 
+            // dtFechaComite
+            // 
+            this.dtFechaComite.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaComite.Location = new System.Drawing.Point(56, 10);
+            this.dtFechaComite.Name = "dtFechaComite";
+            this.dtFechaComite.Size = new System.Drawing.Size(114, 20);
+            this.dtFechaComite.TabIndex = 56;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txtDecision);
+            this.groupBox7.Font = new System.Drawing.Font("Arial", 9F);
+            this.groupBox7.Location = new System.Drawing.Point(489, 208);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(464, 224);
+            this.groupBox7.TabIndex = 55;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Decisión";
+            // 
+            // txtDecision
+            // 
+            this.txtDecision.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtDecision.Location = new System.Drawing.Point(3, 17);
+            this.txtDecision.Name = "txtDecision";
+            this.txtDecision.Size = new System.Drawing.Size(458, 204);
+            this.txtDecision.TabIndex = 0;
+            this.txtDecision.Text = "";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.txtEncabezado);
+            this.groupBox8.Font = new System.Drawing.Font("Arial", 9F);
+            this.groupBox8.Location = new System.Drawing.Point(489, 10);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(464, 192);
+            this.groupBox8.TabIndex = 54;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Encabezado";
+            // 
+            // txtEncabezado
+            // 
+            this.txtEncabezado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtEncabezado.Location = new System.Drawing.Point(3, 17);
+            this.txtEncabezado.Name = "txtEncabezado";
+            this.txtEncabezado.Size = new System.Drawing.Size(458, 172);
+            this.txtEncabezado.TabIndex = 0;
+            this.txtEncabezado.Text = "";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.dgvIntegrante);
+            this.groupBox6.Font = new System.Drawing.Font("Arial", 9F);
+            this.groupBox6.Location = new System.Drawing.Point(8, 36);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(475, 396);
+            this.groupBox6.TabIndex = 46;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Integrante";
+            // 
+            // dgvIntegrante
+            // 
+            this.dgvIntegrante.AllowUserToAddRows = false;
+            this.dgvIntegrante.AllowUserToDeleteRows = false;
+            this.dgvIntegrante.AllowUserToResizeColumns = false;
+            this.dgvIntegrante.AllowUserToResizeRows = false;
+            this.dgvIntegrante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIntegrante.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvIntegrante.Location = new System.Drawing.Point(3, 17);
+            this.dgvIntegrante.Name = "dgvIntegrante";
+            this.dgvIntegrante.RowHeadersVisible = false;
+            this.dgvIntegrante.ShowCellErrors = false;
+            this.dgvIntegrante.ShowCellToolTips = false;
+            this.dgvIntegrante.ShowEditingIcon = false;
+            this.dgvIntegrante.ShowRowErrors = false;
+            this.dgvIntegrante.Size = new System.Drawing.Size(469, 376);
+            this.dgvIntegrante.TabIndex = 46;
+            this.dgvIntegrante.TabStop = false;
+            // 
             // SolicitudMedicamentoNoPosUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1067,6 +1288,7 @@
             this.Controls.Add(this.tstMenuPatron);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SolicitudMedicamentoNoPosUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.SolicitudMedicamentoNoPosUI_Load);
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
@@ -1094,6 +1316,12 @@
             this.groupBox2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.tabDatoslll.ResumeLayout(false);
+            this.tabDatoslll.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntegrante)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1114,8 +1342,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtInstitucion;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtViaIngreso;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtEstancia;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCama;
@@ -1176,18 +1402,36 @@
         private System.Windows.Forms.RichTextBox txtExiste;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.RichTextBox txtReacciones;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox chkPosibilidad;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RichTextBox txtPeligro;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RichTextBox txtPrecauciones;
         private System.Windows.Forms.Panel panel7;
         internal System.Windows.Forms.Label chkTecnologia;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox chkTecnologiaSalud;
         internal System.Windows.Forms.Label label29;
         private System.Windows.Forms.CheckBox chkPreinscripcion;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ToolStripButton tstImprimir;
         private System.Windows.Forms.Button btBuscarOrden;
+        private System.Windows.Forms.TextBox txtEntorno;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgIdEvolucion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcion;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dgAsignar;
+        private System.Windows.Forms.TabPage tabDatoslll;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker dtFechaComite;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.RichTextBox txtDecision;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.RichTextBox txtEncabezado;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.DataGridView dgvIntegrante;
+        private System.Windows.Forms.TextBox txtfechaSolicitud;
+        private System.Windows.Forms.Label label30;
     }
 }

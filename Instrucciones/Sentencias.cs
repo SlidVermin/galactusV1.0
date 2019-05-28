@@ -176,6 +176,10 @@ namespace Galactus
         #endregion
         #region Formatos
         public const string BUSCAR_ORDEN_MEDICAMENTO_NOPOS = ConstanteGeneral.ESQUEMA_FORMATO + "uspMedicamentoNoPosOrdenBuscar";
+        public const string CARGAR_MEDICAMENTO_NOPOS = ConstanteGeneral.ESQUEMA_FORMATO + "uspMedicamentoNoPosCargar";
+        public const string BUSCAR_MEDICAMENTO_NOPOS_REEMPLAZAR = ConstanteGeneral.ESQUEMA_FORMATO + "uspMedicamentoNoPosReemplazarBuscar";
+        public const string CREAR_MEDICAMENTO_NOPOS = ConstanteGeneral.ESQUEMA_FORMATO + "uspMedicamentoNoPosCrear";
+        public const string BUSCAR_MEDICAMENTO_NOPOS = ConstanteGeneral.ESQUEMA_FORMATO + "uspMedicamentoNoPosBuscar";
         #endregion
     }
 }

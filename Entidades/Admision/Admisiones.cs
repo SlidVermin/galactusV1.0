@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Galactus.Modelo.Admision;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace Galactus.Entidades.Admision

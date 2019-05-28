@@ -120,6 +120,21 @@
   <metadata name="tstMenuPatron.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="dgId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dgIdEvolucion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dgCodigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dgDescripcion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dgAsignar.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label29.Text" xml:space="preserve">
     <value>La prescripción de la tecnologia en la salud, es consecuencia de haberse agotado o descartado las posibilidades técnicas y científicas para la promoción, diagnóstico, tratamiento y rehabilitación de la enfermedad, de las tecnologias contenidas en el POS, sin obtener resultado clínico o paraclínico satisfactorio en el término previsto de sus indicaciones o luego de prever u observar reacciones adversas o intolerancia por el paciente o por que existen indicaciones o contraindicadiones expresas, lo cual consta en la historia clínica.</value>
   </data>
