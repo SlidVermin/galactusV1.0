@@ -34,6 +34,10 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pnlCaracteristica = new System.Windows.Forms.Panel();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.tsbBuscarAnastesia = new System.Windows.Forms.Button();
             this.txtAnastesia = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -75,8 +79,8 @@
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tstImprimir = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlCaracteristica.SuspendLayout();
@@ -104,9 +108,9 @@
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtNota);
-            this.panel2.Location = new System.Drawing.Point(15, 277);
+            this.panel2.Location = new System.Drawing.Point(15, 305);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(897, 212);
+            this.panel2.Size = new System.Drawing.Size(897, 184);
             this.panel2.TabIndex = 6;
             // 
             // txtNota
@@ -116,14 +120,14 @@
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
             this.txtNota.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNota.Size = new System.Drawing.Size(889, 233);
+            this.txtNota.Size = new System.Drawing.Size(889, 176);
             this.txtNota.TabIndex = 40;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(9, 254);
+            this.label21.Location = new System.Drawing.Point(18, 281);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(134, 20);
             this.label21.TabIndex = 5;
@@ -133,7 +137,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 154);
+            this.label6.Location = new System.Drawing.Point(18, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 20);
             this.label6.TabIndex = 4;
@@ -143,6 +147,10 @@
             // 
             this.pnlCaracteristica.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlCaracteristica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCaracteristica.Controls.Add(this.dtpFechaFin);
+            this.pnlCaracteristica.Controls.Add(this.dtpFechaInicio);
+            this.pnlCaracteristica.Controls.Add(this.label17);
+            this.pnlCaracteristica.Controls.Add(this.label16);
             this.pnlCaracteristica.Controls.Add(this.tsbBuscarAnastesia);
             this.pnlCaracteristica.Controls.Add(this.txtAnastesia);
             this.pnlCaracteristica.Controls.Add(this.label13);
@@ -157,22 +165,63 @@
             this.pnlCaracteristica.Controls.Add(this.label11);
             this.pnlCaracteristica.Location = new System.Drawing.Point(15, 177);
             this.pnlCaracteristica.Name = "pnlCaracteristica";
-            this.pnlCaracteristica.Size = new System.Drawing.Size(897, 67);
+            this.pnlCaracteristica.Size = new System.Drawing.Size(897, 99);
             this.pnlCaracteristica.TabIndex = 2;
+            // 
+            // dtpFechaFin
+            // 
+            this.dtpFechaFin.CustomFormat = "dd-MM-yyyy HH:mm";
+            this.dtpFechaFin.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaFin.Location = new System.Drawing.Point(546, 10);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(134, 21);
+            this.dtpFechaFin.TabIndex = 59;
+            // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.CustomFormat = "dd-MM-yyyy HH:mm";
+            this.dtpFechaInicio.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFechaInicio.Location = new System.Drawing.Point(98, 10);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(134, 21);
+            this.dtpFechaInicio.TabIndex = 58;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label17.Location = new System.Drawing.Point(469, 11);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 16);
+            this.label17.TabIndex = 57;
+            this.label17.Text = "Fecha Fin:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label16.Location = new System.Drawing.Point(8, 11);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(82, 16);
+            this.label16.TabIndex = 56;
+            this.label16.Text = "Fecha Inicio:";
             // 
             // tsbBuscarAnastesia
             // 
             this.tsbBuscarAnastesia.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.tsbBuscarAnastesia.Location = new System.Drawing.Point(833, 31);
+            this.tsbBuscarAnastesia.Location = new System.Drawing.Point(861, 62);
             this.tsbBuscarAnastesia.Name = "tsbBuscarAnastesia";
             this.tsbBuscarAnastesia.Size = new System.Drawing.Size(26, 24);
             this.tsbBuscarAnastesia.TabIndex = 55;
             this.tsbBuscarAnastesia.UseVisualStyleBackColor = true;
+            this.tsbBuscarAnastesia.Click += new System.EventHandler(this.tsbBuscarAnastesia_Click);
             // 
             // txtAnastesia
             // 
             this.txtAnastesia.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtAnastesia.Location = new System.Drawing.Point(517, 33);
+            this.txtAnastesia.Location = new System.Drawing.Point(546, 64);
             this.txtAnastesia.Name = "txtAnastesia";
             this.txtAnastesia.Size = new System.Drawing.Size(313, 21);
             this.txtAnastesia.TabIndex = 54;
@@ -182,7 +231,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label13.Location = new System.Drawing.Point(440, 35);
+            this.label13.Location = new System.Drawing.Point(469, 66);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(70, 16);
             this.label13.TabIndex = 53;
@@ -191,16 +240,17 @@
             // tsbBuscarAnastesiologo
             // 
             this.tsbBuscarAnastesiologo.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.tsbBuscarAnastesiologo.Location = new System.Drawing.Point(833, 4);
+            this.tsbBuscarAnastesiologo.Location = new System.Drawing.Point(861, 35);
             this.tsbBuscarAnastesiologo.Name = "tsbBuscarAnastesiologo";
             this.tsbBuscarAnastesiologo.Size = new System.Drawing.Size(26, 24);
             this.tsbBuscarAnastesiologo.TabIndex = 52;
             this.tsbBuscarAnastesiologo.UseVisualStyleBackColor = true;
+            this.tsbBuscarAnastesiologo.Click += new System.EventHandler(this.tsbBuscarAnastesiologo_Click);
             // 
             // txtAnastesiologo
             // 
             this.txtAnastesiologo.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtAnastesiologo.Location = new System.Drawing.Point(517, 6);
+            this.txtAnastesiologo.Location = new System.Drawing.Point(546, 37);
             this.txtAnastesiologo.Name = "txtAnastesiologo";
             this.txtAnastesiologo.Size = new System.Drawing.Size(313, 21);
             this.txtAnastesiologo.TabIndex = 51;
@@ -210,7 +260,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label14.Location = new System.Drawing.Point(416, 8);
+            this.label14.Location = new System.Drawing.Point(445, 39);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(94, 16);
             this.label14.TabIndex = 50;
@@ -219,16 +269,17 @@
             // tsbBuscarAyudante
             // 
             this.tsbBuscarAyudante.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.tsbBuscarAyudante.Location = new System.Drawing.Point(382, 31);
+            this.tsbBuscarAyudante.Location = new System.Drawing.Point(357, 62);
             this.tsbBuscarAyudante.Name = "tsbBuscarAyudante";
             this.tsbBuscarAyudante.Size = new System.Drawing.Size(26, 24);
             this.tsbBuscarAyudante.TabIndex = 49;
             this.tsbBuscarAyudante.UseVisualStyleBackColor = true;
+            this.tsbBuscarAyudante.Click += new System.EventHandler(this.tsbBuscarAyudante_Click);
             // 
             // txtAyudante
             // 
             this.txtAyudante.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtAyudante.Location = new System.Drawing.Point(123, 33);
+            this.txtAyudante.Location = new System.Drawing.Point(98, 64);
             this.txtAyudante.Name = "txtAyudante";
             this.txtAyudante.Size = new System.Drawing.Size(256, 21);
             this.txtAyudante.TabIndex = 48;
@@ -238,7 +289,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label12.Location = new System.Drawing.Point(45, 35);
+            this.label12.Location = new System.Drawing.Point(23, 66);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 16);
             this.label12.TabIndex = 47;
@@ -247,16 +298,17 @@
             // tsbBuscarVia
             // 
             this.tsbBuscarVia.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.tsbBuscarVia.Location = new System.Drawing.Point(382, 4);
+            this.tsbBuscarVia.Location = new System.Drawing.Point(357, 35);
             this.tsbBuscarVia.Name = "tsbBuscarVia";
             this.tsbBuscarVia.Size = new System.Drawing.Size(26, 24);
             this.tsbBuscarVia.TabIndex = 46;
             this.tsbBuscarVia.UseVisualStyleBackColor = true;
+            this.tsbBuscarVia.Click += new System.EventHandler(this.tsbBuscarVia_Click);
             // 
             // txtVia
             // 
             this.txtVia.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtVia.Location = new System.Drawing.Point(123, 6);
+            this.txtVia.Location = new System.Drawing.Point(98, 37);
             this.txtVia.Name = "txtVia";
             this.txtVia.Size = new System.Drawing.Size(256, 21);
             this.txtVia.TabIndex = 45;
@@ -266,7 +318,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label11.Location = new System.Drawing.Point(81, 8);
+            this.label11.Location = new System.Drawing.Point(59, 39);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(31, 16);
             this.label11.TabIndex = 44;
@@ -276,7 +328,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 6);
+            this.label2.Location = new System.Drawing.Point(18, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(228, 20);
             this.label2.TabIndex = 3;
@@ -532,6 +584,7 @@
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tstModificar
             // 
@@ -542,6 +595,7 @@
             this.tstModificar.Name = "tstModificar";
             this.tstModificar.Size = new System.Drawing.Size(78, 22);
             this.tstModificar.Text = "Modificar";
+            this.tstModificar.Click += new System.EventHandler(this.tstModificar_Click);
             // 
             // tsbCancelar
             // 
@@ -552,6 +606,7 @@
             this.tsbCancelar.Name = "tsbCancelar";
             this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
             this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
             // tsbGuardar
             // 
@@ -562,6 +617,7 @@
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // tsbBuscar
             // 
@@ -572,6 +628,7 @@
             this.tsbBuscar.Name = "tsbBuscar";
             this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
             this.tsbBuscar.Text = "Buscar";
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
             // 
             // tsbAnular
             // 
@@ -582,15 +639,7 @@
             this.tsbAnular.Name = "tsbAnular";
             this.tsbAnular.Size = new System.Drawing.Size(62, 22);
             this.tsbAnular.Text = "Anular";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(25, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.tsbAnular.Click += new System.EventHandler(this.tsbAnular_Click);
             // 
             // tstImprimir
             // 
@@ -601,6 +650,15 @@
             this.tstImprimir.Size = new System.Drawing.Size(73, 22);
             this.tstImprimir.Text = "Imprimir";
             this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(25, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // InformeQuirurgicoUI
             // 
@@ -685,5 +743,9 @@
         private System.Windows.Forms.TextBox txtProcedimiento;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ToolStripButton tstImprimir;
+        private System.Windows.Forms.DateTimePicker dtpFechaFin;
+        private System.Windows.Forms.DateTimePicker dtpFechaInicio;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
     }
 }

@@ -21,16 +21,17 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
 
                     sentencia.CommandText = Sentencias.CREAR_INFORME_QX;
-                    sentencia.Parameters.Add(new SqlParameter("@codigo", SqlDbType.NVarChar)).Value = informeQx.codigo;
-                    sentencia.Parameters.Add(new SqlParameter("@codigoAtencion", SqlDbType.Int)).Value = informeQx.codigoAtencion;
-                    sentencia.Parameters.Add(new SqlParameter("@nota", SqlDbType.Int)).Value = informeQx.notaQuirurgica;
-                    sentencia.Parameters.Add(new SqlParameter("@codigoVia", SqlDbType.Int)).Value = informeQx.codigoVia;
-                    sentencia.Parameters.Add(new SqlParameter("@codigoAyudante", SqlDbType.Int)).Value = informeQx.codigoAyudante;
-                    sentencia.Parameters.Add(new SqlParameter("@codigoAnastesia", SqlDbType.Int)).Value = informeQx.codigoAnastesia;
-                    sentencia.Parameters.Add(new SqlParameter("@codigoAnastesiologo", SqlDbType.Int)).Value = informeQx.codigoAnastesiologo;
-                    sentencia.Parameters.Add(new SqlParameter("@fecha", SqlDbType.Int)).Value = informeQx.fecha;
-                    sentencia.Parameters.Add(new SqlParameter("@IdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
-                    informeQx.codigo = (string)sentencia.ExecuteScalar();
+                    sentencia.Parameters.Add(new SqlParameter("@pIdInformeQX", SqlDbType.Int)).Value = informeQx.idInformeQX;
+                    sentencia.Parameters.Add(new SqlParameter("@pidAtencion", SqlDbType.Int)).Value = informeQx.idAtencion;
+                    sentencia.Parameters.Add(new SqlParameter("@pNota", SqlDbType.NVarChar)).Value = informeQx.notaQuirurgica;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdVia", SqlDbType.Int)).Value = informeQx.idVia;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdAyudante", SqlDbType.Int)).Value = informeQx.idAyudante;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdAnastesia", SqlDbType.Int)).Value = informeQx.idAnastesia;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdAnastesiologo", SqlDbType.Int)).Value = informeQx.idAnastesiologo;
+                    sentencia.Parameters.Add(new SqlParameter("@pfechaInicio", SqlDbType.DateTime)).Value = informeQx.fechaInicio;
+                    sentencia.Parameters.Add(new SqlParameter("@pfechaFin", SqlDbType.DateTime)).Value = informeQx.fechaFin;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
+                    informeQx.idInformeQX = (int)sentencia.ExecuteScalar();
                 }
             }
             catch (Exception ex)
@@ -41,7 +42,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
             return informeQx;
         }
 
-        public static Boolean anularInformeQuirurgico(string codigo)
+        public static Boolean anularInformeQuirurgico(int codigo)
         {
             Boolean resultado = false;
             try
@@ -50,7 +51,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                 {
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
-                    sentencia.CommandText = Sentencias.ANULAR_HEMODIALISIS;
+                    sentencia.CommandText = Sentencias.ANULAR_INFORME_QX;
                     sentencia.Parameters.Add(new SqlParameter("@IdInfQuirurgico", SqlDbType.Int)).Value = codigo;
                     sentencia.ExecuteNonQuery();
                     resultado = true;

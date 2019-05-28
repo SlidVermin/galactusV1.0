@@ -33,6 +33,149 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             tsbNuevo.Enabled = true;
 
         }
+
+        private void tsbBuscarNit_Click(object sender, EventArgs e)
+        {
+            List<string> parametro = new List<string>();
+            parametro.Add(string.Empty);
+
+            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_PACIENTE_INFORME_QX,
+                                    parametro,
+                                    new GeneralC.cargarInfoFila(cargarInformacionAtencion),
+                                    Titulos.TITULO_BUSCAR_PACIENTE,
+                                    true);
+        }
+
+        private void tsbNuevo_Click(object sender, EventArgs e)
+        {
+            GeneralC.deshabilitarBotones(ref tstMenuPatron);
+            GeneralC.deshabilitarControles(pnlInformacion);
+            GeneralC.habilitarControles(this);
+            GeneralC.limpiarControles(this);
+
+            informeQx.idInformeQX = ConstanteGeneral.PREDETERMINADO;
+            tsbBuscarPaciente.Enabled = true;
+            tsbGuardar.Enabled = true;
+            tsbCancelar.Enabled = true;
+        }
+
+        private void tstModificar_Click(object sender, EventArgs e)
+        {
+            if (Mensajes.preguntaSiNo(Mensajes.Modificar_FORM) == true)
+            {
+                GeneralC.deshabilitarBotones(ref tstMenuPatron);
+                GeneralC.habilitarControles(this);
+                GeneralC.deshabilitarControles(pnlInformacion);
+                dtFecha.Enabled = true;
+                tsbGuardar.Enabled = true;
+                tsbCancelar.Enabled = true;
+            }
+        }
+
+        private void tsbCancelar_Click(object sender, EventArgs e)
+        {
+            if (Mensajes.preguntaSiNo(Mensajes.CANCELAR_FORM) == true)
+            {
+                GeneralC.deshabilitarBotones(ref tstMenuPatron);
+                GeneralC.deshabilitarControles(this);
+                GeneralC.limpiarControles(this);
+
+                informeQx.idInformeQX = ConstanteGeneral.PREDETERMINADO;
+                tsbNuevo.Enabled = true;
+                tsbBuscar.Enabled = true;
+                btnSalir.Enabled = true;
+
+            }
+        }
+        private void tsbGuardar_Click(object sender, EventArgs e)
+        {
+            if (validarCampos() == true)
+            {
+                if (Mensajes.preguntaGuardar())
+                    try
+                    {
+                        crearNuevaInformeQx();
+
+                        InformeQuirurgicoDAL.guardarInformeQuirurgico(informeQx);
+
+                        GeneralC.habilitarBotones(ref tstMenuPatron);
+                        GeneralC.deshabilitarControles(this);
+
+                        btnSalir.Enabled = true;
+                        tsbGuardar.Enabled = false;
+                        tsbCancelar.Enabled = false;
+
+                        Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_GUARDADO);
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Mensajes.mensajeError(ex);
+                    }
+            }
+        }
+
+        private void tsbBuscar_Click(object sender, EventArgs e)
+        {
+            List<string> parametro = new List<string>();
+            parametro.Add(string.Empty);
+
+            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_INFORME_QX,
+                                    parametro,
+                                    new GeneralC.cargarInfoFila(cargarInformeQX),
+                                    Titulos.TITULO_BUSCAR_INFORME_QX,
+                                    true,
+                                    listaParametroOculto());
+        }
+
+        private void tsbAnular_Click(object sender, EventArgs e)
+        {
+            if (Mensajes.preguntaAnular())
+            {
+                try
+                {
+
+                    if (InformeQuirurgicoDAL.anularInformeQuirurgico(informeQx.idInformeQX) == true)
+                    {
+                        GeneralC.deshabilitarBotones(ref tstMenuPatron);
+                        GeneralC.limpiarControles(this);
+                        GeneralC.deshabilitarControles(this);
+
+                        btnSalir.Enabled = true;
+                        tsbBuscar.Enabled = true;
+                        tsbNuevo.Enabled = true;
+
+                        Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_ANULADO);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Mensajes.mensajeError(ex);
+                }
+            }
+        }
+
+        private void tsbBuscarVia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbBuscarAyudante_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbBuscarAnastesiologo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbBuscarAnastesia_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #region btnSalir
 
         private void btnSalir_MouseHover(object sender, EventArgs e)
@@ -55,120 +198,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
         #endregion
 
-        private void tsbAnular_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                try
-                {
-
-                    if (InformeQuirurgicoDAL.anularInformeQuirurgico(informeQx.codigo))
-                    {
-                        GeneralC.deshabilitarBotones(ref tstMenuPatron);
-                        GeneralC.limpiarControles(this);
-                        GeneralC.deshabilitarControles(this);
-                        btnSalir.Enabled = true;
-                        tsbBuscar.Enabled = true;
-                        tsbNuevo.Enabled = true;
-                        MessageBox.Show(Mensajes.CONFIRMACION_ANULADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-        }
-
-        private void tsbBuscar_Click(object sender, EventArgs e)
-        {
-            List<string> parametro = new List<string>();
-            parametro.Add(string.Empty);
-
-            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_INFORME_QX,
-                                    parametro,
-                                    new GeneralC.cargarInfoFila(cargarHemodialisis),
-                                    Titulos.TITULO_BUSCAR_INFORME_QX,
-                                    true,
-                                    listaParametroOculto());
-        }
-
-        private void tsbCancelar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(Mensajes.CANCELAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                GeneralC.deshabilitarBotones(ref tstMenuPatron);
-                GeneralC.deshabilitarControles(this);
-                GeneralC.limpiarControles(this);
-                informeQx.codigo = null;
-                tsbNuevo.Enabled = true;
-                tsbBuscar.Enabled = true;
-                btnSalir.Enabled = true;
-            }
-        }
-
-        private void tsbGuardar_Click(object sender, EventArgs e)
-        {
-            if (validarCampos() == true)
-            {
-                if (MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    try
-                    {
-                        crearNuevaInformeQx();
-                        InformeQuirurgicoDAL.guardarInformeQuirurgico(informeQx);
-                        GeneralC.habilitarBotones(ref tstMenuPatron);
-                        GeneralC.deshabilitarControles(this);
-                        btnSalir.Enabled = true;
-                        tsbGuardar.Enabled = false;
-                        tsbCancelar.Enabled = false;
-                        MessageBox.Show(Mensajes.CONFIRMACION_GUARDADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-            }
-        }
-
-        private void btModificar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(Mensajes.Modificar_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                GeneralC.deshabilitarBotones(ref tstMenuPatron);
-                GeneralC.habilitarControles(this);
-                GeneralC.deshabilitarControles(pnlInformacion);
-                dtFecha.Enabled = true;
-                tsbGuardar.Enabled = true;
-                tsbCancelar.Enabled = true;
-            }
-        }
-
-        private void tsbNuevo_Click(object sender, EventArgs e)
-        {
-            GeneralC.deshabilitarBotones(ref tstMenuPatron);
-            GeneralC.habilitarControles(this);
-            GeneralC.deshabilitarControles(pnlInformacion);
-            GeneralC.limpiarControles(this);
-            informeQx.codigo=null;
-            dtFecha.Enabled = true;
-            tsbBuscarPaciente.Enabled = true;
-            tsbGuardar.Enabled = true;
-            tsbCancelar.Enabled = true;
-        }
-
-        private void tsbBuscarNit_Click(object sender, EventArgs e)
-        {
-            List<string> parametro = new List<string>();
-            parametro.Add(string.Empty);
-
-            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_PACIENTE_INFORME_QX,
-                                    parametro,
-                                    new GeneralC.cargarInfoFila(cargarInformacionAtencion),
-                                    Titulos.TITULO_BUSCAR_PACIENTE,
-                                    true);
-        }
-
         private void cargarInformacionAtencion(DataRow dRows) {
             txtAtencion.Text = dRows.Field<int>("idAtencion").ToString();
             txtPaciente.Text = dRows.Field<string>("paciente").ToString();
@@ -181,22 +210,33 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
         private void crearNuevaInformeQx() {
             informeQx.notaQuirurgica = txtNota.Text;
-            informeQx.fecha = dtFecha.Value;
+            informeQx.fechaInicio = dtpFechaInicio.Value;
+            informeQx.fechaFin = dtpFechaInicio.Value;
         }
-        private void cargarHemodialisis(DataRow dRows)
+        private void cargarInformeQX(DataRow dRows)
         {
             try
             {
-                informeQx.codigo = dRows.Field<int>("idCliente").ToString();
+                informeQx.idInformeQX = dRows.Field<int>("idInformeQX");
+                informeQx.idVia = dRows.Field<int>("idVia");
+                informeQx.idAnastesia = dRows.Field<int>("idAnastesia");
+                informeQx.idAnastesiologo = dRows.Field<int>("idAnastesiologo");
+                informeQx.idAyudante = dRows.Field<int>("idAyudante");
+                informeQx.fechaInicio = dRows.Field<DateTime>("FechaInicio");
+                informeQx.fechaFin = dRows.Field<DateTime>("FechaFin");
+                informeQx.notaQuirurgica = dRows.Field<string>("Nota");
+
                 cargarInformacionAtencion(dRows);
+                GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tstModificar, tsbBuscar, tsbAnular);
+                btnSalir.Enabled = true;
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tstModificar, tsbBuscar, tsbAnular);
-            btnSalir.Enabled = true;
+               Mensajes.mensajeError(ex);
+            }        
         }
+
         private List<string> listaParametroOculto()
         {
             List<string> paramtro = new List<string>();
@@ -215,12 +255,12 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         {
             if (txtAtencion.Text == string.Empty)
             {
-                MessageBox.Show("¡ Favor seleccionar el paciente !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Mensajes.mensajeAdvertencia("¡ Favor seleccionar el paciente !");
                 return false;
             }
             else if (txtNota.Text == string.Empty)
             {
-                MessageBox.Show("¡ Favor realice la nota correspondiente al resultado !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Mensajes.mensajeAdvertencia("¡ Favor realice la nota correspondiente al resultado !");
                 return false;
             }
             else
@@ -228,9 +268,5 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 return true;
             }
         }
-        private void desHabilitadoPermanente() {
-
-        }
-
     }
 }

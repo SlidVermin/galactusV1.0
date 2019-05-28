@@ -8,14 +8,15 @@ namespace Galactus.Entidades.HistoriaClinica.Resultado
 {
     class InformeQuirurgico
     {
-        public string codigo { get; set; }
-        public int codigoAtencion { get; set; }
-        public int codigoVia {get; set;} 
-        public int codigoAyudante { get; set; }
-        public int codigoAnastesiologo { get; set; }
-        public int codigoAnastesia { get; set; }
+        public int idInformeQX { get; set; }
+        public int idAtencion { get; set; }
+        public int idVia {get; set;} 
+        public int idAyudante { get; set; }
+        public int idAnastesiologo { get; set; }
+        public int idAnastesia { get; set; }
         public string notaQuirurgica { get; set; }
-        public DateTime fecha { get; set; }
+        public DateTime fechaInicio { get; set; }
+        public DateTime fechaFin { get; set; }
 
         public InformeQuirurgico() {
 
