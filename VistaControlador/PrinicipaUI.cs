@@ -36,8 +36,16 @@ namespace Galactus
         public PrincipalUI()
         {
             InitializeComponent();
-        }
 
+        }
+        public static void cursorEnEspera()
+        {
+            Cursor.Current = Cursors.WaitCursor;
+        }
+        public static void cursorPredeterminado()
+        {
+            Cursor.Current = Cursors.Default;
+        }
         private void ShowNewForm(object sender, EventArgs e)
         {
             Form childForm = new Form();

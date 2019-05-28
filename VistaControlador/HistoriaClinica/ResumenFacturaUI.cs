@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CrystalDecisions.Shared;
+using Galactus.Reportes.HistoriaClinica;
+using Galactus.Reportes.HistoriaClinica.Facturacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,5 +43,23 @@ namespace Galactus.VistaControlador.HistoriaClinica
             dgvResumenDiario.DataSource = tablasResultados.Tables["table2"];
             dgvConsolidado.DataSource = tablasResultados.Tables["table3"];
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GeneralC.exportarReporte(generarReporte(), 
+                                "Resumen Facturacion", 
+                                null, 
+                                ExportFormatType.PortableDocFormat);
+        }
+        public RptResumenAtencion generarReporte()
+        {
+            RptResumenAtencion rptResumenAtencion = new RptResumenAtencion();
+            rptResumenAtencion.SetParameterValue("@pAuditoria", auditoria);
+            rptResumenAtencion.SetParameterValue("@pIdAtencion", idAtencion);
+            rptResumenAtencion.SetParameterValue("@pAuditoria", auditoria);
+            rptResumenAtencion.SetParameterValue("@pIdAtencion", idAtencion);
+            return rptResumenAtencion;
+        }
+        
     }
 }

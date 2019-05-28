@@ -1,4 +1,6 @@
 ﻿
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
 using Galactus.Util;
 using Galactus.Util.Constantes;
 using Galactus.Util.Mensajes;
@@ -8,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -130,7 +133,65 @@ namespace Galactus
                 mezcla.ShowDialog();
             }
         }
-       
+
+        public static void exportarReporte(ReportClass pReporte,
+                                      string pNombre,
+                                      string pFormula,
+                                      ExportFormatType pFormato)
+        {
+            try
+            {
+                PrincipalUI.cursorEnEspera();
+                obtenerConexionReporte(pReporte.Database.Tables);
+                if (pFormula != null) {
+                    pReporte.RecordSelectionFormula = pFormula;
+                }
+                string ruta = System.IO.Path.GetTempPath() +
+                       pNombre +
+                       DateTime.Now.Ticks +
+                       obtenerExtensionReporte(pFormato.ToString());
+
+                pReporte.ExportToDisk(pFormato, ruta);
+                pReporte.Load(ruta);
+                pReporte.Close();
+                Process.Start(ruta);
+            }
+            catch(Exception ex)
+            {
+                Mensajes.mensajeError(ex); 
+            }
+            PrincipalUI.cursorPredeterminado();
+        }
+        public static void obtenerConexionReporte(Tables Itblas)
+        {
+            ConnectionInfo connReporte = new ConnectionInfo();
+            connReporte.ServerName = PrincipalUI.Cnxion.DataSource;
+            connReporte.DatabaseName = PrincipalUI.Cnxion.Database;
+            connReporte.UserID = "galactus_main";
+            connReporte.Password = "galactus_x123456*";
+            connReporte.Type = ConnectionInfoType.SQL;
+            foreach (Table tabla in Itblas)
+            {
+                TableLogOnInfo boTableLogOnInfo = new TableLogOnInfo();
+                boTableLogOnInfo = tabla.LogOnInfo;
+                boTableLogOnInfo.ConnectionInfo = connReporte;
+                tabla.ApplyLogOnInfo(boTableLogOnInfo);
+            }
+        }
+        public static string obtenerExtensionReporte(string pTipoArchivo) {
+            
+            switch (pTipoArchivo)
+            {
+                case "PortableDocFormat":
+                    return ".pdf";
+                case "Excel":
+                    return ".xls";
+                default:
+                    return ".pdf";
+            }
+            
+        }
+        
 
         public static bool verificarUbicacionCelda(DataGridViewCellEventArgs e, DataGridView dgv, string columna)
         {

@@ -58,7 +58,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExportarPDF = new System.Windows.Forms.Button();
             this.tcResumen = new Galactus.Util.Controles.TabControlGalactus();
             this.tpResumen = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -114,18 +114,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnExportarPDF
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Image = global::Galactus.Properties.Resources.pdf24;
-            this.button1.Location = new System.Drawing.Point(8, 94);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 32);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Exportar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnExportarPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnExportarPDF.Image = global::Galactus.Properties.Resources.pdf24;
+            this.btnExportarPDF.Location = new System.Drawing.Point(8, 94);
+            this.btnExportarPDF.Name = "btnExportarPDF";
+            this.btnExportarPDF.Size = new System.Drawing.Size(89, 32);
+            this.btnExportarPDF.TabIndex = 20;
+            this.btnExportarPDF.Text = "Exportar";
+            this.btnExportarPDF.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExportarPDF.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExportarPDF.UseVisualStyleBackColor = true;
+            this.btnExportarPDF.Click += new System.EventHandler(this.button1_Click);
             // 
             // tcResumen
             // 
@@ -727,7 +728,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1100, 357);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExportarPDF);
             this.Controls.Add(this.tcResumen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1100, 357);
@@ -773,7 +774,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn208;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn210;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn211;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExportarPDF;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn200;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn203;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn205;
