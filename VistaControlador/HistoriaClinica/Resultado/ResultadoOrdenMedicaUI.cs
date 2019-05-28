@@ -22,7 +22,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         private int idAtencion;
         private int auditoria;
         private LaboratorioUI laboratorio;
-
+        private LaboratorioUI imagenologia;
 
         public ResultadoOrdenMedicaUI(int idAtencion, int auditoria)
         {
@@ -37,9 +37,17 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         {
             GeneralC.deshabilitarControles(this);
             dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
-            laboratorio = new LaboratorioUI(idAtencion,auditoria);
-            laboratorio.resulOrdenMedica = this;
-            GeneralC.cargarFormularioEnPestana(tpLaboratorio,laboratorio);  
+
+            laboratorio = new LaboratorioUI(idAtencion,auditoria,ConstanteGeneral.ID_LABORATORIO);
+            laboratorio.resulOrdenMedica = this; 
+            GeneralC.cargarFormularioEnPestana(tpLaboratorio, laboratorio);
+
+            imagenologia = new LaboratorioUI(idAtencion, auditoria, ConstanteGeneral.ID_IMAGENOLOGIA);
+            imagenologia.resulOrdenMedica = this;
+            GeneralC.cargarFormularioEnPestana(tpImagenologia, imagenologia);
+
+               
         }
+
     }
 }

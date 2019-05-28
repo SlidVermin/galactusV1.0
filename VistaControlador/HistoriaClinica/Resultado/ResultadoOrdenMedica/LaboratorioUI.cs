@@ -20,15 +20,19 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
     {
         private int idAtencion;
         private int auditoria;
+        private int paraclinico;
         private ResultadoOrdenMedica resultadoLaboratorio = new ResultadoOrdenMedica();
         public ResultadoOrdenMedicaUI resulOrdenMedica;
         private int contador;
 
-        public LaboratorioUI(int idAtencion, int Auditoria)
+        public LaboratorioUI(int idAtencion, 
+                             int Auditoria,
+                             int paraclinico)
         {
             InitializeComponent();
             this.idAtencion = idAtencion;
             this.auditoria = Auditoria;
+            this.paraclinico = paraclinico;
         }
 
         private void LaboratorioUI_Load(object sender, EventArgs e)
@@ -40,7 +44,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         private void cargarExamenesLaboratorio() {
             List<string> paramtro = new List<string>();
             paramtro.Add(auditoria.ToString());
-            paramtro.Add(idAtencion.ToString());  
+            paramtro.Add(idAtencion.ToString());
+            paramtro.Add(paraclinico.ToString());
             GeneralC.llenarTabla(Sentencias.LISTAR_RESULTADO_LABORATORIO, paramtro, resultadoLaboratorio.dtResultado);
             dgvResultadoLaboratorio.DataSource = resultadoLaboratorio.dtResultado;
         }

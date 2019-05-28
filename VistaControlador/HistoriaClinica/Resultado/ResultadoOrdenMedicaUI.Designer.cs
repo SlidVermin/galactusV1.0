@@ -35,6 +35,7 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.tcOrdenMedica = new Galactus.Util.Controles.TabControlGalactus();
             this.tpLaboratorio = new System.Windows.Forms.TabPage();
+            this.tpImagenologia = new System.Windows.Forms.TabPage();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.tstPropiedadesOrdenMedica.SuspendLayout();
             this.tcOrdenMedica.SuspendLayout();
@@ -84,6 +85,7 @@
             // 
             this.tcOrdenMedica.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tcOrdenMedica.Controls.Add(this.tpLaboratorio);
+            this.tcOrdenMedica.Controls.Add(this.tpImagenologia);
             this.tcOrdenMedica.ItemSize = new System.Drawing.Size(30, 120);
             this.tcOrdenMedica.Location = new System.Drawing.Point(2, 28);
             this.tcOrdenMedica.Multiline = true;
@@ -102,6 +104,15 @@
             this.tpLaboratorio.Size = new System.Drawing.Size(968, 309);
             this.tpLaboratorio.TabIndex = 0;
             this.tpLaboratorio.Text = "Laboratorio";
+            // 
+            // tpImagenologia
+            // 
+            this.tpImagenologia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpImagenologia.Location = new System.Drawing.Point(124, 4);
+            this.tpImagenologia.Name = "tpImagenologia";
+            this.tpImagenologia.Size = new System.Drawing.Size(968, 309);
+            this.tpImagenologia.TabIndex = 1;
+            this.tpImagenologia.Text = "Imagenologia";
             // 
             // dtpFecha
             // 
@@ -145,5 +156,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         public System.Windows.Forms.ToolStripTextBox txtBCodigoOrden;
         public System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.TabPage tpImagenologia;
     }
 }

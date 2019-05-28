@@ -88,8 +88,10 @@ namespace Galactus.Util.Constantes
             GENERO = 69
         }
 
-        
-
+        #region codigoConfiguracionExamen
+        public const int ID_LABORATORIO = 4945;
+        public const int ID_IMAGENOLOGIA = 4946;
+        #endregion
 
         #region configuracion general
         public const int MARCA = 1;
