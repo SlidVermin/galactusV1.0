@@ -18,7 +18,9 @@ namespace Galactus.Entidades.HistoriaClinica.Resultado
             dtResultado.Columns.Add("idSolicitud", Type.GetType("System.Int32"));
             dtResultado.Columns.Add("idProcedimiento", Type.GetType("System.Int32"));
             dtResultado.Columns.Add("Estado", Type.GetType("System.Int32"));
-            dtResultado.Columns.Add("Descripcion", Type.GetType("System.String"));    
+            dtResultado.Columns.Add("Descripcion", Type.GetType("System.String"));
+            dtResultado.Columns.Add("Lectura", Type.GetType("System.Boolean"));
+
         }
     }
 }

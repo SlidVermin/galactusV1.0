@@ -49,7 +49,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             dgvResultadoLaboratorio.Columns["dgIdSolicitud"].DataPropertyName= "idSolicitud";
             dgvResultadoLaboratorio.Columns["dgIdProcedimiento"].DataPropertyName = "idProcedimiento";
             dgvResultadoLaboratorio.Columns["dgDescripcionProcedimiento"].DataPropertyName = "Descripcion";
-            dgvResultadoLaboratorio.Columns["dgLectura"].DisplayIndex = 3;
+            dgvResultadoLaboratorio.Columns["dgLectura"].DataPropertyName = "Lectura"; ;
             dgvResultadoLaboratorio.AutoGenerateColumns = false;
         }
         private void dgvResultadoLaboratorio_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -73,19 +73,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             if (resultadoLaboratorio.dtResultado.Rows.Count > 0) {
                 resulOrdenMedica.txtBCodigoOrden.Text = resultadoLaboratorio.dtResultado.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Field<int>("idOrdenMedica").ToString();
                 resulOrdenMedica.dtpFecha.Value = resultadoLaboratorio.dtResultado.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Field<DateTime>("Fecha");
-            }
-        }
-        private void dgvResultadoLaboratorio_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (contador <= resultadoLaboratorio.dtResultado.Rows.Count-1) {
-                if (resultadoLaboratorio.dtResultado.Rows.Count > 0)
-                {
-                    if (resultadoLaboratorio.dtResultado.Rows[e.RowIndex].Field<int>("Estado") == ConstanteGeneral.ESTADO_LISTO)
-                    {
-                        dgvResultadoLaboratorio.Rows[e.RowIndex].Cells["dgLectura"].Value = global::Galactus.Properties.Resources.checked__1_;
-                    }
-                    contador++;
-                }
             }
         }
     }

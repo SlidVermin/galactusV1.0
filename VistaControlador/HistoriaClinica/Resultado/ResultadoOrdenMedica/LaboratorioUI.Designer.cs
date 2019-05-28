@@ -34,7 +34,7 @@
             this.dgIdSolicitud = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgIdProcedimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgDescripcionProcedimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgLectura = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgLectura = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.GroupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultadoLaboratorio)).BeginInit();
             this.SuspendLayout();
@@ -87,7 +87,6 @@
             this.dgvResultadoLaboratorio.TabIndex = 15;
             this.dgvResultadoLaboratorio.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResultadoLaboratorio_CellClick);
             this.dgvResultadoLaboratorio.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResultadoLaboratorio_CellDoubleClick);
-            this.dgvResultadoLaboratorio.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvResultadoLaboratorio_CellFormatting);
             // 
             // dgIdSolicitud
             // 
@@ -120,7 +119,6 @@
             // 
             this.dgLectura.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgLectura.HeaderText = "Lectura";
-            this.dgLectura.Image = global::Galactus.Properties.Resources.Actions_file_close_icon;
             this.dgLectura.Name = "dgLectura";
             this.dgLectura.ReadOnly = true;
             this.dgLectura.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -151,6 +149,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgIdSolicitud;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgIdProcedimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcionProcedimiento;
-        private System.Windows.Forms.DataGridViewImageColumn dgLectura;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dgLectura;
     }
 }
