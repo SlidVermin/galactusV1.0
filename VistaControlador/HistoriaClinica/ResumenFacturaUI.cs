@@ -2,6 +2,7 @@
 using Galactus.Reportes.HistoriaClinica;
 using Galactus.Reportes.HistoriaClinica.Facturacion;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,7 +47,9 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GeneralC.exportarReporte(generarReporte(), 
+            RptResumenAtencion rpt = new RptResumenAtencion();
+            rpt = generarReporte();
+            GeneralC.exportarReporte(rpt, 
                                 "Resumen Facturacion", 
                                 null, 
                                 ExportFormatType.PortableDocFormat);
@@ -54,10 +57,19 @@ namespace Galactus.VistaControlador.HistoriaClinica
         public RptResumenAtencion generarReporte()
         {
             RptResumenAtencion rptResumenAtencion = new RptResumenAtencion();
-            rptResumenAtencion.SetParameterValue("@pAuditoria", auditoria);
-            rptResumenAtencion.SetParameterValue("@pIdAtencion", idAtencion);
-            rptResumenAtencion.SetParameterValue("@pAuditoria", auditoria);
-            rptResumenAtencion.SetParameterValue("@pIdAtencion", idAtencion);
+            Hashtable tbl = new Hashtable();
+
+            // Add some elements to the hash table. There are no 
+            // duplicate keys, but some of the values are duplicates.
+            tbl.Add("@pAuditoria", auditoria);
+            tbl.Add("@pIdAtencion", idAtencion);
+            tbl.Add("@pAuditoria2", auditoria);
+            tbl.Add("@pIdAtencion2", idAtencion);
+            foreach (DictionaryEntry item in tbl)
+            {
+                rptResumenAtencion.SetParameterValue(item.Key.ToString(), item.Value);
+            }
+                    
             return rptResumenAtencion;
         }
         

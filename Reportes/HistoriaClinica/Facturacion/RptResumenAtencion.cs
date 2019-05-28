@@ -106,7 +106,7 @@ namespace Galactus.Reportes.HistoriaClinica.Facturacion {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_RptResumenFacturarpt_pAuditoria {
+        public CrystalDecisions.Shared.IParameterField Parameter_RptResumenFacturarpt_pAuditoria2 {
             get {
                 return this.DataDefinition.ParameterFields[2];
             }
@@ -114,7 +114,7 @@ namespace Galactus.Reportes.HistoriaClinica.Facturacion {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_RptResumenFacturarpt_pIdAtencion {
+        public CrystalDecisions.Shared.IParameterField Parameter_RptResumenFacturarpt_pIdAtencion2 {
             get {
                 return this.DataDefinition.ParameterFields[3];
             }

@@ -135,14 +135,16 @@ namespace Galactus
         }
 
         public static void exportarReporte(ReportClass pReporte,
-                                      string pNombre,
-                                      string pFormula,
-                                      ExportFormatType pFormato)
+                                           string pNombre,
+                                           string pFormula,
+                                           ExportFormatType pFormato)
         {
             try
             {
                 PrincipalUI.cursorEnEspera();
-                obtenerConexionReporte(pReporte.Database.Tables);
+                ConnectionInfo connInfo = obtenerConexionReporte();
+                SetDBLogonForReport(connInfo, pReporte);
+                SetDBLogonForSubreports(connInfo, pReporte);
                 if (pFormula != null) {
                     pReporte.RecordSelectionFormula = pFormula;
                 }
@@ -162,7 +164,7 @@ namespace Galactus
             }
             PrincipalUI.cursorPredeterminado();
         }
-        public static void obtenerConexionReporte(Tables Itblas)
+        public static ConnectionInfo obtenerConexionReporte()
         {
             ConnectionInfo connReporte = new ConnectionInfo();
             connReporte.ServerName = PrincipalUI.Cnxion.DataSource;
@@ -170,12 +172,31 @@ namespace Galactus
             connReporte.UserID = "galactus_main";
             connReporte.Password = "galactus_x123456*";
             connReporte.Type = ConnectionInfoType.SQL;
-            foreach (Table tabla in Itblas)
+            return connReporte;
+        }
+        private static void SetDBLogonForReport(ConnectionInfo connectionInfo, ReportDocument reportDocument)
+        {
+            foreach (Table table in reportDocument.Database.Tables)
+
             {
-                TableLogOnInfo boTableLogOnInfo = new TableLogOnInfo();
-                boTableLogOnInfo = tabla.LogOnInfo;
-                boTableLogOnInfo.ConnectionInfo = connReporte;
-                tabla.ApplyLogOnInfo(boTableLogOnInfo);
+                TableLogOnInfo tableLogonInfo = table.LogOnInfo;
+                tableLogonInfo.ConnectionInfo = connectionInfo;
+                table.ApplyLogOnInfo(tableLogonInfo);
+            }
+        }
+        private static void SetDBLogonForSubreports(ConnectionInfo connectionInfo, ReportDocument reportDocument)
+        {
+            foreach (Section section in reportDocument.ReportDefinition.Sections)
+            {
+                foreach (ReportObject reportObject in section.ReportObjects)
+                {
+                    if (reportObject.Kind == ReportObjectKind.SubreportObject)
+                    {
+                        SubreportObject subreportObject = (SubreportObject)reportObject;
+                        ReportDocument subReportDocument = subreportObject.OpenSubreport(subreportObject.SubreportName);
+                        SetDBLogonForReport(connectionInfo, subReportDocument);
+                    }
+                }
             }
         }
         public static string obtenerExtensionReporte(string pTipoArchivo) {

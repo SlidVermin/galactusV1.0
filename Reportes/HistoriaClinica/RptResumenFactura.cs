@@ -106,7 +106,7 @@ namespace Galactus.Reportes.HistoriaClinica {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_pAuditoria {
+        public CrystalDecisions.Shared.IParameterField Parameter_pAuditoria2 {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -114,7 +114,7 @@ namespace Galactus.Reportes.HistoriaClinica {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_pIdAtencion {
+        public CrystalDecisions.Shared.IParameterField Parameter_pIdAtencion2 {
             get {
                 return this.DataDefinition.ParameterFields[1];
             }
