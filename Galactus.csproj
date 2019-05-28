@@ -927,6 +927,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Reportes\Admision\" />
+    <Folder Include="Reportes\Facturacion\" />
+    <Folder Include="Reportes\Farmacia\" />
+    <Folder Include="Reportes\HistoriaClinica\" />
+    <Folder Include="Reportes\Inventario\" />
     <Folder Include="Util\Convertidores\" />
     <Folder Include="Util\Validadores\" />
   </ItemGroup>
