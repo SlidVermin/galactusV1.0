@@ -113,9 +113,9 @@ namespace Galactus
 
         #region Historia Clinica
         public const string BUSCAR_PACIENTE_HEMODIALISIS = ConstanteGeneral.ESQUEMA_FORMATO + "[uspPacienteHemodialisisConsultar]";
-        public const string BUSCAR_HEMODIALISIS = ConstanteGeneral.ESQUEMA_FORMATO + "";
-        public const string ANULAR_HEMODIALISIS = ConstanteGeneral.ESQUEMA_FORMATO + "";
-        public const string CREAR_HEMODIALISIS = ConstanteGeneral.ESQUEMA_FORMATO + "";
+        public const string BUSCAR_HEMODIALISIS = ConstanteGeneral.ESQUEMA_FORMATO + "[uspHemodialisisBuscar]";
+        public const string ANULAR_HEMODIALISIS = ConstanteGeneral.ESQUEMA_FORMATO + "[uspHemodialisisAnular]";
+        public const string CREAR_HEMODIALISIS = ConstanteGeneral.ESQUEMA_FORMATO + "[uspHemodialisisCrear]";
 
         public const string INFORME_QX_MEDICAMENTO_ANASTESIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspMedicamentoAnasteaBuscar]";
         public const string PACIENTE_INFORME_QX_BUSCAR = ConstanteGeneral.ESQUEMA_FORMATO +"[uspPacienteInformeQxConsultar]";
