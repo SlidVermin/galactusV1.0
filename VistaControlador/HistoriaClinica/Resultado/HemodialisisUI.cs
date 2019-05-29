@@ -204,7 +204,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         {
             try
             {
-                hemodialisis.codigo = dRows.Field<int>("idHemodialisis").ToString();
+                hemodialisis.idHemodialisis = dRows.Field<int>("idHemodialisis");
                 dtFechaIngreso.Value = dRows.Field<DateTime>("fecha");
                 txtNota.Text = dRows.Field<string>("Nota").ToString();
                 txtNotaSigno.Text = dRows.Field<string>("notaSigno").ToString();
