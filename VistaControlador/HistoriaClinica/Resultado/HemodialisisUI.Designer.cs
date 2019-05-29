@@ -41,6 +41,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.tsbBuscarNit = new System.Windows.Forms.Button();
             this.txtCodigoAdministradora = new System.Windows.Forms.TextBox();
             this.txtAdministradora = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -63,9 +64,10 @@
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tsbBuscarNit = new System.Windows.Forms.Button();
             this.tstImprimir = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlCaracteristica.SuspendLayout();
@@ -93,9 +95,9 @@
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtNotaSigno);
-            this.panel2.Location = new System.Drawing.Point(15, 360);
+            this.panel2.Location = new System.Drawing.Point(15, 380);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(897, 129);
+            this.panel2.Size = new System.Drawing.Size(897, 109);
             this.panel2.TabIndex = 6;
             // 
             // txtNotaSigno
@@ -105,14 +107,14 @@
             this.txtNotaSigno.Multiline = true;
             this.txtNotaSigno.Name = "txtNotaSigno";
             this.txtNotaSigno.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNotaSigno.Size = new System.Drawing.Size(889, 121);
+            this.txtNotaSigno.Size = new System.Drawing.Size(889, 101);
             this.txtNotaSigno.TabIndex = 40;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(11, 337);
+            this.label21.Location = new System.Drawing.Point(16, 356);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(124, 20);
             this.label21.TabIndex = 5;
@@ -122,7 +124,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 154);
+            this.label6.Location = new System.Drawing.Point(17, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 20);
             this.label6.TabIndex = 4;
@@ -135,7 +137,7 @@
             this.pnlCaracteristica.Controls.Add(this.txtNota);
             this.pnlCaracteristica.Location = new System.Drawing.Point(15, 177);
             this.pnlCaracteristica.Name = "pnlCaracteristica";
-            this.pnlCaracteristica.Size = new System.Drawing.Size(897, 150);
+            this.pnlCaracteristica.Size = new System.Drawing.Size(897, 176);
             this.pnlCaracteristica.TabIndex = 2;
             // 
             // txtNota
@@ -145,7 +147,7 @@
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
             this.txtNota.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNota.Size = new System.Drawing.Size(889, 142);
+            this.txtNota.Size = new System.Drawing.Size(889, 168);
             this.txtNota.TabIndex = 39;
             // 
             // label2
@@ -162,6 +164,8 @@
             // 
             this.pnlInformacion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInformacion.Controls.Add(this.dtpFecha);
+            this.pnlInformacion.Controls.Add(this.label12);
             this.pnlInformacion.Controls.Add(this.txtProcedimiento);
             this.pnlInformacion.Controls.Add(this.label11);
             this.pnlInformacion.Controls.Add(this.dtFecha);
@@ -209,20 +213,31 @@
             this.dtFecha.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFecha.Location = new System.Drawing.Point(714, 54);
+            this.dtFecha.Location = new System.Drawing.Point(694, 54);
             this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(151, 21);
+            this.dtFecha.Size = new System.Drawing.Size(171, 21);
             this.dtFecha.TabIndex = 45;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(664, 57);
+            this.label4.Location = new System.Drawing.Point(590, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 15);
+            this.label4.Size = new System.Drawing.Size(89, 15);
             this.label4.TabIndex = 44;
-            this.label4.Text = "Fecha:";
+            this.label4.Text = "Fecha Ingreso:";
+            // 
+            // tsbBuscarNit
+            // 
+            this.tsbBuscarNit.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbBuscarNit.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.tsbBuscarNit.Location = new System.Drawing.Point(234, 5);
+            this.tsbBuscarNit.Name = "tsbBuscarNit";
+            this.tsbBuscarNit.Size = new System.Drawing.Size(26, 24);
+            this.tsbBuscarNit.TabIndex = 43;
+            this.tsbBuscarNit.UseVisualStyleBackColor = true;
+            this.tsbBuscarNit.Click += new System.EventHandler(this.tsbBuscarNit_Click);
             // 
             // txtCodigoAdministradora
             // 
@@ -256,7 +271,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(608, 34);
+            this.label9.Location = new System.Drawing.Point(590, 34);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 15);
             this.label9.TabIndex = 24;
@@ -265,9 +280,9 @@
             // txtServicio
             // 
             this.txtServicio.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServicio.Location = new System.Drawing.Point(667, 31);
+            this.txtServicio.Location = new System.Drawing.Point(694, 31);
             this.txtServicio.Name = "txtServicio";
-            this.txtServicio.Size = new System.Drawing.Size(198, 21);
+            this.txtServicio.Size = new System.Drawing.Size(171, 21);
             this.txtServicio.TabIndex = 23;
             this.txtServicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -397,6 +412,7 @@
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tstModificar
             // 
@@ -448,26 +464,6 @@
             this.tsbAnular.Size = new System.Drawing.Size(62, 22);
             this.tsbAnular.Text = "Anular";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(25, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tsbBuscarNit
-            // 
-            this.tsbBuscarNit.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbBuscarNit.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.tsbBuscarNit.Location = new System.Drawing.Point(234, 5);
-            this.tsbBuscarNit.Name = "tsbBuscarNit";
-            this.tsbBuscarNit.Size = new System.Drawing.Size(26, 24);
-            this.tsbBuscarNit.TabIndex = 43;
-            this.tsbBuscarNit.UseVisualStyleBackColor = true;
-            this.tsbBuscarNit.Click += new System.EventHandler(this.tsbBuscarNit_Click);
-            // 
             // tstImprimir
             // 
             this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
@@ -477,6 +473,35 @@
             this.tstImprimir.Size = new System.Drawing.Size(73, 22);
             this.tstImprimir.Text = "Imprimir";
             this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(25, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(694, 7);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(171, 21);
+            this.dtpFecha.TabIndex = 49;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(590, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 15);
+            this.label12.TabIndex = 48;
+            this.label12.Text = "Fecha:";
             // 
             // HemodialisisUI
             // 
@@ -550,5 +575,7 @@
         private System.Windows.Forms.TextBox txtProcedimiento;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ToolStripButton tstImprimir;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.Label label12;
     }
 }

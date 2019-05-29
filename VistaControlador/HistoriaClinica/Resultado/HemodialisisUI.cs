@@ -231,6 +231,5 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 return true;
             }
         }
-
     }
 }

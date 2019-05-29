@@ -385,20 +385,20 @@
             this.dtFecha.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFecha.Location = new System.Drawing.Point(714, 54);
+            this.dtFecha.Location = new System.Drawing.Point(703, 54);
             this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(151, 21);
+            this.dtFecha.Size = new System.Drawing.Size(162, 21);
             this.dtFecha.TabIndex = 45;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(664, 57);
+            this.label4.Location = new System.Drawing.Point(608, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 15);
+            this.label4.Size = new System.Drawing.Size(89, 15);
             this.label4.TabIndex = 44;
-            this.label4.Text = "Fecha:";
+            this.label4.Text = "Fecha Ingreso:";
             // 
             // tsbBuscarPaciente
             // 
@@ -452,9 +452,9 @@
             // txtServicio
             // 
             this.txtServicio.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServicio.Location = new System.Drawing.Point(667, 31);
+            this.txtServicio.Location = new System.Drawing.Point(703, 31);
             this.txtServicio.Name = "txtServicio";
-            this.txtServicio.Size = new System.Drawing.Size(198, 21);
+            this.txtServicio.Size = new System.Drawing.Size(162, 21);
             this.txtServicio.TabIndex = 23;
             this.txtServicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -562,8 +562,8 @@
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tstModificar,
-            this.tsbCancelar,
             this.tsbGuardar,
+            this.tsbCancelar,
             this.tsbBuscar,
             this.tsbAnular,
             this.tstImprimir});

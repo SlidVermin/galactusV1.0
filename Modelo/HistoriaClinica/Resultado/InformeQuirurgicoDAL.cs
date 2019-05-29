@@ -22,7 +22,8 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
 
                     sentencia.CommandText = Sentencias.INFORME_QX_CREAR;
                     sentencia.Parameters.Add(new SqlParameter("@pIdInformeQX", SqlDbType.Int)).Value = informeQx.idInformeQX;
-                    sentencia.Parameters.Add(new SqlParameter("@pidAtencion", SqlDbType.Int)).Value = informeQx.idAtencion;
+                    sentencia.Parameters.Add(new SqlParameter("@piOrdenMedica", SqlDbType.Int)).Value = informeQx.idOrdenMedica;
+                    sentencia.Parameters.Add(new SqlParameter("@pidProcedimiento", SqlDbType.Int)).Value = informeQx.idProcedimiento;
                     sentencia.Parameters.Add(new SqlParameter("@pNota", SqlDbType.NVarChar)).Value = informeQx.notaQuirurgica;
                     sentencia.Parameters.Add(new SqlParameter("@pIdVia", SqlDbType.Int)).Value = informeQx.idVia;
                     sentencia.Parameters.Add(new SqlParameter("@pIdAyudante", SqlDbType.Int)).Value = informeQx.idAyudante;
@@ -31,6 +32,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.Parameters.Add(new SqlParameter("@pfechaInicio", SqlDbType.DateTime)).Value = informeQx.fechaInicio;
                     sentencia.Parameters.Add(new SqlParameter("@pfechaFin", SqlDbType.DateTime)).Value = informeQx.fechaFin;
                     sentencia.Parameters.Add(new SqlParameter("@pIdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
+                    sentencia.Parameters.Add(new SqlParameter("@pAuditoria", SqlDbType.Int)).Value = informeQx.Auditoria;            
                     informeQx.idInformeQX = (int)sentencia.ExecuteScalar();
                 }
             }
@@ -42,9 +44,10 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
             return informeQx;
         }
 
-        public static Boolean anularInformeQuirurgico(int codigo)
+        public static Boolean anularInformeQuirurgico(int codigo, int Auditoria)
         {
             Boolean resultado = false;
+
             try
             {
                 using (SqlCommand sentencia = new SqlCommand())
@@ -52,7 +55,8 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Sentencias.INFORME_QX_ANULAR;
-                    sentencia.Parameters.Add(new SqlParameter("@IdInfQuirurgico", SqlDbType.Int)).Value = codigo;
+                    sentencia.Parameters.Add(new SqlParameter("@@idInformeQX", SqlDbType.Int)).Value = codigo;
+                    sentencia.Parameters.Add(new SqlParameter("@pAuditoria", SqlDbType.Int)).Value = Auditoria;
                     sentencia.ExecuteNonQuery();
                     resultado = true;
                 }

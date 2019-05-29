@@ -31,7 +31,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             GeneralC.deshabilitarControles(this);
             tsbBuscar.Enabled = true;
             tsbNuevo.Enabled = true;
-
         }
 
         private void tsbBuscarNit_Click(object sender, EventArgs e)
@@ -43,7 +42,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarInformacionAtencion),
                                     Titulos.TITULO_BUSCAR_PACIENTE,
-                                    true);
+                                    true,
+                                    listaParametroOculto());
         }
 
         private void tsbNuevo_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 try
                 {
 
-                    if (InformeQuirurgicoDAL.anularInformeQuirurgico(informeQx.idInformeQX) == true)
+                    if (InformeQuirurgicoDAL.anularInformeQuirurgico(informeQx.idInformeQX,informeQx.Auditoria) == true)
                     {
                         GeneralC.deshabilitarBotones(ref tstMenuPatron);
                         GeneralC.limpiarControles(this);
@@ -158,7 +158,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
         private void tsbBuscarVia_Click(object sender, EventArgs e)
         {
-
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
 
@@ -230,11 +229,13 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void cargarInformacionAtencion(DataRow dRows) {
             txtAtencion.Text = dRows.Field<int>("idAtencion").ToString();
             txtPaciente.Text = dRows.Field<string>("paciente").ToString();
-            txtIdentificacion.Text = dRows.Field<string>("identificacion").ToString();
-            txtServicio.Text = dRows.Field<string>("servicio").ToString();
-            txtOrdenMedica.Text = dRows.Field<string>("ordenMedica").ToString();
-            txtCodigoAdministradora.Text = dRows.Field<int>("codigoAdministracion").ToString();
-            txtAdministradora.Text = dRows.Field<string>("administracion").ToString();
+            txtIdentificacion.Text = dRows.Field<string>("Documento").ToString();
+            txtServicio.Text = dRows.Field<string>("Entorno").ToString();
+            txtOrdenMedica.Text = dRows.Field<int>("IdOrdenMedica").ToString();
+            txtProcedimiento.Text = dRows.Field<string>("procedimiento").ToString();
+            txtCodigoAdministradora.Text = dRows.Field<int>("IdContrato").ToString();
+            txtAdministradora.Text = dRows.Field<string>("Nombre").ToString();
+            dtFecha.Value= dRows.Field<DateTime>("FechaAdmision");
         }
 
         private void crearNuevaInformeQx() {
@@ -269,15 +270,17 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private List<string> listaParametroOculto()
         {
             List<string> paramtro = new List<string>();
-            //paramtro.Add("idCliente");
-            //paramtro.Add("codigo");
-            //paramtro.Add("idRegimen");
+
+            paramtro.Add("idAtencion");
+            paramtro.Add("IdOrdenMedica");
+            paramtro.Add("IdContrato");
             //paramtro.Add("idFormaPago");
-            //paramtro.Add("idUbicacion");
-            //paramtro.Add("cuentaPuc");
-            //paramtro.Add("cuentaCIIU");
-            //paramtro.Add("NombrePuc");
-            //paramtro.Add("NombreCIIU");
+            paramtro.Add("FechaAdmision");
+
+            if (informeQx.idInformeQX != ConstanteGeneral.PREDETERMINADO) {
+
+            }
+
             return paramtro;
         }
         private Boolean validarCampos()
@@ -290,6 +293,26 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             else if (txtNota.Text == string.Empty)
             {
                 Mensajes.mensajeAdvertencia("¡ Favor realice la nota correspondiente al resultado !");
+                return false;
+            }
+            else if (informeQx.idVia == ConstanteGeneral.SIN_VALOR_NUMERICO)
+            {
+                Mensajes.mensajeAdvertencia("¡ Favor seleccionar una via !");
+                return false;
+            }
+            else if (informeQx.idAnastesia == ConstanteGeneral.SIN_VALOR_NUMERICO)
+            {
+                Mensajes.mensajeAdvertencia("¡ Favor seleccionar una anastesia !");
+                return false;
+            }
+            else if (informeQx.idAyudante == ConstanteGeneral.SIN_VALOR_NUMERICO)
+            {
+                Mensajes.mensajeAdvertencia("¡ Favor seleccionar un ayudante !");
+                return false;
+            }
+            else if (dtpFechaInicio.Value < dtpFechaFin.Value)
+            {
+                Mensajes.mensajeAdvertencia("¡ la fecha inicio debe ser menor a la fecha fin !");
                 return false;
             }
             else
