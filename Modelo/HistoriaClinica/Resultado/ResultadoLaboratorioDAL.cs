@@ -25,6 +25,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.Parameters.Add(new SqlParameter("@pFechaResultado", SqlDbType.DateTime)).Value = resultadoLab.fechaResultado;
                     sentencia.Parameters.Add(new SqlParameter("@pObervacion", SqlDbType.NVarChar)).Value = resultadoLab.observacion;
                     sentencia.Parameters.Add(new SqlParameter("@pIdUsuarioOrigen", SqlDbType.Int)).Value = Sesion.IdUsuario;
+                    sentencia.Parameters.Add(new SqlParameter("@pAuditoria", SqlDbType.Int)).Value = resultadoLab.auditoria;  
                     sentencia.Parameters.Add(new SqlParameter("@pTblExamen", SqlDbType.Structured)).Value = resultadoLab.dtResultado;
                     resultadoLab.codigoResultado = (int)sentencia.ExecuteScalar();
                 }

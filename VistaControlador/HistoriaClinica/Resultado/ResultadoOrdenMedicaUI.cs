@@ -22,7 +22,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         private int idAtencion;
         private int auditoria;
         private LaboratorioUI laboratorio;
-        private LaboratorioUI imagenologia;
+      //  private LaboratorioUI imagenologia;
 
         public ResultadoOrdenMedicaUI(int idAtencion, int auditoria)
         {
@@ -42,11 +42,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             laboratorio.resulOrdenMedica = this; 
             GeneralC.cargarFormularioEnPestana(tpLaboratorio, laboratorio);
 
-            imagenologia = new LaboratorioUI(idAtencion, auditoria, ConstanteGeneral.ID_IMAGENOLOGIA);
-            imagenologia.resulOrdenMedica = this;
-            GeneralC.cargarFormularioEnPestana(tpImagenologia, imagenologia);
-
-               
+            //imagenologia = new LaboratorioUI(idAtencion, auditoria, ConstanteGeneral.ID_IMAGENOLOGIA);
+            //imagenologia.resulOrdenMedica = this;
+            //GeneralC.cargarFormularioEnPestana(tpImagenologia, imagenologia);          
         }
 
     }

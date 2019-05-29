@@ -117,10 +117,11 @@ namespace Galactus
         public const string ANULAR_HEMODIALISIS = "";
         public const string CREAR_HEMODIALISIS = "";
 
-        public const string BUSCAR_PACIENTE_INFORME_QX = "";
-        public const string BUSCAR_INFORME_QX = "";
-        public const string ANULAR_INFORME_QX = "";
-        public const string CREAR_INFORME_QX = "";
+        public const string INFORME_QX_MEDICAMENTO_ANASTESIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspMedicamentoAnasteaBuscar]";
+        public const string PACIENTE_INFORME_QX_BUSCAR = "";
+        public const string INFORME_QX_BUSCAR = "";
+        public const string INFORME_QX_ANULAR = "";
+        public const string INFORME_QX_CREAR = "";
 
         public const string BUSCAR_PACIENTE_RESULTADO_LAB = ConstanteGeneral.ESQUEMA_LABORATORIO + "[uspPacienteSolicitudExamenBuscar]";
         public const string CARGAR_RESULTADO_LAB = ConstanteGeneral.ESQUEMA_LABORATORIO + "[uspPacienteSolicitudExamenCargar]";

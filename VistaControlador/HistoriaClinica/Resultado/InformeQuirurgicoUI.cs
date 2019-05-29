@@ -39,7 +39,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_PACIENTE_INFORME_QX,
+            GeneralC.buscarDevuelveFila(Sentencias.PACIENTE_INFORME_QX_BUSCAR,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarInformacionAtencion),
                                     Titulos.TITULO_BUSCAR_PACIENTE,
@@ -120,7 +120,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_INFORME_QX,
+            GeneralC.buscarDevuelveFila(Sentencias.INFORME_QX_BUSCAR,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarInformeQX),
                                     Titulos.TITULO_BUSCAR_INFORME_QX,
@@ -159,21 +159,50 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void tsbBuscarVia_Click(object sender, EventArgs e)
         {
 
+            List<string> parametro = new List<string>();
+            parametro.Add(string.Empty);
+
+            GeneralC.buscarDevuelveFila(Sentencias.ORDEN_CLINICA_BUSCAR_MEDICAMENTOS_VIA,
+                                    parametro,
+                                    new GeneralC.cargarInfoFila(cargarVia),
+                                    Titulos.TITULO_BUSCAR_VIA,
+                                    true);
         }
 
         private void tsbBuscarAyudante_Click(object sender, EventArgs e)
         {
+            List<string> parametro = new List<string>();
+            parametro.Add(string.Empty);
 
+            GeneralC.buscarDevuelveFila(Sentencias.INFORME_QX_MEDICAMENTO_ANASTESIA,
+                                    parametro,
+                                    new GeneralC.cargarInfoFila(cargarAyudante),
+                                    Titulos.TITULO_BUSCAR_AYUDANTE,
+                                    true);
         }
 
         private void tsbBuscarAnastesiologo_Click(object sender, EventArgs e)
         {
+            List<string> parametro = new List<string>();
+            parametro.Add(string.Empty);
 
+            GeneralC.buscarDevuelveFila(Sentencias.INFORME_QX_BUSCAR,
+                                    parametro,
+                                    new GeneralC.cargarInfoFila(cargarAnastesiologo),
+                                    Titulos.TITULO_BUSCAR_ANASTESIOLOGO,
+                                    true);
         }
 
         private void tsbBuscarAnastesia_Click(object sender, EventArgs e)
         {
+            List<string> parametro = new List<string>();
+            parametro.Add(string.Empty);
 
+            GeneralC.buscarDevuelveFila(Sentencias.INFORME_QX_MEDICAMENTO_ANASTESIA,
+                                    parametro,
+                                    new GeneralC.cargarInfoFila(cargarAnastesia),
+                                    Titulos.TITULO_BUSCAR_ANASTESIA,
+                                    true);
         }
 
         #region btnSalir
@@ -267,6 +296,25 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             {
                 return true;
             }
+        }
+        private void cargarVia(DataRow dRows) {
+            informeQx.idVia = dRows.Field<int>("Código");
+            txtVia.Text = dRows.Field<string>("Descripción");
+        }
+        private void cargarAyudante(DataRow dRows)
+        {
+            informeQx.idAyudante = dRows.Field<int>("");
+            txtAyudante.Text = dRows.Field<string>("");
+        }
+        private void cargarAnastesiologo(DataRow dRows)
+        {
+            informeQx.idAnastesiologo = dRows.Field<int>("");
+            txtAnastesiologo.Text = dRows.Field<string>("");
+        }
+        private void cargarAnastesia(DataRow dRows)
+        {
+            informeQx.idAnastesia = dRows.Field<int>("Código");
+            txtAnastesia.Text = dRows.Field<string>("Descripción");
         }
     }
 }

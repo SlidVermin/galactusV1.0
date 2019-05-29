@@ -20,7 +20,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
 
-                    sentencia.CommandText = Sentencias.CREAR_INFORME_QX;
+                    sentencia.CommandText = Sentencias.INFORME_QX_CREAR;
                     sentencia.Parameters.Add(new SqlParameter("@pIdInformeQX", SqlDbType.Int)).Value = informeQx.idInformeQX;
                     sentencia.Parameters.Add(new SqlParameter("@pidAtencion", SqlDbType.Int)).Value = informeQx.idAtencion;
                     sentencia.Parameters.Add(new SqlParameter("@pNota", SqlDbType.NVarChar)).Value = informeQx.notaQuirurgica;
@@ -51,7 +51,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                 {
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
-                    sentencia.CommandText = Sentencias.ANULAR_INFORME_QX;
+                    sentencia.CommandText = Sentencias.INFORME_QX_ANULAR;
                     sentencia.Parameters.Add(new SqlParameter("@IdInfQuirurgico", SqlDbType.Int)).Value = codigo;
                     sentencia.ExecuteNonQuery();
                     resultado = true;
