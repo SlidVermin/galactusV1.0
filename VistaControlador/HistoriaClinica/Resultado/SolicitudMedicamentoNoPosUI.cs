@@ -87,7 +87,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
             deshabilitarColumnas();
             medicamento.idSolicitud = ConstanteGeneral.PREDETERMINADO;
             habilitarControles();
-            
+            txtfechaSolicitud.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
+
         }
         public void Datos()
         {
@@ -443,6 +444,26 @@ namespace Galactus.VistaControlador.HistoriaClinica
             dgvDiagnostico.ReadOnly = false;
             deshabilitarColumnas();
             btBuscarOrden.Enabled = false;
+        }
+
+        private void tsbAnular_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    medicamento.anular();
+                    GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar, Mensajes.CONFIRMACION_ANULADO);
+                    medicamento.idSolicitud = ConstanteGeneral.PREDETERMINADO;
+                    btnSalir.Enabled = true;
+                    btBuscarOrden.Enabled = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
         }
     }
 }

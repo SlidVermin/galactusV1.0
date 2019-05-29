@@ -181,6 +181,7 @@ namespace Galactus
         public const string BUSCAR_MEDICAMENTO_NOPOS_REEMPLAZAR = ConstanteGeneral.ESQUEMA_FORMATO + "uspMedicamentoNoPosReemplazarBuscar";
         public const string CREAR_MEDICAMENTO_NOPOS = ConstanteGeneral.ESQUEMA_FORMATO + "uspMedicamentoNoPosCrear";
         public const string BUSCAR_MEDICAMENTO_NOPOS = ConstanteGeneral.ESQUEMA_FORMATO + "uspMedicamentoNoPosBuscar";
+        public const string ANULAR_MEDICAMENTO_NOPOS = ConstanteGeneral.ESQUEMA_FORMATO + "uspMedicamentoNoPosAnular";
         #endregion
     }
 }

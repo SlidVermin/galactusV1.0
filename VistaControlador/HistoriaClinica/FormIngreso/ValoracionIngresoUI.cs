@@ -110,10 +110,29 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
             List<string> parametros = new List<string>();
 
+            DataTable tablaParametros = new DataTable();
+            DataTable tablasSeleccionado = new DataTable();
+
+            tablaParametros.Columns.Add("Parametro", Type.GetType("System.Object"));
+            tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
+
+            //object[] myObjArray = { "@pIdAtencion", idAtencion };
+            //object[] myObjArray1 = { "@pFiltro", "" };
+
+            DataView view = new DataView(ingreso.dtImpresion);
+
+            tablasSeleccionado = view.ToTable(true, new string[] { "id" }).Copy();
+            tablasSeleccionado.Rows.RemoveAt(tablasSeleccionado.Rows.Count - 1);
+            object[] myObjArray2 = { "@pTblSeleccionados", tablasSeleccionado };
+
+            //tablaParametros.Rows.Add(myObjArray);
+            //tablaParametros.Rows.Add(myObjArray1);
+            tablaParametros.Rows.Add(myObjArray2);
+
             GeneralC.buscarDevuelveFila(Sentencias.GENERAL_BUSCAR_DIAGNOSTICO,
                                                parametros,
                                                new GeneralC.cargarInfoFila(cargarDiagnostico),
-                                               Mensajes.BUSQUEDA_PACIENTE, true);
+                                               Mensajes.BUSQUEDA_PACIENTE, true,null,tablasSeleccionado,tablaParametros);
         }
 
         private void dgvImpresionN_DataError(object sender, DataGridViewDataErrorEventArgs e)

@@ -56,10 +56,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.Enfermeria
             switch (tcEnfermeria.SelectedIndex)
             {
                 case 0:
-                    nuevo();
-                    opciones();
+                    nuevo();               
                     enfermeria.idInsumo = ConstanteGeneral.PREDETERMINADO;
                     GeneralC.formNuevo(tpInsumos, tstMenu, tsBtGuardar, tsBtCancelar);
+                    opciones();
                     break;
                 case 1:
                     nuevo();

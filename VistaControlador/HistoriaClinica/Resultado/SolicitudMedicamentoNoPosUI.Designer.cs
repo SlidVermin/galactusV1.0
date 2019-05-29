@@ -245,6 +245,8 @@
             this.tsbAnular.Name = "tsbAnular";
             this.tsbAnular.Size = new System.Drawing.Size(62, 22);
             this.tsbAnular.Text = "Anular";
+            this.tsbAnular.Visible = false;
+            this.tsbAnular.Click += new System.EventHandler(this.tsbAnular_Click);
             // 
             // tstImprimir
             // 

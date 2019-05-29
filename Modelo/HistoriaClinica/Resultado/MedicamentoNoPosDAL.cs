@@ -70,5 +70,23 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                 throw ex;
             }
         }
+        public static void anular(MedicamentosNoPos medicamentoNoPos)
+        {
+            try
+            {
+                using (SqlCommand comando = new SqlCommand())
+                {
+                    comando.Connection = PrincipalUI.Cnxion;
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.CommandText = Sentencias.ANULAR_MEDICAMENTO_NOPOS;
+                    comando.Parameters.Add(new SqlParameter("@IdSolicitudNoPos", SqlDbType.Int)).Value = medicamentoNoPos.idSolicitud;
+                    comando.ExecuteNonQuery();
+                }
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

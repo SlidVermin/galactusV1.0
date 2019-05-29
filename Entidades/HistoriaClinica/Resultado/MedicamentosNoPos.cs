@@ -107,6 +107,10 @@ namespace Galactus.Entidades.HistoriaClinica.Resultado
             prepararDT();
             MedicamentoNoPosDAL.guardarNoPos(this);
         }
+        public void anular()
+        {
+            MedicamentoNoPosDAL.anular(this);
+        }
         public void prepararDT()
         {
             DataTable dt = new DataTable();
