@@ -21,13 +21,15 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
 
                     sentencia.CommandText = Sentencias.CREAR_HEMODIALISIS;
-                    sentencia.Parameters.Add(new SqlParameter("@codigo", SqlDbType.NVarChar)).Value = hemodialisis.codigo;
-                    sentencia.Parameters.Add(new SqlParameter("@codigoAtencion", SqlDbType.Int)).Value = hemodialisis.codigoAtencion;
-                    sentencia.Parameters.Add(new SqlParameter("@nota", SqlDbType.Int)).Value = hemodialisis.nota;
-                    sentencia.Parameters.Add(new SqlParameter("@notaSigno", SqlDbType.Int)).Value = hemodialisis.notaSigno;
-                    sentencia.Parameters.Add(new SqlParameter("@fecha", SqlDbType.Int)).Value = hemodialisis.fecha;
-                    sentencia.Parameters.Add(new SqlParameter("@IdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
-                    hemodialisis.codigo = (string)sentencia.ExecuteScalar();
+                    sentencia.Parameters.Add(new SqlParameter("@pIdHemodialisis", SqlDbType.NVarChar)).Value = hemodialisis.idHemodialisis;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdOrdenMedica", SqlDbType.Int)).Value = hemodialisis.idOrdenMedica;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdProcedimiento", SqlDbType.Int)).Value = hemodialisis.idProcedimiento;
+                    sentencia.Parameters.Add(new SqlParameter("@pNota", SqlDbType.Int)).Value = hemodialisis.nota;
+                    sentencia.Parameters.Add(new SqlParameter("@pNotaSigno", SqlDbType.Int)).Value = hemodialisis.notaSigno;
+                    sentencia.Parameters.Add(new SqlParameter("@pFecha", SqlDbType.Int)).Value = hemodialisis.fecha;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
+                    sentencia.Parameters.Add(new SqlParameter("@pAuditoria", SqlDbType.Int)).Value = hemodialisis.auditoria;
+                    hemodialisis.idHemodialisis = (int)sentencia.ExecuteScalar();
                 }
             }
             catch (Exception ex)
@@ -38,7 +40,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
             return hemodialisis;
         }
 
-        public static Boolean anularHemodialisis(string codigo)
+        public static Boolean anularHemodialisis(int codigo,int auditoria)
         {
             Boolean resultado = false;
             try
@@ -48,8 +50,11 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Sentencias.ANULAR_HEMODIALISIS;
-                    sentencia.Parameters.Add(new SqlParameter("@IdHemodialisis", SqlDbType.Int)).Value = codigo;
+
+                    sentencia.Parameters.Add(new SqlParameter("@pIdHemodialisis", SqlDbType.Int)).Value = codigo;
+                    sentencia.Parameters.Add(new SqlParameter("@pAuditoria", SqlDbType.Int)).Value = auditoria;
                     sentencia.ExecuteNonQuery();
+
                     resultado = true;
                 }
             }

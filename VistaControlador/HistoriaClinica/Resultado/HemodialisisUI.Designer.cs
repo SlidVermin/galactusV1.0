@@ -37,9 +37,11 @@
             this.txtNota = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtProcedimiento = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dtFecha = new System.Windows.Forms.DateTimePicker();
+            this.dtFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.tsbBuscarNit = new System.Windows.Forms.Button();
             this.txtCodigoAdministradora = new System.Windows.Forms.TextBox();
@@ -66,8 +68,6 @@
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlCaracteristica.SuspendLayout();
@@ -168,7 +168,7 @@
             this.pnlInformacion.Controls.Add(this.label12);
             this.pnlInformacion.Controls.Add(this.txtProcedimiento);
             this.pnlInformacion.Controls.Add(this.label11);
-            this.pnlInformacion.Controls.Add(this.dtFecha);
+            this.pnlInformacion.Controls.Add(this.dtFechaIngreso);
             this.pnlInformacion.Controls.Add(this.label4);
             this.pnlInformacion.Controls.Add(this.tsbBuscarNit);
             this.pnlInformacion.Controls.Add(this.txtCodigoAdministradora);
@@ -189,6 +189,26 @@
             this.pnlInformacion.Size = new System.Drawing.Size(897, 113);
             this.pnlInformacion.TabIndex = 1;
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(694, 7);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(171, 21);
+            this.dtpFecha.TabIndex = 49;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(590, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 15);
+            this.label12.TabIndex = 48;
+            this.label12.Text = "Fecha:";
+            // 
             // txtProcedimiento
             // 
             this.txtProcedimiento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -208,15 +228,15 @@
             this.label11.TabIndex = 46;
             this.label11.Text = "Procedimiento:";
             // 
-            // dtFecha
+            // dtFechaIngreso
             // 
-            this.dtFecha.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFecha.Location = new System.Drawing.Point(694, 54);
-            this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(171, 21);
-            this.dtFecha.TabIndex = 45;
+            this.dtFechaIngreso.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtFechaIngreso.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFechaIngreso.Location = new System.Drawing.Point(694, 54);
+            this.dtFechaIngreso.Name = "dtFechaIngreso";
+            this.dtFechaIngreso.Size = new System.Drawing.Size(171, 21);
+            this.dtFechaIngreso.TabIndex = 45;
             // 
             // label4
             // 
@@ -423,6 +443,7 @@
             this.tstModificar.Name = "tstModificar";
             this.tstModificar.Size = new System.Drawing.Size(78, 22);
             this.tstModificar.Text = "Modificar";
+            this.tstModificar.Click += new System.EventHandler(this.tstModificar_Click);
             // 
             // tsbCancelar
             // 
@@ -433,6 +454,7 @@
             this.tsbCancelar.Name = "tsbCancelar";
             this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
             this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
             // tsbGuardar
             // 
@@ -443,6 +465,7 @@
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // tsbBuscar
             // 
@@ -453,6 +476,7 @@
             this.tsbBuscar.Name = "tsbBuscar";
             this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
             this.tsbBuscar.Text = "Buscar";
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
             // 
             // tsbAnular
             // 
@@ -463,6 +487,7 @@
             this.tsbAnular.Name = "tsbAnular";
             this.tsbAnular.Size = new System.Drawing.Size(62, 22);
             this.tsbAnular.Text = "Anular";
+            this.tsbAnular.Click += new System.EventHandler(this.tsbAnular_Click);
             // 
             // tstImprimir
             // 
@@ -482,26 +507,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            // 
-            // dtpFecha
-            // 
-            this.dtpFecha.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtpFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFecha.Location = new System.Drawing.Point(694, 7);
-            this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(171, 21);
-            this.dtpFecha.TabIndex = 49;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(590, 10);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 15);
-            this.label12.TabIndex = 48;
-            this.label12.Text = "Fecha:";
             // 
             // HemodialisisUI
             // 
@@ -563,7 +568,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button tsbBuscarNit;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.DateTimePicker dtFecha;
+        private System.Windows.Forms.DateTimePicker dtFechaIngreso;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
         private System.Windows.Forms.ToolStripButton tsbNuevo;

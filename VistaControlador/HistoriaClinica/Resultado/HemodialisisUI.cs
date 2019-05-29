@@ -56,26 +56,28 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
         private void tsbAnular_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (Mensajes.preguntaAnular())
             {
                 try
                 {
 
-                    if (HemodialisisDAL.anularHemodialisis(hemodialisis.codigo))
+                    if (HemodialisisDAL.anularHemodialisis(hemodialisis.idHemodialisis,hemodialisis.auditoria))
                     {
                         GeneralC.deshabilitarBotones(ref tstMenuPatron);
                         GeneralC.limpiarControles(this);
                         GeneralC.deshabilitarControles(this);
+
                         btnSalir.Enabled = true;
                         tsbBuscar.Enabled = true;
                         tsbNuevo.Enabled = true;
-                        MessageBox.Show(Mensajes.CONFIRMACION_ANULADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_ANULADO);
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Mensajes.mensajeError(ex);
                 }
             }
         }
@@ -95,12 +97,14 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Mensajes.CANCELAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (Mensajes.preguntaSiNo(Mensajes.CANCELAR_FORM)==true)
             {
                 GeneralC.deshabilitarBotones(ref tstMenuPatron);
                 GeneralC.deshabilitarControles(this);
                 GeneralC.limpiarControles(this);
-                hemodialisis.codigo = null;
+
+                hemodialisis.idHemodialisis = ConstanteGeneral.PREDETERMINADO;
+
                 tsbNuevo.Enabled = true;
                 tsbBuscar.Enabled = true;
                 btnSalir.Enabled = true;
@@ -111,35 +115,42 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         {
             if (validarCampos() == true)
             {
-                if (MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (Mensajes.preguntaGuardar())
                     try
                     {
                         crearNuevaHemodialisis();
+
                         HemodialisisDAL.guardarHemodialisis(hemodialisis);
+
                         GeneralC.habilitarBotones(ref tstMenuPatron);
                         GeneralC.deshabilitarControles(this);
+
                         btnSalir.Enabled = true;
                         tsbGuardar.Enabled = false;
                         tsbCancelar.Enabled = false;
-                        MessageBox.Show(Mensajes.CONFIRMACION_GUARDADO, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_GUARDADO);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        Mensajes.mensajeError(ex);
                     }
             }
         }
 
-        private void btModificar_Click(object sender, EventArgs e)
+        private void tstModificar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Mensajes.Modificar_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (Mensajes.preguntaSiNo(Mensajes.Modificar_FORM)==true)
             {
                 GeneralC.deshabilitarBotones(ref tstMenuPatron);
                 GeneralC.habilitarControles(this);
                 GeneralC.deshabilitarControles(pnlInformacion);
-                dtFecha.Enabled = true;
+
+                dtpFecha.Enabled = true;
+
                 tsbGuardar.Enabled = true;
                 tsbCancelar.Enabled = true;
+
             }
         }
 
@@ -147,13 +158,17 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         {
             GeneralC.deshabilitarBotones(ref tstMenuPatron);
             GeneralC.habilitarControles(this);
+
             GeneralC.deshabilitarControles(pnlInformacion);
             GeneralC.limpiarControles(this);
-            hemodialisis.codigo=null;
-            dtFecha.Enabled = true;
+
+            hemodialisis.idHemodialisis=ConstanteGeneral.PREDETERMINADO;
+            dtpFecha.Enabled = true;
             tsbBuscarNit.Enabled = true;
+
             tsbGuardar.Enabled = true;
             tsbCancelar.Enabled = true;
+
         }
 
         private void tsbBuscarNit_Click(object sender, EventArgs e)
@@ -171,16 +186,18 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void cargarInformacionAtencion(DataRow dRows) {
             txtAtencion.Text = dRows.Field<int>("idAtencion").ToString();
             txtPaciente.Text = dRows.Field<string>("paciente").ToString();
-            txtIdentificacion.Text = dRows.Field<string>("identificacion").ToString();
-            txtServicio.Text = dRows.Field<string>("servicio").ToString();
-            txtOrdenMedica.Text = dRows.Field<string>("ordenMedica").ToString();
-            txtCodigoAdministradora.Text= dRows.Field<int>("codigoAdministracion").ToString();
-            txtAdministradora.Text= dRows.Field<string>("administracion").ToString();
+            txtIdentificacion.Text = dRows.Field<string>("Documento").ToString();
+            txtServicio.Text = dRows.Field<string>("Entorno").ToString();
+            txtOrdenMedica.Text = dRows.Field<int>("IdOrdenMedica").ToString();
+            txtProcedimiento.Text = dRows.Field<string>("procedimiento").ToString();
+            txtCodigoAdministradora.Text = dRows.Field<int>("IdContrato").ToString();
+            txtAdministradora.Text = dRows.Field<string>("Nombre").ToString();
+            dtFechaIngreso.Value = dRows.Field<DateTime>("FechaAdmision");
         }
 
         private void crearNuevaHemodialisis() {
             hemodialisis.nota = txtNota.Text;
-            hemodialisis.fecha = dtFecha.Value;
+            hemodialisis.fecha = dtFechaIngreso.Value;
             hemodialisis.notaSigno = string.IsNullOrEmpty(txtNotaSigno.Text) ? null : txtNotaSigno.Text;
         }
         private void cargarHemodialisis(DataRow dRows)
@@ -188,7 +205,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             try
             {
                 hemodialisis.codigo = dRows.Field<int>("idHemodialisis").ToString();
-                dtFecha.Value = dRows.Field<DateTime>("fecha");
+                dtFechaIngreso.Value = dRows.Field<DateTime>("fecha");
                 txtNota.Text = dRows.Field<string>("Nota").ToString();
                 txtNotaSigno.Text = dRows.Field<string>("notaSigno").ToString();
                cargarInformacionAtencion(dRows);
@@ -231,5 +248,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 return true;
             }
         }
+
+ 
     }
 }
