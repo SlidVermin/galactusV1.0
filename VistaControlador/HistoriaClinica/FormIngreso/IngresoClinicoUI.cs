@@ -9,17 +9,18 @@ namespace Galactus.VistaControlador.HistoriaClinica
 {
     public partial class IngresoClinicoUI : Form
     {
+        private string entorno;
         private int idAtencion;
         private bool auditoria;
         IngresoClinico ingreso = new IngresoClinico();
-        private ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();
+        public ValoracionIngresoUI valoracionUI = new ValoracionIngresoUI();
         private AntecedentesIngresoUI antecedentesUI = new AntecedentesIngresoUI();
         private AntecedentesMaternosUI antecedentesMaternosUI = new AntecedentesMaternosUI();
         private AntecedenteRecienNacidoUI antecedenteRecienNacidoUI = new AntecedenteRecienNacidoUI();
         private EventoNacimientoUI eventoNacimientoUI = new EventoNacimientoUI();
         private ExamenFisicoUI examenFisicoUI = new ExamenFisicoUI();
         private AnalisisUI analisisUI = new AnalisisUI();
-        
+       
         public IngresoClinicoUI()
         {
             InitializeComponent();
@@ -108,14 +109,23 @@ namespace Galactus.VistaControlador.HistoriaClinica
             ingreso.Pronostico = analisisUI.txtPronostico.Text;
             ingreso.pielFaneras = examenFisicoUI.txtPielFaneras.Text;
             alistarDt(valoracionUI.ingreso);
-            /*ingreso.txtIdUsuario;
-            ingreso.txtIdUsuarioOrigen;
-            ingreso.txtFechaOrigen;
-            ingreso.txtFechaActualizacion;*/
-
-
+            ingreso. establecerDtMaterno();
+            if(antecedentesMaternosUI.txtEdadMadreN.Text != string.Empty)
+            {
+                ingreso.dtMaterno.Rows.Add(idAtencion,antecedentesMaternosUI.txtEdadMadreN.Text, antecedentesMaternosUI.txtEdadGestN.Text,
+                                     antecedentesMaternosUI.txtPreeclampciaN.Text, antecedentesMaternosUI.txtFumN.Text,
+                                     antecedentesMaternosUI.txtObstetricosN.Text, antecedentesMaternosUI.txtHemMN.Text,
+                                     antecedentesMaternosUI.txtHemPN.Text, antecedentesMaternosUI.txtVacunacionN.Text,
+                                     antecedentesMaternosUI.txtControlPN.Text, antecedentesMaternosUI.txtMedDurEmbN.Text,
+                                     antecedentesMaternosUI.txtHiperGN.Text, antecedentesMaternosUI.txtHabitosN.Text,
+                                     antecedentesMaternosUI.txtInfeccionesN.Text, antecedentesMaternosUI.txtEnferTN.Text,
+                                     antecedentesMaternosUI.txtDiabeteGN.Text, antecedentesMaternosUI.txtDiabeteMN.Text,
+                                     antecedentesMaternosUI.txtTorch.Text);
+            }
+          
             return ingreso;
         }
+       
         public void alistarDt(IngresoClinico ingreso)
         {
           this.ingreso.dtAlistar = ingreso.dtImpresion.Copy();
@@ -155,6 +165,19 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+        }
+        public void historiaClinica(HistoriaClinicaUI historia)
+        {
+            entorno = historia.txtServicio.Text;
+        }
+
+        private void IngresoClinicoUI_Shown(object sender, EventArgs e)
+        {
+           
+            if (!entorno.Contains("NEONATAL"))
+            {
+                tcIngresoClinico.TabPages.Remove(tpAntecedentesMaterno);
             }
         }
     }

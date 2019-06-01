@@ -416,6 +416,7 @@
             this.tabHistoriaClinica.Size = new System.Drawing.Size(1297, 501);
             this.tabHistoriaClinica.TabIndex = 46;
             this.tabHistoriaClinica.SelectedIndexChanged += new System.EventHandler(this.tabHistoriaClinica_SelectedIndexChanged);
+            this.tabHistoriaClinica.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabHistoriaClinica_Selecting);
             // 
             // tpIngresoClinico
             // 
@@ -514,7 +515,6 @@
         #endregion
         private System.Windows.Forms.Panel pnlInformacion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtServicio;
         private System.Windows.Forms.TextBox txtPaciente;
         private System.Windows.Forms.TextBox txtAtencion;
         private System.Windows.Forms.Label label3;
@@ -549,5 +549,6 @@
         private System.Windows.Forms.TabPage tpEgreso;
         private System.Windows.Forms.TabPage tpRemision;
         private System.Windows.Forms.TabPage tpResumen;
+        internal System.Windows.Forms.TextBox txtServicio;
     }
 }

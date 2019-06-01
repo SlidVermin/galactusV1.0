@@ -47,6 +47,7 @@ namespace Galactus.Modelo.HistoriaClinica
                     comando.Parameters.Add(new SqlParameter("@PielFaneras", System.Data.SqlDbType.NVarChar)).Value = ingreso.pielFaneras;
                     comando.Parameters.Add(new SqlParameter("@FechaOrigen", System.Data.SqlDbType.DateTime)).Value = DateTime.Today;
                     comando.Parameters.Add(new SqlParameter("@tblImpresion", System.Data.SqlDbType.Structured)).Value = ingreso.dtAlistar;
+                    comando.Parameters.Add(new SqlParameter("@tblMaterno", System.Data.SqlDbType.Structured)).Value = ingreso.dtMaterno;
 
                     comando.ExecuteScalar();
                 }

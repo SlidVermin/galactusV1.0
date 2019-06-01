@@ -207,6 +207,7 @@
             this.RightToLeftLayout = true;
             this.Text = "IngresoClinico";
             this.Load += new System.EventHandler(this.IngresoClinicoUI_Load);
+            this.Shown += new System.EventHandler(this.IngresoClinicoUI_Shown);
             this.tsIngreso.ResumeLayout(false);
             this.tsIngreso.PerformLayout();
             this.tcIngresoClinico.ResumeLayout(false);

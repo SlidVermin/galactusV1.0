@@ -49,6 +49,24 @@ namespace Galactus.Entidades.HistoriaClinica
         public DataTable dtImpresion = new DataTable();
 
         public DataTable dtAlistar = new DataTable();
+        public String edadMadre { get; set; }
+        public String edadGestional { get; set; }
+        public String fum { get; set; }
+        public String obstreticos { get; set; }
+        public String hemoclasificacionMadre { get; set; }
+        public String hemoclasificacionPadre { get; set; }
+        public String vacunacion { get; set; }
+        public String preeclampcia { get; set; }
+        public String controlPrenatal { get; set; }
+        public String medicamentoDuranteEmbarazo { get; set; }
+        public String hipertensionGestacional { get; set; }
+        public String habitos { get; set; }
+        public String infeccionEmbarazo { get; set; }
+        public String enfermedadTiroidea { get; set; }
+        public String diabeteMellitius { get; set; }
+        public String diabeteGestacional { get; set; }
+        public String torch { get; set; }
+        public DataTable dtMaterno = new DataTable();
         public void cargarDiagnostico()
         {
             IngresoClinicoDAL.cargarDiagnostico(this);
@@ -59,6 +77,29 @@ namespace Galactus.Entidades.HistoriaClinica
             dtImpresion.Columns.Add("Id", typeof(String));
             dtImpresion.Columns.Add("Código", typeof(String));
             dtImpresion.Columns.Add("Descripcion", typeof(String));
+          
+        }
+        public void establecerDtMaterno()
+        {
+            dtMaterno.Reset();
+            dtMaterno.Columns.Add("idAtencion", typeof(int));
+            dtMaterno.Columns.Add("EdadMadre", typeof(String));
+            dtMaterno.Columns.Add("EdadGestacional", typeof(String));
+            dtMaterno.Columns.Add("Preclampsia", typeof(String));
+            dtMaterno.Columns.Add("Fum", typeof(String));
+            dtMaterno.Columns.Add("obstetricos", typeof(String));
+            dtMaterno.Columns.Add("hemoclasificacionMadre", typeof(String));
+            dtMaterno.Columns.Add("hemoclasificacionPadre", typeof(String));
+            dtMaterno.Columns.Add("vacunacion", typeof(String));
+            dtMaterno.Columns.Add("controlPrenatal", typeof(String));
+            dtMaterno.Columns.Add("medicamentoDuranteEmbarazo", typeof(String));
+            dtMaterno.Columns.Add("hipertensionGestacional", typeof(String));
+            dtMaterno.Columns.Add("habitos", typeof(String));
+            dtMaterno.Columns.Add("infeccionDuranteEmbarazo", typeof(String));
+            dtMaterno.Columns.Add("enfermedadTiroidea", typeof(String));
+            dtMaterno.Columns.Add("diabeteGestacional", typeof(String));
+            dtMaterno.Columns.Add("diabeteMellitus", typeof(String));
+            dtMaterno.Columns.Add("torch", typeof(String));
         }
         public void cargarDatosAtencion()
         {

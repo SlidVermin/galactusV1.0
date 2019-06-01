@@ -59,8 +59,9 @@ namespace Galactus.VistaControlador.HistoriaClinica
             GeneralC.cargarFormularioEnPestana(tpEgreso, egreso);
             GeneralC.cargarFormularioEnPestana(tpEstancia , estancia);
             GeneralC.cargarFormularioEnPestana(tpRemision, remision);
-            GeneralC.cargarFormularioEnPestana(tpResumen, resumen);  
+            GeneralC.cargarFormularioEnPestana(tpResumen, resumen);
 
+            ingreso.historiaClinica(this);
         }
         public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso,bool vAuditoria)
         {
@@ -111,6 +112,15 @@ namespace Galactus.VistaControlador.HistoriaClinica
             if (tabHistoriaClinica.SelectedTab.Name == tpResumen .Name)
             {
                 resumen.cargar(); 
+            }
+        }
+
+        private void tabHistoriaClinica_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (tpIngresoClinico.Parent !=null && tabHistoriaClinica.SelectedTab.Name != tpIngresoClinico.Name && ingreso.valoracionUI.txtResumenClinico.Text.Equals(""))
+            {
+                MessageBox.Show("Por favor debe realizar el ingreso antes de ir a las otras opciones", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                tabHistoriaClinica.SelectedIndex = 0;
             }
         }
     }
