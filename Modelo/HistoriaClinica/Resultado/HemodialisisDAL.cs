@@ -21,12 +21,12 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
 
                     sentencia.CommandText = Sentencias.CREAR_HEMODIALISIS;
-                    sentencia.Parameters.Add(new SqlParameter("@pIdHemodialisis", SqlDbType.NVarChar)).Value = hemodialisis.idHemodialisis;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdHemodialisis", SqlDbType.Int)).Value = hemodialisis.idHemodialisis;
                     sentencia.Parameters.Add(new SqlParameter("@pIdOrdenMedica", SqlDbType.Int)).Value = hemodialisis.idOrdenMedica;
                     sentencia.Parameters.Add(new SqlParameter("@pIdProcedimiento", SqlDbType.Int)).Value = hemodialisis.idProcedimiento;
-                    sentencia.Parameters.Add(new SqlParameter("@pNota", SqlDbType.Int)).Value = hemodialisis.nota;
-                    sentencia.Parameters.Add(new SqlParameter("@pNotaSigno", SqlDbType.Int)).Value = hemodialisis.notaSigno;
-                    sentencia.Parameters.Add(new SqlParameter("@pFecha", SqlDbType.Int)).Value = hemodialisis.fecha;
+                    sentencia.Parameters.Add(new SqlParameter("@pNota", SqlDbType.NVarChar)).Value = hemodialisis.nota;
+                    sentencia.Parameters.Add(new SqlParameter("@pNotaSigno", SqlDbType.NVarChar)).Value = hemodialisis.notaSigno;
+                    sentencia.Parameters.Add(new SqlParameter("@pFecha", SqlDbType.DateTime)).Value = hemodialisis.fecha;
                     sentencia.Parameters.Add(new SqlParameter("@pIdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
                     sentencia.Parameters.Add(new SqlParameter("@pAuditoria", SqlDbType.Int)).Value = hemodialisis.auditoria;
                     hemodialisis.idHemodialisis = (int)sentencia.ExecuteScalar();

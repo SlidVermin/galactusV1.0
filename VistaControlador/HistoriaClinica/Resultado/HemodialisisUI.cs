@@ -85,6 +85,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void tsbBuscar_Click(object sender, EventArgs e)
         {
             List<string> parametro = new List<string>();
+            parametro.Add(hemodialisis.auditoria.ToString());
             parametro.Add(string.Empty);
 
             GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_HEMODIALISIS,
@@ -174,13 +175,16 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void tsbBuscarNit_Click(object sender, EventArgs e)
         {
             List<string> parametro = new List<string>();
+
+            parametro.Add(hemodialisis.auditoria.ToString());
             parametro.Add(string.Empty);
 
             GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_PACIENTE_HEMODIALISIS,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarInformacionAtencion),
                                     Titulos.TITULO_BUSCAR_PACIENTE,
-                                    true);
+                                    true,
+                                    listaParametroOculto());
         }
 
         private void cargarInformacionAtencion(DataRow dRows) {
@@ -193,11 +197,14 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             txtCodigoAdministradora.Text = dRows.Field<int>("IdContrato").ToString();
             txtAdministradora.Text = dRows.Field<string>("Nombre").ToString();
             dtFechaIngreso.Value = dRows.Field<DateTime>("FechaAdmision");
+            hemodialisis.idOrdenMedica = dRows.Field<int>("IdOrdenMedica");
+            hemodialisis.idProcedimiento= dRows.Field<int>("IdProcedimiento"); 
+
         }
 
         private void crearNuevaHemodialisis() {
             hemodialisis.nota = txtNota.Text;
-            hemodialisis.fecha = dtFechaIngreso.Value;
+            hemodialisis.fecha = dtpFecha.Value;
             hemodialisis.notaSigno = string.IsNullOrEmpty(txtNotaSigno.Text) ? null : txtNotaSigno.Text;
         }
         private void cargarHemodialisis(DataRow dRows)
@@ -205,30 +212,37 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             try
             {
                 hemodialisis.idHemodialisis = dRows.Field<int>("idHemodialisis");
-                dtFechaIngreso.Value = dRows.Field<DateTime>("fecha");
+                dtpFecha.Value = dRows.Field<DateTime>("Fecha Resultado");
                 txtNota.Text = dRows.Field<string>("Nota").ToString();
-                txtNotaSigno.Text = dRows.Field<string>("notaSigno").ToString();
+                txtNotaSigno.Text = dRows.Field<string>("SignosVitales").ToString();
                cargarInformacionAtencion(dRows);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tstModificar, tsbBuscar, tsbAnular);
+            GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tstModificar, tsbBuscar, tsbAnular,tstImprimir);
             btnSalir.Enabled = true;
         }
         private List<string> listaParametroOculto()
         {
             List<string> paramtro = new List<string>();
-            //paramtro.Add("idCliente");
-            //paramtro.Add("codigo");
-            //paramtro.Add("idRegimen");
-            //paramtro.Add("idFormaPago");
-            //paramtro.Add("idUbicacion");
-            //paramtro.Add("cuentaPuc");
-            //paramtro.Add("cuentaCIIU");
-            //paramtro.Add("NombrePuc");
-            //paramtro.Add("NombreCIIU");
+
+            paramtro.Add("idAtencion");
+            paramtro.Add("IdOrdenMedica");
+            paramtro.Add("IdContrato");
+            paramtro.Add("Nombre");
+            paramtro.Add("FechaAdmision");
+            paramtro.Add("IdProcedimiento");
+
+            if (hemodialisis.idHemodialisis != ConstanteGeneral.PREDETERMINADO)
+            {
+                paramtro.Add("idHemodialisis");
+                paramtro.Add("FechaAdmision");
+                paramtro.Add("Nota");
+                paramtro.Add("SignosVitales");
+            }
+
             return paramtro;
         }
         private Boolean validarCampos()

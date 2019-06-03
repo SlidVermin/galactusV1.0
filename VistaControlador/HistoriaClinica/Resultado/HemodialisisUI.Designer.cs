@@ -102,7 +102,7 @@
             // 
             // txtNotaSigno
             // 
-            this.txtNotaSigno.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNotaSigno.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNotaSigno.Location = new System.Drawing.Point(3, 3);
             this.txtNotaSigno.Multiline = true;
             this.txtNotaSigno.Name = "txtNotaSigno";
@@ -142,7 +142,7 @@
             // 
             // txtNota
             // 
-            this.txtNota.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNota.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNota.Location = new System.Drawing.Point(3, 3);
             this.txtNota.Multiline = true;
             this.txtNota.Name = "txtNota";
@@ -410,8 +410,8 @@
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tstModificar,
-            this.tsbCancelar,
             this.tsbGuardar,
+            this.tsbCancelar,
             this.tsbBuscar,
             this.tsbAnular,
             this.tstImprimir});
@@ -523,6 +523,7 @@
             this.MaximumSize = new System.Drawing.Size(969, 580);
             this.MinimumSize = new System.Drawing.Size(969, 580);
             this.Name = "HemodialisisUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HemodialisisUI";
             this.Load += new System.EventHandler(this.HemodialisisUI_Load);
             this.panel1.ResumeLayout(false);
