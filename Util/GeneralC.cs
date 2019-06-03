@@ -563,7 +563,7 @@ namespace Galactus
             foreach (Control item in elemento.Controls)
             {
                 if (item is TextBox ) 
-                    ((TextBox)item).ReadOnly = true;
+                    ((TextBox)item).ReadOnly = false;
                 else if (item is ToolStripTextBox && !item.Name.Contains("txtB"))
                     (item).Enabled  = false;
                 else if (item is RichTextBox)

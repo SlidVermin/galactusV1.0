@@ -31,32 +31,47 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             GeneralC.deshabilitarControles(this);
             tsbBuscar.Enabled = true;
             tsbNuevo.Enabled = true;
+            btnSalir.Enabled = true;
         }
 
         private void tsbBuscarNit_Click(object sender, EventArgs e)
         {
             List<string> parametro = new List<string>();
+
+            parametro.Add(informeQx.Auditoria.ToString());
             parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Sentencias.PACIENTE_INFORME_QX_BUSCAR,
-                                    parametro,
-                                    new GeneralC.cargarInfoFila(cargarInformacionAtencion),
-                                    Titulos.TITULO_BUSCAR_PACIENTE,
-                                    true,
-                                    listaParametroOculto());
+            try
+            {
+                GeneralC.buscarDevuelveFila(Sentencias.PACIENTE_INFORME_QX_BUSCAR,
+                                        parametro,
+                                        new GeneralC.cargarInfoFila(cargarInformacionAtencion),
+                                        Titulos.TITULO_BUSCAR_PACIENTE,
+                                        true,
+                                        listaParametroOculto());
+            }
+            catch (Exception ex) {
+                Mensajes.mensajeError(ex);
+            }
         }
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
+
             GeneralC.deshabilitarBotones(ref tstMenuPatron);
-            GeneralC.deshabilitarControles(pnlInformacion);
             GeneralC.habilitarControles(this);
+
+            GeneralC.deshabilitarControles(pnlInformacion);
             GeneralC.limpiarControles(this);
+
+            desactivadoPermanentemente();
 
             informeQx.idInformeQX = ConstanteGeneral.PREDETERMINADO;
             tsbBuscarPaciente.Enabled = true;
+
             tsbGuardar.Enabled = true;
             tsbCancelar.Enabled = true;
+
         }
 
         private void tstModificar_Click(object sender, EventArgs e)
@@ -65,8 +80,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             {
                 GeneralC.deshabilitarBotones(ref tstMenuPatron);
                 GeneralC.habilitarControles(this);
+
                 GeneralC.deshabilitarControles(pnlInformacion);
-                dtFecha.Enabled = true;
+                desactivadoPermanentemente();
+
                 tsbGuardar.Enabled = true;
                 tsbCancelar.Enabled = true;
             }
@@ -81,6 +98,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 GeneralC.limpiarControles(this);
 
                 informeQx.idInformeQX = ConstanteGeneral.PREDETERMINADO;
+
                 tsbNuevo.Enabled = true;
                 tsbBuscar.Enabled = true;
                 btnSalir.Enabled = true;
@@ -118,14 +136,21 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void tsbBuscar_Click(object sender, EventArgs e)
         {
             List<string> parametro = new List<string>();
-            parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Sentencias.INFORME_QX_BUSCAR,
-                                    parametro,
-                                    new GeneralC.cargarInfoFila(cargarInformeQX),
-                                    Titulos.TITULO_BUSCAR_INFORME_QX,
-                                    true,
-                                    listaParametroOculto());
+            parametro.Add(informeQx.Auditoria.ToString());
+            parametro.Add(string.Empty);
+            try
+            {
+                GeneralC.buscarDevuelveFila(Sentencias.INFORME_QX_BUSCAR,
+                                        parametro,
+                                        new GeneralC.cargarInfoFila(cargarInformeQX),
+                                        Titulos.TITULO_BUSCAR_INFORME_QX,
+                                        true,
+                                        listaParametroOculto());
+            }
+            catch (Exception ex) {
+                Mensajes.mensajeError(ex);
+            }
         }
 
         private void tsbAnular_Click(object sender, EventArgs e)
@@ -222,8 +247,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         {
             btnSalir.BackColor = Control.DefaultBackColor;
         }
-
-
         #endregion
 
         private void cargarInformacionAtencion(DataRow dRows) {
@@ -274,7 +297,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             paramtro.Add("idAtencion");
             paramtro.Add("IdOrdenMedica");
             paramtro.Add("IdContrato");
-            //paramtro.Add("idFormaPago");
+            paramtro.Add("Nombre");
             paramtro.Add("FechaAdmision");
 
             if (informeQx.idInformeQX != ConstanteGeneral.PREDETERMINADO) {
@@ -338,6 +361,12 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         {
             informeQx.idAnastesia = dRows.Field<int>("Código");
             txtAnastesia.Text = dRows.Field<string>("Descripción");
+        }
+        private void desactivadoPermanentemente() {
+            txtAyudante.ReadOnly = true;
+            txtVia.ReadOnly = true;
+            txtAnastesia.ReadOnly = true;
+            txtAnastesiologo.ReadOnly = true;
         }
     }
 }
