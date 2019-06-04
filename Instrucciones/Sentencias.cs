@@ -122,6 +122,8 @@ namespace Galactus
 
         public const string INFORME_QX_MEDICAMENTO_ANASTESIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspMedicamentoAnasteaBuscar]";
         public const string PACIENTE_INFORME_QX_BUSCAR = ConstanteGeneral.ESQUEMA_FORMATO +"[uspPacienteInformeQxConsultar]";
+        public const string CARGAR_INFORME_QX_MEDICAMENTO = ConstanteGeneral.ESQUEMA_FORMATO + "[uspInformeQxMedicamentoCargar]";
+        public const string CARGAR_INFORME_QX_PROCEDIMIENTO = ConstanteGeneral.ESQUEMA_FORMATO + "[uspInformeQxProcedimientoCargar]";
         public const string INFORME_QX_BUSCAR = ConstanteGeneral.ESQUEMA_FORMATO + "[uspInformeQxBuscar]";
         public const string INFORME_QX_ANULAR = ConstanteGeneral.ESQUEMA_FORMATO + "[uspInformeQxAnular]";
         public const string INFORME_QX_CREAR = ConstanteGeneral.ESQUEMA_FORMATO + "[uspInformeQxCrear]";

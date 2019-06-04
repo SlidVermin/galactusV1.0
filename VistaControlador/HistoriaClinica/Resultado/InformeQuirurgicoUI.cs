@@ -30,6 +30,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             informeQx = new InformeQuirurgico();
             GeneralC.deshabilitarBotones(ref tstMenuPatron);
             GeneralC.deshabilitarControles(this);
+            dtpFechaFin.Value = dtpFechaFin.Value.AddHours(+1);
             enlazarDgvProcedimiento();
             enlazarDgvMedicamento();
             tsbBuscar.Enabled = true;
@@ -130,6 +131,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
                         GeneralC.habilitarBotones(ref tstMenuPatron);
                         GeneralC.deshabilitarControles(this);
+
+                        cargarInformeQxMedicamento();
+                        cargarInformeQxProcedimiento();
 
                         btnSalir.Enabled = true;
                         tsbGuardar.Enabled = false;
@@ -278,12 +282,14 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             txtCodigoAdministradora.Text = dRows.Field<int>("IdContrato").ToString();
             txtAdministradora.Text = dRows.Field<string>("Nombre").ToString();
             dtFecha.Value= dRows.Field<DateTime>("FechaAdmision");
+            informeQx.idOrdenMedica= dRows.Field<int>("IdOrdenMedica");
+            informeQx.idProcedimiento = dRows.Field<int>("IdProcedimiento");
         }
 
         private void crearNuevaInformeQx() {
             informeQx.notaQuirurgica = txtNota.Text;
             informeQx.fechaInicio = dtpFechaInicio.Value;
-            informeQx.fechaFin = dtpFechaInicio.Value;
+            informeQx.fechaFin = dtpFechaFin.Value;
         }
         private void cargarInformeQX(DataRow dRows)
         {
@@ -294,11 +300,21 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 informeQx.idAnastesia = dRows.Field<int>("idAnastesia");
                 informeQx.idAnastesiologo = dRows.Field<int>("idAnastesiologo");
                 informeQx.idAyudante = dRows.Field<int>("idAyudante");
-                informeQx.fechaInicio = dRows.Field<DateTime>("FechaInicio");
+
+                txtAyudante.Text = dRows.Field<string>("Ayudante");
+                txtVia.Text= dRows.Field<string>("Via");
+                txtAnastesia.Text = dRows.Field<string>("Anastesia");
+                txtAnastesiologo.Text = dRows.Field<string>("Anastesiologo");
+                txtNota.Text= dRows.Field<string>("Nota");
+
+                informeQx.fechaInicio = dRows.Field<DateTime>("Fecha Informe");
                 informeQx.fechaFin = dRows.Field<DateTime>("FechaFin");
-                informeQx.notaQuirurgica = dRows.Field<string>("Nota");
-                
+              
+                          
                 cargarInformacionAtencion(dRows);
+                cargarInformeQxMedicamento();
+                cargarInformeQxProcedimiento();
+
                 GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tstModificar, tsbBuscar, tsbAnular);
                 btnSalir.Enabled = true;
 
@@ -315,12 +331,23 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
             paramtro.Add("idAtencion");
             paramtro.Add("IdOrdenMedica");
+            paramtro.Add("IdProcedimiento");
             paramtro.Add("IdContrato");
             paramtro.Add("Nombre");
             paramtro.Add("FechaAdmision");
 
-            if (informeQx.idInformeQX != ConstanteGeneral.PREDETERMINADO) {
-
+            if (informeQx.idInformeQX != ConstanteGeneral.PREDETERMINADO) {  
+                paramtro.Add("idInformeQX");
+                paramtro.Add("idVia");
+                paramtro.Add("idAnastesia");
+                paramtro.Add("idAnastesiologo");
+                paramtro.Add("idAyudante");
+                paramtro.Add("Via");
+                paramtro.Add("Anastesia");
+                paramtro.Add("Anastesiologo");
+                paramtro.Add("Ayudante");
+                paramtro.Add("FechaFin");
+                paramtro.Add("Nota");
             }
 
             return paramtro;
@@ -352,7 +379,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 Mensajes.mensajeAdvertencia("¡ Favor seleccionar un ayudante !");
                 return false;
             }
-            else if (dtpFechaInicio.Value < dtpFechaFin.Value)
+            else if (dtpFechaInicio.Value > dtpFechaFin.Value)
             {
                 Mensajes.mensajeAdvertencia("¡ la fecha inicio debe ser menor a la fecha fin !");
                 return false;
@@ -388,7 +415,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             txtAnastesiologo.ReadOnly = true;
         }
 
-  #region tabProcedimiento
+       #region tabProcedimiento
         public void enlazarDgvProcedimiento()
         {
                 dgvProcedimientos.AutoGenerateColumns = false;
@@ -407,6 +434,14 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             filas[cantidad]["descripcion"] = filaResultado.Field<string>("Descripción");
             filas[cantidad]["cantidad"] = 1;
             filas.Add();
+        }
+        private void cargarInformeQxProcedimiento()
+        {
+            List<string> paramtro = new List<string>();
+            paramtro.Add(informeQx.Auditoria.ToString());
+            paramtro.Add(informeQx.idInformeQX.ToString());
+            GeneralC.llenarTabla(Sentencias.CARGAR_INFORME_QX_PROCEDIMIENTO, paramtro, informeQx.dtProcedimiento);
+            dgvProcedimientos.DataSource = informeQx.dtProcedimiento;
         }
         private void dgvProcedimientos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -501,7 +536,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
         #endregion
 
-        #region tabMedicamento
+       #region tabMedicamento
         public void enlazarDgvMedicamento()
         {
             dgvMedicamento.AutoGenerateColumns = false;
@@ -519,7 +554,16 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             filas[cantidad]["cantidad"] = 1;
             filas.Add();
         }
-    private void dgvMedicamento_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void cargarInformeQxMedicamento()
+        {
+            List<string> paramtro = new List<string>();
+            paramtro.Add(informeQx.Auditoria.ToString());
+            paramtro.Add(informeQx.idInformeQX.ToString());
+            GeneralC.llenarTabla(Sentencias.CARGAR_INFORME_QX_MEDICAMENTO, paramtro, informeQx.dtMedicamento);
+            dgvMedicamento.DataSource = informeQx.dtMedicamento;
+        }
+
+        private void dgvMedicamento_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (txtAtencion.Text != string.Empty)
             {

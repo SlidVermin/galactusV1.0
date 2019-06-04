@@ -32,7 +32,9 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.Parameters.Add(new SqlParameter("@pfechaInicio", SqlDbType.DateTime)).Value = informeQx.fechaInicio;
                     sentencia.Parameters.Add(new SqlParameter("@pfechaFin", SqlDbType.DateTime)).Value = informeQx.fechaFin;
                     sentencia.Parameters.Add(new SqlParameter("@pIdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
-                    sentencia.Parameters.Add(new SqlParameter("@pAuditoria", SqlDbType.Int)).Value = informeQx.Auditoria;            
+                    sentencia.Parameters.Add(new SqlParameter("@pAuditoria", SqlDbType.Int)).Value = informeQx.Auditoria;
+                    sentencia.Parameters.Add(new SqlParameter("@pTbMedicamento", SqlDbType.Structured)).Value = extrarDatatable(informeQx.dtMedicamento);
+                    sentencia.Parameters.Add(new SqlParameter("@pTbProcedimiento", SqlDbType.Structured)).Value = extrarDatatableProcedimiento(informeQx.dtProcedimiento);
                     informeQx.idInformeQX = (int)sentencia.ExecuteScalar();
                 }
             }
@@ -55,7 +57,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Sentencias.INFORME_QX_ANULAR;
-                    sentencia.Parameters.Add(new SqlParameter("@@idInformeQX", SqlDbType.Int)).Value = codigo;
+                    sentencia.Parameters.Add(new SqlParameter("@idInformeQX", SqlDbType.Int)).Value = codigo;
                     sentencia.Parameters.Add(new SqlParameter("@pAuditoria", SqlDbType.Int)).Value = Auditoria;
                     sentencia.ExecuteNonQuery();
                     resultado = true;
@@ -66,6 +68,23 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                 throw ex;
             }
             return resultado;
+        }
+        private static DataTable extrarDatatable(DataTable dt)
+        {
+            DataTable dtExtraido = new DataTable();
+            dtExtraido = dt.Copy();
+            dtExtraido.Columns.Remove("Descripcion");
+            dtExtraido.Rows.RemoveAt(dtExtraido.Rows.Count - 1);
+            return dtExtraido;
+        }
+        private static DataTable extrarDatatableProcedimiento(DataTable dt)
+        {
+            DataTable dtExtraido = new DataTable();
+            dtExtraido = dt.Copy();
+            dtExtraido.Columns.Remove("Descripcion");
+            dtExtraido.Columns.Remove("cups");
+            dtExtraido.Rows.RemoveAt(dtExtraido.Rows.Count - 1);
+            return dtExtraido;
         }
     }
 }
