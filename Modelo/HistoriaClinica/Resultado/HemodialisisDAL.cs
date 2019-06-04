@@ -29,6 +29,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.Parameters.Add(new SqlParameter("@pFecha", SqlDbType.DateTime)).Value = hemodialisis.fecha;
                     sentencia.Parameters.Add(new SqlParameter("@pIdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
                     sentencia.Parameters.Add(new SqlParameter("@pAuditoria", SqlDbType.Int)).Value = hemodialisis.auditoria;
+                    sentencia.Parameters.Add(new SqlParameter("@ptbMedicamento", SqlDbType.Structured)).Value = extrarDatatable(hemodialisis.dtMedicamento);
                     hemodialisis.idHemodialisis = (int)sentencia.ExecuteScalar();
                 }
             }
@@ -63,6 +64,13 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                 throw ex;
             }
             return resultado;
+        }
+        private static DataTable extrarDatatable(DataTable dt) {
+            DataTable dtExtraido = new DataTable();
+            dtExtraido = dt.Copy();
+            dtExtraido.Columns.Remove("Descripcion");
+            dtExtraido.Rows.RemoveAt(dtExtraido.Rows.Count-1);
+            return dtExtraido;
         }
     }
 }

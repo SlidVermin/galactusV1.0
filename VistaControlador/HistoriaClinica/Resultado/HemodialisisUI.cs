@@ -128,6 +128,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
                         GeneralC.habilitarBotones(ref tstMenuPatron);
                         GeneralC.deshabilitarControles(this);
+                        cargarHemodialisisMedicamento();
 
                         btnSalir.Enabled = true;
                         tsbGuardar.Enabled = false;
@@ -222,7 +223,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 dtpFecha.Value = dRows.Field<DateTime>("Fecha Resultado");
                 txtNota.Text = dRows.Field<string>("Nota").ToString();
                 txtNotaSigno.Text = dRows.Field<string>("SignosVitales").ToString();
-               cargarInformacionAtencion(dRows);
+                cargarInformacionAtencion(dRows);
+                cargarHemodialisisMedicamento();
             }
             catch (Exception ex)
             {
@@ -287,6 +289,13 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             filas[cantidad]["cantidad"] = 1;
             filas.Add();
         }
+        private void cargarHemodialisisMedicamento() {
+            List<string> paramtro = new List<string>();
+            paramtro.Add(hemodialisis.auditoria.ToString());
+            paramtro.Add(hemodialisis.idHemodialisis.ToString());
+            GeneralC.llenarTabla(Sentencias.CARGAR_HEMODIALISIS_MEDICAMENTO, paramtro, hemodialisis.dtMedicamento);
+            dgvMedicamento.DataSource = hemodialisis.dtMedicamento;
+        }
         private void dgvMedicamento_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (txtAtencion.Text != string.Empty)
@@ -301,7 +310,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                         {
                             if (Mensajes.preguntaAnular())
                             {
-                                dgvMedicamento.Rows.RemoveAt(e.RowIndex);
+                                hemodialisis.dtMedicamento.Rows.RemoveAt(e.RowIndex);
                             }
                         }
                         else if (GeneralC.verificarUbicacionCelda(e, dgvMedicamento, "agregarMed") & e.RowIndex == dgvMedicamento.Rows.Count - 1)
