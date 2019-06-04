@@ -52,8 +52,8 @@
             this.tsIngreso.Dock = System.Windows.Forms.DockStyle.None;
             this.tsIngreso.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbModificar,
-            this.tsbCancelar,
             this.tsbGuardar,
+            this.tsbCancelar,
             this.tstImprimir});
             this.tsIngreso.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.tsIngreso.Location = new System.Drawing.Point(2, 332);
@@ -84,6 +84,7 @@
             this.tsbCancelar.Name = "tsbCancelar";
             this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
             this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
             // tsbGuardar
             // 

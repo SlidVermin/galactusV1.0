@@ -133,6 +133,16 @@
         rKQIv6NmeALVhp1Gsj3KUQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="tsbGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADHSURBVDhPnZJBDoQgDEVl5xHkRO7lGJh4A2TP/dSzqLGT
+        3wgWYZLJ/ITYtH39hdjQn6qC13XdUS7kYy0DZaGm4zj4i56fV52miay1dcd1XWnbtsIVUNd1XI9KIJrH
+        ceSGZVlSTkJyYOaIOwzDQFprhr9BiIs7nufJcNu2xXpSCWyaZwac8RBvSPZwBGulFANyJal930sQwnp9
+        39M8z3yccynGQc0Yw73ZHTExhJAg730GohZ/AOjxvhVXlSvX4gKEZGNUniP6AF1FvAnl3kz5AAAAAElF
+        TkSuQmCC
+</value>
+  </data>
   <data name="tsbCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -143,16 +153,6 @@
         m80Qj8f1NtTVaDQ0VK1WRdO6GgqF1HNdF/P5HJfLRTWyMnSJ/CORiKLVfLvd0Gq1UK/X0W63MZ1ORTcc
         DmtGIpbLpZzcbDay24J0rRQOTyYTJBIJ5b6ri8VC0S4GTSLO57PMGwwGP3+kqwSX7B8I5jSHS47jIJvN
         qsbc9ztI0bKgIZVKRfpLpZI0Wvy52Ov14Hmecot/UQ1qJcVvAF8lHp+DXg1aOwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="tsbGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADHSURBVDhPnZJBDoQgDEVl5xHkRO7lGJh4A2TP/dSzqLGT
-        3wgWYZLJ/ITYtH39hdjQn6qC13XdUS7kYy0DZaGm4zj4i56fV52miay1dcd1XWnbtsIVUNd1XI9KIJrH
-        ceSGZVlSTkJyYOaIOwzDQFprhr9BiIs7nufJcNu2xXpSCWyaZwac8RBvSPZwBGulFANyJal930sQwnp9
-        39M8z3yccynGQc0Yw73ZHTExhJAg730GohZ/AOjxvhVXlSvX4gKEZGNUniP6AF1FvAnl3kz5AAAAAElF
-        TkSuQmCC
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

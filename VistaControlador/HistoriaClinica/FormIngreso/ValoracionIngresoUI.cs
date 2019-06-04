@@ -41,7 +41,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             this.idAtencion = idAtencion;
         }
 
-        private void cargarDatos()
+        public void cargarDatos()
         {
             ingreso.IdAtencion = idAtencion;
             ingreso.cargarDatosAtencion();

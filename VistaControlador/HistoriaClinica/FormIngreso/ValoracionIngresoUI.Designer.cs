@@ -386,20 +386,20 @@
         internal System.Windows.Forms.TextBox txtResumenClinico;
         internal System.Windows.Forms.GroupBox groupBox2;
         internal System.Windows.Forms.DataGridView dgvRemision;
-        private System.Windows.Forms.TextBox txtcausaexterna;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtviaingreso;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtcama;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtinstitucion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtAutorizacion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcion;
         private System.Windows.Forms.DataGridViewImageColumn dgAgregar;
         private System.Windows.Forms.DataGridViewImageColumn dgQuitar;
+        internal System.Windows.Forms.TextBox txtcausaexterna;
+        internal System.Windows.Forms.TextBox txtviaingreso;
+        internal System.Windows.Forms.TextBox txtcama;
+        internal System.Windows.Forms.TextBox txtinstitucion;
+        internal System.Windows.Forms.TextBox txtAutorizacion;
     }
 }

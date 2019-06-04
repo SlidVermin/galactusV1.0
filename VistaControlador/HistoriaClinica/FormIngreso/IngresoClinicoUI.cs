@@ -140,7 +140,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
             GeneralC.fnModificarForm(this, tsIngreso, tsbGuardar, tsbCancelar);
             valoracionUI.ingreso.dtImpresion.Rows.Add();
-            
+            deshabilitarControles();
         }
 
         private void tsbGuardar_Click(object sender, EventArgs e)
@@ -179,6 +179,22 @@ namespace Galactus.VistaControlador.HistoriaClinica
             {
                 tcIngresoClinico.TabPages.Remove(tpAntecedentesMaterno);
             }
+        }
+
+        private void tsbCancelar_Click(object sender, EventArgs e)
+        {
+            GeneralC.fnCancelarForm(this, tsIngreso, tsbModificar, null);
+            cargarIngreso();
+            valoracionUI.cargarDatos();
+           
+        }
+        private void deshabilitarControles()
+        {
+            valoracionUI.txtAutorizacion.ReadOnly = true;
+            valoracionUI.txtcama.ReadOnly = true;
+            valoracionUI.txtcausaexterna.ReadOnly = true;
+            valoracionUI.txtinstitucion.ReadOnly = true;
+            valoracionUI.txtviaingreso.ReadOnly = true;
         }
     }
 }
