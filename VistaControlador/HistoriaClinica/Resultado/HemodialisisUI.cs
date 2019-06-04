@@ -19,6 +19,8 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
     public partial class HemodialisisUI : Form
     {
         Hemodialisis hemodialisis;
+        private bool edicion = false;
+
         public HemodialisisUI()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             hemodialisis = new Hemodialisis();
             GeneralC.deshabilitarBotones(ref tstMenuPatron);
             GeneralC.deshabilitarControles(this);
+            enlazarDgvMedicamento();
             tsbBuscar.Enabled = true;
             tsbNuevo.Enabled = true;
         }
@@ -148,7 +151,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 GeneralC.deshabilitarControles(pnlInformacion);
 
                 dtpFecha.Enabled = true;
+                hemodialisis.dtMedicamento.Rows.Add();
 
+                edicion = true;
                 tsbGuardar.Enabled = true;
                 tsbCancelar.Enabled = true;
 
@@ -166,7 +171,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             hemodialisis.idHemodialisis=ConstanteGeneral.PREDETERMINADO;
             dtpFecha.Enabled = true;
             tsbBuscarNit.Enabled = true;
+            hemodialisis.dtMedicamento.Rows.Add();
 
+            edicion = true;
             tsbGuardar.Enabled = true;
             tsbCancelar.Enabled = true;
 
@@ -262,7 +269,99 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 return true;
             }
         }
+        #region tabMedicamento
+        public void enlazarDgvMedicamento()
+        {
+            dgvMedicamento.AutoGenerateColumns = false;
+            dgvMedicamento.Columns["codigoMed"].DataPropertyName = "idMedicamento";
+            dgvMedicamento.Columns["descripcionMed"].DataPropertyName = "descripcion";
+            dgvMedicamento.Columns["cantidadMed"].DataPropertyName = "cantidad";
+            dgvMedicamento.DataSource = hemodialisis.dtMedicamento;
+        }
+        void cargarMedicamento(DataRow filaResultado)
+        {
+            DataRowCollection filas = hemodialisis.dtMedicamento.Rows;
+            int cantidad = filas.Count - 1;
+            filas[cantidad]["idMedicamento"] = filaResultado.Field<int>("Codigo");
+            filas[cantidad]["descripcion"] = filaResultado.Field<string>("Descripcion");
+            filas[cantidad]["cantidad"] = 1;
+            filas.Add();
+        }
+        private void dgvMedicamento_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (txtAtencion.Text != string.Empty)
+            {
+                if (e.RowIndex >= 0)
+                {
+                    GeneralC.deshabilitarColumnas(dgvMedicamento);
+                    if (edicion)
+                    {
+                        dgvMedicamento.Columns["cantidadMed"].ReadOnly = false;
+                        if (GeneralC.verificarUbicacionCelda(e, dgvMedicamento, "quitarMed") & e.RowIndex < dgvMedicamento.Rows.Count - 1)
+                        {
+                            if (Mensajes.preguntaAnular())
+                            {
+                                dgvMedicamento.Rows.RemoveAt(e.RowIndex);
+                            }
+                        }
+                        else if (GeneralC.verificarUbicacionCelda(e, dgvMedicamento, "agregarMed") & e.RowIndex == dgvMedicamento.Rows.Count - 1)
+                        {
+                            try
+                            {
+                                List<string> parametros = new List<string>();
 
- 
+                                DataTable tablaParametros = new DataTable();
+                                DataTable tablasSeleccionado = new DataTable();
+
+                                tablaParametros.Columns.Add("Parametro", Type.GetType("System.Object"));
+                                tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
+
+                                object[] myObjArray1 = { "@pFiltro", "" };
+
+                                DataView view = new DataView(hemodialisis.dtMedicamento);
+
+                                tablasSeleccionado = view.ToTable(true, new string[] { "idMedicamento" }).Copy();
+                                tablasSeleccionado.Columns.Add("valor");
+                                tablasSeleccionado.Rows.RemoveAt(tablasSeleccionado.Rows.Count - 1);
+                                object[] myObjArray2 = { "@pTblSeleccionados", tablasSeleccionado };
+
+                                tablaParametros.Rows.Add(myObjArray1);
+                                tablaParametros.Rows.Add(myObjArray2);
+
+                                GeneralC.buscarDevuelveFila(Sentencias.LISTAR_MEDICAMENTOS,
+                                                            parametros,
+                                                            new GeneralC.cargarInfoFila(cargarMedicamento),
+                                                            Mensajes.BUSQUEDA_EQUIVALENCIA,
+                                                            true,
+                                                            null,
+                                                            tablasSeleccionado,
+                                                            tablaParametros);
+                            }
+                            catch (Exception ex)
+                            {
+                                Mensajes.mensajeError(ex);
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Mensajes.mensajeAdvertencia("Favor Cargar los datos del paciente");
+            }
+        }
+        private void dgvMedicamento_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            dgvMedicamento.CancelEdit();
+            Mensajes.mensajeInformacion(Mensajes.CANTIDAD_INVALIDA);
+        }
+        private void dgvMedicamento_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (string.IsNullOrEmpty(dgvMedicamento.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()))
+            {
+                dgvMedicamento.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = 0;
+            }
+        }
+        #endregion
     }
 }

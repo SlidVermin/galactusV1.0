@@ -28,13 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtNotaSigno = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pnlCaracteristica = new System.Windows.Forms.Panel();
-            this.txtNota = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -62,93 +57,49 @@
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tstModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
             this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.tcOrdenMedica = new Galactus.Util.Controles.TabControlGalactus();
+            this.tpNota = new System.Windows.Forms.TabPage();
+            this.tpNotaSigno = new System.Windows.Forms.TabPage();
+            this.tabMedicamento = new System.Windows.Forms.TabPage();
+            this.dgvMedicamento = new System.Windows.Forms.DataGridView();
+            this.agregarMed = new System.Windows.Forms.DataGridViewImageColumn();
+            this.quitarMed = new System.Windows.Forms.DataGridViewImageColumn();
+            this.codigoMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CantidadMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNota = new System.Windows.Forms.TextBox();
+            this.txtNotaSigno = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.pnlCaracteristica.SuspendLayout();
             this.pnlInformacion.SuspendLayout();
             this.tstMenuPatron.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tcOrdenMedica.SuspendLayout();
+            this.tpNota.SuspendLayout();
+            this.tpNotaSigno.SuspendLayout();
+            this.tabMedicamento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamento)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.tcOrdenMedica);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.pnlCaracteristica);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pnlInformacion);
             this.panel1.Location = new System.Drawing.Point(23, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(925, 497);
             this.panel1.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtNotaSigno);
-            this.panel2.Location = new System.Drawing.Point(15, 380);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(897, 109);
-            this.panel2.TabIndex = 6;
-            // 
-            // txtNotaSigno
-            // 
-            this.txtNotaSigno.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNotaSigno.Location = new System.Drawing.Point(3, 3);
-            this.txtNotaSigno.Multiline = true;
-            this.txtNotaSigno.Name = "txtNotaSigno";
-            this.txtNotaSigno.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNotaSigno.Size = new System.Drawing.Size(889, 101);
-            this.txtNotaSigno.TabIndex = 40;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(16, 356);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(124, 20);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Signos Vitales";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 154);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 20);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Nota.";
-            // 
-            // pnlCaracteristica
-            // 
-            this.pnlCaracteristica.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnlCaracteristica.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCaracteristica.Controls.Add(this.txtNota);
-            this.pnlCaracteristica.Location = new System.Drawing.Point(15, 177);
-            this.pnlCaracteristica.Name = "pnlCaracteristica";
-            this.pnlCaracteristica.Size = new System.Drawing.Size(897, 176);
-            this.pnlCaracteristica.TabIndex = 2;
-            // 
-            // txtNota
-            // 
-            this.txtNota.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNota.Location = new System.Drawing.Point(3, 3);
-            this.txtNota.Multiline = true;
-            this.txtNota.Name = "txtNota";
-            this.txtNota.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNota.Size = new System.Drawing.Size(889, 168);
-            this.txtNota.TabIndex = 39;
             // 
             // label2
             // 
@@ -445,17 +396,6 @@
             this.tstModificar.Text = "Modificar";
             this.tstModificar.Click += new System.EventHandler(this.tstModificar_Click);
             // 
-            // tsbCancelar
-            // 
-            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsbCancelar.Text = "Cancelar";
-            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
-            // 
             // tsbGuardar
             // 
             this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -466,6 +406,17 @@
             this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsbGuardar.Text = "Guardar";
             this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
+            // 
+            // tsbCancelar
+            // 
+            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
             // tsbBuscar
             // 
@@ -508,6 +459,173 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(246, 154);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 20);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Nota.";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(232, 352);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(124, 20);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "Signos Vitales";
+            // 
+            // tcOrdenMedica
+            // 
+            this.tcOrdenMedica.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tcOrdenMedica.Controls.Add(this.tpNota);
+            this.tcOrdenMedica.Controls.Add(this.tpNotaSigno);
+            this.tcOrdenMedica.Controls.Add(this.tabMedicamento);
+            this.tcOrdenMedica.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tcOrdenMedica.ItemSize = new System.Drawing.Size(30, 120);
+            this.tcOrdenMedica.Location = new System.Drawing.Point(15, 154);
+            this.tcOrdenMedica.Multiline = true;
+            this.tcOrdenMedica.Name = "tcOrdenMedica";
+            this.tcOrdenMedica.SelectedIndex = 0;
+            this.tcOrdenMedica.Size = new System.Drawing.Size(897, 340);
+            this.tcOrdenMedica.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tcOrdenMedica.TabIndex = 58;
+            // 
+            // tpNota
+            // 
+            this.tpNota.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpNota.Controls.Add(this.txtNota);
+            this.tpNota.Location = new System.Drawing.Point(124, 4);
+            this.tpNota.Name = "tpNota";
+            this.tpNota.Padding = new System.Windows.Forms.Padding(3);
+            this.tpNota.Size = new System.Drawing.Size(769, 332);
+            this.tpNota.TabIndex = 0;
+            this.tpNota.Text = "Nota";
+            // 
+            // tpNotaSigno
+            // 
+            this.tpNotaSigno.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tpNotaSigno.Controls.Add(this.txtNotaSigno);
+            this.tpNotaSigno.Location = new System.Drawing.Point(124, 4);
+            this.tpNotaSigno.Name = "tpNotaSigno";
+            this.tpNotaSigno.Size = new System.Drawing.Size(769, 332);
+            this.tpNotaSigno.TabIndex = 1;
+            this.tpNotaSigno.Text = "Nota Signos";
+            // 
+            // tabMedicamento
+            // 
+            this.tabMedicamento.Controls.Add(this.dgvMedicamento);
+            this.tabMedicamento.Location = new System.Drawing.Point(124, 4);
+            this.tabMedicamento.Name = "tabMedicamento";
+            this.tabMedicamento.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMedicamento.Size = new System.Drawing.Size(769, 332);
+            this.tabMedicamento.TabIndex = 2;
+            this.tabMedicamento.Text = "Medicamentos";
+            this.tabMedicamento.UseVisualStyleBackColor = true;
+            // 
+            // dgvMedicamento
+            // 
+            this.dgvMedicamento.AllowUserToAddRows = false;
+            this.dgvMedicamento.AllowUserToDeleteRows = false;
+            this.dgvMedicamento.AllowUserToResizeColumns = false;
+            this.dgvMedicamento.AllowUserToResizeRows = false;
+            this.dgvMedicamento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMedicamento.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMedicamento.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvMedicamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedicamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.agregarMed,
+            this.quitarMed,
+            this.codigoMed,
+            this.descripcionMed,
+            this.CantidadMed});
+            this.dgvMedicamento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMedicamento.Location = new System.Drawing.Point(3, 3);
+            this.dgvMedicamento.MultiSelect = false;
+            this.dgvMedicamento.Name = "dgvMedicamento";
+            this.dgvMedicamento.ReadOnly = true;
+            this.dgvMedicamento.RowHeadersVisible = false;
+            this.dgvMedicamento.Size = new System.Drawing.Size(763, 326);
+            this.dgvMedicamento.TabIndex = 4;
+            this.dgvMedicamento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicamento_CellClick);
+            this.dgvMedicamento.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicamento_CellEndEdit);
+            this.dgvMedicamento.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvMedicamento_DataError);
+            // 
+            // agregarMed
+            // 
+            this.agregarMed.HeaderText = "Agregar";
+            this.agregarMed.Image = global::Galactus.Properties.Resources.farmacia_ico;
+            this.agregarMed.Name = "agregarMed";
+            this.agregarMed.ReadOnly = true;
+            this.agregarMed.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.agregarMed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.agregarMed.Width = 75;
+            // 
+            // quitarMed
+            // 
+            this.quitarMed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.quitarMed.HeaderText = "Quitar";
+            this.quitarMed.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.quitarMed.Name = "quitarMed";
+            this.quitarMed.ReadOnly = true;
+            this.quitarMed.Width = 50;
+            // 
+            // codigoMed
+            // 
+            this.codigoMed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.codigoMed.HeaderText = "Código";
+            this.codigoMed.Name = "codigoMed";
+            this.codigoMed.ReadOnly = true;
+            this.codigoMed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.codigoMed.Width = 75;
+            // 
+            // descripcionMed
+            // 
+            this.descripcionMed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcionMed.HeaderText = "Descripción";
+            this.descripcionMed.Name = "descripcionMed";
+            this.descripcionMed.ReadOnly = true;
+            this.descripcionMed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // CantidadMed
+            // 
+            this.CantidadMed.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.CantidadMed.DefaultCellStyle = dataGridViewCellStyle4;
+            this.CantidadMed.HeaderText = "Cantidad";
+            this.CantidadMed.Name = "CantidadMed";
+            this.CantidadMed.ReadOnly = true;
+            this.CantidadMed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.CantidadMed.Width = 63;
+            // 
+            // txtNota
+            // 
+            this.txtNota.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNota.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNota.Location = new System.Drawing.Point(3, 3);
+            this.txtNota.Multiline = true;
+            this.txtNota.Name = "txtNota";
+            this.txtNota.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtNota.Size = new System.Drawing.Size(763, 326);
+            this.txtNota.TabIndex = 40;
+            // 
+            // txtNotaSigno
+            // 
+            this.txtNotaSigno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtNotaSigno.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNotaSigno.Location = new System.Drawing.Point(0, 0);
+            this.txtNotaSigno.Multiline = true;
+            this.txtNotaSigno.Name = "txtNotaSigno";
+            this.txtNotaSigno.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtNotaSigno.Size = new System.Drawing.Size(769, 332);
+            this.txtNotaSigno.TabIndex = 41;
+            // 
             // HemodialisisUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,15 +646,18 @@
             this.Load += new System.EventHandler(this.HemodialisisUI_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.pnlCaracteristica.ResumeLayout(false);
-            this.pnlCaracteristica.PerformLayout();
             this.pnlInformacion.ResumeLayout(false);
             this.pnlInformacion.PerformLayout();
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tcOrdenMedica.ResumeLayout(false);
+            this.tpNota.ResumeLayout(false);
+            this.tpNota.PerformLayout();
+            this.tpNotaSigno.ResumeLayout(false);
+            this.tpNotaSigno.PerformLayout();
+            this.tabMedicamento.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -544,16 +665,10 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel pnlCaracteristica;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlInformacion;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNotaSigno;
-        private System.Windows.Forms.TextBox txtNota;
         private System.Windows.Forms.TextBox txtCodigoAdministradora;
         private System.Windows.Forms.TextBox txtAdministradora;
         private System.Windows.Forms.Label label10;
@@ -583,5 +698,19 @@
         private System.Windows.Forms.ToolStripButton tstImprimir;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label6;
+        private Util.Controles.TabControlGalactus tcOrdenMedica;
+        private System.Windows.Forms.TabPage tpNota;
+        private System.Windows.Forms.TextBox txtNota;
+        private System.Windows.Forms.TabPage tpNotaSigno;
+        private System.Windows.Forms.TextBox txtNotaSigno;
+        private System.Windows.Forms.TabPage tabMedicamento;
+        internal System.Windows.Forms.DataGridView dgvMedicamento;
+        private System.Windows.Forms.DataGridViewImageColumn agregarMed;
+        private System.Windows.Forms.DataGridViewImageColumn quitarMed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoMed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionMed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadMed;
     }
 }
