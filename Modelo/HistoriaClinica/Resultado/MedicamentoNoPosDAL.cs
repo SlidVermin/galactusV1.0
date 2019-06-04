@@ -22,6 +22,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     comando.CommandText = Sentencias.CREAR_MEDICAMENTO_NOPOS;
                     comando.Parameters.Add(new SqlParameter("@IdAtencion", SqlDbType.Int)).Value = medicamentoNoPos.idAtencion;
                     comando.Parameters.Add(new SqlParameter("@idSolicitudNoPos", SqlDbType.Int)).Value=medicamentoNoPos.idSolicitud;
+                    comando.Parameters.Add(new SqlParameter("@idOrdenMedica", SqlDbType.Int)).Value = medicamentoNoPos.idOrdenMedica;
                     comando.Parameters.Add(new SqlParameter("@FechaSolicitud", SqlDbType.DateTime)).Value=medicamentoNoPos.fechaSolicitud;
                     comando.Parameters.Add(new SqlParameter("@MedicamentoActual", SqlDbType.Int)).Value=medicamentoNoPos.idMedicamentoActual;
                     comando.Parameters.Add(new SqlParameter("@MedicamentoReemplazar", SqlDbType.Int)).Value=medicamentoNoPos.idMedicamentoReemplazar;
@@ -80,6 +81,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     comando.CommandType = CommandType.StoredProcedure;
                     comando.CommandText = Sentencias.ANULAR_MEDICAMENTO_NOPOS;
                     comando.Parameters.Add(new SqlParameter("@IdSolicitudNoPos", SqlDbType.Int)).Value = medicamentoNoPos.idSolicitud;
+                    comando.Parameters.Add(new SqlParameter("@auditoria", SqlDbType.Bit)).Value = medicamentoNoPos.auditoria;
                     comando.ExecuteNonQuery();
                 }
             }

@@ -63,6 +63,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 parametros.Add(Convert.ToString(medicamento.auditoria));
                 List<string> listaOculta = new List<string>();
                 listaOculta.Add("idEquivalencia");
+                listaOculta.Add("idSolicitudNoPos");
                 GeneralC.buscarDevuelveFila(Sentencias.BUSCAR_ORDEN_MEDICAMENTO_NOPOS,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarRegistro),
@@ -77,6 +78,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
             GeneralC.limpiarControles(this);
             medicamento.idAtencion = resultado.Field<int>("Atencion");
+            medicamento.idOrdenMedica = resultado.Field<int>("Código orden");
+            medicamento.idSolicitud = resultado.Field<int>("idSolicitudNoPos");
             medicamento.nombreMedicamentoActual = resultado.Field<String>("Medicamento");
             medicamento.idMedicamentoActual = resultado.Field<int>("idEquivalencia");
             medicamento.cargarDatos();
@@ -85,7 +88,6 @@ namespace Galactus.VistaControlador.HistoriaClinica
             dgvDiagnostico.ReadOnly = false;
             habilitarBotonesPredeterminado();
             deshabilitarColumnas();
-            medicamento.idSolicitud = ConstanteGeneral.PREDETERMINADO;
             habilitarControles();
             txtfechaSolicitud.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
 
@@ -130,6 +132,21 @@ namespace Galactus.VistaControlador.HistoriaClinica
             dtFechaComite.Enabled = true;
             txtEncabezado.ReadOnly = false;
             txtDecision.ReadOnly = false;
+
+            txtAtencion.ReadOnly = true;
+            txtArea.ReadOnly = true;
+            txtCama.ReadOnly = true;
+            txtCausaExterna.ReadOnly = true;
+            txtEdad.ReadOnly = true;
+            txtEntorno.ReadOnly = true;
+            txtEstado.ReadOnly = true;
+            txtEstancia.ReadOnly = true;
+            txtFechaAdmision.ReadOnly = true;
+            txtfechaSolicitud.ReadOnly = true;
+            txtInstitucion.ReadOnly = true;
+            txtPaciente.ReadOnly = true;
+            txtHistoriaClinica.ReadOnly = true;
+           
         }
 
         public void habilitarBotonesPredeterminado()
@@ -401,6 +418,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
             medicamento.idSolicitud = resultado.Field<int>("Código");
             medicamento.idAtencion = resultado.Field<int>("atencion");
+            medicamento.idOrdenMedica = resultado.Field<int>("Código orden");
             medicamento.cargarDatos();
             Datos();
             txtfechaSolicitud.Text = Convert.ToString(medicamento.fechaSolicitud);
@@ -439,6 +457,9 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void tstModificar_Click(object sender, EventArgs e)
         {
+            dgvDiagnostico.EndEdit();
+            dgvDiagnostico.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            medicamento.dsDatos.Tables["table2"].AcceptChanges();
             GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
             habilitarControles();
             dgvDiagnostico.ReadOnly = false;

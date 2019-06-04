@@ -15,6 +15,7 @@ namespace Galactus.Entidades.HistoriaClinica.Resultado
         public DataSet dsDatos = new DataSet();
         public int idAtencion { set; get; }
         public int idSolicitud { set; get; }
+        public int idOrdenMedica { set; get; }
         public DateTime fechaSolicitud { set; get; }
         public int diasTratamiento { set; get; }
         public string dosis { set; get; }
