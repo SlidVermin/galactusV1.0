@@ -217,7 +217,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Sentencias.INFORME_QX_MEDICAMENTO_ANASTESIA,
+            GeneralC.buscarDevuelveFila(Sentencias.EMPLEADO_CARGO_BUSCAR,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarAyudante),
                                     Titulos.TITULO_BUSCAR_AYUDANTE,
@@ -229,7 +229,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> parametro = new List<string>();
             parametro.Add(string.Empty);
 
-            GeneralC.buscarDevuelveFila(Sentencias.INFORME_QX_BUSCAR,
+            GeneralC.buscarDevuelveFila(Sentencias.EMPLEADO_CARGO_BUSCAR,
                                     parametro,
                                     new GeneralC.cargarInfoFila(cargarAnastesiologo),
                                     Titulos.TITULO_BUSCAR_ANASTESIOLOGO,
@@ -368,13 +368,13 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         }
         private void cargarAyudante(DataRow dRows)
         {
-            informeQx.idAyudante = dRows.Field<int>("");
-            txtAyudante.Text = dRows.Field<string>("");
+            informeQx.idAyudante = dRows.Field<int>("Codigo");
+            txtAyudante.Text = dRows.Field<string>("Nombre");
         }
         private void cargarAnastesiologo(DataRow dRows)
         {
-            informeQx.idAnastesiologo = dRows.Field<int>("");
-            txtAnastesiologo.Text = dRows.Field<string>("");
+            informeQx.idAnastesiologo = dRows.Field<int>("Codigo");
+            txtAnastesiologo.Text = dRows.Field<string>("Nombre");
         }
         private void cargarAnastesia(DataRow dRows)
         {
