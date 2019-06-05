@@ -16,7 +16,7 @@ namespace Galactus
         public const string CLASIFICACION_PROCEDIMIENTO_PAGINACION = ConstanteGeneral.ESQUEMA_GENERAL + "[uspProcedimientoPaginacionCargar]";
         public const string EMPRESA_BUSCAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspEmpresaBuscar]";
         public const string EMPRESA_CARGAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspEmpresaCargar]";
-
+        public const string GRUPO_PARACLINICO_LISTAR = ConstanteGeneral.ESQUEMA_GENERAL + "uspGruposParaclinicoListar";
         public const string EMPLEADO_CARGO_BUSCAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspEmpleadoCargoBuscar]";
         #endregion
         #region INVENTARIO 

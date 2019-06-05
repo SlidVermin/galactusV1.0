@@ -51,21 +51,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbRegistros = new System.Windows.Forms.Label();
             this.pnPaginador = new System.Windows.Forms.Panel();
-            this.linkInicio = new System.Windows.Forms.LinkLabel();
-            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.btBuscarSinGrupoCUPS = new System.Windows.Forms.Button();
+            this.txtFiltroSinGrupoCUPS = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
             this.tabControlGalactus1 = new Galactus.Util.Controles.TabControlGalactus();
             this.tpCalasificacion = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tsbBuscarGrupos = new System.Windows.Forms.Button();
+            this.txtGrupo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ckListaProcedimiento = new System.Windows.Forms.CheckedListBox();
             this.tpClasificacionExamen = new System.Windows.Forms.TabPage();
@@ -89,12 +82,9 @@
             this.dgvExamenNoAgrupable = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtFiltroSinGrupoCUPS = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.tstMenuPatron.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.pnPaginador.SuspendLayout();
             this.tabControlGalactus1.SuspendLayout();
             this.tpCalasificacion.SuspendLayout();
             this.tpClasificacionExamen.SuspendLayout();
@@ -181,7 +171,7 @@
             // 
             this.lbRegistros.AutoSize = true;
             this.lbRegistros.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRegistros.Location = new System.Drawing.Point(907, 479);
+            this.lbRegistros.Location = new System.Drawing.Point(876, 479);
             this.lbRegistros.Name = "lbRegistros";
             this.lbRegistros.Size = new System.Drawing.Size(84, 15);
             this.lbRegistros.TabIndex = 48;
@@ -189,140 +179,11 @@
             // 
             // pnPaginador
             // 
-            this.pnPaginador.Controls.Add(this.linkInicio);
-            this.pnPaginador.Controls.Add(this.linkLabel9);
-            this.pnPaginador.Controls.Add(this.linkLabel8);
-            this.pnPaginador.Controls.Add(this.linkLabel7);
-            this.pnPaginador.Controls.Add(this.linkLabel6);
-            this.pnPaginador.Controls.Add(this.linkLabel5);
-            this.pnPaginador.Controls.Add(this.linkLabel4);
-            this.pnPaginador.Controls.Add(this.linkLabel3);
-            this.pnPaginador.Controls.Add(this.linkLabel2);
-            this.pnPaginador.Controls.Add(this.linkLabel1);
-            this.pnPaginador.Location = new System.Drawing.Point(408, 471);
+            this.pnPaginador.AutoScroll = true;
+            this.pnPaginador.Location = new System.Drawing.Point(3, 471);
             this.pnPaginador.Name = "pnPaginador";
-            this.pnPaginador.Size = new System.Drawing.Size(207, 32);
+            this.pnPaginador.Size = new System.Drawing.Size(854, 35);
             this.pnPaginador.TabIndex = 47;
-            // 
-            // linkInicio
-            // 
-            this.linkInicio.AutoSize = true;
-            this.linkInicio.Location = new System.Drawing.Point(6, 10);
-            this.linkInicio.Name = "linkInicio";
-            this.linkInicio.Size = new System.Drawing.Size(13, 13);
-            this.linkInicio.TabIndex = 9;
-            this.linkInicio.TabStop = true;
-            this.linkInicio.Tag = "0";
-            this.linkInicio.Text = "0";
-            this.linkInicio.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.paginacion);
-            // 
-            // linkLabel9
-            // 
-            this.linkLabel9.AutoSize = true;
-            this.linkLabel9.Location = new System.Drawing.Point(185, 10);
-            this.linkLabel9.Name = "linkLabel9";
-            this.linkLabel9.Size = new System.Drawing.Size(13, 13);
-            this.linkLabel9.TabIndex = 8;
-            this.linkLabel9.TabStop = true;
-            this.linkLabel9.Tag = "9000";
-            this.linkLabel9.Text = "9";
-            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.paginacion);
-            // 
-            // linkLabel8
-            // 
-            this.linkLabel8.AutoSize = true;
-            this.linkLabel8.Location = new System.Drawing.Point(165, 10);
-            this.linkLabel8.Name = "linkLabel8";
-            this.linkLabel8.Size = new System.Drawing.Size(13, 13);
-            this.linkLabel8.TabIndex = 7;
-            this.linkLabel8.TabStop = true;
-            this.linkLabel8.Tag = "8000";
-            this.linkLabel8.Text = "8";
-            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.paginacion);
-            // 
-            // linkLabel7
-            // 
-            this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(145, 10);
-            this.linkLabel7.Name = "linkLabel7";
-            this.linkLabel7.Size = new System.Drawing.Size(13, 13);
-            this.linkLabel7.TabIndex = 6;
-            this.linkLabel7.TabStop = true;
-            this.linkLabel7.Tag = "7000";
-            this.linkLabel7.Text = "7";
-            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.paginacion);
-            // 
-            // linkLabel6
-            // 
-            this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Location = new System.Drawing.Point(125, 10);
-            this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(13, 13);
-            this.linkLabel6.TabIndex = 5;
-            this.linkLabel6.TabStop = true;
-            this.linkLabel6.Tag = "6000";
-            this.linkLabel6.Text = "6";
-            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.paginacion);
-            // 
-            // linkLabel5
-            // 
-            this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(105, 10);
-            this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(13, 13);
-            this.linkLabel5.TabIndex = 4;
-            this.linkLabel5.TabStop = true;
-            this.linkLabel5.Tag = "5000";
-            this.linkLabel5.Text = "5";
-            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.paginacion);
-            // 
-            // linkLabel4
-            // 
-            this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(85, 10);
-            this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(13, 13);
-            this.linkLabel4.TabIndex = 3;
-            this.linkLabel4.TabStop = true;
-            this.linkLabel4.Tag = "4000";
-            this.linkLabel4.Text = "4";
-            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.paginacion);
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(65, 10);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(13, 13);
-            this.linkLabel3.TabIndex = 2;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Tag = "3000";
-            this.linkLabel3.Text = "3";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.paginacion);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(45, 10);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(13, 13);
-            this.linkLabel2.TabIndex = 1;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Tag = "2000";
-            this.linkLabel2.Text = "2";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.paginacion);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(25, 10);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(13, 13);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Tag = "1000";
-            this.linkLabel1.Text = "1";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.paginacion);
             // 
             // label5
             // 
@@ -344,6 +205,23 @@
             this.btBuscarSinGrupoCUPS.TabIndex = 28;
             this.btBuscarSinGrupoCUPS.UseVisualStyleBackColor = true;
             // 
+            // txtFiltroSinGrupoCUPS
+            // 
+            this.txtFiltroSinGrupoCUPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFiltroSinGrupoCUPS.Location = new System.Drawing.Point(127, 5);
+            this.txtFiltroSinGrupoCUPS.Name = "txtFiltroSinGrupoCUPS";
+            this.txtFiltroSinGrupoCUPS.Size = new System.Drawing.Size(843, 21);
+            this.txtFiltroSinGrupoCUPS.TabIndex = 25;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(8, 246);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(0, 20);
+            this.label43.TabIndex = 40;
+            // 
             // tabControlGalactus1
             // 
             this.tabControlGalactus1.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -362,7 +240,8 @@
             // 
             // tpCalasificacion
             // 
-            this.tpCalasificacion.Controls.Add(this.comboBox1);
+            this.tpCalasificacion.Controls.Add(this.tsbBuscarGrupos);
+            this.tpCalasificacion.Controls.Add(this.txtGrupo);
             this.tpCalasificacion.Controls.Add(this.label1);
             this.tpCalasificacion.Controls.Add(this.ckListaProcedimiento);
             this.tpCalasificacion.Location = new System.Drawing.Point(124, 4);
@@ -373,19 +252,31 @@
             this.tpCalasificacion.Text = "Clasificación de Procedimientos";
             this.tpCalasificacion.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // tsbBuscarGrupos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(61, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(252, 23);
-            this.comboBox1.TabIndex = 46;
+            this.tsbBuscarGrupos.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.tsbBuscarGrupos.Location = new System.Drawing.Point(317, 7);
+            this.tsbBuscarGrupos.Name = "tsbBuscarGrupos";
+            this.tsbBuscarGrupos.Size = new System.Drawing.Size(26, 24);
+            this.tsbBuscarGrupos.TabIndex = 48;
+            this.tsbBuscarGrupos.UseVisualStyleBackColor = true;
+            this.tsbBuscarGrupos.Click += new System.EventHandler(this.tsbBuscarGrupos_Click);
+            // 
+            // txtGrupo
+            // 
+            this.txtGrupo.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.txtGrupo.Location = new System.Drawing.Point(60, 9);
+            this.txtGrupo.Name = "txtGrupo";
+            this.txtGrupo.ReadOnly = true;
+            this.txtGrupo.Size = new System.Drawing.Size(256, 21);
+            this.txtGrupo.TabIndex = 47;
+            this.txtGrupo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 15);
             this.label1.TabIndex = 45;
@@ -698,23 +589,6 @@
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
-            // txtFiltroSinGrupoCUPS
-            // 
-            this.txtFiltroSinGrupoCUPS.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFiltroSinGrupoCUPS.Location = new System.Drawing.Point(127, 5);
-            this.txtFiltroSinGrupoCUPS.Name = "txtFiltroSinGrupoCUPS";
-            this.txtFiltroSinGrupoCUPS.Size = new System.Drawing.Size(843, 21);
-            this.txtFiltroSinGrupoCUPS.TabIndex = 25;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(8, 246);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(0, 20);
-            this.label43.TabIndex = 40;
-            // 
             // ConfiguracionExamenLaboratorioUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -731,14 +605,11 @@
             this.Name = "ConfiguracionExamenLaboratorioUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConfiguracionExamenLaboratorioUI";
-            this.Load += new System.EventHandler(this.ConfiguracionExamenLaboratorioUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).EndInit();
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.pnPaginador.ResumeLayout(false);
-            this.pnPaginador.PerformLayout();
             this.tabControlGalactus1.ResumeLayout(false);
             this.tpCalasificacion.ResumeLayout(false);
             this.tpCalasificacion.PerformLayout();
@@ -791,20 +662,11 @@
         private System.Windows.Forms.DataGridView dgvExamenNoAgrupable;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox ckListaProcedimiento;
         private System.Windows.Forms.Panel pnPaginador;
-        private System.Windows.Forms.LinkLabel linkLabel9;
-        private System.Windows.Forms.LinkLabel linkLabel8;
-        private System.Windows.Forms.LinkLabel linkLabel7;
-        private System.Windows.Forms.LinkLabel linkLabel6;
-        private System.Windows.Forms.LinkLabel linkLabel5;
-        private System.Windows.Forms.LinkLabel linkLabel4;
-        private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label lbRegistros;
-        private System.Windows.Forms.LinkLabel linkInicio;
+        private System.Windows.Forms.Button tsbBuscarGrupos;
+        private System.Windows.Forms.TextBox txtGrupo;
     }
 }

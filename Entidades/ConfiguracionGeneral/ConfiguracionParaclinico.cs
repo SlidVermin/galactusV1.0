@@ -9,7 +9,8 @@ namespace Galactus.Entidades.ConfiguracionGeneral
 {
     class ConfiguracionParaclinico
     {
-        public int id { get; set; }
+        public int idGrupo { get; set; }
+        public int numPaginacion { get; set; }
         public DataTable dtProcedimiento { get; set; }
 
         public ConfiguracionParaclinico() {
