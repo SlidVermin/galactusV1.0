@@ -76,6 +76,7 @@
     <Compile Include="Entidades\Admision\manualTarifarioServicio.cs" />
     <Compile Include="Entidades\Admision\Paciente.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\ConfiguracionGeneral.cs" />
+    <Compile Include="Entidades\ConfiguracionGeneral\ConfiguracionParaclinico.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Empresa.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Equivalencia.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Usuario.cs" />
