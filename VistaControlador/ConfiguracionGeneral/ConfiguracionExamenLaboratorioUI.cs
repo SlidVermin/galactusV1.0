@@ -11,6 +11,7 @@ using Galactus.Entidades.ConfiguracionGeneral;
 using Galactus.Util.Constantes;
 using Galactus.Util.Mensajes;
 using Galactus.Util;
+using Galactus.Modelo.ConfiguracionGeneral;
 
 namespace Galactus.VistaControlador.ConfiguracionGeneral
 {
@@ -22,34 +23,51 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             InitializeComponent();
         }
 
-        private void cargarListaProcedimiento(string valor)
+        private void tsbGuardar_Click(object sender, EventArgs e)
         {
-            List<string> paramtro = new List<string>();
-            paramtro.Add(valor);
-            paramtro.Add(clasificacionParaclinico.idGrupo.ToString());
-            GeneralC.llenarTabla(Sentencias.CLASIFICACION_PROCEDIMIENTO_PAGINACION, paramtro, clasificacionParaclinico.dtProcedimiento);
-            ((ListBox)ckListaProcedimiento).DataSource = clasificacionParaclinico.dtProcedimiento;
-            ((ListBox)ckListaProcedimiento).ValueMember = "idProcedimiento";
-            ((ListBox)ckListaProcedimiento).DisplayMember = "Descripcion";
-            clasificacionParaclinico.numPaginacion = clasificacionParaclinico.dtProcedimiento.Rows[0].Field<int>("Fila");
-            numeroPaginas(clasificacionParaclinico.numPaginacion);
-            lbRegistros.Text = "N° Registro: " + (clasificacionParaclinico.dtProcedimiento.Rows.Count).ToString();
-            
-        }
-
-        private void paginacion(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            remarcarLinkLaber();
-            cargarListaProcedimiento(((LinkLabel)sender).Tag.ToString());
-            ((LinkLabel)sender).LinkVisited = true;
-        }
-
-        private void remarcarLinkLaber()
-        {
-            foreach (LinkLabel linklabel in pnPaginador.Controls)
+            try
             {
-                linklabel.LinkVisited = false;
+                dgvClasificacionParaclinico.EndEdit();
+                clasificacioParaclinicoCrear();
+                clasificacionParaclinicoGuardar();
+                Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_GUARDADO);
             }
+            catch (Exception ex) {
+                Mensajes.mensajeError(ex);
+            }
+        }
+
+        private void tsbBuscarGrupos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GeneralC.buscarDevuelveFila(Sentencias.GRUPO_PARACLINICO_LISTAR,
+                                        null,
+                                        new GeneralC.cargarInfoFila(cargarGrupo),
+                                        Titulos.TITULO_BUSCAR_GRUPO,
+                                        true);
+            }
+            catch (Exception ex)
+            {
+                Mensajes.mensajeError(ex);
+            }
+      }
+        private void cargarGrupo(DataRow dRows)
+        {
+            clasificacionParaclinico.idGrupo = dRows.Field<int>("codigo");
+            txtGrupo.Text = dRows.Field<string>("Descripcion");
+            cargarListaProcedimiento(ConstanteGeneral.SIN_VALOR_NUMERICO.ToString());
+        }
+        private void ConfiguracionExamenLaboratorioUI_Load(object sender, EventArgs e)
+        {
+            validarGrilla(dgvClasificacionParaclinico);
+        }
+
+        private void dgvClasificacionParaclinico_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3) {
+               clasificacionParaclinico.editable = true;
+            }     
         }
 
         #region btnSalir
@@ -72,27 +90,39 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         #endregion
 
-        private void tsbBuscarGrupos_Click(object sender, EventArgs e)
+        #region ClasificacionParaclinico
+
+        private void cargarListaProcedimiento(string valor)
         {
-            try
-            {
-                GeneralC.buscarDevuelveFila(Sentencias.GRUPO_PARACLINICO_LISTAR,
-                                        null,
-                                        new GeneralC.cargarInfoFila(cargarGrupo),
-                                        Titulos.TITULO_BUSCAR_GRUPO,
-                                        true);
-            }
-            catch (Exception ex)
-            {
-                Mensajes.mensajeError(ex);
-            }
+            List<string> paramtro = new List<string>();
+            paramtro.Add(valor);
+            paramtro.Add(clasificacionParaclinico.idGrupo.ToString());
+            GeneralC.llenarTabla(Sentencias.CLASIFICACION_PROCEDIMIENTO_PAGINACION, paramtro, clasificacionParaclinico.dtProcedimiento);
+            clasificacionParaclinico.numPaginacion = clasificacionParaclinico.dtProcedimiento.Rows[0].Field<int>("Fila");
+            numeroPaginas(clasificacionParaclinico.numPaginacion);
+            lbRegistros.Text = "N° Registro: " + (clasificacionParaclinico.dtProcedimiento.Rows.Count).ToString();
         }
 
-        private void cargarGrupo(DataRow dRows)
+        private void paginacion(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            clasificacionParaclinico.idGrupo = dRows.Field<int>("codigo");
-            txtGrupo.Text = dRows.Field<string>("Descripcion");
-            cargarListaProcedimiento(ConstanteGeneral.SIN_VALOR_NUMERICO.ToString());
+            if (clasificacionParaclinico.editable == false)
+            {
+                remarcarLinkLaber();
+                cargarListaProcedimiento(((LinkLabel)sender).Tag.ToString());
+                ((LinkLabel)sender).LinkVisited = true;
+                clasificacionParaclinico.sesion = Convert.ToInt32(((LinkLabel)sender).Name);
+            }
+            else
+            {
+                Mensajes.mensajeAdvertencia("el sistema ah detectado una modificacion Favor Guardar el registro");
+            }
+        }
+        private void remarcarLinkLaber()
+        {
+            foreach (LinkLabel linklabel in pnPaginador.Controls)
+            {
+                linklabel.LinkVisited = false;
+            }
         }
         private void numeroPaginas(int tope)
         {
@@ -120,9 +150,33 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 if (link.Name==ConstanteGeneral.SIN_VALOR_NUMERICO.ToString()) {
                     link.LinkVisited = true;
                 }
-
             }
+        }
 
+        #endregion
+
+        private void validarGrilla(DataGridView  grilla) {
+            grilla.ReadOnly = false;
+            grilla.Columns[0].DataPropertyName = "idProcedimiento";
+            grilla.Columns[0].ReadOnly = true;
+            grilla.Columns[1].DataPropertyName = "cups";
+            grilla.Columns[1].ReadOnly = true;
+            grilla.Columns[2].DataPropertyName = "Descripcion";
+            grilla.Columns[2].ReadOnly = true;
+            grilla.Columns[3].DataPropertyName = "Estado";
+            grilla.Columns[3].ReadOnly = false;
+            grilla.AutoGenerateColumns = false;
+            grilla.DataSource = clasificacionParaclinico.dtProcedimiento;   
+        }
+        private void clasificacionParaclinicoGuardar() {
+            ConfiguracionParaclinicoDAL.guardarClasificacionParaclinico(clasificacionParaclinico);
+            clasificacionParaclinico.editable = false;
+        }
+        private void clasificacioParaclinicoCrear() {
+            clasificacionParaclinico.dtRegistro.Clear();
+            foreach (DataRow dRows in clasificacionParaclinico.dtProcedimiento.Select("Estado = True")) {
+                   clasificacionParaclinico.dtRegistro.ImportRow(dRows);
+            }         
         }
     }
 }

@@ -112,6 +112,7 @@
     <Compile Include="Modelo\Admision\manualTarifarioServicioDAL.cs" />
     <Compile Include="Modelo\Admision\PacienteDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\ConfiguracionGeneralDAL.cs" />
+    <Compile Include="Modelo\ConfiguracionGeneral\ConfiguracionParaclinicoDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\EmpresaDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\UsuarioDAL.cs" />
     <Compile Include="Modelo\EquivalenciaDAL.cs" />
