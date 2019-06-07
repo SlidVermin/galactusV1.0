@@ -18,6 +18,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
     public partial class ConfiguracionExamenLaboratorioUI : Form
     {
         ConfiguracionParaclinico clasificacionParaclinico = new ConfiguracionParaclinico();
+        BindingSource bindNavegador= new BindingSource();
         public ConfiguracionExamenLaboratorioUI()
         {
             InitializeComponent();
@@ -69,6 +70,17 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                clasificacionParaclinico.editable = true;
             }     
         }
+        private void txtBuscarItems_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter) {
+                filtrarRegistro();
+            }
+        }
+
+        private void btBuscarSinGrupoCUPS_Click(object sender, EventArgs e)
+        {
+            filtrarRegistro();
+        }
 
         #region btnSalir
 
@@ -98,6 +110,8 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             paramtro.Add(valor);
             paramtro.Add(clasificacionParaclinico.idGrupo.ToString());
             GeneralC.llenarTabla(Sentencias.CLASIFICACION_PROCEDIMIENTO_PAGINACION, paramtro, clasificacionParaclinico.dtProcedimiento);
+            bindNavegador.DataSource = clasificacionParaclinico.dtProcedimiento;
+            dgvClasificacionParaclinico.DataSource = bindNavegador.DataSource;
             clasificacionParaclinico.numPaginacion = clasificacionParaclinico.dtProcedimiento.Rows[0].Field<int>("Fila");
             numeroPaginas(clasificacionParaclinico.numPaginacion);
             lbRegistros.Text = "N° Registro: " + (clasificacionParaclinico.dtProcedimiento.Rows.Count).ToString();
@@ -166,17 +180,23 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             grilla.Columns[3].DataPropertyName = "Estado";
             grilla.Columns[3].ReadOnly = false;
             grilla.AutoGenerateColumns = false;
-            grilla.DataSource = clasificacionParaclinico.dtProcedimiento;   
         }
+
         private void clasificacionParaclinicoGuardar() {
             ConfiguracionParaclinicoDAL.guardarClasificacionParaclinico(clasificacionParaclinico);
             clasificacionParaclinico.editable = false;
         }
+
         private void clasificacioParaclinicoCrear() {
             clasificacionParaclinico.dtRegistro.Clear();
             foreach (DataRow dRows in clasificacionParaclinico.dtProcedimiento.Select("Estado = True")) {
                    clasificacionParaclinico.dtRegistro.ImportRow(dRows);
             }         
+        }
+        private void filtrarRegistro() {
+            if (clasificacionParaclinico.dtProcedimiento.Rows.Count > 0) {
+                bindNavegador.Filter = "Cups Like '%" + txtBuscarItems.Text + "%' Or Descripcion Like '%" + txtBuscarItems.Text + "%'";
+            }
         }
     }
 }
