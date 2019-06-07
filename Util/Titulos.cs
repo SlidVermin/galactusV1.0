@@ -23,6 +23,7 @@ namespace Galactus.Util
         public const string TITULO_BUSCAR_INFORME_QX = "Busqueda de informe Quirurgico";
         public const string TITULO_BUSCAR_RESULTADO_LAB = "Busqueda de resultado laboratorio";
         //--------------------- Configuracion
+        public const string TITULO_BUSCAR_TIPO_LABORATORIO = "Busqueda de tipos de laboratorio";
         public const string TITULO_BUSCAR_GRUPO = "Busqueda de grupos";
         public const string TITULO_BUSCAR_VIA = "Busqueda de las Vias";
         public const string TITULO_BUSCAR_AYUDANTE = "Busqueda de los ayudantes";

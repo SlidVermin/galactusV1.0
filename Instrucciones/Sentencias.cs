@@ -14,9 +14,14 @@ namespace Galactus
         public const string SEG_ARMAR_MENU = ConstanteGeneral.ESQUEMA_SEGURIDAD + "[uspMenuArmar]";
         public const string SEG_LLENAR_PERMISOS = ConstanteGeneral.ESQUEMA_SEGURIDAD + "[uspMenuPermisosLlenar]";
         public const string CLASIFICACION_PROCEDIMIENTO_PAGINACION = ConstanteGeneral.ESQUEMA_GENERAL + "[uspProcedimientoPaginacionCargar]";
+        public const string EXAMEN_PARACLINICOS_PAGINACION = ConstanteGeneral.ESQUEMA_GENERAL + "[uspProcedimientoExamenPaginacionCargar]";
+
         public const string EMPRESA_BUSCAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspEmpresaBuscar]";
         public const string EMPRESA_CARGAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspEmpresaCargar]";
+
         public const string GRUPO_PARACLINICO_LISTAR = ConstanteGeneral.ESQUEMA_GENERAL + "uspGruposParaclinicoListar";
+        public const string EXAMEN_LABORATORIO_LISTAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspTipoExamenListar]";
+
         public const string EMPLEADO_CARGO_BUSCAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspEmpleadoCargoBuscar]";
         public const string CLASIFICACION_PROCEDIMIENTO_CREAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspClasificacionGrupoParaclinicoCrear]";
         #endregion

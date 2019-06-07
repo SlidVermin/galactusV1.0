@@ -48,8 +48,6 @@
             this.pnPaginador = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.btBuscarSinGrupoCUPS = new System.Windows.Forms.Button();
-            this.txtBuscarItems = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
             this.tabControlGalactus1 = new Galactus.Util.Controles.TabControlGalactus();
             this.tpCalasificacion = new System.Windows.Forms.TabPage();
             this.dgvClasificacionParaclinico = new System.Windows.Forms.DataGridView();
@@ -62,6 +60,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tpClasificacionExamen = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dgvClasificacionExamen = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btBuscarTipoExamen = new System.Windows.Forms.Button();
+            this.txtTipoExamen = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tpNoAgrupable = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -75,14 +81,8 @@
             this.dgvExamenNoAgrupable = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvClasificacionExamen = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btBuscarTipoExamen = new System.Windows.Forms.Button();
-            this.txtTipoExamen = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtBuscarItems = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.tstMenuPatron.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -91,12 +91,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvClasificacionParaclinico)).BeginInit();
             this.tpClasificacionExamen.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClasificacionExamen)).BeginInit();
             this.tpNoAgrupable.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementoAsignado)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExamenNoAgrupable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClasificacionExamen)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -208,24 +208,6 @@
             this.btBuscarSinGrupoCUPS.TabIndex = 28;
             this.btBuscarSinGrupoCUPS.UseVisualStyleBackColor = true;
             this.btBuscarSinGrupoCUPS.Click += new System.EventHandler(this.btBuscarSinGrupoCUPS_Click);
-            // 
-            // txtBuscarItems
-            // 
-            this.txtBuscarItems.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarItems.Location = new System.Drawing.Point(127, 5);
-            this.txtBuscarItems.Name = "txtBuscarItems";
-            this.txtBuscarItems.Size = new System.Drawing.Size(843, 21);
-            this.txtBuscarItems.TabIndex = 25;
-            this.txtBuscarItems.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarItems_KeyDown);
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(8, 246);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(0, 20);
-            this.label43.TabIndex = 40;
             // 
             // tabControlGalactus1
             // 
@@ -366,6 +348,94 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(861, 464);
             this.panel5.TabIndex = 53;
+            // 
+            // dgvClasificacionExamen
+            // 
+            this.dgvClasificacionExamen.AllowUserToAddRows = false;
+            this.dgvClasificacionExamen.AllowUserToDeleteRows = false;
+            this.dgvClasificacionExamen.AllowUserToResizeColumns = false;
+            this.dgvClasificacionExamen.AllowUserToResizeRows = false;
+            this.dgvClasificacionExamen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvClasificacionExamen.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvClasificacionExamen.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvClasificacionExamen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClasificacionExamen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewCheckBoxColumn1});
+            this.dgvClasificacionExamen.Location = new System.Drawing.Point(-1, 34);
+            this.dgvClasificacionExamen.MultiSelect = false;
+            this.dgvClasificacionExamen.Name = "dgvClasificacionExamen";
+            this.dgvClasificacionExamen.ReadOnly = true;
+            this.dgvClasificacionExamen.RowHeadersVisible = false;
+            this.dgvClasificacionExamen.Size = new System.Drawing.Size(860, 388);
+            this.dgvClasificacionExamen.TabIndex = 53;
+            this.dgvClasificacionExamen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClasificacionParaclinico_CellClick);
+
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "idProcedimiento";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 103;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Cups";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 43;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Descripcion";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Estado";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCheckBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewCheckBoxColumn1.Width = 71;
+            // 
+            // btBuscarTipoExamen
+            // 
+            this.btBuscarTipoExamen.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarTipoExamen.Location = new System.Drawing.Point(351, 4);
+            this.btBuscarTipoExamen.Name = "btBuscarTipoExamen";
+            this.btBuscarTipoExamen.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarTipoExamen.TabIndex = 52;
+            this.btBuscarTipoExamen.UseVisualStyleBackColor = true;
+            this.btBuscarTipoExamen.Click += new System.EventHandler(this.btBuscarTipoExamen_Click);
+            // 
+            // txtTipoExamen
+            // 
+            this.txtTipoExamen.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.txtTipoExamen.Location = new System.Drawing.Point(90, 6);
+            this.txtTipoExamen.Name = "txtTipoExamen";
+            this.txtTipoExamen.ReadOnly = true;
+            this.txtTipoExamen.Size = new System.Drawing.Size(256, 21);
+            this.txtTipoExamen.TabIndex = 51;
+            this.txtTipoExamen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 15);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Tipo Examén:";
             // 
             // tpNoAgrupable
             // 
@@ -558,90 +628,23 @@
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
-            // dgvClasificacionExamen
+            // txtBuscarItems
             // 
-            this.dgvClasificacionExamen.AllowUserToAddRows = false;
-            this.dgvClasificacionExamen.AllowUserToDeleteRows = false;
-            this.dgvClasificacionExamen.AllowUserToResizeColumns = false;
-            this.dgvClasificacionExamen.AllowUserToResizeRows = false;
-            this.dgvClasificacionExamen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvClasificacionExamen.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvClasificacionExamen.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvClasificacionExamen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClasificacionExamen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewCheckBoxColumn1});
-            this.dgvClasificacionExamen.Location = new System.Drawing.Point(-1, 34);
-            this.dgvClasificacionExamen.MultiSelect = false;
-            this.dgvClasificacionExamen.Name = "dgvClasificacionExamen";
-            this.dgvClasificacionExamen.ReadOnly = true;
-            this.dgvClasificacionExamen.RowHeadersVisible = false;
-            this.dgvClasificacionExamen.Size = new System.Drawing.Size(860, 388);
-            this.dgvClasificacionExamen.TabIndex = 53;
+            this.txtBuscarItems.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarItems.Location = new System.Drawing.Point(127, 5);
+            this.txtBuscarItems.Name = "txtBuscarItems";
+            this.txtBuscarItems.Size = new System.Drawing.Size(843, 21);
+            this.txtBuscarItems.TabIndex = 25;
+            this.txtBuscarItems.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarItems_KeyDown);
             // 
-            // dataGridViewTextBoxColumn1
+            // label43
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "idProcedimiento";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            this.dataGridViewTextBoxColumn1.Width = 103;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Cups";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn2.Width = 43;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewCheckBoxColumn1
-            // 
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Estado";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            this.dataGridViewCheckBoxColumn1.ReadOnly = true;
-            this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCheckBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewCheckBoxColumn1.Width = 71;
-            // 
-            // btBuscarTipoExamen
-            // 
-            this.btBuscarTipoExamen.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarTipoExamen.Location = new System.Drawing.Point(351, 4);
-            this.btBuscarTipoExamen.Name = "btBuscarTipoExamen";
-            this.btBuscarTipoExamen.Size = new System.Drawing.Size(26, 24);
-            this.btBuscarTipoExamen.TabIndex = 52;
-            this.btBuscarTipoExamen.UseVisualStyleBackColor = true;
-            // 
-            // txtTipoExamen
-            // 
-            this.txtTipoExamen.Font = new System.Drawing.Font("Arial Narrow", 9F);
-            this.txtTipoExamen.Location = new System.Drawing.Point(90, 6);
-            this.txtTipoExamen.Name = "txtTipoExamen";
-            this.txtTipoExamen.ReadOnly = true;
-            this.txtTipoExamen.Size = new System.Drawing.Size(256, 21);
-            this.txtTipoExamen.TabIndex = 51;
-            this.txtTipoExamen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 15);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Tipo Examén:";
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(8, 246);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(0, 20);
+            this.label43.TabIndex = 40;
             // 
             // ConfiguracionExamenLaboratorioUI
             // 
@@ -672,13 +675,13 @@
             this.tpClasificacionExamen.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClasificacionExamen)).EndInit();
             this.tpNoAgrupable.ResumeLayout(false);
             this.tpNoAgrupable.PerformLayout();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvElementoAsignado)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvExamenNoAgrupable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClasificacionExamen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -28,9 +28,12 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             try
             {
+                dgvClasificacionExamen.EndEdit();
                 dgvClasificacionParaclinico.EndEdit();
-                clasificacioParaclinicoCrear();
-                clasificacionParaclinicoGuardar();
+                if (tabControlGalactus1.SelectedIndex == 0) {
+                    clasificacionParaclinicoGuardar();
+                } else if (tabControlGalactus1.SelectedIndex == 1) {
+                }           
                 Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_GUARDADO);
             }
             catch (Exception ex) {
@@ -52,16 +55,49 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             {
                 Mensajes.mensajeError(ex);
             }
-      }
+         }
+        private void btBuscarTipoExamen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GeneralC.buscarDevuelveFila(Sentencias.EXAMEN_LABORATORIO_LISTAR,
+                                        null,
+                                        new GeneralC.cargarInfoFila(cargarGrupo),
+                                        Titulos.TITULO_BUSCAR_TIPO_LABORATORIO,
+                                        true);
+            }
+            catch (Exception ex)
+            {
+                Mensajes.mensajeError(ex);
+            }
+        }
+
         private void cargarGrupo(DataRow dRows)
         {
             clasificacionParaclinico.idGrupo = dRows.Field<int>("codigo");
             txtGrupo.Text = dRows.Field<string>("Descripcion");
-            cargarListaProcedimiento(ConstanteGeneral.SIN_VALOR_NUMERICO.ToString());
+            cargarListaProcedimiento(ConstanteGeneral.SIN_VALOR_NUMERICO.ToString(),
+                                      clasificacionParaclinico.dtProcedimiento,
+                                      ref dgvClasificacionParaclinico,
+                                      clasificacionParaclinico.idGrupo.ToString(),
+                                      Sentencias.CLASIFICACION_PROCEDIMIENTO_PAGINACION);
         }
+
+        private void cargarTipoLaboratorio(DataRow dRows)
+        {
+            clasificacionParaclinico.idTipoLaboratorio = dRows.Field<int>("codigo");
+            txtTipoExamen.Text = dRows.Field<string>("Descripcion");
+            cargarListaProcedimiento(ConstanteGeneral.SIN_VALOR_NUMERICO.ToString(),
+                                    clasificacionParaclinico.dtExamen,
+                                    ref dgvClasificacionExamen,
+                                    clasificacionParaclinico.idTipoLaboratorio.ToString(),
+                                    Sentencias.EXAMEN_PARACLINICOS_PAGINACION);
+        }
+
         private void ConfiguracionExamenLaboratorioUI_Load(object sender, EventArgs e)
         {
             validarGrilla(dgvClasificacionParaclinico);
+            validarGrilla(dgvClasificacionExamen);
         }
 
         private void dgvClasificacionParaclinico_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -104,17 +140,22 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
         #region ClasificacionParaclinico
 
-        private void cargarListaProcedimiento(string valor)
+        private void cargarListaProcedimiento(string valor,
+                                              DataTable dt, 
+                                              ref DataGridView grilla,
+                                              string id,
+                                              string consulta)
         {
             List<string> paramtro = new List<string>();
             paramtro.Add(valor);
-            paramtro.Add(clasificacionParaclinico.idGrupo.ToString());
-            GeneralC.llenarTabla(Sentencias.CLASIFICACION_PROCEDIMIENTO_PAGINACION, paramtro, clasificacionParaclinico.dtProcedimiento);
-            bindNavegador.DataSource = clasificacionParaclinico.dtProcedimiento;
-            dgvClasificacionParaclinico.DataSource = bindNavegador.DataSource;
-            clasificacionParaclinico.numPaginacion = clasificacionParaclinico.dtProcedimiento.Rows[0].Field<int>("Fila");
+            paramtro.Add(id);
+            GeneralC.llenarTabla(consulta, paramtro, dt);
+            bindNavegador.DataSource = dt;
+            grilla.DataSource = bindNavegador.DataSource;
+            clasificacionParaclinico.numPaginacion = dt.Rows[0].Field<int>("Fila");
+            quitarControl();
             numeroPaginas(clasificacionParaclinico.numPaginacion);
-            lbRegistros.Text = "N° Registro: " + (clasificacionParaclinico.dtProcedimiento.Rows.Count).ToString();
+            lbRegistros.Text = "N° Registro: " + (dt.Rows.Count).ToString();
         }
 
         private void paginacion(object sender, LinkLabelLinkClickedEventArgs e)
@@ -122,7 +163,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             if (clasificacionParaclinico.editable == false)
             {
                 remarcarLinkLaber();
-                cargarListaProcedimiento(((LinkLabel)sender).Tag.ToString());
+                CargarProcedimiento(sender);
                 ((LinkLabel)sender).LinkVisited = true;
                 clasificacionParaclinico.sesion = Convert.ToInt32(((LinkLabel)sender).Name);
             }
@@ -168,7 +209,6 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
 
         #endregion
-
         private void validarGrilla(DataGridView  grilla) {
             grilla.ReadOnly = false;
             grilla.Columns[0].DataPropertyName = "idProcedimiento";
@@ -183,19 +223,40 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
 
         private void clasificacionParaclinicoGuardar() {
+            clasificacioParaclinicoCrear(clasificacionParaclinico.dtProcedimiento);
             ConfiguracionParaclinicoDAL.guardarClasificacionParaclinico(clasificacionParaclinico);
             clasificacionParaclinico.editable = false;
         }
 
-        private void clasificacioParaclinicoCrear() {
+        private void clasificacioParaclinicoCrear(DataTable dt) {
             clasificacionParaclinico.dtRegistro.Clear();
-            foreach (DataRow dRows in clasificacionParaclinico.dtProcedimiento.Select("Estado = True")) {
+            foreach (DataRow dRows in dt.Select("Estado = True")) {
                    clasificacionParaclinico.dtRegistro.ImportRow(dRows);
             }         
         }
         private void filtrarRegistro() {
-            if (clasificacionParaclinico.dtProcedimiento.Rows.Count > 0) {
                 bindNavegador.Filter = "Cups Like '%" + txtBuscarItems.Text + "%' Or Descripcion Like '%" + txtBuscarItems.Text + "%'";
+
+        }
+        private void quitarControl() {
+            foreach (LinkLabel link in pnPaginador.Controls) {
+                pnPaginador.Controls.Remove(link);
+            }
+        }
+        private void CargarProcedimiento(object sender) {
+
+            if (tabControlGalactus1.SelectedIndex == 0) {
+                cargarListaProcedimiento(((LinkLabel)sender).Tag.ToString(),
+                                    clasificacionParaclinico.dtProcedimiento,
+                                    ref dgvClasificacionParaclinico,
+                                    clasificacionParaclinico.idGrupo.ToString(),
+                                    Sentencias.CLASIFICACION_PROCEDIMIENTO_PAGINACION);
+            } else if (tabControlGalactus1.SelectedIndex == 1) {
+                cargarListaProcedimiento(((LinkLabel)sender).Tag.ToString(),
+                                 clasificacionParaclinico.dtExamen,
+                                 ref dgvClasificacionExamen,
+                                 clasificacionParaclinico.idTipoLaboratorio.ToString(),
+                                 Sentencias.EXAMEN_PARACLINICOS_PAGINACION);
             }
         }
     }
