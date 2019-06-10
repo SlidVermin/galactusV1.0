@@ -46,39 +46,26 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label33 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabPestañas = new Galactus.Util.Controles.TabControlGalactus();
-            this.tabCups = new System.Windows.Forms.TabPage();
-            this.tabOxigeno = new System.Windows.Forms.TabPage();
-            this.tabMedicamentos = new System.Windows.Forms.TabPage();
-            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
-            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tstModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
-            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
-            this.label15 = new System.Windows.Forms.Label();
-            this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
-            this.dgCodigoPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgDescripcionPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgCantidadPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgPrecioPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgValorPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvOxigenos = new System.Windows.Forms.DataGridView();
-            this.dgCodigoOx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgDescripcionOx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgLitros = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgPrecioOx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgValorOx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
-            this.dgCodigoMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgCodigoEquiMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgDescripcionMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgCantidadMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgPrecioMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgValorMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtValorFactura = new System.Windows.Forms.TextBox();
+            this.txtCodigoFactura = new System.Windows.Forms.TextBox();
+            this.dtpVence = new System.Windows.Forms.DateTimePicker();
+            this.dtpCreacion = new System.Windows.Forms.DateTimePicker();
+            this.Label11 = new System.Windows.Forms.Label();
+            this.Label13 = new System.Windows.Forms.Label();
+            this.txtRegimen = new System.Windows.Forms.TextBox();
+            this.txtAfiliacion = new System.Windows.Forms.TextBox();
+            this.Label8 = new System.Windows.Forms.Label();
+            this.Label12 = new System.Windows.Forms.Label();
+            this.btBuscarAtencion = new System.Windows.Forms.Button();
+            this.dtpEgreso = new System.Windows.Forms.DateTimePicker();
+            this.dtpIngreso = new System.Windows.Forms.DateTimePicker();
+            this.txtPaciente = new System.Windows.Forms.TextBox();
+            this.lblAdmision = new System.Windows.Forms.Label();
+            this.lblFechaEgreso = new System.Windows.Forms.Label();
+            this.lblFechaIngreso = new System.Windows.Forms.Label();
+            this.txtAdmision = new System.Windows.Forms.TextBox();
+            this.btBuscarContrato = new System.Windows.Forms.Button();
             this.txtListaPrecio = new System.Windows.Forms.TextBox();
             this.lblListaMed = new System.Windows.Forms.Label();
             this.txtTarifa = new System.Windows.Forms.TextBox();
@@ -88,38 +75,51 @@
             this.Label18 = new System.Windows.Forms.Label();
             this.txtDocumento = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btBuscarContrato = new System.Windows.Forms.Button();
-            this.dtpEgreso = new System.Windows.Forms.DateTimePicker();
-            this.dtpIngreso = new System.Windows.Forms.DateTimePicker();
-            this.txtPaciente = new System.Windows.Forms.TextBox();
-            this.lblAdmision = new System.Windows.Forms.Label();
-            this.lblFechaEgreso = new System.Windows.Forms.Label();
-            this.lblFechaIngreso = new System.Windows.Forms.Label();
-            this.txtAtencion = new System.Windows.Forms.TextBox();
-            this.btBuscarAtencion = new System.Windows.Forms.Button();
-            this.txtRegimen = new System.Windows.Forms.TextBox();
-            this.txtAfiliacion = new System.Windows.Forms.TextBox();
-            this.Label8 = new System.Windows.Forms.Label();
-            this.Label12 = new System.Windows.Forms.Label();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtValorFactura = new System.Windows.Forms.TextBox();
-            this.txtCodigoFactura = new System.Windows.Forms.TextBox();
-            this.dtpVence = new System.Windows.Forms.DateTimePicker();
-            this.dtpCreacion = new System.Windows.Forms.DateTimePicker();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.Label13 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPestañas = new Galactus.Util.Controles.TabControlGalactus();
+            this.tabCups = new System.Windows.Forms.TabPage();
+            this.dgvProcedimientos = new System.Windows.Forms.DataGridView();
+            this.dgCodigoPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDescripcionPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgCantidadPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgPrecioPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgValorPro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabOxigeno = new System.Windows.Forms.TabPage();
+            this.dgvOxigenos = new System.Windows.Forms.DataGridView();
+            this.dgCodigoOx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDescripcionOx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgLitros = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgPrecioOx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgValorOx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabMedicamentos = new System.Windows.Forms.TabPage();
+            this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
+            this.dgCodigoMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgCodigoEquiMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDescripcionMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgCantidadMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgPrecioMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgValorMed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tstModificar = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tsbAnular = new System.Windows.Forms.ToolStripButton();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPestañas.SuspendLayout();
             this.tabCups.SuspendLayout();
-            this.tabOxigeno.SuspendLayout();
-            this.tabMedicamentos.SuspendLayout();
-            this.tstMenuPatron.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).BeginInit();
+            this.tabOxigeno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOxigenos)).BeginInit();
+            this.tabMedicamentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).BeginInit();
-            this.GroupBox2.SuspendLayout();
+            this.tstMenuPatron.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -129,7 +129,7 @@
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Location = new System.Drawing.Point(23, 43);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1008, 207);
+            this.panel2.Size = new System.Drawing.Size(1008, 202);
             this.panel2.TabIndex = 63;
             // 
             // label33
@@ -157,7 +157,7 @@
             this.panel1.Controls.Add(this.lblAdmision);
             this.panel1.Controls.Add(this.lblFechaEgreso);
             this.panel1.Controls.Add(this.lblFechaIngreso);
-            this.panel1.Controls.Add(this.txtAtencion);
+            this.panel1.Controls.Add(this.txtAdmision);
             this.panel1.Controls.Add(this.btBuscarContrato);
             this.panel1.Controls.Add(this.txtListaPrecio);
             this.panel1.Controls.Add(this.lblListaMed);
@@ -173,6 +173,323 @@
             this.panel1.Size = new System.Drawing.Size(983, 155);
             this.panel1.TabIndex = 32;
             // 
+            // GroupBox2
+            // 
+            this.GroupBox2.Controls.Add(this.txtValorFactura);
+            this.GroupBox2.Controls.Add(this.txtCodigoFactura);
+            this.GroupBox2.Controls.Add(this.dtpVence);
+            this.GroupBox2.Controls.Add(this.dtpCreacion);
+            this.GroupBox2.Controls.Add(this.Label11);
+            this.GroupBox2.Controls.Add(this.Label13);
+            this.GroupBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GroupBox2.Location = new System.Drawing.Point(607, 62);
+            this.GroupBox2.Name = "GroupBox2";
+            this.GroupBox2.Size = new System.Drawing.Size(371, 86);
+            this.GroupBox2.TabIndex = 10096;
+            this.GroupBox2.TabStop = false;
+            this.GroupBox2.Text = "Factura:";
+            // 
+            // txtValorFactura
+            // 
+            this.txtValorFactura.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorFactura.Location = new System.Drawing.Point(227, 44);
+            this.txtValorFactura.Name = "txtValorFactura";
+            this.txtValorFactura.ReadOnly = true;
+            this.txtValorFactura.Size = new System.Drawing.Size(135, 26);
+            this.txtValorFactura.TabIndex = 10087;
+            this.txtValorFactura.Text = "$120.520.000";
+            this.txtValorFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtCodigoFactura
+            // 
+            this.txtCodigoFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.txtCodigoFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigoFactura.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoFactura.Location = new System.Drawing.Point(227, 21);
+            this.txtCodigoFactura.Name = "txtCodigoFactura";
+            this.txtCodigoFactura.ReadOnly = true;
+            this.txtCodigoFactura.Size = new System.Drawing.Size(135, 19);
+            this.txtCodigoFactura.TabIndex = 10086;
+            this.txtCodigoFactura.Text = "GAL0000001";
+            this.txtCodigoFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dtpVence
+            // 
+            this.dtpVence.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtpVence.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
+            this.dtpVence.CustomFormat = "dd/MM/yyyy  HH:mm";
+            this.dtpVence.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpVence.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpVence.Location = new System.Drawing.Point(70, 50);
+            this.dtpVence.Name = "dtpVence";
+            this.dtpVence.Size = new System.Drawing.Size(145, 21);
+            this.dtpVence.TabIndex = 10085;
+            // 
+            // dtpCreacion
+            // 
+            this.dtpCreacion.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtpCreacion.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
+            this.dtpCreacion.CustomFormat = "dd/MM/yyyy  HH:mm";
+            this.dtpCreacion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCreacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCreacion.Location = new System.Drawing.Point(70, 19);
+            this.dtpCreacion.Name = "dtpCreacion";
+            this.dtpCreacion.Size = new System.Drawing.Size(145, 21);
+            this.dtpCreacion.TabIndex = 10084;
+            // 
+            // Label11
+            // 
+            this.Label11.AutoSize = true;
+            this.Label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label11.ForeColor = System.Drawing.Color.Black;
+            this.Label11.Location = new System.Drawing.Point(6, 23);
+            this.Label11.Name = "Label11";
+            this.Label11.Size = new System.Drawing.Size(60, 15);
+            this.Label11.TabIndex = 10082;
+            this.Label11.Text = "Creación:";
+            // 
+            // Label13
+            // 
+            this.Label13.AutoSize = true;
+            this.Label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label13.ForeColor = System.Drawing.Color.Black;
+            this.Label13.Location = new System.Drawing.Point(23, 54);
+            this.Label13.Name = "Label13";
+            this.Label13.Size = new System.Drawing.Size(43, 15);
+            this.Label13.TabIndex = 10083;
+            this.Label13.Text = "Vence:";
+            // 
+            // txtRegimen
+            // 
+            this.txtRegimen.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegimen.Location = new System.Drawing.Point(438, 120);
+            this.txtRegimen.Name = "txtRegimen";
+            this.txtRegimen.ReadOnly = true;
+            this.txtRegimen.Size = new System.Drawing.Size(160, 21);
+            this.txtRegimen.TabIndex = 10093;
+            // 
+            // txtAfiliacion
+            // 
+            this.txtAfiliacion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAfiliacion.Location = new System.Drawing.Point(438, 94);
+            this.txtAfiliacion.Name = "txtAfiliacion";
+            this.txtAfiliacion.ReadOnly = true;
+            this.txtAfiliacion.Size = new System.Drawing.Size(160, 21);
+            this.txtAfiliacion.TabIndex = 10095;
+            // 
+            // Label8
+            // 
+            this.Label8.AutoSize = true;
+            this.Label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label8.ForeColor = System.Drawing.Color.Black;
+            this.Label8.Location = new System.Drawing.Point(371, 123);
+            this.Label8.Name = "Label8";
+            this.Label8.Size = new System.Drawing.Size(61, 15);
+            this.Label8.TabIndex = 10092;
+            this.Label8.Text = "Régimen:";
+            // 
+            // Label12
+            // 
+            this.Label12.AutoSize = true;
+            this.Label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label12.ForeColor = System.Drawing.Color.Black;
+            this.Label12.Location = new System.Drawing.Point(373, 97);
+            this.Label12.Name = "Label12";
+            this.Label12.Size = new System.Drawing.Size(59, 15);
+            this.Label12.TabIndex = 10094;
+            this.Label12.Text = "Afiliación:";
+            // 
+            // btBuscarAtencion
+            // 
+            this.btBuscarAtencion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscarAtencion.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarAtencion.Location = new System.Drawing.Point(212, 64);
+            this.btBuscarAtencion.Name = "btBuscarAtencion";
+            this.btBuscarAtencion.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarAtencion.TabIndex = 10091;
+            this.btBuscarAtencion.UseVisualStyleBackColor = true;
+            this.btBuscarAtencion.Click += new System.EventHandler(this.btBuscarAtencion_Click);
+            // 
+            // dtpEgreso
+            // 
+            this.dtpEgreso.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtpEgreso.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
+            this.dtpEgreso.CustomFormat = "dd/MM/yyyy  HH:mm";
+            this.dtpEgreso.Enabled = false;
+            this.dtpEgreso.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEgreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEgreso.Location = new System.Drawing.Point(119, 120);
+            this.dtpEgreso.Name = "dtpEgreso";
+            this.dtpEgreso.Size = new System.Drawing.Size(145, 21);
+            this.dtpEgreso.TabIndex = 10090;
+            // 
+            // dtpIngreso
+            // 
+            this.dtpIngreso.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.dtpIngreso.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
+            this.dtpIngreso.CustomFormat = "dd/MM/yyyy  HH:mm";
+            this.dtpIngreso.Enabled = false;
+            this.dtpIngreso.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpIngreso.Location = new System.Drawing.Point(119, 94);
+            this.dtpIngreso.Name = "dtpIngreso";
+            this.dtpIngreso.Size = new System.Drawing.Size(145, 21);
+            this.dtpIngreso.TabIndex = 10089;
+            // 
+            // txtPaciente
+            // 
+            this.txtPaciente.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaciente.Location = new System.Drawing.Point(244, 66);
+            this.txtPaciente.Name = "txtPaciente";
+            this.txtPaciente.ReadOnly = true;
+            this.txtPaciente.Size = new System.Drawing.Size(354, 21);
+            this.txtPaciente.TabIndex = 10084;
+            // 
+            // lblAdmision
+            // 
+            this.lblAdmision.AutoSize = true;
+            this.lblAdmision.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmision.ForeColor = System.Drawing.Color.Black;
+            this.lblAdmision.Location = new System.Drawing.Point(7, 69);
+            this.lblAdmision.Name = "lblAdmision";
+            this.lblAdmision.Size = new System.Drawing.Size(62, 15);
+            this.lblAdmision.TabIndex = 10083;
+            this.lblAdmision.Text = "Admisión:";
+            // 
+            // lblFechaEgreso
+            // 
+            this.lblFechaEgreso.AutoSize = true;
+            this.lblFechaEgreso.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaEgreso.ForeColor = System.Drawing.Color.Black;
+            this.lblFechaEgreso.Location = new System.Drawing.Point(7, 123);
+            this.lblFechaEgreso.Name = "lblFechaEgreso";
+            this.lblFechaEgreso.Size = new System.Drawing.Size(50, 15);
+            this.lblFechaEgreso.TabIndex = 10087;
+            this.lblFechaEgreso.Text = "Egreso:";
+            // 
+            // lblFechaIngreso
+            // 
+            this.lblFechaIngreso.AutoSize = true;
+            this.lblFechaIngreso.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaIngreso.ForeColor = System.Drawing.Color.Black;
+            this.lblFechaIngreso.Location = new System.Drawing.Point(7, 97);
+            this.lblFechaIngreso.Name = "lblFechaIngreso";
+            this.lblFechaIngreso.Size = new System.Drawing.Size(52, 15);
+            this.lblFechaIngreso.TabIndex = 10086;
+            this.lblFechaIngreso.Text = "Ingreso:";
+            // 
+            // txtAdmision
+            // 
+            this.txtAdmision.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAdmision.Location = new System.Drawing.Point(119, 66);
+            this.txtAdmision.Name = "txtAdmision";
+            this.txtAdmision.ReadOnly = true;
+            this.txtAdmision.Size = new System.Drawing.Size(87, 21);
+            this.txtAdmision.TabIndex = 10085;
+            this.txtAdmision.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btBuscarContrato
+            // 
+            this.btBuscarContrato.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBuscarContrato.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarContrato.Location = new System.Drawing.Point(212, 10);
+            this.btBuscarContrato.Name = "btBuscarContrato";
+            this.btBuscarContrato.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarContrato.TabIndex = 272;
+            this.btBuscarContrato.UseVisualStyleBackColor = true;
+            this.btBuscarContrato.Click += new System.EventHandler(this.btBuscarContrato_Click);
+            // 
+            // txtListaPrecio
+            // 
+            this.txtListaPrecio.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtListaPrecio.Location = new System.Drawing.Point(559, 39);
+            this.txtListaPrecio.Name = "txtListaPrecio";
+            this.txtListaPrecio.ReadOnly = true;
+            this.txtListaPrecio.Size = new System.Drawing.Size(393, 21);
+            this.txtListaPrecio.TabIndex = 270;
+            // 
+            // lblListaMed
+            // 
+            this.lblListaMed.AutoSize = true;
+            this.lblListaMed.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaMed.ForeColor = System.Drawing.Color.Black;
+            this.lblListaMed.Location = new System.Drawing.Point(359, 42);
+            this.lblListaMed.Name = "lblListaMed";
+            this.lblListaMed.Size = new System.Drawing.Size(194, 15);
+            this.lblListaMed.TabIndex = 269;
+            this.lblListaMed.Text = "Lista de precio de medicamentos:";
+            // 
+            // txtTarifa
+            // 
+            this.txtTarifa.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTarifa.Location = new System.Drawing.Point(119, 39);
+            this.txtTarifa.Name = "txtTarifa";
+            this.txtTarifa.ReadOnly = true;
+            this.txtTarifa.Size = new System.Drawing.Size(223, 21);
+            this.txtTarifa.TabIndex = 268;
+            this.txtTarifa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblTarifa
+            // 
+            this.lblTarifa.AutoSize = true;
+            this.lblTarifa.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTarifa.ForeColor = System.Drawing.Color.Black;
+            this.lblTarifa.Location = new System.Drawing.Point(7, 42);
+            this.lblTarifa.Name = "lblTarifa";
+            this.lblTarifa.Size = new System.Drawing.Size(109, 15);
+            this.lblTarifa.TabIndex = 267;
+            this.lblTarifa.Text = "Tarifa de servicios:";
+            // 
+            // txtCodigoContrato
+            // 
+            this.txtCodigoContrato.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigoContrato.Location = new System.Drawing.Point(119, 12);
+            this.txtCodigoContrato.Name = "txtCodigoContrato";
+            this.txtCodigoContrato.ReadOnly = true;
+            this.txtCodigoContrato.Size = new System.Drawing.Size(87, 21);
+            this.txtCodigoContrato.TabIndex = 271;
+            this.txtCodigoContrato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.ForeColor = System.Drawing.Color.Black;
+            this.lblCodigo.Location = new System.Drawing.Point(7, 15);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(57, 15);
+            this.lblCodigo.TabIndex = 265;
+            this.lblCodigo.Text = "Contrato:";
+            // 
+            // Label18
+            // 
+            this.Label18.AutoSize = true;
+            this.Label18.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label18.ForeColor = System.Drawing.Color.Black;
+            this.Label18.Location = new System.Drawing.Point(258, 15);
+            this.Label18.Name = "Label18";
+            this.Label18.Size = new System.Drawing.Size(28, 15);
+            this.Label18.TabIndex = 266;
+            this.Label18.Text = "NIT:";
+            // 
+            // txtDocumento
+            // 
+            this.txtDocumento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocumento.Location = new System.Drawing.Point(288, 12);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.ReadOnly = true;
+            this.txtDocumento.Size = new System.Drawing.Size(122, 21);
+            this.txtDocumento.TabIndex = 263;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(416, 12);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ReadOnly = true;
+            this.txtNombre.Size = new System.Drawing.Size(536, 21);
+            this.txtNombre.TabIndex = 264;
+            // 
             // btnSalir
             // 
             this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -184,6 +501,7 @@
             this.btnSalir.TabIndex = 62;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pictureBox1
             // 
@@ -220,116 +538,6 @@
             this.tabCups.TabIndex = 0;
             this.tabCups.Text = "Procedimientos CUPS";
             this.tabCups.UseVisualStyleBackColor = true;
-            // 
-            // tabOxigeno
-            // 
-            this.tabOxigeno.Controls.Add(this.dgvOxigenos);
-            this.tabOxigeno.Location = new System.Drawing.Point(124, 4);
-            this.tabOxigeno.Name = "tabOxigeno";
-            this.tabOxigeno.Padding = new System.Windows.Forms.Padding(3);
-            this.tabOxigeno.Size = new System.Drawing.Size(881, 274);
-            this.tabOxigeno.TabIndex = 1;
-            this.tabOxigeno.Text = "Oxigeno";
-            this.tabOxigeno.UseVisualStyleBackColor = true;
-            // 
-            // tabMedicamentos
-            // 
-            this.tabMedicamentos.Controls.Add(this.dgvMedicamentos);
-            this.tabMedicamentos.Location = new System.Drawing.Point(124, 4);
-            this.tabMedicamentos.Name = "tabMedicamentos";
-            this.tabMedicamentos.Size = new System.Drawing.Size(881, 274);
-            this.tabMedicamentos.TabIndex = 2;
-            this.tabMedicamentos.Text = "Medicamentos e insumos";
-            this.tabMedicamentos.UseVisualStyleBackColor = true;
-            // 
-            // tstMenuPatron
-            // 
-            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tstModificar,
-            this.tsbCancelar,
-            this.tsbGuardar,
-            this.tsbBuscar,
-            this.tsbAnular});
-            this.tstMenuPatron.Location = new System.Drawing.Point(0, 555);
-            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.Name = "tstMenuPatron";
-            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
-            this.tstMenuPatron.TabIndex = 59;
-            this.tstMenuPatron.Text = "toolStrip1";
-            // 
-            // tsbNuevo
-            // 
-            this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
-            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
-            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbNuevo.Name = "tsbNuevo";
-            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
-            this.tsbNuevo.Text = "Nuevo";
-            // 
-            // tstModificar
-            // 
-            this.tstModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tstModificar.Image = global::Galactus.Properties.Resources.bt_Editar;
-            this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstModificar.Name = "tstModificar";
-            this.tstModificar.Size = new System.Drawing.Size(78, 22);
-            this.tstModificar.Text = "Modificar";
-            // 
-            // tsbCancelar
-            // 
-            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsbCancelar.Text = "Cancelar";
-            // 
-            // tsbGuardar
-            // 
-            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
-            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
-            this.tsbGuardar.Text = "Guardar";
-            // 
-            // tsbBuscar
-            // 
-            this.tsbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
-            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbBuscar.Name = "tsbBuscar";
-            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
-            this.tsbBuscar.Text = "Buscar";
-            // 
-            // tsbAnular
-            // 
-            this.tsbAnular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
-            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbAnular.Name = "tsbAnular";
-            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
-            this.tsbAnular.Text = "Anular";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 12F);
-            this.label15.Location = new System.Drawing.Point(60, 15);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(163, 18);
-            this.label15.TabIndex = 58;
-            this.label15.Text = "Factura de atenciones";
             // 
             // dgvProcedimientos
             // 
@@ -419,6 +627,17 @@
             this.dgValorPro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dgValorPro.Width = 140;
             // 
+            // tabOxigeno
+            // 
+            this.tabOxigeno.Controls.Add(this.dgvOxigenos);
+            this.tabOxigeno.Location = new System.Drawing.Point(124, 4);
+            this.tabOxigeno.Name = "tabOxigeno";
+            this.tabOxigeno.Padding = new System.Windows.Forms.Padding(3);
+            this.tabOxigeno.Size = new System.Drawing.Size(881, 274);
+            this.tabOxigeno.TabIndex = 1;
+            this.tabOxigeno.Text = "Oxigeno";
+            this.tabOxigeno.UseVisualStyleBackColor = true;
+            // 
             // dgvOxigenos
             // 
             this.dgvOxigenos.AllowUserToAddRows = false;
@@ -505,6 +724,16 @@
             this.dgValorOx.Name = "dgValorOx";
             this.dgValorOx.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dgValorOx.Width = 140;
+            // 
+            // tabMedicamentos
+            // 
+            this.tabMedicamentos.Controls.Add(this.dgvMedicamentos);
+            this.tabMedicamentos.Location = new System.Drawing.Point(124, 4);
+            this.tabMedicamentos.Name = "tabMedicamentos";
+            this.tabMedicamentos.Size = new System.Drawing.Size(881, 274);
+            this.tabMedicamentos.TabIndex = 2;
+            this.tabMedicamentos.Text = "Medicamentos e insumos";
+            this.tabMedicamentos.UseVisualStyleBackColor = true;
             // 
             // dgvMedicamentos
             // 
@@ -604,318 +833,98 @@
             this.dgValorMed.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dgValorMed.Width = 140;
             // 
-            // txtListaPrecio
+            // tstMenuPatron
             // 
-            this.txtListaPrecio.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtListaPrecio.Location = new System.Drawing.Point(559, 39);
-            this.txtListaPrecio.Name = "txtListaPrecio";
-            this.txtListaPrecio.ReadOnly = true;
-            this.txtListaPrecio.Size = new System.Drawing.Size(393, 21);
-            this.txtListaPrecio.TabIndex = 270;
+            this.tstMenuPatron.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tstModificar,
+            this.tsbCancelar,
+            this.tsbGuardar,
+            this.tsbBuscar,
+            this.tsbAnular});
+            this.tstMenuPatron.Location = new System.Drawing.Point(0, 555);
+            this.tstMenuPatron.MaximumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.MinimumSize = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.Name = "tstMenuPatron";
+            this.tstMenuPatron.Size = new System.Drawing.Size(1040, 25);
+            this.tstMenuPatron.TabIndex = 59;
+            this.tstMenuPatron.Text = "toolStrip1";
             // 
-            // lblListaMed
+            // tsbNuevo
             // 
-            this.lblListaMed.AutoSize = true;
-            this.lblListaMed.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaMed.ForeColor = System.Drawing.Color.Black;
-            this.lblListaMed.Location = new System.Drawing.Point(359, 42);
-            this.lblListaMed.Name = "lblListaMed";
-            this.lblListaMed.Size = new System.Drawing.Size(194, 15);
-            this.lblListaMed.TabIndex = 269;
-            this.lblListaMed.Text = "Lista de precio de medicamentos:";
+            this.tsbNuevo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbNuevo.Image = global::Galactus.Properties.Resources.btn_nuevo;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.White;
+            this.tsbNuevo.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
             // 
-            // txtTarifa
+            // tstModificar
             // 
-            this.txtTarifa.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTarifa.Location = new System.Drawing.Point(119, 39);
-            this.txtTarifa.Name = "txtTarifa";
-            this.txtTarifa.ReadOnly = true;
-            this.txtTarifa.Size = new System.Drawing.Size(223, 21);
-            this.txtTarifa.TabIndex = 268;
-            this.txtTarifa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tstModificar.Enabled = false;
+            this.tstModificar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tstModificar.Image = global::Galactus.Properties.Resources.bt_Editar;
+            this.tstModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstModificar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstModificar.Name = "tstModificar";
+            this.tstModificar.Size = new System.Drawing.Size(78, 22);
+            this.tstModificar.Text = "Modificar";
             // 
-            // lblTarifa
+            // tsbCancelar
             // 
-            this.lblTarifa.AutoSize = true;
-            this.lblTarifa.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTarifa.ForeColor = System.Drawing.Color.Black;
-            this.lblTarifa.Location = new System.Drawing.Point(6, 42);
-            this.lblTarifa.Name = "lblTarifa";
-            this.lblTarifa.Size = new System.Drawing.Size(109, 15);
-            this.lblTarifa.TabIndex = 267;
-            this.lblTarifa.Text = "Tarifa de servicios:";
+            this.tsbCancelar.Enabled = false;
+            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
             // 
-            // txtCodigoContrato
+            // tsbGuardar
             // 
-            this.txtCodigoContrato.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoContrato.Location = new System.Drawing.Point(119, 12);
-            this.txtCodigoContrato.Name = "txtCodigoContrato";
-            this.txtCodigoContrato.ReadOnly = true;
-            this.txtCodigoContrato.Size = new System.Drawing.Size(87, 21);
-            this.txtCodigoContrato.TabIndex = 271;
-            this.txtCodigoContrato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tsbGuardar.Enabled = false;
+            this.tsbGuardar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbGuardar.Image = global::Galactus.Properties.Resources.btn_guardar;
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
+            this.tsbGuardar.Text = "Guardar";
             // 
-            // lblCodigo
+            // tsbBuscar
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.ForeColor = System.Drawing.Color.Black;
-            this.lblCodigo.Location = new System.Drawing.Point(58, 15);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(57, 15);
-            this.lblCodigo.TabIndex = 265;
-            this.lblCodigo.Text = "Contrato:";
+            this.tsbBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbBuscar.Image = global::Galactus.Properties.Resources.btn_buscar;
+            this.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBuscar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbBuscar.Name = "tsbBuscar";
+            this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
+            this.tsbBuscar.Text = "Buscar";
             // 
-            // Label18
+            // tsbAnular
             // 
-            this.Label18.AutoSize = true;
-            this.Label18.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label18.ForeColor = System.Drawing.Color.Black;
-            this.Label18.Location = new System.Drawing.Point(258, 15);
-            this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(28, 15);
-            this.Label18.TabIndex = 266;
-            this.Label18.Text = "NIT:";
+            this.tsbAnular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tsbAnular.Enabled = false;
+            this.tsbAnular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbAnular.Image = global::Galactus.Properties.Resources.btn_anular;
+            this.tsbAnular.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAnular.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbAnular.Name = "tsbAnular";
+            this.tsbAnular.Size = new System.Drawing.Size(62, 22);
+            this.tsbAnular.Text = "Anular";
             // 
-            // txtDocumento
+            // label15
             // 
-            this.txtDocumento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDocumento.Location = new System.Drawing.Point(288, 12);
-            this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.ReadOnly = true;
-            this.txtDocumento.Size = new System.Drawing.Size(122, 21);
-            this.txtDocumento.TabIndex = 263;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(416, 12);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(536, 21);
-            this.txtNombre.TabIndex = 264;
-            // 
-            // btBuscarContrato
-            // 
-            this.btBuscarContrato.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBuscarContrato.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarContrato.Location = new System.Drawing.Point(212, 10);
-            this.btBuscarContrato.Name = "btBuscarContrato";
-            this.btBuscarContrato.Size = new System.Drawing.Size(26, 24);
-            this.btBuscarContrato.TabIndex = 272;
-            this.btBuscarContrato.UseVisualStyleBackColor = true;
-            // 
-            // dtpEgreso
-            // 
-            this.dtpEgreso.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.dtpEgreso.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
-            this.dtpEgreso.CustomFormat = "dd/MM/yyyy  HH:mm:ss";
-            this.dtpEgreso.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpEgreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEgreso.Location = new System.Drawing.Point(119, 120);
-            this.dtpEgreso.Name = "dtpEgreso";
-            this.dtpEgreso.Size = new System.Drawing.Size(145, 21);
-            this.dtpEgreso.TabIndex = 10090;
-            // 
-            // dtpIngreso
-            // 
-            this.dtpIngreso.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.dtpIngreso.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
-            this.dtpIngreso.CustomFormat = "dd/MM/yyyy  HH:mm:ss";
-            this.dtpIngreso.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpIngreso.Location = new System.Drawing.Point(119, 94);
-            this.dtpIngreso.Name = "dtpIngreso";
-            this.dtpIngreso.Size = new System.Drawing.Size(145, 21);
-            this.dtpIngreso.TabIndex = 10089;
-            // 
-            // txtPaciente
-            // 
-            this.txtPaciente.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaciente.Location = new System.Drawing.Point(244, 66);
-            this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.ReadOnly = true;
-            this.txtPaciente.Size = new System.Drawing.Size(354, 21);
-            this.txtPaciente.TabIndex = 10084;
-            // 
-            // lblAdmision
-            // 
-            this.lblAdmision.AutoSize = true;
-            this.lblAdmision.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmision.ForeColor = System.Drawing.Color.Black;
-            this.lblAdmision.Location = new System.Drawing.Point(58, 69);
-            this.lblAdmision.Name = "lblAdmision";
-            this.lblAdmision.Size = new System.Drawing.Size(57, 15);
-            this.lblAdmision.TabIndex = 10083;
-            this.lblAdmision.Text = "Atención:";
-            // 
-            // lblFechaEgreso
-            // 
-            this.lblFechaEgreso.AutoSize = true;
-            this.lblFechaEgreso.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaEgreso.ForeColor = System.Drawing.Color.Black;
-            this.lblFechaEgreso.Location = new System.Drawing.Point(65, 123);
-            this.lblFechaEgreso.Name = "lblFechaEgreso";
-            this.lblFechaEgreso.Size = new System.Drawing.Size(50, 15);
-            this.lblFechaEgreso.TabIndex = 10087;
-            this.lblFechaEgreso.Text = "Egreso:";
-            // 
-            // lblFechaIngreso
-            // 
-            this.lblFechaIngreso.AutoSize = true;
-            this.lblFechaIngreso.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaIngreso.ForeColor = System.Drawing.Color.Black;
-            this.lblFechaIngreso.Location = new System.Drawing.Point(63, 97);
-            this.lblFechaIngreso.Name = "lblFechaIngreso";
-            this.lblFechaIngreso.Size = new System.Drawing.Size(52, 15);
-            this.lblFechaIngreso.TabIndex = 10086;
-            this.lblFechaIngreso.Text = "Ingreso:";
-            // 
-            // txtAtencion
-            // 
-            this.txtAtencion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAtencion.Location = new System.Drawing.Point(119, 66);
-            this.txtAtencion.Name = "txtAtencion";
-            this.txtAtencion.ReadOnly = true;
-            this.txtAtencion.Size = new System.Drawing.Size(87, 21);
-            this.txtAtencion.TabIndex = 10085;
-            this.txtAtencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btBuscarAtencion
-            // 
-            this.btBuscarAtencion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBuscarAtencion.Image = global::Galactus.Properties.Resources.btn_lupa;
-            this.btBuscarAtencion.Location = new System.Drawing.Point(212, 64);
-            this.btBuscarAtencion.Name = "btBuscarAtencion";
-            this.btBuscarAtencion.Size = new System.Drawing.Size(26, 24);
-            this.btBuscarAtencion.TabIndex = 10091;
-            this.btBuscarAtencion.UseVisualStyleBackColor = true;
-            // 
-            // txtRegimen
-            // 
-            this.txtRegimen.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegimen.Location = new System.Drawing.Point(438, 120);
-            this.txtRegimen.Name = "txtRegimen";
-            this.txtRegimen.ReadOnly = true;
-            this.txtRegimen.Size = new System.Drawing.Size(160, 21);
-            this.txtRegimen.TabIndex = 10093;
-            // 
-            // txtAfiliacion
-            // 
-            this.txtAfiliacion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAfiliacion.Location = new System.Drawing.Point(438, 94);
-            this.txtAfiliacion.Name = "txtAfiliacion";
-            this.txtAfiliacion.ReadOnly = true;
-            this.txtAfiliacion.Size = new System.Drawing.Size(160, 21);
-            this.txtAfiliacion.TabIndex = 10095;
-            // 
-            // Label8
-            // 
-            this.Label8.AutoSize = true;
-            this.Label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.ForeColor = System.Drawing.Color.Black;
-            this.Label8.Location = new System.Drawing.Point(371, 123);
-            this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(61, 15);
-            this.Label8.TabIndex = 10092;
-            this.Label8.Text = "Régimen:";
-            // 
-            // Label12
-            // 
-            this.Label12.AutoSize = true;
-            this.Label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label12.ForeColor = System.Drawing.Color.Black;
-            this.Label12.Location = new System.Drawing.Point(373, 97);
-            this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(59, 15);
-            this.Label12.TabIndex = 10094;
-            this.Label12.Text = "Afiliación:";
-            // 
-            // GroupBox2
-            // 
-            this.GroupBox2.Controls.Add(this.txtValorFactura);
-            this.GroupBox2.Controls.Add(this.txtCodigoFactura);
-            this.GroupBox2.Controls.Add(this.dtpVence);
-            this.GroupBox2.Controls.Add(this.dtpCreacion);
-            this.GroupBox2.Controls.Add(this.Label11);
-            this.GroupBox2.Controls.Add(this.Label13);
-            this.GroupBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GroupBox2.Location = new System.Drawing.Point(607, 62);
-            this.GroupBox2.Name = "GroupBox2";
-            this.GroupBox2.Size = new System.Drawing.Size(371, 86);
-            this.GroupBox2.TabIndex = 10096;
-            this.GroupBox2.TabStop = false;
-            this.GroupBox2.Text = "Factura:";
-            // 
-            // txtValorFactura
-            // 
-            this.txtValorFactura.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorFactura.Location = new System.Drawing.Point(227, 44);
-            this.txtValorFactura.Name = "txtValorFactura";
-            this.txtValorFactura.ReadOnly = true;
-            this.txtValorFactura.Size = new System.Drawing.Size(135, 26);
-            this.txtValorFactura.TabIndex = 10087;
-            this.txtValorFactura.Text = "$120.520.000";
-            this.txtValorFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtCodigoFactura
-            // 
-            this.txtCodigoFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.txtCodigoFactura.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodigoFactura.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoFactura.Location = new System.Drawing.Point(227, 21);
-            this.txtCodigoFactura.Name = "txtCodigoFactura";
-            this.txtCodigoFactura.ReadOnly = true;
-            this.txtCodigoFactura.Size = new System.Drawing.Size(135, 19);
-            this.txtCodigoFactura.TabIndex = 10086;
-            this.txtCodigoFactura.Text = "GAL0000001";
-            this.txtCodigoFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dtpVence
-            // 
-            this.dtpVence.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.dtpVence.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
-            this.dtpVence.CustomFormat = "dd/MM/yyyy  HH:mm:ss";
-            this.dtpVence.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpVence.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpVence.Location = new System.Drawing.Point(70, 50);
-            this.dtpVence.Name = "dtpVence";
-            this.dtpVence.Size = new System.Drawing.Size(145, 21);
-            this.dtpVence.TabIndex = 10085;
-            // 
-            // dtpCreacion
-            // 
-            this.dtpCreacion.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.dtpCreacion.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
-            this.dtpCreacion.CustomFormat = "dd/MM/yyyy  HH:mm:ss";
-            this.dtpCreacion.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCreacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCreacion.Location = new System.Drawing.Point(70, 19);
-            this.dtpCreacion.Name = "dtpCreacion";
-            this.dtpCreacion.Size = new System.Drawing.Size(145, 21);
-            this.dtpCreacion.TabIndex = 10084;
-            // 
-            // Label11
-            // 
-            this.Label11.AutoSize = true;
-            this.Label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label11.ForeColor = System.Drawing.Color.Black;
-            this.Label11.Location = new System.Drawing.Point(6, 23);
-            this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(60, 15);
-            this.Label11.TabIndex = 10082;
-            this.Label11.Text = "Creación:";
-            // 
-            // Label13
-            // 
-            this.Label13.AutoSize = true;
-            this.Label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label13.ForeColor = System.Drawing.Color.Black;
-            this.Label13.Location = new System.Drawing.Point(23, 54);
-            this.Label13.Name = "Label13";
-            this.Label13.Size = new System.Drawing.Size(43, 15);
-            this.Label13.TabIndex = 10083;
-            this.Label13.Text = "Vence:";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 12F);
+            this.label15.Location = new System.Drawing.Point(60, 15);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(163, 18);
+            this.label15.TabIndex = 58;
+            this.label15.Text = "Factura de atenciones";
             // 
             // FacturaUI
             // 
@@ -938,18 +947,18 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.GroupBox2.ResumeLayout(false);
+            this.GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPestañas.ResumeLayout(false);
             this.tabCups.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).EndInit();
             this.tabOxigeno.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOxigenos)).EndInit();
             this.tabMedicamentos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).EndInit();
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProcedimientos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOxigenos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).EndInit();
-            this.GroupBox2.ResumeLayout(false);
-            this.GroupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1020,7 +1029,7 @@
         internal System.Windows.Forms.Label lblAdmision;
         internal System.Windows.Forms.Label lblFechaEgreso;
         internal System.Windows.Forms.Label lblFechaIngreso;
-        internal System.Windows.Forms.TextBox txtAtencion;
+        internal System.Windows.Forms.TextBox txtAdmision;
         private System.Windows.Forms.Button btBuscarContrato;
     }
 }

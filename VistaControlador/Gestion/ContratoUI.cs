@@ -56,5 +56,10 @@ namespace Galactus.VistaControlador.Gestion
         {
 
         }
+
+        private void tsbBuscar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
