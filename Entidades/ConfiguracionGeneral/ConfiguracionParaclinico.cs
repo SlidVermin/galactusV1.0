@@ -21,6 +21,7 @@ namespace Galactus.Entidades.ConfiguracionGeneral
             dtProcedimiento = new DataTable();
             dtExamen = new DataTable();
             dtRegistro = new DataTable();
+            sesion = 0;
 
             dtProcedimiento.Columns.Add("IdProcedimiento", Type.GetType("System.Int32"));
             dtProcedimiento.Columns.Add("cups", Type.GetType("System.String"));
@@ -29,7 +30,9 @@ namespace Galactus.Entidades.ConfiguracionGeneral
             dtExamen = dtProcedimiento.Clone();
 
             dtRegistro.Columns.Add("IdProcedimiento", Type.GetType("System.Int32"));
+            dtRegistro.Columns.Add("Estado", Type.GetType("System.Boolean"));
             dtRegistro.Columns.Add("Registrado", Type.GetType("System.Int32"));
+           
         }
     }
 }

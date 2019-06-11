@@ -30,10 +30,16 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             {
                 dgvClasificacionExamen.EndEdit();
                 dgvClasificacionParaclinico.EndEdit();
+
                 if (tabControlGalactus1.SelectedIndex == 0) {
+                    clasificacioParaclinicoCrear(clasificacionParaclinico.dtProcedimiento);
                     clasificacionParaclinicoGuardar();
                 } else if (tabControlGalactus1.SelectedIndex == 1) {
-                }           
+                    clasificacioParaclinicoCrear(clasificacionParaclinico.dtExamen);
+                    clasificacionExamenGuardar();
+                }
+
+                clasificacionParaclinico.editable = false;
                 Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_GUARDADO);
             }
             catch (Exception ex) {
@@ -62,7 +68,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             {
                 GeneralC.buscarDevuelveFila(Sentencias.EXAMEN_LABORATORIO_LISTAR,
                                         null,
-                                        new GeneralC.cargarInfoFila(cargarGrupo),
+                                        new GeneralC.cargarInfoFila(cargarTipoLaboratorio),
                                         Titulos.TITULO_BUSCAR_TIPO_LABORATORIO,
                                         true);
             }
@@ -223,16 +229,19 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
 
         private void clasificacionParaclinicoGuardar() {
-            clasificacioParaclinicoCrear(clasificacionParaclinico.dtProcedimiento);
             ConfiguracionParaclinicoDAL.guardarClasificacionParaclinico(clasificacionParaclinico);
-            clasificacionParaclinico.editable = false;
         }
-
+        private void clasificacionExamenGuardar()
+        {
+            ConfiguracionParaclinicoDAL.guardarClasificacionExamen(clasificacionParaclinico);
+        }
         private void clasificacioParaclinicoCrear(DataTable dt) {
             clasificacionParaclinico.dtRegistro.Clear();
-            foreach (DataRow dRows in dt.Select("Estado = True")) {
+
+            foreach (DataRow dRows in dt.Select()) {
                    clasificacionParaclinico.dtRegistro.ImportRow(dRows);
-            }         
+            }  
+                   
         }
         private void filtrarRegistro() {
                 bindNavegador.Filter = "Cups Like '%" + txtBuscarItems.Text + "%' Or Descripcion Like '%" + txtBuscarItems.Text + "%'";
