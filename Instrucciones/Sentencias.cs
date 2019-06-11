@@ -190,6 +190,7 @@ namespace Galactus
         public const string FACTURA_PACIENTE_CREAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspFacturaPacienteCrear";
         public const string FACTURA_PACIENTE_ANULAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspFacturaPacienteAnular";
         public const string FACTURA_PACIENTE_CARGAR_ADMISION = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspFacturaPacienteAdmisionCargar";
+        public const string FACTURA_PACIENTE_BUSCAR_ADMISION = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspFacturaPacienteAdmisionBuscar";
         public const string FACTURA_PACIENTE_BUSCAR_CONTRATO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspFacturaPacienteContratoPendienteBuscar";
       
         #endregion

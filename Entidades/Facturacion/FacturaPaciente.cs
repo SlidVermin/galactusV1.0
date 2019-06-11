@@ -12,6 +12,7 @@ namespace Galactus.Entidades.Facturacion
     {
         public int idAdmision { get; set; }
         public int idContrato { get; set; }
+        public double totalFactura { get; set; }
         public string codigoFactura { get; set; }
         public DataTable dtCambiosCUPS = new DataTable();
         public DataTable dtCambiosOxigeno = new DataTable();
@@ -28,8 +29,8 @@ namespace Galactus.Entidades.Facturacion
         public void prepararDT()
         {
             dtCambiosCUPS = dsDatos.Tables["table"].Copy();
-            dtCambiosOxigeno = dsDatos.Tables["table2"].Copy();
-            dtCambiosEquivalencia = dsDatos.Tables["table3"].Copy();
+            dtCambiosOxigeno = dsDatos.Tables["table1"].Copy();
+            dtCambiosEquivalencia = dsDatos.Tables["table2"].Copy();
 
             dtCambiosCUPS.Columns.Remove("Descripción");
             dtCambiosCUPS.Columns.Remove("Código");
@@ -54,8 +55,7 @@ namespace Galactus.Entidades.Facturacion
             List<string> param = new List<string>();
             param.Add(Convert.ToString(idAdmision));
             dsDatos = GeneralC.llenarDataset(Sentencias.FACTURA_PACIENTE_CARGAR_ADMISION, param);
-
-            
+            totalFactura = Convert.ToDouble (dsDatos.Tables["table3"].Rows[0]["total"].ToString());
         }
     }
 }

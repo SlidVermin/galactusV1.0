@@ -38,12 +38,14 @@ namespace Galactus.VistaControlador
 
         public void cargarContratoEps(DataRow fila)
         {
+            GeneralC.limpiarControles(this);  
             txtCodigoContrato.Text = Convert.ToString(fila.Field<int>("Código"));
             txtDocumento.Text = fila.Field<String>("NIT");
             txtNombre.Text = fila.Field<String>("Cliente");
             txtTarifa.Text = fila.Field<String>("Tarifa");
-            txtListaPrecio.Text = fila.Field<String>("ListaPrecio");
+            txtListaPrecio.Text = fila.Field<String>("Lista de precio");
             factura.idContrato = fila.Field<int>("Código");
+            btBuscarAtencion.Enabled = true;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -59,7 +61,8 @@ namespace Galactus.VistaControlador
             try
             {
                 List<string> parametros = new List<string>();
-                GeneralC.buscarDevuelveFila(Sentencias.FACTURA_PACIENTE_CARGAR_ADMISION,
+                parametros.Add(Convert.ToString(factura.idContrato));  
+                GeneralC.buscarDevuelveFila(Sentencias.FACTURA_PACIENTE_BUSCAR_ADMISION,
                                                    parametros,
                                                    new GeneralC.cargarInfoFila(cargarAdmision),
                                                    Mensajes.BUSQUEDA_ADMISIONES, true);
@@ -71,14 +74,33 @@ namespace Galactus.VistaControlador
         }
         public void cargarAdmision(DataRow fila)
         {
-            txtCodigoContrato.Text = Convert.ToString(fila.Field<int>("IdAdmision"));
+            txtAdmision.Text = Convert.ToString(fila.Field<int>("Admisión"));
             txtPaciente.Text = fila.Field<String>("Paciente");
-            dtpIngreso.Value = Convert.ToDateTime(fila.Field<String>("ingreso"));
-            dtpEgreso.Value = Convert.ToDateTime(fila.Field<String>("egreso"));
-            txtAfiliacion.Text = fila.Field<String>("afiliacion");
-            txtRegimen.Text = fila.Field<String>("regimen");
-            factura.idAdmision = fila.Field<int>("IdAdmision");
+            dtpIngreso.Value = fila.Field<DateTime>("Fecha ingreso");
+            dtpEgreso.Value = fila.Field<DateTime>("Fecha egreso");
+            txtAfiliacion.Text = fila.Field<String>("Afiliación");
+            txtRegimen.Text = fila.Field<String>("Régimen");
+            factura.idAdmision = fila.Field<int>("Admisión");
             factura.cargarDatos(); 
+            dgvProcedimientos.DataSource =factura.dsDatos.Tables["table"];
+            dgvOxigenos.DataSource = factura.dsDatos.Tables["table1"];
+            dgvMedicamentos.DataSource = factura.dsDatos.Tables["table2"];
+            txtValorFactura.Text = factura.totalFactura.ToString("C0");
+            dtpVence.Enabled = true;
+        }
+
+        private void tsbNuevo_Click(object sender, EventArgs e)
+        {
+            GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+            GeneralC.deshabilitarControles(this); 
+            btBuscarContrato.Enabled = true;
+            btnSalir.Enabled = true; 
+        }
+
+        private void FacturaUI_Load(object sender, EventArgs e)
+        {
+            GeneralC.deshabilitarControles(this);
+            btnSalir.Enabled = true;
         }
     }
 }
