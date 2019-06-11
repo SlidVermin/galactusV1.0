@@ -237,7 +237,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void clasificacioParaclinicoCrear(DataTable dt) {
             clasificacionParaclinico.dtRegistro.Clear();
-
+            dt.AcceptChanges();
             foreach (DataRow dRows in dt.Select()) {
                    clasificacionParaclinico.dtRegistro.ImportRow(dRows);
             }  
