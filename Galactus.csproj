@@ -78,6 +78,7 @@
     <Compile Include="Entidades\ConfiguracionGeneral\ConfiguracionParaclinico.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Empresa.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Equivalencia.cs" />
+    <Compile Include="Entidades\ConfiguracionGeneral\TipoExamen.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Usuario.cs" />
     <Compile Include="Entidades\Facturacion\FacturaPaciente.cs" />
     <Compile Include="Entidades\General\Busqueda.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Modelo\ConfiguracionGeneral\ConfiguracionGeneralDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\ConfiguracionParaclinicoDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\EmpresaDAL.cs" />
+    <Compile Include="Modelo\ConfiguracionGeneral\TipoExamenDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\UsuarioDAL.cs" />
     <Compile Include="Modelo\EquivalenciaDAL.cs" />
     <Compile Include="Modelo\Facturacion\FacturaPacienteDAL.cs" />
@@ -258,6 +260,12 @@
     </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\ConfiguracionExamenLaboratorioUI.Designer.cs">
       <DependentUpon>ConfiguracionExamenLaboratorioUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\TipoExamenUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\ConfiguracionGeneral\TipoExamenUI.Designer.cs">
+      <DependentUpon>TipoExamenUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\Facturacion\RipsUI.cs">
       <SubType>Form</SubType>
@@ -758,6 +766,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\ConfiguracionExamenLaboratorioUI.resx">
       <DependentUpon>ConfiguracionExamenLaboratorioUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\TipoExamenUI.resx">
+      <DependentUpon>TipoExamenUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Facturacion\RipsUI.resx">
       <DependentUpon>RipsUI.cs</DependentUpon>

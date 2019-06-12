@@ -30,7 +30,6 @@
         {
             this.btnSalir = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
-            this.pacientePB = new System.Windows.Forms.PictureBox();
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tpClasificacionExamen = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btTipoExamen = new System.Windows.Forms.Button();
             this.dgvClasificacionExamen = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,8 +59,6 @@
             this.txtTipoExamen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tpClasificacionEstancia = new System.Windows.Forms.TabPage();
-            this.txtBuscarItems = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
             this.dgvEstancia = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,7 +67,8 @@
             this.btBuscarArea = new System.Windows.Forms.Button();
             this.txtAreaServicio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
+            this.txtBuscarItems = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
             this.tstMenuPatron.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControlGalactus1.SuspendLayout();
@@ -99,20 +98,11 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Arial", 12F);
-            this.label30.Location = new System.Drawing.Point(60, 15);
+            this.label30.Location = new System.Drawing.Point(25, 14);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(209, 18);
             this.label30.TabIndex = 60;
             this.label30.Text = "Configuración de Paraclinico";
-            // 
-            // pacientePB
-            // 
-            this.pacientePB.Image = global::Galactus.Properties.Resources.user__1_;
-            this.pacientePB.Location = new System.Drawing.Point(25, 4);
-            this.pacientePB.Name = "pacientePB";
-            this.pacientePB.Size = new System.Drawing.Size(31, 31);
-            this.pacientePB.TabIndex = 61;
-            this.pacientePB.TabStop = false;
             // 
             // tstMenuPatron
             // 
@@ -210,6 +200,7 @@
             // 
             // tpClasificacion
             // 
+            this.tpClasificacion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpClasificacion.Controls.Add(this.dgvClasificacionParaclinico);
             this.tpClasificacion.Controls.Add(this.tsbBuscarGrupos);
             this.tpClasificacion.Controls.Add(this.txtGrupo);
@@ -220,7 +211,6 @@
             this.tpClasificacion.Size = new System.Drawing.Size(875, 431);
             this.tpClasificacion.TabIndex = 0;
             this.tpClasificacion.Text = "Clasificación Procedimientos";
-            this.tpClasificacion.UseVisualStyleBackColor = true;
             // 
             // dgvClasificacionParaclinico
             // 
@@ -322,7 +312,9 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.btTipoExamen);
             this.panel5.Controls.Add(this.dgvClasificacionExamen);
             this.panel5.Controls.Add(this.btBuscarTipoExamen);
             this.panel5.Controls.Add(this.txtTipoExamen);
@@ -331,6 +323,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(861, 464);
             this.panel5.TabIndex = 53;
+            // 
+            // btTipoExamen
+            // 
+            this.btTipoExamen.Location = new System.Drawing.Point(719, 4);
+            this.btTipoExamen.Name = "btTipoExamen";
+            this.btTipoExamen.Size = new System.Drawing.Size(138, 24);
+            this.btTipoExamen.TabIndex = 54;
+            this.btTipoExamen.Text = "Tipo Examén";
+            this.btTipoExamen.UseVisualStyleBackColor = true;
+            this.btTipoExamen.Click += new System.EventHandler(this.btTipoExamen_Click);
             // 
             // dgvClasificacionExamen
             // 
@@ -421,6 +423,7 @@
             // 
             // tpClasificacionEstancia
             // 
+            this.tpClasificacionEstancia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tpClasificacionEstancia.Controls.Add(this.dgvEstancia);
             this.tpClasificacionEstancia.Controls.Add(this.btBuscarArea);
             this.tpClasificacionEstancia.Controls.Add(this.txtAreaServicio);
@@ -431,25 +434,6 @@
             this.tpClasificacionEstancia.Size = new System.Drawing.Size(875, 431);
             this.tpClasificacionEstancia.TabIndex = 3;
             this.tpClasificacionEstancia.Text = "Clasificación Estancia";
-            this.tpClasificacionEstancia.UseVisualStyleBackColor = true;
-            // 
-            // txtBuscarItems
-            // 
-            this.txtBuscarItems.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarItems.Location = new System.Drawing.Point(127, 5);
-            this.txtBuscarItems.Name = "txtBuscarItems";
-            this.txtBuscarItems.Size = new System.Drawing.Size(843, 21);
-            this.txtBuscarItems.TabIndex = 25;
-            this.txtBuscarItems.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarItems_KeyDown);
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(8, 246);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(0, 20);
-            this.label43.TabIndex = 40;
             // 
             // dgvEstancia
             // 
@@ -473,7 +457,6 @@
             this.dgvEstancia.RowHeadersVisible = false;
             this.dgvEstancia.Size = new System.Drawing.Size(860, 388);
             this.dgvEstancia.TabIndex = 57;
-            this.dgvClasificacionParaclinico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClasificacionParaclinico_CellClick);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -538,14 +521,32 @@
             this.label3.TabIndex = 54;
             this.label3.Text = "Area de Servicio:";
             // 
+            // txtBuscarItems
+            // 
+            this.txtBuscarItems.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarItems.Location = new System.Drawing.Point(127, 5);
+            this.txtBuscarItems.Name = "txtBuscarItems";
+            this.txtBuscarItems.Size = new System.Drawing.Size(843, 21);
+            this.txtBuscarItems.TabIndex = 25;
+            this.txtBuscarItems.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarItems_KeyDown);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(8, 246);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(0, 20);
+            this.label43.TabIndex = 40;
+            // 
             // ConfiguracionExamenLaboratorioUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1059, 580);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label30);
-            this.Controls.Add(this.pacientePB);
             this.Controls.Add(this.tstMenuPatron);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -555,7 +556,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConfiguracionExamenLaboratorioUI";
             this.Load += new System.EventHandler(this.ConfiguracionExamenLaboratorioUI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).EndInit();
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -580,7 +580,6 @@
 
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.PictureBox pacientePB;
         private System.Windows.Forms.ToolStrip tstMenuPatron;
         private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.Panel panel1;
@@ -619,5 +618,6 @@
         private System.Windows.Forms.Button btBuscarArea;
         private System.Windows.Forms.TextBox txtAreaServicio;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btTipoExamen;
     }
 }

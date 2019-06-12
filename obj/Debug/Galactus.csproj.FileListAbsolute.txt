@@ -321,3 +321,4 @@ C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Gala
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.exe
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.pdb
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.csprojResolveAssemblyReference.cache
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.ConfiguracionGeneral.TipoExamenUI.resources

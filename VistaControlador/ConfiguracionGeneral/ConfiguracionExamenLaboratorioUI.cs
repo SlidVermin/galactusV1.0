@@ -12,6 +12,7 @@ using Galactus.Util.Constantes;
 using Galactus.Util.Mensajes;
 using Galactus.Util;
 using Galactus.Modelo.ConfiguracionGeneral;
+using Galactus.VistaControlador.ConfiguracionGeneral;
 
 namespace Galactus.VistaControlador.ConfiguracionGeneral
 {
@@ -317,6 +318,10 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
         }
 
-   
+        private void btTipoExamen_Click(object sender, EventArgs e)
+        {
+            TipoExamenUI tipoExamenUI = new TipoExamenUI();
+            tipoExamenUI.ShowDialog();
+        }
     }
 }
