@@ -13,7 +13,6 @@ namespace Galactus.Entidades.ConfiguracionGeneral
         public int idTipoLaboratorio { get; set; }
         public int numPaginacion { get; set; }
         public bool editable { get; set; }
-        public int sesion { get; set; }
         public DataTable dtProcedimiento { get; set; }
         public DataTable dtExamen { get; set; }
         public DataTable dtRegistro { get; set; }
@@ -21,7 +20,6 @@ namespace Galactus.Entidades.ConfiguracionGeneral
             dtProcedimiento = new DataTable();
             dtExamen = new DataTable();
             dtRegistro = new DataTable();
-            sesion = 0;
 
             dtProcedimiento.Columns.Add("IdProcedimiento", Type.GetType("System.Int32"));
             dtProcedimiento.Columns.Add("cups", Type.GetType("System.String"));

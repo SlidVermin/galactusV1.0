@@ -171,7 +171,6 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 remarcarLinkLaber();
                 CargarProcedimiento(sender);
                 ((LinkLabel)sender).LinkVisited = true;
-                clasificacionParaclinico.sesion = Convert.ToInt32(((LinkLabel)sender).Name);
             }
             else
             {

@@ -21,7 +21,6 @@ namespace Galactus.Modelo.ConfiguracionGeneral
 
                     sentencia.CommandText = Sentencias.CLASIFICACION_PROCEDIMIENTO_CREAR;
                     sentencia.Parameters.Add(new SqlParameter("@pIdGrupo", System.Data.SqlDbType.Int)).Value = clasifParaclinico.idGrupo;
-                    sentencia.Parameters.Add(new SqlParameter("@pSesion", System.Data.SqlDbType.Int)).Value = clasifParaclinico.sesion;
                     sentencia.Parameters.Add(new SqlParameter("@pTbConfig", System.Data.SqlDbType.Structured)).Value = clasifParaclinico.dtRegistro;
                     sentencia.ExecuteNonQuery();
                 }
@@ -42,7 +41,6 @@ namespace Galactus.Modelo.ConfiguracionGeneral
 
                     sentencia.CommandText = Sentencias.CLASIFICACION_EXAMEN_CREAR;
                     sentencia.Parameters.Add(new SqlParameter("@pIdGrupo", System.Data.SqlDbType.Int)).Value = clasifParaclinico.idTipoLaboratorio;
-                    sentencia.Parameters.Add(new SqlParameter("@pSesion", System.Data.SqlDbType.Int)).Value = clasifParaclinico.sesion;
                     sentencia.Parameters.Add(new SqlParameter("@pTbConfig", System.Data.SqlDbType.Structured)).Value = clasifParaclinico.dtRegistro;
                     sentencia.ExecuteNonQuery();
                 }
