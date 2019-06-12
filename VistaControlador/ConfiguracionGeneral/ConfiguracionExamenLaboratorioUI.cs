@@ -152,16 +152,22 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                                               string id,
                                               string consulta)
         {
-            List<string> paramtro = new List<string>();
-            paramtro.Add(valor);
-            paramtro.Add(id);
-            GeneralC.llenarTabla(consulta, paramtro, dt);
-            bindNavegador.DataSource = dt;
-            grilla.DataSource = bindNavegador.DataSource;
-            clasificacionParaclinico.numPaginacion = dt.Rows[0].Field<int>("Fila");
-            quitarControl();
-            numeroPaginas(clasificacionParaclinico.numPaginacion);
-            lbRegistros.Text = "N° Registro: " + (dt.Rows.Count).ToString();
+            try
+            {
+                List<string> paramtro = new List<string>();
+                paramtro.Add(valor);
+                paramtro.Add(id);
+                GeneralC.llenarTabla(consulta, paramtro, dt);
+                bindNavegador.DataSource = dt;
+                grilla.DataSource = bindNavegador.DataSource;
+                clasificacionParaclinico.numPaginacion = dt.Rows[0].Field<int>("Fila");
+                quitarControl();
+                numeroPaginas(clasificacionParaclinico.numPaginacion);
+                lbRegistros.Text = "N° Registro: " + (dt.Rows.Count).ToString();
+            }
+            catch (Exception ex) {
+                Mensajes.mensajeError(ex);
+            }
         }
 
         private void paginacion(object sender, LinkLabelLinkClickedEventArgs e)
