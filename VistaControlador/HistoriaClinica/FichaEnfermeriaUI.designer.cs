@@ -55,6 +55,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTitulo = new System.Windows.Forms.Label();
+            this.tabSolicitudLab = new System.Windows.Forms.TabPage();
             this.pnlInformacion.SuspendLayout();
             this.tabEnfermeria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -291,6 +292,7 @@
             this.tabEnfermeria.Controls.Add(this.tpSabana);
             this.tabEnfermeria.Controls.Add(this.tpFisioterapeutas);
             this.tabEnfermeria.Controls.Add(this.tpOxigeno);
+            this.tabEnfermeria.Controls.Add(this.tabSolicitudLab);
             this.tabEnfermeria.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabEnfermeria.Location = new System.Drawing.Point(12, 116);
             this.tabEnfermeria.Name = "tabEnfermeria";
@@ -351,6 +353,15 @@
             this.lbTitulo.TabIndex = 62;
             this.lbTitulo.Text = "Enfermeria  y fisioterapia";
             // 
+            // tabSolicitudLab
+            // 
+            this.tabSolicitudLab.Location = new System.Drawing.Point(4, 29);
+            this.tabSolicitudLab.Name = "tabSolicitudLab";
+            this.tabSolicitudLab.Size = new System.Drawing.Size(1275, 460);
+            this.tabSolicitudLab.TabIndex = 6;
+            this.tabSolicitudLab.Text = "Solicitud Laboratorio";
+            this.tabSolicitudLab.UseVisualStyleBackColor = true;
+            // 
             // FichaEnfermeriaUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,5 +418,6 @@
         private System.Windows.Forms.TextBox txtAtencion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage tabSolicitudLab;
     }
 }

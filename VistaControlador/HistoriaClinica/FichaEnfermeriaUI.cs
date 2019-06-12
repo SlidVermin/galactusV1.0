@@ -8,6 +8,7 @@ using Galactus.VistaControlador.HistoriaClinica.OrdenMedica;
 using Galactus.VistaControlador.HistoriaClinica.Enfermeria;
 using System.Collections.Generic;
 using Galactus.VistaControlador.HistoriaClinica.Fisioterapia;
+using Galactus.VistaControlador.HistoriaClinica;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
@@ -21,6 +22,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private FisioterapiaUI fisioterapia;
         private SabanaEnfermeriaUI sabana;
         private HojaOxigenoUI oxigeno;
+        private SolicitudLabUI solicitudLab;
+
         public FichaEnfermeriaUI()
         {
             InitializeComponent();
@@ -42,10 +45,13 @@ namespace Galactus.VistaControlador.HistoriaClinica
             fisioterapia = new FisioterapiaUI(idAtencion, auditoria);
             sabana = new SabanaEnfermeriaUI(idAtencion, auditoria,DateTime.Parse(txtfechaIngreso.Text), fechaEgreso);
             oxigeno = new HojaOxigenoUI(idAtencion,auditoria);
+            solicitudLab = new SolicitudLabUI();
+
             GeneralC.cargarFormularioEnPestana(tpEnfermeria, enfermeria);
             GeneralC.cargarFormularioEnPestana(tpSabana, sabana);
             GeneralC.cargarFormularioEnPestana(tpFisioterapeutas, fisioterapia);
             GeneralC.cargarFormularioEnPestana(tpOxigeno, oxigeno);
+            GeneralC.cargarFormularioEnPestana(tabSolicitudLab, solicitudLab);
         }
         public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso, bool auditoria)
         {
