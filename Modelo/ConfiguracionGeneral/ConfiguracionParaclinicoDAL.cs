@@ -50,5 +50,25 @@ namespace Galactus.Modelo.ConfiguracionGeneral
                 throw ex;
             }
         }
+        public static void guardarClasificacionEstancia(ConfiguracionParaclinico clasifParaclinico)
+        {
+            try
+            {
+                using (SqlCommand sentencia = new SqlCommand())
+                {
+                    sentencia.Connection = PrincipalUI.Cnxion;
+                    sentencia.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    sentencia.CommandText = Sentencias.CLASIFICACION_ESTANCIA_CREAR;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdGrupo", System.Data.SqlDbType.Int)).Value = clasifParaclinico.idAreaServicio;
+                    sentencia.Parameters.Add(new SqlParameter("@pTbConfig", System.Data.SqlDbType.Structured)).Value = clasifParaclinico.dtRegistro;
+                    sentencia.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -15,6 +15,7 @@ namespace Galactus
         public const string SEG_LLENAR_PERMISOS = ConstanteGeneral.ESQUEMA_SEGURIDAD + "[uspMenuPermisosLlenar]";
         public const string CLASIFICACION_PROCEDIMIENTO_PAGINACION = ConstanteGeneral.ESQUEMA_GENERAL + "[uspProcedimientoPaginacionCargar]";
         public const string EXAMEN_PARACLINICOS_PAGINACION = ConstanteGeneral.ESQUEMA_GENERAL + "[uspProcedimientoExamenPaginacionCargar]";
+        public const string ESTANCIA_PARACLINICOS_PAGINACION = ConstanteGeneral.ESQUEMA_GENERAL + "[uspProcedimientoEstanciaPaginacionCargar]";
 
         public const string EMPRESA_BUSCAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspEmpresaBuscar]";
         public const string EMPRESA_CARGAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspEmpresaCargar]";
@@ -25,6 +26,7 @@ namespace Galactus
         public const string EMPLEADO_CARGO_BUSCAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspEmpleadoCargoBuscar]";
         public const string CLASIFICACION_PROCEDIMIENTO_CREAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspClasificacionGrupoParaclinicoCrear]";
         public const string CLASIFICACION_EXAMEN_CREAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspClasificacionExamenCrear]";
+        public const string CLASIFICACION_ESTANCIA_CREAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspClasificacionEstanciaCrear]";
         #endregion
         #region INVENTARIO 
         public const string ALMACEN_BUSCAR = ConstanteGeneral.ESQUEMA_ALMACEN  + "[uspBodegaBuscar]";

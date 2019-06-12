@@ -30,6 +30,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             {
                 dgvClasificacionExamen.EndEdit();
                 dgvClasificacionParaclinico.EndEdit();
+                dgvEstancia.EndEdit();
 
                 if (tabControlGalactus1.SelectedIndex == 0) {
                     clasificacioParaclinicoCrear(clasificacionParaclinico.dtProcedimiento);
@@ -37,6 +38,9 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 } else if (tabControlGalactus1.SelectedIndex == 1) {
                     clasificacioParaclinicoCrear(clasificacionParaclinico.dtExamen);
                     clasificacionExamenGuardar();
+                } else if (tabControlGalactus1.SelectedIndex == 2){
+                    clasificacioParaclinicoCrear(clasificacionParaclinico.dtEstancia);
+                    clasificacionEstanciaGuardar();
                 }
 
                 clasificacionParaclinico.editable = false;
@@ -78,6 +82,22 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             }
         }
 
+        private void btBuscarArea_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GeneralC.buscarDevuelveFila(Sentencias.GENERAL_AREA_ATENCION,
+                                        null,
+                                        new GeneralC.cargarInfoFila(cargarAreaServicio),
+                                        Titulos.TITULO_BUSCAR_AREA_SERVICIO,
+                                        true);
+            }
+            catch (Exception ex)
+            {
+                Mensajes.mensajeError(ex);
+            }
+        }
+
         private void cargarGrupo(DataRow dRows)
         {
             clasificacionParaclinico.idGrupo = dRows.Field<int>("codigo");
@@ -100,10 +120,22 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                                     Sentencias.EXAMEN_PARACLINICOS_PAGINACION);
         }
 
+        private void cargarAreaServicio(DataRow dRows)
+        {
+            clasificacionParaclinico.idAreaServicio = dRows.Field<int>("Código");
+            txtAreaServicio.Text = dRows.Field<string>("Descripcion");
+            cargarListaProcedimiento(ConstanteGeneral.SIN_VALOR_NUMERICO.ToString(),
+                                    clasificacionParaclinico.dtEstancia,
+                                    ref dgvEstancia,
+                                    clasificacionParaclinico.idAreaServicio.ToString(),
+                                    Sentencias.ESTANCIA_PARACLINICOS_PAGINACION);
+        }
+
         private void ConfiguracionExamenLaboratorioUI_Load(object sender, EventArgs e)
         {
             validarGrilla(dgvClasificacionParaclinico);
             validarGrilla(dgvClasificacionExamen);
+            validarGrilla(dgvEstancia);
         }
 
         private void dgvClasificacionParaclinico_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -240,6 +272,10 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             ConfiguracionParaclinicoDAL.guardarClasificacionExamen(clasificacionParaclinico);
         }
+        private void clasificacionEstanciaGuardar()
+        {
+            ConfiguracionParaclinicoDAL.guardarClasificacionEstancia(clasificacionParaclinico);
+        }
         private void clasificacioParaclinicoCrear(DataTable dt) {
             clasificacionParaclinico.dtRegistro.Clear();
             dt.AcceptChanges();
@@ -271,7 +307,16 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                                  ref dgvClasificacionExamen,
                                  clasificacionParaclinico.idTipoLaboratorio.ToString(),
                                  Sentencias.EXAMEN_PARACLINICOS_PAGINACION);
+            } else if (tabControlGalactus1.SelectedIndex == 2) {
+                cargarListaProcedimiento(((LinkLabel)sender).Tag.ToString(),
+                                            clasificacionParaclinico.dtEstancia,
+                                            ref dgvEstancia,
+                                            clasificacionParaclinico.idAreaServicio.ToString(),
+                                            Sentencias.ESTANCIA_PARACLINICOS_PAGINACION);
             }
+
         }
+
+   
     }
 }

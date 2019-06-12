@@ -58,9 +58,17 @@
             this.btBuscarTipoExamen = new System.Windows.Forms.Button();
             this.txtTipoExamen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tpNoAgrupable = new System.Windows.Forms.TabPage();
+            this.tpClasificacionEstancia = new System.Windows.Forms.TabPage();
             this.txtBuscarItems = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
+            this.dgvEstancia = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btBuscarArea = new System.Windows.Forms.Button();
+            this.txtAreaServicio = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.tstMenuPatron.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,6 +78,8 @@
             this.tpClasificacionExamen.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClasificacionExamen)).BeginInit();
+            this.tpClasificacionEstancia.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstancia)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -187,7 +197,7 @@
             this.tabControlGalactus1.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tabControlGalactus1.Controls.Add(this.tpClasificacion);
             this.tabControlGalactus1.Controls.Add(this.tpClasificacionExamen);
-            this.tabControlGalactus1.Controls.Add(this.tpNoAgrupable);
+            this.tabControlGalactus1.Controls.Add(this.tpClasificacionEstancia);
             this.tabControlGalactus1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlGalactus1.ItemSize = new System.Drawing.Size(30, 120);
             this.tabControlGalactus1.Location = new System.Drawing.Point(3, 32);
@@ -209,7 +219,7 @@
             this.tpClasificacion.Padding = new System.Windows.Forms.Padding(3);
             this.tpClasificacion.Size = new System.Drawing.Size(875, 431);
             this.tpClasificacion.TabIndex = 0;
-            this.tpClasificacion.Text = "Clasificación de Procedimientos";
+            this.tpClasificacion.Text = "Clasificación Procedimientos";
             this.tpClasificacion.UseVisualStyleBackColor = true;
             // 
             // dgvClasificacionParaclinico
@@ -409,15 +419,19 @@
             this.label2.TabIndex = 50;
             this.label2.Text = "Tipo Examén:";
             // 
-            // tpNoAgrupable
+            // tpClasificacionEstancia
             // 
-            this.tpNoAgrupable.Location = new System.Drawing.Point(124, 4);
-            this.tpNoAgrupable.Name = "tpNoAgrupable";
-            this.tpNoAgrupable.Padding = new System.Windows.Forms.Padding(3);
-            this.tpNoAgrupable.Size = new System.Drawing.Size(875, 431);
-            this.tpNoAgrupable.TabIndex = 3;
-            this.tpNoAgrupable.Text = "Examenes no agrupables";
-            this.tpNoAgrupable.UseVisualStyleBackColor = true;
+            this.tpClasificacionEstancia.Controls.Add(this.dgvEstancia);
+            this.tpClasificacionEstancia.Controls.Add(this.btBuscarArea);
+            this.tpClasificacionEstancia.Controls.Add(this.txtAreaServicio);
+            this.tpClasificacionEstancia.Controls.Add(this.label3);
+            this.tpClasificacionEstancia.Location = new System.Drawing.Point(124, 4);
+            this.tpClasificacionEstancia.Name = "tpClasificacionEstancia";
+            this.tpClasificacionEstancia.Padding = new System.Windows.Forms.Padding(3);
+            this.tpClasificacionEstancia.Size = new System.Drawing.Size(875, 431);
+            this.tpClasificacionEstancia.TabIndex = 3;
+            this.tpClasificacionEstancia.Text = "Clasificación Estancia";
+            this.tpClasificacionEstancia.UseVisualStyleBackColor = true;
             // 
             // txtBuscarItems
             // 
@@ -436,6 +450,93 @@
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(0, 20);
             this.label43.TabIndex = 40;
+            // 
+            // dgvEstancia
+            // 
+            this.dgvEstancia.AllowUserToAddRows = false;
+            this.dgvEstancia.AllowUserToDeleteRows = false;
+            this.dgvEstancia.AllowUserToResizeColumns = false;
+            this.dgvEstancia.AllowUserToResizeRows = false;
+            this.dgvEstancia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvEstancia.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvEstancia.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvEstancia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstancia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewCheckBoxColumn2});
+            this.dgvEstancia.Location = new System.Drawing.Point(7, 39);
+            this.dgvEstancia.MultiSelect = false;
+            this.dgvEstancia.Name = "dgvEstancia";
+            this.dgvEstancia.ReadOnly = true;
+            this.dgvEstancia.RowHeadersVisible = false;
+            this.dgvEstancia.Size = new System.Drawing.Size(860, 388);
+            this.dgvEstancia.TabIndex = 57;
+            this.dgvClasificacionParaclinico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClasificacionParaclinico_CellClick);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "idProcedimiento";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            this.dataGridViewTextBoxColumn4.Width = 103;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Cups";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn5.Width = 43;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Descripcion";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewCheckBoxColumn2
+            // 
+            this.dataGridViewCheckBoxColumn2.HeaderText = "Estado";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
+            this.dataGridViewCheckBoxColumn2.ReadOnly = true;
+            this.dataGridViewCheckBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCheckBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewCheckBoxColumn2.Width = 71;
+            // 
+            // btBuscarArea
+            // 
+            this.btBuscarArea.Image = global::Galactus.Properties.Resources.btn_lupa;
+            this.btBuscarArea.Location = new System.Drawing.Point(372, 7);
+            this.btBuscarArea.Name = "btBuscarArea";
+            this.btBuscarArea.Size = new System.Drawing.Size(26, 24);
+            this.btBuscarArea.TabIndex = 56;
+            this.btBuscarArea.UseVisualStyleBackColor = true;
+            this.btBuscarArea.Click += new System.EventHandler(this.btBuscarArea_Click);
+            // 
+            // txtAreaServicio
+            // 
+            this.txtAreaServicio.Font = new System.Drawing.Font("Arial Narrow", 9F);
+            this.txtAreaServicio.Location = new System.Drawing.Point(113, 8);
+            this.txtAreaServicio.Name = "txtAreaServicio";
+            this.txtAreaServicio.ReadOnly = true;
+            this.txtAreaServicio.Size = new System.Drawing.Size(256, 21);
+            this.txtAreaServicio.TabIndex = 55;
+            this.txtAreaServicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 15);
+            this.label3.TabIndex = 54;
+            this.label3.Text = "Area de Servicio:";
             // 
             // ConfiguracionExamenLaboratorioUI
             // 
@@ -467,6 +568,9 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClasificacionExamen)).EndInit();
+            this.tpClasificacionEstancia.ResumeLayout(false);
+            this.tpClasificacionEstancia.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstancia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,7 +592,7 @@
         private System.Windows.Forms.TabPage tpClasificacionExamen;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TabPage tpNoAgrupable;
+        private System.Windows.Forms.TabPage tpClasificacionEstancia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnPaginador;
         private System.Windows.Forms.Label lbRegistros;
@@ -507,5 +611,13 @@
         private System.Windows.Forms.Button btBuscarTipoExamen;
         private System.Windows.Forms.TextBox txtTipoExamen;
         private System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.DataGridView dgvEstancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private System.Windows.Forms.Button btBuscarArea;
+        private System.Windows.Forms.TextBox txtAreaServicio;
+        private System.Windows.Forms.Label label3;
     }
 }
