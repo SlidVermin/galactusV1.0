@@ -27,6 +27,10 @@ namespace Galactus
         public const string CLASIFICACION_PROCEDIMIENTO_CREAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspClasificacionGrupoParaclinicoCrear]";
         public const string CLASIFICACION_EXAMEN_CREAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspClasificacionExamenCrear]";
         public const string CLASIFICACION_ESTANCIA_CREAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspClasificacionEstanciaCrear]";
+
+        public const string TIPO_EXAMEN_CREAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspTipoExamenCrear]";
+        public const string TIPO_EXAMEN_BUSCAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspTipoExamenBuscar]";
+        public const string TIPO_EXAMEN_ANULAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspTipoExamenAnular]";
         #endregion
         #region INVENTARIO 
         public const string ALMACEN_BUSCAR = ConstanteGeneral.ESQUEMA_ALMACEN  + "[uspBodegaBuscar]";
