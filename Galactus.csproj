@@ -102,6 +102,7 @@
     <Compile Include="Entidades\HistoriaClinica\Resultado\MedicamentosNoPos.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\ResultadoLaboratorio.cs" />
     <Compile Include="Entidades\HistoriaClinica\Resultado\ResultadoOrdenMedica.cs" />
+    <Compile Include="Entidades\HistoriaClinica\SolicitudLab.cs" />
     <Compile Include="Entidades\Inventario\Bodega.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Producto.cs" />
     <Compile Include="Entidades\Inventario\Cliente.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Modelo\HistoriaClinica\Resultado\MedicamentoNoPosDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\ResultadoLaboratorioDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\SabanaDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\SolicitudLabDAL.cs" />
     <Compile Include="Modelo\Inventario\BodegaDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\ProductoDAL.cs" />
     <Compile Include="Program.cs" />

@@ -124,6 +124,7 @@ namespace Galactus
         public const string CREAR_PROVEEDOR = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspProveedorCrear]";
         public const string BUSCAR_PROVEEDOR = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspProveedorBuscar]";
         public const string ANULAR_PROVEEDOR = ConstanteGeneral.ESQUEMA_CLIENTE + "[uspProveedorAnular]";
+        public const string PROVEEDOR_LABORATORIO_CONSULTAR = ConstanteGeneral.ESQUEMA_PROVEEDOR + "uspProveedorLaboratorioConsultar";
         #endregion
 
         #region Historia Clinica
@@ -192,6 +193,13 @@ namespace Galactus
 
         public const string LISTAR_RESULTADO_LABORATORIO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspResultadoLaboratorioListar]";
         public const string RESUMEN_FACTURA_CARGAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspResumenFacturaCargar]";
+
+        public const string CARGAR_SOLICITUDES_ENVIADO = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspExamenesLabEnviados]";
+        public const string CARGAR_SOLICITUDES_PENDIENTES = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspExamenesLabPendiente]";
+        public const string BUSCAR_SOLICITUD_LAB = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspSolicitudLabBuscar]";
+        public const string ANULAR_SOLICITUD_LAB = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspSolicitudLabAnular]";
+        public const string CREAR_SOLICITUD_LAB = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspSolicitudLabCrear]";
+
         #endregion
         #region "Facturacion"
         public const string FACTURA_PACIENTE_CREAR = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "uspFacturaPacienteCrear";

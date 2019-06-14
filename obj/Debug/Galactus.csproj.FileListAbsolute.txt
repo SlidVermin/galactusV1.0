@@ -295,6 +295,7 @@ C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Gala
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.JustificacionAntibioticoUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.ResumenFacturaUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.SabanaEnfermeriaUI.resources
+C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.SolicitudLabUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.FormLogin.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.Inventario.BodegaUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.Inventario.ProductoUI.resources
@@ -320,6 +321,5 @@ C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\bin\Debug\Crys
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\bin\Debug\stdole.dll
-C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.VistaControlador.HistoriaClinica.SolicitudLabUI.resources
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.exe
 C:\Users\Poseidon\Desktop\Galactus 2019-03-07\Galactus 2019\trunk\obj\Debug\Galactus.pdb

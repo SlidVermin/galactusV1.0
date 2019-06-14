@@ -45,7 +45,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             fisioterapia = new FisioterapiaUI(idAtencion, auditoria);
             sabana = new SabanaEnfermeriaUI(idAtencion, auditoria,DateTime.Parse(txtfechaIngreso.Text), fechaEgreso);
             oxigeno = new HojaOxigenoUI(idAtencion,auditoria);
-            solicitudLab = new SolicitudLabUI();
+            solicitudLab = new SolicitudLabUI(idAtencion);
 
             GeneralC.cargarFormularioEnPestana(tpEnfermeria, enfermeria);
             GeneralC.cargarFormularioEnPestana(tpSabana, sabana);
