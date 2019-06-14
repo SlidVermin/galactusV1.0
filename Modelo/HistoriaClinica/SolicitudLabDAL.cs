@@ -19,10 +19,10 @@ namespace Galactus.Modelo.HistoriaClinica
                 {
                     sentencia.Connection = PrincipalUI.Cnxion;
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
-
                     sentencia.CommandText = Sentencias.CREAR_SOLICITUD_LAB;
                     sentencia.Parameters.Add(new SqlParameter("@pIdSolicitudLab", SqlDbType.Int)).Value = solicitudLab.idSolicitud;
                     sentencia.Parameters.Add(new SqlParameter("@pIdLaboratorio", SqlDbType.Int)).Value = solicitudLab.idLaboratorio;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
                     sentencia.Parameters.Add(new SqlParameter("@pFecha", SqlDbType.Date)).Value = solicitudLab.fecha;
                     sentencia.Parameters.Add(new SqlParameter("@pTablaLab", SqlDbType.Structured)).Value = solicitudLab.dtLaboratorio;
                     solicitudLab.idSolicitud = (int)sentencia.ExecuteScalar();

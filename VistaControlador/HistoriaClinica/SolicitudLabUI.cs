@@ -37,7 +37,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
-            solicitudLab.idSolicitud = ConstanteGeneral.SIN_VALOR_NUMERICO;
+            dgvEdicion();
+            solicitudLab.idSolicitud = ConstanteGeneral.PREDETERMINADO;
         }
 
         ////private void tstModificar_Click(object sender, EventArgs e)
@@ -59,6 +60,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 {
                     if (Mensajes.preguntaGuardar())
                     {
+                        dgvResultadoLaboratorio.EndEdit();
                         objetoSolicitudLabCrear();
                         SolicitudLabDAL.guardarSolicitudLab(solicitudLab);
                         GeneralC.deshabilitarBotones(ref tstMenuPatron);
@@ -66,6 +68,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
                         tsbNuevo.Enabled = true;
                         tsbBuscar.Enabled = true;
                         tstImprimir.Enabled = true;
+                        tsbAnular.Enabled = true;
                         Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_GUARDADO);
                     }
                 }
@@ -92,8 +95,15 @@ namespace Galactus.VistaControlador.HistoriaClinica
             try
             {
                 if (Mensajes.preguntaAnular() == true) {
-                    SolicitudLabDAL.anularSolicitudLab(solicitudLab.idSolicitud);
-                    GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar);
+                    if (SolicitudLabDAL.anularSolicitudLab(solicitudLab.idSolicitud) == true)
+                    {
+                        GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar);
+                    }
+                    else
+                    {
+                        Mensajes.mensajeAdvertencia("Solicitud imposible de anular, ya a sido procesada");
+                    }
+                   
             }
             }
             catch (Exception ex) {
@@ -165,6 +175,12 @@ namespace Galactus.VistaControlador.HistoriaClinica
             if (tsbGuardar.Enabled == true) {
                 cargarExamenLabPendiente();
             }
+        }
+        private void dgvEdicion() {
+            dgvResultadoLaboratorio.ReadOnly = false;
+            dgvResultadoLaboratorio.Columns[2].ReadOnly = true;
+            dgvResultadoLaboratorio.Columns[3].ReadOnly = true;
+            dgvResultadoLaboratorio.Columns[4].ReadOnly = false;
         }
     }
 }
