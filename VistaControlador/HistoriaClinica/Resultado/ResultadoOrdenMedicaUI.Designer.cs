@@ -112,7 +112,7 @@
             this.tpImagenologia.Name = "tpImagenologia";
             this.tpImagenologia.Size = new System.Drawing.Size(968, 309);
             this.tpImagenologia.TabIndex = 1;
-            this.tpImagenologia.Text = "Imagenologia";
+            this.tpImagenologia.Text = "Ayudas Diagnosticas";
             // 
             // dtpFecha
             // 
