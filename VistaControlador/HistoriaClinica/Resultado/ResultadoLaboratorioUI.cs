@@ -20,10 +20,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private ResultadoLaboratorio resultadoLab = new ResultadoLaboratorio();
         private int idProcedimiento;
 
-        public ResultadoLaboratorioUI(int idSolicitud,int idProcedimiento, int auditoria)
+        public ResultadoLaboratorioUI(int idOrdenMedica,int idProcedimiento, int auditoria)
         {
             InitializeComponent();
-            resultadoLab.codigoSolicitud = idSolicitud;
+            resultadoLab.idOrdenMedica = idOrdenMedica;
             this.idProcedimiento = idProcedimiento;
             resultadoLab.auditoria = auditoria;
         }
@@ -111,7 +111,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             DataRow dRows;
             DataTable dtDatos = new DataTable();
             paramtro.Add(resultadoLab.auditoria.ToString());
-            paramtro.Add(resultadoLab.codigoSolicitud.ToString());
+            paramtro.Add(resultadoLab.idOrdenMedica.ToString());
             paramtro.Add(idProcedimiento.ToString());
             try {
                 GeneralC.llenarTabla(Sentencias.BUSCAR_PACIENTE_RESULTADO_LAB, paramtro, dtDatos);
@@ -161,7 +161,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> paramtro = new List<string>();
 
             paramtro.Add(resultadoLab.auditoria.ToString());
-            paramtro.Add(resultadoLab.codigoSolicitud.ToString()); 
+            paramtro.Add(resultadoLab.idOrdenMedica.ToString()); 
             paramtro.Add(resultadoLab.codigoGenero.ToString());
             paramtro.Add(idProcedimiento.ToString());
             paramtro.Add(Convert.ToUInt32(resultadoLab.estadoRegistro).ToString());
