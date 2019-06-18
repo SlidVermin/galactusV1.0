@@ -16,7 +16,7 @@ namespace Galactus
         public const string CLASIFICACION_PROCEDIMIENTO_PAGINACION = ConstanteGeneral.ESQUEMA_GENERAL + "[uspProcedimientoPaginacionCargar]";
         public const string EXAMEN_PARACLINICOS_PAGINACION = ConstanteGeneral.ESQUEMA_GENERAL + "[uspProcedimientoExamenPaginacionCargar]";
         public const string ESTANCIA_PARACLINICOS_PAGINACION = ConstanteGeneral.ESQUEMA_GENERAL + "[uspProcedimientoEstanciaPaginacionCargar]";
-
+        public const string ECOCARDIOGRAMA_PARAMETROS_CARGAR= ConstanteGeneral.ESQUEMA_GENERAL + "[uspEcocardiogramaParametroCargar]";
         public const string EMPRESA_BUSCAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspEmpresaBuscar]";
         public const string EMPRESA_CARGAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspEmpresaCargar]";
 
@@ -133,6 +133,11 @@ namespace Galactus
         public const string BUSCAR_HEMODIALISIS = ConstanteGeneral.ESQUEMA_FORMATO + "[uspHemodialisisBuscar]";
         public const string ANULAR_HEMODIALISIS = ConstanteGeneral.ESQUEMA_FORMATO + "[uspHemodialisisAnular]";
         public const string CREAR_HEMODIALISIS = ConstanteGeneral.ESQUEMA_FORMATO + "[uspHemodialisisCrear]";
+
+        public const string BUSCAR_PACIENTE_ECOCARDIOGRAMA = ConstanteGeneral.ESQUEMA_FORMATO + "[uspPacienteEcocardiogramaConsultar]";
+        public const string BUSCAR_ECOCARDIOGRAMA = ConstanteGeneral.ESQUEMA_FORMATO + "";
+        public const string ANULAR_ECOCARDIOGRAMA = ConstanteGeneral.ESQUEMA_FORMATO + "";
+        public const string CREAR_ECOCARDIOGARMA = ConstanteGeneral.ESQUEMA_FORMATO + "";
 
         public const string INFORME_QX_MEDICAMENTO_ANASTESIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspMedicamentoAnasteaBuscar]";
         public const string PACIENTE_INFORME_QX_BUSCAR = ConstanteGeneral.ESQUEMA_FORMATO +"[uspPacienteInformeQxConsultar]";

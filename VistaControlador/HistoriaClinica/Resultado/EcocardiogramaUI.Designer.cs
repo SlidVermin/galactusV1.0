@@ -31,12 +31,12 @@
             this.tstMenuPatron = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tstModificar = new System.Windows.Forms.ToolStripButton();
-            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbAnular = new System.Windows.Forms.ToolStripButton();
+            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,9 +47,11 @@
             this.dgvParametro = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlInformacion = new System.Windows.Forms.Panel();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtProcedimiento = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.dtFecha = new System.Windows.Forms.DateTimePicker();
+            this.dtFechaIngreso = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.tsbBuscarNit = new System.Windows.Forms.Button();
             this.txtCodigoAdministradora = new System.Windows.Forms.TextBox();
@@ -65,9 +67,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tstImprimir = new System.Windows.Forms.ToolStripButton();
+            this.dgIdParametro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgResultado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgReferencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tstMenuPatron.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlCaracteristica.SuspendLayout();
@@ -81,8 +85,8 @@
             this.tstMenuPatron.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tstModificar,
-            this.tsbCancelar,
             this.tsbGuardar,
+            this.tsbCancelar,
             this.tsbBuscar,
             this.tsbAnular,
             this.tstImprimir});
@@ -103,6 +107,7 @@
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tstModificar
             // 
@@ -113,16 +118,7 @@
             this.tstModificar.Name = "tstModificar";
             this.tstModificar.Size = new System.Drawing.Size(78, 22);
             this.tstModificar.Text = "Modificar";
-            // 
-            // tsbCancelar
-            // 
-            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
-            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
-            this.tsbCancelar.Text = "Cancelar";
+            this.tstModificar.Click += new System.EventHandler(this.tstModificar_Click);
             // 
             // tsbGuardar
             // 
@@ -133,6 +129,18 @@
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(69, 22);
             this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
+            // 
+            // tsbCancelar
+            // 
+            this.tsbCancelar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsbCancelar.Image = global::Galactus.Properties.Resources.btn_cancelar;
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(73, 22);
+            this.tsbCancelar.Text = "Cancelar";
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
             // tsbBuscar
             // 
@@ -143,6 +151,7 @@
             this.tsbBuscar.Name = "tsbBuscar";
             this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
             this.tsbBuscar.Text = "Buscar";
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
             // 
             // tsbAnular
             // 
@@ -153,6 +162,17 @@
             this.tsbAnular.Name = "tsbAnular";
             this.tsbAnular.Size = new System.Drawing.Size(62, 22);
             this.tsbAnular.Text = "Anular";
+            this.tsbAnular.Click += new System.EventHandler(this.tsbAnular_Click);
+            // 
+            // tstImprimir
+            // 
+            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
+            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
+            this.tstImprimir.Name = "tstImprimir";
+            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
+            this.tstImprimir.Text = "Imprimir";
+            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // btnSalir
             // 
@@ -165,21 +185,13 @@
             this.btnSalir.TabIndex = 52;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(25, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 51;
-            this.pictureBox1.TabStop = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 15);
+            this.label1.Location = new System.Drawing.Point(26, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 18);
             this.label1.TabIndex = 50;
@@ -211,7 +223,7 @@
             // 
             // txtObservacion
             // 
-            this.txtObservacion.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacion.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservacion.Location = new System.Drawing.Point(3, 3);
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
@@ -259,6 +271,11 @@
             this.dgvParametro.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvParametro.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvParametro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvParametro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgIdParametro,
+            this.dgDescripcion,
+            this.dgResultado,
+            this.dgReferencia});
             this.dgvParametro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvParametro.Location = new System.Drawing.Point(0, 0);
             this.dgvParametro.Name = "dgvParametro";
@@ -280,9 +297,11 @@
             // 
             this.pnlInformacion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnlInformacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInformacion.Controls.Add(this.dtpFecha);
+            this.pnlInformacion.Controls.Add(this.label12);
             this.pnlInformacion.Controls.Add(this.txtProcedimiento);
             this.pnlInformacion.Controls.Add(this.label11);
-            this.pnlInformacion.Controls.Add(this.dtFecha);
+            this.pnlInformacion.Controls.Add(this.dtFechaIngreso);
             this.pnlInformacion.Controls.Add(this.label4);
             this.pnlInformacion.Controls.Add(this.tsbBuscarNit);
             this.pnlInformacion.Controls.Add(this.txtCodigoAdministradora);
@@ -303,6 +322,26 @@
             this.pnlInformacion.Size = new System.Drawing.Size(897, 113);
             this.pnlInformacion.TabIndex = 1;
             // 
+            // dtpFecha
+            // 
+            this.dtpFecha.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFecha.Location = new System.Drawing.Point(714, 7);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(151, 21);
+            this.dtpFecha.TabIndex = 49;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(614, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 15);
+            this.label12.TabIndex = 48;
+            this.label12.Text = "Fecha:";
+            // 
             // txtProcedimiento
             // 
             this.txtProcedimiento.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -322,25 +361,25 @@
             this.label11.TabIndex = 46;
             this.label11.Text = "Procedimiento:";
             // 
-            // dtFecha
+            // dtFechaIngreso
             // 
-            this.dtFecha.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dtFecha.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtFecha.Location = new System.Drawing.Point(714, 54);
-            this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(151, 21);
-            this.dtFecha.TabIndex = 45;
+            this.dtFechaIngreso.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtFechaIngreso.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtFechaIngreso.Location = new System.Drawing.Point(714, 54);
+            this.dtFechaIngreso.Name = "dtFechaIngreso";
+            this.dtFechaIngreso.Size = new System.Drawing.Size(151, 21);
+            this.dtFechaIngreso.TabIndex = 45;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(664, 57);
+            this.label4.Location = new System.Drawing.Point(614, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 15);
+            this.label4.Size = new System.Drawing.Size(89, 15);
             this.label4.TabIndex = 44;
-            this.label4.Text = "Fecha:";
+            this.label4.Text = "Fecha Ingreso:";
             // 
             // tsbBuscarNit
             // 
@@ -351,6 +390,7 @@
             this.tsbBuscarNit.Size = new System.Drawing.Size(26, 24);
             this.tsbBuscarNit.TabIndex = 43;
             this.tsbBuscarNit.UseVisualStyleBackColor = true;
+            this.tsbBuscarNit.Click += new System.EventHandler(this.tsbBuscarNit_Click);
             // 
             // txtCodigoAdministradora
             // 
@@ -384,7 +424,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(608, 34);
+            this.label9.Location = new System.Drawing.Point(614, 34);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 15);
             this.label9.TabIndex = 24;
@@ -393,9 +433,9 @@
             // txtServicio
             // 
             this.txtServicio.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServicio.Location = new System.Drawing.Point(667, 31);
+            this.txtServicio.Location = new System.Drawing.Point(714, 31);
             this.txtServicio.Name = "txtServicio";
-            this.txtServicio.Size = new System.Drawing.Size(198, 21);
+            this.txtServicio.Size = new System.Drawing.Size(151, 21);
             this.txtServicio.TabIndex = 23;
             this.txtServicio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -474,15 +514,32 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Atención:";
             // 
-            // tstImprimir
+            // dgIdParametro
             // 
-            this.tstImprimir.Image = global::Galactus.Properties.Resources.print__2_;
-            this.tstImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstImprimir.Margin = new System.Windows.Forms.Padding(0, 1, 15, 2);
-            this.tstImprimir.Name = "tstImprimir";
-            this.tstImprimir.Size = new System.Drawing.Size(73, 22);
-            this.tstImprimir.Text = "Imprimir";
-            this.tstImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.dgIdParametro.HeaderText = "idParametro";
+            this.dgIdParametro.Name = "dgIdParametro";
+            this.dgIdParametro.Visible = false;
+            this.dgIdParametro.Width = 69;
+            // 
+            // dgDescripcion
+            // 
+            this.dgDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgDescripcion.HeaderText = "Descripción";
+            this.dgDescripcion.Name = "dgDescripcion";
+            // 
+            // dgResultado
+            // 
+            this.dgResultado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgResultado.HeaderText = "Resultado";
+            this.dgResultado.Name = "dgResultado";
+            this.dgResultado.Width = 80;
+            // 
+            // dgReferencia
+            // 
+            this.dgReferencia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgReferencia.HeaderText = "Referencia";
+            this.dgReferencia.Name = "dgReferencia";
+            this.dgReferencia.Width = 84;
             // 
             // EcocardiogramaUI
             // 
@@ -493,17 +550,17 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tstMenuPatron);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(969, 580);
             this.MinimumSize = new System.Drawing.Size(969, 580);
             this.Name = "EcocardiogramaUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EcocardiogramaUI";
+            this.Load += new System.EventHandler(this.EcocardiogramaUI_Load);
             this.tstMenuPatron.ResumeLayout(false);
             this.tstMenuPatron.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -527,7 +584,6 @@
         private System.Windows.Forms.ToolStripButton tsbBuscar;
         private System.Windows.Forms.ToolStripButton tsbAnular;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
@@ -539,7 +595,7 @@
         private System.Windows.Forms.Panel pnlInformacion;
         private System.Windows.Forms.TextBox txtProcedimiento;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DateTimePicker dtFecha;
+        private System.Windows.Forms.DateTimePicker dtFechaIngreso;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button tsbBuscarNit;
         private System.Windows.Forms.TextBox txtCodigoAdministradora;
@@ -557,5 +613,11 @@
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.DataGridView dgvParametro;
         private System.Windows.Forms.ToolStripButton tstImprimir;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgIdParametro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgResultado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgReferencia;
     }
 }
