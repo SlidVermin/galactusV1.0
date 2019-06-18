@@ -44,7 +44,6 @@
             this.tcOrdenMedica = new Galactus.Util.Controles.TabControlGalactus();
             this.tpProblemas = new System.Windows.Forms.TabPage();
             this.tpExamenFisico = new System.Windows.Forms.TabPage();
-            this.tpInterpretacion = new System.Windows.Forms.TabPage();
             this.tpAnalisis = new System.Windows.Forms.TabPage();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.tstPropiedadesOrdenMedica.SuspendLayout();
@@ -184,7 +183,6 @@
             this.tcOrdenMedica.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tcOrdenMedica.Controls.Add(this.tpProblemas);
             this.tcOrdenMedica.Controls.Add(this.tpExamenFisico);
-            this.tcOrdenMedica.Controls.Add(this.tpInterpretacion);
             this.tcOrdenMedica.Controls.Add(this.tpAnalisis);
             this.tcOrdenMedica.ItemSize = new System.Drawing.Size(30, 120);
             this.tcOrdenMedica.Location = new System.Drawing.Point(3, 28);
@@ -214,15 +212,6 @@
             this.tpExamenFisico.TabIndex = 1;
             this.tpExamenFisico.Text = "Examen Fisico";
             this.tpExamenFisico.UseVisualStyleBackColor = true;
-            // 
-            // tpInterpretacion
-            // 
-            this.tpInterpretacion.Location = new System.Drawing.Point(124, 4);
-            this.tpInterpretacion.Name = "tpInterpretacion";
-            this.tpInterpretacion.Size = new System.Drawing.Size(968, 297);
-            this.tpInterpretacion.TabIndex = 2;
-            this.tpInterpretacion.Text = "Interpretación";
-            this.tpInterpretacion.UseVisualStyleBackColor = true;
             // 
             // tpAnalisis
             // 
@@ -285,7 +274,6 @@
         private System.Windows.Forms.ToolStripButton tsBtModificar;
         private System.Windows.Forms.ToolStripButton tsBtNuevo;
         private System.Windows.Forms.ToolStrip tstMenuEvolucion;
-        private System.Windows.Forms.TabPage tpInterpretacion;
         private Util.Controles.TabControlGalactus tcOrdenMedica;
         private System.Windows.Forms.DateTimePicker dtpFecha;
     }

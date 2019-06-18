@@ -98,10 +98,10 @@ namespace Galactus.Entidades.Admision
                 idPaciente = dt["table"].Rows[0].Field<int>("idpaciente");
                 idEspecialidad= dt["table"].Rows[0].Field<int>("idEspecialidad");
                 idTriage =Convert.ToString(dt["table"].Rows[0].Field<int>("idtriage"));
-                idContacto = dt["table"].Rows[0].Field<int>("idContacto");
+               
                 idContrato = dt["table"].Rows[0].Field<int>("idContrato");
                 cliente = dt["table"].Rows[0].Field<String>("cliente");
-                contacto = dt["table"].Rows[0].Field<String>("contacto");
+               
                 especialidad = dt["table"].Rows[0].Field<String>("especialidad");
 
             }

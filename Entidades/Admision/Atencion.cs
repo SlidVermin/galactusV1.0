@@ -55,7 +55,6 @@ namespace Galactus.Entidades.Admision
                 idCama = Convert.ToString(tables["table"].Rows[0].Field<int>("idcama"));
                 idCausaExterna = Convert.ToString(tables["table"].Rows[0].Field<int>("idcausaExterna"));
                 idInstitucion = Convert.ToString(tables["table"].Rows[0].Field<int>("idinstitucion"));
-                observacion = tables["table"].Rows[0].Field<String>("observacion");
                 fechaIngreso = tables["table"].Rows[0].Field<DateTime>("fechaingreso");
                 idEstadoAtencion = tables["table"].Rows[0].Field<int>("idEstadoAtencion");
                 numeroAutorizacion = Convert.ToUInt16( tables["table"].Rows[0].Field<String>("numeroautorizacion"));
@@ -91,6 +90,7 @@ namespace Galactus.Entidades.Admision
             dtCambio = dtDiagnostico.Copy();
 
             dtCambio.Columns.Remove("Código");
+            dtCambio.Columns.Remove("Descripcion");
 
             if (dtCambio.Rows.Count > 0)
             {

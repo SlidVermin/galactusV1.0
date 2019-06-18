@@ -68,12 +68,6 @@ namespace Galactus.VistaControlador.Admision
         {
             establecerParametros();
             GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
-            GeneralC.llenarCombo(Sentencias.CARGAR_TIPO_DOCUMENTOS, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
-                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                               cmbTipoDocumento);
-            GeneralC.llenarCombo(Sentencias.CARGAR_TIPO_DOCUMENTOS, Util.Constantes.ConstanteGeneral.VALUE_VALOR,
-                               Util.Constantes.ConstanteGeneral.DISPLAY_VALOR,
-                               cmbTipoDocumentoResponsable);
             GeneralC.llenarCombo(Sentencias.CARGARPAIS,
                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,

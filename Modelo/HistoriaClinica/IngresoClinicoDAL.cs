@@ -48,6 +48,8 @@ namespace Galactus.Modelo.HistoriaClinica
                     comando.Parameters.Add(new SqlParameter("@FechaOrigen", System.Data.SqlDbType.DateTime)).Value = DateTime.Today;
                     comando.Parameters.Add(new SqlParameter("@tblImpresion", System.Data.SqlDbType.Structured)).Value = ingreso.dtAlistar;
                     comando.Parameters.Add(new SqlParameter("@tblMaterno", System.Data.SqlDbType.Structured)).Value = ingreso.dtMaterno;
+                    comando.Parameters.Add(new SqlParameter("@tblNacimiento", System.Data.SqlDbType.Structured)).Value = ingreso.dtNacimiento;
+                    comando.Parameters.Add(new SqlParameter("@tblRecienNacido", System.Data.SqlDbType.Structured)).Value = ingreso.dtRecienNacido;
 
                     comando.ExecuteScalar();
                 }
@@ -68,7 +70,7 @@ namespace Galactus.Modelo.HistoriaClinica
         {
             List<string> list = new List<string>();
             list.Add(Convert.ToString(ingreso.IdAtencion));
-            GeneralC.llenarTabla(Sentencias.CARGAR_INGRESO, list, ingreso.dtDatos);
+          ingreso.dsDatos =  GeneralC.llenarDataset(Sentencias.CARGAR_INGRESO, list);
         }
 
         public static void cargarDiagnosticoImpresion(IngresoClinico ingreso)

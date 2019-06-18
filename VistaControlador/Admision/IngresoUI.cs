@@ -237,6 +237,7 @@ namespace Galactus.VistaControlador.Admision
         {
            
             atencion.idAtencion = filas.Field<int>("atencion");
+            atencion.idAdmision = filas.Field<int>("Admision");
             atencion.cargarDatos();
             cbVia.SelectedValue = atencion.idViaIngreso;
             cbCausaExterna.SelectedValue = atencion.idCausaExterna;

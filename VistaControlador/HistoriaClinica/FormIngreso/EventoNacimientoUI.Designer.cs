@@ -31,7 +31,7 @@
             this.GroupBox21 = new System.Windows.Forms.GroupBox();
             this.txtRmacionN = new System.Windows.Forms.TextBox();
             this.Label60 = new System.Windows.Forms.Label();
-            this.txtApgar2 = new System.Windows.Forms.TextBox();
+            this.txtApgar5 = new System.Windows.Forms.TextBox();
             this.Label54 = new System.Windows.Forms.Label();
             this.txtApgar1N = new System.Windows.Forms.TextBox();
             this.Label55 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             // 
             this.GroupBox21.Controls.Add(this.txtRmacionN);
             this.GroupBox21.Controls.Add(this.Label60);
-            this.GroupBox21.Controls.Add(this.txtApgar2);
+            this.GroupBox21.Controls.Add(this.txtApgar5);
             this.GroupBox21.Controls.Add(this.Label54);
             this.GroupBox21.Controls.Add(this.txtApgar1N);
             this.GroupBox21.Controls.Add(this.Label55);
@@ -91,15 +91,15 @@
             this.Label60.TabIndex = 10065;
             this.Label60.Text = "R/mación al Nacer:";
             // 
-            // txtApgar2
+            // txtApgar5
             // 
-            this.txtApgar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtApgar2.Location = new System.Drawing.Point(133, 350);
-            this.txtApgar2.Multiline = true;
-            this.txtApgar2.Name = "txtApgar2";
-            this.txtApgar2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtApgar2.Size = new System.Drawing.Size(819, 44);
-            this.txtApgar2.TabIndex = 10064;
+            this.txtApgar5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txtApgar5.Location = new System.Drawing.Point(133, 350);
+            this.txtApgar5.Multiline = true;
+            this.txtApgar5.Name = "txtApgar5";
+            this.txtApgar5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtApgar5.Size = new System.Drawing.Size(819, 44);
+            this.txtApgar5.TabIndex = 10064;
             // 
             // Label54
             // 
@@ -238,7 +238,7 @@
         internal System.Windows.Forms.GroupBox GroupBox21;
         internal System.Windows.Forms.TextBox txtRmacionN;
         internal System.Windows.Forms.Label Label60;
-        internal System.Windows.Forms.TextBox txtApgar2;
+        internal System.Windows.Forms.TextBox txtApgar5;
         internal System.Windows.Forms.Label Label54;
         internal System.Windows.Forms.TextBox txtApgar1N;
         internal System.Windows.Forms.Label Label55;

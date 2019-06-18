@@ -110,6 +110,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
             ingreso.pielFaneras = examenFisicoUI.txtPielFaneras.Text;
             alistarDt(valoracionUI.ingreso);
             ingreso. establecerDtMaterno();
+            ingreso.establecerDtNacimiento();
+            ingreso.establecerDtRecienNacido();
             if(antecedentesMaternosUI.txtEdadMadreN.Text != string.Empty)
             {
                 ingreso.dtMaterno.Rows.Add(idAtencion,antecedentesMaternosUI.txtEdadMadreN.Text, antecedentesMaternosUI.txtEdadGestN.Text,
@@ -121,6 +123,18 @@ namespace Galactus.VistaControlador.HistoriaClinica
                                      antecedentesMaternosUI.txtInfeccionesN.Text, antecedentesMaternosUI.txtEnferTN.Text,
                                      antecedentesMaternosUI.txtDiabeteGN.Text, antecedentesMaternosUI.txtDiabeteMN.Text,
                                      antecedentesMaternosUI.txtTorch.Text);
+            }
+            if(eventoNacimientoUI.txtTipoParto.Text != string.Empty)
+            {
+                ingreso.dtNacimiento.Rows.Add(idAtencion,eventoNacimientoUI.txtTipoParto.Text,eventoNacimientoUI.txtInduccionP.Text,
+                                              eventoNacimientoUI.txtApgar1N.Text,eventoNacimientoUI.txtRmacionN.Text,eventoNacimientoUI.txtTRupturaM.Text,
+                                              eventoNacimientoUI.txtCaractLiquidoN.Text,eventoNacimientoUI.txtApgar5.Text);
+            }
+            if(antecedenteRecienNacidoUI.txtHemoclasificacionN.Text != string.Empty)
+            {
+                ingreso.dtRecienNacido.Rows.Add(idAtencion,antecedenteRecienNacidoUI.txtHemoclasificacionN.Text,
+                                                antecedenteRecienNacidoUI.txtTSHN.Text,antecedenteRecienNacidoUI.txtVDRLN.Text,
+                                                antecedenteRecienNacidoUI.txtGlucometriasN.Text);
             }
           
             return ingreso;

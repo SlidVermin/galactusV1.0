@@ -45,7 +45,6 @@ namespace Galactus.VistaControlador.HistoriaClinica.EvolucionMedica
             dtpFecha.Text = Convert.ToString(GeneralC.obtenerFechaServidor());
             GeneralC.cargarFormularioEnPestana(tpProblemas, problemas);
             GeneralC.cargarFormularioEnPestana(tpExamenFisico, examen);
-            GeneralC.cargarFormularioEnPestana(tpInterpretacion, interpretracion);
             GeneralC.cargarFormularioEnPestana(tpAnalisis, analisis);
             GeneralC.posCargadoForm(this, tstMenuEvolucion, tsBtNuevo, tsBtBuscar);
             evolucionMedica.idEvolucion = ConstanteGeneral.PREDETERMINADO;
