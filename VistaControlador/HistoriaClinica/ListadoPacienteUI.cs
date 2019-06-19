@@ -50,6 +50,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         public void preCargar()
         {
+            listaPaciente.filtro = textBox1.Text;
             listaPaciente.listarPacientes();
             dibujarGridView();
         }
@@ -191,6 +192,11 @@ namespace Galactus.VistaControlador.HistoriaClinica
         {
             dibujarGridView();
             dgvListaPaciente.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+
+        private void buscarHCPacienteBtn_Click(object sender, EventArgs e)
+        {
+            preCargar();
         }
     }
 }

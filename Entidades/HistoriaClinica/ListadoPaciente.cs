@@ -9,16 +9,20 @@ using Galactus.Util.Constantes;
 
 namespace Galactus.Entidades.HistoriaClinica
 {
-  public  class ListadoPaciente
+    public class ListadoPaciente
     {
-      public  DataTable dtPaciente = new DataTable();
+        public DataTable dtPaciente = new DataTable();
         public String idMenu { get; set; }
         public bool auditoria { get; set; }
         public int idEntorno { get; set; }
         public int idArea { get; set; }
         public int idEstadoAtencion { get; set; }
-
-     
+        public string filtro { get; set; }
+        public ListadoPaciente()
+        {
+            this.idEntorno = 0;
+            this.filtro = "";
+        }
         public void listarPacientes()
         {
             auditoria = false;
@@ -27,6 +31,7 @@ namespace Galactus.Entidades.HistoriaClinica
             param.Add(Convert.ToString(idArea));
             param.Add(Convert.ToString(idEntorno));
             param.Add(Convert.ToString(idEstadoAtencion));
+            param.Add(Convert.ToString(filtro));
             GeneralC.llenarTabla(ConsultasHistoriaClinica.LISTAR_PACIENTE, param, dtPaciente);
         }
     }

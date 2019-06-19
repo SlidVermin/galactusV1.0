@@ -33,6 +33,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvListaPaciente = new System.Windows.Forms.DataGridView();
+            this.dgAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgAdmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgFechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgEntorno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgEdad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgEgreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btLimpiar = new System.Windows.Forms.Button();
             this.cbEstado = new System.Windows.Forms.ComboBox();
@@ -46,18 +58,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.dgAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgAdmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgFechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgEntorno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgEstancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgEdad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgEgreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -139,6 +139,106 @@
             this.dgvListaPaciente.Size = new System.Drawing.Size(1256, 484);
             this.dgvListaPaciente.TabIndex = 0;
             this.dgvListaPaciente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaPaciente_CellDoubleClick);
+            // 
+            // dgAtencion
+            // 
+            this.dgAtencion.HeaderText = "Atencion";
+            this.dgAtencion.Name = "dgAtencion";
+            this.dgAtencion.ReadOnly = true;
+            this.dgAtencion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dgAdmision
+            // 
+            this.dgAdmision.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgAdmision.HeaderText = "Admision";
+            this.dgAdmision.Name = "dgAdmision";
+            this.dgAdmision.ReadOnly = true;
+            this.dgAdmision.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dgPaciente
+            // 
+            this.dgPaciente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgPaciente.HeaderText = "Paciente";
+            this.dgPaciente.Name = "dgPaciente";
+            this.dgPaciente.ReadOnly = true;
+            this.dgPaciente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgPaciente.Width = 65;
+            // 
+            // dgFechaIngreso
+            // 
+            this.dgFechaIngreso.HeaderText = "Fecha Ingreso";
+            this.dgFechaIngreso.Name = "dgFechaIngreso";
+            this.dgFechaIngreso.ReadOnly = true;
+            this.dgFechaIngreso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dgEntorno
+            // 
+            this.dgEntorno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgEntorno.HeaderText = "Entorno";
+            this.dgEntorno.Name = "dgEntorno";
+            this.dgEntorno.ReadOnly = true;
+            this.dgEntorno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgEntorno.Width = 59;
+            // 
+            // dgArea
+            // 
+            this.dgArea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgArea.HeaderText = "Area";
+            this.dgArea.Name = "dgArea";
+            this.dgArea.ReadOnly = true;
+            this.dgArea.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgArea.Width = 41;
+            // 
+            // dgEstancia
+            // 
+            this.dgEstancia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgEstancia.HeaderText = "Estancia";
+            this.dgEstancia.Name = "dgEstancia";
+            this.dgEstancia.ReadOnly = true;
+            this.dgEstancia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgEstancia.Width = 65;
+            // 
+            // dgEdad
+            // 
+            this.dgEdad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgEdad.HeaderText = "Edad";
+            this.dgEdad.Name = "dgEdad";
+            this.dgEdad.ReadOnly = true;
+            this.dgEdad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgEdad.Width = 44;
+            // 
+            // dgGenero
+            // 
+            this.dgGenero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgGenero.HeaderText = "Genero";
+            this.dgGenero.Name = "dgGenero";
+            this.dgGenero.ReadOnly = true;
+            this.dgGenero.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgGenero.Width = 56;
+            // 
+            // dgCliente
+            // 
+            this.dgCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dgCliente.HeaderText = "Cliente";
+            this.dgCliente.Name = "dgCliente";
+            this.dgCliente.ReadOnly = true;
+            this.dgCliente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgCliente.Width = 54;
+            // 
+            // dgColor
+            // 
+            this.dgColor.HeaderText = "Color";
+            this.dgColor.Name = "dgColor";
+            this.dgColor.ReadOnly = true;
+            this.dgColor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgColor.Visible = false;
+            // 
+            // dgEgreso
+            // 
+            this.dgEgreso.HeaderText = "Fecha egreso";
+            this.dgEgreso.Name = "dgEgreso";
+            this.dgEgreso.ReadOnly = true;
+            this.dgEgreso.Visible = false;
             // 
             // panel2
             // 
@@ -248,6 +348,7 @@
             this.buscarHCPacienteBtn.Size = new System.Drawing.Size(26, 24);
             this.buscarHCPacienteBtn.TabIndex = 28;
             this.buscarHCPacienteBtn.UseVisualStyleBackColor = true;
+            this.buscarHCPacienteBtn.Click += new System.EventHandler(this.buscarHCPacienteBtn_Click);
             // 
             // textBox1
             // 
@@ -278,106 +379,6 @@
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // dgAtencion
-            // 
-            this.dgAtencion.HeaderText = "Atencion";
-            this.dgAtencion.Name = "dgAtencion";
-            this.dgAtencion.ReadOnly = true;
-            this.dgAtencion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dgAdmision
-            // 
-            this.dgAdmision.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgAdmision.HeaderText = "Admision";
-            this.dgAdmision.Name = "dgAdmision";
-            this.dgAdmision.ReadOnly = true;
-            this.dgAdmision.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dgPaciente
-            // 
-            this.dgPaciente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgPaciente.HeaderText = "Paciente";
-            this.dgPaciente.Name = "dgPaciente";
-            this.dgPaciente.ReadOnly = true;
-            this.dgPaciente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgPaciente.Width = 65;
-            // 
-            // dgFechaIngreso
-            // 
-            this.dgFechaIngreso.HeaderText = "Fecha Ingreso";
-            this.dgFechaIngreso.Name = "dgFechaIngreso";
-            this.dgFechaIngreso.ReadOnly = true;
-            this.dgFechaIngreso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dgEntorno
-            // 
-            this.dgEntorno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgEntorno.HeaderText = "Entorno";
-            this.dgEntorno.Name = "dgEntorno";
-            this.dgEntorno.ReadOnly = true;
-            this.dgEntorno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgEntorno.Width = 59;
-            // 
-            // dgArea
-            // 
-            this.dgArea.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgArea.HeaderText = "Area";
-            this.dgArea.Name = "dgArea";
-            this.dgArea.ReadOnly = true;
-            this.dgArea.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgArea.Width = 41;
-            // 
-            // dgEstancia
-            // 
-            this.dgEstancia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgEstancia.HeaderText = "Estancia";
-            this.dgEstancia.Name = "dgEstancia";
-            this.dgEstancia.ReadOnly = true;
-            this.dgEstancia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgEstancia.Width = 65;
-            // 
-            // dgEdad
-            // 
-            this.dgEdad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgEdad.HeaderText = "Edad";
-            this.dgEdad.Name = "dgEdad";
-            this.dgEdad.ReadOnly = true;
-            this.dgEdad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgEdad.Width = 44;
-            // 
-            // dgGenero
-            // 
-            this.dgGenero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgGenero.HeaderText = "Genero";
-            this.dgGenero.Name = "dgGenero";
-            this.dgGenero.ReadOnly = true;
-            this.dgGenero.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgGenero.Width = 56;
-            // 
-            // dgCliente
-            // 
-            this.dgCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dgCliente.HeaderText = "Cliente";
-            this.dgCliente.Name = "dgCliente";
-            this.dgCliente.ReadOnly = true;
-            this.dgCliente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgCliente.Width = 54;
-            // 
-            // dgColor
-            // 
-            this.dgColor.HeaderText = "Color";
-            this.dgColor.Name = "dgColor";
-            this.dgColor.ReadOnly = true;
-            this.dgColor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgColor.Visible = false;
-            // 
-            // dgEgreso
-            // 
-            this.dgEgreso.HeaderText = "Fecha egreso";
-            this.dgEgreso.Name = "dgEgreso";
-            this.dgEgreso.ReadOnly = true;
-            this.dgEgreso.Visible = false;
             // 
             // ListadoPacienteUI
             // 
