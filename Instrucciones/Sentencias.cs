@@ -135,9 +135,10 @@ namespace Galactus
         public const string CREAR_HEMODIALISIS = ConstanteGeneral.ESQUEMA_FORMATO + "[uspHemodialisisCrear]";
 
         public const string BUSCAR_PACIENTE_ECOCARDIOGRAMA = ConstanteGeneral.ESQUEMA_FORMATO + "[uspPacienteEcocardiogramaConsultar]";
-        public const string BUSCAR_ECOCARDIOGRAMA = ConstanteGeneral.ESQUEMA_FORMATO + "";
-        public const string ANULAR_ECOCARDIOGRAMA = ConstanteGeneral.ESQUEMA_FORMATO + "";
-        public const string CREAR_ECOCARDIOGARMA = ConstanteGeneral.ESQUEMA_FORMATO + "";
+        public const string CARGAR_PARAMETROS_ECOCARDIOGRAMA_REGISTRADO = ConstanteGeneral.ESQUEMA_FORMATO + "[uspEcocardiogramaParametroRegistradoCargar]";
+        public const string BUSCAR_ECOCARDIOGRAMA = ConstanteGeneral.ESQUEMA_FORMATO + "[uspEcocardiogramaBuscar]";
+        public const string ANULAR_ECOCARDIOGRAMA = ConstanteGeneral.ESQUEMA_FORMATO + "[uspEcocardiogramaAnular]";
+        public const string CREAR_ECOCARDIOGARMA = ConstanteGeneral.ESQUEMA_FORMATO + "[uspEcocardiogramaCrear]";
 
         public const string INFORME_QX_MEDICAMENTO_ANASTESIA = ConstanteGeneral.ESQUEMA_HISTORIA_CLINICA + "[uspMedicamentoAnasteaBuscar]";
         public const string PACIENTE_INFORME_QX_BUSCAR = ConstanteGeneral.ESQUEMA_FORMATO +"[uspPacienteInformeQxConsultar]";

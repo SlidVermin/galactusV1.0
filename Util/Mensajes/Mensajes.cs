@@ -17,6 +17,7 @@ namespace Galactus.Util.Mensajes
         public const string SALIR_FORM = "¿ Desea salir ?";
         public const string CONFIRMACION_GUARDADO = "Registro Guardado !";
         public const string CONFIRMACION_ANULADO = "Registro anulado !";
+        public const string IMPOSIBLE_ANULA = "Registro imposible de anular !";
         public const string INFORMACION_REQUERIA = "Falta información !";
         public const string VALOR_EXISTENTE = "Este valor ya existe !";
         public const string CANTIDAD_INVALIDA = "Debe colocar una cantidad válida !";

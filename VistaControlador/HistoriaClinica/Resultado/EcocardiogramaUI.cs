@@ -118,10 +118,15 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             if (Mensajes.preguntaAnular() == true) {
                 try
                 {
-                    EcocardiogramaDAL.anularEcocardiograma(ecocardiograma.idEco, ecocardiograma.auditoria);
-                    GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar);
-                    btnSalir.Enabled = true;
-                    Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_ANULADO);
+                    if (EcocardiogramaDAL.anularEcocardiograma(ecocardiograma.idEco, ecocardiograma.auditoria) == true)
+                    {
+                        GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar);
+                        btnSalir.Enabled = true;
+                        Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_ANULADO);
+                    }
+                    else {
+                        Mensajes.mensajeInformacion(Mensajes.IMPOSIBLE_ANULA);
+                    }
                 }
                 catch (Exception ex) {
                     Mensajes.mensajeError(ex);
@@ -131,7 +136,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
 
         private void objetoEcocardiogramaCrear() {
             ecocardiograma.lectura = txtObservacion.Text;
-            ecocardiograma.fecha = dtFechaIngreso.Value;
+            ecocardiograma.fecha = dtpFecha.Value;
         }
         private void cargarInformacionAtencion(DataRow dRows)
         {
@@ -177,6 +182,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
                 dtpFecha.Value = dRows.Field<DateTime>("Fecha Resultado");
                 txtObservacion.Text = dRows.Field<string>("Nota").ToString();
                 cargarInformacionAtencion(dRows);
+                cargarParametroRegistrado();
             }
             catch (Exception ex)
             {
@@ -223,6 +229,17 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             GeneralC.llenarTabla(Sentencias.ECOCARDIOGRAMA_PARAMETROS_CARGAR, paramtro, ecocardiograma.dtParametro);
             dgvParametro.DataSource = ecocardiograma.dtParametro;
         }
+
+        private void cargarParametroRegistrado()
+        {
+            List<string> paramtro = new List<string>();
+            paramtro.Add(ecocardiograma.idEco.ToString());
+            paramtro.Add(ecocardiograma.idAreaAtencion.ToString());
+            paramtro.Add(ecocardiograma.auditoria.ToString());
+            GeneralC.llenarTabla(Sentencias.CARGAR_PARAMETROS_ECOCARDIOGRAMA_REGISTRADO, paramtro, ecocardiograma.dtParametro);
+            dgvParametro.DataSource = ecocardiograma.dtParametro;
+        }
+
         private void editarRegistroGrilla() {
             dgvParametro.ReadOnly = false;
             dgvParametro.Columns[1].ReadOnly = true;
