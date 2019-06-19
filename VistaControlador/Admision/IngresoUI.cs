@@ -155,7 +155,10 @@ namespace Galactus.VistaControlador.Admision
         }
 
         public bool validarForm()
+            
         {
+            dgvDiagnostico.EndEdit();
+            atencion.dtDiagnostico.AcceptChanges();
             if (txtIdAdmision.Text.Equals(String.Empty))
             {
                 MessageBox.Show("¡ Por favor cargue un paciente  !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -191,11 +194,13 @@ namespace Galactus.VistaControlador.Admision
                 MessageBox.Show("¡ Por favor seleccione la cama  !", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 cbCama.Focus();
                 return false;
-            }else
+            }else if(dgvDiagnostico.RowCount == 1)
             {
-                return true;
+                MessageBox.Show("¡ Por favor debe seleccionar los diagnostico!", Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                dgvDiagnostico.Focus();
+                return false;
             }
-           
+            return true;
         }
 
         public void asignarDatos()
@@ -431,11 +436,29 @@ namespace Galactus.VistaControlador.Admision
         public void buscarDiagnostico()
         {
             List<string> parametros = new List<string>();
+            DataTable tablaParametros = new DataTable();
+            DataTable tablasSeleccionado = new DataTable();
+
+            tablaParametros.Columns.Add("Parametro", Type.GetType("System.Object"));
+            tablaParametros.Columns.Add("Valor", Type.GetType("System.Object"));
+
+            //object[] myObjArray = { "@pIdAtencion", idAtencion };
+            //object[] myObjArray1 = { "@pFiltro", "" };
+
+            DataView view = new DataView(atencion.dtDiagnostico);
+
+            tablasSeleccionado = view.ToTable(true, new string[] { "id" }).Copy();
+            tablasSeleccionado.Rows.RemoveAt(tablasSeleccionado.Rows.Count - 1);
+            object[] myObjArray2 = { "@pTblSeleccionados", tablasSeleccionado };
+
+            //tablaParametros.Rows.Add(myObjArray);
+            //tablaParametros.Rows.Add(myObjArray1);
+            tablaParametros.Rows.Add(myObjArray2);
 
             GeneralC.buscarDevuelveFila(Sentencias.GENERAL_BUSCAR_DIAGNOSTICO,
                                                parametros,
                                                new GeneralC.cargarInfoFila(cargarDiagnostico),
-                                               Mensajes.BUSQUEDA_PACIENTE, true);
+                                               Mensajes.BUSQUEDA_PACIENTE, true, null, tablasSeleccionado, tablaParametros);
         }
 
         private void dgvDiagnostico_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
