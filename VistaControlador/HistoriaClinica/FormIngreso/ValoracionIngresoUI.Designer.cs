@@ -54,6 +54,8 @@
             this.dgvRemision = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtMotivoIngreso = new System.Windows.Forms.TextBox();
+            this.txtpeso = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.gbResumenClinico.SuspendLayout();
             this.GroupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvImpresionN)).BeginInit();
@@ -177,6 +179,8 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.txtpeso);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtcausaexterna);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtviaingreso);
@@ -201,10 +205,10 @@
             // txtcausaexterna
             // 
             this.txtcausaexterna.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.txtcausaexterna.Location = new System.Drawing.Point(560, 35);
+            this.txtcausaexterna.Location = new System.Drawing.Point(530, 34);
             this.txtcausaexterna.Name = "txtcausaexterna";
             this.txtcausaexterna.ReadOnly = true;
-            this.txtcausaexterna.Size = new System.Drawing.Size(399, 22);
+            this.txtcausaexterna.Size = new System.Drawing.Size(246, 22);
             this.txtcausaexterna.TabIndex = 10104;
             this.txtcausaexterna.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -212,7 +216,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(462, 37);
+            this.label4.Location = new System.Drawing.Point(435, 36);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 17);
             this.label4.TabIndex = 10103;
@@ -349,6 +353,25 @@
             this.txtMotivoIngreso.Size = new System.Drawing.Size(943, 91);
             this.txtMotivoIngreso.TabIndex = 0;
             // 
+            // txtpeso
+            // 
+            this.txtpeso.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.txtpeso.Location = new System.Drawing.Point(830, 35);
+            this.txtpeso.Name = "txtpeso";
+            this.txtpeso.Size = new System.Drawing.Size(129, 22);
+            this.txtpeso.TabIndex = 10106;
+            this.txtpeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(782, 37);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(39, 17);
+            this.label6.TabIndex = 10105;
+            this.label6.Text = "Peso:";
+            // 
             // ValoracionIngresoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,5 +424,7 @@
         internal System.Windows.Forms.TextBox txtcama;
         internal System.Windows.Forms.TextBox txtinstitucion;
         internal System.Windows.Forms.TextBox txtAutorizacion;
+        internal System.Windows.Forms.TextBox txtpeso;
+        private System.Windows.Forms.Label label6;
     }
 }

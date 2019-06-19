@@ -76,6 +76,7 @@ namespace Galactus.Entidades.HistoriaClinica
         public string tsh { get; set; }
         public string vdrl { get; set; }
         public string glucometrias { get; set; }
+        public int genero { get; set; }
         public String torch { get; set; }
         public DataTable dtMaterno = new DataTable();
         public DataTable dtNacimiento = new DataTable();
@@ -135,6 +136,18 @@ namespace Galactus.Entidades.HistoriaClinica
             dtMaterno.Columns.Add("diabeteGestacional", typeof(String));
             dtMaterno.Columns.Add("diabeteMellitus", typeof(String));
             dtMaterno.Columns.Add("torch", typeof(String));
+        }
+
+        public void generoPestañas()
+        {
+            DataTable dt = new DataTable();
+            List<string> lista = new List<string>();
+            lista.Add(Convert.ToString(IdAtencion));
+            GeneralC.llenarTabla(Sentencias.GENERO_VERIFICAR_INGRESO, lista, dt);
+            if (dt.Rows.Count > 0)
+            {
+                genero = (int) dt.Rows[0]["idGenero"];
+            }
         }
         public void cargarDatosAtencion()
         {

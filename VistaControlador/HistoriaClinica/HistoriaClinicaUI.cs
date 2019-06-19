@@ -15,6 +15,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
     {
         private int idAtencion;
         private bool auditoria;
+        private bool esNeonatal;
         private DateTime fechaEgreso;
         private HistoriaClinicaPaciente historiaClinica = new HistoriaClinicaPaciente();
         private EvolucionMedicaUI EvolucionMedica;
@@ -43,7 +44,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private void HistoriaClinicaUI_Load(object sender, EventArgs e)
         {
 
-            ingreso = new IngresoClinicoUI(idAtencion, auditoria);
+            ingreso = new IngresoClinicoUI(idAtencion, auditoria, esNeonatal);
             OrdenClinica = new OrdenMedicaUI(idAtencion, auditoria);
             EvolucionMedica = new EvolucionMedicaUI(idAtencion, auditoria);
             resulOrdenMedica = new ResultadoOrdenMedicaUI(idAtencion,Convert.ToInt32(auditoria));
@@ -63,7 +64,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
             ingreso.historiaClinica(this);
         }
-        public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso,bool vAuditoria)
+        public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso,bool vAuditoria,bool vEsNeonatal)
         {
             DataTable dtDatos = new DataTable();
             dtDatos = GeneralC.copiarNewDatatable(listaPaciente.dtPaciente, "Atencion", idIngreso);
@@ -81,6 +82,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
                 fechaEgreso = (dtDatos.Rows[0].Field<DateTime>("Fecha egreso"));
                 idAtencion = int.Parse(txtAtencion.Text);
                 auditoria = vAuditoria;
+                esNeonatal = vEsNeonatal;
             }
         }
 

@@ -157,6 +157,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             dgvListaPaciente.Columns["dgCliente"].DataPropertyName = "Cliente";
             dgvListaPaciente.Columns["dgColor"].DataPropertyName = "Color";
             dgvListaPaciente.Columns["dgEgreso"].DataPropertyName = "Fecha egreso";
+            dgvListaPaciente.Columns["dgNeonatal"].DataPropertyName = "EsNeonatal";
 
             cargar();
 
@@ -175,7 +176,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
             {
                 case ConstanteGeneral.MENU_ATENCION_MEDICA:
                     HistoriaClinicaUI formHistoriaClinica = new HistoriaClinicaUI();
-                    formHistoriaClinica.obtenerDatosPaciente(listaPaciente, Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value), auditoria);
+                    formHistoriaClinica.obtenerDatosPaciente(listaPaciente, Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value), auditoria,
+                                                             Convert.ToBoolean(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgNeonatal"].Value));
                     formHistoriaClinica.ShowDialog();
                     break;
                 case ConstanteGeneral.MENU_ATENCION_ENFERMERIA:

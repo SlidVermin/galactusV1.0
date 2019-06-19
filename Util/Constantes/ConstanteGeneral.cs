@@ -86,7 +86,9 @@ namespace Galactus.Util.Constantes
             CLASESOCIAL=47,
             ESTADOCIVIL=49,
             DOCUMENTOS = 29,
-            GENERO = 69
+            GENERO = 69,
+            MASCULINO = 4936,
+            FEMENINO = 4937
         }
 
         #region codigoConfiguracionExamen
