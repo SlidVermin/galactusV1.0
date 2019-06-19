@@ -11,6 +11,10 @@ using Galactus.Util.Mensajes;
 using Galactus.VistaControlador.HistoriaClinica;
 using Galactus.Entidades.HistoriaClinica;
 using Galactus.Util.Constantes;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+using System.Diagnostics;
 
 namespace Galactus.VistaControlador.HistoriaClinica
 {
@@ -23,6 +27,72 @@ namespace Galactus.VistaControlador.HistoriaClinica
             InitializeComponent();
         }
 
+        void generarPDF()
+        {
+            // Creamos el documento con el tamaño de página tradicional
+            Document doc = new Document(PageSize.LETTER);
+            // Indicamos donde vamos a guardar el documento
+            PdfWriter writer = PdfWriter.GetInstance(doc,
+                                        new FileStream(@"D:\prueba.pdf", FileMode.Create));
+
+            // Le colocamos el título y el autor
+            // **Nota: Esto no será visible en el documento
+            doc.AddTitle("Mi primer PDF");
+            doc.AddCreator("Roberto Torres");
+
+            // Abrimos el archivo
+            doc.Open();
+            // Creamos el tipo de Font que vamos utilizar
+            iTextSharp.text.Font _standardFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+
+            // Escribimos el encabezamiento en el documento
+            doc.Add(new Paragraph("Mi primer documento PDF"));
+            doc.Add(Chunk.NEWLINE);
+
+            // Creamos una tabla que contendrá el nombre, apellido y país
+            // de nuestros visitante.
+            PdfPTable tblPrueba = new PdfPTable(3);
+            tblPrueba.WidthPercentage = 100;
+
+            // Configuramos el título de las columnas de la tabla
+            PdfPCell clNombre = new PdfPCell(new Phrase("Nombre", _standardFont));
+            clNombre.BorderWidth = 0;
+            clNombre.BorderWidthBottom = 0.75f;
+
+            PdfPCell clApellido = new PdfPCell(new Phrase("Apellido", _standardFont));
+            clApellido.BorderWidth = 0;
+            clApellido.BorderWidthBottom = 0.75f;
+
+            PdfPCell clPais = new PdfPCell(new Phrase("País", _standardFont));
+            clPais.BorderWidth = 0;
+            clPais.BorderWidthBottom = 0.75f;
+
+            // Añadimos las celdas a la tabla
+            tblPrueba.AddCell(clNombre);
+            tblPrueba.AddCell(clApellido);
+            tblPrueba.AddCell(clPais);
+
+            // Llenamos la tabla con información
+            clNombre = new PdfPCell(new Phrase("Roberto", _standardFont));
+            clNombre.BorderWidth = 0;
+
+            clApellido = new PdfPCell(new Phrase("Torres", _standardFont));
+            clApellido.BorderWidth = 0;
+
+            clPais = new PdfPCell(new Phrase("Puerto Rico", _standardFont));
+            clPais.BorderWidth = 0;
+
+            // Añadimos las celdas a la tabla
+            tblPrueba.AddCell(clNombre);
+            tblPrueba.AddCell(clApellido);
+            tblPrueba.AddCell(clPais);
+            // Finalmente, añadimos la tabla al documento PDF y cerramos el documento
+            doc.Add(tblPrueba);
+
+            doc.Close();
+            writer.Close();
+            Process.Start("D:/prueba.pdf");
+        }
         private void ListadoPaciente_Load(object sender, EventArgs e)
         {
             auditoria = false; //esto está quemado para pruebas, siempre será HC
@@ -40,12 +110,12 @@ namespace Galactus.VistaControlador.HistoriaClinica
                                   Util.Constantes.ConstanteGeneral.VALUEMEMBER,
                                   Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
                                   cbEstado);
-           
+
             cbEstado.SelectedValue = ConstanteGeneral.ESTADO_INICIADO;
             listaPaciente.idEstadoAtencion = ConstanteGeneral.ESTADO_INICIADO;
             establecerGridview();
 
-            
+
         }
 
         public void preCargar()
@@ -67,7 +137,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             //}
         }
         public void cargar()
-        {           
+        {
             listaPaciente.listarPacientes();
             dgvListaPaciente.DataSource = listaPaciente.dtPaciente;
         }
@@ -89,7 +159,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             dgvListaPaciente.Columns["dgEgreso"].DataPropertyName = "Fecha egreso";
 
             cargar();
-            
+
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -105,16 +175,16 @@ namespace Galactus.VistaControlador.HistoriaClinica
             {
                 case ConstanteGeneral.MENU_ATENCION_MEDICA:
                     HistoriaClinicaUI formHistoriaClinica = new HistoriaClinicaUI();
-                    formHistoriaClinica.obtenerDatosPaciente(listaPaciente,Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value), auditoria);
+                    formHistoriaClinica.obtenerDatosPaciente(listaPaciente, Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value), auditoria);
                     formHistoriaClinica.ShowDialog();
                     break;
                 case ConstanteGeneral.MENU_ATENCION_ENFERMERIA:
                     FichaEnfermeriaUI formHistoriaEnfermeria = new FichaEnfermeriaUI();
                     formHistoriaEnfermeria.obtenerDatosPaciente(listaPaciente, Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value), auditoria);
                     formHistoriaEnfermeria.ShowDialog();
-                    break;               
+                    break;
             }
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -146,7 +216,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
             {
                 cbEntorno.Enabled = false;
                 btLimpiar.Visible = false;
-            }else
+            }
+            else
             {
                 GeneralC.llenarCombo(ConsultasHistoriaClinica.ENTORNO_ATENCION + " " + listaPaciente.idArea + "",
                              Util.Constantes.ConstanteGeneral.VALUEMEMBER,
@@ -159,21 +230,22 @@ namespace Galactus.VistaControlador.HistoriaClinica
 
         private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if  (cbEstado.SelectedIndex !=0)
+            if (cbEstado.SelectedIndex != 0)
             {
-                listaPaciente.idEstadoAtencion = Convert.ToInt16( cbEstado.SelectedValue);
+                listaPaciente.idEstadoAtencion = Convert.ToInt16(cbEstado.SelectedValue);
                 preCargar();
             }
-            
+
         }
-       
+
         private void cbEntorno_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbEntorno.SelectedIndex !=0)
+            if (cbEntorno.SelectedIndex != 0)
             {
                 listaPaciente.idEntorno = Convert.ToInt16(cbEntorno.SelectedValue);
                 preCargar();
-            }else
+            }
+            else
             {
                 listaPaciente.idEntorno = 0;
                 preCargar();
@@ -197,6 +269,8 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private void buscarHCPacienteBtn_Click(object sender, EventArgs e)
         {
             preCargar();
+            generarPDF();
+
         }
     }
 }
