@@ -251,11 +251,11 @@
             // 
             // dgidOrdenMedica
             // 
-            this.dgidOrdenMedica.HeaderText = "idOrdenMedica";
+            this.dgidOrdenMedica.HeaderText = "OrdenMedica";
             this.dgidOrdenMedica.Name = "dgidOrdenMedica";
             this.dgidOrdenMedica.ReadOnly = true;
-            this.dgidOrdenMedica.Visible = false;
-            this.dgidOrdenMedica.Width = 96;
+            this.dgidOrdenMedica.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgidOrdenMedica.Width = 86;
             // 
             // dgIdProcedimiento
             // 

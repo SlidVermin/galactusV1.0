@@ -41,12 +41,6 @@ namespace Galactus.VistaControlador.HistoriaClinica
             solicitudLab.idSolicitud = ConstanteGeneral.PREDETERMINADO;
         }
 
-        ////private void tstModificar_Click(object sender, EventArgs e)
-        ////{
-        ////    GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
-        ////    GeneralC.deshabilitarControles(pnlInformacion);
-        ////}
-
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
             GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);   
@@ -126,6 +120,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         private void cargarRegistro(DataRow dRows) {
             solicitudLab.idSolicitud= dRows.Field<int>("codigo");
             cmbLaboratorio.SelectedValue = dRows.Field<int>("idproveedor");
+            dtpFechaSolicitud.Value= dRows.Field<DateTime>("Fecha");
             cargarExamenLabEnviado();
             GeneralC.posBuscar(this, tstMenuPatron, tsbNuevo, tsbBuscar,tstImprimir,tsbNuevo);
         }
@@ -163,7 +158,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             try
             {
                 paramtro.Add(solicitudLab.idSolicitud.ToString());
-                GeneralC.llenarTabla(Sentencias.CARGAR_SOLICITUDES_PENDIENTES, paramtro, solicitudLab.dtLaboratorio);
+                GeneralC.llenarTabla(Sentencias.CARGAR_SOLICITUDES_ENVIADO, paramtro, solicitudLab.dtLaboratorio);
                 dgvResultadoLaboratorio.DataSource = solicitudLab.dtLaboratorio;
             }
             catch (Exception ex) {
@@ -178,6 +173,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         }
         private void dgvEdicion() {
             dgvResultadoLaboratorio.ReadOnly = false;
+            dgvResultadoLaboratorio.Columns[0].ReadOnly = true;
             dgvResultadoLaboratorio.Columns[2].ReadOnly = true;
             dgvResultadoLaboratorio.Columns[3].ReadOnly = true;
             dgvResultadoLaboratorio.Columns[4].ReadOnly = false;

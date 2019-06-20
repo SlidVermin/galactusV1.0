@@ -20,7 +20,7 @@ namespace Galactus.Modelo.HistoriaClinica.Resultado
                     sentencia.CommandType = System.Data.CommandType.StoredProcedure;
                     sentencia.CommandText = Sentencias.CREAR_RESULTADO_LAB;
                     sentencia.Parameters.Add(new SqlParameter("@pIdResultado", SqlDbType.Int)).Value = resultadoLab.codigoResultado;
-                    sentencia.Parameters.Add(new SqlParameter("@pIdSolicitud", SqlDbType.Int)).Value = resultadoLab.idOrdenMedica;
+                    sentencia.Parameters.Add(new SqlParameter("@pIdSolicitud", SqlDbType.Int)).Value = resultadoLab.idSolicitud;
                     sentencia.Parameters.Add(new SqlParameter("@pFechaMuestra", SqlDbType.DateTime)).Value = resultadoLab.fechaMuestra;
                     sentencia.Parameters.Add(new SqlParameter("@pFechaResultado", SqlDbType.DateTime)).Value = resultadoLab.fechaResultado;
                     sentencia.Parameters.Add(new SqlParameter("@pObervacion", SqlDbType.NVarChar)).Value = resultadoLab.observacion;

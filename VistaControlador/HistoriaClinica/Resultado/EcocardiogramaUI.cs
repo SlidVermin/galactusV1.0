@@ -64,13 +64,16 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         {
             try
             {
-                if (Mensajes.preguntaGuardar() == true)
-                {
-                    objetoEcocardiogramaCrear();
-                    EcocardiogramaDAL.guardarEcocardiograma(ecocardiograma);
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tstImprimir, tsbBuscar, tstModificar, tsbAnular);
-                    btnSalir.Enabled = true;
-                    Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_GUARDADO);
+                if (validarCampos() == true) {
+                    if (Mensajes.preguntaGuardar() == true)
+                    {
+                        objetoEcocardiogramaCrear();
+                        EcocardiogramaDAL.guardarEcocardiograma(ecocardiograma);
+                        GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tstImprimir, tsbBuscar, tstModificar, tsbAnular);
+                        btnSalir.Enabled = true;
+                        Mensajes.mensajeInformacion(Mensajes.CONFIRMACION_GUARDADO);
+
+                    }
 
                 }
             }
@@ -245,6 +248,18 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             dgvParametro.Columns[1].ReadOnly = true;
             dgvParametro.Columns[2].ReadOnly = false;
             dgvParametro.Columns[3].ReadOnly =  true;
+        }
+        private bool validarCampos() {
+
+            if (txtIdentificacion.Text == string.Empty) {
+                Mensajes.mensajeAdvertencia("¡ Favor cargar un paciente !");
+            } else if (txtObservacion.Text == string.Empty) {
+                Mensajes.mensajeAdvertencia("¡ Favor digitar la conclusión del resultado !");
+            }  else {
+                return true;
+            }
+
+            return false;
         }
     }
 }

@@ -20,9 +20,10 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private ResultadoLaboratorio resultadoLab = new ResultadoLaboratorio();
         private int idProcedimiento;
 
-        public ResultadoLaboratorioUI(int idOrdenMedica,int idProcedimiento, int auditoria)
+        public ResultadoLaboratorioUI(int idOrdenMedica,int idProcedimiento, int auditoria, int idSolicitud)
         {
             InitializeComponent();
+            resultadoLab.idSolicitud = idSolicitud;
             resultadoLab.idOrdenMedica = idOrdenMedica;
             this.idProcedimiento = idProcedimiento;
             resultadoLab.auditoria = auditoria;

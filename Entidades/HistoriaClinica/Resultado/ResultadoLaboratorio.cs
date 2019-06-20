@@ -9,6 +9,7 @@ namespace Galactus.Entidades.HistoriaClinica.Resultado
 {
     class ResultadoLaboratorio
     {
+          public int idSolicitud { get; set; }
           public int idOrdenMedica { get; set; }
           public int codigoResultado { get; set; }
           public  int codigoAtencion {get; set; }

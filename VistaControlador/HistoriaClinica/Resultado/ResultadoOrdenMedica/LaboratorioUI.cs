@@ -60,15 +60,16 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
         private void dgvResultadoLaboratorio_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ResultadoLaboratorioUI resultadoLaboratorio;
+            int idSolicitud;
             int idOrdenMedica;
             int idProcedimiento;
 
             if (e.ColumnIndex == 3)
             {
-
+                idSolicitud= Convert.ToInt32(dgvResultadoLaboratorio.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Cells["dgIdSolicitud"].Value);
                 idOrdenMedica = Convert.ToInt32(resulOrdenMedica.txtBCodigoOrden.Text);
                 idProcedimiento= Convert.ToInt32(dgvResultadoLaboratorio.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Cells["dgIdProcedimiento"].Value);
-                resultadoLaboratorio = new ResultadoLaboratorioUI(idOrdenMedica, idProcedimiento, auditoria);
+                resultadoLaboratorio = new ResultadoLaboratorioUI(idOrdenMedica, idProcedimiento, auditoria, idSolicitud);
                 resultadoLaboratorio.cargarInformacionADatos();
                 resultadoLaboratorio.ShowDialog();
             }
