@@ -91,6 +91,7 @@
     <Compile Include="Entidades\ConfiguracionGeneral\ConfiguracionParaclinico.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Empresa.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Equivalencia.cs" />
+    <Compile Include="Entidades\ConfiguracionGeneral\ListaPrecioEquivalencia.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\TipoExamen.cs" />
     <Compile Include="Entidades\ConfiguracionGeneral\Usuario.cs" />
     <Compile Include="Entidades\Facturacion\FacturaPaciente.cs" />
@@ -130,6 +131,7 @@
     <Compile Include="Modelo\ConfiguracionGeneral\ConfiguracionGeneralDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\ConfiguracionParaclinicoDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\EmpresaDAL.cs" />
+    <Compile Include="Modelo\ConfiguracionGeneral\ListaPrecioEquivalenciaDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\TipoExamenDAL.cs" />
     <Compile Include="Modelo\ConfiguracionGeneral\UsuarioDAL.cs" />
     <Compile Include="Modelo\EquivalenciaDAL.cs" />
