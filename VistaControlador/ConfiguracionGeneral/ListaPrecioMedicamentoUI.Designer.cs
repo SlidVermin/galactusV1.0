@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.pacientePB = new System.Windows.Forms.PictureBox();
@@ -47,12 +46,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvMedicamento = new System.Windows.Forms.DataGridView();
-            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgVisible = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label33 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlEncabezardo = new System.Windows.Forms.Panel();
             this.chkActiva = new System.Windows.Forms.CheckBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,12 +56,16 @@
             this.txtBCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgVisible = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.tstMenuPatron.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamento)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.pnlEncabezardo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -172,6 +171,7 @@
             this.tsbBuscar.Name = "tsbBuscar";
             this.tsbBuscar.Size = new System.Drawing.Size(62, 22);
             this.tsbBuscar.Text = "Buscar";
+            this.tsbBuscar.Click += new System.EventHandler(this.tsbBuscar_Click);
             // 
             // tsbAnular
             // 
@@ -198,7 +198,7 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label33);
-            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.pnlEncabezardo);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Location = new System.Drawing.Point(23, 43);
             this.panel1.Name = "panel1";
@@ -220,24 +220,21 @@
             this.dgvMedicamento.AllowUserToDeleteRows = false;
             this.dgvMedicamento.AllowUserToResizeColumns = false;
             this.dgvMedicamento.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvMedicamento.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMedicamento.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMedicamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMedicamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMedicamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMedicamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgCodigo,
             this.descripcionDiagCol,
             this.dgPrecio,
             this.dgVisible});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -251,7 +248,6 @@
             this.dgvMedicamento.MultiSelect = false;
             this.dgvMedicamento.Name = "dgvMedicamento";
             this.dgvMedicamento.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -260,41 +256,9 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMedicamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvMedicamento.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvMedicamento.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvMedicamento.Size = new System.Drawing.Size(981, 366);
             this.dgvMedicamento.TabIndex = 30;
-            // 
-            // dgCodigo
-            // 
-            this.dgCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgCodigo.HeaderText = "Código";
-            this.dgCodigo.Name = "dgCodigo";
-            this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 80;
-            // 
-            // descripcionDiagCol
-            // 
-            this.descripcionDiagCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripcionDiagCol.HeaderText = "Descripción";
-            this.descripcionDiagCol.Name = "descripcionDiagCol";
-            this.descripcionDiagCol.ReadOnly = true;
-            // 
-            // dgPrecio
-            // 
-            this.dgPrecio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgPrecio.HeaderText = "Precio";
-            this.dgPrecio.Name = "dgPrecio";
-            this.dgPrecio.ReadOnly = true;
-            this.dgPrecio.Width = 120;
-            // 
-            // dgVisible
-            // 
-            this.dgVisible.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgVisible.HeaderText = "Visible";
-            this.dgVisible.Name = "dgVisible";
-            this.dgVisible.ReadOnly = true;
-            this.dgVisible.Width = 60;
+            this.dgvMedicamento.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvMedicamento_DataError);
             // 
             // label33
             // 
@@ -306,20 +270,20 @@
             this.label33.TabIndex = 47;
             this.label33.Text = "Información de la lista.";
             // 
-            // panel6
+            // pnlEncabezardo
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.chkActiva);
-            this.panel6.Controls.Add(this.txtDescripcion);
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.txtFiltro);
-            this.panel6.Controls.Add(this.txtBCodigo);
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Location = new System.Drawing.Point(13, 31);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(983, 71);
-            this.panel6.TabIndex = 46;
+            this.pnlEncabezardo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEncabezardo.Controls.Add(this.chkActiva);
+            this.pnlEncabezardo.Controls.Add(this.txtDescripcion);
+            this.pnlEncabezardo.Controls.Add(this.label3);
+            this.pnlEncabezardo.Controls.Add(this.label6);
+            this.pnlEncabezardo.Controls.Add(this.txtFiltro);
+            this.pnlEncabezardo.Controls.Add(this.txtBCodigo);
+            this.pnlEncabezardo.Controls.Add(this.label1);
+            this.pnlEncabezardo.Location = new System.Drawing.Point(13, 31);
+            this.pnlEncabezardo.Name = "pnlEncabezardo";
+            this.pnlEncabezardo.Size = new System.Drawing.Size(983, 71);
+            this.pnlEncabezardo.TabIndex = 46;
             // 
             // chkActiva
             // 
@@ -395,6 +359,41 @@
             this.label19.Size = new System.Drawing.Size(0, 20);
             this.label19.TabIndex = 40;
             // 
+            // dgCodigo
+            // 
+            this.dgCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgCodigo.HeaderText = "Código";
+            this.dgCodigo.Name = "dgCodigo";
+            this.dgCodigo.ReadOnly = true;
+            this.dgCodigo.Width = 80;
+            // 
+            // descripcionDiagCol
+            // 
+            this.descripcionDiagCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcionDiagCol.HeaderText = "Descripción";
+            this.descripcionDiagCol.Name = "descripcionDiagCol";
+            this.descripcionDiagCol.ReadOnly = true;
+            // 
+            // dgPrecio
+            // 
+            this.dgPrecio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dgPrecio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgPrecio.HeaderText = "Precio";
+            this.dgPrecio.Name = "dgPrecio";
+            this.dgPrecio.ReadOnly = true;
+            this.dgPrecio.Width = 120;
+            // 
+            // dgVisible
+            // 
+            this.dgVisible.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgVisible.HeaderText = "Visible";
+            this.dgVisible.Name = "dgVisible";
+            this.dgVisible.ReadOnly = true;
+            this.dgVisible.Width = 60;
+            // 
             // ListaPrecioMedicamentoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,8 +418,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamento)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.pnlEncabezardo.ResumeLayout(false);
+            this.pnlEncabezardo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,7 +440,7 @@
         private System.Windows.Forms.ToolStripButton tstImprimir;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlEncabezardo;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.CheckBox chkActiva;
         private System.Windows.Forms.TextBox txtDescripcion;

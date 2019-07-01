@@ -200,6 +200,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Util\Constantes\ConstanteGeneral.cs" />
+    <Compile Include="Util\Constantes\ConsultasConfiguracionGeneral.cs" />
     <Compile Include="Util\Constantes\ConsultasHistoriaClinica.cs" />
     <Compile Include="Util\ControlSignos.cs" />
     <Compile Include="Util\DigitoVerificacion.cs" />

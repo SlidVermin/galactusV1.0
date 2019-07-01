@@ -1,5 +1,6 @@
 ﻿using Galactus.Entidades.ConfiguracionGeneral;
 using Galactus.Modelo.ConfiguracionGeneral;
+using Galactus.Util.Constantes;
 using Galactus.Util.Mensajes;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
     public partial class ListaPrecioMedicamentoUI : Form
     {
         ListaPrecioEquivalencia objListaPrecio = new ListaPrecioEquivalencia();
+        
         public ListaPrecioMedicamentoUI()
         {
             InitializeComponent();
@@ -34,14 +36,21 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         private void ListaPrecioMedicamentoUI_Load(object sender, EventArgs e)
         {
             GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
+            enlazarGrilla();
         }
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
+            objListaPrecio.configuracionFuente();
+            cargarTodaListaEquivalencia();
         }
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
             GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
+        }
+        private void tsbBuscar_Click(object sender, EventArgs e)
+        {
+
         }
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
@@ -91,6 +100,28 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 return true;
             }
         }
+        void cargarTodaListaEquivalencia()
+        {
+            List<string> param = new List<string>();
+            param.Add(string.Empty);
+            GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_BUSCAR ,param, objListaPrecio.tablaEquivalencia);
+            dgvMedicamento.DataSource = objListaPrecio.tblFuente;
+        }
+        void enlazarGrilla()
+        {
+         
+            dgvMedicamento.Columns["dgCodigo"].DataPropertyName = "Id";
+            dgvMedicamento.Columns["descripcionDiagCol"].DataPropertyName = "Nombre";
+            dgvMedicamento.Columns["dgPrecio"].DataPropertyName = "Precio";
+            dgvMedicamento.Columns["dgVisible"].DataPropertyName = "mostrar";
+            dgvMedicamento.DataSource = objListaPrecio.tblFuente;
+        }
+
         #endregion
+
+        private void dgvMedicamento_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
     }
 }

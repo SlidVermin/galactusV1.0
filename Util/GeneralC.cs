@@ -564,7 +564,7 @@ namespace Galactus
             {
                 if (item is TextBox ) 
                     ((TextBox)item).ReadOnly = false;
-                else if (item is ToolStripTextBox && !item.Name.Contains("txtB"))
+                else if (item is TextBox && !item.Name.Contains("txtB"))
                     (item).Enabled  = false;
                 else if (item is RichTextBox)
                     ((RichTextBox)item).ReadOnly = true;
