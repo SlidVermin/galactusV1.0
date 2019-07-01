@@ -181,6 +181,12 @@
       <DesignTime>True</DesignTime>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\HistoriaClinica\Resultados\rptEcocardiograma.cs">
+      <DependentUpon>rptEcocardiograma.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Reportes\HistoriaClinica\Resultados\rptResultadoExamen.cs">
       <DependentUpon>rptResultadoExamen.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -756,6 +762,10 @@
     <EmbeddedResource Include="Reportes\HistoriaClinica\Resultados\rptInformeQX.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptInformeQX.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\HistoriaClinica\Resultados\rptEcocardiograma.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEcocardiograma.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\HistoriaClinica\Resultados\rptResultadoExamen.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
