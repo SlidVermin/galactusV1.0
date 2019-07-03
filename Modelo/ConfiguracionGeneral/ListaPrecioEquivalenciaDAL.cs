@@ -15,6 +15,13 @@ namespace Galactus.Modelo.ConfiguracionGeneral
         {
             try
             {
+                DataTable tblData = new DataTable();
+                tblData = objLista.tablaEquivalencia.DefaultView.ToTable(true,new string[] { "Id", "Precio", "mostrar" }).Copy();
+
+                if (tblData.Columns.Count>0)
+                {
+                    tblData.Columns.Add("Activo",Type.GetType("System.Boolean"), "IIF(Precio>0,True,False)");
+                }
                 using (SqlCommand sentencia = new SqlCommand())
                 {
                     sentencia.Connection = PrincipalUI.Cnxion;
@@ -24,7 +31,7 @@ namespace Galactus.Modelo.ConfiguracionGeneral
                     sentencia.Parameters.Add(new SqlParameter("@pNombre", SqlDbType.NVarChar)).Value = objLista.nombre;
                     sentencia.Parameters.Add(new SqlParameter("@pActivo", SqlDbType.Bit)).Value = objLista.activo;
                     sentencia.Parameters.Add(new SqlParameter("@pIdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
-                    sentencia.Parameters.Add(new SqlParameter("@pTablaEquivalencia", SqlDbType.Structured)).Value = objLista.tablaEquivalencia;
+                    sentencia.Parameters.Add(new SqlParameter("@pTablaEquivalencia", SqlDbType.Structured)).Value = tblData;
                     objLista.idLista = (int)sentencia.ExecuteScalar();
                 }
             }

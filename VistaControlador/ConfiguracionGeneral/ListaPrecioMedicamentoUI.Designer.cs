@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.pacientePB = new System.Windows.Forms.PictureBox();
@@ -56,10 +55,6 @@
             this.txtBCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.dgCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDiagCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgVisible = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pacientePB)).BeginInit();
             this.tstMenuPatron.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -229,36 +224,34 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMedicamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMedicamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMedicamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgCodigo,
-            this.descripcionDiagCol,
-            this.dgPrecio,
-            this.dgVisible});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMedicamento.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMedicamento.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMedicamento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMedicamento.GridColor = System.Drawing.Color.DarkGray;
             this.dgvMedicamento.Location = new System.Drawing.Point(0, 0);
             this.dgvMedicamento.MultiSelect = false;
             this.dgvMedicamento.Name = "dgvMedicamento";
             this.dgvMedicamento.ReadOnly = true;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMedicamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMedicamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMedicamento.RowHeadersVisible = false;
             this.dgvMedicamento.Size = new System.Drawing.Size(981, 366);
             this.dgvMedicamento.TabIndex = 30;
+            this.dgvMedicamento.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicamento_CellClick);
+            this.dgvMedicamento.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicamento_CellEnter);
             this.dgvMedicamento.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvMedicamento_DataError);
+            this.dgvMedicamento.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvMedicamento_EditingControlShowing);
             // 
             // label33
             // 
@@ -359,41 +352,6 @@
             this.label19.Size = new System.Drawing.Size(0, 20);
             this.label19.TabIndex = 40;
             // 
-            // dgCodigo
-            // 
-            this.dgCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgCodigo.HeaderText = "Código";
-            this.dgCodigo.Name = "dgCodigo";
-            this.dgCodigo.ReadOnly = true;
-            this.dgCodigo.Width = 80;
-            // 
-            // descripcionDiagCol
-            // 
-            this.descripcionDiagCol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripcionDiagCol.HeaderText = "Descripción";
-            this.descripcionDiagCol.Name = "descripcionDiagCol";
-            this.descripcionDiagCol.ReadOnly = true;
-            // 
-            // dgPrecio
-            // 
-            this.dgPrecio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dgPrecio.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgPrecio.HeaderText = "Precio";
-            this.dgPrecio.Name = "dgPrecio";
-            this.dgPrecio.ReadOnly = true;
-            this.dgPrecio.Width = 120;
-            // 
-            // dgVisible
-            // 
-            this.dgVisible.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgVisible.HeaderText = "Visible";
-            this.dgVisible.Name = "dgVisible";
-            this.dgVisible.ReadOnly = true;
-            this.dgVisible.Width = 60;
-            // 
             // ListaPrecioMedicamentoUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,9 +409,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvMedicamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDiagCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgPrecio;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dgVisible;
     }
 }

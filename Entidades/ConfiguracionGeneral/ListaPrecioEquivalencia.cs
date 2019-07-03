@@ -23,17 +23,17 @@ namespace Galactus.Entidades.ConfiguracionGeneral
             tblFuente = new BindingSource();
            
         }
-        public void configuracionFuente() {
+        public void enlazarDt() {
             colocarColumnas();
             tblFuente.DataSource = tablaEquivalencia;
         }
         void colocarColumnas()
         {
             if ( tablaEquivalencia.Columns.Count == 0) {
-                tablaEquivalencia.Columns.Add("Id");
-                tablaEquivalencia.Columns.Add("Nombre");
-                tablaEquivalencia.Columns.Add("Precio");
-                tablaEquivalencia.Columns.Add("mostrar");
+                tablaEquivalencia.Columns.Add("Id", Type.GetType("System.Int32"));
+                tablaEquivalencia.Columns.Add("Nombre", Type.GetType("System.String"));
+                tablaEquivalencia.Columns.Add("Precio", Type.GetType("System.Double"));
+                tablaEquivalencia.Columns.Add("mostrar",Type.GetType("System.Boolean"));
             }
         }
     }

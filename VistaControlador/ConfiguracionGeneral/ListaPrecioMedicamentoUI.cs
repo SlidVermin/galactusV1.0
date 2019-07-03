@@ -1,5 +1,6 @@
 ﻿using Galactus.Entidades.ConfiguracionGeneral;
 using Galactus.Modelo.ConfiguracionGeneral;
+using Galactus.Util;
 using Galactus.Util.Constantes;
 using Galactus.Util.Mensajes;
 using System;
@@ -17,7 +18,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
     public partial class ListaPrecioMedicamentoUI : Form
     {
         ListaPrecioEquivalencia objListaPrecio = new ListaPrecioEquivalencia();
-        
+
         public ListaPrecioMedicamentoUI()
         {
             InitializeComponent();
@@ -36,12 +37,12 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         private void ListaPrecioMedicamentoUI_Load(object sender, EventArgs e)
         {
             GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
-            enlazarGrilla();
+            objListaPrecio.enlazarDt();
         }
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
-            objListaPrecio.configuracionFuente();
+            enlazarGrilla();
             cargarTodaListaEquivalencia();
         }
         private void tsbCancelar_Click(object sender, EventArgs e)
@@ -56,7 +57,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             dgvMedicamento.EndEdit();
             dgvMedicamento.CommitEdit(DataGridViewDataErrorContexts.Commit);
-            
+
             if (validarForm() && MessageBox.Show(Mensajes.GUARDAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 objListaPrecio.idLista = (txtBCodigo.Text.Equals(String.Empty) ? 0 : int.Parse(txtBCodigo.Text));
@@ -89,7 +90,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 txtDescripcion.Focus();
                 return false;
             }
-            else if (objListaPrecio.tablaEquivalencia.Select("valor = 0").Count() == objListaPrecio.tablaEquivalencia.Rows.Count)
+            else if (objListaPrecio.tablaEquivalencia.Select("precio = 0").Count() == objListaPrecio.tablaEquivalencia.Rows.Count)
             {
                 MessageBox.Show("Debe ingresar por lo menos el precio de 1 equivalencia!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvMedicamento.Focus();
@@ -100,28 +101,62 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 return true;
             }
         }
+        bool verificarCeldasActivas(int columnaActual)
+        {
+            dgvMedicamento.ReadOnly = false;
+            if (columnaActual == dgvMedicamento.Columns["Precio"].Index || columnaActual == dgvMedicamento.Columns["mostrar"].Index)
+            {
+                return false;
+            }
+            return true;
+        }
         void cargarTodaListaEquivalencia()
         {
+
             List<string> param = new List<string>();
             param.Add(string.Empty);
-            GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_BUSCAR ,param, objListaPrecio.tablaEquivalencia);
+            GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_BUSCAR, param, objListaPrecio.tablaEquivalencia);
             dgvMedicamento.DataSource = objListaPrecio.tblFuente;
         }
         void enlazarGrilla()
         {
-         
-            dgvMedicamento.Columns["dgCodigo"].DataPropertyName = "Id";
-            dgvMedicamento.Columns["descripcionDiagCol"].DataPropertyName = "Nombre";
-            dgvMedicamento.Columns["dgPrecio"].DataPropertyName = "Precio";
-            dgvMedicamento.Columns["dgVisible"].DataPropertyName = "mostrar";
             dgvMedicamento.DataSource = objListaPrecio.tblFuente;
+            objListaPrecio.tablaEquivalencia.AcceptChanges();
+            if (dgvMedicamento.Columns.Count > 0)
+            {
+                dgvMedicamento.Columns["Nombre"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvMedicamento.Columns["Precio"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvMedicamento.Columns["Precio"].DefaultCellStyle.Format = "C2";
+                dgvMedicamento.Columns["mostrar"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
         }
-
+        /// <summary>
+        /// Eventos de la grilla de equivalencias
+        /// </summary>
         #endregion
-
+        #region Metodos de dgvMedicamento
         private void dgvMedicamento_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
 
         }
+        private void dgvMedicamento_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (tsbGuardar.Enabled)
+            {
+                dgvMedicamento.Columns[e.ColumnIndex].ReadOnly = verificarCeldasActivas(e.ColumnIndex);
+            }
+        }
+        private void dgvMedicamento_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (tsbGuardar.Enabled)
+            {
+                dgvMedicamento.Columns[e.ColumnIndex].ReadOnly = verificarCeldasActivas(e.ColumnIndex);
+            }
+        }
+        private void dgvMedicamento_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            e.Control.KeyPress += new KeyPressEventHandler(Funciones.validarValoresNumericos);
+        }
+        #endregion
     }
 }
