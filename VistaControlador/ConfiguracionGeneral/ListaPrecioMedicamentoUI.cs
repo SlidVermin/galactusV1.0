@@ -51,7 +51,20 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void tsbBuscar_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                List<string> parametros = new List<string>();
+                parametros.Add("");
+                GeneralC.buscarDevuelveFila(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_BUSCAR,
+                                            parametros,
+                                            new GeneralC.cargarInfoFila(cargarLista),
+                                            Mensajes.BUSQUEDA_EQUIVALENCIA,
+                                            true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
@@ -62,7 +75,6 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             {
                 objListaPrecio.idLista = (txtBCodigo.Text.Equals(String.Empty) ? 0 : int.Parse(txtBCodigo.Text));
                 objListaPrecio.nombre = txtDescripcion.Text;
-                objListaPrecio.activo = chkActiva.Checked;
                 objListaPrecio.tablaEquivalencia.AcceptChanges();
                 try
                 {
@@ -115,7 +127,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
             List<string> param = new List<string>();
             param.Add(string.Empty);
-            GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_BUSCAR, param, objListaPrecio.tablaEquivalencia);
+            GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_TODO, param, objListaPrecio.tablaEquivalencia);
             dgvMedicamento.DataSource = objListaPrecio.tblFuente;
         }
         void enlazarGrilla()
@@ -130,10 +142,13 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 dgvMedicamento.Columns["mostrar"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
         }
+        void cargarLista(DataRow fila) {
+
+        }
+        #endregion
         /// <summary>
         /// Eventos de la grilla de equivalencias
         /// </summary>
-        #endregion
         #region Metodos de dgvMedicamento
         private void dgvMedicamento_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
@@ -158,5 +173,10 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             e.Control.KeyPress += new KeyPressEventHandler(Funciones.validarValoresNumericos);
         }
         #endregion
+
+        private void tstModificar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

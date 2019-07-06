@@ -8,6 +8,7 @@ namespace Galactus.Util.Constantes
 {
     public static class ConsultasConfiguracionGeneral
     {
-        public const string LISTA_PRECIO_EQUIVALENCIA_BUSCAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspListaPrecioDetalleTodo]";
+        public const string LISTA_PRECIO_EQUIVALENCIA_CARGAR_TODO = ConstanteGeneral.ESQUEMA_GENERAL + "[uspListaPrecioDetalleTodo]";
+        public const string LISTA_PRECIO_EQUIVALENCIA_BUSCAR = ConstanteGeneral.ESQUEMA_GENERAL + "[uspListaPrecioBuscar]";
     }
 }

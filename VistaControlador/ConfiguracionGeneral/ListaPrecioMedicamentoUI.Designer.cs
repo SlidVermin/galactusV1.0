@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSalir = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.pacientePB = new System.Windows.Forms.PictureBox();
@@ -47,7 +47,6 @@
             this.dgvMedicamento = new System.Windows.Forms.DataGridView();
             this.label33 = new System.Windows.Forms.Label();
             this.pnlEncabezardo = new System.Windows.Forms.Panel();
-            this.chkActiva = new System.Windows.Forms.CheckBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -134,6 +133,7 @@
             this.tstModificar.Name = "tstModificar";
             this.tstModificar.Size = new System.Drawing.Size(78, 22);
             this.tstModificar.Text = "Modificar";
+            this.tstModificar.Click += new System.EventHandler(this.tstModificar_Click);
             // 
             // tsbCancelar
             // 
@@ -216,35 +216,35 @@
             this.dgvMedicamento.AllowUserToResizeColumns = false;
             this.dgvMedicamento.AllowUserToResizeRows = false;
             this.dgvMedicamento.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMedicamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMedicamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvMedicamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMedicamento.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMedicamento.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvMedicamento.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMedicamento.GridColor = System.Drawing.Color.DarkGray;
             this.dgvMedicamento.Location = new System.Drawing.Point(0, 0);
             this.dgvMedicamento.MultiSelect = false;
             this.dgvMedicamento.Name = "dgvMedicamento";
             this.dgvMedicamento.ReadOnly = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMedicamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMedicamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvMedicamento.RowHeadersVisible = false;
             this.dgvMedicamento.Size = new System.Drawing.Size(981, 366);
             this.dgvMedicamento.TabIndex = 30;
@@ -266,7 +266,6 @@
             // pnlEncabezardo
             // 
             this.pnlEncabezardo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlEncabezardo.Controls.Add(this.chkActiva);
             this.pnlEncabezardo.Controls.Add(this.txtDescripcion);
             this.pnlEncabezardo.Controls.Add(this.label3);
             this.pnlEncabezardo.Controls.Add(this.label6);
@@ -277,17 +276,6 @@
             this.pnlEncabezardo.Name = "pnlEncabezardo";
             this.pnlEncabezardo.Size = new System.Drawing.Size(983, 71);
             this.pnlEncabezardo.TabIndex = 46;
-            // 
-            // chkActiva
-            // 
-            this.chkActiva.AutoSize = true;
-            this.chkActiva.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.chkActiva.Location = new System.Drawing.Point(873, 38);
-            this.chkActiva.Name = "chkActiva";
-            this.chkActiva.Size = new System.Drawing.Size(62, 20);
-            this.chkActiva.TabIndex = 81;
-            this.chkActiva.Text = "Activo";
-            this.chkActiva.UseVisualStyleBackColor = true;
             // 
             // txtDescripcion
             // 
@@ -321,7 +309,7 @@
             // 
             this.txtFiltro.Location = new System.Drawing.Point(293, 38);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(574, 20);
+            this.txtFiltro.Size = new System.Drawing.Size(642, 20);
             this.txtFiltro.TabIndex = 74;
             // 
             // txtBCodigo
@@ -400,7 +388,6 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Panel pnlEncabezardo;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.CheckBox chkActiva;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;

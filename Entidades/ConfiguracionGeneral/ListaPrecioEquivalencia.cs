@@ -13,7 +13,6 @@ namespace Galactus.Entidades.ConfiguracionGeneral
         public int idLista { get; set; }
         public string nombre { get; set; }
         public DataTable tablaEquivalencia { get; set; }
-        public bool activo { get; set; }
         public BindingSource tblFuente { get; set; }
         public ListaPrecioEquivalencia()
         {

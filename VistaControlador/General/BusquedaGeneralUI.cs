@@ -69,8 +69,8 @@ namespace Galactus.VistaControlador.General
         }
         void llenarTabla()
         {
-            //int cantidadParamatros = objBusqueda.parametros.Count -1;
-            //if (cantidadParamatros > -1)
+            //int cantidadParamatros = objBusqueda.parametros.Count ;
+            //if (cantidadParamatros > 0)
             //{
             //    objBusqueda.parametros.RemoveAt(cantidadParamatros);
             //    objBusqueda.parametros.Add(txtBusqueda.Text);
@@ -85,6 +85,9 @@ namespace Galactus.VistaControlador.General
             }
             else
             {
+                if (objBusqueda.parametros.Count == 1) {
+                    objBusqueda.parametros[0] = txtBusqueda.Text;
+                }
                 objBusqueda.TablaResultados = BusquedaDAL.llenarResultado(objBusqueda.Query, objBusqueda.parametros);
             }
 
@@ -110,7 +113,7 @@ namespace Galactus.VistaControlador.General
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
         {
-            if (objBusqueda.BuscarConEnter == false)
+            if (!objBusqueda.BuscarConEnter)
             {
                 busqueda();
             }
