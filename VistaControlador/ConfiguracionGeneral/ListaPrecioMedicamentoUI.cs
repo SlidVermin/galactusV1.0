@@ -65,6 +65,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
@@ -86,6 +87,25 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+        }
+        private void tstModificar_Click(object sender, EventArgs e)
+        {
+            if (GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar))
+            {
+                List<string> param = new List<string>();
+                param.Add(string.Empty);
+                try {
+                        DataTable tblTemp = new DataTable();
+                        tblTemp = objListaPrecio.tablaEquivalencia.Clone();
+                        GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_TODO, param, tblTemp);
+                        objListaPrecio.tablaEquivalencia.Merge(tblTemp,true);
+                    
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                }
+                objListaPrecio.enlazarDt();
             }
         }
         #endregion
@@ -128,7 +148,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             List<string> param = new List<string>();
             param.Add(string.Empty);
             GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_TODO, param, objListaPrecio.tablaEquivalencia);
-            dgvMedicamento.DataSource = objListaPrecio.tblFuente;
+            enlazarGrilla();
         }
         void enlazarGrilla()
         {
@@ -142,8 +162,23 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 dgvMedicamento.Columns["mostrar"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
         }
-        void cargarLista(DataRow fila) {
-
+        void cargarLista(DataRow fila)
+        {
+            if (fila != null)
+            {
+                txtBCodigo.Text = fila.Field<int>("Código").ToString();
+                txtDescripcion.Text = fila.Field<string>("Descripcion").ToString();
+                cargarDetalleLista(fila.Field<int>("Código"));
+            }
+        }
+        void cargarDetalleLista(int codigo)
+        {
+            List<string> param = new List<string>();
+            param.Add(codigo.ToString());
+            GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_DETALLE, param, objListaPrecio.tablaEquivalencia);
+            objListaPrecio.enlazarDt();
+            enlazarGrilla();
+            GeneralC.posCargadoForm(this, tstMenuPatron, tsbBuscar, tstModificar, tsbAnular, tstImprimir);
         }
         #endregion
         /// <summary>
@@ -173,10 +208,5 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             e.Control.KeyPress += new KeyPressEventHandler(Funciones.validarValoresNumericos);
         }
         #endregion
-
-        private void tstModificar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

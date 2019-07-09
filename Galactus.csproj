@@ -210,6 +210,7 @@
     <Compile Include="Util\Constantes\ConsultasHistoriaClinica.cs" />
     <Compile Include="Util\ControlSignos.cs" />
     <Compile Include="Util\DigitoVerificacion.cs" />
+    <Compile Include="Util\Extensiones.cs" />
     <Compile Include="Util\Funciones.cs" />
     <Compile Include="Util\GeneralC.cs" />
     <Compile Include="Util\InformacionTag.cs" />

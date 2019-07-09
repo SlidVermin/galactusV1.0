@@ -29,10 +29,14 @@ namespace Galactus.Entidades.ConfiguracionGeneral
         void colocarColumnas()
         {
             if ( tablaEquivalencia.Columns.Count == 0) {
+                
                 tablaEquivalencia.Columns.Add("Id", Type.GetType("System.Int32"));
                 tablaEquivalencia.Columns.Add("Nombre", Type.GetType("System.String"));
                 tablaEquivalencia.Columns.Add("Precio", Type.GetType("System.Double"));
                 tablaEquivalencia.Columns.Add("mostrar",Type.GetType("System.Boolean"));
+                DataColumn[] keys = new DataColumn[1];
+                keys[0] = tablaEquivalencia.Columns[0];
+                tablaEquivalencia.PrimaryKey = keys; 
             }
         }
     }
