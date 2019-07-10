@@ -23,6 +23,14 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             InitializeComponent();
         }
+        private void txtFiltro_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtFiltro.Text = GeneralC.validarComillas(txtFiltro.Text);
+                objListaPrecio.tblFuente.Filter = " [Nombre] LIKE '%" + txtFiltro.Text.Trim() + "%' or convert([Id], System.String) LIKE '%" + txtFiltro.Text.Trim() + "%'";
+            }
+        }
         /// <summary>
         /// Eventos de los botones
         /// </summary>
@@ -69,6 +77,8 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
+            objListaPrecio.tblFuente.Filter = string.Empty;
+            txtFiltro.ResetText();
             dgvMedicamento.EndEdit();
             dgvMedicamento.CommitEdit(DataGridViewDataErrorContexts.Commit);
 
@@ -80,8 +90,10 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 try
                 {
                     ListaPrecioEquivalenciaDAL.guardar(objListaPrecio);
-                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
                     txtBCodigo.Text = objListaPrecio.idLista.ToString();
+                    cargarDetalleLista(int.Parse(txtBCodigo.Text));
+                    GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+
                 }
                 catch (Exception ex)
                 {
@@ -95,17 +107,35 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             {
                 List<string> param = new List<string>();
                 param.Add(string.Empty);
-                try {
-                        DataTable tblTemp = new DataTable();
-                        tblTemp = objListaPrecio.tablaEquivalencia.Clone();
-                        GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_TODO, param, tblTemp);
-                        objListaPrecio.tablaEquivalencia.Merge(tblTemp,true);
-                    
+                try
+                {
+                    DataTable tblTemp = new DataTable();
+                    tblTemp = objListaPrecio.tablaEquivalencia.Clone();
+                    GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_TODO, param, tblTemp);
+                    objListaPrecio.tablaEquivalencia.Merge(tblTemp, true);
+
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
                     MessageBox.Show(ex.Message);
                 }
                 objListaPrecio.enlazarDt();
+            }
+        }
+        private void tsbAnular_Click(object sender, EventArgs e)
+        {
+            if ( MessageBox.Show(Mensajes.ANULAR_FORM, Mensajes.NOMBRE_SOFT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                objListaPrecio.idLista = (txtBCodigo.Text.Equals(String.Empty) ? 0 : int.Parse(txtBCodigo.Text));
+                try
+                {
+                    ListaPrecioEquivalenciaDAL.anular(objListaPrecio);
+                    GeneralC.posAnular(this, tstMenuPatron, tsbNuevo, tsbBuscar,   Mensajes.CONFIRMACION_ANULADO);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
         #endregion

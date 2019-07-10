@@ -22,6 +22,7 @@ namespace Galactus.Modelo.ConfiguracionGeneral
                 {
                     tblData.Columns.Add("Activo",Type.GetType("System.Boolean"), "IIF(Precio>0,True,False)");
                 }
+                tblData.AcceptChanges();
                 using (SqlCommand sentencia = new SqlCommand())
                 {
                     sentencia.Connection = PrincipalUI.Cnxion;
@@ -32,6 +33,25 @@ namespace Galactus.Modelo.ConfiguracionGeneral
                     sentencia.Parameters.Add(new SqlParameter("@pIdUsuario", SqlDbType.Int)).Value = Sesion.IdUsuario;
                     sentencia.Parameters.Add(new SqlParameter("@pTablaEquivalencia", SqlDbType.Structured)).Value = tblData;
                     objLista.idLista = (int)sentencia.ExecuteScalar();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+        public static void anular(ListaPrecioEquivalencia objLista)
+        {
+            try
+            {
+                using (SqlCommand sentencia = new SqlCommand())
+                {
+                    sentencia.Connection = PrincipalUI.Cnxion;
+                    sentencia.CommandType = System.Data.CommandType.StoredProcedure;
+                    sentencia.CommandText = Util.Constantes.ConstanteGeneral.ESQUEMA_GENERAL + "[uspListaPrecioAnular]";
+                    sentencia.Parameters.Add(new SqlParameter("@pId", SqlDbType.Int)).Value = objLista.idLista;
+                    sentencia.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
