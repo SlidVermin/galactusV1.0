@@ -97,7 +97,9 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
        
         
 
-
+        /// <summary>
+        /// Agrega nuevos medicamentos teniendo encuenta los que ya estan seleccionados
+        /// </summary>
         void agregarMedicamento() {
             try
             {
@@ -116,12 +118,12 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
 
                 DataView view = new DataView(medicamentos.tblMedicamentos);
 
-                tablasSeleccionado = view.ToTable(true, new string[] { "idMedicamento" }).Copy();
+                tablasSeleccionado = view.ToTable(true, new string[] { "idEquivalencia" }).Copy();
                 tablasSeleccionado.Rows.RemoveAt(tablasSeleccionado.Rows.Count - 1);
                 object[] myObjArray4 = { "@pTblSeleccionados", tablasSeleccionado };
 
                 tablaParametros.Rows.Add(myObjArray);
-                tablaParametros.Rows.Add(myObjArray1);
+                tablaParametros.Rows.Add(myObjArray1);  
                 tablaParametros.Rows.Add(myObjArray2);
                 tablaParametros.Rows.Add(myObjArray3);
                 tablaParametros.Rows.Add(myObjArray4);

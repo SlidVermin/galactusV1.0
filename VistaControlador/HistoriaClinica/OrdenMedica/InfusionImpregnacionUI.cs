@@ -164,6 +164,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                     dgvOrdenInfusionImpregnacion.Columns["Horainicial"].ReadOnly = false;
                     dgvOrdenInfusionImpregnacion.Columns["cchora"].ReadOnly = false;
                     int fila = dgvOrdenInfusionImpregnacion.CurrentCell.RowIndex;
+
                     if (!string.IsNullOrEmpty(medicamentos.tblInfusionImpregnacion.Rows[fila]["idEquivalenciaDisolvente"].ToString()))
                     {
                         dgvOrdenInfusionImpregnacion.Columns["dgCantidadDisolventeOrdenINIM"].ReadOnly = false;

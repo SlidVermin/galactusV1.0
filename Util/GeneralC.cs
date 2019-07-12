@@ -99,9 +99,13 @@ namespace Galactus
         {
             int i;
             dgv.ReadOnly = false;
-            for (i=0;i< dgv.Columns.Count;i++)
+            //for (i=0;i< dgv.Columns.Count;i++)
+            //{
+            //    dgv.Columns[i].ReadOnly = true;
+            //}
+            foreach (DataGridViewColumn item in dgv.Columns)
             {
-                dgv.Columns[i].ReadOnly = true;
+                item.ReadOnly = true;
             }
         }
         public static void habilitarColumnas(DataGridView dgv)
