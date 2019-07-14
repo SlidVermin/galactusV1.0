@@ -238,5 +238,13 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
             e.Control.KeyPress += new KeyPressEventHandler(Funciones.validarValoresNumericos);
         }
         #endregion
+
+        private void tstImprimir_Click(object sender, EventArgs e)
+        {
+            if (objListaPrecio.tablaEquivalencia.Rows.Count > 0)
+            {
+                GeneralC.generarPDF("Lista de Precio" + objListaPrecio.nombre +".pdf",new string[] { "ID","NOMBRE", "PRECIO","VISIBLE" },objListaPrecio.tablaEquivalencia);
+            }
+        }
     }
 }

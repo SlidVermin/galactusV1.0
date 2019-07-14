@@ -6,12 +6,15 @@ using Galactus.Util.Constantes;
 using Galactus.Util.Mensajes;
 using Galactus.VistaControlador.General;
 using Galactus.VistaControlador.HistoriaClinica.OrdenMedica;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,14 +65,14 @@ namespace Galactus
             tablaResultado.Clear();
             try
             {
-               using(SqlCommand comando = new SqlCommand())
+                using (SqlCommand comando = new SqlCommand())
                 {
                     comando.Connection = PrincipalUI.Cnxion;
                     comando.CommandType = CommandType.StoredProcedure;
                     comando.CommandText = query;
-                    if(parametros != null)
+                    if (parametros != null)
                     {
-                        foreach(SqlParameter param in parametros)
+                        foreach (SqlParameter param in parametros)
                         {
                             SqlParameter sqlParametros = new SqlParameter();
                             sqlParametros = new SqlParameter(param.ParameterName, param.DbType);
@@ -77,12 +80,12 @@ namespace Galactus
                             comando.Parameters.Add(sqlParametros);
                         }
                     }
-                using (SqlDataAdapter adaptar = new SqlDataAdapter(comando))
-                 {
+                    using (SqlDataAdapter adaptar = new SqlDataAdapter(comando))
+                    {
                         adaptar.Fill(tablaResultado);
-                 }
-             }
-               
+                    }
+                }
+
             }
             catch (Exception ex)
             {
@@ -125,14 +128,14 @@ namespace Galactus
             }
             return false;
         }
-        public static void abrirMezcla(DataGridView dgv,ref DataTable dtMezcla ,bool edicion, int idAtencion , DateTime fecha, bool auditoria)
+        public static void abrirMezcla(DataGridView dgv, ref DataTable dtMezcla, bool edicion, int idAtencion, DateTime fecha, bool auditoria)
         {
             string codigo;
             codigo = (((DataTable)dgv.DataSource).Rows[dgv.CurrentCell.RowIndex]["idMedicamento"].ToString());
             if (!string.IsNullOrEmpty(codigo))
             {
                 MezclaUI mezcla = new MezclaUI();
-                mezcla.obtenerDatos(ref dtMezcla,int.Parse(codigo), idAtencion, fecha, auditoria);
+                mezcla.obtenerDatos(ref dtMezcla, int.Parse(codigo), idAtencion, fecha, auditoria);
                 mezcla.obtenerEstado(edicion);
                 mezcla.ShowDialog();
             }
@@ -149,7 +152,8 @@ namespace Galactus
                 ConnectionInfo connInfo = obtenerConexionReporte();
                 SetDBLogonForReport(connInfo, pReporte);
                 SetDBLogonForSubreports(connInfo, pReporte);
-                if (pFormula != null) {
+                if (pFormula != null)
+                {
                     pReporte.RecordSelectionFormula = pFormula;
                 }
                 string ruta = System.IO.Path.GetTempPath() +
@@ -162,9 +166,9 @@ namespace Galactus
                 pReporte.Close();
                 Process.Start(ruta);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Mensajes.mensajeError(ex); 
+                Mensajes.mensajeError(ex);
             }
             PrincipalUI.cursorPredeterminado();
         }
@@ -190,7 +194,7 @@ namespace Galactus
         }
         private static void SetDBLogonForSubreports(ConnectionInfo connectionInfo, ReportDocument reportDocument)
         {
-            foreach (Section section in reportDocument.ReportDefinition.Sections)
+            foreach (CrystalDecisions.CrystalReports.Engine.Section section in reportDocument.ReportDefinition.Sections)
             {
                 foreach (ReportObject reportObject in section.ReportObjects)
                 {
@@ -203,8 +207,9 @@ namespace Galactus
                 }
             }
         }
-        public static string obtenerExtensionReporte(string pTipoArchivo) {
-            
+        public static string obtenerExtensionReporte(string pTipoArchivo)
+        {
+
             switch (pTipoArchivo)
             {
                 case "PortableDocFormat":
@@ -214,9 +219,9 @@ namespace Galactus
                 default:
                     return ".pdf";
             }
-            
+
         }
-        
+
 
         public static bool verificarUbicacionCelda(DataGridViewCellEventArgs e, DataGridView dgv, string columna)
         {
@@ -226,17 +231,18 @@ namespace Galactus
                                                     DataTable listado,
                                                     DataTable tablaResultado)
         {
-           tablaResultado.Clear();
+            tablaResultado.Clear();
             try
             {
-                using (SqlCommand comando = new SqlCommand()) {
+                using (SqlCommand comando = new SqlCommand())
+                {
                     comando.CommandType = CommandType.StoredProcedure;
                     comando.CommandText = query;
                     comando.Connection = PrincipalUI.Cnxion;
 
                     foreach (DataRow item in listado.Rows)
                     {
-                    
+
                         comando.Parameters.AddWithValue(item.Field<string>("parametro"), item.Field<object>("valor"));
                     }
 
@@ -245,7 +251,7 @@ namespace Galactus
                         adaptador.Fill(tablaResultado);
                     }
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -283,7 +289,7 @@ namespace Galactus
         {
             int edad;
             edad = DateTime.Now.Year - fechaNacimiento.Value.Year;
-            campoFecha = Convert.ToString(edad);                
+            campoFecha = Convert.ToString(edad);
         }
 
         public static DataTable copiarNewDatatable(DataTable dtDatos,
@@ -332,14 +338,15 @@ namespace Galactus
             }
             return dtResultado;
         }
-        public static bool valorExiste(string nombreColumnaDT, string valor, DataTable dtOrigen) {
+        public static bool valorExiste(string nombreColumnaDT, string valor, DataTable dtOrigen)
+        {
             if (dtOrigen.Select(nombreColumnaDT + "='" + valor + "'").Count() > 0)
             {
                 Mensajes.mensajeAdvertencia(Mensajes.VALOR_EXISTENTE);
                 return true;
             }
             return false;
-    }
+        }
         public static void cargarUbicacionGeografica(DataTable dtUbicaciones,
                                                      String idMunicipio,
                                                      ref ComboBox comboPais,
@@ -479,7 +486,7 @@ namespace Galactus
 
         public static DateTime obtenerFechaServidor()
         {
-           
+
             try
             {
                 DateTime fechaServidor = new DateTime();
@@ -491,16 +498,16 @@ namespace Galactus
                 }
                 if (dtAlmacenar.Rows.Count > 0)
                 {
-                  fechaServidor = dtAlmacenar.Rows[0].Field<DateTime>(0);             
+                    fechaServidor = dtAlmacenar.Rows[0].Field<DateTime>(0);
                 }
-                return  fechaServidor;
+                return fechaServidor;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
                 return DateTime.Now;
             }
-            
+
         }
         public static DataSet llenarDataset(string query,
                                             List<string> parametros)
@@ -566,10 +573,10 @@ namespace Galactus
         {
             foreach (Control item in elemento.Controls)
             {
-                if (item is TextBox ) 
+                if (item is TextBox)
                     ((TextBox)item).ReadOnly = false;
                 else if (item is TextBox && !item.Name.Contains("txtB"))
-                    (item).Enabled  = false;
+                    (item).Enabled = false;
                 else if (item is RichTextBox)
                     ((RichTextBox)item).ReadOnly = true;
                 else if (item is MaskedTextBox)
@@ -598,7 +605,7 @@ namespace Galactus
         {
             foreach (Control item in elemento.Controls)
             {
-                if ((item is TextBox) & item.Name != "txtFiltro") 
+                if ((item is TextBox) & item.Name != "txtFiltro")
                     ((TextBox)item).ReadOnly = true;
                 else if (item is ToolStripTextBox && !item.Name.Contains("txtB"))
                     (item).Enabled = true;
@@ -680,18 +687,21 @@ namespace Galactus
             DataView trasformador = new DataView(dtOrigen, filtro, "", DataViewRowState.CurrentRows);
             DataTable dtDetalle = new DataTable();
             dtDetalle = trasformador.ToTable("tabla", false, nombreColumna);
-            if (quitarUltimaFila) {
-                dtDetalle.Rows.RemoveAt(dtDetalle.Rows.Count - 1); 
+            if (quitarUltimaFila)
+            {
+                dtDetalle.Rows.RemoveAt(dtDetalle.Rows.Count - 1);
             }
-            if (dtDetalle.Select().Count() > 0) {
+            if (dtDetalle.Select().Count() > 0)
+            {
                 Mensajes.mensajePorDefectoFaltaInformacion();
                 return false;
-            }else
+            }
+            else
             {
                 return true;
             }
         }
-        public static bool validarCantidad(DataTable dtOrigen, string nombreColumna, bool quitarUltimaFila, string msgAdicional ="")
+        public static bool validarCantidad(DataTable dtOrigen, string nombreColumna, bool quitarUltimaFila, string msgAdicional = "")
         {
             string filtro = string.Concat("[", nombreColumna, "]=0 or [", nombreColumna, "] is null");
             DataView trasformador = new DataView(dtOrigen, filtro, "", DataViewRowState.CurrentRows);
@@ -738,17 +748,17 @@ namespace Galactus
                                                        int indiceColumna
                                                        )
         {
-            
+
             int columnaActual;
             int filaActual;
             bool filaVacia;
             String nombreColumna;
 
-          
+
             columnaActual = dgv.CurrentCell.ColumnIndex;
             nombreColumna = dgv.Columns[columnaActual].HeaderText;
             filaActual = dgv.CurrentCell.RowIndex;
-            filaVacia = (string.IsNullOrEmpty( dgv.Rows[filaActual].Cells[indiceColumna].Value.ToString())) ? true:false;
+            filaVacia = (string.IsNullOrEmpty(dgv.Rows[filaActual].Cells[indiceColumna].Value.ToString())) ? true : false;
 
             switch (nombreColumna)
             {
@@ -764,11 +774,11 @@ namespace Galactus
                     if (!filaVacia)
                     {
                         QuitarFila.Invoke();
-                    }                   
+                    }
                     break;
             }
-           
-          
+
+
         }
         public static void agregarRow(subMetodo metodo,
                                       subMetodo verificarFila,
@@ -912,7 +922,7 @@ namespace Galactus
             dgv.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.Empty;
             dgv.AlternatingRowsDefaultCellStyle.SelectionForeColor = Color.Empty;
             dgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgv.DefaultCellStyle.Font = new Font(ConstanteGeneral.TIPO_LETRA_ELEMENTO, 9);
+            dgv.DefaultCellStyle.Font = new System.Drawing.Font(ConstanteGeneral.TIPO_LETRA_ELEMENTO, 9);
         }
         public static void formNuevo(object formulario,
                                      ToolStrip menu,
@@ -1085,7 +1095,7 @@ namespace Galactus
                     {
                         pictu.Image = null;
                         pictu.SizeMode = PictureBoxSizeMode.StretchImage;
-                        pictu.Image = Image.FromFile(objetoSeleccion.FileName);
+                        pictu.Image = System.Drawing.Image.FromFile(objetoSeleccion.FileName);
                     }
                 }
             }
@@ -1109,6 +1119,57 @@ namespace Galactus
             tabPage.Tag = formContenido;
             tabPage.AutoScroll = true;
             formContenido.Show();
+        }
+        public static void generarPDF(string nombre, string [] dataPadre = null, DataTable dataInfo = null)
+        {
+            string ruta = Path.GetTempPath();
+            ruta = ruta + nombre;
+            Document doc = new Document(PageSize.LETTER);
+            PdfWriter writer = PdfWriter.GetInstance(doc, new FileStream(@ruta, FileMode.Create));
+
+            doc.AddTitle("Mi primer PDF");
+            doc.AddCreator("Roberto Torres");
+
+            doc.Open();
+                       
+            doc.Add(new Paragraph("Ejemplo"));
+            doc.Add(Chunk.NEWLINE);
+            
+            PdfPTable tblPrueba = new PdfPTable(dataInfo.Columns.Count);
+            tblPrueba.WidthPercentage = 100;
+            iTextSharp.text.Font formatoEncabezados = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.BOLD, BaseColor.WHITE);
+            crearEncabezado(formatoEncabezados, tblPrueba, dataPadre);
+            iTextSharp.text.Font formatoFila = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 8, iTextSharp.text.Font.NORMAL, BaseColor.BLACK);
+            crearFilas(formatoFila, tblPrueba, dataInfo);
+
+            doc.Add(tblPrueba);
+
+            doc.Close();
+            writer.Close();
+            Process.Start(ruta);
+        }
+        static void crearEncabezado(iTextSharp.text.Font formato, PdfPTable tblPrueba, string[] Encabezado)
+        {
+            foreach (string  item in Encabezado)
+            {
+                PdfPCell colm = new PdfPCell(new Phrase(item, formato));
+                colm.BorderWidth = 1;
+                colm.BackgroundColor = BaseColor.GRAY;
+                tblPrueba.AddCell(colm);
+            }
+
+        }
+        static void crearFilas(iTextSharp.text.Font formato, PdfPTable tblPrueba, DataTable tblInfo)
+        {
+            for (int j = 0; j <= (tblInfo.Rows.Count-1); j++)
+            {
+                for (int i = 0; i <= (tblInfo.Columns.Count - 1); i++)
+                {
+                    PdfPCell dato = new PdfPCell(new Phrase(tblInfo.Rows[j][i].ToString(), formato));
+                    dato.BorderWidth = 1;
+                    tblPrueba.AddCell(dato);
+                }
+            } 
         }
     }
 }
