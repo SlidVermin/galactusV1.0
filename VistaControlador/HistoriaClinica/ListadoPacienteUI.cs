@@ -178,12 +178,12 @@ namespace Galactus.VistaControlador.HistoriaClinica
                     HistoriaClinicaUI formHistoriaClinica = new HistoriaClinicaUI();
                     formHistoriaClinica.obtenerDatosPaciente(listaPaciente, Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value), auditoria,
                                                              Convert.ToBoolean(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgNeonatal"].Value));
-                    formHistoriaClinica.ShowDialog();
+                    formHistoriaClinica.Show();
                     break;
                 case ConstanteGeneral.MENU_ATENCION_ENFERMERIA:
                     FichaEnfermeriaUI formHistoriaEnfermeria = new FichaEnfermeriaUI();
                     formHistoriaEnfermeria.obtenerDatosPaciente(listaPaciente, Convert.ToInt32(dgvListaPaciente.Rows[dgvListaPaciente.CurrentCell.RowIndex].Cells["dgAtencion"].Value), auditoria);
-                    formHistoriaEnfermeria.ShowDialog();
+                    formHistoriaEnfermeria.Show();
                     break;
             }
 

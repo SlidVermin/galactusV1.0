@@ -204,7 +204,7 @@ namespace Galactus
         private void toolStripStatusLabel_Click(object sender, EventArgs e)
         {
             SolicitudMedicamentoNoPosUI solicitud = new SolicitudMedicamentoNoPosUI();
-            solicitud.ShowDialog();
+            solicitud.Show();
         }
     }
 }

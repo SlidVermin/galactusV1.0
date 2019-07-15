@@ -71,7 +71,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
                 idProcedimiento= Convert.ToInt32(dgvResultadoLaboratorio.Rows[dgvResultadoLaboratorio.CurrentCell.RowIndex].Cells["dgIdProcedimiento"].Value);
                 resultadoLaboratorio = new ResultadoLaboratorioUI(idOrdenMedica, idProcedimiento, auditoria, idSolicitud);
                 resultadoLaboratorio.cargarInformacionADatos();
-                resultadoLaboratorio.ShowDialog();
+                resultadoLaboratorio.Show();
             }
         }
         private void dgvResultadoLaboratorio_CellClick(object sender, DataGridViewCellEventArgs e)
