@@ -1,6 +1,6 @@
 ﻿namespace Galactus
 {
-    partial class FormLogin
+    partial class InicioUI
     {
         /// <summary>
         /// Variable del diseñador necesaria.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Galactus
 {
-    public partial class FormLogin : Form
+    public partial class InicioUI : Form
     {
-        public FormLogin()
+        public InicioUI()
         {
             InitializeComponent();
         }
