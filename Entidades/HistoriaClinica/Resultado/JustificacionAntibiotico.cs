@@ -4,32 +4,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using Galactus.Modelo.HistoriaClinica.Resultado;
 
 namespace Galactus.Entidades.HistoriaClinica.Resultado
 {
     class JustificacionAntibiotico
     {
-        public string codigo { get; set; }
-        public int codigoOrden { get; set; }
-        public DataTable dtPatologia { get; set; }
-        public DataTable dtAntibioticoAnterior { get; set; }
-        public int codigoMedicamento { get; set; }
-        public Boolean tomaMuestra { get; set; }
-        public DateTime fechaMuestra { get; set; }
-        public string tipoMuestra { get; set; }
-        public string aislamientoMicrobiologico { get; set; }
-        public string terapiaActual { get; set; }
+      public int idAtencion { get; set; }
+      public int idOrdenMedica { get; set; }
+        public Boolean auditoria { get; set; }
+        public DataSet dsDatos = new DataSet();
+        public int idJustificacion { get; set; }
+        public string nombreMedicamentoActual { get; set; }
+        public int idMedicamentoActual { get; set; }
+        public string documentoIdentidad { get; set; }
+        public string paciente { get; set; }
+        public string cama { get; set; }
+        public string estancia { get; set; }
+        public string edad { get; set; }
+        public string area { get; set; }
+        public string entorno { get; set; }
+        public string viaIngreso { get; set; }
+        public string causaExterna { get; set; }
+        public void cargarDatos()
+        {
+            JustificacionAntibioticoDAL.cargarDatos(this);
 
-        public  JustificacionAntibiotico() {
-            dtPatologia = new DataTable();
-            dtAntibioticoAnterior = new DataTable();
+            DataTableCollection tablas = dsDatos.Tables;
 
-            dtAntibioticoAnterior.Columns.Add("codigo",Type.GetType("System.Int32"));
-            dtAntibioticoAnterior.Columns.Add("Descripcion", Type.GetType("System.String"));
-            dtAntibioticoAnterior.Columns.Add("Tiempo", Type.GetType("System.String"));
-
-            dtPatologia.Columns.Add("codigo", Type.GetType("System.Int32"));
-            dtPatologia.Columns.Add("descripcion", Type.GetType("System.String"));
+            if (tablas["table"].Rows.Count > 0)
+            {
+                documentoIdentidad = tablas["table"].Rows[0]["DocumentoIdentificación"].ToString();
+                paciente = tablas["table"].Rows[0]["paciente"].ToString();
+                cama = tablas["table"].Rows[0]["cama"].ToString();
+                estancia = tablas["table"].Rows[0]["estancia"].ToString();
+                area = tablas["table"].Rows[0]["area"].ToString();
+                entorno = tablas["table"].Rows[0]["entorno"].ToString();
+                edad = tablas["table"].Rows[0]["edad"].ToString();
+                viaIngreso = tablas["table"].Rows[0]["viaingreso"].ToString();
+                causaExterna = tablas["table"].Rows[0]["causaExterna"].ToString();
+            }
         }
+
     }
 }

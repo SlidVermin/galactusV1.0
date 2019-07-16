@@ -335,7 +335,7 @@ namespace Galactus.VistaControlador.Admision
                     txtAcompananteDireccion.Focus();
                     return false;
                 }
-            }else if (checkResponsable.Checked)
+            else if (checkResponsable.Checked)
             {
                 if (cmbTipoDocumentoResponsable.SelectedIndex == 0)
                 {
@@ -384,6 +384,7 @@ namespace Galactus.VistaControlador.Admision
             {
                 return true;
             }
+            }
             return true;    
         }
         private void tsbGuardar_Click(object sender, EventArgs e)
@@ -396,6 +397,7 @@ namespace Galactus.VistaControlador.Admision
                     admision.guardar();
                     txtAtencion.Text = Convert.ToString(admision.idAdmision);
                     GeneralC.posGuardar(this, tstMenuPatron, tsbNuevo, tsbBuscar, tstModificar, tsbAnular, null, Mensajes.CONFIRMACION_GUARDADO);
+                    btnSalir.Enabled = true;
 
                 }
                 catch (Exception ex)
@@ -409,19 +411,19 @@ namespace Galactus.VistaControlador.Admision
         {
             admision.idAdmision = (txtAtencion.Text.Equals(String.Empty))  ? 0: int.Parse(txtAtencion.Text);
             admision.fecha = dtpAdmision.Value;
-            admision.tipoDocumentoAcompañante = (string)cmbTipoDocumento.SelectedValue;
-            admision.tipoDocumentoResponsable = (string)cmbTipoDocumentoResponsable.SelectedValue;
+            admision.tipoDocumentoAcompañante = Convert.ToString( cmbTipoDocumento.SelectedValue);
+            admision.tipoDocumentoResponsable = Convert.ToString(cmbTipoDocumentoResponsable.SelectedValue);
             admision.identificacionAcompañante = txtAcompananteIdentificacion.Text;
             admision.identificacionResponsable = txtResponsableIdentificacion.Text;
             admision.nombreAcompañante = txtAcompananteNombre.Text;
             admision.nombreResponsable = txtResponsableNombre.Text;
             admision.telefonoAcompañante = txtAcompananteTelefono.Text;
             admision.telefonoResponsable = txtResponsableTelefono.Text;
-            admision.idMunicipioAcompañante = (string) cmbAcompananteCiudad.SelectedValue;
-            admision.idMunicipioResponsable = (string)cmbResponsableCiudad.SelectedValue;
+            admision.idMunicipioAcompañante = Convert.ToString(cmbAcompananteCiudad.SelectedValue);
+            admision.idMunicipioResponsable = Convert.ToString(cmbResponsableCiudad.SelectedValue);
             admision.direccionAcompañante = txtAcompananteDireccion.Text;
             admision.direccionResponsable = txtResponsableDireccion.Text;
-            admision.idTriage = (string) cmbTriage.SelectedValue;
+            admision.idTriage = Convert.ToString(cmbTriage.SelectedValue);
             admision.acompanante = chkAcompanante.Checked;
             admision.responsable = checkResponsable.Checked;
         }
@@ -456,27 +458,44 @@ namespace Galactus.VistaControlador.Admision
             cmbResponsableCiudad.Enabled = false;
         }
 
+        private void deshabilitarControles() {
+            txtAtencion.ReadOnly = true;
+            txtHClinica.ReadOnly = true;
+            txtPaciente.ReadOnly = true;
+            txtRegimen.ReadOnly = true;
+            txtEstratoSocial.ReadOnly = true;
+            txtAfiliacion.ReadOnly = true;
+            txtEPS.ReadOnly = true;
+            txtClienteContrato.ReadOnly = true;
+            tctContrato.ReadOnly = true;
+            txtEspecialidad.ReadOnly = true;
+        }
         private void tstModificar_Click(object sender, EventArgs e)
         {
             GeneralC.fnModificarForm(this, tstMenuPatron, tsbGuardar, tsbCancelar);
             buscarHCPacienteBtn.Enabled = false;
             dtpAdmision.Enabled = false;
+            deshabilitarControles();
+
+
         }
 
         private void tsbCancelar_Click(object sender, EventArgs e)
         {
             GeneralC.fnCancelarForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
-            admision.idAdmision = 0;
+            admision.idAdmision = ConstanteGeneral.PREDETERMINADO;
             btnSalir.Enabled = true;
             dtpAdmision.ResetText();
+           
 
         }
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
-            admision.idAdmision = 0;
+            admision.idAdmision = ConstanteGeneral.PREDETERMINADO;
             dtpAdmision.ResetText();
+            deshabilitarControles();
         }
 
         private void tsbBuscar_Click(object sender, EventArgs e)
@@ -497,6 +516,8 @@ namespace Galactus.VistaControlador.Admision
         }
         public void cargarDatos(DataRow filas)
         {
+            admision.responsable = false;
+            admision.acompanante = false;
             admision.idAdmision = filas.Field<int>("Admision");
             admision.cargarUbicaciones();
             admision.cargarDatos();
@@ -517,15 +538,24 @@ namespace Galactus.VistaControlador.Admision
                 txtAcompananteTelefono.Text = admision.telefonoAcompañante;
                 chkAcompanante.Checked = admision.acompanante;
             }
+            else {
+                GeneralC.limpiarControles(pnlAcompanante);
+                chkAcompanante.Checked = false;
+            }
+
             if (admision.responsable)
             {
                 cmbTipoDocumentoResponsable.SelectedValue = admision.tipoDocumentoResponsable;
                 txtResponsableIdentificacion.Text = admision.identificacionResponsable;
                 txtResponsableNombre.Text = admision.nombreResponsable;
-                GeneralC.cargarUbicacionGeografica(admision.dtUbicacion, admision.idMunicipioResponsable, ref cmbAcompanantePais, ref cmbAcompananteDpto, ref cmbAcompananteCiudad);
+                GeneralC.cargarUbicacionGeografica(admision.dtUbicacion, admision.idMunicipioResponsable, ref cmbResponsablePais, ref cmbResponsableDpto, ref cmbResponsableCiudad);
                 txtResponsableDireccion.Text = admision.direccionResponsable;
                 txtResponsableTelefono.Text = admision.telefonoResponsable;
                 checkResponsable.Checked = admision.responsable;
+            }
+            else {
+                GeneralC.limpiarControles(pnlResponsable);
+                checkResponsable.Checked = false;
             }
             admision.cargarPaciente();
             txtAfiliacion.Text = admision.tipoAfiliacion;

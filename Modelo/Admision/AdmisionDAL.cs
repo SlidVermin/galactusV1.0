@@ -25,7 +25,6 @@ namespace Galactus.Modelo.Admision
                     comando.Parameters.Add(new SqlParameter("@IdTriage", System.Data.SqlDbType.Int)).Value = admision.idTriage;
                     comando.Parameters.Add(new SqlParameter("@IdContrato", System.Data.SqlDbType.Int)).Value = admision.idContrato;
                     comando.Parameters.Add(new SqlParameter("@Ideps", System.Data.SqlDbType.Int)).Value = admision.idEps;
-                    comando.Parameters.Add(new SqlParameter("@IdContacto", System.Data.SqlDbType.Int)).Value = admision.idContacto;
                     comando.Parameters.Add(new SqlParameter("@TipoDocumentoAcom", System.Data.SqlDbType.Int)).Value = admision.tipoDocumentoAcompañante;
                     comando.Parameters.Add(new SqlParameter("@DocumentoAcom", System.Data.SqlDbType.Int)).Value = (admision.identificacionAcompañante.Equals(String.Empty)) ? 0: int.Parse(admision.identificacionAcompañante);
                     comando.Parameters.Add(new SqlParameter("@TipoDocumentoRes", System.Data.SqlDbType.Int)).Value = admision.tipoDocumentoResponsable;

@@ -148,6 +148,7 @@
     <Compile Include="Modelo\HistoriaClinica\Resultado\EcocardiogramaDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\HemodialisisDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\InformeQuirurgicoDAL.cs" />
+    <Compile Include="Modelo\HistoriaClinica\Resultado\JustificacionAntibioticoDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\MedicamentoNoPosDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\Resultado\ResultadoLaboratorioDAL.cs" />
     <Compile Include="Modelo\HistoriaClinica\SabanaDAL.cs" />
