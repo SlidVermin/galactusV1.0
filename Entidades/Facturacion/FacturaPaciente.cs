@@ -11,6 +11,8 @@ namespace Galactus.Entidades.Facturacion
     class FacturaPaciente
     {
         public int idAdmision { get; set; }
+
+        public int tipoFactura { get; set; }
         public int idContrato { get; set; }
         public double totalFactura { get; set; }
         public string codigoFactura { get; set; }
@@ -54,6 +56,7 @@ namespace Galactus.Entidades.Facturacion
         {
             List<string> param = new List<string>();
             param.Add(Convert.ToString(idAdmision));
+            param.Add(Convert.ToString(tipoFactura));
             dsDatos = GeneralC.llenarDataset(Sentencias.FACTURA_PACIENTE_CARGAR_ADMISION, param);
             totalFactura = Convert.ToDouble (dsDatos.Tables["table3"].Rows[0]["total"].ToString());
         }

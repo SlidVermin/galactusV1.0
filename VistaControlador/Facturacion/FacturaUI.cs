@@ -61,6 +61,7 @@ namespace Galactus.VistaControlador
             try
             {
                 List<string> parametros = new List<string>();
+                parametros.Add(null);
                 parametros.Add(Convert.ToString(factura.idContrato));  
                 GeneralC.buscarDevuelveFila(Sentencias.FACTURA_PACIENTE_BUSCAR_ADMISION,
                                                    parametros,
@@ -81,6 +82,7 @@ namespace Galactus.VistaControlador
             txtAfiliacion.Text = fila.Field<String>("Afiliación");
             txtRegimen.Text = fila.Field<String>("Régimen");
             factura.idAdmision = fila.Field<int>("Admisión");
+            factura.tipoFactura = fila.Field<int>("tipoFactura");
             factura.cargarDatos(); 
             dgvProcedimientos.DataSource =factura.dsDatos.Tables["table"];
             dgvOxigenos.DataSource = factura.dsDatos.Tables["table1"];
