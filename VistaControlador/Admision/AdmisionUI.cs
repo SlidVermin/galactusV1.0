@@ -436,6 +436,7 @@ namespace Galactus.VistaControlador.Admision
             }else
             {
                 pnlAcompanante.Enabled = false;
+                GeneralC.limpiarControles(pnlAcompanante);
             }
         }
 
@@ -447,6 +448,7 @@ namespace Galactus.VistaControlador.Admision
             }else
             {
                 pnlResponsable.Enabled = false;
+                GeneralC.limpiarControles(pnlResponsable);
             }
         }
 
