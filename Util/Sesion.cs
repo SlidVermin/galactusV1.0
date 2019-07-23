@@ -11,10 +11,7 @@ namespace Galactus
 
     class Sesion
     {
-        private static int idUsuario;
         private static int idRol;
-        private static string nombreUsuario;
-        private static SqlConnection conxion;
         public static DataTable dtPermisos = new DataTable();
         public static DataTable dtmenu = new DataTable();
 
@@ -28,15 +25,8 @@ namespace Galactus
             return false;
         }
         public static SqlConnection getConexion()
-        {
-            //SqlConnection conx = new SqlConnection(Galactus.Properties.Settings.Default.conexionGalactus);
-            //if (conx.State == ConnectionState.Closed)
-            //{
-            //    conx.Open();
-            //}
-            //;
-            //return conx;
-            return Conexion.obtenerConexion(0);
+        {          
+            return ConexionDB.obtenerConexion(0);
         }
         public static int IdUsuario { get; set; }
 

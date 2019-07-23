@@ -36,8 +36,8 @@ namespace Galactus
                 list.Add(pass);
                 if (iniciarSesion(list))
                 {
-                    PrincipalUI formPrincipal = new PrincipalUI();
-                    formPrincipal.Show();
+                    PrincipalUI principalUI = new PrincipalUI();
+                    principalUI.Show();
                     this.Hide();
                 }
                 else

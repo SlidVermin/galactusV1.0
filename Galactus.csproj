@@ -206,6 +206,7 @@
       <DependentUpon>RptEncabezado.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Util\ConexionDB.cs" />
     <Compile Include="Util\Constantes\ConstanteGeneral.cs" />
     <Compile Include="Util\Constantes\ConsultasConfiguracionGeneral.cs" />
     <Compile Include="Util\Constantes\ConsultasHistoriaClinica.cs" />
@@ -1237,7 +1238,6 @@
     <Content Include="Resources\almacen-ico.png" />
     <Content Include="Resources\contabilidad-ico.png" />
     <Content Include="Resources\farmacia-ico.png" />
-    <Content Include="Resources\GalactusDB.dll" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="CRDESIGNERLib">
