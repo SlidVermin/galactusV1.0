@@ -67,7 +67,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         public void obtenerDatosPaciente(ListadoPaciente listaPaciente, int idIngreso,bool vAuditoria,bool vEsNeonatal)
         {
             DataTable dtDatos = new DataTable();
-            dtDatos = GeneralC.copiarNewDatatable(listaPaciente.dtPaciente, "Atencion", idIngreso);
+            dtDatos = GeneralC.copiarNewDatatable(listaPaciente.dtPacientes, "Atencion", idIngreso);
             if (dtDatos.Rows.Count > 0)
             {
                 txtAtencion.Text = Convert.ToString(dtDatos.Rows[0].Field<int>("Atencion"));

@@ -11,7 +11,7 @@ namespace Galactus.Entidades.HistoriaClinica
 {
     public class ListadoPaciente
     {
-        public DataTable dtPaciente = new DataTable();
+        public DataTable dtPacientes = new DataTable();
         public String idMenu { get; set; }
         public bool auditoria { get; set; }
         public int idEntorno { get; set; }
@@ -32,7 +32,7 @@ namespace Galactus.Entidades.HistoriaClinica
             param.Add(Convert.ToString(idEntorno));
             param.Add(Convert.ToString(idEstadoAtencion));
             param.Add(Convert.ToString(filtro));
-            GeneralC.llenarTabla(ConsultasHistoriaClinica.LISTAR_PACIENTE, param, dtPaciente);
+            dtPacientes = GeneralC.cargarResultadosSQL(ConsultasHistoriaClinica.LISTAR_PACIENTE, param);
         }
     }
 }

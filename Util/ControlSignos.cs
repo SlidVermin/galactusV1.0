@@ -42,7 +42,7 @@ namespace Galactus.Util
             List<string> parametro = new List<string>();
             DataTable dt = new DataTable();
             parametro.Add(codigo.ToString());
-            GeneralC.llenarTabla(Sentencias.PARAMETROS_CONSULTAR_DESCRIPCION_SABANA, parametro, dt);
+            dt = GeneralC.cargarResultadosSQL(Sentencias.PARAMETROS_CONSULTAR_DESCRIPCION_SABANA, parametro);
             return dt;
         }
     }

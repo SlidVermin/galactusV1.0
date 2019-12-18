@@ -76,7 +76,7 @@ namespace Galactus.Entidades.Admision
             List<string> param = new List<string>();
             param.Add(Convert.ToString(idAdmision));
             DataTable dt = new DataTable();
-            GeneralC.llenarTabla(Sentencias.ATENCION_PACIENTE_ATENCION, param,dt);
+            dt = GeneralC.cargarResultadosSQL(Sentencias.ATENCION_PACIENTE_ATENCION, param);
             if (dt.Rows.Count > 0)
             {
                 idAdmision = dt.Rows[0].Field<int>("admision");

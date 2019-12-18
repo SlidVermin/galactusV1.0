@@ -46,7 +46,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.OrdenMedica
             paramtro.Add(auditoria.ToString());
             paramtro.Add(idAtencion.ToString());
             paramtro.Add(paraclinico.ToString());
-            GeneralC.llenarTabla(Sentencias.LISTAR_RESULTADO_LABORATORIO, paramtro, resultadoLaboratorio.dtResultado);
+            resultadoLaboratorio.dtResultado = GeneralC.cargarResultadosSQL(Sentencias.LISTAR_RESULTADO_LABORATORIO, paramtro);
             dgvResultadoLaboratorio.DataSource = resultadoLaboratorio.dtResultado;
         }
 

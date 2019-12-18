@@ -139,7 +139,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
         public void cargar()
         {
             listaPaciente.listarPacientes();
-            dgvListaPaciente.DataSource = listaPaciente.dtPaciente;
+            dgvListaPaciente.DataSource = listaPaciente.dtPacientes;
         }
 
         public void establecerGridview()

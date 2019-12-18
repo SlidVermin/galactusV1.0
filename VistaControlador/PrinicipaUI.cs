@@ -74,10 +74,10 @@ namespace Galactus
         public MenuStrip cargarMenu()
         {
             MenuStrip menu = new MenuStrip();
-            List<string> pamaetros = new List<string>();
-            pamaetros.Add(Sesion.IdRol.ToString());
-            GeneralC.llenarTabla(Sentencias.SEG_ARMAR_MENU, pamaetros, Sesion.dtmenu);
-            GeneralC.llenarTabla(Sentencias.SEG_LLENAR_PERMISOS, pamaetros, Sesion.dtPermisos);
+            List<string> parametros = new List<string>();
+            parametros.Add(Sesion.IdRol.ToString());
+            Sesion.dtmenu = GeneralC.cargarResultadosSQL(Sentencias.SEG_ARMAR_MENU, parametros);
+            Sesion.dtPermisos = GeneralC.cargarResultadosSQL(Sentencias.SEG_LLENAR_PERMISOS, parametros);
             return colocarPadres(menu);
         }
         public MenuStrip colocarPadres(MenuStrip menu)

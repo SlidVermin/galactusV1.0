@@ -115,7 +115,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             paramtro.Add(resultadoLab.idOrdenMedica.ToString());
             paramtro.Add(idProcedimiento.ToString());
             try {
-                GeneralC.llenarTabla(Sentencias.BUSCAR_PACIENTE_RESULTADO_LAB, paramtro, dtDatos);
+                dtDatos = GeneralC.cargarResultadosSQL(Sentencias.BUSCAR_PACIENTE_RESULTADO_LAB, paramtro);
                 dRows = dtDatos.Rows[0];
 
                 txtAtencion.Text = dRows.Field<int>("idAtencion").ToString();
@@ -167,7 +167,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             paramtro.Add(idProcedimiento.ToString());
             paramtro.Add(Convert.ToUInt32(resultadoLab.estadoRegistro).ToString());
 
-            GeneralC.llenarTabla(Sentencias.CARGAR_RESULTADO_LAB, paramtro, resultadoLab.dtResultado);
+            resultadoLab.dtResultado = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_RESULTADO_LAB, paramtro);
             dgvResultados.DataSource = resultadoLab.dtResultado;
             dgvResultados.Columns["dgCodigo"].Visible = false;
 

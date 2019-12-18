@@ -144,7 +144,7 @@ namespace Galactus.VistaControlador.Admision.Configuracion
         {
             List<string> parametro = new List<string>();
             parametro.Add(txtCodigo.Text);
-            GeneralC.llenarTabla(Sentencias.MANUAL_SERVICIO_CONSULTAR_SOAT, parametro, objManual.dtSoat);
+            objManual.dtSoat = GeneralC.cargarResultadosSQL(Sentencias.MANUAL_SERVICIO_CONSULTAR_SOAT, parametro);
             navegarSoat.DataSource = objManual.dtSoat;
             dgvSoat.DataSource =navegarSoat.DataSource;
         }
@@ -152,7 +152,7 @@ namespace Galactus.VistaControlador.Admision.Configuracion
         {
             List<string> parametro = new List<string>();
             parametro.Add(txtCodigo.Text);
-            GeneralC.llenarTabla(Sentencias.MANUAL_SERVICIO_CONSULTAR_ISS, parametro, objManual.dtISS);
+            objManual.dtISS = GeneralC.cargarResultadosSQL(Sentencias.MANUAL_SERVICIO_CONSULTAR_ISS, parametro);
             navegarIss.DataSource = objManual.dtISS;
             dgvIss.DataSource = navegarIss.DataSource;
         }
@@ -160,7 +160,7 @@ namespace Galactus.VistaControlador.Admision.Configuracion
         {
             List<string> parametro = new List<string>();
             parametro.Add(txtCodigo.Text);
-            GeneralC.llenarTabla(Sentencias.MANUAL_SERVICIO_CONSULTAR_CUPS, parametro, objManual.dtCups);
+            objManual.dtCups = GeneralC.cargarResultadosSQL(Sentencias.MANUAL_SERVICIO_CONSULTAR_CUPS, parametro);
             navegarCups.DataSource = objManual.dtCups;
             dgvCups.DataSource = navegarCups.DataSource;
         }
@@ -170,9 +170,9 @@ namespace Galactus.VistaControlador.Admision.Configuracion
             txtCodigo.Text = dRows.GetParentRows("Codigo").ToString();
             parametro.Add(txtCodigo.Text);
 
-            GeneralC.llenarTabla(Sentencias.MANUAL_SERVICIO_CARGAR_SOAT, parametro, objManual.dtSoat);
-            GeneralC.llenarTabla(Sentencias.MANUAL_SERVICIO_CARGAR_ISS, parametro, objManual.dtISS);
-            GeneralC.llenarTabla(Sentencias.MANUAL_SERVICIO_CARGAR_CUPS, parametro, objManual.dtCups);
+            objManual.dtSoat = GeneralC.cargarResultadosSQL(Sentencias.MANUAL_SERVICIO_CARGAR_SOAT, parametro);
+            objManual.dtISS = GeneralC.cargarResultadosSQL(Sentencias.MANUAL_SERVICIO_CARGAR_ISS, parametro);
+            objManual.dtCups = GeneralC.cargarResultadosSQL(Sentencias.MANUAL_SERVICIO_CARGAR_CUPS, parametro);
 
             navegarSoat.DataSource = objManual.dtSoat;
             navegarIss.DataSource = objManual.dtISS;

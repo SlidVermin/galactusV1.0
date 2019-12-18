@@ -104,17 +104,17 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         }
         private void cargarLineas()
         {
-            List<string> listaParametros = new List<string>();
+            List<string> listaParametros =new List<string>();
             listaParametros.Add(Util.Constantes.ConstanteGeneral.LINEA.ToString());
             listaParametros.Add("");
-            GeneralC.llenarTabla(Sentencias.PARAMETROS_LISTAR_DOCUMENTOS, listaParametros, equivalencia.tablaLineas);
+            equivalencia.tablaLineas = GeneralC.cargarResultadosSQL(Sentencias.PARAMETROS_LISTAR_DOCUMENTOS, listaParametros);
         }
         private void cargarVias()
         {
             List<string> listaParametros = new List<string>();
             listaParametros.Add(Util.Constantes.ConstanteGeneral.VIAS_ADMINISTRACION.ToString());
             listaParametros.Add("");
-            GeneralC.llenarTabla(Sentencias.PARAMETROS_LISTAR_DOCUMENTOS, listaParametros, equivalencia.tablaVias);
+            equivalencia.tablaVias = GeneralC.cargarResultadosSQL(Sentencias.PARAMETROS_LISTAR_DOCUMENTOS, listaParametros);
         }
         void cargarUnidad(DataRow fila)
         {

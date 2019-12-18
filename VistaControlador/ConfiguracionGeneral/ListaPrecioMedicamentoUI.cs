@@ -111,7 +111,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 {
                     DataTable tblTemp = new DataTable();
                     tblTemp = objListaPrecio.tablaEquivalencia.Clone();
-                    GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_TODO, param, tblTemp);
+                    objListaPrecio.tablaEquivalencia = GeneralC.cargarResultadosSQL(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_TODO, param);
                     objListaPrecio.tablaEquivalencia.Merge(tblTemp, true);
 
                 }
@@ -177,7 +177,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
 
             List<string> param = new List<string>();
             param.Add(string.Empty);
-            GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_TODO, param, objListaPrecio.tablaEquivalencia);
+            GeneralC.cargarResultadosSQL(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_TODO, param);
             enlazarGrilla();
         }
         void enlazarGrilla()
@@ -205,7 +205,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
         {
             List<string> param = new List<string>();
             param.Add(codigo.ToString());
-            GeneralC.llenarTabla(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_DETALLE, param, objListaPrecio.tablaEquivalencia);
+            GeneralC.cargarResultadosSQL(ConsultasConfiguracionGeneral.LISTA_PRECIO_EQUIVALENCIA_CARGAR_DETALLE, param);
             objListaPrecio.enlazarDt();
             enlazarGrilla();
             GeneralC.posCargadoForm(this, tstMenuPatron, tsbBuscar, tstModificar, tsbAnular, tstImprimir);

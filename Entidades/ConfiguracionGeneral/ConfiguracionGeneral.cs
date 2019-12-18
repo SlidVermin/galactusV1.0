@@ -13,13 +13,13 @@ namespace Galactus.Entidades.ConfiguracionGeneral
         public int idParametro { get; set; }
         public int idDocumento { get; set; }
         public string descripcionDocumento { get; set; }
-        public DataTable tablaDocumentos { get; set; }
+        public DataTable dtDocumentos { get; set; }
         public BindingSource enlace;
         public ConfiguracionGeneral()
         {
-            tablaDocumentos = new DataTable();
-            tablaDocumentos.Columns.Add("Código", Type.GetType("System.Int32"));
-            tablaDocumentos.Columns.Add("Descripción", Type.GetType("System.String"));
+            dtDocumentos = new DataTable();
+            dtDocumentos.Columns.Add("Código", Type.GetType("System.Int32"));
+            dtDocumentos.Columns.Add("Descripción", Type.GetType("System.String"));
 
             enlace = new BindingSource();
             
@@ -30,10 +30,8 @@ namespace Galactus.Entidades.ConfiguracionGeneral
             {
                 List<string> listaParametros = new List<string>();
                 listaParametros.Add(idParametro.ToString());
-                GeneralC.llenarTabla(Sentencias.PARAMETROS_CARGAR_DOCUMENTOS,
-                                     listaParametros,
-                                     tablaDocumentos);
-                enlace.DataSource = tablaDocumentos;
+                dtDocumentos = GeneralC.cargarResultadosSQL(Sentencias.PARAMETROS_CARGAR_DOCUMENTOS, listaParametros);
+                enlace.DataSource = dtDocumentos;
             }
             catch (Exception ex)
             {

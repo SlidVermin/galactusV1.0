@@ -126,7 +126,7 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
             List<string> lista = new List<string>();
             lista.Add(Convert.ToString(Auditoria));
             lista.Add(Convert.ToString(idOrdenMedica));
-            GeneralC.llenarTabla(Sentencias.CARGAR_PROCEDIMIENTOS_ENFERMERIA, lista, dtProcedimientos);
+            dtProcedimientos = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_PROCEDIMIENTOS_ENFERMERIA, lista);
             if (dtProcedimientos.Rows.Count > 0)
             {
                 procedimientoAprobado = true;
@@ -162,7 +162,7 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
             lista.Add(Convert.ToString(Auditoria));
             lista.Add(Convert.ToString(idNota));
             lista.Add(Convert.ToString(tipo));
-            GeneralC.llenarTabla(Sentencias.CARGAR_NOTA_ENFERMERIA, lista, dtNotas);
+            dtNotas = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_NOTA_ENFERMERIA, lista);
             if (dtNotas.Rows.Count > 0)
             {
                 nota = dtNotas.Rows[0].Field<String>("nota");
@@ -175,8 +175,8 @@ namespace Galactus.Entidades.HistoriaClinica.Enfermeria
             List<string> lista = new List<string>();
             lista.Add(Convert.ToString(Auditoria));
             lista.Add(Convert.ToString(idOrdenMedica));
-         
-            GeneralC.llenarTabla(Sentencias.CARGAR_GLUCOMETRIAS_ENFERMERIA, lista, dtGlucometria);
+
+            dtGlucometria = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_GLUCOMETRIAS_ENFERMERIA, lista);
             if (dtGlucometria.Rows.Count >0)
             {
                 glucometriaAprobado = true;

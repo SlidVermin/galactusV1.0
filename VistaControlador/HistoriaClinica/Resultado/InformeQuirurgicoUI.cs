@@ -440,7 +440,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> paramtro = new List<string>();
             paramtro.Add(informeQx.Auditoria.ToString());
             paramtro.Add(informeQx.idInformeQX.ToString());
-            GeneralC.llenarTabla(Sentencias.CARGAR_INFORME_QX_PROCEDIMIENTO, paramtro, informeQx.dtProcedimiento);
+            informeQx.dtProcedimiento = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_INFORME_QX_PROCEDIMIENTO, paramtro);
             dgvProcedimientos.DataSource = informeQx.dtProcedimiento;
         }
         private void dgvProcedimientos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -559,7 +559,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> paramtro = new List<string>();
             paramtro.Add(informeQx.Auditoria.ToString());
             paramtro.Add(informeQx.idInformeQX.ToString());
-            GeneralC.llenarTabla(Sentencias.CARGAR_INFORME_QX_MEDICAMENTO, paramtro, informeQx.dtMedicamento);
+            informeQx.dtMedicamento = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_INFORME_QX_MEDICAMENTO, paramtro);
             dgvMedicamento.DataSource = informeQx.dtMedicamento;
         }
 

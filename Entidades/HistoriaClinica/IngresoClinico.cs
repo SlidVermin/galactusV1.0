@@ -143,7 +143,7 @@ namespace Galactus.Entidades.HistoriaClinica
             DataTable dt = new DataTable();
             List<string> lista = new List<string>();
             lista.Add(Convert.ToString(IdAtencion));
-            GeneralC.llenarTabla(Sentencias.GENERO_VERIFICAR_INGRESO, lista, dt);
+            dt = GeneralC.cargarResultadosSQL(Sentencias.GENERO_VERIFICAR_INGRESO, lista);
             if (dt.Rows.Count > 0)
             {
                 genero = (int) dt.Rows[0]["idGenero"];
@@ -153,7 +153,7 @@ namespace Galactus.Entidades.HistoriaClinica
         {
             List<string> list = new List<string>();
             list.Add(Convert.ToString(IdAtencion));
-            GeneralC.llenarTabla(Sentencias.CARGAR_DATOS_ATENCION, list, dtDatosAtencion);
+            dtDatosAtencion = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_DATOS_ATENCION, list);
             if (dtDatosAtencion.Rows.Count > 0)
             {
                 numeroAutorizacion = dtDatosAtencion.Rows[0].Field<String>("numAutorizacion");

@@ -293,7 +293,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             List<string> paramtro = new List<string>();
             paramtro.Add(hemodialisis.auditoria.ToString());
             paramtro.Add(hemodialisis.idHemodialisis.ToString());
-            GeneralC.llenarTabla(Sentencias.CARGAR_HEMODIALISIS_MEDICAMENTO, paramtro, hemodialisis.dtMedicamento);
+            hemodialisis.dtMedicamento = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_HEMODIALISIS_MEDICAMENTO, paramtro);
             dgvMedicamento.DataSource = hemodialisis.dtMedicamento;
         }
         private void dgvMedicamento_CellClick(object sender, DataGridViewCellEventArgs e)

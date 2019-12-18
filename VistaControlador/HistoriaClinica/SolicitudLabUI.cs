@@ -144,7 +144,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             try
             {
                 paramtro.Add(dtpFechaSolicitud.Value.ToString("dd-MM-yyyy"));
-                GeneralC.llenarTabla(Sentencias.CARGAR_SOLICITUDES_PENDIENTES, paramtro, solicitudLab.dtLaboratorio);
+                solicitudLab.dtLaboratorio = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_SOLICITUDES_PENDIENTES, paramtro);
                 dgvResultadoLaboratorio.DataSource = solicitudLab.dtLaboratorio;
             }
             catch (Exception ex) {
@@ -158,7 +158,7 @@ namespace Galactus.VistaControlador.HistoriaClinica
             try
             {
                 paramtro.Add(solicitudLab.idSolicitud.ToString());
-                GeneralC.llenarTabla(Sentencias.CARGAR_SOLICITUDES_ENVIADO, paramtro, solicitudLab.dtLaboratorio);
+                solicitudLab.dtLaboratorio = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_SOLICITUDES_ENVIADO, paramtro);
                 dgvResultadoLaboratorio.DataSource = solicitudLab.dtLaboratorio;
             }
             catch (Exception ex) {

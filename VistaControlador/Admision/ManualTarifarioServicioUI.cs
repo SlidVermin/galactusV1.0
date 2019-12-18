@@ -149,7 +149,7 @@ namespace Galactus.VistaControlador.Admision
             DataRow dDatos;
             DataTable dtDato = new DataTable();
             parametro.Add(dRows.GetParentRow("codigo").ToString());
-            GeneralC.llenarTabla("", parametro, dtDato);
+            dtDato = GeneralC.cargarResultadosSQL("", parametro);
             dDatos = dtDato.Rows[0];
             cargarTxt(dDatos);
         }

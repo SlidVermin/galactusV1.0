@@ -31,31 +31,32 @@ namespace Galactus
         public static DataRow devuelveUnaFila(string consulta,
                                               List<string> parametros)
         {
-            DataTable tablaResultados = new DataTable();
-            llenarTabla(consulta, parametros, tablaResultados);
-            if (tablaResultados.Rows.Count > 0)
+            DataTable dtResultados = new DataTable();
+            dtResultados = cargarResultadosSQL(consulta, parametros);
+            if (dtResultados.Rows.Count > 0)
             {
-                return tablaResultados.Rows[0];
+                return dtResultados.Rows[0];
             }
             return null;
         }
-        public static void llenarTabla(string query,
-                                       List<string> parametros,
-                                       DataTable tablaResultado)
+        public static DataTable cargarResultadosSQL(string query, List<string> parametros)
         {
+            DataTable dtResultado = new DataTable();
             string listaParametros = obtenerParametros(parametros);
-            tablaResultado.Clear();
+            dtResultado.Clear();
             try
             {
                 using (SqlDataAdapter adaptador = new SqlDataAdapter(query + listaParametros, PrincipalUI.Cnxion))
                 {
-                    adaptador.Fill(tablaResultado);
+                    adaptador.Fill(dtResultado);
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+
+            return dtResultado;
 
         }
         public static void llenarTablaParameter(string query,
@@ -227,11 +228,9 @@ namespace Galactus
         {
             return e.ColumnIndex == dgv.Columns[columna].Index;
         }
-        public static void llenarTablaConParametros(string query,
-                                                    DataTable listado,
-                                                    DataTable tablaResultado)
+        public static DataTable llenarTablaConParametros(string query, DataTable listado)           
         {
-            tablaResultado.Clear();
+            DataTable tablaResultado = new DataTable();
             try
             {
                 using (SqlCommand comando = new SqlCommand())
@@ -257,6 +256,7 @@ namespace Galactus
             {
                 throw ex;
             }
+            return tablaResultado;
 
         }
         public static void validarComboUbicacion(ComboBox cbUbicacion,

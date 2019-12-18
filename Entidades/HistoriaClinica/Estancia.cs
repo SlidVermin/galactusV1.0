@@ -23,7 +23,7 @@ namespace Galactus.Entidades.HistoriaClinica
                 List<string> lista = new List<string>();
                 lista.Add(Convert.ToString(auditoria));
                 lista.Add(Convert.ToString(idAtencion));
-                GeneralC.llenarTabla(Sentencias.CARGAR_ESTANCIA, lista, dtEstancia);
+                dtEstancia = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_ESTANCIA, lista);
             }catch (Exception ex)
             {
                 throw ex;

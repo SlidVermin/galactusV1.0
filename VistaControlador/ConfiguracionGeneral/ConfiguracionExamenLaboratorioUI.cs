@@ -190,7 +190,7 @@ namespace Galactus.VistaControlador.ConfiguracionGeneral
                 List<string> paramtro = new List<string>();
                 paramtro.Add(valor);
                 paramtro.Add(id);
-                GeneralC.llenarTabla(consulta, paramtro, dt);
+                dt = GeneralC.cargarResultadosSQL(consulta, paramtro);
                 bindNavegador.DataSource = dt;
                 grilla.DataSource = bindNavegador.DataSource;
                 clasificacionParaclinico.numPaginacion = dt.Rows[0].Field<int>("Fila");

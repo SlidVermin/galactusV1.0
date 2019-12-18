@@ -229,7 +229,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
         private void cargarParametro() {
             List<string> paramtro = new List<string>();
             paramtro.Add(ecocardiograma.idAreaAtencion.ToString());
-            GeneralC.llenarTabla(Sentencias.ECOCARDIOGRAMA_PARAMETROS_CARGAR, paramtro, ecocardiograma.dtParametro);
+            ecocardiograma.dtParametro = GeneralC.cargarResultadosSQL(Sentencias.ECOCARDIOGRAMA_PARAMETROS_CARGAR, paramtro);
             dgvParametro.DataSource = ecocardiograma.dtParametro;
         }
 
@@ -239,7 +239,7 @@ namespace Galactus.VistaControlador.HistoriaClinica.Resultado
             paramtro.Add(ecocardiograma.idEco.ToString());
             paramtro.Add(ecocardiograma.idAreaAtencion.ToString());
             paramtro.Add(ecocardiograma.auditoria.ToString());
-            GeneralC.llenarTabla(Sentencias.CARGAR_PARAMETROS_ECOCARDIOGRAMA_REGISTRADO, paramtro, ecocardiograma.dtParametro);
+            ecocardiograma.dtParametro = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_PARAMETROS_ECOCARDIOGRAMA_REGISTRADO, paramtro);
             dgvParametro.DataSource = ecocardiograma.dtParametro;
         }
 

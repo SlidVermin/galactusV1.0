@@ -63,7 +63,7 @@ namespace Galactus.Modelo.HistoriaClinica
         {
             List<string> list = new List<string>();
             list.Add(Convert.ToString(ingreso.IdAtencion));
-            GeneralC.llenarTabla(Sentencias.CARGAR_DIAGNOSTICO_INGRESO, list, ingreso.dtDiagnostico);
+            ingreso.dtDiagnostico = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_DIAGNOSTICO_INGRESO, list);
         }
 
         public static void cargarDatos(IngresoClinico ingreso)
@@ -77,7 +77,7 @@ namespace Galactus.Modelo.HistoriaClinica
         {
             List<string> list = new List<string>();
             list.Add(Convert.ToString(ingreso.IdAtencion));
-            GeneralC.llenarTabla(Sentencias.CARGAR_DIAGNOSTICO_IMPRESION, list, ingreso.dtImpresion);
+            ingreso.dtImpresion = GeneralC.cargarResultadosSQL(Sentencias.CARGAR_DIAGNOSTICO_IMPRESION, list);
         }
     }
 }
