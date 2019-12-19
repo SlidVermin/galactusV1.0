@@ -233,7 +233,6 @@
             this.cmbDepartamentoNac.Name = "cmbDepartamentoNac";
             this.cmbDepartamentoNac.Size = new System.Drawing.Size(205, 23);
             this.cmbDepartamentoNac.TabIndex = 12;
-            this.cmbDepartamentoNac.ValueMemberChanged += new System.EventHandler(this.departNacBox_ValueMemberChanged);
             this.cmbDepartamentoNac.SelectedValueChanged += new System.EventHandler(this.departNacBox_SelectedValueChanged_1);
             // 
             // label14
@@ -283,7 +282,6 @@
             this.dtpNacimiento.Name = "dtpNacimiento";
             this.dtpNacimiento.Size = new System.Drawing.Size(101, 21);
             this.dtpNacimiento.TabIndex = 30;
-            this.dtpNacimiento.ValueChanged += new System.EventHandler(this.fechaNPicker_ValueChanged);
             this.dtpNacimiento.Validating += new System.ComponentModel.CancelEventHandler(this.fechaNPicker_Validating);
             // 
             // label15

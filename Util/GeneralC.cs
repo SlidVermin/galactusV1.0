@@ -1171,5 +1171,18 @@ namespace Galactus
                 }
             } 
         }
+        public static void cargarCombosDatatable(DataTable dt, Int32 idParametro, ComboBox combo)
+        {
+            DataTable dtC = new DataTable();
+            DataRow[] filas;
+            dtC = dt.Clone();
+            filas = dt.Select("idParametro=" + idParametro);
+            foreach (DataRow fila in filas)
+            {
+                dtC.ImportRow(fila);
+            }
+            dtC.Columns.Remove("idParametro");
+            llenarComboDatosDefinidor(dtC, ConstanteGeneral.VALUEMEMBER, ConstanteGeneral.DISPLAYMEMBER, combo);
+        }
     }
 }

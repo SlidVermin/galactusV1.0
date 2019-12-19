@@ -11,6 +11,7 @@ using Galactus.Entidades.Admision;
 using Galactus.Util.Mensajes;
 using Galactus.Modelo.Admision;
 using Galactus.Util.Constantes;
+using Galactus.Util;
 
 namespace Galactus.VistaControlador
 {
@@ -22,81 +23,28 @@ namespace Galactus.VistaControlador
         {
             InitializeComponent();
         }
-
-        private void buscarEpsBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nuevoBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guardarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buscarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ModificarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cancelarBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void anularBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void PacienteUI_Load(object sender, EventArgs e)
         {
-            establecerParametros();
-           
-            GeneralC.llenarCombo(Sentencias.CARGARPAIS,
-                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                cmbPaisDocumento);
-            GeneralC.llenarCombo(Sentencias.CARGARPAIS,
-                               Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                               Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                               cmbPaisNacimiento);
-            GeneralC.llenarCombo(Sentencias.CARGARPAIS,
-                               Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                               Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                               cmbPaisResidencia);
-                       btnSalir.Enabled = true;
-            cargarCombosDatatable(paciente.dtResultado,(int) ConstanteGeneral.PARAMETRO_PACIENTE.AFILIACION,cmbAfiliacion);
-            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.ZONA, cmbZona);
-            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.REGIMEN, cmbRegimen);
-            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.CLASESOCIAL, cmbEstrato);
-            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.ESTADOCIVIL, cmbEstadoCivil);
-            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.GENERO, cmbSexo);
-            cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.DOCUMENTOS, cmbDocumento);
             GeneralC.posCargadoForm(this, tstMenuPatron, tsbNuevo, tsbBuscar);
+            inicio();
+            btnSalir.Enabled = true;
         }
-        public void cargarCombosDatatable(DataTable dt, Int32 idParametro,ComboBox combo)
+        private void inicio()
         {
-            DataTable dtC = new DataTable();
-            DataRow [] filas;
-            dtC = dt.Clone();
-            filas = dt.Select("idParametro=" + idParametro);
-            foreach(DataRow fila in filas)
-            {
-                dtC.ImportRow(fila);
-            }
-            dtC.Columns.Remove("idParametro");
-            GeneralC.llenarComboDatosDefinidor(dtC, ConstanteGeneral.VALUEMEMBER, ConstanteGeneral.DISPLAYMEMBER, combo);
+            establecerParametros();
+            GeneralC.llenarCombo(Sentencias.CARGARPAIS,ConstanteGeneral.VALUEMEMBER,ConstanteGeneral.DISPLAYMEMBER,cmbPaisDocumento);
+            GeneralC.llenarCombo(Sentencias.CARGARPAIS,ConstanteGeneral.VALUEMEMBER,ConstanteGeneral.DISPLAYMEMBER,cmbPaisNacimiento);
+            GeneralC.llenarCombo(Sentencias.CARGARPAIS,ConstanteGeneral.VALUEMEMBER,ConstanteGeneral.DISPLAYMEMBER, cmbPaisResidencia);
+
+            GeneralC.cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.AFILIACION, cmbAfiliacion);
+            GeneralC.cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.ZONA, cmbZona);
+            GeneralC.cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.REGIMEN, cmbRegimen);
+            GeneralC.cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.CLASESOCIAL, cmbEstrato);
+            GeneralC.cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.ESTADOCIVIL, cmbEstadoCivil);
+            GeneralC.cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.GENERO, cmbSexo);
+            GeneralC.cargarCombosDatatable(paciente.dtResultado, (int)ConstanteGeneral.PARAMETRO_PACIENTE.DOCUMENTOS, cmbDocumento);
         }
+
         public void establecerParametros()
         {
             paciente.establecerColumnas();
@@ -109,32 +57,11 @@ namespace Galactus.VistaControlador
             paciente.dtParametro.Rows.Add(ConstanteGeneral.PARAMETRO_PACIENTE.GENERO);
             paciente.cargarParametros();
         }
-        public void deshabilitarControles()
-        {
-            cmbDepartamentoDoc.Enabled = false;
-            cmbCiudadDocumento.Enabled = false;
-            cmbDepartamentoNac.Enabled = false;
-            cmbCiudadNacimiento.Enabled = false;
-            cmbDepartamentoRes.Enabled = false;
-            cmbCiudadResidencia.Enabled = false;
-        }
-
         private void departNacBox_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (cmbDepartamentoNac.SelectedIndex > 0)
+            if (cmbDepartamentoNac.SelectedIndex > 0 && tsbGuardar.Enabled == true)
             {
-                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + cmbDepartamentoNac.SelectedValue + "",
-                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 cmbCiudadNacimiento);
-                GeneralC.validarComboUbicacion(cmbDepartamentoNac, cmbCiudadNacimiento);
-            }
-            else
-            {
-                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
-                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 cmbCiudadNacimiento);
+                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + cmbDepartamentoNac.SelectedValue + "",ConstanteGeneral.VALUEMEMBER,ConstanteGeneral.DISPLAYMEMBER,cmbCiudadNacimiento);
                 GeneralC.validarComboUbicacion(cmbDepartamentoNac, cmbCiudadNacimiento);
             }
         }
@@ -293,25 +220,10 @@ namespace Galactus.VistaControlador
             paciente.idEstadoCivil = Convert.ToString( cmbEstadoCivil.SelectedValue);
             paciente.idestrato = Convert.ToString( cmbEstrato.SelectedValue);
         }
-        private void tsbGuardar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buscarEpsBtn_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         public void cargarRegistro(DataRow fila)
         {
             paciente.idEps = fila.Field<int>("idEps");
             txtEPS.Text = fila.Field<string>("Descripcion");
-        }
-
-        private void tsbBuscar_Click(object sender, EventArgs e)
-        {
-
         }
         public void cargarPaciente(DataRow fila)
         {
@@ -344,120 +256,50 @@ namespace Galactus.VistaControlador
             tstModificar.Enabled = true;
             tsbAnular.Enabled = true;
             btnSalir.Enabled = true;
-            deshabilitarCombo();
-        }
-
-       private void tsbGuardar_Click_1(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void tsbBuscar_Click_1(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void tsbCancelar_Click_1(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void tstModificar_Click_1(object sender, EventArgs e)
-        {
-           
         }
 
         private void tsbNuevo_Click_1(object sender, EventArgs e)
         {
             GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
-            deshabilitarControles();
             paciente.idPaciente = 0;
             dtpNacimiento.ResetText();
         }
 
         private void paisBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (cmbPaisDocumento.SelectedIndex > 0)
+            if (cmbPaisDocumento.SelectedIndex > 0 && tsbGuardar.Enabled == true)
             {
 
-                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + cmbPaisDocumento.SelectedValue + "",
-                                    Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                    Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                    cmbDepartamentoDoc);
-                GeneralC.validarComboUbicacion(cmbPaisDocumento, cmbDepartamentoDoc);
-            }
-            else
-            {
-
-                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
-                                   Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                   Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                   cmbDepartamentoDoc);
-                GeneralC.validarComboUbicacion(cmbPaisDocumento, cmbDepartamentoDoc);
+              GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + cmbPaisDocumento.SelectedValue + "",ConstanteGeneral.VALUEMEMBER,ConstanteGeneral.DISPLAYMEMBER,cmbDepartamentoDoc);
+              GeneralC.validarComboUbicacion(cmbPaisDocumento, cmbDepartamentoDoc);
             }
         }
 
         private void departBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (cmbDepartamentoDoc.SelectedIndex > 0)
+            if (cmbDepartamentoDoc.SelectedIndex > 0 && tsbGuardar.Enabled == true)
             {
 
-                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + cmbDepartamentoDoc.SelectedValue + "",
-                                    Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                    Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                    cmbCiudadDocumento);
-                GeneralC.validarComboUbicacion(cmbDepartamentoDoc, cmbCiudadDocumento);
-            }
-            else
-            {
-                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
-                                   Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                   Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                   cmbCiudadDocumento);
-                GeneralC.validarComboUbicacion(cmbDepartamentoDoc, cmbCiudadDocumento);
+              GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + cmbDepartamentoDoc.SelectedValue + "",ConstanteGeneral.VALUEMEMBER,ConstanteGeneral.DISPLAYMEMBER,cmbCiudadDocumento);
+              GeneralC.validarComboUbicacion(cmbDepartamentoDoc, cmbCiudadDocumento);
             }
         }
 
         private void paisNacBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (cmbPaisNacimiento.SelectedIndex > 0)
+            if (cmbPaisNacimiento.SelectedIndex > 0 && tsbGuardar.Enabled ==  true)
             {
-                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + cmbPaisNacimiento.SelectedValue + "",
-                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 cmbDepartamentoNac);
-                GeneralC.validarComboUbicacion(cmbPaisNacimiento, cmbDepartamentoNac);
-            }
-            else
-            {
-                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
-                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 cmbDepartamentoNac);
-                GeneralC.validarComboUbicacion(cmbPaisNacimiento, cmbDepartamentoNac);
+              GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + cmbPaisNacimiento.SelectedValue + "",ConstanteGeneral.VALUEMEMBER,ConstanteGeneral.DISPLAYMEMBER,cmbDepartamentoNac);
+              GeneralC.validarComboUbicacion(cmbPaisNacimiento, cmbDepartamentoNac);
             }
         }
-
-        private void departNacBox_ValueMemberChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void departNacBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (cmbDepartamentoNac.SelectedIndex > 0)
+            if (cmbDepartamentoNac.SelectedIndex > 0 && tsbGuardar.Enabled == true)
             {
                 GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + cmbDepartamentoNac.SelectedValue + "",
-                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 cmbCiudadNacimiento);
-                GeneralC.validarComboUbicacion(cmbDepartamentoNac, cmbCiudadNacimiento);
-            }
-            else
-            {
-                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
-                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
+                                 ConstanteGeneral.VALUEMEMBER,
+                                 ConstanteGeneral.DISPLAYMEMBER,
                                  cmbCiudadNacimiento);
                 GeneralC.validarComboUbicacion(cmbDepartamentoNac, cmbCiudadNacimiento);
             }
@@ -465,48 +307,23 @@ namespace Galactus.VistaControlador
 
         private void paisResBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (cmbPaisResidencia.SelectedIndex > 0)
+            if (cmbPaisResidencia.SelectedIndex > 0 && tsbGuardar.Enabled == true)
             {
                 GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + cmbPaisResidencia.SelectedValue + "",
-                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
+                                 ConstanteGeneral.VALUEMEMBER,
+                                 ConstanteGeneral.DISPLAYMEMBER,
                                  cmbDepartamentoRes);
                 GeneralC.validarComboUbicacion(cmbPaisResidencia, cmbDepartamentoRes);
             }
-            else
-            {
-                GeneralC.llenarCombo(Sentencias.CARGAR_DEPARTAMENTO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
-                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                 cmbDepartamentoRes);
-                GeneralC.validarComboUbicacion(cmbPaisResidencia, cmbDepartamentoRes);
-            }
-        }
-        public void deshabilitarCombo()
-        {
-            cmbDepartamentoDoc.Enabled = false;
-            cmbDepartamentoNac.Enabled = false;
-            cmbDepartamentoRes.Enabled = false;
-            cmbCiudadDocumento.Enabled = false;
-            cmbCiudadNacimiento.Enabled = false;
-            cmbCiudadResidencia.Enabled = false;
         }
         private void departResBox_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (cmbDepartamentoRes.SelectedIndex > 0)
+            if (cmbDepartamentoRes.SelectedIndex > 0 && tsbGuardar.Enabled ==  true)
             {
                 GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + cmbDepartamentoRes.SelectedValue + "",
-                                 Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                 Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
+                                 ConstanteGeneral.VALUEMEMBER,
+                                 ConstanteGeneral.DISPLAYMEMBER,
                                  cmbCiudadResidencia);
-                GeneralC.validarComboUbicacion(cmbDepartamentoRes, cmbCiudadResidencia);
-            }
-            else
-            {
-                GeneralC.llenarCombo(Sentencias.CARGAR_MUNICIPIO + " " + Util.Constantes.ConstanteGeneral.PREDETERMINADA + "",
-                                Util.Constantes.ConstanteGeneral.VALUEMEMBER,
-                                Util.Constantes.ConstanteGeneral.DISPLAYMEMBER,
-                                cmbCiudadResidencia);
                 GeneralC.validarComboUbicacion(cmbDepartamentoRes, cmbCiudadResidencia);
             }
         }
@@ -529,11 +346,6 @@ namespace Galactus.VistaControlador
             btnSalir.BackColor = Control.DefaultBackColor;
         }
 
-        private void tsbAnular_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void buscarEpsBtn_Click_2(object sender, EventArgs e)
         {
             try
@@ -550,12 +362,6 @@ namespace Galactus.VistaControlador
                 MessageBox.Show(ex.Message, Mensajes.NOMBRE_SOFT, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void fechaNPicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void fechaNPicker_Validating(object sender, CancelEventArgs e)
         {
 
@@ -566,22 +372,7 @@ namespace Galactus.VistaControlador
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             GeneralC.formNuevo(this, tstMenuPatron, tsbGuardar, tsbCancelar);
-            deshabilitarControles();
             paciente.idPaciente = 0;
-            dtpNacimiento.ResetText();
-            habilitarControles();
-        }
-        public void habilitarControles()
-        {
-            txtPrimerNombre.ReadOnly = false;
-            txtPrimerApellido.ReadOnly = false;
-            txtSegundoApellido.ReadOnly = false;
-            txtSegundoNombre.ReadOnly = false;
-            txtEmail.ReadOnly = false;
-            txtDireccion.ReadOnly = false;
-            txtIdentificacion.ReadOnly = false;
-            txtTelefono.ReadOnly = false;
-            txtCelular.ReadOnly = false;
         }
         private void tsbGuardar_Click_2(object sender, EventArgs e)
         {
