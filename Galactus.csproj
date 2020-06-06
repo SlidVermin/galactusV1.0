@@ -157,7 +157,6 @@
     <Compile Include="Modelo\ConfiguracionGeneral\ProductoDAL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Instrucciones\Sentencias.cs" />
     <Compile Include="Reportes\HistoriaClinica\Facturacion\RptResumenAtencion.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -218,6 +217,7 @@
     <Compile Include="Util\InformacionTag.cs" />
     <Compile Include="Util\Mensajes\Mensajes.cs" />
     <Compile Include="Util\MyRenderer.cs" />
+    <Compile Include="Util\Sentencias.cs" />
     <Compile Include="Util\Sesion.cs" />
     <Compile Include="Util\TabControlGalactus.cs">
       <SubType>Component</SubType>
@@ -716,12 +716,6 @@
     <Compile Include="VistaControlador\HistoriaClinica\SolicitudLabUI.Designer.cs">
       <DependentUpon>SolicitudLabUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="VistaControlador\InicioUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VistaControlador\InicioUI.designer.cs">
-      <DependentUpon>InicioUI.cs</DependentUpon>
-    </Compile>
     <Compile Include="VistaControlador\Inventario\BodegaUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -733,6 +727,12 @@
     </Compile>
     <Compile Include="VistaControlador\ConfiguracionGeneral\ProductoUI.designer.cs">
       <DependentUpon>ProductoUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaControlador\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaControlador\LoginUI.designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaControlador\PrinicipaUI.cs">
       <SubType>Form</SubType>
@@ -1029,14 +1029,14 @@
     <EmbeddedResource Include="VistaControlador\HistoriaClinica\SolicitudLabUI.resx">
       <DependentUpon>SolicitudLabUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VistaControlador\InicioUI.resx">
-      <DependentUpon>InicioUI.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\Inventario\BodegaUI.resx">
       <DependentUpon>BodegaUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\ConfiguracionGeneral\ProductoUI.resx">
       <DependentUpon>ProductoUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VistaControlador\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaControlador\PrinicipaUI.resx">
       <DependentUpon>PrinicipaUI.cs</DependentUpon>
